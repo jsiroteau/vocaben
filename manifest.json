@@ -1,0 +1,37 @@
+{
+  "name": "VocabEN",
+  "short_name": "VocabEN",
+  "description": "English vocabulary learning app",
+  "start_url": "/vocaben/",
+  "scope": "/vocaben/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#012169",
+  "theme_color": "#1a1a2e",
+  "icons": [
+    {
+      "src": "/vocaben/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/vocaben/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/vocaben/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/vocaben/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
