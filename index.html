@@ -114,6 +114,11 @@
   .qcm-opt.wrong-opt{border-color:var(--danger);background:rgba(231,76,60,0.1);color:var(--danger)}
   .open-inp{width:100%;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;outline:none;margin-bottom:14px}
   .open-inp:focus{border-color:var(--accent)}
+  .mic-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;border-radius:12px;border:2px dashed var(--border);background:transparent;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:1rem;cursor:pointer;margin-bottom:14px;transition:all .2s}
+  .mic-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .mic-btn.listening{border-color:var(--accent);background:rgba(233,69,96,0.1);color:var(--accent);animation:pulse 1s infinite}
+  .mic-btn.done{border-color:var(--success);color:var(--success)}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
   .fill-sentence{font-size:1rem;line-height:2.2;padding:16px;background:var(--card);border-radius:12px;margin-bottom:14px}
   .blank-spot{display:inline-block;border-bottom:2px solid var(--accent);min-width:80px;text-align:center}
   .blank-ok{border-color:var(--success);color:var(--success);font-weight:700}
@@ -427,14 +432,10 @@ function saveState(){
 }
 
 function saveExtra(){
-  const baseIds = new Set(VOCAB_DATA.map(e=>e.id));
-  localStorage.setItem('ve_extra', JSON.stringify(vocab.filter(e=>!baseIds.has(e.id))));
-  const overrides = {};
-  vocab.filter(e=>baseIds.has(e.id)).forEach(e=>{
-    const orig = VOCAB_DATA.find(o=>o.id===e.id);
-    if(JSON.stringify(e)!==JSON.stringify(orig)) overrides[e.id]=e;
-  });
-  localStorage.setItem('ve_overrides', JSON.stringify(overrides));
+  // VOCAB_DATA is empty — the entire vocab lives in ve_extra.
+  // We store everything and clear overrides (unused).
+  localStorage.setItem('ve_extra', JSON.stringify(vocab));
+  localStorage.removeItem('ve_overrides');
 }
 
 function buildPlan(){
@@ -788,7 +789,7 @@ function saveNew(){
   const entree=document.getElementById('new-entree').value.trim();
   if(!entree){toast('⚠ Entry required');return;}
   const mots=readMotBlocks('ned');
-  vocab.push({id:Date.now(),entree,mots,source:'manual'});
+  vocab.push({id: Date.now()+'_'+Math.random().toString(36).slice(2), entree, mots, source:'manual'});
   saveExtra(); closeOverlay('add-overlay'); renderList(); renderHome();
   toast('✓ Entry added!');
 }
@@ -976,7 +977,7 @@ function checkQCM(el,chosen,correct){
   document.querySelectorAll('.qcm-opt').forEach(o=>{o.disabled=true;if(o.textContent.trim()===correct)o.classList.add('correct-opt');});
   const ok=chosen===correct;
   if(!ok) el.classList.add('wrong-opt');
-  recordResult(ok); showFB(ok,correct);
+  recordResult(ok); showFB(ok, correct, chosen);
 }
 
 // ── OPEN ──
@@ -1027,12 +1028,16 @@ function renderOpen(e,dir){
         autocomplete="off"
         onkeydown="if(event.key==='Enter'){const nx=document.getElementById('open-inp-${i+1}');nx?nx.focus():checkOpenMulti()}"
         style="margin-bottom:8px">`).join('');
+    const lang = dir==='en2fr' ? 'fr-FR' : 'en-US';
     document.getElementById('test-content').innerHTML=`
       <div class="quiz-card">
         <div class="quiz-type">${qLabel}</div>
         <div class="quiz-q">${qText}</div>
       </div>
       <div id="open-multi-wrap" data-corrects='${JSON.stringify(corrects).replace(/'/g,"&#39;")}'>${inputs}</div>
+      <button class="mic-btn" id="mic-btn" onclick="startMic('${lang}','open-inp-0','multi')" title="Answer by voice">
+        🎤 <span id="mic-label">Speak your answer</span>
+      </button>
       <button class="btn btn-primary btn-full" onclick="checkOpenMulti()">Check</button>
       <div id="tfb" style="margin-top:14px"></div>
       <div id="tnav" style="display:none">
@@ -1041,6 +1046,7 @@ function renderOpen(e,dir){
       </div>`;
     document.getElementById('open-inp-0').focus();
   } else {
+    const lang = dir==='en2fr' ? 'fr-FR' : 'en-US';
     document.getElementById('test-content').innerHTML=`
       <div class="quiz-card">
         <div class="quiz-type">${qLabel}</div>
@@ -1049,6 +1055,9 @@ function renderOpen(e,dir){
       </div>
       <input class="open-inp" id="open-inp" type="text" placeholder="Your answer…" autocomplete="off"
         onkeydown="if(event.key==='Enter')checkOpen()" data-correct="${esc(correct)}">
+      <button class="mic-btn" id="mic-btn" onclick="startMic('${lang}','open-inp','single')" title="Answer by voice">
+        🎤 <span id="mic-label">Speak your answer</span>
+      </button>
       <button class="btn btn-primary btn-full" onclick="checkOpen()">Check</button>
       <div id="tfb" style="margin-top:14px"></div>
       <div id="tnav" style="display:none">
@@ -1066,7 +1075,7 @@ function checkOpen(){
   const correct=inp.dataset.correct;
   const ok=checkAnswer(ans,correct);
   testAnswered=true; inp.disabled=true;
-  recordResult(ok); showFB(ok,correct);
+  recordResult(ok); showFB(ok, correct, ans);
 }
 
 function checkOpenMulti(){
@@ -1161,7 +1170,7 @@ function checkFill(){
   testAnswered=true; inp.disabled=true;
   const blank=document.getElementById('blank');
   if(blank){blank.textContent=correct;blank.className='blank-spot '+(ok?'blank-ok':'blank-ko');}
-  recordResult(ok); showFB(ok,correct);
+  recordResult(ok); showFB(ok, correct, ans);
 }
 
 // ── SYNONYMES ──
@@ -1240,11 +1249,14 @@ function recordResult(ok){
   saveState();
 }
 
-function showFB(ok,correct){
-  document.getElementById('tfb').innerHTML=ok
-    ?`<div class="feedback ok">✓ Correct!</div>`
-    :`<div class="feedback ko">✗ Expected answer: <strong>${correct}</strong></div>
-      <button class="btn btn-secondary btn-sm" style="margin-top:10px;width:100%" onclick="overrideToCorrect(this)">💡 I actually knew it!</button>`;
+function showFB(ok, correct, userAns){
+  const exactMatch = normalizeAnswer(userAns||'') === normalizeAnswer(correct||'');
+  document.getElementById('tfb').innerHTML = ok
+    ? (exactMatch
+        ? `<div class="feedback ok">✓ Correct!</div>`
+        : `<div class="feedback ok">✓ Correct! <span style="font-size:0.85em;opacity:0.85">— Exact answer: <strong>${correct}</strong></span></div>`)
+    : `<div class="feedback ko">✗ Expected answer: <strong>${correct}</strong></div>
+       <button class="btn btn-secondary btn-sm" style="margin-top:10px;width:100%" onclick="overrideToCorrect(this)">💡 I actually knew it!</button>`;
   document.getElementById('tnav').style.display='block';
 }
 
@@ -1497,6 +1509,18 @@ function importXlsx(input){
 
       localStorage.removeItem('ve_overrides');
       localStorage.removeItem('ve_extra');
+
+      // Plain import: preserve learning data for surviving entries,
+      // only remove data for entries that no longer exist in the new base.
+      if(!isFullExport){
+        const validIds = new Set(vocab.map(e => e.id));
+        [...us.learned].forEach(id => { if(!validIds.has(id)) us.learned.delete(id); });
+        [...us.hard].forEach(id =>    { if(!validIds.has(id)) us.hard.delete(id); });
+        [...us.toFix].forEach(id =>   { if(!validIds.has(id)) us.toFix.delete(id); });
+        Object.keys(us.scores).forEach(id =>  { if(!validIds.has(Number(id))&&!validIds.has(id)) delete us.scores[id]; });
+        Object.keys(us.results).forEach(id => { if(!validIds.has(Number(id))&&!validIds.has(id)) delete us.results[id]; });
+      }
+
       saveExtra(); buildPlan(); saveState(); renderList(); renderHome();
 
       if(isFullExport){
@@ -1526,6 +1550,72 @@ function toast(msg){
   const el=document.getElementById('toast');
   el.textContent=msg; el.classList.add('show');
   clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove('show'),2800);
+}
+
+// ══════════════════════════════════
+//  SPEECH RECOGNITION
+// ══════════════════════════════════
+let activeMic = null;
+
+function startMic(lang, targetId, mode){
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if(!SR){ toast('⚠ Speech recognition not supported in this browser'); return; }
+
+  // Stop any ongoing recognition
+  if(activeMic){ activeMic.stop(); activeMic=null; return; }
+
+  const btn   = document.getElementById('mic-btn');
+  const label = document.getElementById('mic-label');
+
+  const rec = new SR();
+  rec.lang = lang;
+  rec.continuous = false;
+  rec.interimResults = true;
+  rec.maxAlternatives = 1;
+
+  activeMic = rec;
+  btn.classList.add('listening');
+  label.textContent = 'Listening…';
+
+  rec.onresult = ev => {
+    const transcript = ev.results[0][0].transcript;
+    const isFinal    = ev.results[0].isFinal;
+
+    if(mode === 'multi'){
+      // Split on "et" / "and" / comma / semicolon for multi-answer
+      const parts = transcript.split(/\bet\b|\band\b|[,;]/i).map(s=>s.trim()).filter(Boolean);
+      const wrap  = document.getElementById('open-multi-wrap');
+      if(wrap){
+        const inputs = wrap.querySelectorAll('.open-inp');
+        inputs.forEach((inp, i) => { if(parts[i]) inp.value = parts[i]; });
+      }
+    } else {
+      const inp = document.getElementById(targetId);
+      if(inp) inp.value = transcript;
+    }
+
+    if(isFinal){
+      btn.classList.remove('listening');
+      btn.classList.add('done');
+      label.textContent = '✓ Got it — check or speak again';
+      activeMic = null;
+    }
+  };
+
+  rec.onerror = ev => {
+    btn.classList.remove('listening');
+    label.textContent = 'Speak your answer';
+    activeMic = null;
+    if(ev.error !== 'no-speech') toast('⚠ Mic error: ' + ev.error);
+  };
+
+  rec.onend = () => {
+    if(activeMic === rec) activeMic = null;
+    btn.classList.remove('listening');
+    if(!btn.classList.contains('done')) label.textContent = 'Speak your answer';
+  };
+
+  rec.start();
 }
 
 // ══════════════════════════════════
