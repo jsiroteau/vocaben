@@ -677,9 +677,14 @@ function toggleEdit(){
 }
 
 const NATURES=['verb','noun','adjective','adverb','phrase','preposition'];
+const NAT_FR_TO_EN={'verbe':'verb','nom':'noun','adjectif':'adjective','adverbe':'adverb','phrase':'phrase','préposition':'preposition','preposition':'preposition'};
+
+function normNatures(nats){
+  return (nats||[]).map(n=> NAT_FR_TO_EN[n.toLowerCase().trim()] || n.toLowerCase().trim());
+}
 
 function motBlockHTML(m,idx,pfx){
-  const nats=m.natures||[];
+  const nats=normNatures(m.natures);
   const natChips=NATURES.map(n=>
     `<button type="button" class="nature-chip ${nats.includes(n)?'selected':''}" onclick="this.classList.toggle('selected')">${n}</button>`
   ).join('');
@@ -1254,7 +1259,8 @@ function checkSyn(count){
   recordResult(allOk);
   document.getElementById('tfb').innerHTML=allOk
     ?'<div class="feedback ok">✓ All synonyms are correct!</div>'
-    :'<div class="feedback ko">✗ Some synonyms are missing or incorrect'+fbHtml+'</div>';
+    :'<div class="feedback ko">✗ Some synonyms are missing or incorrect'+fbHtml+'</div>'
+     +'<button class="btn btn-secondary btn-sm" style="margin-top:10px;width:100%" onclick="overrideToCorrect(this)">💡 I actually knew it!</button>';
   document.getElementById('tnav').style.display='block';
 }
 
