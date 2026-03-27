@@ -417,6 +417,7 @@ function loadState(){
     const migrateObj = obj => Object.fromEntries(Object.entries(obj||{}).map(([k,v])=>[idMap[k]||k, v]));
     us = {
       learned: migrateSet(s.learned),
+      learnedDate: migrateObj(s.learnedDate||{}),
       hard:    migrateSet(s.hard),
       toFix:   migrateSet(s.toFix),
       scores:  migrateObj(s.scores),
@@ -427,7 +428,7 @@ function loadState(){
       sessions: s.sessions||[]
     };
   } else {
-    us = { learned:new Set(), hard:new Set(), toFix:new Set(), scores:{}, results:{}, streak:0, lastDate:'', todayNew:[], todayRev:[], sessions:[] };
+    us = { learned:new Set(), learnedDate:{}, hard:new Set(), toFix:new Set(), scores:{}, results:{}, streak:0, lastDate:'', todayNew:[], todayRev:[], sessions:[] };
   }
 
   // If migration happened, persist immediately
@@ -440,7 +441,7 @@ function loadState(){
   if(us.lastDate !== t){
     const prev = new Date(); prev.setDate(prev.getDate()-1);
     if(us.lastDate === prev.toISOString().slice(0,10)) us.streak++;
-    else if(!us.lastDate){} else us.streak=0;
+    else if(!us.lastDate){ us.streak=1; } else us.streak=0;
     us.lastDate = t;
     buildPlan();
     saveState();
@@ -449,7 +450,7 @@ function loadState(){
 
 function saveState(){
   localStorage.setItem('ve_state', JSON.stringify({
-    learned:[...us.learned], hard:[...us.hard],
+    learned:[...us.learned], learnedDate:us.learnedDate, hard:[...us.hard],
     toFix:[...us.toFix],
     scores:us.scores, results:us.results,
     streak:us.streak, lastDate:us.lastDate,
@@ -629,7 +630,8 @@ function renderDetailView(){
 }
 
 function markLearned(id,val){
-  if(val){us.learned.add(id);}else{us.learned.delete(id);us.hard.delete(id);}
+  if(val){us.learned.add(id); us.learnedDate[id]=today();}
+  else{us.learned.delete(id);us.hard.delete(id); delete us.learnedDate[id];}
   saveState(); renderDetailView(); renderHome();
   toast(val?'✓ Marked as learned':'Marked as not learned');
 }
@@ -731,13 +733,18 @@ function addExRow(btn){
 }
 
 function readMotBlocks(pfx){
-  return [...document.querySelectorAll(`[id^="${pfx}-mot-"]`)].map(block=>{
+  const container=document.getElementById(pfx==='eed'?'eed-mots':'new-mots-container');
+  if(!container) return [];
+  return [...container.querySelectorAll(`.mot-edit-block`)].map(block=>{
     const natures=[...block.querySelectorAll('.nature-chip.selected')].map(c=>c.textContent.trim());
-    const exemples=[...block.querySelectorAll(`.${pfx}-ex`)].map((inp,i)=>{
-      const mat=block.querySelectorAll(`.${pfx}-mat:not(.${pfx}-mat-global)`)[i];
-      const tr=block.querySelectorAll(`.${pfx}-extr`)[i];
-      return {ex:inp.value.trim(),mat:mat?mat.value.trim():'',tr:tr?tr.value.trim():''};
-    }).filter(ex=>ex.ex);
+    const exInputs=[...block.querySelectorAll(`.${pfx}-ex`)];
+    const matInputs=[...block.querySelectorAll(`.${pfx}-mat:not(.${pfx}-mat-global)`)];
+    const extrInputs=[...block.querySelectorAll(`.${pfx}-extr`)];
+    const exemples=exInputs.map((inp,i)=>({
+      ex:inp.value.trim(),
+      mat:matInputs[i]?matInputs[i].value.trim():'',
+      tr:extrInputs[i]?extrInputs[i].value.trim():''
+    })).filter(ex=>ex.ex);
     return {
       mot:block.querySelector(`.${pfx}-mot`)?.value.trim()||'',
       traduction:block.querySelector(`.${pfx}-trad`)?.value.trim()||'',
@@ -796,6 +803,10 @@ function saveEdit(){
   e.editedAt=today();
   document.getElementById('detail-title').textContent=e.entree;
   saveExtra(); toggleEdit(); renderDetailView();
+  // Si on est en session d'apprentissage, synchroniser sq[si] avec l'objet mis à jour
+  if(document.getElementById('learn-overlay').classList.contains('open') && si<sq.length){
+    const fresh=byId(e.id); if(fresh) sq[si]=fresh;
+  }
   toast('✓ Changes saved');
 }
 
@@ -1273,7 +1284,7 @@ function recordResult(ok){
     us.results[e.id].ok++;
     sc++;
     us.scores[e.id]=(us.scores[e.id]||0)+1;
-    if(us.scores[e.id]>=3){us.learned.add(e.id);us.hard.delete(e.id);}
+    if(us.scores[e.id]>=3){us.learned.add(e.id);us.hard.delete(e.id); if(!us.learnedDate[e.id]) us.learnedDate[e.id]=today();}
   } else {
     us.hard.add(e.id);
     us.scores[e.id]=(us.scores[e.id]||0)-1;
@@ -1296,16 +1307,15 @@ function overrideToCorrect(btn){
   btn.disabled=true;
   btn.textContent='✓ Overridden';
   const e=sq[si];
-  // Undo the failed result
+  // Undo the failed result then apply one correct result (net: +1 on score)
   us.results[e.id].total--;
   us.hard.delete(e.id);
-  us.scores[e.id]=(us.scores[e.id]||0)+1; // cancel the -1 from failure
-  // Apply a correct result
+  // cancel the -1 from failure AND count as a correct answer in one step
   us.results[e.id].ok++;
   us.results[e.id].total++;
   sc++;
-  us.scores[e.id]=(us.scores[e.id]||0)+1;
-  if(us.scores[e.id]>=3){us.learned.add(e.id);us.hard.delete(e.id);}
+  us.scores[e.id]=(us.scores[e.id]||0)+1; // net +1: -1 cancelled + 1 correct
+  if(us.scores[e.id]>=3){us.learned.add(e.id);us.hard.delete(e.id); if(!us.learnedDate[e.id]) us.learnedDate[e.id]=today();}
   // Update feedback display
   document.getElementById('tfb').innerHTML=`<div class="feedback ok">✓ Overridden as correct!</div>`;
   saveState();
@@ -1394,7 +1404,7 @@ function exportXlsx(){
       // ── learning metadata ──
       row['__id']      = e.id;
       row['__source']  = e.source||'';
-      row['__learned'] = us.learned.has(e.id)?1:0;
+      row['__learned']     = us.learned.has(e.id) ? (us.learnedDate[e.id]||'?') : '';
       row['__hard']    = us.hard.has(e.id)?1:0;
       row['__toFix']   = us.toFix.has(e.id)?1:0;
       const res=us.results[e.id]||{ok:0,total:0};
@@ -1460,7 +1470,7 @@ function importXlsx(input){
             // full-export fields (taken from first row of the group)
             _id:      isFullExport ? r['__id']      : null,
             _source:  isFullExport ? (r['__source']||'') : '',
-            _learned: isFullExport ? Number(r['__learned']||0) : null,
+            _learned: isFullExport ? (r['__learned']||'') : null,
             _hard:    isFullExport ? Number(r['__hard']||0)    : null,
             _toFix:   isFullExport ? Number(r['__toFix']||0)   : null,
             _resOk:   isFullExport ? Number(r['__res_ok']||0)  : null,
@@ -1513,13 +1523,19 @@ function importXlsx(input){
       // ── 3. Restore learning data ──
       if(isFullExport){
         // Wipe current sets/maps, restore from file
-        us.learned=new Set(); us.hard=new Set(); us.toFix=new Set();
+        us.learned=new Set(); us.learnedDate={}; us.hard=new Set(); us.toFix=new Set();
         us.scores={}; us.results={};
         order.forEach(key=>{
           const imp=map[key];
           const id=String(imp._id);
           if(!id || id==='null') return;
-          if(imp._learned) us.learned.add(id);
+          // _learned peut être : '' (non appris), '2025-03-15' (date), ou '1' (ancien format)
+          const lv = String(imp._learned||'').trim();
+          if(lv && lv !== '0'){
+            us.learned.add(id);
+            // Si c'est une vraie date (YYYY-MM-DD), on la stocke ; sinon (ancien '1') on laisse vide
+            if(/^\d{4}-\d{2}-\d{2}$/.test(lv)) us.learnedDate[id]=lv;
+          }
           if(imp._hard)    us.hard.add(id);
           if(imp._toFix)   us.toFix.add(id);
           if(imp._score!==null) us.scores[id]=imp._score;
@@ -1557,7 +1573,18 @@ function importXlsx(input){
         Object.keys(us.results).forEach(id => { if(!validIds.has(id)) delete us.results[id]; });
       }
 
-      saveExtra(); buildPlan(); saveState(); renderList(); renderHome();
+      saveExtra();
+      // Ne reconstruire le plan que si on n'est pas déjà dans la journée en cours,
+      // ou si c'est un full export (qui restaure lastDate depuis le fichier).
+      // Cela évite de régénérer todayNew/todayRev après un simple import de base.
+      if(isFullExport || us.lastDate !== today()){ buildPlan(); }
+      else {
+        // Nettoyer todayNew/todayRev des IDs qui n'existent plus
+        const validIds = new Set(vocab.map(e => e.id));
+        us.todayNew = us.todayNew.filter(id => validIds.has(id));
+        us.todayRev = us.todayRev.filter(id => validIds.has(id));
+      }
+      saveState(); renderList(); renderHome();
 
       if(isFullExport){
         toast(`✓ Full restore: ${vocab.length} entries, ${us.learned.size} learned`);
