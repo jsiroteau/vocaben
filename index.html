@@ -467,10 +467,11 @@ function saveExtra(){
 
 function buildPlan(){
   const notLearned = vocab.filter(e=>!us.learned.has(e.id));
-  us.todayNew = shuffle(notLearned).slice(0,cfg.newPerDay).map(e=>e.id);
-  const learnedArr=[...us.learned];
-  const hardArr=learnedArr.filter(id=>us.hard.has(id));
-  const okArr=learnedArr.filter(id=>!us.hard.has(id));
+  // Exclure les mots hard des nouveaux : ils passent en révision prioritaire
+  us.todayNew = shuffle(notLearned.filter(e=>!us.hard.has(e.id))).slice(0,cfg.newPerDay).map(e=>e.id);
+  // Mots hard : tous (appris ou non), prioritaires dans les révisions
+  const hardArr=[...us.hard];
+  const okArr=[...us.learned].filter(id=>!us.hard.has(id));
   us.todayRev=[...shuffle(hardArr).slice(0,Math.ceil(cfg.revPerDay*0.6)),...shuffle(okArr)].slice(0,cfg.revPerDay);
 }
 
@@ -894,8 +895,15 @@ function tryNextLearn(knew){ nextLearn(knew); }
 
 function nextLearn(knew){
   const e=sq[si];
-  if(knew){us.learned.add(e.id);us.hard.delete(e.id);us.scores[e.id]=(us.scores[e.id]||0)+1;sc++;}
-  else{us.hard.add(e.id);us.scores[e.id]=(us.scores[e.id]||0)-1;}
+  if(knew){
+    us.learned.add(e.id); if(!us.learnedDate[e.id]) us.learnedDate[e.id]=today();
+    us.hard.delete(e.id); us.scores[e.id]=(us.scores[e.id]||0)+1; sc++;
+  } else {
+    us.hard.add(e.id); us.scores[e.id]=(us.scores[e.id]||0)-1;
+    // Remettre le mot en fin de session s'il n'y est pas deja
+    const alreadyQueued=sq.slice(si+1).some(x=>x.id===e.id);
+    if(!alreadyQueued) sq.push(e);
+  }
   saveState(); si++; renderLearnCard();
 }
 
