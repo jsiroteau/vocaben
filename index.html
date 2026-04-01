@@ -1583,9 +1583,10 @@ function importXlsx(input){
 
       saveExtra();
       // Ne reconstruire le plan que si on n'est pas déjà dans la journée en cours,
-      // ou si c'est un full export (qui restaure lastDate depuis le fichier).
-      // Cela évite de régénérer todayNew/todayRev après un simple import de base.
-      if(isFullExport || us.lastDate !== today()){ buildPlan(); }
+      // ou si c'est un full export (qui restaure lastDate depuis le fichier),
+      // ou si le plan du jour est vide (ex. premier import sur appareil vierge).
+      const planVide = !us.todayNew.length && !us.todayRev.length;
+      if(isFullExport || us.lastDate !== today() || planVide){ buildPlan(); }
       else {
         // Nettoyer todayNew/todayRev des IDs qui n'existent plus
         const validIds = new Set(vocab.map(e => e.id));
