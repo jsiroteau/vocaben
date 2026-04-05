@@ -354,6 +354,10 @@
       <label>Questions / test</label>
       <input type="number" id="set-qpp" min="5" max="50" value="10">
     </div>
+    <div class="settings-row">
+      <label>🔊 Tap English words to hear them</label>
+      <input type="checkbox" id="set-tts" style="width:20px;height:20px;cursor:pointer;accent-color:var(--accent)">
+    </div>
     <div class="btn-row" style="margin-top:20px">
       <button class="btn btn-primary btn-full" onclick="saveSettings()">Save</button>
       <button class="btn btn-secondary btn-full" onclick="closeModal('settings-modal')">Cancel</button>
@@ -375,7 +379,7 @@ const VOCAB_DATA = [];
 // ══════════════════════════════════
 let vocab = [];
 let us = {};
-let cfg = { newPerDay: 5, revPerDay: 5, qPerTest: 10 };
+let cfg = { newPerDay: 5, revPerDay: 5, qPerTest: 10, tts: false };
 let searchFilter = 'all';
 let currentEntry = null;
 let editMode = false;
@@ -483,14 +487,18 @@ function openSettings(){
   document.getElementById('set-new').value = cfg.newPerDay;
   document.getElementById('set-rev').value = cfg.revPerDay;
   document.getElementById('set-qpp').value = cfg.qPerTest;
+  document.getElementById('set-tts').checked = cfg.tts||false;
   document.getElementById('settings-modal').classList.add('open');
 }
 function saveSettings(){
+  const prevNew=cfg.newPerDay, prevRev=cfg.revPerDay;
   cfg.newPerDay = Math.max(1, parseInt(document.getElementById('set-new').value)||5);
   cfg.revPerDay = Math.max(1, parseInt(document.getElementById('set-rev').value)||5);
   cfg.qPerTest  = Math.max(5, parseInt(document.getElementById('set-qpp').value)||10);
+  cfg.tts       = document.getElementById('set-tts').checked;
   localStorage.setItem('ve_cfg', JSON.stringify(cfg));
-  buildPlan(); saveState();
+  // Ne reconstruire le plan que si les paramètres de planification ont changé
+  if(cfg.newPerDay!==prevNew || cfg.revPerDay!==prevRev){ buildPlan(); saveState(); }
   closeModal('settings-modal'); renderHome();
   toast('✓ Paramètres enregistrés');
 }
@@ -582,19 +590,22 @@ function openDetailFromSession(id){ openDetail(id); }
 // Build a mot block for read-only view
 function buildMotViewBlock(e,m,mi,context){
   const uid=`${context}-${e.id}-${mi}`;
+  const sp=context==='learn'&&cfg.tts; // speakable uniquement en session d'apprentissage
+  const spAttr=sp?` onclick="speak(this.textContent)" title="Tap to hear"`:'';
+  const spStyle=sp?' style="cursor:pointer;border-radius:4px;transition:background 0.15s" onmousedown="this.style.background='rgba(233,69,96,0.18)'" onmouseup="this.style.background=''" ontouchstart="this.style.background='rgba(233,69,96,0.18)'" ontouchend="this.style.background=''"':'';
   let html=`<div class="mot-block">
     <div class="mot-header">
-      <span class="mot-en">${m.mot}</span>
+      <span class="mot-en"${spAttr}${spStyle}>${m.mot}</span>
       <span class="mot-fr">${m.traduction}</span>
       ${m.usGB?`<span class="mot-usgb">${m.usGB}</span>`:''}
     </div>`;
-  if(m.synonymes) html+=`<div class="meta-line"><b>Synonyms:</b> ${m.synonymes}</div>`;
+  if(m.synonymes) html+=`<div class="meta-line"><b>Synonyms:</b> <span${spAttr}${spStyle}>${m.synonymes}</span></div>`;
   if(m.antonymes) html+=`<div class="meta-line"><b>Antonyms:</b> ${m.antonymes}</div>`;
   if(m.fauxAmi)   html+=`<div class="meta-line faux-ami"><b>⚠ False friend:</b> ${m.fauxAmi}</div>`;
 
   const exemples=(m.exemples||[]).filter(ex=>ex.ex);
   exemples.forEach(ex=>{
-    html+=`<div class="exemple-block"><div class="ex-en">${ex.ex}</div>`;
+    html+=`<div class="exemple-block"><div class="ex-en"${spAttr}${spStyle}>${ex.ex}</div>`;
     if(ex.tr) html+=`<div class="ex-fr">${ex.tr}</div>`;
     html+=`</div>`;
   });
@@ -871,10 +882,13 @@ function renderLearnCard(){
   let ficheHtml='';
   e.mots.forEach((m,mi)=>{ ficheHtml+=buildMotViewBlock(e,m,mi,'learn'); });
 
+  const ttsHint=cfg.tts?`<div style="font-size:0.72rem;color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:6px">🔊 <span>Tap English words to hear them</span></div>`:'';
+  const entreeSp=cfg.tts?` onclick="speak(this.textContent)" title="Tap to hear" style="cursor:pointer;border-radius:6px;transition:background 0.15s" onmousedown="this.style.background='rgba(233,69,96,0.18)'" onmouseup="this.style.background=''" ontouchstart="this.style.background='rgba(233,69,96,0.18)'" ontouchend="this.style.background=''"`:'' ;
   document.getElementById('learn-content').innerHTML=`
     <div style="padding:16px 0 8px">
       <div style="font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Entry ${si+1} of ${sq.length}</div>
-      <div style="font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:14px">${e.entree}</div>
+      ${ttsHint}
+      <div style="font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:14px"${entreeSp}>${e.entree}</div>
       ${ficheHtml}
     </div>
     <div style="margin-top:4px;padding-bottom:8px">
@@ -1622,6 +1636,22 @@ function toast(msg){
   const el=document.getElementById('toast');
   el.textContent=msg; el.classList.add('show');
   clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove('show'),2800);
+}
+
+// ══════════════════════════════════
+//  TEXT-TO-SPEECH
+// ══════════════════════════════════
+function speak(text){
+  if(!cfg.tts || !window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const utt=new SpeechSynthesisUtterance(text);
+  utt.lang='en-US';
+  // Chercher une voix anglaise disponible
+  const voices=window.speechSynthesis.getVoices();
+  const enVoice=voices.find(v=>v.lang==='en-US')||voices.find(v=>v.lang.startsWith('en'));
+  if(enVoice) utt.voice=enVoice;
+  utt.rate=0.9;
+  window.speechSynthesis.speak(utt);
 }
 
 // ══════════════════════════════════
