@@ -163,6 +163,8 @@
   .ans-btn{padding:16px;border-radius:var(--r);border:1px solid var(--border);background:var(--card);color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:600;cursor:pointer;transition:all 0.2s}
   .ans-btn.ok{border-color:var(--success);background:rgba(46,204,113,0.12);color:var(--success)}
   .ans-btn.ko{border-color:var(--danger);background:rgba(231,76,60,0.12);color:var(--danger)}
+  .speakable{cursor:pointer;border-radius:4px;transition:background 0.15s}
+  .speakable:active{background:rgba(233,69,96,0.2)}
 </style>
 </head>
 <body>
@@ -591,8 +593,8 @@ function openDetailFromSession(id){ openDetail(id); }
 function buildMotViewBlock(e,m,mi,context){
   const uid=`${context}-${e.id}-${mi}`;
   const sp=context==='learn'&&cfg.tts; // speakable uniquement en session d'apprentissage
-  const spAttr=sp?` onclick="speak(this.textContent)" title="Tap to hear"`:'';
-  const spStyle=sp?' style="cursor:pointer;border-radius:4px;transition:background 0.15s" onmousedown="this.style.background='rgba(233,69,96,0.18)'" onmouseup="this.style.background=''" ontouchstart="this.style.background='rgba(233,69,96,0.18)'" ontouchend="this.style.background=''"':'';
+  const spAttr=sp?' class="speakable" onclick="speak(this.textContent)" title="Tap to hear"':''
+  const spStyle='';
   let html=`<div class="mot-block">
     <div class="mot-header">
       <span class="mot-en"${spAttr}${spStyle}>${m.mot}</span>
@@ -883,7 +885,7 @@ function renderLearnCard(){
   e.mots.forEach((m,mi)=>{ ficheHtml+=buildMotViewBlock(e,m,mi,'learn'); });
 
   const ttsHint=cfg.tts?`<div style="font-size:0.72rem;color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:6px">🔊 <span>Tap English words to hear them</span></div>`:'';
-  const entreeSp=cfg.tts?` onclick="speak(this.textContent)" title="Tap to hear" style="cursor:pointer;border-radius:6px;transition:background 0.15s" onmousedown="this.style.background='rgba(233,69,96,0.18)'" onmouseup="this.style.background=''" ontouchstart="this.style.background='rgba(233,69,96,0.18)'" ontouchend="this.style.background=''"`:'' ;
+  const entreeSp=cfg.tts?' class="speakable" onclick="speak(this.textContent)" title="Tap to hear"':'' ;
   document.getElementById('learn-content').innerHTML=`
     <div style="padding:16px 0 8px">
       <div style="font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Entry ${si+1} of ${sq.length}</div>
