@@ -475,10 +475,9 @@ function buildPlan(){
   const notLearned = vocab.filter(e=>!us.learned.has(e.id));
   // Exclure les mots hard des nouveaux : ils passent en révision prioritaire
   us.todayNew = shuffle(notLearned.filter(e=>!us.hard.has(e.id))).slice(0,cfg.newPerDay).map(e=>e.id);
-  // Mots hard : tous (appris ou non), prioritaires dans les révisions
-  const hardArr=[...us.hard];
-  const okArr=[...us.learned].filter(id=>!us.hard.has(id));
-  us.todayRev=[...shuffle(hardArr).slice(0,Math.ceil(cfg.revPerDay*0.6)),...shuffle(okArr)].slice(0,cfg.revPerDay);
+  // Révisions : mots les moins récemment testés, hard prioritaires
+  const allRevCandidates=[...new Set([...us.hard,...us.learned])];
+  us.todayRev=priorityPool(allRevCandidates, cfg.revPerDay);
 }
 
 function shuffle(a){ const b=[...a]; for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];} return b; }
@@ -911,6 +910,8 @@ function tryNextLearn(knew){ nextLearn(knew); }
 
 function nextLearn(knew){
   const e=sq[si];
+  if(!us.results[e.id]) us.results[e.id]={ok:0,total:0};
+  us.results[e.id].lastTested=today();
   if(knew){
     us.learned.add(e.id); if(!us.learnedDate[e.id]) us.learnedDate[e.id]=today();
     us.hard.delete(e.id); us.scores[e.id]=(us.scores[e.id]||0)+1; sc++;
@@ -943,6 +944,25 @@ function openDirModal(type){ pendingTestType=type; document.getElementById('dir-
 function closeDirModal(){ document.getElementById('dir-modal').classList.remove('open'); }
 function startTestFromModal(dir){ closeDirModal(); startTest(pendingTestType,dir); }
 
+// Construit un pool de N mots triés par ancienneté de test (les moins testés récemment en premier)
+// Les mots hard comptent comme testés il y a 2x plus longtemps (priorité accrue)
+function priorityPool(ids, n){
+  const FAR_PAST = '1970-01-01';
+  const scored = ids.map(id => {
+    const res = us.results[id];
+    const raw = res && res.lastTested ? res.lastTested : FAR_PAST;
+    // Les mots hard : on recule artificiellement leur date de 30 jours pour les prioriser
+    let date = raw;
+    if(us.hard.has(id)){
+      const d = new Date(raw); d.setDate(d.getDate()-30);
+      date = d.toISOString().slice(0,10);
+    }
+    return {id, date};
+  });
+  scored.sort((a,b) => a.date.localeCompare(b.date));
+  return scored.slice(0,n).map(x=>x.id);
+}
+
 function startTest(type,dir){
   let entries;
   if(type==='general'){
@@ -950,7 +970,10 @@ function startTest(type,dir){
     entries=shuffle([...us.learned].map(id=>byId(id)).filter(Boolean));
     if(!entries.length){toast('No learned words yet');return;}
   } else {
-    const pool=[...new Set([...us.todayNew,...us.todayRev,...shuffle([...us.learned]).slice(0,15)])];
+    // Pool : todayNew systématiquement + mots les moins récemment testés (hard prioritaires)
+    const allCandidates=[...new Set([...us.todayNew,...us.hard,...us.learned])];
+    const revIds=priorityPool(allCandidates.filter(id=>!us.todayNew.includes(id)), Math.max(cfg.qPerTest, 20));
+    const pool=[...new Set([...us.todayNew,...revIds])];
     entries=pool.map(id=>byId(id)).filter(Boolean);
     if(type==='fill') entries=entries.filter(e=>e.mots.some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex)));
     if(type==='syn')  entries=entries.filter(e=>e.mots.some(m=>m.synonymes&&m.synonymes.trim()));
@@ -1304,6 +1327,7 @@ function recordResult(ok){
   const e=sq[si];
   if(!us.results[e.id]) us.results[e.id]={ok:0,total:0};
   us.results[e.id].total++;
+  us.results[e.id].lastTested=today();
   if(ok){
     us.results[e.id].ok++;
     sc++;
@@ -1434,6 +1458,7 @@ function exportXlsx(){
       const res=us.results[e.id]||{ok:0,total:0};
       row['__res_ok']    = res.ok||0;
       row['__res_total'] = res.total||0;
+      row['__lastTested'] = res.lastTested||'';
       row['__score']     = us.scores[e.id]||0;
       row['__tag']       = us.toFix.has(e.id)?'to fix':(e.source==='manual'?'manually added':(e.source==='edited'?'edited':''));
       rows.push(row);
@@ -1497,8 +1522,9 @@ function importXlsx(input){
             _learned: isFullExport ? (r['__learned']||'') : null,
             _hard:    isFullExport ? Number(r['__hard']||0)    : null,
             _toFix:   isFullExport ? Number(r['__toFix']||0)   : null,
-            _resOk:   isFullExport ? Number(r['__res_ok']||0)  : null,
-            _resTotal:isFullExport ? Number(r['__res_total']||0): null,
+            _resOk:       isFullExport ? Number(r['__res_ok']||0)   : null,
+            _resTotal:    isFullExport ? Number(r['__res_total']||0)  : null,
+            _lastTested:  isFullExport ? (r['__lastTested']||'')      : null,
             _score:   isFullExport ? Number(r['__score']||0)   : null,
           };
           order.push(key);
@@ -1563,7 +1589,7 @@ function importXlsx(input){
           if(imp._hard)    us.hard.add(id);
           if(imp._toFix)   us.toFix.add(id);
           if(imp._score!==null) us.scores[id]=imp._score;
-          if(imp._resTotal>0)   us.results[id]={ok:imp._resOk, total:imp._resTotal};
+          if(imp._resTotal>0)   us.results[id]={ok:imp._resOk, total:imp._resTotal, lastTested:imp._lastTested||''};
         });
 
         // ── 4. Restore meta (streak, sessions) ──
