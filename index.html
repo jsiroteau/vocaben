@@ -69,7 +69,6 @@
   .mot-block .mot-header{display:flex;align-items:baseline;gap:10px;margin-bottom:10px;flex-wrap:wrap}
   .mot-block .mot-en{font-weight:700;font-size:1rem}
   .mot-block .mot-fr{color:var(--gold);font-size:0.95rem}
-  .mot-block .mot-usgb{font-size:0.7rem;padding:2px 8px;border-radius:50px;border:1px solid var(--border);color:var(--muted)}
   .meta-line{font-size:0.8rem;color:var(--muted);margin-bottom:5px}
   .meta-line b{color:var(--text)}
   .meta-line.faux-ami b{color:var(--accent)}
@@ -546,7 +545,7 @@ function renderList(){
       e.entree,
       ...e.mots.map(m=>[
         m.mot, m.traduction, m.synonymes, m.antonymes,
-        m.fauxAmi, m.usGB,
+        m.fauxAmi,
         ...(m.exemples||[]).map(ex=>ex.ex+' '+ex.tr)
       ].join(' '))
     ].join(' ').toLowerCase();
@@ -591,14 +590,13 @@ function openDetailFromSession(id){ openDetail(id); }
 // Build a mot block for read-only view
 function buildMotViewBlock(e,m,mi,context){
   const uid=`${context}-${e.id}-${mi}`;
-  const sp=context==='learn'&&cfg.tts; // speakable uniquement en session d'apprentissage
+  const sp=cfg.tts; // speakable dans tous les contextes si option activée
   const spAttr=sp?' class="speakable" onclick="speak(this.textContent)" title="Tap to hear"':''
   const spStyle='';
   let html=`<div class="mot-block">
     <div class="mot-header">
       <span class="mot-en"${spAttr}${spStyle}>${m.mot}</span>
       <span class="mot-fr">${m.traduction}</span>
-      ${m.usGB?`<span class="mot-usgb">${m.usGB}</span>`:''}
     </div>`;
   if(m.synonymes) html+=`<div class="meta-line"><b>Synonyms:</b> <span${spAttr}${spStyle}>${m.synonymes}</span></div>`;
   if(m.antonymes) html+=`<div class="meta-line"><b>Antonyms:</b> ${m.antonymes}</div>`;
@@ -617,8 +615,18 @@ function buildMotViewBlock(e,m,mi,context){
 
 function renderDetailView(){
   const e=currentEntry, isL=us.learned.has(e.id);
+  // Rendre le titre de l'entrée speakable si TTS activé
+  if(cfg.tts){
+    const titleEl=document.getElementById('detail-title');
+    if(titleEl && !titleEl.classList.contains('speakable')){
+      titleEl.classList.add('speakable');
+      titleEl.title='Tap to hear';
+      titleEl.onclick=()=>speak(titleEl.textContent);
+    }
+  }
   const res=us.results[e.id];
   let html='';
+  if(cfg.tts) html+=`<div style="font-size:0.72rem;color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:6px">🔊 <span>Tap English words to hear them</span></div>`;
   if(res){
     const pct=Math.round(res.ok/res.total*100);
     html+=`<div style="font-size:0.82rem;color:var(--muted);margin-bottom:14px">
@@ -719,7 +727,6 @@ function motBlockHTML(m,idx,pfx){
     <label>Translation</label><input type="text" value="${esc(m.traduction||'')}" class="${pfx}-trad">
     <label>Word class <span style="color:var(--muted);font-weight:400">(multiple selection)</span></label>
     <div class="nature-bar" style="margin-bottom:12px">${natChips}</div>
-    <label>US / GB</label><input type="text" value="${esc(m.usGB||'')}" class="${pfx}-usgb">
     <label>Synonyms</label><input type="text" value="${esc(m.synonymes||'')}" class="${pfx}-syn">
     <label>Antonyms</label><input type="text" value="${esc(m.antonymes||'')}" class="${pfx}-ant">
     <label>False friend</label><input type="text" value="${esc(m.fauxAmi||'')}" class="${pfx}-fa">
@@ -762,7 +769,7 @@ function readMotBlocks(pfx){
       mot:block.querySelector(`.${pfx}-mot`)?.value.trim()||'',
       traduction:block.querySelector(`.${pfx}-trad`)?.value.trim()||'',
       natures,
-      usGB:block.querySelector(`.${pfx}-usgb`)?.value.trim()||'',
+      usGB:'',
       synonymes:block.querySelector(`.${pfx}-syn`)?.value.trim()||'',
       antonymes:block.querySelector(`.${pfx}-ant`)?.value.trim()||'',
       fauxAmi:block.querySelector(`.${pfx}-fa`)?.value.trim()||'',
@@ -1437,7 +1444,6 @@ function exportXlsx(){
         'Mot':       m.mot||'',
         'Nature':    (m.natures||[]).join('/'),
         'Traduction':m.traduction||'',
-        'US/GB':     m.usGB||'',
         'Synonymes': m.synonymes||'',
         'Antonymes': m.antonymes||'',
         'Faux-ami':  m.fauxAmi||'',
@@ -1533,7 +1539,7 @@ function importXlsx(input){
         const mot={
           mot:(r['Mot']||'').trim(), natures:nats,
           traduction:(r['Traduction']||'').trim(),
-          usGB:(r['US/GB']||'').trim(), synonymes:(r['Synonymes']||'').trim(),
+          usGB:'', synonymes:(r['Synonymes']||'').trim(),
           antonymes:(r['Antonymes']||'').trim(), fauxAmi:(r['Faux-ami']||'').trim(),
           motATrouver:'', exemples:[]
         };
