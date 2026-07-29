@@ -69,6 +69,7 @@
   .mot-block .mot-header{display:flex;align-items:baseline;gap:10px;margin-bottom:10px;flex-wrap:wrap}
   .mot-block .mot-en{font-weight:700;font-size:1rem}
   .mot-block .mot-fr{color:var(--gold);font-size:0.95rem}
+  .mot-block .mot-usgb{font-size:0.7rem;padding:2px 8px;border-radius:50px;border:1px solid var(--border);color:var(--muted)}
   .meta-line{font-size:0.8rem;color:var(--muted);margin-bottom:5px}
   .meta-line b{color:var(--text)}
   .meta-line.faux-ami b{color:var(--accent)}
@@ -162,8 +163,29 @@
   .ans-btn{padding:16px;border-radius:var(--r);border:1px solid var(--border);background:var(--card);color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:600;cursor:pointer;transition:all 0.2s}
   .ans-btn.ok{border-color:var(--success);background:rgba(46,204,113,0.12);color:var(--success)}
   .ans-btn.ko{border-color:var(--danger);background:rgba(231,76,60,0.12);color:var(--danger)}
-  .speakable{cursor:pointer;border-radius:4px;transition:background 0.15s}
-  .speakable:active{background:rgba(233,69,96,0.2)}
+  /* Review overlay */
+  .result-item{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;margin-bottom:8px}
+  .result-item.ko{border-color:rgba(231,76,60,0.4)}
+  .result-item .r-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+  .result-item .r-head h3{font-size:0.9rem;font-weight:700}
+  .result-item .r-status{font-size:0.85rem;font-weight:700}
+  .result-item .r-label{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.4px;margin-bottom:4px}
+  .result-item .r-q{font-size:0.9rem;margin-bottom:6px}
+  .result-item .r-ans{font-size:0.82rem;color:var(--muted)}
+  .result-item .r-ans b{color:var(--text)}
+  .result-item .r-correct{font-size:0.82rem;color:var(--success);margin-top:2px}
+  .result-item .r-correct b{color:var(--success)}
+  .session-pick{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;margin-bottom:10px;cursor:pointer}
+  .session-pick h3{font-size:0.9rem;font-weight:600}
+  .session-pick .sp-score{font-size:0.78rem;color:var(--muted);margin-top:3px}
+  /* Frequency badge / chips */
+  .freq-badge{font-size:0.7rem;padding:2px 8px;border-radius:50px;border:1px solid var(--border);font-weight:600}
+  .freq-1{color:#2ecc71;border-color:rgba(46,204,113,0.4)}
+  .freq-2{color:#f5a623;border-color:rgba(245,166,35,0.4)}
+  .freq-3{color:#e67e22;border-color:rgba(230,126,34,0.4)}
+  .freq-4{color:#e94560;border-color:rgba(233,69,96,0.4)}
+  .freq-chip{padding:6px 12px;border-radius:50px;font-size:0.78rem;font-weight:600;border:1px solid var(--border);background:var(--bg);color:var(--muted);cursor:pointer;user-select:none}
+  .freq-chip.selected{background:var(--gold);border-color:var(--gold);color:#111}
 </style>
 </head>
 <body>
@@ -185,6 +207,11 @@
     <div class="stat-card"><div class="num" id="s-score">—</div><div class="lbl">Today's score</div></div>
   </div>
   <div class="section-title">Today's activities</div>
+  <div class="action-card" id="review-today-card" onclick="openTodayReview()" style="display:none">
+    <div class="icon" style="background:rgba(122,122,154,0.15)">📋</div>
+    <div class="info"><h3>Today's results</h3><p id="review-today-sub">Review your answers</p></div>
+    <div class="arrow">›</div>
+  </div>
   <div class="action-card" onclick="openLearn()">
     <div class="icon" style="background:rgba(233,69,96,0.15)">📚</div>
     <div class="info"><h3>Learning</h3><p id="learn-subtitle">—</p></div>
@@ -195,24 +222,19 @@
     <div class="info"><h3>Multiple choice</h3><p>Pick the right translation</p></div>
     <div class="arrow">›</div>
   </div>
-  <div class="action-card" onclick="openDirModal('open')">
-    <div class="icon" style="background:rgba(245,166,35,0.15)">✍️</div>
-    <div class="info"><h3>Open translation</h3><p>Write the translation from memory</p></div>
-    <div class="arrow">›</div>
-  </div>
   <div class="action-card" onclick="startTest('fill','en2fr')">
     <div class="icon" style="background:rgba(46,204,113,0.15)">📝</div>
     <div class="info"><h3>Fill in the blank</h3><p>Find the word in a sentence</p></div>
     <div class="arrow">›</div>
   </div>
+  <div class="action-card" onclick="openDirModal('open')">
+    <div class="icon" style="background:rgba(245,166,35,0.15)">✍️</div>
+    <div class="info"><h3>Open translation</h3><p>Write the translation from memory</p></div>
+    <div class="arrow">›</div>
+  </div>
   <div class="action-card" onclick="startTest('syn','en2fr')">
     <div class="icon" style="background:rgba(100,120,255,0.15)">🔗</div>
     <div class="info"><h3>Synonyms</h3><p>Find the synonyms of the word</p></div>
-    <div class="arrow">›</div>
-  </div>
-  <div class="action-card" onclick="startTest('general','mix')">
-    <div class="icon" style="background:rgba(233,69,96,0.08)">🏆</div>
-    <div class="info"><h3>General test</h3><p>All learned words, all types</p></div>
     <div class="arrow">›</div>
   </div>
 </div>
@@ -327,6 +349,15 @@
   <div id="test-content" class="quiz-wrap"></div>
 </div>
 
+<!-- REVIEW OVERLAY -->
+<div id="review-overlay" class="overlay">
+  <div class="overlay-header">
+    <button class="back-btn" onclick="closeReview()">‹</button>
+    <h2 id="review-title">📋 Today's results</h2>
+  </div>
+  <div class="overlay-body" id="review-body"></div>
+</div>
+
 <!-- DIR MODAL -->
 <div id="dir-modal" class="modal-bg">
   <div class="modal-box">
@@ -355,9 +386,14 @@
       <label>Questions / test</label>
       <input type="number" id="set-qpp" min="5" max="50" value="10">
     </div>
-    <div class="settings-row">
-      <label>🔊 Tap English words to hear them</label>
-      <input type="checkbox" id="set-tts" style="width:20px;height:20px;cursor:pointer;accent-color:var(--accent)">
+    <div style="padding:12px 0">
+      <label style="font-size:0.9rem;display:block;margin-bottom:8px">Word frequency to learn</label>
+      <div class="filter-chips" id="freq-chips" style="margin-bottom:0">
+        <div class="freq-chip" data-f="1" onclick="this.classList.toggle('selected')">1 · most frequent</div>
+        <div class="freq-chip" data-f="2" onclick="this.classList.toggle('selected')">2</div>
+        <div class="freq-chip" data-f="3" onclick="this.classList.toggle('selected')">3</div>
+        <div class="freq-chip" data-f="4" onclick="this.classList.toggle('selected')">4 · least frequent</div>
+      </div>
     </div>
     <div class="btn-row" style="margin-top:20px">
       <button class="btn btn-primary btn-full" onclick="saveSettings()">Save</button>
@@ -380,7 +416,10 @@ const VOCAB_DATA = [];
 // ══════════════════════════════════
 let vocab = [];
 let us = {};
-let cfg = { newPerDay: 5, revPerDay: 5, qPerTest: 10, tts: false };
+let cfg = { newPerDay: 5, revPerDay: 5, qPerTest: 10, freqFilter: [1,2,3,4] };
+let currentSessionId = null;
+let lastRecord = null;
+let qCtx = null;
 let searchFilter = 'all';
 let currentEntry = null;
 let editMode = false;
@@ -422,7 +461,6 @@ function loadState(){
     const migrateObj = obj => Object.fromEntries(Object.entries(obj||{}).map(([k,v])=>[idMap[k]||k, v]));
     us = {
       learned: migrateSet(s.learned),
-      learnedDate: migrateObj(s.learnedDate||{}),
       hard:    migrateSet(s.hard),
       toFix:   migrateSet(s.toFix),
       scores:  migrateObj(s.scores),
@@ -430,11 +468,14 @@ function loadState(){
       streak: s.streak||0, lastDate: s.lastDate||'',
       todayNew: (s.todayNew||[]).map(id => idMap[String(id)] || String(id)),
       todayRev: (s.todayRev||[]).map(id => idMap[String(id)] || String(id)),
-      sessions: s.sessions||[]
+      sessions: s.sessions||[],
+      todayResults: s.todayResults||[]
     };
   } else {
-    us = { learned:new Set(), learnedDate:{}, hard:new Set(), toFix:new Set(), scores:{}, results:{}, streak:0, lastDate:'', todayNew:[], todayRev:[], sessions:[] };
+    us = { learned:new Set(), hard:new Set(), toFix:new Set(), scores:{}, results:{}, streak:0, lastDate:'', todayNew:[], todayRev:[], sessions:[], todayResults:[] };
   }
+  // Keep only today's detailed result logs
+  us.todayResults = (us.todayResults||[]).filter(r=>r.date===today());
 
   // If migration happened, persist immediately
   if(Object.keys(idMap).length > 0){ saveExtra(); saveState(); }
@@ -446,7 +487,7 @@ function loadState(){
   if(us.lastDate !== t){
     const prev = new Date(); prev.setDate(prev.getDate()-1);
     if(us.lastDate === prev.toISOString().slice(0,10)) us.streak++;
-    else if(!us.lastDate){ us.streak=1; } else us.streak=0;
+    else if(!us.lastDate){} else us.streak=0;
     us.lastDate = t;
     buildPlan();
     saveState();
@@ -455,11 +496,12 @@ function loadState(){
 
 function saveState(){
   localStorage.setItem('ve_state', JSON.stringify({
-    learned:[...us.learned], learnedDate:us.learnedDate, hard:[...us.hard],
+    learned:[...us.learned], hard:[...us.hard],
     toFix:[...us.toFix],
     scores:us.scores, results:us.results,
     streak:us.streak, lastDate:us.lastDate,
-    todayNew:us.todayNew, todayRev:us.todayRev, sessions:us.sessions
+    todayNew:us.todayNew, todayRev:us.todayRev, sessions:us.sessions,
+    todayResults:us.todayResults
   }));
 }
 
@@ -470,13 +512,21 @@ function saveExtra(){
   localStorage.removeItem('ve_overrides');
 }
 
+function matchesFreqFilter(e){
+  const ff=cfg.freqFilter||[1,2,3,4];
+  if(ff.length>=4) return true;
+  const withFreq=e.mots.filter(m=>m.freq);
+  if(!withFreq.length) return true; // unclassified entries always included
+  return withFreq.some(m=>ff.includes(Number(m.freq)));
+}
+
 function buildPlan(){
-  const notLearned = vocab.filter(e=>!us.learned.has(e.id));
-  // Exclure les mots hard des nouveaux : ils passent en révision prioritaire
-  us.todayNew = shuffle(notLearned.filter(e=>!us.hard.has(e.id))).slice(0,cfg.newPerDay).map(e=>e.id);
-  // Révisions : mots les moins récemment testés, hard prioritaires
-  const allRevCandidates=[...new Set([...us.hard,...us.learned])];
-  us.todayRev=priorityPool(allRevCandidates, cfg.revPerDay);
+  const notLearned = vocab.filter(e=>!us.learned.has(e.id)&&matchesFreqFilter(e));
+  us.todayNew = shuffle(notLearned).slice(0,cfg.newPerDay).map(e=>e.id);
+  const learnedArr=[...us.learned];
+  const hardArr=learnedArr.filter(id=>us.hard.has(id));
+  const okArr=learnedArr.filter(id=>!us.hard.has(id));
+  us.todayRev=[...shuffle(hardArr).slice(0,Math.ceil(cfg.revPerDay*0.6)),...shuffle(okArr)].slice(0,cfg.revPerDay);
 }
 
 function shuffle(a){ const b=[...a]; for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];} return b; }
@@ -487,18 +537,25 @@ function openSettings(){
   document.getElementById('set-new').value = cfg.newPerDay;
   document.getElementById('set-rev').value = cfg.revPerDay;
   document.getElementById('set-qpp').value = cfg.qPerTest;
-  document.getElementById('set-tts').checked = cfg.tts||false;
+  const ff=cfg.freqFilter||[1,2,3,4];
+  document.querySelectorAll('#freq-chips .freq-chip').forEach(c=>{
+    c.classList.toggle('selected', ff.includes(Number(c.dataset.f)));
+  });
   document.getElementById('settings-modal').classList.add('open');
 }
 function saveSettings(){
   const prevNew=cfg.newPerDay, prevRev=cfg.revPerDay;
+  const prevFreq=JSON.stringify((cfg.freqFilter||[1,2,3,4]).slice().sort());
   cfg.newPerDay = Math.max(1, parseInt(document.getElementById('set-new').value)||5);
   cfg.revPerDay = Math.max(1, parseInt(document.getElementById('set-rev').value)||5);
   cfg.qPerTest  = Math.max(5, parseInt(document.getElementById('set-qpp').value)||10);
-  cfg.tts       = document.getElementById('set-tts').checked;
+  let ff=[...document.querySelectorAll('#freq-chips .freq-chip.selected')].map(c=>Number(c.dataset.f));
+  if(!ff.length) ff=[1,2,3,4];
+  cfg.freqFilter=ff.sort();
   localStorage.setItem('ve_cfg', JSON.stringify(cfg));
-  // Ne reconstruire le plan que si les paramètres de planification ont changé
-  if(cfg.newPerDay!==prevNew || cfg.revPerDay!==prevRev){ buildPlan(); saveState(); }
+  const schedulingChanged = prevNew!==cfg.newPerDay || prevRev!==cfg.revPerDay || JSON.stringify(cfg.freqFilter)!==prevFreq;
+  if(schedulingChanged) buildPlan();
+  saveState();
   closeModal('settings-modal'); renderHome();
   toast('✓ Paramètres enregistrés');
 }
@@ -528,6 +585,14 @@ function renderHome(){
   } else { document.getElementById('s-score').textContent='—'; }
   const newCount=us.todayNew.filter(id=>!us.learned.has(id)).length;
   document.getElementById('learn-subtitle').textContent=`${newCount} new + ${us.todayRev.length} review(s)`;
+  const reviewCard=document.getElementById('review-today-card');
+  if(ts.length){
+    reviewCard.style.display='flex';
+    const totQ=ts.reduce((a,b)=>a+b.total,0), okQ=ts.reduce((a,b)=>a+b.correct,0);
+    document.getElementById('review-today-sub').textContent=`${okQ}/${totQ} answered today — see wrong answers`;
+  } else {
+    reviewCard.style.display='none';
+  }
 }
 
 // ── SEARCH ──
@@ -545,7 +610,7 @@ function renderList(){
       e.entree,
       ...e.mots.map(m=>[
         m.mot, m.traduction, m.synonymes, m.antonymes,
-        m.fauxAmi,
+        m.fauxAmi, m.usGB,
         ...(m.exemples||[]).map(ex=>ex.ex+' '+ex.tr)
       ].join(' '))
     ].join(' ').toLowerCase();
@@ -590,21 +655,20 @@ function openDetailFromSession(id){ openDetail(id); }
 // Build a mot block for read-only view
 function buildMotViewBlock(e,m,mi,context){
   const uid=`${context}-${e.id}-${mi}`;
-  const sp=cfg.tts; // speakable dans tous les contextes si option activée
-  const spAttr=sp?' class="speakable" onclick="speak(this.textContent)" title="Tap to hear"':''
-  const spStyle='';
   let html=`<div class="mot-block">
     <div class="mot-header">
-      <span class="mot-en"${spAttr}${spStyle}>${m.mot}</span>
+      <span class="mot-en">${m.mot}</span>
       <span class="mot-fr">${m.traduction}</span>
+      ${m.usGB?`<span class="mot-usgb">${m.usGB}</span>`:''}
+      ${m.freq?`<span class="freq-badge freq-${m.freq}" title="${m.zipf?'Zipf '+m.zipf:''}">Freq ${m.freq}</span>`:''}
     </div>`;
-  if(m.synonymes) html+=`<div class="meta-line"><b>Synonyms:</b> <span${spAttr}${spStyle}>${m.synonymes}</span></div>`;
+  if(m.synonymes) html+=`<div class="meta-line"><b>Synonyms:</b> ${m.synonymes}</div>`;
   if(m.antonymes) html+=`<div class="meta-line"><b>Antonyms:</b> ${m.antonymes}</div>`;
   if(m.fauxAmi)   html+=`<div class="meta-line faux-ami"><b>⚠ False friend:</b> ${m.fauxAmi}</div>`;
 
   const exemples=(m.exemples||[]).filter(ex=>ex.ex);
   exemples.forEach(ex=>{
-    html+=`<div class="exemple-block"><div class="ex-en"${spAttr}${spStyle}>${ex.ex}</div>`;
+    html+=`<div class="exemple-block"><div class="ex-en">${ex.ex}</div>`;
     if(ex.tr) html+=`<div class="ex-fr">${ex.tr}</div>`;
     html+=`</div>`;
   });
@@ -615,18 +679,8 @@ function buildMotViewBlock(e,m,mi,context){
 
 function renderDetailView(){
   const e=currentEntry, isL=us.learned.has(e.id);
-  // Rendre le titre de l'entrée speakable si TTS activé
-  if(cfg.tts){
-    const titleEl=document.getElementById('detail-title');
-    if(titleEl && !titleEl.classList.contains('speakable')){
-      titleEl.classList.add('speakable');
-      titleEl.title='Tap to hear';
-      titleEl.onclick=()=>speak(titleEl.textContent);
-    }
-  }
   const res=us.results[e.id];
   let html='';
-  if(cfg.tts) html+=`<div style="font-size:0.72rem;color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:6px">🔊 <span>Tap English words to hear them</span></div>`;
   if(res){
     const pct=Math.round(res.ok/res.total*100);
     html+=`<div style="font-size:0.82rem;color:var(--muted);margin-bottom:14px">
@@ -651,8 +705,7 @@ function renderDetailView(){
 }
 
 function markLearned(id,val){
-  if(val){us.learned.add(id); us.learnedDate[id]=today();}
-  else{us.learned.delete(id);us.hard.delete(id); delete us.learnedDate[id];}
+  if(val){us.learned.add(id);}else{us.learned.delete(id);us.hard.delete(id);}
   saveState(); renderDetailView(); renderHome();
   toast(val?'✓ Marked as learned':'Marked as not learned');
 }
@@ -727,10 +780,13 @@ function motBlockHTML(m,idx,pfx){
     <label>Translation</label><input type="text" value="${esc(m.traduction||'')}" class="${pfx}-trad">
     <label>Word class <span style="color:var(--muted);font-weight:400">(multiple selection)</span></label>
     <div class="nature-bar" style="margin-bottom:12px">${natChips}</div>
+    <label>US / GB</label><input type="text" value="${esc(m.usGB||'')}" class="${pfx}-usgb">
     <label>Synonyms</label><input type="text" value="${esc(m.synonymes||'')}" class="${pfx}-syn">
     <label>Antonyms</label><input type="text" value="${esc(m.antonymes||'')}" class="${pfx}-ant">
     <label>False friend</label><input type="text" value="${esc(m.fauxAmi||'')}" class="${pfx}-fa">
     <label>Target word (fill in the blank)</label><input type="text" value="${esc(m.motATrouver||'')}" class="${pfx}-mat-global">
+    <label>Frequency class (1-4)</label><input type="number" min="1" max="4" value="${esc(m.freq||'')}" class="${pfx}-freq">
+    <label>Zipf score</label><input type="number" step="0.01" value="${esc(m.zipf||'')}" class="${pfx}-zipf">
     <label>Examples</label>
     <div id="${pfx}-exlist-${idx}">${exHtml}</div>
     <button class="btn btn-ghost btn-full btn-sm" style="margin-top:6px" onclick="addExRow(this)">+ Exemple</button>
@@ -753,27 +809,24 @@ function addExRow(btn){
 }
 
 function readMotBlocks(pfx){
-  const container=document.getElementById(pfx==='eed'?'eed-mots':'new-mots-container');
-  if(!container) return [];
-  return [...container.querySelectorAll(`.mot-edit-block`)].map(block=>{
+  return [...document.querySelectorAll(`[id^="${pfx}-mot-"]`)].map(block=>{
     const natures=[...block.querySelectorAll('.nature-chip.selected')].map(c=>c.textContent.trim());
-    const exInputs=[...block.querySelectorAll(`.${pfx}-ex`)];
-    const matInputs=[...block.querySelectorAll(`.${pfx}-mat:not(.${pfx}-mat-global)`)];
-    const extrInputs=[...block.querySelectorAll(`.${pfx}-extr`)];
-    const exemples=exInputs.map((inp,i)=>({
-      ex:inp.value.trim(),
-      mat:matInputs[i]?matInputs[i].value.trim():'',
-      tr:extrInputs[i]?extrInputs[i].value.trim():''
-    })).filter(ex=>ex.ex);
+    const exemples=[...block.querySelectorAll(`.${pfx}-ex`)].map((inp,i)=>{
+      const mat=block.querySelectorAll(`.${pfx}-mat:not(.${pfx}-mat-global)`)[i];
+      const tr=block.querySelectorAll(`.${pfx}-extr`)[i];
+      return {ex:inp.value.trim(),mat:mat?mat.value.trim():'',tr:tr?tr.value.trim():''};
+    }).filter(ex=>ex.ex);
     return {
       mot:block.querySelector(`.${pfx}-mot`)?.value.trim()||'',
       traduction:block.querySelector(`.${pfx}-trad`)?.value.trim()||'',
       natures,
-      usGB:'',
+      usGB:block.querySelector(`.${pfx}-usgb`)?.value.trim()||'',
       synonymes:block.querySelector(`.${pfx}-syn`)?.value.trim()||'',
       antonymes:block.querySelector(`.${pfx}-ant`)?.value.trim()||'',
       fauxAmi:block.querySelector(`.${pfx}-fa`)?.value.trim()||'',
       motATrouver:block.querySelector(`.${pfx}-mat-global`)?.value.trim()||'',
+      freq:block.querySelector(`.${pfx}-freq`)?.value.trim()||'',
+      zipf:block.querySelector(`.${pfx}-zipf`)?.value.trim()||'',
       exemples
     };
   }).filter(m=>m.mot);
@@ -784,7 +837,7 @@ function addEditMotBlock(m,idx){
   const container=document.getElementById('eed-mots');
   const i=(idx!==undefined)?idx:editMotCount++;
   const div=document.createElement('div');
-  div.innerHTML=motBlockHTML(m||{mot:'',traduction:'',natures:[],usGB:'',synonymes:'',antonymes:'',fauxAmi:'',motATrouver:'',exemples:[]},i,'eed');
+  div.innerHTML=motBlockHTML(m||{mot:'',traduction:'',natures:[],usGB:'',synonymes:'',antonymes:'',fauxAmi:'',motATrouver:'',freq:'',zipf:'',exemples:[]},i,'eed');
   container.appendChild(div.firstElementChild);
 }
 
@@ -793,7 +846,7 @@ function addNewMotBlock(m){
   const container=document.getElementById('new-mots-container');
   const i=newMotCount++;
   const div=document.createElement('div');
-  div.innerHTML=motBlockHTML(m||{mot:'',traduction:'',natures:[],usGB:'',synonymes:'',antonymes:'',fauxAmi:'',motATrouver:'',exemples:[]},i,'ned');
+  div.innerHTML=motBlockHTML(m||{mot:'',traduction:'',natures:[],usGB:'',synonymes:'',antonymes:'',fauxAmi:'',motATrouver:'',freq:'',zipf:'',exemples:[]},i,'ned');
   container.appendChild(div.firstElementChild);
 }
 
@@ -823,10 +876,6 @@ function saveEdit(){
   e.editedAt=today();
   document.getElementById('detail-title').textContent=e.entree;
   saveExtra(); toggleEdit(); renderDetailView();
-  // Si on est en session d'apprentissage, synchroniser sq[si] avec l'objet mis à jour
-  if(document.getElementById('learn-overlay').classList.contains('open') && si<sq.length){
-    const fresh=byId(e.id); if(fresh) sq[si]=fresh;
-  }
   toast('✓ Changes saved');
 }
 
@@ -890,13 +939,10 @@ function renderLearnCard(){
   let ficheHtml='';
   e.mots.forEach((m,mi)=>{ ficheHtml+=buildMotViewBlock(e,m,mi,'learn'); });
 
-  const ttsHint=cfg.tts?`<div style="font-size:0.72rem;color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:6px">🔊 <span>Tap English words to hear them</span></div>`:'';
-  const entreeSp=cfg.tts?' class="speakable" onclick="speak(this.textContent)" title="Tap to hear"':'' ;
   document.getElementById('learn-content').innerHTML=`
     <div style="padding:16px 0 8px">
       <div style="font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Entry ${si+1} of ${sq.length}</div>
-      ${ttsHint}
-      <div style="font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:14px"${entreeSp}>${e.entree}</div>
+      <div style="font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:14px">${e.entree}</div>
       ${ficheHtml}
     </div>
     <div style="margin-top:4px;padding-bottom:8px">
@@ -917,17 +963,8 @@ function tryNextLearn(knew){ nextLearn(knew); }
 
 function nextLearn(knew){
   const e=sq[si];
-  if(!us.results[e.id]) us.results[e.id]={ok:0,total:0};
-  us.results[e.id].lastTested=today();
-  if(knew){
-    us.learned.add(e.id); if(!us.learnedDate[e.id]) us.learnedDate[e.id]=today();
-    us.hard.delete(e.id); us.scores[e.id]=(us.scores[e.id]||0)+1; sc++;
-  } else {
-    us.hard.add(e.id); us.scores[e.id]=(us.scores[e.id]||0)-1;
-    // Remettre le mot en fin de session s'il n'y est pas deja
-    const alreadyQueued=sq.slice(si+1).some(x=>x.id===e.id);
-    if(!alreadyQueued) sq.push(e);
-  }
+  if(knew){us.learned.add(e.id);us.hard.delete(e.id);us.scores[e.id]=(us.scores[e.id]||0)+1;sc++;}
+  else{us.hard.add(e.id);us.scores[e.id]=(us.scores[e.id]||0)-1;}
   saveState(); si++; renderLearnCard();
 }
 
@@ -951,25 +988,6 @@ function openDirModal(type){ pendingTestType=type; document.getElementById('dir-
 function closeDirModal(){ document.getElementById('dir-modal').classList.remove('open'); }
 function startTestFromModal(dir){ closeDirModal(); startTest(pendingTestType,dir); }
 
-// Construit un pool de N mots triés par ancienneté de test (les moins testés récemment en premier)
-// Les mots hard comptent comme testés il y a 2x plus longtemps (priorité accrue)
-function priorityPool(ids, n){
-  const FAR_PAST = '1970-01-01';
-  const scored = ids.map(id => {
-    const res = us.results[id];
-    const raw = res && res.lastTested ? res.lastTested : FAR_PAST;
-    // Les mots hard : on recule artificiellement leur date de 30 jours pour les prioriser
-    let date = raw;
-    if(us.hard.has(id)){
-      const d = new Date(raw); d.setDate(d.getDate()-30);
-      date = d.toISOString().slice(0,10);
-    }
-    return {id, date};
-  });
-  scored.sort((a,b) => a.date.localeCompare(b.date));
-  return scored.slice(0,n).map(x=>x.id);
-}
-
 function startTest(type,dir){
   let entries;
   if(type==='general'){
@@ -977,10 +995,7 @@ function startTest(type,dir){
     entries=shuffle([...us.learned].map(id=>byId(id)).filter(Boolean));
     if(!entries.length){toast('No learned words yet');return;}
   } else {
-    // Pool : todayNew systématiquement + mots les moins récemment testés (hard prioritaires)
-    const allCandidates=[...new Set([...us.todayNew,...us.hard,...us.learned])];
-    const revIds=priorityPool(allCandidates.filter(id=>!us.todayNew.includes(id)), Math.max(cfg.qPerTest, 20));
-    const pool=[...new Set([...us.todayNew,...revIds])];
+    const pool=[...new Set([...us.todayNew,...us.todayRev,...shuffle([...us.learned]).slice(0,15)])];
     entries=pool.map(id=>byId(id)).filter(Boolean);
     if(type==='fill') entries=entries.filter(e=>e.mots.some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex)));
     if(type==='syn')  entries=entries.filter(e=>e.mots.some(m=>m.synonymes&&m.synonymes.trim()));
@@ -992,6 +1007,7 @@ function startTest(type,dir){
   }
   sq=shuffle(entries).slice(0,cfg.qPerTest);
   si=0; sc=0; sType=type; sDir=dir; testAnswered=false;
+  currentSessionId='sess_'+Date.now();
   const titles={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms',general:'🏆 General test'};
   document.getElementById('test-title').textContent=titles[type]||type;
   openOverlay('test-overlay');
@@ -1025,6 +1041,7 @@ function renderQCM(e,dir){
   let qText,correct,qLabel;
   if(dir==='en2fr'){qText=mot.mot;correct=mot.traduction;qLabel='🇬🇧 → 🇫🇷 What does this mean:';}
   else{qText=mot.traduction;correct=mot.mot;qLabel='🇫🇷 → 🇬🇧 How do you say:';}
+  qCtx={type:'qcm',dir,entryId:e.id,entree:e.entree,question:qText,correct,label:qLabel};
   const motNatures=mot.natures||[];
 
   // Build distractor pool: pick a mot of matching nature from each candidate entry
@@ -1073,7 +1090,7 @@ function checkQCM(el,chosen,correct){
   document.querySelectorAll('.qcm-opt').forEach(o=>{o.disabled=true;if(o.textContent.trim()===correct)o.classList.add('correct-opt');});
   const ok=chosen===correct;
   if(!ok) el.classList.add('wrong-opt');
-  recordResult(ok); showFB(ok, correct, chosen);
+  recordResult(ok, chosen); showFB(ok, correct, chosen);
 }
 
 // ── OPEN ──
@@ -1119,6 +1136,7 @@ function renderOpen(e,dir){
 
   if(multiGroup){
     const corrects=multiGroup.map(m=>m.traduction);
+    qCtx={type:'open',dir,entryId:e.id,entree:e.entree,question:qText,correct:corrects.join(' / '),label:qLabel};
     const inputs=multiGroup.map((_,i)=>`
       <input class="open-inp" id="open-inp-${i}" type="text" placeholder="A translation…"
         autocomplete="off"
@@ -1142,6 +1160,7 @@ function renderOpen(e,dir){
       </div>`;
     document.getElementById('open-inp-0').focus();
   } else {
+    qCtx={type:'open',dir,entryId:e.id,entree:e.entree,question:qText,correct,label:qLabel};
     const lang = dir==='en2fr' ? 'fr-FR' : 'en-US';
     document.getElementById('test-content').innerHTML=`
       <div class="quiz-card">
@@ -1171,7 +1190,7 @@ function checkOpen(){
   const correct=inp.dataset.correct;
   const ok=checkAnswer(ans,correct);
   testAnswered=true; inp.disabled=true;
-  recordResult(ok); showFB(ok, correct, ans);
+  recordResult(ok, ans); showFB(ok, correct, ans);
 }
 
 function checkOpenMulti(){
@@ -1198,7 +1217,7 @@ function checkOpenMulti(){
   const allOk=matchedByCorrect.every(h=>h!==-1);
   const missing=corrects.filter((_,ci)=>matchedByCorrect[ci]===-1);
   const fbHtml=missing.map(c=>'<div style="font-size:0.82rem;margin-top:4px">Expected: <strong>'+c+'</strong></div>').join('');
-  recordResult(allOk);
+  recordResult(allOk, answers.join(' / '));
   document.getElementById('tfb').innerHTML=allOk
     ?'<div class="feedback ok">✓ All translations are correct!</div>'
     :'<div class="feedback ko">✗ Some translations are incorrect'+fbHtml+'</div>';
@@ -1241,6 +1260,7 @@ function renderFill(e){
   const target=ex.mat;
   const re=new RegExp(target.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i');
   const sentence=ex.ex.replace(re,'<span class="blank-spot" id="blank">___</span>');
+  qCtx={type:'fill',dir:'en2fr',entryId:e.id,entree:e.entree,question:ex.ex,correct:target,label:'Fill in the blank — translation: '+mot.traduction};
   document.getElementById('test-content').innerHTML=`
     <div class="quiz-card">
       <div class="quiz-type">📝 Fill in the blank — translation: <b>${mot.traduction}</b></div>
@@ -1266,7 +1286,7 @@ function checkFill(){
   testAnswered=true; inp.disabled=true;
   const blank=document.getElementById('blank');
   if(blank){blank.textContent=correct;blank.className='blank-spot '+(ok?'blank-ok':'blank-ko');}
-  recordResult(ok); showFB(ok, correct, ans);
+  recordResult(ok, ans); showFB(ok, correct, ans);
 }
 
 // ── SYNONYMES ──
@@ -1275,6 +1295,7 @@ function renderSyn(e){
   if(!motsWithSyn.length){nextTest();return;}
   const mot=motsWithSyn[Math.floor(Math.random()*motsWithSyn.length)];
   const syns=mot.synonymes.split(/[\/,]/).map(s=>s.trim()).filter(Boolean);
+  qCtx={type:'syn',dir:'en2fr',entryId:e.id,entree:e.entree,question:mot.mot,correct:syns.join(' / '),label:'Synonyms'};
   // Stocker tous les synonymes attendus en JSON sur le wrapper — pas d'ordre imposé
   const inputs=syns.map((_,i)=>`
     <input class="open-inp" id="syn-inp-${i}" type="text" placeholder="A synonym…"
@@ -1321,7 +1342,7 @@ function checkSyn(count){
   const allOk=matchedByCorrect.every(h=>h!==-1);
   const missing=corrects.filter((_,ci)=>matchedByCorrect[ci]===-1);
   const fbHtml=missing.map(c=>'<div style="font-size:0.82rem;margin-top:4px">Expected: <strong>'+c+'</strong></div>').join('');
-  recordResult(allOk);
+  recordResult(allOk, answers.join(' / '));
   document.getElementById('tfb').innerHTML=allOk
     ?'<div class="feedback ok">✓ All synonyms are correct!</div>'
     :'<div class="feedback ko">✗ Some synonyms are missing or incorrect'+fbHtml+'</div>'
@@ -1330,20 +1351,30 @@ function checkSyn(count){
 }
 
 // ── SHARED ──
-function recordResult(ok){
+function recordResult(ok,userAnswerDisplay){
   const e=sq[si];
   if(!us.results[e.id]) us.results[e.id]={ok:0,total:0};
   us.results[e.id].total++;
-  us.results[e.id].lastTested=today();
   if(ok){
     us.results[e.id].ok++;
     sc++;
     us.scores[e.id]=(us.scores[e.id]||0)+1;
-    if(us.scores[e.id]>=3){us.learned.add(e.id);us.hard.delete(e.id); if(!us.learnedDate[e.id]) us.learnedDate[e.id]=today();}
+    if(us.scores[e.id]>=3){us.learned.add(e.id);us.hard.delete(e.id);}
   } else {
     us.hard.add(e.id);
     us.scores[e.id]=(us.scores[e.id]||0)-1;
   }
+  const rec={
+    sessionId: currentSessionId, date: today(), ts: Date.now(),
+    entryId: e.id, entree: e.entree,
+    type: (qCtx&&qCtx.type)||sType, dir: (qCtx&&qCtx.dir)||sDir,
+    label: (qCtx&&qCtx.label)||'', question: (qCtx&&qCtx.question)||'',
+    correct: (qCtx&&qCtx.correct)||'', userAnswer: userAnswerDisplay||'',
+    ok, overridden:false
+  };
+  us.todayResults = us.todayResults.filter(r=>r.date===today());
+  us.todayResults.push(rec);
+  lastRecord = rec;
   saveState();
 }
 
@@ -1362,15 +1393,17 @@ function overrideToCorrect(btn){
   btn.disabled=true;
   btn.textContent='✓ Overridden';
   const e=sq[si];
-  // Undo the failed result then apply one correct result (net: +1 on score)
+  // Undo the failed result
   us.results[e.id].total--;
   us.hard.delete(e.id);
-  // cancel the -1 from failure AND count as a correct answer in one step
+  us.scores[e.id]=(us.scores[e.id]||0)+1; // cancel the -1 from failure
+  // Apply a correct result
   us.results[e.id].ok++;
   us.results[e.id].total++;
   sc++;
-  us.scores[e.id]=(us.scores[e.id]||0)+1; // net +1: -1 cancelled + 1 correct
-  if(us.scores[e.id]>=3){us.learned.add(e.id);us.hard.delete(e.id); if(!us.learnedDate[e.id]) us.learnedDate[e.id]=today();}
+  us.scores[e.id]=(us.scores[e.id]||0)+1;
+  if(us.scores[e.id]>=3){us.learned.add(e.id);us.hard.delete(e.id);}
+  if(lastRecord && lastRecord.entryId===e.id){ lastRecord.ok=true; lastRecord.overridden=true; }
   // Update feedback display
   document.getElementById('tfb').innerHTML=`<div class="feedback ok">✓ Overridden as correct!</div>`;
   saveState();
@@ -1382,7 +1415,7 @@ function showTestSummary(){
   const pct=Math.round(sc/sq.length*100);
   document.getElementById('test-prog').style.width='100%';
   document.getElementById('test-cnt').textContent='✓';
-  us.sessions.push({date:today(),type:sType,correct:sc,total:sq.length});
+  us.sessions.push({id:currentSessionId,date:today(),type:sType,correct:sc,total:sq.length});
   saveState(); renderHome();
   document.getElementById('test-content').innerHTML=`
     <div class="summary">
@@ -1420,12 +1453,69 @@ function renderPlan(){
   const ts=us.sessions.filter(s=>s.date===today());
   const sp=document.getElementById('plan-sessions');
   if(!ts.length){sp.innerHTML='<div class="empty-state">No tests done today</div>';return;}
-  const labels={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',general:'🏆 General test'};
-  sp.innerHTML=ts.map(s=>`<div class="plan-card" style="cursor:default">
+  const labels={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms',general:'🏆 General test'};
+  sp.innerHTML=ts.map(s=>`<div class="plan-card" ${s.id?`onclick="openSessionReview('${s.id}')"`:'style="cursor:default"'}>
     <h3>${labels[s.type]||s.type}</h3>
-    <div class="plan-trad">${s.correct}/${s.total} — ${Math.round(s.correct/s.total*100)}%</div>
+    <div class="plan-trad">${s.correct}/${s.total} — ${Math.round(s.correct/s.total*100)}%${s.id?' · tap to review':''}</div>
   </div>`).join('');
 }
+
+// ══════════════════════════════════
+//  TODAY'S RESULTS REVIEW
+// ══════════════════════════════════
+function resultItemHTML(r){
+  return `<div class="result-item ${r.ok?'':'ko'}">
+    <div class="r-head"><h3>${esc(r.entree)}</h3><span class="r-status" style="color:${r.ok?'var(--success)':'var(--danger)'}">${r.ok?'✓':'✗'}${r.overridden?' (overridden)':''}</span></div>
+    <div class="r-label">${esc(r.label)}</div>
+    <div class="r-q">${esc(r.question)}</div>
+    <div class="r-ans">Your answer: <b>${esc(r.userAnswer)||'—'}</b></div>
+    ${!r.ok?`<div class="r-correct">Correct: <b>${esc(r.correct)}</b></div>`:''}
+    <button class="see-fiche-btn" style="margin-top:8px" onclick="openDetailFromSession('${r.entryId}')">📖 See entry</button>
+  </div>`;
+}
+
+function openSessionReview(sessionId){
+  const sess=us.sessions.find(s=>s.id===sessionId);
+  const recs=us.todayResults.filter(r=>r.sessionId===sessionId);
+  const labels={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms',general:'🏆 General test'};
+  document.getElementById('review-title').textContent=sess?(labels[sess.type]||sess.type):'📋 Results';
+  if(!recs.length){
+    document.getElementById('review-body').innerHTML='<div class="empty-state">No detail available for this session</div>';
+  } else {
+    document.getElementById('review-body').innerHTML=
+      `<div class="section-title">${sess?sess.correct+'/'+sess.total+' correct':''}</div>`+
+      recs.map(resultItemHTML).join('');
+  }
+  openOverlay('review-overlay');
+}
+
+function openTodayReview(){
+  const recs=us.todayResults.filter(r=>r.date===today());
+  document.getElementById('review-title').textContent="📋 Today's results";
+  if(!recs.length){
+    document.getElementById('review-body').innerHTML='<div class="empty-state">No exercises done today yet</div>';
+  } else {
+    const wrong=recs.filter(r=>!r.ok);
+    document.getElementById('review-body').innerHTML=
+      `<div class="filter-chips">
+        <div class="chip active" onclick="setReviewFilter(this,'all')">All (${recs.length})</div>
+        <div class="chip" onclick="setReviewFilter(this,'wrong')">Wrong only (${wrong.length})</div>
+      </div>
+      <div id="review-list">${recs.map(resultItemHTML).join('')}</div>`;
+  }
+  openOverlay('review-overlay');
+}
+
+function setReviewFilter(el,f){
+  document.querySelectorAll('#review-body .chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  const recs=us.todayResults.filter(r=>r.date===today()&&(f==='all'||!r.ok));
+  document.getElementById('review-list').innerHTML=recs.length
+    ?recs.map(resultItemHTML).join('')
+    :'<div class="empty-state">Nothing to show</div>';
+}
+
+function closeReview(){ closeOverlay('review-overlay'); }
 
 // ══════════════════════════════════
 //  IMPORT / EXPORT — unified .xlsx
@@ -1444,9 +1534,12 @@ function exportXlsx(){
         'Mot':       m.mot||'',
         'Nature':    (m.natures||[]).join('/'),
         'Traduction':m.traduction||'',
+        'US/GB':     m.usGB||'',
         'Synonymes': m.synonymes||'',
         'Antonymes': m.antonymes||'',
         'Faux-ami':  m.fauxAmi||'',
+        'Fréq (1-4)':m.freq||'',
+        'Zipf':      m.zipf||'',
       };
       // examples (up to 5)
       for(let i=0;i<5;i++){
@@ -1458,13 +1551,12 @@ function exportXlsx(){
       // ── learning metadata ──
       row['__id']      = e.id;
       row['__source']  = e.source||'';
-      row['__learned']     = us.learned.has(e.id) ? (us.learnedDate[e.id]||'?') : '';
+      row['__learned'] = us.learned.has(e.id)?1:0;
       row['__hard']    = us.hard.has(e.id)?1:0;
       row['__toFix']   = us.toFix.has(e.id)?1:0;
       const res=us.results[e.id]||{ok:0,total:0};
       row['__res_ok']    = res.ok||0;
       row['__res_total'] = res.total||0;
-      row['__lastTested'] = res.lastTested||'';
       row['__score']     = us.scores[e.id]||0;
       row['__tag']       = us.toFix.has(e.id)?'to fix':(e.source==='manual'?'manually added':(e.source==='edited'?'edited':''));
       rows.push(row);
@@ -1525,12 +1617,11 @@ function importXlsx(input){
             // full-export fields (taken from first row of the group)
             _id:      isFullExport ? r['__id']      : null,
             _source:  isFullExport ? (r['__source']||'') : '',
-            _learned: isFullExport ? (r['__learned']||'') : null,
+            _learned: isFullExport ? Number(r['__learned']||0) : null,
             _hard:    isFullExport ? Number(r['__hard']||0)    : null,
             _toFix:   isFullExport ? Number(r['__toFix']||0)   : null,
-            _resOk:       isFullExport ? Number(r['__res_ok']||0)   : null,
-            _resTotal:    isFullExport ? Number(r['__res_total']||0)  : null,
-            _lastTested:  isFullExport ? (r['__lastTested']||'')      : null,
+            _resOk:   isFullExport ? Number(r['__res_ok']||0)  : null,
+            _resTotal:isFullExport ? Number(r['__res_total']||0): null,
             _score:   isFullExport ? Number(r['__score']||0)   : null,
           };
           order.push(key);
@@ -1539,8 +1630,10 @@ function importXlsx(input){
         const mot={
           mot:(r['Mot']||'').trim(), natures:nats,
           traduction:(r['Traduction']||'').trim(),
-          usGB:'', synonymes:(r['Synonymes']||'').trim(),
+          usGB:(r['US/GB']||'').trim(), synonymes:(r['Synonymes']||'').trim(),
           antonymes:(r['Antonymes']||'').trim(), fauxAmi:(r['Faux-ami']||'').trim(),
+          freq:(r['Fréq (1-4)']!==undefined&&r['Fréq (1-4)']!==''?String(r['Fréq (1-4)']).trim():''),
+          zipf:(r['Zipf']!==undefined&&r['Zipf']!==''?String(r['Zipf']).trim():''),
           motATrouver:'', exemples:[]
         };
         for(let i=1;i<=5;i++){
@@ -1579,23 +1672,17 @@ function importXlsx(input){
       // ── 3. Restore learning data ──
       if(isFullExport){
         // Wipe current sets/maps, restore from file
-        us.learned=new Set(); us.learnedDate={}; us.hard=new Set(); us.toFix=new Set();
+        us.learned=new Set(); us.hard=new Set(); us.toFix=new Set();
         us.scores={}; us.results={};
         order.forEach(key=>{
           const imp=map[key];
           const id=String(imp._id);
           if(!id || id==='null') return;
-          // _learned peut être : '' (non appris), '2025-03-15' (date), ou '1' (ancien format)
-          const lv = String(imp._learned||'').trim();
-          if(lv && lv !== '0'){
-            us.learned.add(id);
-            // Si c'est une vraie date (YYYY-MM-DD), on la stocke ; sinon (ancien '1') on laisse vide
-            if(/^\d{4}-\d{2}-\d{2}$/.test(lv)) us.learnedDate[id]=lv;
-          }
+          if(imp._learned) us.learned.add(id);
           if(imp._hard)    us.hard.add(id);
           if(imp._toFix)   us.toFix.add(id);
           if(imp._score!==null) us.scores[id]=imp._score;
-          if(imp._resTotal>0)   us.results[id]={ok:imp._resOk, total:imp._resTotal, lastTested:imp._lastTested||''};
+          if(imp._resTotal>0)   us.results[id]={ok:imp._resOk, total:imp._resTotal};
         });
 
         // ── 4. Restore meta (streak, sessions) ──
@@ -1629,19 +1716,7 @@ function importXlsx(input){
         Object.keys(us.results).forEach(id => { if(!validIds.has(id)) delete us.results[id]; });
       }
 
-      saveExtra();
-      // Ne reconstruire le plan que si on n'est pas déjà dans la journée en cours,
-      // ou si c'est un full export (qui restaure lastDate depuis le fichier),
-      // ou si le plan du jour est vide (ex. premier import sur appareil vierge).
-      const planVide = !us.todayNew.length && !us.todayRev.length;
-      if(isFullExport || us.lastDate !== today() || planVide){ buildPlan(); }
-      else {
-        // Nettoyer todayNew/todayRev des IDs qui n'existent plus
-        const validIds = new Set(vocab.map(e => e.id));
-        us.todayNew = us.todayNew.filter(id => validIds.has(id));
-        us.todayRev = us.todayRev.filter(id => validIds.has(id));
-      }
-      saveState(); renderList(); renderHome();
+      saveExtra(); buildPlan(); saveState(); renderList(); renderHome();
 
       if(isFullExport){
         toast(`✓ Full restore: ${vocab.length} entries, ${us.learned.size} learned`);
@@ -1670,22 +1745,6 @@ function toast(msg){
   const el=document.getElementById('toast');
   el.textContent=msg; el.classList.add('show');
   clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove('show'),2800);
-}
-
-// ══════════════════════════════════
-//  TEXT-TO-SPEECH
-// ══════════════════════════════════
-function speak(text){
-  if(!cfg.tts || !window.speechSynthesis) return;
-  window.speechSynthesis.cancel();
-  const utt=new SpeechSynthesisUtterance(text);
-  utt.lang='en-US';
-  // Chercher une voix anglaise disponible
-  const voices=window.speechSynthesis.getVoices();
-  const enVoice=voices.find(v=>v.lang==='en-US')||voices.find(v=>v.lang.startsWith('en'));
-  if(enVoice) utt.voice=enVoice;
-  utt.rate=0.9;
-  window.speechSynthesis.speak(utt);
 }
 
 // ══════════════════════════════════
