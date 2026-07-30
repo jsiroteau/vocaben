@@ -192,6 +192,7 @@
 
 <div id="app-header">
   <div class="logo">Vocab<span>EN</span></div>
+  <button class="btn btn-secondary btn-sm" onclick="openSettings()" title="Settings">⚙</button>
 </div>
 
 <!-- SCREENS -->
@@ -518,6 +519,16 @@ function matchesFreqFilter(e){
   const withFreq=e.mots.filter(m=>m.freq);
   if(!withFreq.length) return true; // unclassified entries always included
   return withFreq.some(m=>ff.includes(Number(m.freq)));
+}
+
+// Returns only the mots of an entry that match the currently selected frequency
+// classes (words with no frequency data are always kept). Falls back to all
+// mots if the filter would otherwise leave nothing to show/quiz.
+function learnableMots(e){
+  const ff=cfg.freqFilter||[1,2,3,4];
+  if(ff.length>=4) return e.mots;
+  const filtered=e.mots.filter(m=>!m.freq||ff.includes(Number(m.freq)));
+  return filtered.length ? filtered : e.mots;
 }
 
 function buildPlan(){
@@ -937,7 +948,7 @@ function renderLearnCard(){
   document.getElementById('learn-cnt').textContent=`${si+1}/${sq.length}`;
   const e=sq[si];
   let ficheHtml='';
-  e.mots.forEach((m,mi)=>{ ficheHtml+=buildMotViewBlock(e,m,mi,'learn'); });
+  learnableMots(e).forEach((m,mi)=>{ ficheHtml+=buildMotViewBlock(e,m,mi,'learn'); });
 
   document.getElementById('learn-content').innerHTML=`
     <div style="padding:16px 0 8px">
@@ -989,26 +1000,19 @@ function closeDirModal(){ document.getElementById('dir-modal').classList.remove(
 function startTestFromModal(dir){ closeDirModal(); startTest(pendingTestType,dir); }
 
 function startTest(type,dir){
-  let entries;
-  if(type==='general'){
-    // All learned entries
-    entries=shuffle([...us.learned].map(id=>byId(id)).filter(Boolean));
-    if(!entries.length){toast('No learned words yet');return;}
-  } else {
-    const pool=[...new Set([...us.todayNew,...us.todayRev,...shuffle([...us.learned]).slice(0,15)])];
-    entries=pool.map(id=>byId(id)).filter(Boolean);
-    if(type==='fill') entries=entries.filter(e=>e.mots.some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex)));
-    if(type==='syn')  entries=entries.filter(e=>e.mots.some(m=>m.synonymes&&m.synonymes.trim()));
-    if(!entries.length){
-      if(type==='fill') entries=shuffle(vocab.filter(e=>e.mots.some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex)))).slice(0,cfg.qPerTest);
-      else if(type==='syn') entries=shuffle(vocab.filter(e=>e.mots.some(m=>m.synonymes&&m.synonymes.trim()))).slice(0,cfg.qPerTest);
-      else entries=shuffle(vocab).slice(0,cfg.qPerTest);
-    }
+  const pool=[...new Set([...us.todayNew,...us.todayRev,...shuffle([...us.learned]).slice(0,15)])];
+  let entries=pool.map(id=>byId(id)).filter(Boolean);
+  if(type==='fill') entries=entries.filter(e=>learnableMots(e).some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex)));
+  if(type==='syn')  entries=entries.filter(e=>learnableMots(e).some(m=>m.synonymes&&m.synonymes.trim()));
+  if(!entries.length){
+    if(type==='fill') entries=shuffle(vocab.filter(e=>learnableMots(e).some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex)))).slice(0,cfg.qPerTest);
+    else if(type==='syn') entries=shuffle(vocab.filter(e=>learnableMots(e).some(m=>m.synonymes&&m.synonymes.trim()))).slice(0,cfg.qPerTest);
+    else entries=shuffle(vocab).slice(0,cfg.qPerTest);
   }
   sq=shuffle(entries).slice(0,cfg.qPerTest);
   si=0; sc=0; sType=type; sDir=dir; testAnswered=false;
   currentSessionId='sess_'+Date.now();
-  const titles={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms',general:'🏆 General test'};
+  const titles={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms'};
   document.getElementById('test-title').textContent=titles[type]||type;
   openOverlay('test-overlay');
   renderTestQ();
@@ -1021,13 +1025,7 @@ function renderTestQ(){
   document.getElementById('test-cnt').textContent=`${si+1}/${sq.length}`;
   testAnswered=false;
   const e=sq[si];
-  // General test: mix types randomly
-  let type=sType;
-  if(type==='general'){
-    const fillOk=e.mots.some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex));
-    const types=['qcm','open',fillOk?'fill':'open'];
-    type=types[Math.floor(Math.random()*types.length)];
-  }
+  const type=sType;
   const dir=sDir==='mix'?(Math.random()<0.5?'en2fr':'fr2en'):sDir;
   if(type==='qcm') renderQCM(e,dir);
   else if(type==='open') renderOpen(e,dir);
@@ -1037,7 +1035,8 @@ function renderTestQ(){
 
 // ── QCM ──
 function renderQCM(e,dir){
-  const mot=e.mots[Math.floor(Math.random()*e.mots.length)];
+  const lm=learnableMots(e);
+  const mot=lm[Math.floor(Math.random()*lm.length)];
   let qText,correct,qLabel;
   if(dir==='en2fr'){qText=mot.mot;correct=mot.traduction;qLabel='🇬🇧 → 🇫🇷 What does this mean:';}
   else{qText=mot.traduction;correct=mot.mot;qLabel='🇫🇷 → 🇬🇧 How do you say:';}
@@ -1095,8 +1094,9 @@ function checkQCM(el,chosen,correct){
 
 // ── OPEN ──
 function renderOpen(e,dir){
+  const lm=learnableMots(e);
   const translatedExs=[];
-  e.mots.forEach(m=>{ (m.exemples||[]).forEach(ex=>{ if(ex.ex&&ex.tr) translatedExs.push({ex,mot:m}); }); });
+  lm.forEach(m=>{ (m.exemples||[]).forEach(ex=>{ if(ex.ex&&ex.tr) translatedExs.push({ex,mot:m}); }); });
   const useExample=translatedExs.length>0&&Math.random()<0.5;
 
   // Cas multi-mots en2fr sans exemple :
@@ -1104,10 +1104,10 @@ function renderOpen(e,dir){
   // Groupe >1 ligne -> multi-champs ; groupe 1 ligne -> single champ.
   let multiGroup=null;
   let singleMot=null;
-  if(!useExample && dir==='en2fr' && e.mots.length>1){
+  if(!useExample && dir==='en2fr' && lm.length>1){
     const groupMap={};
     const groupOrder=[];
-    e.mots.forEach(m=>{
+    lm.forEach(m=>{
       const key=m.mot.toLowerCase().trim();
       if(!groupMap[key]){groupMap[key]=[];groupOrder.push(key);}
       groupMap[key].push(m);
@@ -1129,7 +1129,7 @@ function renderOpen(e,dir){
     qText=multiGroup[0].mot;
     qLabel='🇬🇧 → 🇫🇷 Translate ('+multiGroup.length+' translations expected, any order):';
   } else {
-    const mot=singleMot||e.mots[Math.floor(Math.random()*e.mots.length)];
+    const mot=singleMot||lm[Math.floor(Math.random()*lm.length)];
     if(dir==='en2fr'){qText=mot.mot;correct=mot.traduction;qLabel='🇬🇧 → 🇫🇷 Translate:';}
     else{qText=mot.traduction;correct=mot.mot;qLabel='🇫🇷 → 🇬🇧 Translate:';}
   }
@@ -1252,7 +1252,7 @@ function checkAnswer(ans,correct){
 
 // ── FILL ──
 function renderFill(e){
-  const motsWithEx=e.mots.filter(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex));
+  const motsWithEx=learnableMots(e).filter(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex));
   if(!motsWithEx.length){nextTest();return;}
   const mot=motsWithEx[Math.floor(Math.random()*motsWithEx.length)];
   const exsWithMat=mot.exemples.filter(ex=>ex.mat&&ex.ex);
@@ -1291,7 +1291,7 @@ function checkFill(){
 
 // ── SYNONYMES ──
 function renderSyn(e){
-  const motsWithSyn=e.mots.filter(m=>m.synonymes&&m.synonymes.trim());
+  const motsWithSyn=learnableMots(e).filter(m=>m.synonymes&&m.synonymes.trim());
   if(!motsWithSyn.length){nextTest();return;}
   const mot=motsWithSyn[Math.floor(Math.random()*motsWithSyn.length)];
   const syns=mot.synonymes.split(/[\/,]/).map(s=>s.trim()).filter(Boolean);
@@ -1453,7 +1453,7 @@ function renderPlan(){
   const ts=us.sessions.filter(s=>s.date===today());
   const sp=document.getElementById('plan-sessions');
   if(!ts.length){sp.innerHTML='<div class="empty-state">No tests done today</div>';return;}
-  const labels={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms',general:'🏆 General test'};
+  const labels={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms'};
   sp.innerHTML=ts.map(s=>`<div class="plan-card" ${s.id?`onclick="openSessionReview('${s.id}')"`:'style="cursor:default"'}>
     <h3>${labels[s.type]||s.type}</h3>
     <div class="plan-trad">${s.correct}/${s.total} — ${Math.round(s.correct/s.total*100)}%${s.id?' · tap to review':''}</div>
@@ -1477,7 +1477,7 @@ function resultItemHTML(r){
 function openSessionReview(sessionId){
   const sess=us.sessions.find(s=>s.id===sessionId);
   const recs=us.todayResults.filter(r=>r.sessionId===sessionId);
-  const labels={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms',general:'🏆 General test'};
+  const labels={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms'};
   document.getElementById('review-title').textContent=sess?(labels[sess.type]||sess.type):'📋 Results';
   if(!recs.length){
     document.getElementById('review-body').innerHTML='<div class="empty-state">No detail available for this session</div>';
