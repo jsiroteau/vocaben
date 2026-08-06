@@ -185,6 +185,9 @@
   .freq-4{color:#e94560;border-color:rgba(233,69,96,0.4)}
   .freq-chip{padding:6px 12px;border-radius:50px;font-size:0.78rem;font-weight:600;border:1px solid var(--border);background:var(--bg);color:var(--muted);cursor:pointer;user-select:none}
   .freq-chip.selected{background:var(--gold);border-color:var(--gold);color:#111}
+  .speakable{cursor:pointer;border-bottom:1px dotted var(--muted);padding-right:2px}
+  .speakable::after{content:'🔊';font-size:0.7em;margin-left:5px;opacity:0.7}
+  .speakable:active{opacity:0.6}
 </style>
 </head>
 <body>
@@ -385,6 +388,10 @@
       <label>Questions / test</label>
       <input type="number" id="set-qpp" min="5" max="50" value="10">
     </div>
+    <div class="settings-row">
+      <label>🔊 Tap-to-hear (English)</label>
+      <input type="checkbox" id="set-tts" style="width:20px;height:20px">
+    </div>
     <div style="padding:12px 0">
       <label style="font-size:0.9rem;display:block;margin-bottom:8px">Word frequency to learn</label>
       <div class="filter-chips" id="freq-chips" style="margin-bottom:0">
@@ -415,7 +422,7 @@ const VOCAB_DATA = [];
 // ══════════════════════════════════
 let vocab = [];
 let us = {};
-let cfg = { newPerDay: 5, revPerDay: 5, qPerTest: 10, freqFilter: [1,2,3,4] };
+let cfg = { newPerDay: 5, revPerDay: 5, qPerTest: 10, freqFilter: [1,2,3,4], ttsEnabled: true };
 let currentSessionId = null;
 let lastRecord = null;
 let qCtx = null;
@@ -546,6 +553,7 @@ function openSettings(){
   document.getElementById('set-new').value = cfg.newPerDay;
   document.getElementById('set-rev').value = cfg.revPerDay;
   document.getElementById('set-qpp').value = cfg.qPerTest;
+  document.getElementById('set-tts').checked = cfg.ttsEnabled!==false;
   const ff=cfg.freqFilter||[1,2,3,4];
   document.querySelectorAll('#freq-chips .freq-chip').forEach(c=>{
     c.classList.toggle('selected', ff.includes(Number(c.dataset.f)));
@@ -558,6 +566,7 @@ function saveSettings(){
   cfg.newPerDay = Math.max(1, parseInt(document.getElementById('set-new').value)||5);
   cfg.revPerDay = Math.max(1, parseInt(document.getElementById('set-rev').value)||5);
   cfg.qPerTest  = Math.max(5, parseInt(document.getElementById('set-qpp').value)||10);
+  cfg.ttsEnabled = document.getElementById('set-tts').checked;
   let ff=[...document.querySelectorAll('#freq-chips .freq-chip.selected')].map(c=>Number(c.dataset.f));
   if(!ff.length) ff=[1,2,3,4];
   cfg.freqFilter=ff.sort();
@@ -664,9 +673,11 @@ function openDetailFromSession(id){ openDetail(id); }
 // Build a mot block for read-only view
 function buildMotViewBlock(e,m,mi,context){
   const uid=`${context}-${e.id}-${mi}`;
+  const tts=cfg.ttsEnabled!==false;
+  const spk=t=>tts?` speakable" onclick="speak(${esc(JSON.stringify(t))})"`:'"';
   let html=`<div class="mot-block">
     <div class="mot-header">
-      <span class="mot-en">${m.mot}</span>
+      <span class="mot-en${spk(m.mot)}>${m.mot}</span>
       <span class="mot-fr">${m.traduction}</span>
       ${m.freq?`<span class="freq-badge freq-${m.freq}" title="${m.zipf?'Zipf '+m.zipf:''}">Freq ${m.freq}</span>`:''}
     </div>`;
@@ -676,7 +687,7 @@ function buildMotViewBlock(e,m,mi,context){
 
   const exemples=(m.exemples||[]).filter(ex=>ex.ex);
   exemples.forEach(ex=>{
-    html+=`<div class="exemple-block"><div class="ex-en">${ex.ex}</div>`;
+    html+=`<div class="exemple-block"><div class="ex-en${spk(ex.ex)}>${ex.ex}</div>`;
     if(ex.tr) html+=`<div class="ex-fr">${ex.tr}</div>`;
     html+=`</div>`;
   });
@@ -1739,6 +1750,18 @@ function toast(msg){
   const el=document.getElementById('toast');
   el.textContent=msg; el.classList.add('show');
   clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove('show'),2800);
+}
+
+// ══════════════════════════════════
+//  TEXT-TO-SPEECH (tap-to-hear)
+// ══════════════════════════════════
+function speak(text){
+  if(!cfg.ttsEnabled || !text) return;
+  if(!('speechSynthesis' in window)){ toast('⚠ Speech synthesis not supported'); return; }
+  window.speechSynthesis.cancel();
+  const utt=new SpeechSynthesisUtterance(text);
+  utt.lang='en-US';
+  window.speechSynthesis.speak(utt);
 }
 
 // ══════════════════════════════════
