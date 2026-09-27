@@ -72,6 +72,7 @@
   .meta-line{font-size:0.8rem;color:var(--muted);margin-bottom:5px}
   .meta-line b{color:var(--text)}
   .meta-line.faux-ami b{color:var(--accent)}
+  .xref{color:var(--gold);text-decoration:underline dotted;text-underline-offset:3px;cursor:pointer}
   .exemple-block{border-left:2px solid var(--accent);padding-left:10px;margin-top:10px;margin-bottom:6px}
   .exemple-block .ex-en{font-size:0.88rem}
   .exemple-block .ex-fr{font-size:0.8rem;color:var(--muted);margin-top:2px;font-style:italic}
@@ -238,6 +239,11 @@
   <div class="action-card" onclick="startTest('syn','en2fr')">
     <div class="icon" style="background:rgba(100,120,255,0.15)">🔗</div>
     <div class="info"><h3>Synonyms</h3><p>Find the synonyms of the word</p></div>
+    <div class="arrow">›</div>
+  </div>
+  <div class="action-card" onclick="startTest('ant','en2fr')">
+    <div class="icon" style="background:rgba(155,89,182,0.18)">↔️</div>
+    <div class="info"><h3>Antonyms</h3><p>Find the opposites of the word</p></div>
     <div class="arrow">›</div>
   </div>
 </div>
@@ -592,9 +598,10 @@ function pushLayer(id){
 function dropLayer(id){
   const i=navLayers.lastIndexOf(id);
   if(i<0) return;
-  navLayers.splice(i,1);
-  if(i!==navLayers.length) return; // couche intermédiaire : pas de retour d'historique
-  navPendingBack++;
+  const removed=navLayers.splice(i);
+  // Les couches au-dessus disparaissent avec celle qu'on ferme (ex. fiches liées au-dessus de la fiche)
+  removed.slice(1).forEach(l=>{ if(!l.startsWith('link:')&&l!=='__screen') document.getElementById(l).classList.remove('open'); });
+  navPendingBack+=removed.length;
   setTimeout(()=>{
     if(!navPendingBack) return;
     navSkipPop++; history.go(-navPendingBack); navPendingBack=0;
@@ -602,6 +609,7 @@ function dropLayer(id){
 }
 function hideLayer(id){
   if(id==='__screen') setScreen('home');
+  else if(id.startsWith('link:')){ const prev=detailTrail.pop(); if(prev) showDetailEntry(prev); }
   else document.getElementById(id).classList.remove('open');
 }
 window.addEventListener('popstate',()=>{
@@ -689,15 +697,54 @@ function renderList(){
 // ══════════════════════════════════
 //  DETAIL FICHE
 // ══════════════════════════════════
-function openDetail(id){
-  currentEntry=byId(id); if(!currentEntry) return;
+function showDetailEntry(id){
+  currentEntry=byId(id); if(!currentEntry) return false;
   editMode=false;
   document.getElementById('detail-title').textContent=currentEntry.entree;
   document.getElementById('detail-view').style.display='block';
   document.getElementById('detail-edit').style.display='none';
   document.getElementById('edit-toggle-btn').textContent='Éditer';
   renderDetailView();
-  openOverlay('detail-overlay');
+  const body=document.querySelector('#detail-overlay .overlay-body'); if(body) body.scrollTop=0;
+  return true;
+}
+function openDetail(id){
+  detailTrail.length=0;
+  if(showDetailEntry(id)) openOverlay('detail-overlay');
+}
+// ── Renvois synonymes / antonymes ──
+// Index Mot normalisé → id d'entrée ; priorité à l'entrée qui porte le mot comme intitulé
+function linkKeys(str){
+  const t=normQuotes(str);
+  return [...new Set([normalizeAnswer(t.replace(/[()]/g,'')),normalizeAnswer(t.replace(/\([^()]*\)/g,' '))].filter(Boolean))];
+}
+function buildLinkIndex(){
+  const idx={};
+  vocab.forEach(e=>e.mots.forEach(m=>linkKeys(m.mot||'').forEach(k=>{ if(!idx[k]) idx[k]=e.id; })));
+  vocab.forEach(e=>linkKeys(e.entree||'').forEach(k=>{ if(idx[k]) idx[k]=e.id; }));
+  return idx;
+}
+// Reconstruit quand le tableau vocab change (saveExtra et l'import le réassignent à chaque modification)
+let linkIndex=null, linkIndexFor=null;
+function getLinkIndex(){
+  if(linkIndexFor!==vocab){ linkIndex=buildLinkIndex(); linkIndexFor=vocab; }
+  return linkIndex;
+}
+function linkedList(str,e){
+  const idx=getLinkIndex();
+  return splitTop(str).map(item=>{
+    const target=linkKeys(item).map(k=>idx[k]).find(Boolean);
+    return target&&target!==e.id?`<span class="xref" onclick="openLinked('${target}')">${item}</span>`:item;
+  }).join(', ');
+}
+// Depuis une fiche : la fiche liée remplace la courante et le retour ramène à la précédente
+const detailTrail=[];
+function openLinked(id){
+  if(!byId(id)) return;
+  if(!document.getElementById('detail-overlay').classList.contains('open')){ openDetail(id); return; }
+  detailTrail.push(currentEntry.id);
+  pushLayer('link:'+detailTrail.length);
+  showDetailEntry(id);
 }
 function openDetailFromSession(id){ openDetail(id); }
 
@@ -712,8 +759,8 @@ function buildMotViewBlock(e,m,mi,context){
       <span class="mot-fr">${m.traduction}</span>
       ${m.freq?`<span class="freq-badge freq-${m.freq}" title="${m.zipf?'Zipf '+m.zipf:''}">Freq ${m.freq}</span>`:''}
     </div>`;
-  if(m.synonymes) html+=`<div class="meta-line"><b>Synonyms:</b> ${m.synonymes}</div>`;
-  if(m.antonymes) html+=`<div class="meta-line"><b>Antonyms:</b> ${m.antonymes}</div>`;
+  if(m.synonymes) html+=`<div class="meta-line"><b>Synonyms:</b> ${linkedList(m.synonymes,e)}</div>`;
+  if(m.antonymes) html+=`<div class="meta-line"><b>Antonyms:</b> ${linkedList(m.antonymes,e)}</div>`;
   if(m.fauxAmi)   html+=`<div class="meta-line faux-ami"><b>⚠ False friend:</b> ${m.fauxAmi}</div>`;
 
   const exemples=(m.exemples||[]).filter(ex=>ex.ex);
@@ -1032,6 +1079,11 @@ function showLearnSummary(){
 // ══════════════════════════════════
 //  TEST SESSION
 // ══════════════════════════════════
+const EXO_LABELS={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms',ant:'↔️ Antonyms'};
+const REL_EXOS={
+  syn:{field:'synonymes',label:'Synonyms',placeholder:'A synonym…'},
+  ant:{field:'antonymes',label:'Antonyms',placeholder:'An antonym…'}
+};
 function openDirModal(type){ pendingTestType=type; openOverlay('dir-modal'); }
 function closeDirModal(){ closeOverlay('dir-modal'); }
 function startTestFromModal(dir){ closeDirModal(); startTest(pendingTestType,dir); }
@@ -1040,17 +1092,17 @@ function startTest(type,dir){
   const pool=[...new Set([...us.todayNew,...us.todayRev,...shuffle([...us.learned]).slice(0,15)])];
   let entries=pool.map(id=>byId(id)).filter(Boolean);
   if(type==='fill') entries=entries.filter(e=>learnableMots(e).some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex)));
-  if(type==='syn')  entries=entries.filter(e=>learnableMots(e).some(m=>m.synonymes&&m.synonymes.trim()));
+  const hasRel=e=>learnableMots(e).some(m=>m[REL_EXOS[type].field]&&m[REL_EXOS[type].field].trim());
+  if(REL_EXOS[type]) entries=entries.filter(hasRel);
   if(!entries.length){
     if(type==='fill') entries=shuffle(vocab.filter(e=>learnableMots(e).some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex)))).slice(0,cfg.qPerTest);
-    else if(type==='syn') entries=shuffle(vocab.filter(e=>learnableMots(e).some(m=>m.synonymes&&m.synonymes.trim()))).slice(0,cfg.qPerTest);
+    else if(REL_EXOS[type]) entries=shuffle(vocab.filter(hasRel)).slice(0,cfg.qPerTest);
     else entries=shuffle(vocab).slice(0,cfg.qPerTest);
   }
   sq=shuffle(entries).slice(0,cfg.qPerTest);
   si=0; sc=0; sType=type; sDir=dir; testAnswered=false;
   currentSessionId='sess_'+Date.now();
-  const titles={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms'};
-  document.getElementById('test-title').textContent=titles[type]||type;
+  document.getElementById('test-title').textContent=EXO_LABELS[type]||type;
   openOverlay('test-overlay');
   renderTestQ();
 }
@@ -1066,7 +1118,7 @@ function renderTestQ(){
   const dir=sDir==='mix'?(Math.random()<0.5?'en2fr':'fr2en'):sDir;
   if(type==='qcm') renderQCM(e,dir);
   else if(type==='open') renderOpen(e,dir);
-  else if(type==='syn') renderSyn(e);
+  else if(REL_EXOS[type]) renderRel(e,type);
   else renderFill(e);
 }
 
@@ -1367,49 +1419,50 @@ function checkFill(){
   recordResult(ok, ans); showFB(ok, correct, ans);
 }
 
-// ── SYNONYMES ──
-function renderSyn(e){
-  const motsWithSyn=learnableMots(e).filter(m=>m.synonymes&&m.synonymes.trim());
-  if(!motsWithSyn.length){nextTest();return;}
-  const mot=motsWithSyn[Math.floor(Math.random()*motsWithSyn.length)];
-  const syns=splitTop(mot.synonymes);
-  qCtx={type:'syn',dir:'en2fr',entryId:e.id,entree:e.entree,question:mot.mot,correct:syns.join(' / '),label:'Synonyms'};
-  // Stocker tous les synonymes attendus en JSON sur le wrapper — pas d'ordre imposé
-  const inputs=syns.map((_,i)=>`
-    <input class="open-inp" id="syn-inp-${i}" type="text" placeholder="A synonym…"
+// ── SYNONYMES / ANTONYMES ──
+// Un champ par élément attendu, ordre libre ; réussite si tous sont trouvés
+function renderRel(e,type){
+  const R=REL_EXOS[type];
+  const cands=learnableMots(e).filter(m=>m[R.field]&&m[R.field].trim());
+  if(!cands.length){nextTest();return;}
+  const mot=cands[Math.floor(Math.random()*cands.length)];
+  const items=splitTop(mot[R.field]);
+  qCtx={type,dir:'en2fr',entryId:e.id,entree:e.entree,question:mot.mot,correct:items.join(' / '),label:R.label};
+  const inputs=items.map((_,i)=>`
+    <input class="open-inp" id="rel-inp-${i}" type="text" placeholder="${R.placeholder}"
       autocomplete="off"
-      onkeydown="if(event.key==='Enter'){const nx=document.getElementById('syn-inp-${i+1}');nx?nx.focus():checkSyn(${syns.length})}"
+      onkeydown="if(event.key==='Enter'){const nx=document.getElementById('rel-inp-${i+1}');nx?nx.focus():checkRel(${items.length})}"
       style="margin-bottom:8px">`).join('');
   document.getElementById('test-content').innerHTML=`
     <div class="quiz-card">
-      <div class="quiz-type">🔗 Synonyms — ${syns.length} expected (any order)</div>
+      <div class="quiz-type">${EXO_LABELS[type]} — ${items.length} expected (any order)</div>
       <div class="quiz-q">${mot.mot}</div>
       <div class="quiz-ctx" style="color:var(--gold)">${mot.traduction}</div>
     </div>
-    <div id="syn-inputs-wrap" data-corrects='${JSON.stringify(syns).replace(/'/g,"&#39;")}'>${inputs}</div>
-    <button class="btn btn-primary btn-full" onclick="checkSyn(${syns.length})">Check</button>
+    <div id="rel-inputs-wrap" data-corrects='${JSON.stringify(items).replace(/'/g,"&#39;")}'>${inputs}</div>
+    <button class="btn btn-primary btn-full" onclick="checkRel(${items.length})">Check</button>
     <div id="tfb" style="margin-top:14px"></div>
     <div id="tnav" style="display:none">
       <button class="see-fiche-btn" onclick="openDetailFromSession('${e.id}')">&#128366; See entry</button>
       <button class="btn btn-primary btn-full" onclick="nextTest()">Next →</button>
     </div>`;
-  document.getElementById('syn-inp-0').focus();
+  document.getElementById('rel-inp-0').focus();
 }
 
-function checkSyn(count){
+function checkRel(count){
   if(testAnswered) return;
   testAnswered=true;
-  const wrap=document.getElementById('syn-inputs-wrap');
+  const R=REL_EXOS[qCtx.type];
+  const wrap=document.getElementById('rel-inputs-wrap');
   const corrects=JSON.parse(wrap.dataset.corrects||'[]');
   const inputs=[], answers=[];
   for(let i=0;i<count;i++){
-    const inp=document.getElementById('syn-inp-'+i);
+    const inp=document.getElementById('rel-inp-'+i);
     if(!inp) continue;
     inp.disabled=true;
     inputs.push(inp);
     answers.push(inp.value.trim());
   }
-  // Matching order-insensitive : chaque attendu est apparié librement
   const usedAnswer=new Array(answers.length).fill(false);
   const matchedByCorrect=corrects.map(c=>{
     const hit=answers.findIndex((a,ai)=>!usedAnswer[ai]&&checkAnswer(a,c));
@@ -1422,8 +1475,8 @@ function checkSyn(count){
   const fbHtml=missing.map(c=>'<div style="font-size:0.82rem;margin-top:4px">Expected: <strong>'+c+'</strong></div>').join('');
   recordResult(allOk, answers.join(' / '));
   document.getElementById('tfb').innerHTML=allOk
-    ?'<div class="feedback ok">✓ All synonyms are correct!</div>'
-    :'<div class="feedback ko">✗ Some synonyms are missing or incorrect'+fbHtml+'</div>'
+    ?'<div class="feedback ok">✓ All '+R.label.toLowerCase()+' are correct!</div>'
+    :'<div class="feedback ko">✗ Some '+R.label.toLowerCase()+' are missing or incorrect'+fbHtml+'</div>'
      +'<button class="btn btn-secondary btn-sm" style="margin-top:10px;width:100%" onclick="overrideToCorrect(this)">💡 I actually knew it!</button>';
   document.getElementById('tnav').style.display='block';
 }
@@ -1531,9 +1584,8 @@ function renderPlan(){
   const ts=us.sessions.filter(s=>s.date===today());
   const sp=document.getElementById('plan-sessions');
   if(!ts.length){sp.innerHTML='<div class="empty-state">No tests done today</div>';return;}
-  const labels={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms'};
   sp.innerHTML=ts.map(s=>`<div class="plan-card" ${s.id?`onclick="openSessionReview('${s.id}')"`:'style="cursor:default"'}>
-    <h3>${labels[s.type]||s.type}</h3>
+    <h3>${EXO_LABELS[s.type]||s.type}</h3>
     <div class="plan-trad">${s.correct}/${s.total} — ${Math.round(s.correct/s.total*100)}%${s.id?' · tap to review':''}</div>
   </div>`).join('');
 }
@@ -1555,8 +1607,7 @@ function resultItemHTML(r){
 function openSessionReview(sessionId){
   const sess=us.sessions.find(s=>s.id===sessionId);
   const recs=us.todayResults.filter(r=>r.sessionId===sessionId);
-  const labels={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms'};
-  document.getElementById('review-title').textContent=sess?(labels[sess.type]||sess.type):'📋 Results';
+  document.getElementById('review-title').textContent=sess?(EXO_LABELS[sess.type]||sess.type):'📋 Results';
   if(!recs.length){
     document.getElementById('review-body').innerHTML='<div class="empty-state">No detail available for this session</div>';
   } else {
