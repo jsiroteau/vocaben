@@ -280,15 +280,15 @@
 </div>
 
 <nav id="bottom-nav">
-  <button class="nav-btn active" onclick="showScreen('home',this)">
+  <button class="nav-btn active" data-screen="home" onclick="showScreen('home')">
     <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
     Home
   </button>
-  <button class="nav-btn" onclick="showScreen('search',this);renderList()">
+  <button class="nav-btn" data-screen="search" onclick="showScreen('search');renderList()">
     <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
     Library
   </button>
-  <button class="nav-btn" onclick="showScreen('plan',this);renderPlan()">
+  <button class="nav-btn" data-screen="plan" onclick="showScreen('plan');renderPlan()">
     <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
     Planning
   </button>
@@ -403,7 +403,7 @@
     </div>
     <div class="btn-row" style="margin-top:20px">
       <button class="btn btn-primary btn-full" onclick="saveSettings()">Save</button>
-      <button class="btn btn-secondary btn-full" onclick="closeModal('settings-modal')">Cancel</button>
+      <button class="btn btn-secondary btn-full" onclick="closeOverlay('settings-modal')">Cancel</button>
     </div>
   </div>
 </div>
@@ -558,7 +558,7 @@ function openSettings(){
   document.querySelectorAll('#freq-chips .freq-chip').forEach(c=>{
     c.classList.toggle('selected', ff.includes(Number(c.dataset.f)));
   });
-  document.getElementById('settings-modal').classList.add('open');
+  openOverlay('settings-modal');
 }
 function saveSettings(){
   const prevNew=cfg.newPerDay, prevRev=cfg.revPerDay;
@@ -574,20 +574,51 @@ function saveSettings(){
   const schedulingChanged = prevNew!==cfg.newPerDay || prevRev!==cfg.revPerDay || JSON.stringify(cfg.freqFilter)!==prevFreq;
   if(schedulingChanged) buildPlan();
   saveState();
-  closeModal('settings-modal'); renderHome();
+  closeOverlay('settings-modal'); renderHome();
   toast('✓ Paramètres enregistrés');
 }
 
 // ── NAV ──
-function showScreen(id,btn){
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-  if(btn) btn.classList.add('active');
+// Bouton retour : chaque couche ouverte (écran autre que Home, overlay, modale) a son entrée d'historique.
+// Retour système → ferme la couche du dessus. Fermeture par l'interface → consomme l'entrée (différé,
+// pour qu'une ouverture enchaînée remplace l'entrée au lieu de courir après un history.back()).
+const navLayers=[]; let navPendingBack=0, navSkipPop=0;
+function pushLayer(id){
+  if(navLayers.includes(id)) return;
+  navLayers.push(id);
+  if(navPendingBack>0){ navPendingBack--; history.replaceState({ve:navLayers.length},''); }
+  else history.pushState({ve:navLayers.length},'');
 }
-function openOverlay(id){ document.getElementById(id).classList.add('open'); }
-function closeOverlay(id){ document.getElementById(id).classList.remove('open'); }
-function closeModal(id){ document.getElementById(id).classList.remove('open'); }
+function dropLayer(id){
+  const i=navLayers.lastIndexOf(id);
+  if(i<0) return;
+  navLayers.splice(i,1);
+  if(i!==navLayers.length) return; // couche intermédiaire : pas de retour d'historique
+  navPendingBack++;
+  setTimeout(()=>{
+    if(!navPendingBack) return;
+    navSkipPop++; history.go(-navPendingBack); navPendingBack=0;
+  },0);
+}
+function hideLayer(id){
+  if(id==='__screen') setScreen('home');
+  else document.getElementById(id).classList.remove('open');
+}
+window.addEventListener('popstate',()=>{
+  if(navSkipPop>0){ navSkipPop--; return; }
+  const id=navLayers.pop();
+  if(id) hideLayer(id);
+});
+function setScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active',s.id===id));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.screen===id));
+}
+function showScreen(id){
+  setScreen(id);
+  if(id==='home') dropLayer('__screen'); else pushLayer('__screen');
+}
+function openOverlay(id){ document.getElementById(id).classList.add('open'); pushLayer(id); }
+function closeOverlay(id){ document.getElementById(id).classList.remove('open'); dropLayer(id); }
 
 // ── HOME ──
 function renderHome(){
@@ -1001,8 +1032,8 @@ function showLearnSummary(){
 // ══════════════════════════════════
 //  TEST SESSION
 // ══════════════════════════════════
-function openDirModal(type){ pendingTestType=type; document.getElementById('dir-modal').classList.add('open'); }
-function closeDirModal(){ document.getElementById('dir-modal').classList.remove('open'); }
+function openDirModal(type){ pendingTestType=type; openOverlay('dir-modal'); }
+function closeDirModal(){ closeOverlay('dir-modal'); }
 function startTestFromModal(dir){ closeDirModal(); startTest(pendingTestType,dir); }
 
 function startTest(type,dir){
@@ -1175,7 +1206,7 @@ function renderOpen(e,dir){
         ${qContext?'<div class="quiz-ctx">Entry: '+qContext+'</div>':''}
       </div>
       <input class="open-inp" id="open-inp" type="text" placeholder="Your answer…" autocomplete="off"
-        onkeydown="if(event.key==='Enter')checkOpen()" data-correct="${esc(correct)}">
+        onkeydown="if(event.key==='Enter')checkOpen()" data-correct="${esc(correct)}"${useExample?' data-sentence="1"':''}>
       <button class="mic-btn" id="mic-btn" onclick="startMic('${lang}','open-inp','single')" title="Answer by voice">
         🎤 <span id="mic-label">Speak your answer</span>
       </button>
@@ -1194,7 +1225,7 @@ function checkOpen(){
   const inp=document.getElementById('open-inp');
   const ans=inp.value.trim();
   const correct=inp.dataset.correct;
-  const ok=checkAnswer(ans,correct);
+  const ok=checkAnswer(ans,correct,inp.dataset.sentence==='1');
   testAnswered=true; inp.disabled=true;
   recordResult(ok, ans); showFB(ok, correct, ans);
 }
@@ -1230,31 +1261,65 @@ function checkOpenMulti(){
   document.getElementById('tnav').style.display='block';
 }
 
-// 8) Ignore "to" before infinitives and determiners before nouns
+// Normalisation commune : apostrophes typographiques, "to" initial, déterminants, ponctuation, espaces
+function normQuotes(s){ return (s||'').replace(/[’‘`´]/g,"'").replace(/[“”]/g,'"'); }
 function normalizeAnswer(s){
-  return s.toLowerCase()
+  return normQuotes(s).toLowerCase()
+    .replace(/\s+/g,' ').trim()
     .replace(/^(to\s+)/,'')          // leading "to "
     .replace(/^(a|an|the|un|une|le|la|les|l'|d')\s+/i,'')  // leading determiners
     .replace(/[.,!?;:'"()]/g,'')
+    .replace(/\s+/g,' ')
     .trim();
 }
 
-function checkAnswer(ans,correct){
-  const isLong=correct.length>40;
-  if(isLong){
+// Découpe sur virgules et "/" au niveau 0 uniquement (pas à l'intérieur des parenthèses)
+function splitTop(str){
+  const out=[]; let depth=0, cur='';
+  for(const ch of (str||'')){
+    if(ch==='(') depth++;
+    else if(ch===')') depth=Math.max(0,depth-1);
+    if(depth===0&&(ch===','||ch==='/')){ out.push(cur); cur=''; }
+    else cur+=ch;
+  }
+  out.push(cur);
+  return out.map(x=>x.trim()).filter(Boolean);
+}
+
+// Formes acceptées d'une réponse attendue : chaque alternative, avec et sans chaque groupe entre parenthèses
+// behavio(u)r → behaviour, behavior ; to bail sb (out) → bail sb out, bail sb ; gasoline (US) → gasoline us, gasoline
+function answerForms(str){
+  const forms=new Set();
+  splitTop(normQuotes(str)).forEach(alt=>{
+    const parts=alt.split(/(\([^()]*\))/);
+    const groups=parts.map((p,i)=>/^\(.*\)$/.test(p)?i:-1).filter(i=>i>=0);
+    const build=keep=>parts.map((p,i)=>groups.includes(i)?(keep(i)?p.slice(1,-1):''):p).join('');
+    if(groups.length<=3){
+      for(let mask=0;mask<(1<<groups.length);mask++)
+        forms.add(normalizeAnswer(build(i=>mask&(1<<groups.indexOf(i)))));
+    } else {
+      forms.add(normalizeAnswer(build(()=>true)));
+      forms.add(normalizeAnswer(build(()=>false)));
+    }
+  });
+  forms.delete('');
+  return [...forms];
+}
+
+// isSentence : exemple à traduire → correspondance par mots (≥ 70 %) ; sinon formes acceptées
+function checkAnswer(ans,correct,isSentence){
+  if(isSentence){
     const cWords=normalizeAnswer(correct).split(/\s+/).filter(Boolean);
     const aWords=normalizeAnswer(ans).split(/\s+/).filter(Boolean);
     const matched=cWords.filter(w=>aWords.some(a=>a===w||(w.length>4&&lev(a,w)<=1)));
     return matched.length/cWords.length>=0.7;
   }
-  // Multiple accepted variants (comma or slash separated)
-  const variants=correct.split(/[\/,]/).map(v=>normalizeAnswer(v.trim())).filter(Boolean);
-  const normAns=normalizeAnswer(ans);
-  return variants.some(v=>normAns===v||(v.length>4&&lev(normAns,v)<=1));
+  // La réponse peut elle-même lister plusieurs alternatives : chacune doit être une forme acceptée
+  const pieces=splitTop(normQuotes(ans)).map(normalizeAnswer).filter(Boolean);
+  if(!pieces.length) return false;
+  const forms=answerForms(correct);
+  return pieces.every(a=>forms.some(v=>a===v||(v.length>4&&lev(a,v)<=1)));
 }
-
-// 2) Multiple answers for multi-translation: accepted if any variant matches
-// Already handled above via comma/slash split in checkAnswer
 
 // ── FILL ──
 function renderFill(e){
@@ -1283,12 +1348,19 @@ function renderFill(e){
   document.getElementById('fill-inp').focus();
 }
 
+// Texte à trous : même nombre de mots, comparaison mot à mot, tolérance d'une faute pour les mots de plus de 4 lettres
+function fillNorm(s){ return normQuotes(s).toLowerCase().replace(/\s+/g,' ').trim(); }
+function checkFillAnswer(ans,correct){
+  const a=fillNorm(ans).split(' ').filter(Boolean), c=fillNorm(correct).split(' ').filter(Boolean);
+  if(!a.length||a.length!==c.length) return false;
+  return c.every((w,i)=>a[i]===w||(w.length>4&&lev(a[i],w)<=1));
+}
 function checkFill(){
   if(testAnswered) return;
   const inp=document.getElementById('fill-inp');
-  const ans=inp.value.trim().toLowerCase();
+  const ans=inp.value.trim();
   const correct=inp.dataset.correct;
-  const ok=ans===correct.toLowerCase()||lev(ans,correct.toLowerCase())<=1;
+  const ok=checkFillAnswer(ans,correct);
   testAnswered=true; inp.disabled=true;
   const blank=document.getElementById('blank');
   if(blank){blank.textContent=correct;blank.className='blank-spot '+(ok?'blank-ok':'blank-ko');}
@@ -1300,7 +1372,7 @@ function renderSyn(e){
   const motsWithSyn=learnableMots(e).filter(m=>m.synonymes&&m.synonymes.trim());
   if(!motsWithSyn.length){nextTest();return;}
   const mot=motsWithSyn[Math.floor(Math.random()*motsWithSyn.length)];
-  const syns=mot.synonymes.split(/[\/,]/).map(s=>s.trim()).filter(Boolean);
+  const syns=splitTop(mot.synonymes);
   qCtx={type:'syn',dir:'en2fr',entryId:e.id,entree:e.entree,question:mot.mot,correct:syns.join(' / '),label:'Synonyms'};
   // Stocker tous les synonymes attendus en JSON sur le wrapper — pas d'ordre imposé
   const inputs=syns.map((_,i)=>`
