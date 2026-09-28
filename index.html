@@ -78,7 +78,9 @@
   .exp-btn{width:24px;height:24px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--muted);font:inherit;font-size:0.95rem;line-height:1;cursor:pointer;padding:0}
   .pub-box{margin-top:18px;padding-top:14px;border-top:1px solid var(--border);font-size:0.85rem}
   .pub-box summary{cursor:pointer;color:var(--muted)}
-  .pub-box input[type=text],.pub-box input[type=password]{width:100%;margin:4px 0 8px;padding:8px 10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);font:inherit}
+  /* champ texte masqué plutôt que type=password : le navigateur ne propose pas de l'enregistrer comme mot de passe */
+  .pub-box input.masked{-webkit-text-security:disc;text-security:disc}
+  .pub-box input[type=text]{width:100%;margin:4px 0 8px;padding:8px 10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);font:inherit}
   .pub-help{color:var(--muted);font-size:0.78rem;line-height:1.5;margin:6px 0 10px}
   .exemple-block{border-left:2px solid var(--accent);padding-left:10px;margin-top:10px;margin-bottom:6px}
   .exemple-block .ex-en{font-size:0.88rem}
@@ -428,7 +430,7 @@
       <label>Repository (owner/name)</label>
       <input type="text" id="pub-repo" autocomplete="off" spellcheck="false">
       <label>GitHub token</label>
-      <input type="password" id="pub-token" autocomplete="off" spellcheck="false">
+      <input type="text" id="pub-token" class="masked" autocomplete="off" autocapitalize="off" spellcheck="false" data-lpignore="true" data-1p-ignore>
       <details class="pub-help"><summary>How to get a token</summary>
         On github.com (signed in): avatar → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token. Repository access: only the vocaben repository. Permissions: Contents → Read and write. Copy the token right away: GitHub shows it only once.
       </details>
