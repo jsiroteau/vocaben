@@ -765,9 +765,14 @@ function openDetail(id){
 }
 // ── Renvois synonymes / antonymes ──
 // Index Mot normalisé → id d'entrée ; priorité à l'entrée qui porte le mot comme intitulé
+// Clés de renvoi : chaque variante de l'expression, avec et sans ses parenthèses, et chaque variante de mot (on/upon)
 function linkKeys(str){
-  const t=normQuotes(str);
-  return [...new Set([normalizeAnswer(t.replace(/[()]/g,'')),normalizeAnswer(t.replace(/\([^()]*\)/g,''))].filter(Boolean))];
+  const keys=new Set();
+  splitAlt(normQuotes(str)).forEach(alt=>{
+    [alt.replace(/[()]/g,''),alt.replace(/\([^()]*\)/g,'')].forEach(v=>expandSlash(v).forEach(x=>keys.add(normalizeAnswer(x))));
+  });
+  keys.delete('');
+  return [...keys];
 }
 function buildLinkIndex(){
   const idx={};
@@ -783,7 +788,7 @@ function getLinkIndex(){
 }
 function linkedList(str,e){
   const idx=getLinkIndex();
-  return splitTop(str).map(item=>{
+  return splitList(str).map(item=>{
     const target=linkKeys(item).map(k=>idx[k]).find(Boolean);
     return target&&target!==e.id?`<span class="xref" onclick="openLinked('${target}')">${item}</span>`:item;
   }).join(', ');
@@ -1389,10 +1394,13 @@ function checkOpenMulti(){
   document.getElementById('tnav').style.display='block';
 }
 
-// Normalisation commune : apostrophes typographiques, "to" initial, déterminants, ponctuation, espaces
+// Normalisation commune : apostrophes typographiques, "to" initial, déterminants, marqueurs sb/sth, ponctuation, espaces
+// Les marqueurs sb, sth, one's, oneself sont indicatifs : ils ne sont pas exigés dans les réponses ("doing", "to do" le restent)
 function normQuotes(s){ return (s||'').replace(/[’‘`´]/g,"'").replace(/[“”]/g,'"'); }
 function normalizeAnswer(s){
   return normQuotes(s).toLowerCase()
+    .replace(/\b(sb's|sb|sth|oneself)\b|\bone's\b/g,' ')
+    .replace(/\//g,' ')
     .replace(/\s+/g,' ').trim()
     .replace(/^(to\s+)/,'')          // leading "to "
     .replace(/^(a|an|the|un|une|le|la|les|l'|d')\s+/i,'')  // leading determiners
@@ -1401,34 +1409,64 @@ function normalizeAnswer(s){
     .trim();
 }
 
-// Découpe sur virgules et "/" au niveau 0 uniquement (pas à l'intérieur des parenthèses)
-function splitTop(str){
+// Notation : "," sépare les éléments d'une liste (synonymes, antonymes) ; "/" sépare les variantes d'une même expression
+// (" / " entre constructions complètes, "a/b" entre deux mots) ; "( )" marque le facultatif ou les formes irrégulières.
+function splitDepth0(str,isSep){
   const out=[]; let depth=0, cur='';
-  for(const ch of (str||'')){
+  const s=str||'';
+  for(let i=0;i<s.length;i++){
+    const ch=s[i];
     if(ch==='(') depth++;
     else if(ch===')') depth=Math.max(0,depth-1);
-    if(depth===0&&(ch===','||ch==='/')){ out.push(cur); cur=''; }
+    if(depth===0&&isSep(s,i)){ out.push(cur); cur=''; }
     else cur+=ch;
   }
   out.push(cur);
   return out.map(x=>x.trim()).filter(Boolean);
 }
+const isComma=(s,i)=>s[i]===',';
+const isSpacedSlash=(s,i)=>s[i]==='/'&&(s[i-1]===' '||s[i+1]===' ');
+// Liste d'éléments distincts (synonymes, antonymes)
+function splitList(str){ return splitDepth0(str,isComma); }
+// Variantes acceptées d'une réponse (virgules et " / ")
+function splitAlt(str){ return splitDepth0(str,(s,i)=>isComma(s,i)||isSpacedSlash(s,i)); }
+// Variantes de mots accolées : "on/upon" → "on", "upon" (au plus 64 combinaisons)
+function expandSlash(str){
+  let out=[str];
+  const re=/[^\s()\/]+(?:\/[^\s()\/]+)+/;
+  for(let n=0;n<6;n++){
+    const next=[]; let changed=false;
+    out.forEach(x=>{
+      const m=x.match(re);
+      if(!m){ next.push(x); return; }
+      changed=true;
+      m[0].split('/').forEach(w=>next.push(x.slice(0,m.index)+w+x.slice(m.index+m[0].length)));
+    });
+    out=next.slice(0,64);
+    if(!changed) break;
+  }
+  return out;
+}
+// Groupes entre parenthèses : chaque groupe peut être omis ou remplacé par l'une de ses variantes " / "
+function groupVariants(alt,allCombos){
+  const parts=alt.split(/(\([^()]*\))/);
+  const gi=parts.map((p,i)=>/^\(.*\)$/.test(p)?i:-1).filter(i=>i>=0);
+  const opts=gi.map(i=>['',...splitDepth0(parts[i].slice(1,-1),isSpacedSlash)]);
+  let combos=[[]];
+  if(allCombos&&gi.length<=3){
+    opts.forEach(o=>{ combos=combos.flatMap(c=>o.map(v=>[...c,v])).slice(0,64); });
+  } else {
+    combos=[opts.map(()=>''), opts.map(o=>o.slice(1).join(' '))];
+  }
+  return combos.map(c=>parts.map((p,i)=>{ const k=gi.indexOf(i); return k<0?p:c[k]; }).join(''));
+}
 
-// Formes acceptées d'une réponse attendue : chaque alternative, avec et sans chaque groupe entre parenthèses
-// behavio(u)r → behaviour, behavior ; to bail sb (out) → bail sb out, bail sb ; gasoline (US) → gasoline us, gasoline
+// Formes acceptées d'une réponse attendue : chaque variante, avec ou sans chaque groupe entre parenthèses
+// behavio(u)r → behaviour, behavior ; to bail sb (out) → bail out, bail ; to draw on/upon → draw on, draw upon
 function answerForms(str){
   const forms=new Set();
-  splitTop(normQuotes(str)).forEach(alt=>{
-    const parts=alt.split(/(\([^()]*\))/);
-    const groups=parts.map((p,i)=>/^\(.*\)$/.test(p)?i:-1).filter(i=>i>=0);
-    const build=keep=>parts.map((p,i)=>groups.includes(i)?(keep(i)?p.slice(1,-1):''):p).join('');
-    if(groups.length<=3){
-      for(let mask=0;mask<(1<<groups.length);mask++)
-        forms.add(normalizeAnswer(build(i=>mask&(1<<groups.indexOf(i)))));
-    } else {
-      forms.add(normalizeAnswer(build(()=>true)));
-      forms.add(normalizeAnswer(build(()=>false)));
-    }
+  splitAlt(normQuotes(str)).forEach(alt=>{
+    groupVariants(alt,true).forEach(g=>expandSlash(g).forEach(x=>forms.add(normalizeAnswer(x))));
   });
   forms.delete('');
   return [...forms];
@@ -1443,7 +1481,7 @@ function checkAnswer(ans,correct,isSentence){
     return matched.length/cWords.length>=0.7;
   }
   // La réponse peut elle-même lister plusieurs alternatives : chacune doit être une forme acceptée
-  const pieces=splitTop(normQuotes(ans)).map(normalizeAnswer).filter(Boolean);
+  const pieces=splitAlt(normQuotes(ans)).map(normalizeAnswer).filter(Boolean);
   if(!pieces.length) return false;
   const forms=answerForms(correct);
   return pieces.every(a=>forms.some(v=>a===v||(v.length>4&&lev(a,v)<=1)));
@@ -1502,8 +1540,8 @@ function renderRel(e,type){
   const cands=learnableMots(e).filter(m=>m[R.field]&&m[R.field].trim());
   if(!cands.length){nextTest();return;}
   const mot=cands[Math.floor(Math.random()*cands.length)];
-  const items=splitTop(mot[R.field]);
-  qCtx={type,dir:'en2fr',entryId:e.id,entree:e.entree,question:mot.mot,correct:items.join(' / '),label:R.label};
+  const items=splitList(mot[R.field]);
+  qCtx={type,dir:'en2fr',entryId:e.id,entree:e.entree,question:mot.mot,correct:items.join(', '),label:R.label};
   const inputs=items.map((_,i)=>`
     <input class="open-inp" id="rel-inp-${i}" type="text" placeholder="${R.placeholder}"
       autocomplete="off"
