@@ -73,6 +73,11 @@
   .meta-line b{color:var(--text)}
   .meta-line.faux-ami b{color:var(--accent)}
   .xref{color:var(--gold);text-decoration:underline dotted;text-underline-offset:3px;cursor:pointer}
+  .see-also-h{font-size:0.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px}
+  .view-toggle{display:flex;gap:6px;margin-bottom:14px}
+  .view-toggle button{flex:1;padding:7px 0;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--muted);font:inherit;font-size:0.82rem;cursor:pointer}
+  .view-toggle button.on{border-color:var(--gold);color:var(--gold)}
+  .more-ex{font-size:0.78rem;color:var(--muted);margin-top:6px;cursor:pointer;text-decoration:underline dotted}
   .exemple-block{border-left:2px solid var(--accent);padding-left:10px;margin-top:10px;margin-bottom:6px}
   .exemple-block .ex-en{font-size:0.88rem}
   .exemple-block .ex-fr{font-size:0.8rem;color:var(--muted);margin-top:2px;font-style:italic}
@@ -398,6 +403,10 @@
       <label>🔊 Tap-to-hear (English)</label>
       <input type="checkbox" id="set-tts" style="width:20px;height:20px">
     </div>
+    <div class="settings-row">
+      <label>🧭 Learn thematic associations</label>
+      <input type="checkbox" id="set-assoc" style="width:20px;height:20px">
+    </div>
     <div style="padding:12px 0">
       <label style="font-size:0.9rem;display:block;margin-bottom:8px">Word frequency to learn</label>
       <div class="filter-chips" id="freq-chips" style="margin-bottom:0">
@@ -428,7 +437,7 @@ const VOCAB_DATA = [];
 // ══════════════════════════════════
 let vocab = [];
 let us = {};
-let cfg = { newPerDay: 5, revPerDay: 5, qPerTest: 10, freqFilter: [1,2,3,4], ttsEnabled: true };
+let cfg = { newPerDay: 5, revPerDay: 5, qPerTest: 10, freqFilter: [1,2,3,4], ttsEnabled: true, learnAssoc: true };
 let currentSessionId = null;
 let lastRecord = null;
 let qCtx = null;
@@ -524,10 +533,17 @@ function saveExtra(){
   localStorage.removeItem('ve_overrides');
 }
 
+// Lignes d'association thématique : exclues de l'apprentissage si le réglage est désactivé
+// (sauf si l'entrée n'a que des associations)
+function studyMots(e){
+  if(cfg.learnAssoc!==false) return e.mots;
+  const core=e.mots.filter(m=>m.type!=='association');
+  return core.length ? core : e.mots;
+}
 function matchesFreqFilter(e){
   const ff=cfg.freqFilter||[1,2,3,4];
   if(ff.length>=4) return true;
-  const withFreq=e.mots.filter(m=>m.freq);
+  const withFreq=studyMots(e).filter(m=>m.freq);
   if(!withFreq.length) return true; // unclassified entries always included
   return withFreq.some(m=>ff.includes(Number(m.freq)));
 }
@@ -537,9 +553,10 @@ function matchesFreqFilter(e){
 // mots if the filter would otherwise leave nothing to show/quiz.
 function learnableMots(e){
   const ff=cfg.freqFilter||[1,2,3,4];
-  if(ff.length>=4) return e.mots;
-  const filtered=e.mots.filter(m=>!m.freq||ff.includes(Number(m.freq)));
-  return filtered.length ? filtered : e.mots;
+  const base=studyMots(e);
+  if(ff.length>=4) return base;
+  const filtered=base.filter(m=>!m.freq||ff.includes(Number(m.freq)));
+  return filtered.length ? filtered : base;
 }
 
 function buildPlan(){
@@ -560,6 +577,7 @@ function openSettings(){
   document.getElementById('set-rev').value = cfg.revPerDay;
   document.getElementById('set-qpp').value = cfg.qPerTest;
   document.getElementById('set-tts').checked = cfg.ttsEnabled!==false;
+  document.getElementById('set-assoc').checked = cfg.learnAssoc!==false;
   const ff=cfg.freqFilter||[1,2,3,4];
   document.querySelectorAll('#freq-chips .freq-chip').forEach(c=>{
     c.classList.toggle('selected', ff.includes(Number(c.dataset.f)));
@@ -567,17 +585,18 @@ function openSettings(){
   openOverlay('settings-modal');
 }
 function saveSettings(){
-  const prevNew=cfg.newPerDay, prevRev=cfg.revPerDay;
+  const prevNew=cfg.newPerDay, prevRev=cfg.revPerDay, prevAssoc=cfg.learnAssoc!==false;
   const prevFreq=JSON.stringify((cfg.freqFilter||[1,2,3,4]).slice().sort());
   cfg.newPerDay = Math.max(1, parseInt(document.getElementById('set-new').value)||5);
   cfg.revPerDay = Math.max(1, parseInt(document.getElementById('set-rev').value)||5);
   cfg.qPerTest  = Math.max(5, parseInt(document.getElementById('set-qpp').value)||10);
   cfg.ttsEnabled = document.getElementById('set-tts').checked;
+  cfg.learnAssoc = document.getElementById('set-assoc').checked;
   let ff=[...document.querySelectorAll('#freq-chips .freq-chip.selected')].map(c=>Number(c.dataset.f));
   if(!ff.length) ff=[1,2,3,4];
   cfg.freqFilter=ff.sort();
   localStorage.setItem('ve_cfg', JSON.stringify(cfg));
-  const schedulingChanged = prevNew!==cfg.newPerDay || prevRev!==cfg.revPerDay || JSON.stringify(cfg.freqFilter)!==prevFreq;
+  const schedulingChanged = prevNew!==cfg.newPerDay || prevRev!==cfg.revPerDay || JSON.stringify(cfg.freqFilter)!==prevFreq || prevAssoc!==cfg.learnAssoc;
   if(schedulingChanged) buildPlan();
   saveState();
   closeOverlay('settings-modal'); renderHome();
@@ -699,7 +718,7 @@ function renderList(){
 // ══════════════════════════════════
 function showDetailEntry(id){
   currentEntry=byId(id); if(!currentEntry) return false;
-  editMode=false;
+  editMode=false; detailExpanded=false;
   document.getElementById('detail-title').textContent=currentEntry.entree;
   document.getElementById('detail-view').style.display='block';
   document.getElementById('detail-edit').style.display='none';
@@ -716,7 +735,7 @@ function openDetail(id){
 // Index Mot normalisé → id d'entrée ; priorité à l'entrée qui porte le mot comme intitulé
 function linkKeys(str){
   const t=normQuotes(str);
-  return [...new Set([normalizeAnswer(t.replace(/[()]/g,'')),normalizeAnswer(t.replace(/\([^()]*\)/g,' '))].filter(Boolean))];
+  return [...new Set([normalizeAnswer(t.replace(/[()]/g,'')),normalizeAnswer(t.replace(/\([^()]*\)/g,''))].filter(Boolean))];
 }
 function buildLinkIndex(){
   const idx={};
@@ -749,7 +768,7 @@ function openLinked(id){
 function openDetailFromSession(id){ openDetail(id); }
 
 // Build a mot block for read-only view
-function buildMotViewBlock(e,m,mi,context){
+function buildMotViewBlock(e,m,mi,context,expanded){
   const uid=`${context}-${e.id}-${mi}`;
   const tts=cfg.ttsEnabled!==false;
   const spk=t=>tts?` speakable" onclick="speak(${esc(JSON.stringify(t))})"`:'"';
@@ -763,15 +782,38 @@ function buildMotViewBlock(e,m,mi,context){
   if(m.antonymes) html+=`<div class="meta-line"><b>Antonyms:</b> ${linkedList(m.antonymes,e)}</div>`;
   if(m.fauxAmi)   html+=`<div class="meta-line faux-ami"><b>⚠ False friend:</b> ${m.fauxAmi}</div>`;
 
-  const exemples=(m.exemples||[]).filter(ex=>ex.ex);
+  const allEx=(m.exemples||[]).filter(ex=>ex.ex);
+  const exemples=expanded?allEx:allEx.slice(0,1);
   exemples.forEach(ex=>{
     html+=`<div class="exemple-block"><div class="ex-en${spk(ex.ex)}>${ex.ex}</div>`;
     if(ex.tr) html+=`<div class="ex-fr">${ex.tr}</div>`;
     html+=`</div>`;
   });
+  if(allEx.length>exemples.length)
+    html+=`<div class="more-ex" onclick="setDetailExpanded(true)">+ ${allEx.length-exemples.length} example${allEx.length-exemples.length>1?'s':''}</div>`;
 
   html+='</div>';
   return html;
+}
+
+// Lignes de l'entrée, les associations thématiques regroupées en fin sous « See also »
+function buildMotList(e,mots,context,expanded){
+  const core=mots.filter(m=>m.type!=='association'), assoc=mots.filter(m=>m.type==='association');
+  let html=core.map(m=>buildMotViewBlock(e,m,e.mots.indexOf(m),context,expanded)).join('');
+  if(assoc.length){
+    html+='<div class="see-also-h">See also · thematic associations</div>';
+    html+=assoc.map(m=>buildMotViewBlock(e,m,e.mots.indexOf(m),context,expanded)).join('');
+  }
+  return html;
+}
+
+// Affichage de la fiche : global (1 exemple par mot, par défaut à chaque ouverture) ou développé
+let detailExpanded=false;
+function setDetailExpanded(v){
+  detailExpanded=v;
+  const body=document.querySelector('#detail-overlay .overlay-body'), top=body?body.scrollTop:0;
+  renderDetailView();
+  if(body) body.scrollTop=top;
 }
 
 function renderDetailView(){
@@ -787,7 +829,12 @@ function renderDetailView(){
       </span>
     </div>`;
   }
-  e.mots.forEach((m,mi)=>{ html+=buildMotViewBlock(e,m,mi,'detail'); });
+  const hasMore=e.mots.some(m=>(m.exemples||[]).filter(ex=>ex.ex).length>1);
+  if(hasMore) html+=`<div class="view-toggle">
+    <button class="${detailExpanded?'':'on'}" onclick="setDetailExpanded(false)">Global</button>
+    <button class="${detailExpanded?'on':''}" onclick="setDetailExpanded(true)">Développé</button>
+  </div>`;
+  html+=buildMotList(e,e.mots,'detail',detailExpanded);
   html+=`<div class="btn-row">
     ${isL
       ?`<button class="btn btn-secondary btn-full" onclick="markLearned('${e.id}',false)">✕ Mark as not learned</button>`
@@ -880,6 +927,7 @@ function motBlockHTML(m,idx,pfx){
     <label>Synonyms</label><input type="text" value="${esc(m.synonymes||'')}" class="${pfx}-syn">
     <label>Antonyms</label><input type="text" value="${esc(m.antonymes||'')}" class="${pfx}-ant">
     <label>False friend</label><input type="text" value="${esc(m.fauxAmi||'')}" class="${pfx}-fa">
+    <label style="display:flex;align-items:center;gap:8px"><input type="checkbox" class="${pfx}-assoc" style="width:18px;height:18px"${m.type==='association'?' checked':''}> Thematic association (See also)</label>
     <label>Target word (fill in the blank)</label><input type="text" value="${esc(m.motATrouver||'')}" class="${pfx}-mat-global">
     <label>Frequency class (1-4)</label><input type="number" min="1" max="4" value="${esc(m.freq||'')}" class="${pfx}-freq">
     <label>Zipf score</label><input type="number" step="0.01" value="${esc(m.zipf||'')}" class="${pfx}-zipf">
@@ -919,6 +967,7 @@ function readMotBlocks(pfx){
       synonymes:block.querySelector(`.${pfx}-syn`)?.value.trim()||'',
       antonymes:block.querySelector(`.${pfx}-ant`)?.value.trim()||'',
       fauxAmi:block.querySelector(`.${pfx}-fa`)?.value.trim()||'',
+      type:block.querySelector(`.${pfx}-assoc`)?.checked?'association':'',
       motATrouver:block.querySelector(`.${pfx}-mat-global`)?.value.trim()||'',
       freq:block.querySelector(`.${pfx}-freq`)?.value.trim()||'',
       zipf:block.querySelector(`.${pfx}-zipf`)?.value.trim()||'',
@@ -1032,7 +1081,7 @@ function renderLearnCard(){
   document.getElementById('learn-cnt').textContent=`${si+1}/${sq.length}`;
   const e=sq[si];
   let ficheHtml='';
-  learnableMots(e).forEach((m,mi)=>{ ficheHtml+=buildMotViewBlock(e,m,mi,'learn'); });
+  ficheHtml+=buildMotList(e,learnableMots(e),'learn',true);
 
   document.getElementById('learn-content').innerHTML=`
     <div style="padding:16px 0 8px">
@@ -1668,6 +1717,7 @@ function exportXlsx(){
         'Faux-ami':  m.fauxAmi||'',
         'Fréq (1-4)':m.freq||'',
         'Zipf':      m.zipf||'',
+        'Type':      m.type||'',
       };
       // examples (up to 5)
       for(let i=0;i<5;i++){
@@ -1762,6 +1812,7 @@ function importXlsx(input){
           antonymes:(r['Antonymes']||'').trim(), fauxAmi:(r['Faux-ami']||'').trim(),
           freq:(r['Fréq (1-4)']!==undefined&&r['Fréq (1-4)']!==''?String(r['Fréq (1-4)']).trim():''),
           zipf:(r['Zipf']!==undefined&&r['Zipf']!==''?String(r['Zipf']).trim():''),
+          type:String(r['Type']||'').trim().toLowerCase()==='association'?'association':'',
           motATrouver:'', exemples:[]
         };
         for(let i=1;i<=5;i++){
