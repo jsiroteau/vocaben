@@ -1,4 +1,4 @@
-const CACHE = 'vocaben-v9';
+const CACHE = 'vocaben-v10';
 const APP_SHELL = './index.html';
 const ASSETS = [
   './',
@@ -39,6 +39,10 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
+
+  // Base de vocabulaire publiée : jamais servie par le service worker, pour que l'appli voie
+  // toujours la dernière version (hors ligne, elle garde simplement la base de l'appareil)
+  if (url.pathname.endsWith('/vocab.xlsx')) return;
 
   // Page de l'application (/vocaben/, /vocaben/index.html, lancement depuis l'écran d'accueil) :
   // réseau d'abord pour recevoir les mises à jour, copie en cache sinon (hors ligne ou réseau trop lent)

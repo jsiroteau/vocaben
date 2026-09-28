@@ -74,10 +74,12 @@
   .meta-line.faux-ami b{color:var(--accent)}
   .xref{color:var(--gold);text-decoration:underline dotted;text-underline-offset:3px;cursor:pointer}
   .see-also-h{font-size:0.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px}
-  .view-toggle{display:flex;gap:6px;margin-bottom:14px}
-  .view-toggle button{flex:1;padding:7px 0;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--muted);font:inherit;font-size:0.82rem;cursor:pointer}
-  .view-toggle button.on{border-color:var(--gold);color:var(--gold)}
-  .more-ex{font-size:0.78rem;color:var(--muted);margin-top:6px;cursor:pointer;text-decoration:underline dotted}
+  .exp-row{display:flex;justify-content:flex-end;margin:-6px 0 6px}
+  .exp-btn{width:24px;height:24px;border-radius:50%;border:1px solid var(--border);background:transparent;color:var(--muted);font:inherit;font-size:0.95rem;line-height:1;cursor:pointer;padding:0}
+  .pub-box{margin-top:18px;padding-top:14px;border-top:1px solid var(--border);font-size:0.85rem}
+  .pub-box summary{cursor:pointer;color:var(--muted)}
+  .pub-box input[type=text],.pub-box input[type=password]{width:100%;margin:4px 0 8px;padding:8px 10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);font:inherit}
+  .pub-help{color:var(--muted);font-size:0.78rem;line-height:1.5;margin:6px 0 10px}
   .exemple-block{border-left:2px solid var(--accent);padding-left:10px;margin-top:10px;margin-bottom:6px}
   .exemple-block .ex-en{font-size:0.88rem}
   .exemple-block .ex-fr{font-size:0.8rem;color:var(--muted);margin-top:2px;font-style:italic}
@@ -156,7 +158,7 @@
   /* Modals */
   .modal-bg{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,0.7);display:none;align-items:center;justify-content:center;padding:24px}
   .modal-bg.open{display:flex}
-  .modal-box{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px 24px;width:100%;max-width:380px}
+  .modal-box{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px 24px;width:100%;max-width:380px;max-height:90vh;overflow-y:auto}
   .modal-box h3{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:20px;text-align:center}
   /* Settings */
   .settings-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)}
@@ -407,6 +409,10 @@
       <label>🧭 Learn thematic associations</label>
       <input type="checkbox" id="set-assoc" style="width:20px;height:20px">
     </div>
+    <div class="settings-row">
+      <label>🔄 Automatic vocabulary updates</label>
+      <input type="checkbox" id="set-autoupd" style="width:20px;height:20px">
+    </div>
     <div style="padding:12px 0">
       <label style="font-size:0.9rem;display:block;margin-bottom:8px">Word frequency to learn</label>
       <div class="filter-chips" id="freq-chips" style="margin-bottom:0">
@@ -416,6 +422,25 @@
         <div class="freq-chip" data-f="4" onclick="this.classList.toggle('selected')">4 · least frequent</div>
       </div>
     </div>
+    <details class="pub-box" id="pub-box">
+      <summary>Publishing (maintainer only)</summary>
+      <div class="pub-help">Sends a vocabulary Excel file to the GitHub repository; every user's app then picks it up automatically. Only a GitHub token with write access to the repository can publish. The token is stored on this device only.</div>
+      <label>Repository (owner/name)</label>
+      <input type="text" id="pub-repo" autocomplete="off" spellcheck="false">
+      <label>GitHub token</label>
+      <input type="password" id="pub-token" autocomplete="off" spellcheck="false">
+      <details class="pub-help"><summary>How to get a token</summary>
+        On github.com (signed in): avatar → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token. Repository access: only the vocaben repository. Permissions: Contents → Read and write. Copy the token right away: GitHub shows it only once.
+      </details>
+      <div class="btn-row">
+        <button class="btn btn-secondary btn-full btn-sm" onclick="savePubConfig()">Save token</button>
+        <button class="btn btn-ghost btn-full btn-sm" onclick="clearPubConfig()">Remove</button>
+      </div>
+      <label class="btn btn-primary btn-full" id="pub-btn" style="cursor:pointer;margin-top:10px;display:none">
+        📡 Publish vocabulary…
+        <input type="file" accept=".xlsx" onchange="publishVocab(this)" style="display:none">
+      </label>
+    </details>
     <div class="btn-row" style="margin-top:20px">
       <button class="btn btn-primary btn-full" onclick="saveSettings()">Save</button>
       <button class="btn btn-secondary btn-full" onclick="closeOverlay('settings-modal')">Cancel</button>
@@ -437,7 +462,7 @@ const VOCAB_DATA = [];
 // ══════════════════════════════════
 let vocab = [];
 let us = {};
-let cfg = { newPerDay: 5, revPerDay: 5, qPerTest: 10, freqFilter: [1,2,3,4], ttsEnabled: true, learnAssoc: true };
+let cfg = { newPerDay: 5, revPerDay: 5, qPerTest: 10, freqFilter: [1,2,3,4], ttsEnabled: true, learnAssoc: true, autoUpdate: true };
 let currentSessionId = null;
 let lastRecord = null;
 let qCtx = null;
@@ -578,6 +603,8 @@ function openSettings(){
   document.getElementById('set-qpp').value = cfg.qPerTest;
   document.getElementById('set-tts').checked = cfg.ttsEnabled!==false;
   document.getElementById('set-assoc').checked = cfg.learnAssoc!==false;
+  document.getElementById('set-autoupd').checked = cfg.autoUpdate!==false;
+  renderPubBox();
   const ff=cfg.freqFilter||[1,2,3,4];
   document.querySelectorAll('#freq-chips .freq-chip').forEach(c=>{
     c.classList.toggle('selected', ff.includes(Number(c.dataset.f)));
@@ -592,6 +619,8 @@ function saveSettings(){
   cfg.qPerTest  = Math.max(5, parseInt(document.getElementById('set-qpp').value)||10);
   cfg.ttsEnabled = document.getElementById('set-tts').checked;
   cfg.learnAssoc = document.getElementById('set-assoc').checked;
+  const wasAuto=cfg.autoUpdate!==false;
+  cfg.autoUpdate = document.getElementById('set-autoupd').checked;
   let ff=[...document.querySelectorAll('#freq-chips .freq-chip.selected')].map(c=>Number(c.dataset.f));
   if(!ff.length) ff=[1,2,3,4];
   cfg.freqFilter=ff.sort();
@@ -600,7 +629,8 @@ function saveSettings(){
   if(schedulingChanged) buildPlan();
   saveState();
   closeOverlay('settings-modal'); renderHome();
-  toast('✓ Paramètres enregistrés');
+  toast('✓ Settings saved');
+  if(!wasAuto&&cfg.autoUpdate) syncPublished(true);
 }
 
 // ── NAV ──
@@ -789,8 +819,6 @@ function buildMotViewBlock(e,m,mi,context,expanded){
     if(ex.tr) html+=`<div class="ex-fr">${ex.tr}</div>`;
     html+=`</div>`;
   });
-  if(allEx.length>exemples.length)
-    html+=`<div class="more-ex" onclick="setDetailExpanded(true)">+ ${allEx.length-exemples.length} example${allEx.length-exemples.length>1?'s':''}</div>`;
 
   html+='</div>';
   return html;
@@ -830,10 +858,7 @@ function renderDetailView(){
     </div>`;
   }
   const hasMore=e.mots.some(m=>(m.exemples||[]).filter(ex=>ex.ex).length>1);
-  if(hasMore) html+=`<div class="view-toggle">
-    <button class="${detailExpanded?'':'on'}" onclick="setDetailExpanded(false)">Global</button>
-    <button class="${detailExpanded?'on':''}" onclick="setDetailExpanded(true)">Développé</button>
-  </div>`;
+  if(hasMore) html+=`<div class="exp-row"><button class="exp-btn" title="${detailExpanded?'Show one example per word':'Show all examples'}" onclick="setDetailExpanded(${!detailExpanded})">${detailExpanded?'−':'+'}</button></div>`;
   html+=buildMotList(e,e.mots,'detail',detailExpanded);
   html+=`<div class="btn-row">
     ${isL
@@ -1761,6 +1786,58 @@ function exportXlsx(){
   toast(`✓ ${rows.length} rows exported`);
 }
 
+// Lecture de l'onglet Vocab (commune à l'import manuel, à la mise à jour automatique et à la publication)
+// → map (entrée en minuscules → {entree, mots, champs __}), ordre des entrées, fichier complet ou non
+function parseVocabRows(rows){
+  const cols = Object.keys(rows[0]);
+  // A full export always has __id and __learned columns (even if all values are 0)
+  // A plain vocab file never has these columns
+  const isFullExport = cols.includes('__id') && cols.includes('__learned');
+
+  // Group rows by Entrée
+  const map={};   // entree (lower) → entry object
+  const order=[];
+  rows.forEach(r=>{
+    const entree=(r['Entrée']||'').trim(); if(!entree) return;
+    const key=entree.toLowerCase();
+    if(!map[key]){
+      map[key]={
+        entree,
+        mots:[],
+        // full-export fields (taken from first row of the group)
+        _id:      isFullExport ? r['__id']      : null,
+        _source:  isFullExport ? (r['__source']||'') : '',
+        _learned: isFullExport ? Number(r['__learned']||0) : null,
+        _hard:    isFullExport ? Number(r['__hard']||0)    : null,
+        _toFix:   isFullExport ? Number(r['__toFix']||0)   : null,
+        _resOk:   isFullExport ? Number(r['__res_ok']||0)  : null,
+        _resTotal:isFullExport ? Number(r['__res_total']||0): null,
+        _score:   isFullExport ? Number(r['__score']||0)   : null,
+      };
+      order.push(key);
+    }
+    const nats=(r['Nature']||'').split('/').map(n=>n.trim()).filter(Boolean);
+    const mot={
+      mot:(r['Mot']||'').trim(), natures:nats,
+      traduction:(r['Traduction']||'').trim(),
+      synonymes:(r['Synonymes']||'').trim(),
+      antonymes:(r['Antonymes']||'').trim(), fauxAmi:(r['Faux-ami']||'').trim(),
+      freq:(r['Fréq (1-4)']!==undefined&&r['Fréq (1-4)']!==''?String(r['Fréq (1-4)']).trim():''),
+      zipf:(r['Zipf']!==undefined&&r['Zipf']!==''?String(r['Zipf']).trim():''),
+      type:String(r['Type']||'').trim().toLowerCase()==='association'?'association':'',
+      motATrouver:'', exemples:[]
+    };
+    for(let i=1;i<=5;i++){
+      const ex=(r[`Exemple ${i}`]||'').trim();
+      if(ex) mot.exemples.push({
+        ex, mat:(r[`Mot à trouver ${i}`]||'').trim(), tr:(r[`Traduction ${i}`]||'').trim()
+      });
+    }
+    if(mot.mot) map[key].mots.push(mot);
+  });
+  return {map,order,isFullExport};
+}
+
 // ── IMPORT ──
 // Accepts:
 //   • A plain vocabulary file (no __ columns) → merges vocab, keeps existing learning data
@@ -1777,52 +1854,7 @@ function importXlsx(input){
       const rows=XLSX.utils.sheet_to_json(ws,{defval:''});
       if(!rows.length){toast('⚠ Empty file');return;}
 
-      const cols = Object.keys(rows[0]);
-      // A full export always has __id and __learned columns (even if all values are 0)
-      // A plain vocab file never has these columns
-      const isFullExport = cols.includes('__id') && cols.includes('__learned');
-
-      // Group rows by Entrée
-      const map={};   // entree (lower) → entry object
-      const order=[];
-      rows.forEach(r=>{
-        const entree=(r['Entrée']||'').trim(); if(!entree) return;
-        const key=entree.toLowerCase();
-        if(!map[key]){
-          map[key]={
-            entree,
-            mots:[],
-            // full-export fields (taken from first row of the group)
-            _id:      isFullExport ? r['__id']      : null,
-            _source:  isFullExport ? (r['__source']||'') : '',
-            _learned: isFullExport ? Number(r['__learned']||0) : null,
-            _hard:    isFullExport ? Number(r['__hard']||0)    : null,
-            _toFix:   isFullExport ? Number(r['__toFix']||0)   : null,
-            _resOk:   isFullExport ? Number(r['__res_ok']||0)  : null,
-            _resTotal:isFullExport ? Number(r['__res_total']||0): null,
-            _score:   isFullExport ? Number(r['__score']||0)   : null,
-          };
-          order.push(key);
-        }
-        const nats=(r['Nature']||'').split('/').map(n=>n.trim()).filter(Boolean);
-        const mot={
-          mot:(r['Mot']||'').trim(), natures:nats,
-          traduction:(r['Traduction']||'').trim(),
-          synonymes:(r['Synonymes']||'').trim(),
-          antonymes:(r['Antonymes']||'').trim(), fauxAmi:(r['Faux-ami']||'').trim(),
-          freq:(r['Fréq (1-4)']!==undefined&&r['Fréq (1-4)']!==''?String(r['Fréq (1-4)']).trim():''),
-          zipf:(r['Zipf']!==undefined&&r['Zipf']!==''?String(r['Zipf']).trim():''),
-          type:String(r['Type']||'').trim().toLowerCase()==='association'?'association':'',
-          motATrouver:'', exemples:[]
-        };
-        for(let i=1;i<=5;i++){
-          const ex=(r[`Exemple ${i}`]||'').trim();
-          if(ex) mot.exemples.push({
-            ex, mat:(r[`Mot à trouver ${i}`]||'').trim(), tr:(r[`Traduction ${i}`]||'').trim()
-          });
-        }
-        if(mot.mot) map[key].mots.push(mot);
-      });
+      const {map,order,isFullExport}=parseVocabRows(rows);
 
       // ── 2. Build new vocab array ──
       const oldByEntree={};
@@ -1885,15 +1917,11 @@ function importXlsx(input){
 
       // Fichier avec données d'apprentissage (__id présent) → écrase tout
       // Fichier sans données d'apprentissage (base vierge)  → conserve la progression de l'utilisateur
-      if(!isFullExport){
-        // Nettoyer uniquement les IDs qui n'existent plus
-        const validIds = new Set(vocab.map(e => e.id));
-        [...us.learned].forEach(id => { if(!validIds.has(id)) us.learned.delete(id); });
-        [...us.hard].forEach(id =>    { if(!validIds.has(id)) us.hard.delete(id); });
-        [...us.toFix].forEach(id =>   { if(!validIds.has(id)) us.toFix.delete(id); });
-        Object.keys(us.scores).forEach(id =>  { if(!validIds.has(id)) delete us.scores[id]; });
-        Object.keys(us.results).forEach(id => { if(!validIds.has(id)) delete us.results[id]; });
-      }
+      if(!isFullExport) pruneOrphanProgress(); // ne garde que la progression des entrées encore présentes
+
+      // Import manuel = choix d'une autre base : la mise à jour automatique est suspendue
+      const autoOff=cfg.autoUpdate!==false;
+      if(autoOff){ cfg.autoUpdate=false; localStorage.setItem('ve_cfg', JSON.stringify(cfg)); }
 
       saveExtra(); buildPlan(); saveState(); renderList(); renderHome();
 
@@ -1902,10 +1930,166 @@ function importXlsx(input){
       } else {
         toast(`✓ Import: ${kept} kept, ${added} new, ${removed} removed`);
       }
+      if(autoOff) setTimeout(()=>toast('Automatic updates turned off (Settings)'),2600);
     } catch(err){ toast('⚠ Import error: '+err.message); console.error(err); }
   };
   reader.readAsBinaryString(file);
   input.value='';
+}
+
+// ══════════════════════════════════
+//  PUBLISHED VOCABULARY (vocab.xlsx in the repository)
+// ══════════════════════════════════
+// Au lancement, l'appli relit vocab.xlsx à côté d'index.html et l'intègre sans rien demander.
+// Règle mixte : une fiche modifiée (ou ajoutée) par l'utilisateur est conservée tant que la
+// fiche publiée correspondante ne change pas ; dès qu'elle change, la version publiée la remplace.
+// ve_pub : empreinte du fichier appliqué, empreinte de chaque fiche publiée, nombre d'entrées.
+const PUB_FILE='vocab.xlsx';
+function pubState(){ try{ return JSON.parse(localStorage.getItem('ve_pub')||'{}')||{}; }catch(e){ return {}; } }
+function savePubState(st){ localStorage.setItem('ve_pub',JSON.stringify(st)); }
+function hashStr(str){ let x=5381; for(let i=0;i<str.length;i++) x=((x*33)^str.charCodeAt(i))>>>0; return x.toString(36); }
+function hashBytes(buf){ const b=new Uint8Array(buf); let x=5381; for(let i=0;i<b.length;i++) x=((x*33)^b[i])>>>0; return b.length+'-'+x.toString(36); }
+function entryHash(entree,mots){ return hashStr(entree+'\n'+JSON.stringify(mots)); }
+
+function pruneOrphanProgress(){
+  const valid=new Set(vocab.map(e=>e.id));
+  [...us.learned].forEach(id=>{ if(!valid.has(id)) us.learned.delete(id); });
+  [...us.hard].forEach(id=>{ if(!valid.has(id)) us.hard.delete(id); });
+  [...us.toFix].forEach(id=>{ if(!valid.has(id)) us.toFix.delete(id); });
+  Object.keys(us.scores).forEach(id=>{ if(!valid.has(id)) delete us.scores[id]; });
+  Object.keys(us.results).forEach(id=>{ if(!valid.has(id)) delete us.results[id]; });
+  us.todayNew=(us.todayNew||[]).filter(id=>valid.has(id));
+  us.todayRev=(us.todayRev||[]).filter(id=>valid.has(id));
+}
+
+// Retourne le nombre de fiches ajoutées, remplacées ou retirées
+function applyPublished(map,order,sig){
+  const st=pubState(), prev=st.entries||{}, next={};
+  const oldByKey={}; vocab.forEach(e=>{ oldByKey[e.entree.toLowerCase()]=e; });
+  let changed=0;
+  const out=order.map(key=>{
+    const imp=map[key], h=entryHash(imp.entree,imp.mots), old=oldByKey[key];
+    next[key]=h;
+    if(!old){ changed++; return {id:makeId(imp.entree)||Date.now().toString(36), entree:imp.entree, mots:imp.mots, source:''}; }
+    const userVersion=old.source==='edited'||old.source==='manual';
+    // Sans empreinte antérieure (première synchronisation), la version de l'utilisateur est présumée à jour
+    if(userVersion&&(!(key in prev)||prev[key]===h)) return old;
+    if(!userVersion&&entryHash(old.entree,old.mots)===h) return old;
+    changed++;
+    return {id:old.id, entree:imp.entree, mots:imp.mots, source:''};
+  });
+  const pubKeys=new Set(order);
+  vocab.forEach(e=>{
+    if(pubKeys.has(e.entree.toLowerCase())) return;
+    if(e.source==='manual') out.push(e); else changed++;
+  });
+  vocab=out;
+  pruneOrphanProgress();
+  if(!us.todayNew.length&&!us.todayRev.length) buildPlan();
+  savePubState({...st, sig, entries:next, count:order.length});
+  saveExtra(); saveState();
+  return changed;
+}
+
+function readVocabBuffer(buf){
+  const wb=XLSX.read(buf,{type:'array'});
+  const rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{defval:''});
+  if(!rows.length||!('Entrée' in rows[0])||!('Mot' in rows[0])) throw new Error('the first sheet must be the vocabulary (Entrée, Mot…)');
+  const parsed=parseVocabRows(rows);
+  if(parsed.isFullExport) throw new Error('this file contains learning data; use the vocabulary file');
+  return parsed;
+}
+
+async function syncPublished(){
+  if(cfg.autoUpdate===false||typeof XLSX==='undefined') return;
+  let buf;
+  try{
+    const r=await fetch(PUB_FILE,{cache:'no-cache'});
+    if(!r.ok) return;
+    buf=await r.arrayBuffer();
+  }catch(e){ return; }                     // hors ligne : on garde la base de l'appareil
+  const sig=hashBytes(buf), st=pubState();
+  if(sig===st.sig) return;
+  // Juste après une publication, GitHub Pages sert encore quelques minutes l'ancien fichier
+  if(sig===st.superseded&&Date.now()<(st.supersededUntil||0)) return;
+  try{
+    const {map,order}=readVocabBuffer(buf);
+    const n=applyPublished(map,order,sig);
+    if(!n) return;
+    renderList(); renderHome();
+    if(currentEntry&&document.getElementById('detail-overlay').classList.contains('open')&&!editMode){
+      const cur=byId(currentEntry.id);
+      if(cur){ currentEntry=cur; renderDetailView(); }
+    }
+    toast(`✓ Vocabulary updated (${n} entr${n>1?'ies':'y'})`);
+  }catch(e){ console.error('Vocabulary update skipped:',e); }
+}
+
+// ── Publication (réservée à qui détient un jeton GitHub en écriture, stocké sur l'appareil) ──
+function getPubConfig(){ try{ return JSON.parse(localStorage.getItem('ve_gh')||'null'); }catch(e){ return null; } }
+function defaultRepo(){
+  const owner=location.hostname.endsWith('.github.io')?location.hostname.split('.')[0]:'';
+  const repo=location.pathname.split('/').filter(Boolean)[0]||'';
+  return owner&&repo?owner+'/'+repo:'';
+}
+function renderPubBox(){
+  const c=getPubConfig();
+  document.getElementById('pub-repo').value=c?c.repo:defaultRepo();
+  const t=document.getElementById('pub-token');
+  t.value=''; t.placeholder=c?'•••• saved on this device':'';
+  document.getElementById('pub-btn').style.display=c?'':'none';
+}
+function savePubConfig(){
+  const repo=document.getElementById('pub-repo').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/+$/,'');
+  const old=getPubConfig();
+  const token=document.getElementById('pub-token').value.trim()||(old?old.token:'');
+  if(!/^[\w.-]+\/[\w.-]+$/.test(repo)){ toast('⚠ Repository must look like owner/name'); return; }
+  if(!token){ toast('⚠ Paste the GitHub token'); return; }
+  localStorage.setItem('ve_gh',JSON.stringify({repo,token}));
+  renderPubBox(); toast('✓ Token saved on this device');
+}
+function clearPubConfig(){
+  if(!getPubConfig()||!confirm('Remove the GitHub token from this device?')) return;
+  localStorage.removeItem('ve_gh'); renderPubBox(); toast('Token removed');
+}
+function toBase64(buf){
+  const b=new Uint8Array(buf); let str='';
+  for(let i=0;i<b.length;i+=0x8000) str+=String.fromCharCode.apply(null,b.subarray(i,i+0x8000));
+  return btoa(str);
+}
+function ghError(status){
+  if(status===401) return new Error('GitHub token rejected (expired?)');
+  if(status===403||status===404) return new Error('this token cannot write to the repository');
+  if(status===409) return new Error('the file changed on GitHub meanwhile, try again');
+  return new Error('GitHub error '+status);
+}
+async function publishVocab(input){
+  const file=input.files[0]; input.value='';
+  const c=getPubConfig(); if(!file||!c) return;
+  const btn=document.getElementById('pub-btn');
+  try{
+    const buf=await file.arrayBuffer();
+    const {map,order}=readVocabBuffer(buf);
+    const current=pubState().count||vocab.length;
+    if(order.length<current&&!confirm(`This file has ${order.length} entries, fewer than the ${current} currently published. Publish anyway?`)) return;
+    btn.style.opacity='.5'; btn.style.pointerEvents='none';
+    const url=`https://api.github.com/repos/${c.repo}/contents/${PUB_FILE}`;
+    const h={'Authorization':`Bearer ${c.token}`,'X-GitHub-Api-Version':'2022-11-28'};
+    // l'empreinte (sha) du fichier en place est exigée pour le remplacer
+    let sha=null;
+    const cur=await fetch(url+'?ref=main',{headers:{...h,'Accept':'application/vnd.github.object'},cache:'no-store'});
+    if(cur.ok) sha=(await cur.json()).sha;
+    else if(cur.status!==404) throw ghError(cur.status);
+    const res=await fetch(url,{method:'PUT',headers:{...h,'Accept':'application/vnd.github+json','Content-Type':'application/json'},
+      body:JSON.stringify({message:`Vocabulary: ${order.length} entries (${today()})`,content:toBase64(buf),branch:'main',...(sha?{sha}:{})})});
+    if(!res.ok) throw ghError(res.status);
+    const previous=pubState().sig;
+    applyPublished(map,order,hashBytes(buf));
+    savePubState({...pubState(), superseded:previous, supersededUntil:Date.now()+15*60000});
+    renderList(); renderHome();
+    toast(`✓ Published: ${order.length} entries. Users get it at their next launch.`);
+  }catch(e){ toast('⚠ Publishing failed: '+e.message); }
+  finally{ btn.style.opacity=''; btn.style.pointerEvents=''; }
 }
 
 // ══════════════════════════════════
@@ -2016,6 +2200,7 @@ if('serviceWorker' in navigator){
 // ══════════════════════════════════
 loadState();
 renderHome();
+syncPublished();
 </script>
 </body>
 </html>
