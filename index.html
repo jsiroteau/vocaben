@@ -1178,7 +1178,7 @@ function showLearnSummary(){
 // ══════════════════════════════════
 //  REVIEW OF TODAY'S WORDS
 // ══════════════════════════════════
-// Après l'apprentissage, chaque ligne des nouvelles fiches du jour est interrogée en texte à trous
+// Après l'apprentissage, chaque ligne des fiches du jour (nouvelles et révisées) est interrogée en texte à trous
 // (exemple tiré au hasard). Les autres exercices restent verrouillés tant que la file n'est pas vide.
 // Erreur → la ligne revient une fois en fin de file ; seconde erreur → elle ne bloque plus.
 // File conservée si on quitte l'appli ; abandonnée le lendemain.
@@ -1203,7 +1203,7 @@ function dayRevProgress(){
 function buildDayRev(){
   if(!us.dayRev||us.dayRev.date!==today()) us.dayRev={date:today(),queue:[],done:[],fails:{}};
   const d=us.dayRev, known=new Set([...d.queue,...d.done]), add=[];
-  us.todayNew.map(byId).filter(Boolean).forEach(e=>{
+  [...new Set([...us.todayNew,...us.todayRev])].map(byId).filter(Boolean).forEach(e=>{
     learnableMots(e).forEach(m=>{
       if(!(m.exemples||[]).some(ex=>ex.mat&&ex.ex)) return;
       const k=dayRevKey(e.id,m.mot);
