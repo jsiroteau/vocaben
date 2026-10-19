@@ -43,6 +43,9 @@
   .action-card .info h3{font-size:0.95rem;font-weight:600}
   .action-card .info p{font-size:0.78rem;color:var(--muted);margin-top:2px}
   .action-card .arrow{margin-left:auto;color:var(--muted);font-size:1.4rem}
+  .action-card.locked{opacity:0.4}
+  .action-card.locked .arrow::after{content:'🔒';font-size:0.9rem}
+  .action-card.locked .arrow{font-size:0}
   .search-bar{position:relative;margin-bottom:14px}
   .search-bar input{width:100%;background:var(--card);border:1px solid var(--border);border-radius:50px;padding:12px 20px 12px 46px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.95rem;outline:none}
   .search-bar input:focus{border-color:var(--accent)}
@@ -225,32 +228,32 @@
     <div class="info"><h3>Today's results</h3><p id="review-today-sub">Review your answers</p></div>
     <div class="arrow">›</div>
   </div>
-  <div class="action-card" onclick="openLearn()">
-    <div class="icon" style="background:rgba(233,69,96,0.15)">📚</div>
-    <div class="info"><h3>Learning</h3><p id="learn-subtitle">—</p></div>
+  <div class="action-card" id="learn-card" onclick="openLearnOrReview()">
+    <div class="icon" id="learn-icon" style="background:rgba(233,69,96,0.15)">📚</div>
+    <div class="info"><h3 id="learn-title">Learning</h3><p id="learn-subtitle">—</p></div>
     <div class="arrow">›</div>
   </div>
-  <div class="action-card" onclick="openDirModal('qcm')">
+  <div class="action-card exo-card" onclick="openDirModal('qcm')">
     <div class="icon" style="background:rgba(15,52,96,0.6)">🎯</div>
     <div class="info"><h3>Multiple choice</h3><p>Pick the right translation</p></div>
     <div class="arrow">›</div>
   </div>
-  <div class="action-card" onclick="startTest('fill','en2fr')">
+  <div class="action-card exo-card" onclick="startTest('fill','en2fr')">
     <div class="icon" style="background:rgba(46,204,113,0.15)">📝</div>
     <div class="info"><h3>Fill in the blank</h3><p>Find the word in a sentence</p></div>
     <div class="arrow">›</div>
   </div>
-  <div class="action-card" onclick="openDirModal('open')">
+  <div class="action-card exo-card" onclick="openDirModal('open')">
     <div class="icon" style="background:rgba(245,166,35,0.15)">✍️</div>
     <div class="info"><h3>Open translation</h3><p>Write the translation from memory</p></div>
     <div class="arrow">›</div>
   </div>
-  <div class="action-card" onclick="startTest('syn','en2fr')">
+  <div class="action-card exo-card" onclick="startTest('syn','en2fr')">
     <div class="icon" style="background:rgba(100,120,255,0.15)">🔗</div>
     <div class="info"><h3>Synonyms</h3><p>Find the synonyms of the word</p></div>
     <div class="arrow">›</div>
   </div>
-  <div class="action-card" onclick="startTest('ant','en2fr')">
+  <div class="action-card exo-card" onclick="startTest('ant','en2fr')">
     <div class="icon" style="background:rgba(155,89,182,0.18)">↔️</div>
     <div class="info"><h3>Antonyms</h3><p>Find the opposites of the word</p></div>
     <div class="arrow">›</div>
@@ -517,13 +520,16 @@ function loadState(){
       todayNew: (s.todayNew||[]).map(id => idMap[String(id)] || String(id)),
       todayRev: (s.todayRev||[]).map(id => idMap[String(id)] || String(id)),
       sessions: s.sessions||[],
-      todayResults: s.todayResults||[]
+      todayResults: s.todayResults||[],
+      dayRev: s.dayRev||null
     };
   } else {
-    us = { learned:new Set(), hard:new Set(), toFix:new Set(), scores:{}, results:{}, streak:0, lastDate:'', todayNew:[], todayRev:[], sessions:[], todayResults:[] };
+    us = { learned:new Set(), hard:new Set(), toFix:new Set(), scores:{}, results:{}, streak:0, lastDate:'', todayNew:[], todayRev:[], sessions:[], todayResults:[], dayRev:null };
   }
   // Keep only today's detailed result logs
   us.todayResults = (us.todayResults||[]).filter(r=>r.date===today());
+  // Révision des mots du jour non terminée la veille : abandonnée
+  if(us.dayRev&&us.dayRev.date!==today()) us.dayRev=null;
 
   // If migration happened, persist immediately
   if(Object.keys(idMap).length > 0){ saveExtra(); saveState(); }
@@ -549,7 +555,8 @@ function saveState(){
     scores:us.scores, results:us.results,
     streak:us.streak, lastDate:us.lastDate,
     todayNew:us.todayNew, todayRev:us.todayRev, sessions:us.sessions,
-    todayResults:us.todayResults
+    todayResults:us.todayResults,
+    dayRev:us.dayRev
   }));
 }
 
@@ -692,7 +699,14 @@ function renderHome(){
     document.getElementById('s-score').textContent=Math.round(ok/tot*100)+'%';
   } else { document.getElementById('s-score').textContent='—'; }
   const newCount=us.todayNew.filter(id=>!us.learned.has(id)).length;
-  document.getElementById('learn-subtitle').textContent=`${newCount} new + ${us.todayRev.length} review(s)`;
+  const pend=dayRevPending();
+  document.getElementById('learn-title').textContent=pend?"Review today's words":'Learning';
+  document.getElementById('learn-icon').textContent=pend?'🗓':'📚';
+  document.getElementById('learn-icon').style.background=pend?'rgba(46,204,113,0.15)':'rgba(233,69,96,0.15)';
+  if(pend){ const p=dayRevProgress(); document.getElementById('learn-subtitle').textContent=`Fill in the blank — ${p.done}/${p.total} done`; }
+  else if(us.dayRev&&us.dayRev.date===today()&&us.dayRev.done.length) document.getElementById('learn-subtitle').textContent=`✓ Today's words reviewed · ${newCount} new + ${us.todayRev.length} review(s)`;
+  else document.getElementById('learn-subtitle').textContent=`${newCount} new + ${us.todayRev.length} review(s)`;
+  document.querySelectorAll('.exo-card').forEach(c=>c.classList.toggle('locked',pend));
   const reviewCard=document.getElementById('review-today-card');
   if(ts.length){
     reviewCard.style.display='flex';
@@ -1146,6 +1160,7 @@ function nextLearn(knew){
 
 function showLearnSummary(){
   const pct=Math.round(sc/sq.length*100);
+  const pend=buildDayRev();
   document.getElementById('learn-prog').style.width='100%';
   document.getElementById('learn-cnt').textContent='✓';
   document.getElementById('learn-content').innerHTML=`
@@ -1153,23 +1168,97 @@ function showLearnSummary(){
       <div class="summary-emoji">${pct>=80?'🏆':pct>=50?'👍':'💪'}</div>
       <div class="summary-score">${sc}/${sq.length}</div>
       <div class="summary-lbl">${pct}% success rate</div>
-      <button class="btn btn-primary" onclick="closeOverlay('learn-overlay');renderHome()">Back to home</button>
+      ${pend?`<button class="btn btn-primary" onclick="closeOverlay('learn-overlay');startDayReview()">Review today's words →</button>
+      <button class="btn btn-secondary" style="margin-top:8px" onclick="closeOverlay('learn-overlay');renderHome()">Back to home</button>`
+      :`<button class="btn btn-primary" onclick="closeOverlay('learn-overlay');renderHome()">Back to home</button>`}
     </div>`;
+  renderHome();
+}
+
+// ══════════════════════════════════
+//  REVIEW OF TODAY'S WORDS
+// ══════════════════════════════════
+// Après l'apprentissage, chaque ligne des nouvelles fiches du jour est interrogée en texte à trous
+// (exemple tiré au hasard). Les autres exercices restent verrouillés tant que la file n'est pas vide.
+// Erreur → la ligne revient une fois en fin de file ; seconde erreur → elle ne bloque plus.
+// File conservée si on quitte l'appli ; abandonnée le lendemain.
+let dayRevItems=[];
+function dayRevKey(id,mot){ return id+'|'+mot; }
+function dayRevSplit(key){ const i=key.indexOf('|'); return {id:key.slice(0,i), mot:key.slice(i+1)}; }
+function dayRevMot(key){
+  const k=dayRevSplit(key), e=byId(k.id); if(!e) return null;
+  const m=(e.mots||[]).find(x=>x.mot===k.mot);
+  return m&&(m.exemples||[]).some(ex=>ex.mat&&ex.ex)?{e,m}:null;
+}
+function dayRevPending(){
+  const d=us.dayRev;
+  if(!d||d.date!==today()) return false;
+  d.queue=d.queue.filter(k=>dayRevMot(k));
+  return d.queue.length>0;
+}
+function dayRevProgress(){
+  const d=us.dayRev, left=new Set(d.queue).size;
+  return {done:d.done.length, total:d.done.length+left};
+}
+function buildDayRev(){
+  if(!us.dayRev||us.dayRev.date!==today()) us.dayRev={date:today(),queue:[],done:[],fails:{}};
+  const d=us.dayRev, known=new Set([...d.queue,...d.done]), add=[];
+  us.todayNew.map(byId).filter(Boolean).forEach(e=>{
+    learnableMots(e).forEach(m=>{
+      if(!(m.exemples||[]).some(ex=>ex.mat&&ex.ex)) return;
+      const k=dayRevKey(e.id,m.mot);
+      if(!known.has(k)){ known.add(k); add.push(k); }
+    });
+  });
+  d.queue=[...d.queue,...shuffle(add)];
+  saveState();
+  return dayRevPending();
+}
+function openLearnOrReview(){ if(dayRevPending()) startDayReview(); else openLearn(); }
+function lockedToast(){ toast("First review today's words (Learning card)"); }
+function startDayReview(){
+  if(!dayRevPending()){ renderHome(); return; }
+  dayRevItems=[...us.dayRev.queue];
+  sq=dayRevItems.map(k=>dayRevMot(k).e);
+  si=0; sc=0; sType='dayrev'; sDir='en2fr'; testAnswered=false;
+  currentSessionId='sess_'+Date.now();
+  document.getElementById('test-title').textContent=EXO_LABELS.dayrev;
+  openOverlay('test-overlay');
+  renderTestQ();
+}
+let dayRevRequeued=false;
+function dayRevAnswered(ok){
+  const d=us.dayRev, key=dayRevItems[si]; dayRevRequeued=false;
+  if(!d||!key) return;
+  const i=d.queue.indexOf(key); if(i>=0) d.queue.splice(i,1);
+  if(!ok&&!d.fails[key]){
+    d.fails[key]=1; d.queue.push(key);
+    dayRevItems.push(key); sq.push(sq[si]); dayRevRequeued=true;
+  } else if(!d.done.includes(key)) d.done.push(key);
+}
+function dayRevOverride(){
+  const d=us.dayRev, key=dayRevItems[si];
+  if(!d||!key||!dayRevRequeued) return;
+  dayRevRequeued=false; delete d.fails[key];
+  const qi=d.queue.lastIndexOf(key); if(qi>=0) d.queue.splice(qi,1);
+  const li=dayRevItems.lastIndexOf(key); if(li>si){ dayRevItems.splice(li,1); sq.splice(li,1); }
+  if(!d.done.includes(key)) d.done.push(key);
 }
 
 // ══════════════════════════════════
 //  TEST SESSION
 // ══════════════════════════════════
-const EXO_LABELS={qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms',ant:'↔️ Antonyms'};
+const EXO_LABELS={dayrev:"🗓 Today's words",qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms',ant:'↔️ Antonyms'};
 const REL_EXOS={
   syn:{field:'synonymes',label:'Synonyms',placeholder:'A synonym…'},
   ant:{field:'antonymes',label:'Antonyms',placeholder:'An antonym…'}
 };
-function openDirModal(type){ pendingTestType=type; openOverlay('dir-modal'); }
+function openDirModal(type){ if(dayRevPending()){ lockedToast(); return; } pendingTestType=type; openOverlay('dir-modal'); }
 function closeDirModal(){ closeOverlay('dir-modal'); }
 function startTestFromModal(dir){ closeDirModal(); startTest(pendingTestType,dir); }
 
 function startTest(type,dir){
+  if(dayRevPending()){ lockedToast(); return; }
   const pool=[...new Set([...us.todayNew,...us.todayRev,...shuffle([...us.learned]).slice(0,15)])];
   let entries=pool.map(id=>byId(id)).filter(Boolean);
   if(type==='fill') entries=entries.filter(e=>learnableMots(e).some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex)));
@@ -1200,6 +1289,7 @@ function renderTestQ(){
   if(type==='qcm') renderQCM(e,dir);
   else if(type==='open') renderOpen(e,dir);
   else if(REL_EXOS[type]) renderRel(e,type);
+  else if(type==='dayrev') renderFill(e,(dayRevMot(dayRevItems[si])||{}).m);
   else renderFill(e);
 }
 
@@ -1488,8 +1578,8 @@ function checkAnswer(ans,correct,isSentence){
 }
 
 // ── FILL ──
-function renderFill(e){
-  const motsWithEx=learnableMots(e).filter(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex));
+function renderFill(e,forcedMot){
+  const motsWithEx=forcedMot?[forcedMot]:learnableMots(e).filter(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex));
   if(!motsWithEx.length){nextTest();return;}
   const mot=motsWithEx[Math.floor(Math.random()*motsWithEx.length)];
   const exsWithMat=mot.exemples.filter(ex=>ex.mat&&ex.ex);
@@ -1620,6 +1710,7 @@ function recordResult(ok,userAnswerDisplay){
   us.todayResults = us.todayResults.filter(r=>r.date===today());
   us.todayResults.push(rec);
   lastRecord = rec;
+  if(sType==='dayrev') dayRevAnswered(ok);
   saveState();
 }
 
@@ -1649,6 +1740,7 @@ function overrideToCorrect(btn){
   us.scores[e.id]=(us.scores[e.id]||0)+1;
   if(us.scores[e.id]>=3){us.learned.add(e.id);us.hard.delete(e.id);}
   if(lastRecord && lastRecord.entryId===e.id){ lastRecord.ok=true; lastRecord.overridden=true; }
+  if(sType==='dayrev') dayRevOverride();
   // Update feedback display
   document.getElementById('tfb').innerHTML=`<div class="feedback ok">✓ Overridden as correct!</div>`;
   saveState();
@@ -1662,6 +1754,7 @@ function showTestSummary(){
   document.getElementById('test-cnt').textContent='✓';
   us.sessions.push({id:currentSessionId,date:today(),type:sType,correct:sc,total:sq.length});
   saveState(); renderHome();
+  if(sType==='dayrev'&&!dayRevPending()) setTimeout(()=>toast('✓ All exercises unlocked'),300);
   document.getElementById('test-content').innerHTML=`
     <div class="summary">
       <div class="summary-emoji">${pct>=80?'🏆':pct>=50?'👍':'💪'}</div>
