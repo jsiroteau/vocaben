@@ -807,6 +807,11 @@ function linkedList(str,e){
     return target&&target!==e.id?`<span class="xref" onclick="openLinked('${target}')">${item}</span>`:item;
   }).join(', ');
 }
+// Faux-ami « mot français => équivalent anglais » : renvoi sur la partie anglaise, comme pour les synonymes
+function fauxAmiHTML(str,e){
+  const i=str.indexOf('=>');
+  return i<0?str:`${str.slice(0,i).trim()} => ${linkedList(str.slice(i+2),e)}`;
+}
 // Depuis une fiche : la fiche liée remplace la courante et le retour ramène à la précédente
 const detailTrail=[];
 function openLinked(id){
@@ -831,7 +836,7 @@ function buildMotViewBlock(e,m,mi,context,expanded){
     </div>`;
   if(m.synonymes) html+=`<div class="meta-line"><b>Synonyms:</b> ${linkedList(m.synonymes,e)}</div>`;
   if(m.antonymes) html+=`<div class="meta-line"><b>Antonyms:</b> ${linkedList(m.antonymes,e)}</div>`;
-  if(m.fauxAmi)   html+=`<div class="meta-line faux-ami"><b>⚠ False friend:</b> ${m.fauxAmi}</div>`;
+  if(m.fauxAmi)   html+=`<div class="meta-line faux-ami"><b>⚠ False friend:</b> ${fauxAmiHTML(m.fauxAmi,e)}</div>`;
 
   const allEx=(m.exemples||[]).filter(ex=>ex.ex);
   const exemples=expanded?allEx:allEx.slice(0,1);
