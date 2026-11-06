@@ -1,7 +1,8 @@
 """Passe « anglais et traduction des exemples » (novembre 2026), par lots.
 
     python3 tools/passe_exemples.py lots            crée passes/exemples/lots.json (une fois)
-    python3 tools/passe_exemples.py next [n]        affiche les n prochains lots à traiter (défaut 2)
+    python3 tools/passe_exemples.py next [n]        réserve et affiche les n prochains lots (défaut 2) ;
+                                                    committer et pousser etat.json aussitôt
     python3 tools/passe_exemples.py export <k>      écrit passes/exemples/work/lot_<k>.txt (texte pour le réviseur)
                                                     et lot_<k>.json (lignes d'origine, pour l'application)
     python3 tools/passe_exemples.py apply <k> <corrections.json>
@@ -110,16 +111,30 @@ def apply(k, path):
     B.save()
     etat = load(ETAT, {'faits': {}})
     etat['faits'][str(k)] = {'corrections': done, 'ignorées': len(skipped)}
-    etat['en_cours'] = [x for x in etat.get('en_cours', []) if x != k]
+    enc = etat.get('en_cours', {})
+    etat['en_cours'] = {x: t for x, t in (enc.items() if isinstance(enc, dict) else []) if x != str(k)}
     dump(ETAT, etat)
     print(f'lot {k} : {done} corrections appliquées, {len(skipped)} ignorées')
 
 
 def nxt(n=2):
+    """Réserve les n prochains lots (à committer et pousser aussitôt) ; une réservation expire après 6 h."""
+    import time
     lots, etat = load(LOTS, []), load(ETAT, {'faits': {}})
-    rest = [k for k in range(1, len(lots) + 1) if str(k) not in etat['faits'] and k not in etat.get('en_cours', [])]
-    print(' '.join(map(str, rest[:n])) if rest else 'TERMINÉ')
-    print(f'# {len(lots) - len(rest)}/{len(lots)} lots faits', file=sys.stderr)
+    enc = etat.get('en_cours', {})
+    if isinstance(enc, list):
+        enc = {}
+    now = time.time()
+    enc = {k: t for k, t in enc.items() if now - t < 6 * 3600 and k not in etat['faits']}
+    rest = [k for k in range(1, len(lots) + 1) if str(k) not in etat['faits'] and str(k) not in enc]
+    pick = rest[:n]
+    for k in pick:
+        enc[str(k)] = now
+    etat['en_cours'] = enc
+    dump(ETAT, etat)
+    left = len(lots) - len(etat['faits'])
+    print(' '.join(map(str, pick)) if pick else ('TERMINÉ' if left == 0 else 'RIEN (lots restants déjà réservés)'))
+    print(f'# {len(etat["faits"])}/{len(lots)} lots faits, {len(enc)} réservés', file=sys.stderr)
 
 
 if __name__ == '__main__':
