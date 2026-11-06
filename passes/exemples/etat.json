@@ -115,9 +115,11 @@
   "30": {
    "corrections": 22,
    "ignorées": 0
+  },
+  "28": {
+   "corrections": 28,
+   "ignorées": 0
   }
  },
- "en_cours": {
-  "28": 1793988776.679012
- }
+ "en_cours": {}
 }
