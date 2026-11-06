@@ -249,6 +249,11 @@ def lint(B):
                 nat = [t for t in same if t[NAT] == r[NAT] or 'phrase' in (t[NAT], r[NAT])]
                 if col == SYN and nat and not any(_alts(r[M]) & {k for x in _items(t[SYN]) for k in _alts(x)} for t in nat):
                     w('symétrie', r, s, 'la cible ne renvoie pas')
+        # 4 ter. espaces insécables (Traduction et traductions d'exemples)
+        for txt in [r[T]] + [x[2] for x in getex(r)]:
+            if txt and re.search(r' [:;?!»]|« |«(?=\S)(?!\u00a0)', txt):
+                w('typo', r, '', f'espace insécable manquante : {txt[:60]}')
+                break
         # 4 bis. mot à trouver à la casse exacte de la phrase
         for j, (en, mot, fr) in enumerate(getex(r), 1):
             if mot and en and mot not in en:

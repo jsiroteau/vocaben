@@ -20,7 +20,7 @@ Base VocabEN : vocabulaire anglais pour lire The Economist et des blogs d'idées
 - Ne pas toucher au Mot, aux synonymes, à l'ordre des lignes.
 - Ne jamais supprimer d'exemple.
 - Le mot à trouver doit rester présent tel quel dans la phrase, une seule fois, en mots entiers ; si la phrase change, l'adapter (forme conjuguée exacte, sans article ni mot hors du Mot, avec la particule ou préposition finale quand elle suit directement le verbe).
-- Les mots à trouver ont déjà été alignés sur la casse de la phrase dans toute la base (6 novembre) : inutile de les signaler.
+- Les mots à trouver (casse) et les espaces insécables ont déjà été corrigés automatiquement dans toute la base (6 novembre) : inutile de les signaler ; veiller seulement à les respecter dans les phrases que l'on réécrit.
 - Typographie française : espaces insécables avant « : ; ? ! » et à l'intérieur des guillemets « », apostrophe typographique ou droite comme dans le reste de la phrase.
 
 ## Format de sortie (réviseur)
