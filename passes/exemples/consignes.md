@@ -16,6 +16,7 @@ Base VocabEN : vocabulaire anglais pour lire The Economist et des blogs d'idées
 
 ## Ce qu'il ne faut PAS faire
 - Ne pas réécrire une phrase correcte pour des raisons de goût ; ne pas « améliorer » une traduction juste. En cas de doute, ne rien changer.
+- Attention aux fausses fautes : une hypothèse se traduit à l'imparfait (« even if they wanted to » → « même s'ils le voulaient », correct même après un présent).
 - Ne pas toucher au Mot, aux synonymes, à l'ordre des lignes.
 - Ne jamais supprimer d'exemple.
 - Le mot à trouver doit rester présent tel quel dans la phrase, une seule fois, en mots entiers ; si la phrase change, l'adapter (forme conjuguée exacte, sans article ni mot hors du Mot, avec la particule ou préposition finale quand elle suit directement le verbe).
