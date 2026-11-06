@@ -15,10 +15,15 @@
   "5": {
    "corrections": 13,
    "ignorées": 0
+  },
+  "4": {
+   "corrections": 26,
+   "ignorées": 0
+  },
+  "6": {
+   "corrections": 23,
+   "ignorées": 0
   }
  },
- "en_cours": {
-  "4": 1793987316.5076041,
-  "6": 1793987316.5076041
- }
+ "en_cours": {}
 }
