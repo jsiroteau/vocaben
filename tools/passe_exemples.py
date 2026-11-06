@@ -110,13 +110,14 @@ def apply(k, path):
     B.save()
     etat = load(ETAT, {'faits': {}})
     etat['faits'][str(k)] = {'corrections': done, 'ignorées': len(skipped)}
+    etat['en_cours'] = [x for x in etat.get('en_cours', []) if x != k]
     dump(ETAT, etat)
     print(f'lot {k} : {done} corrections appliquées, {len(skipped)} ignorées')
 
 
 def nxt(n=2):
     lots, etat = load(LOTS, []), load(ETAT, {'faits': {}})
-    rest = [k for k in range(1, len(lots) + 1) if str(k) not in etat['faits']]
+    rest = [k for k in range(1, len(lots) + 1) if str(k) not in etat['faits'] and k not in etat.get('en_cours', [])]
     print(' '.join(map(str, rest[:n])) if rest else 'TERMINÉ')
     print(f'# {len(lots) - len(rest)}/{len(lots)} lots faits', file=sys.stderr)
 
