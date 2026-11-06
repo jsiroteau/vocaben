@@ -249,6 +249,10 @@ def lint(B):
                 nat = [t for t in same if t[NAT] == r[NAT] or 'phrase' in (t[NAT], r[NAT])]
                 if col == SYN and nat and not any(_alts(r[M]) & {k for x in _items(t[SYN]) for k in _alts(x)} for t in nat):
                     w('symétrie', r, s, 'la cible ne renvoie pas')
+        # 4 bis. mot à trouver à la casse exacte de la phrase
+        for j, (en, mot, fr) in enumerate(getex(r), 1):
+            if mot and en and mot not in en:
+                w('casse', r, f'ex {j}', f'mot à trouver « {mot} » absent à la casse exacte')
         # 4. qn/qch dans la Traduction quand le Mot porte sb/sth
         mot, tr = r[M] or '', r[T] or ''
         mot = re.sub(r'\([^()]*\)', '', mot)
