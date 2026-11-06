@@ -1,7 +1,13 @@
 {
- "faits": {},
- "en_cours": [
-  1,
-  2
- ]
+ "faits": {
+  "1": {
+   "corrections": 24,
+   "ignorées": 0
+  },
+  "2": {
+   "corrections": 16,
+   "ignorées": 0
+  }
+ },
+ "en_cours": []
 }
