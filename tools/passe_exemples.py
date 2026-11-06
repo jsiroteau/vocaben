@@ -82,14 +82,19 @@ def apply(k, path):
     B = Base()
     orig = load(os.path.join(WORK, f'lot_{k:02d}.json'), {})
     corr = json.load(open(path, encoding='utf-8'))
+    corr.sort(key=lambda c: 'T' in c)  # Traductions en dernier
+    newT = {c['id']: c['T'] for c in corr if 'T' in c}
     done, skipped = 0, []
     for c in corr:
         o = orig.get(c['id'])
-        r = next((x for x in B.rows if o and x[E] == o['E'] and x[M] == o['M'] and x[T] == o['T']), None)
+        okT = {o['T'], newT.get(c['id'])} if o else set()
+        r = next((x for x in B.rows if o and x[E] == o['E'] and x[M] == o['M'] and x[T] in okT), None)
         if not r:
             skipped.append((c['id'], 'ligne introuvable (modifiée entre-temps ?)'))
             continue
         if 'T' in c:
+            if r[T] == c['T']:
+                continue
             r[T] = c['T']
             done += 1
             continue

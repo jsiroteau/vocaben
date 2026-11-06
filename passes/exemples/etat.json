@@ -39,12 +39,23 @@
   "8": {
    "corrections": 25,
    "ignorées": 0
+  },
+  "11": {
+   "corrections": 19,
+   "ignorées": 0
+  },
+  "12": {
+   "corrections": 18,
+   "ignorées": 0
+  },
+  "13": {
+   "corrections": 17,
+   "ignorées": 0
+  },
+  "14": {
+   "corrections": 12,
+   "ignorées": 0
   }
  },
- "en_cours": {
-  "11": 1793987797.445237,
-  "12": 1793987797.445237,
-  "13": 1793987797.445237,
-  "14": 1793987797.445237
- }
+ "en_cours": {}
 }
