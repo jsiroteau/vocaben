@@ -3,7 +3,8 @@
 Usage en ligne de commande (depuis la racine du dépôt) :
     python3 tools/vocab.py show <entrée> [<entrée>...]   affiche une ou plusieurs fiches
     python3 tools/vocab.py grep <regex>                    lignes dont Mot/Traduction/Synonymes correspondent
-    python3 tools/vocab.py check                           contrôles automatiques
+    python3 tools/vocab.py check                           contrôles automatiques (bloquants)
+    python3 tools/vocab.py lint                            avertissements : défauts probables à revoir (LINT_OK pour les cas admis)
 
 Usage en Python :
     import sys; sys.path.insert(0, 'tools'); from vocab import *
@@ -142,6 +143,147 @@ class Base:
         print(f'{len(self.rows)} lignes enregistrées, contrôle OK')
 
 
+# ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
+# Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
+LINT_OK = {
+    # revus le 6 novembre 2026 : synonyme partiel admis à sens unique
+    ('symétrie', 'to assert oneself', 'to stand up for oneself'), ('symétrie', 'bait', 'a lure'),
+    ('symétrie', 'to quell sth', 'to crush sth'), ('symétrie', 'to bear witness against sb', 'to testify (against sb)'),
+    ('symétrie', 'a longing for sth / a longing to do sth', 'a desire'),
+    # renvoi vers une autre nature admis (mot basique ou même famille)
+    ('nature', 'a concern (for/about/over)', 'a worry'), ('nature', 'patronage', 'support'), ('nature', 'strain', 'pressure'),
+    ('nature', 'a bet', 'a wager'), ('nature', 'a hinge', 'a pivot'), ('nature', 'to match', 'to equal'),
+    ('nature', 'a prop', 'a support'), ('nature', '(a) pursuit', 'a search'), ('nature', 'rotten', 'corrupt'),
+    ('nature', 'to bill', 'to invoice'), ('nature', 'to stabilize (sth)', 'to steady'),
+    ('nature', 'to carry on (about)', 'to make a fuss (about/over)'), ('nature', 'to kick up a fuss', 'to make a fuss (about/over)'),
+    ('nature', 'to make a fuss (about/over sth) / a fuss', 'to kick up a fuss'),
+    ('nature', 'to make a fuss (about/over sth) / a fuss', 'to carry on (about)'),
+    ('GB/US', 'zeal', 'fervour'), ('GB/US', 'to leap (leapt/leaped)', 'to spring'),
+    ('symétrie', 'a rise', 'a raise (US)'),  # a raise porte a pay rise (GB)  # marque d'orthographe, pas de variété lexicale
+}
+# Verbes dont la forme irrégulière est archaïque ou rare (forme régulière usuelle) : formes non exigées
+IRREG_OK = {'abide', 'stave', 'blend', 'bless', 'heave', 'disprove', 'lean', 'chide'}
+BASIC_ZIPF = 4.5      # verbes irréguliers au-delà : jugés basiques, formes non exigées
+
+
+def _split0(s, sep):
+    """Découpe au niveau 0 des parenthèses (comme splitDepth0 de l'appli)."""
+    out, depth, cur, i = [], 0, '', 0
+    while i < len(s):
+        c = s[i]
+        depth += (c == '(') - (c == ')')
+        if depth == 0 and s.startswith(sep, i):
+            out.append(cur); cur = ''; i += len(sep); continue
+        cur += c; i += 1
+    return [x.strip() for x in out + [cur] if x.strip()]
+
+
+def _norm(s):
+    s = re.sub(r"\b(sb's|sb|sth|oneself|one's)\b", ' ', s.lower()).replace('/', ' ')
+    s = re.sub(r'^to\s+', '', ' '.join(s.split()))
+    s = re.sub(r'^(a|an|the)\s+', '', s)
+    return ' '.join(re.sub(r"[.,!?;:'\"()]", '', s).split())
+
+
+def _alts(s):
+    """Clés de lien d'un Mot ou d'un synonyme (reprend linkKeys de l'appli)."""
+    out = set()
+    for alt in [y for x in _split0(s or '', ',') for y in _split0(x, ' / ')]:
+        bare = alt
+        while re.search(r'\([^()]*\)', bare):
+            bare = re.sub(r'\([^()]*\)', '', bare)
+        for v in (re.sub(r'[()]', '', alt), bare):
+            vs = [v]
+            for _ in range(6):
+                nv = []
+                for x in vs:
+                    m = re.search(r'[^\s()/]+(?:/[^\s()/]+)+', x)
+                    nv += [x[:m.start()] + p + x[m.end():] for p in m.group(0).split('/')] if m else [x]
+                vs = nv
+            out |= {_norm(x) for x in vs}
+    out.discard('')
+    return out
+
+
+def _items(cell):
+    return [x for x in _split0(cell or '', ',') if x != '-']
+
+
+def _marker(r):
+    m = re.search(r'\((GB|US)\)', f'{r[M]} {r[T]}')
+    return m.group(1) if m else None
+
+
+def lint(B):
+    idx = {}
+    for r in B.rows:
+        for k in _alts(r[M]):
+            idx.setdefault(k, []).append(r)
+    warn = []
+    for r in B.rows:  # comme l'appli : l'intitulé de la fiche sert aussi de clé
+        for k in _alts(r[E]):
+            if k not in idx:
+                idx[k] = [x for x in B.rows if x[E] == r[E]]
+
+    def w(cat, r, cible, msg):
+        if (cat, r[M], cible) not in LINT_OK:
+            warn.append((cat, f'{r[E]} | {r[M]} → {cible} : {msg}'))
+
+    irr = None
+    for r in B.rows:
+        for col, lab in ((SYN, 'syn'), (ANT, 'ant')):
+            for s in _items(r[col]):
+                tg = [t for k in _alts(s) for t in idx.get(k, []) if t is not r]
+                if not tg:
+                    continue
+                same = [t for t in tg if t[NAT] == r[NAT] or 'phrase' in (t[NAT], r[NAT]) or t[E] == r[E]]
+                # 1. renvoi vers une ligne d'une autre nature (clear adj. → to clear)
+                if not same:
+                    w('nature', r, s, f'{lab} : aucune ligne cible de nature {r[NAT]}')
+                    continue
+                # 2. marque GB/US de la cible non recopiée
+                mk = {_marker(t) for t in same}
+                if len(mk) == 1 and None not in mk and f'({mk.pop()})' not in s and not _marker(r):
+                    w('GB/US', r, s, f'{lab} : la cible porte une marque de variété')
+                # 3. symétrie des synonymes
+                nat = [t for t in same if t[NAT] == r[NAT] or 'phrase' in (t[NAT], r[NAT])]
+                if col == SYN and nat and not any(_alts(r[M]) & {k for x in _items(t[SYN]) for k in _alts(x)} for t in nat):
+                    w('symétrie', r, s, 'la cible ne renvoie pas')
+        # 4. qn/qch dans la Traduction quand le Mot porte sb/sth
+        mot, tr = r[M] or '', r[T] or ''
+        mot = re.sub(r'\([^()]*\)', '', mot)
+        if ' / ' in mot:
+            mot = ''
+        if re.search(r'\bsb\b', mot) and 'qn' not in tr and '(' not in tr:
+            w('qn/qch', r, '', 'Mot en sb, Traduction sans qn ni complément entre parenthèses')
+        if re.search(r'\bsth\b', mot) and 'qch' not in tr and '(' not in tr:
+            w('qn/qch', r, '', 'Mot en sth, Traduction sans qch ni complément entre parenthèses')
+    # 5. formes irrégulières manquantes (verbes non basiques, première ligne du verbe dans la fiche)
+    try:
+        from lemminflect import getAllInflections
+    except ImportError:
+        import subprocess
+        subprocess.run([sys.executable, '-m', 'pip', 'install', '-q', 'lemminflect', '--break-system-packages'])
+        from lemminflect import getAllInflections
+    seen = set()
+    for r in B.rows:
+        m = re.match(r'to (\w+)', r[M] or '')
+        if r[NAT] != 'verb' or not m or m.group(1) == 'be':
+            continue
+        v = m.group(1)
+        if (r[E], v) in seen:
+            continue
+        seen.add((r[E], v))
+        if v in IRREG_OK or re.search(r'\((?!sth|sb|on\b|up\b|out\b|for\b|with\b|to\b|doing|at\b|against|from|in\b|into|of\b|over\b|about\b)[a-z-]+[/, )]', r[M]):
+            continue
+        inf = getAllInflections(v, upos='VERB')
+        forms = set(inf.get('VBD', ())) | set(inf.get('VBN', ()))
+        regular = {v + 'ed', v + 'd', v[:-1] + 'ied', v + v[-1] + 'ed', v + 'ked'}
+        if forms - regular and zipf(v) < BASIC_ZIPF:
+            w('formes', r, '', f"verbe irrégulier sans formes ({', '.join(sorted(forms - regular))})")
+    return warn
+
+
 def show(rows):
     for r in rows:
         flags = ' [See also]' if r[TYPE] else ''
@@ -163,5 +305,14 @@ if __name__ == '__main__':
     elif cmd == 'check':
         iss = B.check()
         print('\n'.join(iss) if iss else f'{len(B.rows)} lignes, contrôle OK')
+    elif cmd == 'lint':
+        ws = lint(B)
+        cats = {}
+        for c, msg in ws:
+            cats.setdefault(c, []).append(msg)
+        for c, l in cats.items():
+            print(f'## {c} ({len(l)})')
+            print('\n'.join('  ' + x for x in l))
+        print(f'{len(ws)} avertissement(s)')
     else:
         print(__doc__)
