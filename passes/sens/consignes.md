@@ -22,7 +22,7 @@ Ajouter une ligne seulement pour un sens **courant dans la presse économique et
 - 2 à 5 exemples de niveau presse (The Economist), situations claires sans contexte, sujets variés, traduction française idiomatique reprenant un équivalent de la Traduction ; unités anglo-saxonnes converties dans la traduction ; espaces insécables (U+00A0) avant : ; ? ! et à l'intérieur des guillemets « ».
 - Mot à trouver : présent tel quel dans la phrase, une seule fois, en mots entiers, sans article ni mot hors du Mot ; avec la particule ou préposition finale si elle suit directement le verbe ; si un complément s'intercale, seulement la partie qui précède (en général le verbe) ; majuscule si la phrase commence par lui.
 - `zipf_of` : le mot distinctif à sa forme de base (« shift »), pour le calcul de fréquence.
-- `after` : la ligne après laquelle insérer — les sens proches restent côte à côte (le sens propre avant les sens figurés ; jamais une expression avant le mot seul ; jamais après les See also, sauf pour un See also).
+- `after` (ou `before`) : la ligne après (ou avant) laquelle insérer ; une scission dont la nouvelle ligne porte le sens propre l'insère **avant** la ligne d'origine — les sens proches restent côte à côte (le sens propre avant les sens figurés ; jamais une expression avant le mot seul ; jamais après les See also, sauf pour un See also).
 - `assoc` : true seulement si la ligne d'origine est un See also.
 
 ## Ce qu'il ne faut PAS faire

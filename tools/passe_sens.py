@@ -8,7 +8,7 @@ Opérations (liste JSON), appliquées dans cet ordre : ex, new, move, T.
     {"op": "ex", "id": "r12", "ex": 2, "en": "...", "mot": "...", "fr": "...", "motif": "..."}   remplacer un exemple
     {"op": "new", "nid": "n1", "after": "r12", "M": "...", "NAT": "noun", "T": "...",
      "syn": "...", "ant": "...", "zipf_of": "mot", "assoc": false,
-     "ex": [["en", "mot", "fr"], ...], "motif": "..."}                                       nouvelle ligne (2 à 5 exemples)
+     "ex": [["en", "mot", "fr"], ...], "motif": "..."}         nouvelle ligne (2 à 5 exemples) ; "before": "r12" au lieu de "after" pour l'insérer avant
     {"op": "move", "id": "r12", "en": "<phrase anglaise exacte de l'exemple>", "to": "r13" | "n1", "motif": "..."}
     {"op": "T", "id": "r12", "T": "...", "motif": "..."}                                      Traduction de la ligne
 """
@@ -59,6 +59,8 @@ def export(k):
 
 
 def apply(k, path):
+    if str(k) in load(ETAT, {'faits': {}})['faits']:
+        sys.exit(f'lot {k} déjà appliqué : refus (une seconde application dupliquerait les lignes nouvelles)')
     B = Base()
     orig = load(os.path.join(WORK, f'lot_{k:02d}.json'), {})
     ops = json.load(open(path, encoding='utf-8'))
@@ -70,7 +72,7 @@ def apply(k, path):
         return next((x for x in B.rows if o and x[E] == o['E'] and x[M] == o['M'] and x[T] == o['T']), None), o
 
     rows, done, skipped = {}, 0, []
-    for rid in {c.get('id') for c in ops} | {c.get('after') for c in ops} | {c.get('to') for c in ops}:
+    for rid in {c.get(f) for c in ops for f in ('id', 'after', 'before', 'to')}:
         if rid and rid in orig:
             rows[rid] = find(rid)[0]
     for c in ops:
@@ -88,13 +90,16 @@ def apply(k, path):
                 ex[j] = (en, mot, fr)
                 setex(r, ex)
             elif c['op'] == 'new':
-                ref = rows[c['after']]
+                ref = rows[c.get('after') or c['before']]
                 exs = [tuple(x) for x in c['ex']]
-                if not 2 <= len(exs) <= 5 or any(m not in e for e, m, _ in exs):
-                    raise ValueError('nouvelle ligne : 2 à 5 exemples, mot à trouver présent')
+                if not 1 <= len(exs) <= 5 or any(m not in e for e, m, _ in exs):
+                    raise ValueError('nouvelle ligne : 1 à 5 exemples (2 au moins avec les move), mot à trouver présent')
                 nr = B.row(ref[E], c['M'], c['NAT'], c['T'], syn=c.get('syn'), ant=c.get('ant'),
                            ex=exs, zipf_of=c.get('zipf_of'), assoc=c.get('assoc', False))
-                B.insert_after(ref, nr)
+                if c.get('before'):
+                    B.rows.insert(B.rows.index(ref), nr)
+                else:
+                    B.insert_after(ref, nr)
                 rows[c['nid']] = nr
             elif c['op'] == 'move':
                 src, dst = rows[c['id']], rows[c['to']]
