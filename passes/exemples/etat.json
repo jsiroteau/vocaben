@@ -71,12 +71,23 @@
   "18": {
    "corrections": 21,
    "ignorées": 0
+  },
+  "19": {
+   "corrections": 9,
+   "ignorées": 0
+  },
+  "20": {
+   "corrections": 13,
+   "ignorées": 0
+  },
+  "21": {
+   "corrections": 10,
+   "ignorées": 0
+  },
+  "22": {
+   "corrections": 16,
+   "ignorées": 0
   }
  },
- "en_cours": {
-  "19": 1793988405.801394,
-  "20": 1793988405.801394,
-  "21": 1793988405.801394,
-  "22": 1793988405.801394
- }
+ "en_cours": {}
 }
