@@ -3,7 +3,7 @@
 Usage en ligne de commande (depuis la racine du dépôt) :
     python3 tools/vocab.py show <entrée> [<entrée>...]   affiche une ou plusieurs fiches
     python3 tools/vocab.py grep <regex>                    lignes dont Mot/Traduction/Synonymes correspondent
-    python3 tools/vocab.py check                           contrôles automatiques (bloquants)
+    python3 tools/vocab.py check                           contrôles automatiques (bloquants, dont mot à trouver en mot entier)
     python3 tools/vocab.py lint                            avertissements : défauts probables à revoir (LINT_OK pour les cas admis)
 
 Usage en Python :
@@ -116,6 +116,11 @@ class Base:
                     issues.append(f'mot à trouver absent : {r[M]} | {a} | {m}')
                 if not t:
                     issues.append(f'traduction d\'exemple manquante : {r[M]} | {a}')
+                # l'appli remplace la première occurrence (sous-chaîne) : elle doit être un mot entier
+                i = a.lower().find(m.lower()) if m else -1
+                if i >= 0 and not m.startswith('-') and (
+                        (i > 0 and a[i - 1].isalpha()) or (i + len(m) < len(a) and a[i + len(m)].isalpha())):
+                    issues.append(f'mot à trouver d\'abord trouvé dans un autre mot : {r[M]} | {a} | {m}')
             if r[T] and ';' in r[T]:
                 issues.append(f'« ; » dans Traduction : {r[M]}')
             k = (r[E], r[M], r[T])
