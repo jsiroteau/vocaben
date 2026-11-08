@@ -185,7 +185,7 @@
   .result-item .r-q{font-size:0.9rem;margin-bottom:6px}
   .result-item .r-ans{font-size:0.82rem;color:var(--muted)}
   .result-item .r-ans b{color:var(--text)}
-  .result-item .r-correct{font-size:0.82rem;color:var(--success);margin-top:2px}
+  .result-item .r-correct{font-size:0.9rem;color:var(--success);margin-bottom:2px}
   .result-item .r-correct b{color:var(--success)}
   .session-pick{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;margin-bottom:10px;cursor:pointer}
   .session-pick h3{font-size:0.9rem;font-weight:600}
@@ -235,14 +235,14 @@
     <div class="info"><h3>Today's results</h3><p id="review-today-sub">Review your answers</p></div>
     <div class="arrow">›</div>
   </div>
-  <div class="action-card" id="learn-card" onclick="openLearnOrReview()">
-    <div class="icon" id="learn-icon" style="background:rgba(233,69,96,0.15)">📚</div>
-    <div class="info"><h3 id="learn-title">Learning</h3><p id="learn-subtitle">—</p></div>
-    <div class="arrow">›</div>
-  </div>
   <div class="action-card" id="srs-card" onclick="startSrsReview()">
     <div class="icon" style="background:rgba(100,180,255,0.15)">🔁</div>
     <div class="info"><h3>Reviews</h3><p id="srs-subtitle">—</p></div>
+    <div class="arrow">›</div>
+  </div>
+  <div class="action-card" id="learn-card" onclick="openLearnOrReview()">
+    <div class="icon" id="learn-icon" style="background:rgba(233,69,96,0.15)">📚</div>
+    <div class="info"><h3 id="learn-title">Learning</h3><p id="learn-subtitle">—</p></div>
     <div class="arrow">›</div>
   </div>
   <div class="action-card exo-card" onclick="openDirModal('qcm')">
@@ -528,7 +528,7 @@ function loadState(){
       toFix:   migrateSet(s.toFix),
       scores:  migrateObj(s.scores),
       results: migrateObj(s.results),
-      streak: s.streak||0, lastDate: s.lastDate||'',
+      streak: s.streak||0, lastDate: s.lastDate||'', lastActive: s.lastActive||'',
       todayNew: (s.todayNew||[]).map(id => idMap[String(id)] || String(id)),
       sessions: s.sessions||[],
       todayResults: s.todayResults||[],
@@ -536,7 +536,7 @@ function loadState(){
       srs: s.srs||null, notes: s.notes||{}, revDay: s.revDay||null, srsLog: s.srsLog||{}, newPaused: !!s.newPaused
     };
   } else {
-    us = { learned:new Set(), hard:new Set(), toFix:new Set(), scores:{}, results:{}, streak:0, lastDate:'', todayNew:[], sessions:[], todayResults:[], dayRev:null,
+    us = { learned:new Set(), hard:new Set(), toFix:new Set(), scores:{}, results:{}, streak:0, lastDate:'', lastActive:'', todayNew:[], sessions:[], todayResults:[], dayRev:null,
            srs:{}, notes:{}, revDay:null, srsLog:{}, newPaused:false };
   }
   // Keep only today's detailed result logs
@@ -556,10 +556,13 @@ function loadState(){
   if(!us.srs){ us.srs={}; srsMigrate(); saveState(); }
 
   const t = today();
+  // Passage à la série fondée sur l'activité (ancienne série : jours d'ouverture) : on la reprend telle quelle
+  if(us.lastActive===undefined||us.lastActive===''){
+    if(us.lastDate===t&&us.streak>0) us.streak--;
+    us.lastActive=(us.lastDate===t||us.lastDate===addDays(t,-1))&&us.streak>0?addDays(t,-1):'';
+  }
+  if(us.lastActive<addDays(t,-1)) us.streak=0;
   if(us.lastDate !== t){
-    const prev = new Date(); prev.setDate(prev.getDate()-1);
-    if(us.lastDate === prev.toISOString().slice(0,10)) us.streak++;
-    else if(!us.lastDate){} else us.streak=0;
     us.lastDate = t;
     buildPlan();
     saveState();
@@ -571,7 +574,7 @@ function saveState(){
     learned:[...us.learned], hard:[...us.hard],
     toFix:[...us.toFix],
     scores:us.scores, results:us.results,
-    streak:us.streak, lastDate:us.lastDate,
+    streak:us.streak, lastDate:us.lastDate, lastActive:us.lastActive,
     todayNew:us.todayNew, sessions:us.sessions,
     todayResults:us.todayResults,
     dayRev:us.dayRev,
@@ -848,12 +851,6 @@ function openLinked(id){
 function openDetailFromSession(id){ openDetail(id); }
 
 // Build a mot block for read-only view
-function fmtDue(d){
-  const n=daysBetween(today(),d);
-  if(n<=0) return 'today'; if(n===1) return 'tomorrow';
-  const x=new Date(d+'T12:00:00Z');
-  return `in ${n} days (${x.getUTCDate()} ${['Jan.','Feb.','Mar.','Apr.','May','Jun.','Jul.','Aug.','Sep.','Oct.','Nov.','Dec.'][x.getUTCMonth()]})`;
-}
 function buildMotViewBlock(e,m,mi,context,expanded){
   const uid=`${context}-${e.id}-${mi}`;
   const tts=cfg.ttsEnabled!==false;
@@ -869,8 +866,6 @@ function buildMotViewBlock(e,m,mi,context,expanded){
   if(m.fauxAmi)   html+=`<div class="meta-line faux-ami"><b>⚠ False friend:</b> ${fauxAmiHTML(m.fauxAmi,e)}</div>`;
   const key=lineKey(e,m), note=us.notes[key];
   if(note&&context!=='fb') html+=`<div class="meta-line note-line">📝 ${esc(note)}</div>`;
-  const st=us.srs[key];
-  if(st&&context==='detail') html+=`<div class="meta-line srs-line">🔁 Next review: ${fmtDue(st.due)}${st.lapses>=SRS_LEECH?' · <span style="color:var(--accent)">⚠ keeps slipping</span>':''}</div>`;
 
   const allEx=(m.exemples||[]).filter(ex=>ex.ex);
   const exemples=expanded?allEx:allEx.slice(0,1);
@@ -1191,7 +1186,7 @@ function tryNextLearn(knew){ nextLearn(knew); }
 
 function nextLearn(knew){
   const e=sq[si];
-  us.learned.add(e.id);
+  us.learned.add(e.id); markActive();
   if(knew){us.hard.delete(e.id);us.scores[e.id]=(us.scores[e.id]||0)+1;sc++;}
   else{us.hard.add(e.id);us.scores[e.id]=(us.scores[e.id]||0)-1;}
   saveState(); si++; renderLearnCard();
@@ -1293,6 +1288,14 @@ function queueOverride(d,items){
   const qi=d.queue.lastIndexOf(key); if(qi>=0) d.queue.splice(qi,1);
   const li=items.lastIndexOf(key); if(li>si){ items.splice(li,1); sq.splice(li,1); }
   if(!d.done.includes(key)) d.done.push(key);
+}
+
+// Série : un jour compte s'il apporte une nouvelle fiche apprise ou les révisions du jour terminées
+function markActive(){
+  const t=today();
+  if(us.lastActive===t) return;
+  us.streak=us.lastActive===addDays(t,-1)?us.streak+1:1;
+  us.lastActive=t;
 }
 
 // ══════════════════════════════════
@@ -1897,7 +1900,7 @@ function recordResult(ok,userAnswerDisplay){
   keys.forEach((k,i)=>{ const o=keyOk?keyOk[i]:ok; if(full||!o) srsUpdate(k,o); });
   if(sType==='srs') srsLog(ok);
   if(sType==='dayrev') queueAnswered(us.dayRev,dayRevItems,ok);
-  if(sType==='srs') queueAnswered(us.revDay,srsItems,ok);
+  if(sType==='srs'){ queueAnswered(us.revDay,srsItems,ok); if(!us.revDay.queue.length) markActive(); }
   saveState();
 }
 
@@ -1935,7 +1938,7 @@ function overrideToCorrect(btn){
   }
   if(sType==='srs'){ const l=us.srsLog[today()]; if(l) l[0]++; }
   if(sType==='dayrev') queueOverride(us.dayRev,dayRevItems);
-  if(sType==='srs') queueOverride(us.revDay,srsItems);
+  if(sType==='srs'){ queueOverride(us.revDay,srsItems); if(!us.revDay.queue.length) markActive(); }
   saveState();
   // Update feedback display
   document.getElementById('tfb').innerHTML=`<div class="feedback ok">✓ Overridden as correct!</div>`+afterAnswerHTML(true);
@@ -2034,8 +2037,8 @@ function resultItemHTML(r){
     <div class="r-head"><h3>${esc(r.entree)}</h3><span class="r-status" style="color:${r.ok?'var(--success)':'var(--danger)'}">${r.ok?'✓':'✗'}${r.overridden?' (overridden)':''}</span></div>
     <div class="r-label">${esc(r.label)}</div>
     <div class="r-q">${esc(r.question)}</div>
-    <div class="r-ans">Your answer: <b>${esc(r.userAnswer)||'—'}</b></div>
-    ${!r.ok?`<div class="r-correct">Correct: <b>${esc(r.correct)}</b></div>`:''}
+    ${r.ok?`<div class="r-ans">Your answer: <b>${esc(r.userAnswer)||'—'}</b></div>`
+          :`<div class="r-correct">Correct: <b>${esc(r.correct)}</b></div><div class="r-ans">Your answer: ${esc(r.userAnswer)||'—'}</div>`}
     <button class="see-fiche-btn" style="margin-top:8px" onclick="openDetailFromSession('${r.entryId}')">📖 See entry</button>
   </div>`;
 }
@@ -2136,6 +2139,8 @@ function exportXlsx(){
     key:'streak',       value: us.streak
   },{
     key:'lastDate',     value: us.lastDate
+  },{
+    key:'lastActive',   value: us.lastActive
   },{
     key:'srsLog',       value: JSON.stringify(us.srsLog)
   }];
@@ -2280,6 +2285,7 @@ function importXlsx(input){
             const v=r['value'];
             if(k==='streak')   us.streak=Number(v)||0;
             if(k==='lastDate') us.lastDate=(v||'').toString().trim();
+            if(k==='lastActive') us.lastActive=(v||'').toString().trim();
             if(k==='srsLog'){ try{ us.srsLog=JSON.parse(v)||{}; }catch(e){} }
             if(k.startsWith('session_')){
               try{ us.sessions.push(JSON.parse(v)); }catch(e){}
