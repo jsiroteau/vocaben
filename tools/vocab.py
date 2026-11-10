@@ -260,6 +260,12 @@ def lint(B):
             if txt and re.search(r' [:;?!»]|« |«(?=\S)(?!\u00a0)', txt):
                 w('typo', r, '', f'espace insécable manquante : {txt[:60]}')
                 break
+        # 4 quater. ligne marquée (GB)/(US) : la marque termine la traduction de chaque exemple
+        mks = set(re.findall(r'\((GB|US)\)', f'{r[M]} {r[T]}'))
+        if len(mks) == 1:
+            mk = mks.pop()
+            if any(not (fr or '').rstrip().endswith(f'({mk})') for _, _, fr in getex(r)):
+                w('GB/US', r, '', f'traduction d\'exemple sans la marque ({mk}) finale')
         # 4 bis. mot à trouver à la casse exacte de la phrase
         for j, (en, mot, fr) in enumerate(getex(r), 1):
             if mot and en and mot not in en:
