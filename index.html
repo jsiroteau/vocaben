@@ -615,13 +615,21 @@ function learnableMots(e){
   return filtered.length ? filtered : base;
 }
 
-// Nouvelles fiches du jour, suspendues tant que les révisions échues dépassent le plafond quotidien
+// Nouvelles fiches du jour, suspendues quand les révisions échues dépassent le plafond quotidien,
+// jusqu'à ce que les révisions du jour soient terminées (resumeNew)
 function buildPlan(){
   us.todayNew = [];
   us.newPaused = srsDueList().length > cfg.revPerDay;
-  if(us.newPaused) return;
+  if(!us.newPaused) pickNew();
+}
+function pickNew(){
   const notLearned = vocab.filter(e=>!us.learned.has(e.id)&&matchesFreqFilter(e));
   us.todayNew = shuffle(notLearned).slice(0,cfg.newPerDay).map(e=>e.id);
+}
+function resumeNew(){
+  if(!us.newPaused||srsPending()) return false;
+  us.newPaused=false; pickNew(); saveState();
+  return true;
 }
 
 function shuffle(a){ const b=[...a]; for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];} return b; }
@@ -720,6 +728,7 @@ function renderHome(){
     const tot=ts.reduce((a,b)=>a+b.total,0), ok=ts.reduce((a,b)=>a+b.correct,0);
     document.getElementById('s-score').textContent=Math.round(ok/tot*100)+'%';
   } else { document.getElementById('s-score').textContent='—'; }
+  if(resumeNew()) setTimeout(()=>toast('✓ Learning unlocked'),300);
   const newCount=us.todayNew.filter(id=>!us.learned.has(id)).length;
   const pend=dayRevPending();
   document.getElementById('learn-title').textContent=pend?"Review today's words":'Learning';
@@ -727,7 +736,7 @@ function renderHome(){
   document.getElementById('learn-icon').style.background=pend?'rgba(46,204,113,0.15)':'rgba(233,69,96,0.15)';
   const ls=document.getElementById('learn-subtitle');
   if(pend){ const p=dayRevProgress(); ls.textContent=`Fill in the blank — ${p.done}/${p.total} done`; }
-  else if(us.newPaused) ls.textContent='New entries paused: reviews come first';
+  else if(us.newPaused) ls.textContent="Finish today's reviews first";
   else if(us.dayRev&&us.dayRev.date===today()&&us.dayRev.done.length) ls.textContent=`✓ Today's words reviewed${newCount?` · ${newCount} new left`:''}`;
   else ls.textContent=newCount?`${newCount} new entr${newCount>1?'ies':'y'}`:'✓ No new entries left today';
   const left=srsPending(), rd=us.revDay, ss=document.getElementById('srs-subtitle');
@@ -1134,7 +1143,7 @@ function saveNew(){
 // ══════════════════════════════════
 function openLearn(){
   const entries=us.todayNew.filter(id=>!us.learned.has(id)).map(byId).filter(Boolean);
-  if(!entries.length){toast(us.newPaused?'New entries paused: reviews are behind':'No new entries left today');return;}
+  if(!entries.length){toast(us.newPaused?"Finish today's reviews first":'No new entries left today');return;}
   sq=entries; si=0; sc=0;
   openOverlay('learn-overlay');
   renderLearnCard();
