@@ -260,6 +260,13 @@ def lint(B):
             if txt and re.search(r' [:;?!»]|« |«(?=\S)(?!\u00a0)', txt):
                 w('typo', r, '', f'espace insécable manquante : {txt[:60]}')
                 break
+        # 4 quinquies. variantes GB/US lexicales sur une même ligne (seules les variantes d'orthographe y restent)
+        vs = [v for v in _split0(r[M] or '', ' / ') if re.search(r'\((GB|US)\)', v)]
+        if len({re.search(r'\((GB|US)\)', v).group(1) for v in vs}) > 1:
+            import difflib
+            a, b = (re.sub(r'\s*\((GB|US)\)', '', v) for v in vs[:2])
+            if difflib.SequenceMatcher(None, a, b).ratio() < 0.7:
+                w('GB/US', r, '', 'variantes GB et US sur une même ligne : une ligne par variante')
         # 4 quater. ligne marquée (GB)/(US) : la marque termine la traduction de chaque exemple
         mks = set(re.findall(r'\((GB|US)\)', f'{r[M]} {r[T]}'))
         if len(mks) == 1:
