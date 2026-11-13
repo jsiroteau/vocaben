@@ -202,7 +202,10 @@
   .speakable::after{content:'🔊';font-size:0.7em;margin-left:5px;opacity:0.7}
   .speakable:active{opacity:0.6}
   .fb-line{margin-top:12px}
-  .note-line{color:var(--gold)}
+  .note-line{color:var(--gold);cursor:pointer}
+  .note-line::after{content:' ✎';opacity:0.6}
+  .note-btn{margin-left:auto;background:none;border:none;font-size:0.85rem;opacity:0.45;cursor:pointer;padding:0 2px}
+  .note-slot .note-box{margin:8px 0 10px}
   .note-link{background:none;border:none;color:var(--muted);font-size:0.82rem;padding:10px 0 0;cursor:pointer;text-decoration:underline}
   .note-box{margin-top:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px}
   .note-box textarea{width:100%;box-sizing:border-box;background:transparent;color:var(--text);border:1px solid var(--border);border-radius:8px;padding:8px;font:inherit;font-size:0.88rem;resize:vertical;margin-bottom:8px}
@@ -869,12 +872,12 @@ function buildMotViewBlock(e,m,mi,context,expanded){
       <span class="mot-en${spk(m.mot)}>${m.mot}</span>
       <span class="mot-fr">${m.traduction}</span>
       ${m.freq?`<span class="freq-badge freq-${m.freq}" title="${m.zipf?'Zipf '+m.zipf:''}">Freq ${m.freq}</span>`:''}
+      ${context!=='fb'&&!us.notes[lineKey(e,m)]?`<button class="note-btn" title="Add a personal note" onclick="openNoteBox(this,${noteRef(lineKey(e,m))})">📝</button>`:''}
     </div>`;
   if(m.synonymes) html+=`<div class="meta-line"><b>Synonyms:</b> ${linkedList(m.synonymes,e)}</div>`;
   if(m.antonymes) html+=`<div class="meta-line"><b>Antonyms:</b> ${linkedList(m.antonymes,e)}</div>`;
   if(m.fauxAmi)   html+=`<div class="meta-line faux-ami"><b>⚠ False friend:</b> ${fauxAmiHTML(m.fauxAmi,e)}</div>`;
-  const key=lineKey(e,m), note=us.notes[key];
-  if(note&&context!=='fb') html+=`<div class="meta-line note-line">📝 ${esc(note)}</div>`;
+  if(context!=='fb') html+=`<div class="note-slot">${noteLineHTML(lineKey(e,m))}</div>`;
 
   const allEx=(m.exemples||[]).filter(ex=>ex.ex);
   const exemples=expanded?allEx:allEx.slice(0,1);
@@ -1316,7 +1319,7 @@ function markActive(){
 // Une ligne n'avance qu'une fois par jour. Tests libres : seuls les échecs modifient le calendrier.
 // Révisions du jour : lignes échues (sans état = échues), les plus anciennes d'abord, plafond cfg.revPerDay.
 const SRS_LEECH=4;
-let srsItems=[], srsPrev=null, fbKeys=[];
+let srsItems=[], srsPrev=null;
 function addDays(d,n){ const x=new Date(d+'T12:00:00Z'); x.setUTCDate(x.getUTCDate()+n); return x.toISOString().slice(0,10); }
 function daysBetween(a,b){ return Math.round((new Date(b+'T12:00:00Z')-new Date(a+'T12:00:00Z'))/864e5); }
 function srsKeysOf(e){ return learnableMots(e).map(m=>lineKey(e,m)); }
@@ -1407,28 +1410,54 @@ function srsRetention(){
 
 // ── Après la réponse : ligne complète en cas d'erreur, note personnelle ──
 function afterAnswerHTML(ok){
-  fbKeys=((qCtx&&qCtx.keys)||[]).filter(k=>keyLine(k));
-  return fbKeys.map((k,i)=>{
-    const x=keyLine(k), s=us.srs[k], leech=!!(s&&s.lapses>=SRS_LEECH);
+  const keys=((qCtx&&qCtx.keys)||[]).filter(k=>keyLine(k));
+  return keys.map(k=>{
+    const x=keyLine(k), s=us.srs[k], leech=!!(s&&s.lapses>=SRS_LEECH), r=noteRef(k);
     let h=ok?'':`<div class="fb-line">${buildMotViewBlock(x.e,x.m,x.e.mots.indexOf(x.m),'fb',true)}</div>`;
-    h+=(us.notes[k]||leech)?noteBoxHTML(i,leech):`<button class="note-link" onclick="openNoteBox(this,${i})">📝 Add a personal note${fbKeys.length>1?' — '+esc(x.m.traduction):''}</button>`;
+    h+=(us.notes[k]||leech)?noteBoxHTML(r,leech,false):`<button class="note-link" onclick="openNoteBox(this,${r})">📝 Add a personal note${keys.length>1?' — '+esc(x.m.traduction):''}</button>`;
     return h;
   }).join('');
 }
-function noteBoxHTML(i,leech){
-  const k=fbKeys[i];
+
+// ── Note personnelle d'une ligne : modifiable depuis la fiche (📝 ou clic sur la note) et après chaque réponse ──
+// Les clés de ligne passent par un indice : jamais de clé (apostrophes, guillemets) dans un attribut onclick
+const noteRefs=[];
+function noteRef(k){ let i=noteRefs.indexOf(k); if(i<0){ noteRefs.push(k); i=noteRefs.length-1; } return i; }
+function noteLineHTML(k){
+  const n=us.notes[k];
+  return n?`<div class="meta-line note-line" title="Edit note" onclick="openNoteBox(this,${noteRef(k)})">📝 ${esc(n)}</div>`:'';
+}
+// inSlot : éditeur ouvert dans une fiche (Cancel possible, la note réapparaît après l'enregistrement)
+function noteBoxHTML(r,leech,inSlot){
+  const k=noteRefs[r];
   return `<div class="note-box">
     ${leech?'<div class="note-leech">⚠ This word keeps slipping. A personal note can help: a mnemonic, the etymology, a sentence of your own.</div>':''}
-    <textarea id="note-ta-${i}" rows="2" placeholder="Mnemonic, etymology, your own sentence…">${esc(us.notes[k]||'')}</textarea>
-    <button class="btn btn-secondary btn-sm" onclick="saveNote(${i})">Save note</button>
+    <textarea rows="2" placeholder="Mnemonic, etymology, your own sentence…">${esc(us.notes[k]||'')}</textarea>
+    <button class="btn btn-secondary btn-sm" onclick="saveNote(this,${r})">Save note</button>
+    ${inSlot?`<button class="btn btn-secondary btn-sm" onclick="closeNoteBox(this,${r})">Cancel</button>`:''}
   </div>`;
 }
-function openNoteBox(btn,i){ btn.outerHTML=noteBoxHTML(i,false); const ta=document.getElementById('note-ta-'+i); if(ta) ta.focus(); }
-function saveNote(i){
-  const k=fbKeys[i], ta=document.getElementById('note-ta-'+i); if(!k||!ta) return;
+function openNoteBox(el,r){
+  const block=el.closest('.mot-block'), slot=block&&block.querySelector('.note-slot');
+  let box;
+  if(slot){ slot.innerHTML=noteBoxHTML(r,false,true); box=slot; }
+  else { el.insertAdjacentHTML('afterend',noteBoxHTML(r,false,false)); box=el.nextElementSibling; el.remove(); }
+  const ta=box.querySelector('textarea'); if(ta){ ta.focus(); ta.setSelectionRange(ta.value.length,ta.value.length); }
+}
+// Fermeture dans une fiche : note affichée, bouton 📝 de l'en-tête selon qu'une note existe
+function closeNoteBox(el,r){
+  const k=noteRefs[r], block=el.closest('.mot-block'), slot=el.closest('.note-slot');
+  if(slot) slot.innerHTML=noteLineHTML(k);
+  const btn=block&&block.querySelector('.note-btn');
+  if(us.notes[k]){ if(btn) btn.remove(); }
+  else if(block&&!btn){ const hd=block.querySelector('.mot-header'); if(hd) hd.insertAdjacentHTML('beforeend',`<button class="note-btn" title="Add a personal note" onclick="openNoteBox(this,${r})">📝</button>`); }
+}
+function saveNote(el,r){
+  const k=noteRefs[r], ta=el.closest('.note-box').querySelector('textarea'); if(!k||!ta) return;
   const v=ta.value.trim();
   if(v) us.notes[k]=v; else delete us.notes[k];
   saveState(); toast(v?'✓ Note saved':'Note removed');
+  if(el.closest('.note-slot')) closeNoteBox(el,r);
 }
 
 // ══════════════════════════════════
