@@ -122,3 +122,48 @@ Corrigé d'office : a sketch retiré de an outline « silhouette, contour » (cr
 - Lot 9 | the taxman | the tax collector | le percepteur (une personne), pas le fisc.
 - Lot 9 | tight-fisted | cheap | en épithète on comprend « bon marché » (convient sur la ligne stingy).
 - Lot 9 | alluring | tantalizing | nuance d'inaccessible ; jamais retenu sur la ligne alluring.
+
+## Lot 10 (14 novembre 2026)
+- to subside / to blow over : se dit d'une tempête ou d'un scandale qui passe sans suite ; ne convient pas pour violence, douleur, craintes.
+- to add up to / to come to : « se monter à » (somme), pas « équivaloir à ».
+- to advise / to counsel : registre soutenu, conseil professionnel/psychologique ; peu naturel ici.
+- to advise / a counsellor : conseiller psychologique ou d'orientation, pas conseiller d'un gouvernement ou d'un conseil d'administration.
+- to alleviate / to mitigate : atténuer des effets ou des risques, pas une douleur ni la pauvreté elle-même.
+- to approve of / to endorse : soutenir officiellement ou publiquement, pas « approuver moralement ».
+- to assert / to affirm : confirmer, réaffirmer ; ne rend pas « affirmer une thèse contestée ».
+- to assess / to rate : noter, classer (selon un barème) ; « rated as hopeless » peu naturel.
+- to attempt / an endeavour/endeavor : effort soutenu, entreprise (registre soutenu), pas une tentative ponctuelle.
+- to attend / turnout : taux de participation (élection, événement), pas fréquentation ni assiduité.
+- to award / to grant sth : accorder (une permission, une demande) ; ne s'emploie pas pour un prix, un contrat ni des dommages-intérêts.
+- to be distressed / harrowing : déchirant, éprouvant (très fort) ; trop éloigné de « pénible, préoccupant ».
+- to be distressed / distressed (by/about/over) : bouleversé, plus fort ; ne qualifie pas une expression (sourire, silence) comme « pained ».
+- to be engrossed in / to be bound up in : rare en ce sens ; « bound up with » signifie « lié à ».
+- to be overwhelmed by / crushing : s'emploie pour défaite, victoire, poids, pas pour des preuves ni une majorité.
+- to be puzzled / confounded : vieilli ou soutenu ; peu naturel en anglais courant.
+
+## Lot 11 (14 novembre 2026)
+- to be run down / to be overtired : overtired = trop fatigué (souvent enfant, manque de sommeil, passager) ; ne rend pas l'état d'épuisement/santé affaiblie de « run down ».
+- to beat / to trump : trump = l'emporter sur (par un atout) ; ne convient ni pour une victoire sportive ni pour « battre les prévisions ».
+- to belie (masquer) / to contradict : contradict = contredire : relève de l’autre sens (« démentir, contredire »), pas de « masquer, dissimuler ».
+- to belittle / to deprecate : deprecate = désapprouver ; sens « rabaisser » rare/vieilli, peu naturel.
+- to disparage / to deprecate : deprecate = désapprouver, registre soutenu ; ne rend pas « dénigrer ».
+- to bind / to tie : tie = attacher (sens concret) ; « tied together by suffering » peu naturel pour « unir ».
+- a bond / a tie : « a tie » au singulier peu naturel pour un lien affectif ; s'emploie surtout au pluriel (ties).
+- a godsend / a windfall : windfall = gain financier inattendu ; ne s'applique qu'à de l'argent.
+- to blow up / to burst : burst = éclater, crever (ballon, pneu), pas exploser/faire sauter.
+- a brace / a splint : splint = attelle rigide pour fracture ; ne couvre ni minerve, ni renfort de charpente.
+- to break out / to flare (up) : flare up = se raviver, s'embraser (conflit latent), pas éclater/se déclarer.
+- to broadcast / to beam : beam = transmettre par signal/satellite, emploi technique restreint.
+- to burst / to blow up : blow up = exploser (bombe) ; ne se dit pas d'un ballon, d'une bulle ou d'une canalisation qui crève.
+
+## Lot 12 (14 novembre 2026)
+- to challenge / to query : demander des explications, émettre un doute ponctuel : nuance plus faible que « contester / remettre en cause ».
+- a trickster / a cheat : « cheat » = tricheur, pas escroc/filou : sens différent.
+- a cheat / a trickster : « trickster » = farceur, filou (connotation ludique/littéraire), pas tricheur : partiel.
+- to clear sb (of sth) / to vindicate sb : « vindicate » = donner raison à, justifier ; ne s'emploie pas avec « of » au sens de disculper : partiel.
+- a commitment (to) / a pledge : promesse formelle ponctuelle ; ne rend pas « commitment » au sens d'engagement/dévouement durable : partiel.
+- a commitment (to) / an undertaking : promesse/engagement formel (juridique) ou entreprise ; ne rend pas l'engagement-dévouement : partiel.
+- a complaint (about) / a grumble : registre familier, simple ronchonnement ; ne convient pas pour une réclamation/plainte formelle.
+- to conceal / to withhold : « withhold » = retenir, ne pas divulguer/verser (information, paiement), pas cacher physiquement : partiel.
+- to convey / to pass on : « pass on » = transmettre (un message) à qn ; ne rend pas « exprimer » une idée/un sentiment : partiel.
+- a deal / a bargain : « bargain » = bonne affaire ; au sens d'accord (« strike a bargain ») vieilli/limité à des collocations figées : partiel.

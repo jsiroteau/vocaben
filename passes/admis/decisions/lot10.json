@@ -1,0 +1,514 @@
+{
+ "L0": {
+  "0": "subsided / died down / blew over",
+  "1": "subside / die down"
+ },
+ "L1": {
+  "0": "subsiding",
+  "1": "subsided",
+  "2": "subsided"
+ },
+ "L2": {
+  "0": "abate / die down",
+  "1": "abated / died down",
+  "2": "abated / died down"
+ },
+ "L3": {
+  "0": "loathes / detests",
+  "2": "loathe / detest"
+ },
+ "L4": {
+  "0": "loathsome to"
+ },
+ "L5": {
+  "0": "bear",
+  "1": "bear",
+  "2": "bear"
+ },
+ "L6": {
+  "0": "comply with / obey",
+  "1": "comply with / obey",
+  "2": "comply with / obey"
+ },
+ "L7": {
+  "0": "unsuccessful",
+  "1": "unsuccessful"
+ },
+ "L8": {
+  "0": "accumulated",
+  "1": "accumulated"
+ },
+ "L9": {
+  "0": "attained",
+  "2": "attain",
+  "3": "attained"
+ },
+ "L10": {
+  "0": "success / feat",
+  "1": "feat",
+  "2": "success / feat"
+ },
+ "L11": {
+  "0": "amount to / total",
+  "1": "amount to / total",
+  "2": "amount to"
+ },
+ "L12": {
+  "0": "amount to",
+  "1": "amounted to",
+  "2": "amount to"
+ },
+ "L13": {
+  "0": "advert / ad",
+  "1": "advert / ad"
+ },
+ "L14": {
+  "0": "advertising executives",
+  "1": "advertising executives",
+  "2": "advertising executive"
+ },
+ "L17": {
+  "0": "misguided",
+  "2": "misguided"
+ },
+ "L18": {
+  "0": "favours / favors",
+  "1": "favours / favors",
+  "2": "favours / favors"
+ },
+ "L19": {
+  "0": "proponent",
+  "2": "proponent"
+ },
+ "L21": {
+  "2": "consented to",
+  "3": "consented to"
+ },
+ "L22": {
+  "0": "settlement",
+  "1": "accord",
+  "2": "accord"
+ },
+ "L23": {
+  "0": "relieve / ease",
+  "1": "relieved",
+  "2": "relieve / ease",
+  "3": "relieve / ease"
+ },
+ "L24": {
+  "0": "attract",
+  "1": "attract",
+  "2": "attract"
+ },
+ "L25": {
+  "0": "allure",
+  "1": "allure",
+  "2": "allure"
+ },
+ "L26": {
+  "0": "attractive",
+  "1": "attractive",
+  "2": "attractive"
+ },
+ "L27": {
+  "0": "called on",
+  "1": "called on"
+ },
+ "L28": {
+  "0": "candidates"
+ },
+ "L29": {
+  "0": "applicant"
+ },
+ "L31": {
+  "1": "cleared"
+ },
+ "L32": {
+  "0": "contended",
+  "1": "contended",
+  "2": "contend"
+ },
+ "L33": {
+  "0": "rowing / quarrelling / quarreling",
+  "1": "rowing about / quarrelling about / quarreling about",
+  "2": "quarrelled with / quarreled with / rowed with / wrangled with"
+ },
+ "L34": {
+  "0": "row / quarrel"
+ },
+ "L35": {
+  "0": "debatable",
+  "1": "debatable"
+ },
+ "L36": {
+  "0": "discuss",
+  "1": "discussed"
+ },
+ "L37": {
+  "0": "come up / cropped up",
+  "1": "came up / cropped up",
+  "2": "come up / crop up"
+ },
+ "L38": {
+  "0": "kindled"
+ },
+ "L40": {
+  "0": "stand up for yourself",
+  "1": "stand up for herself"
+ },
+ "L41": {
+  "0": "self-assured",
+  "1": "self-assured"
+ },
+ "L42": {
+  "0": "evaluated"
+ },
+ "L43": {
+  "0": "evaluation",
+  "1": "evaluation"
+ },
+ "L44": {
+  "0": "calm / soothe",
+  "1": "calm / soothe"
+ },
+ "L45": {
+  "0": "suppose / presume",
+  "1": "presume",
+  "2": "presumed",
+  "3": "presume / suppose"
+ },
+ "L46": {
+  "1": "premise"
+ },
+ "L47": {
+  "1": "took on",
+  "2": "took on",
+  "3": "taken on"
+ },
+ "L48": {
+  "0": "astounded / stunned",
+  "1": "astounded / stunned",
+  "2": "astounded / stunned",
+  "3": "astounded / stunned"
+ },
+ "L49": {
+  "0": "amazing / astounding / staggering",
+  "1": "amazing / astounding",
+  "2": "amazing / astounding / staggering",
+  "3": "amazing / astounding"
+ },
+ "L50": {
+  "0": "amazement",
+  "1": "amazement"
+ },
+ "L51": {
+  "0": "astonished",
+  "1": "astonished / staggered"
+ },
+ "L52": {
+  "0": "astonishing",
+  "1": "astonishing"
+ },
+ "L53": {
+  "0": "reached / achieved",
+  "1": "reach / achieve",
+  "2": "reached / achieved"
+ },
+ "L54": {
+  "0": "try to",
+  "1": "trying",
+  "2": "tried",
+  "3": "tried to",
+  "4": "tried to"
+ },
+ "L55": {
+  "2": "bid to",
+  "3": "bid to",
+  "4": "bid to"
+ },
+ "L56": {
+  "0": "be present at",
+  "1": "be present at",
+  "2": "be present at",
+  "3": "were present at"
+ },
+ "L58": {
+  "0": "tended to",
+  "2": "tend to"
+ },
+ "L60": {
+  "0": "ward off",
+  "1": "warded off",
+  "2": "ward off"
+ },
+ "L61": {
+  "1": "shunned / steered clear of / kept clear of",
+  "2": "shunning / steering clear of"
+ },
+ "L62": {
+  "0": "inevitable",
+  "1": "inevitable"
+ },
+ "L65": {
+  "0": "supported",
+  "1": "supporting / endorsing",
+  "2": "supported / endorsed"
+ },
+ "L66": {
+  "2": "support"
+ },
+ "L67": {
+  "0": "reverse",
+  "2": "reversed"
+ },
+ "L68": {
+  "0": "climbed down / backtracked",
+  "1": "climbed down / backtracked",
+  "2": "climbed down / backtracked"
+ },
+ "L69": {
+  "0": "pulled out",
+  "1": "pull out",
+  "2": "pulled out / withdrew",
+  "3": "withdrew from / pulled out of"
+ },
+ "L70": {
+  "0": "boomeranged",
+  "1": "boomerang"
+ },
+ "L71": {
+  "1": "back down on",
+  "2": "backed down / climbed down"
+ },
+ "L72": {
+  "0": "pestered",
+  "1": "pestering",
+  "2": "pester",
+  "3": "pestered"
+ },
+ "L74": {
+  "0": "lure / tempt",
+  "1": "lure / tempt"
+ },
+ "L75": {
+  "0": "jeered at / jeered",
+  "1": "jeered at",
+  "2": "jeered at / jeered"
+ },
+ "L76": {
+  "0": "forbids / outlaws",
+  "1": "barred from",
+  "2": "bar"
+ },
+ "L77": {
+  "2": "hammering"
+ },
+ "L78": {
+  "2": "boom"
+ },
+ "L79": {
+  "0": "obstacle to",
+  "1": "obstacle to",
+  "2": "obstacle to"
+ },
+ "L80": {
+  "0": "banned from / prevented from",
+  "1": "banned from",
+  "2": "ban / prevent",
+  "3": "banned from / prevented from"
+ },
+ "L81": {
+  "0": "Barring",
+  "2": "except"
+ },
+ "L82": {
+  "0": "haggled / negotiated",
+  "1": "haggle / negotiate",
+  "2": "negotiating over"
+ },
+ "L83": {
+  "0": "struck a deal",
+  "1": "struck a deal"
+ },
+ "L84": {
+  "0": "deal",
+  "1": "deal",
+  "2": "deal"
+ },
+ "L85": {
+  "0": "steal"
+ },
+ "L86": {
+  "0": "knockdown prices",
+  "1": "knockdown price"
+ },
+ "L87": {
+  "0": "bargain price",
+  "1": "bargain prices",
+  "2": "bargain prices"
+ },
+ "L88": {
+  "0": "banged"
+ },
+ "L89": {
+  "0": "horrified by / dismayed by",
+  "1": "dismayed at / dismayed by",
+  "2": "horrified by / dismayed by"
+ },
+ "L90": {
+  "0": "horrible / ghastly",
+  "1": "horrible / ghastly"
+ },
+ "L91": {
+  "0": "dislike of",
+  "1": "dislike of"
+ },
+ "L93": {
+  "0": "plagued by",
+  "1": "plagued by / assailed by",
+  "2": "plagued by"
+ },
+ "L94": {
+  "0": "stuck in",
+  "1": "stuck in",
+  "2": "stuck in",
+  "3": "stuck in",
+  "4": "stuck"
+ },
+ "L95": {
+  "0": "certain to / sure to",
+  "1": "certain to / sure to",
+  "2": "certain to / sure to"
+ },
+ "L96": {
+  "0": "absorbed in / wrapped up in / engrossed in",
+  "1": "absorbed in / wrapped up in / engrossed in",
+  "2": "wrapped up in / absorbed in"
+ },
+ "L97": {
+  "0": "confined to the house",
+  "2": "confined to the house"
+ },
+ "L98": {
+  "0": "frantic",
+  "2": "Frantic"
+ },
+ "L99": {
+  "0": "upset / grieved / saddened",
+  "1": "upset / saddened"
+ },
+ "L100": {
+  "0": "upset",
+  "1": "upset by / pained by",
+  "2": "upset by",
+  "3": "upset about",
+  "4": "upset over"
+ },
+ "L101": {
+  "1": "upsetting",
+  "2": "upsetting",
+  "3": "upsetting"
+ },
+ "L102": {
+  "1": "mayday",
+  "2": "mayday"
+ },
+ "L105": {
+  "0": "giddy",
+  "1": "giddy",
+  "2": "giddy"
+ },
+ "L106": {
+  "2": "giddy / vertiginous"
+ },
+ "L107": {
+  "0": "condemned to",
+  "2": "condemned to"
+ },
+ "L108": {
+  "0": "ruin",
+  "2": "ruin"
+ },
+ "L109": {
+  "0": "Judgement Day / the end of the world"
+ },
+ "L110": {
+  "0": "absorbed in",
+  "1": "absorbed in / wrapped up in",
+  "2": "Absorbed in / Wrapped up in"
+ },
+ "L111": {
+  "0": "equipment",
+  "1": "equipment",
+  "2": "equipment"
+ },
+ "L112": {
+  "1": "adapted to",
+  "2": "adapted to"
+ },
+ "L113": {
+  "1": "on edge"
+ },
+ "L115": {
+  "2": "nerves"
+ },
+ "L116": {
+  "0": "on the brink of",
+  "1": "on the brink of",
+  "2": "on the brink of"
+ },
+ "L119": {
+  "0": "overcome with",
+  "1": "overcome by",
+  "2": "overcome by"
+ },
+ "L120": {
+  "0": "swamp",
+  "1": "swamped",
+  "2": "swamped"
+ },
+ "L121": {
+  "0": "overwhelmed",
+  "1": "overwhelm",
+  "2": "overwhelmed"
+ },
+ "L122": {
+  "0": "overwhelmed / swamped",
+  "1": "overwhelmed / swamped",
+  "2": "overwhelmed / swamped"
+ },
+ "L123": {
+  "0": "inclined to",
+  "1": "susceptible to",
+  "2": "susceptible to"
+ },
+ "L124": {
+  "0": "annoyed",
+  "1": "annoyed",
+  "2": "annoyed",
+  "3": "annoyed",
+  "4": "annoyed"
+ },
+ "L125": {
+  "0": "mystery / riddle",
+  "1": "mystery / riddle",
+  "2": "mystery / riddle / enigma"
+ },
+ "L126": {
+  "0": "baffled / bewildered",
+  "1": "baffles / bewilders"
+ },
+ "L127": {
+  "1": "baffled / bewildered",
+  "2": "baffled"
+ },
+ "L128": {
+  "0": "mysterious / baffling",
+  "1": "baffling",
+  "2": "baffling / mysterious"
+ },
+ "L129": {
+  "0": "figure out",
+  "1": "figure out"
+ }
+}

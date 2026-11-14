@@ -1,0 +1,578 @@
+{
+ "L0": {
+  "0": "called off",
+  "2": "called off"
+ },
+ "L1": {
+  "0": "make a fuss",
+  "1": "making a fuss about / making a fuss over",
+  "2": "made a fuss"
+ },
+ "L2": {
+  "0": "fuss",
+  "1": "fuss",
+  "2": "fuss"
+ },
+ "L3": {
+  "2": "implement",
+  "3": "implement"
+ },
+ "L4": {
+  "0": "take advantage of",
+  "1": "take advantage of",
+  "2": "took advantage of"
+ },
+ "L5": {
+  "0": "threw"
+ },
+ "L6": {
+  "0": "call into question",
+  "1": "calls into question"
+ },
+ "L7": {
+  "0": "discard",
+  "2": "discarded"
+ },
+ "L8": {
+  "0": "rework",
+  "1": "reworked",
+  "2": "reworked"
+ },
+ "L9": {
+  "0": "chastised / reprimanded",
+  "1": "chastised / reprimanded"
+ },
+ "L10": {
+  "0": "lambastes / blasts",
+  "1": "lambasted / blasted",
+  "2": "lambasted / blasted"
+ },
+ "L11": {
+  "0": "reprimanded / castigated",
+  "1": "reprimanded / castigated",
+  "2": "reprimanded / castigated"
+ },
+ "L12": {
+  "0": "grasp / understand",
+  "1": "grasp / understand",
+  "2": "understand"
+ },
+ "L13": {
+  "0": "collapsed",
+  "1": "collapsed",
+  "2": "collapsed"
+ },
+ "L14": {
+  "0": "give in / yield",
+  "1": "gave in / yielded",
+  "2": "give in to / yield to",
+  "3": "gave in to / yielded to"
+ },
+ "L15": {
+  "0": "surrender / yield",
+  "2": "surrender / yield",
+  "3": "yielded / surrendered"
+ },
+ "L16": {
+  "1": "dare",
+  "2": "dared"
+ },
+ "L17": {
+  "0": "rival / contender",
+  "2": "contender / rival"
+ },
+ "L18": {
+  "0": "difficult / demanding",
+  "1": "demanding / difficult",
+  "2": "difficult"
+ },
+ "L19": {
+  "0": "question / contest / call into question",
+  "1": "contested"
+ },
+ "L20": {
+  "0": "direct / funnel",
+  "1": "direct",
+  "2": "directed into / funnelled into",
+  "3": "direct / funnel"
+ },
+ "L21": {
+  "3": "bills"
+ },
+ "L22": {
+  "0": "fees",
+  "1": "fees",
+  "2": "fee"
+ },
+ "L23": {
+  "1": "responsible for"
+ },
+ "L24": {
+  "0": "indicted for / accused of",
+  "2": "indicted for / accused of"
+ },
+ "L25": {
+  "0": "alleged that",
+  "1": "alleged that"
+ },
+ "L26": {
+  "0": "accusations against"
+ },
+ "L27": {
+  "0": "swindled / conned",
+  "1": "swindled / defrauded / conned",
+  "2": "swindled / defrauded / conned"
+ },
+ "L28": {
+  "0": "crook / swindler",
+  "2": "crook"
+ },
+ "L29": {
+  "0": "swindler / crook",
+  "1": "swindlers / crooks",
+  "2": "swindler / crook"
+ },
+ "L30": {
+  "0": "curb / stem / restrain",
+  "2": "stemmed",
+  "3": "curb / restrain",
+  "4": "curb / stem / restrain"
+ },
+ "L31": {
+  "0": "verified",
+  "1": "verify"
+ },
+ "L32": {
+  "0": "till",
+  "1": "till",
+  "2": "tills"
+ },
+ "L33": {
+  "1": "check / rein in / put the brakes on",
+  "2": "rein in"
+ },
+ "L34": {
+  "0": "restricted / reduced",
+  "1": "restricts / reduces",
+  "3": "cut back / cut back on / reduce"
+ },
+ "L35": {
+  "0": "cut short",
+  "1": "cut short"
+ },
+ "L36": {
+  "0": "reprimanded / admonished / scolded",
+  "1": "scolded / reprimanded / admonished",
+  "2": "reprimanded / admonished"
+ },
+ "L37": {
+  "0": "telling-off / rebuke",
+  "1": "rebuke / telling-off",
+  "2": "rebuke / telling-off"
+ },
+ "L38": {
+  "0": "reprimanded / chided",
+  "2": "chide / reprimand"
+ },
+ "L39": {
+  "0": "reprimanded / chided",
+  "1": "reprimanded / chided"
+ },
+ "L40": {
+  "0": "urged / exhorted",
+  "1": "urged / exhorted",
+  "2": "urged / exhorted"
+ },
+ "L41": {
+  "0": "get round / get around / bypass / by-pass",
+  "1": "get round / get around / bypass / by-pass",
+  "2": "bypassed / by-passed / got round / got around"
+ },
+ "L42": {
+  "0": "alleged that"
+ },
+ "L43": {
+  "0": "assertion that / contention that",
+  "1": "allegations",
+  "2": "allegation that"
+ },
+ "L44": {
+  "0": "crack down on",
+  "1": "cracking down on",
+  "2": "cracking down on"
+ },
+ "L45": {
+  "0": "crackdown on",
+  "1": "crackdown",
+  "2": "crackdown on"
+ },
+ "L46": {
+  "0": "conflict over / confrontation over",
+  "1": "confrontation over / conflict over",
+  "2": "Confrontations"
+ },
+ "L47": {
+  "2": "jars with"
+ },
+ "L48": {
+  "0": "clashed with",
+  "1": "clashes with",
+  "2": "clashes with"
+ },
+ "L50": {
+  "0": "remove",
+  "1": "removed"
+ },
+ "L51": {
+  "0": "tidy up",
+  "1": "tidy up"
+ },
+ "L52": {
+  "0": "exonerated of",
+  "1": "exonerated",
+  "2": "exonerated"
+ },
+ "L53": {
+  "0": "approved",
+  "1": "approved",
+  "2": "approved"
+ },
+ "L54": {
+  "0": "pay off / settle",
+  "1": "pay off",
+  "2": "paid off"
+ },
+ "L55": {
+  "0": "steer clear of / avoid",
+  "1": "Steer clear of / Avoid"
+ },
+ "L56": {
+  "0": "avoided / kept clear of",
+  "1": "avoided / kept clear of",
+  "2": "avoid"
+ },
+ "L57": {
+  "0": "sealed / secured",
+  "1": "secured / sealed",
+  "2": "sealed / secured"
+ },
+ "L58": {
+  "1": "blocked up"
+ },
+ "L59": {
+  "0": "bludgeoned into",
+  "1": "bludgeon"
+ },
+ "L60": {
+  "0": "invented",
+  "1": "invented",
+  "2": "invented"
+ },
+ "L61": {
+  "1": "caved in"
+ },
+ "L62": {
+  "0": "ran into / ran across",
+  "1": "stumbled across / stumbled on / stumbled upon / ran across",
+  "2": "stumbled across / stumbled on / stumbled upon / ran across"
+ },
+ "L63": {
+  "1": "comes over as",
+  "2": "comes over",
+  "3": "came over as"
+ },
+ "L64": {
+  "0": "obtain",
+  "2": "obtained",
+  "3": "obtain"
+ },
+ "L65": {
+  "0": "come over / come round / drop by / drop in",
+  "1": "drop by",
+  "2": "come over / come round / drop by / drop in"
+ },
+ "L66": {
+  "0": "been subjected to",
+  "1": "been subjected to",
+  "2": "were subjected to"
+ },
+ "L67": {
+  "0": "came away",
+  "1": "come away"
+ },
+ "L68": {
+  "0": "stopped taking",
+  "1": "stopped taking"
+ },
+ "L69": {
+  "0": "come round / come by / drop by / drop in",
+  "1": "come round / come by / drop by / drop in",
+  "2": "coming round"
+ },
+ "L70": {
+  "0": "came across",
+  "1": "came across as",
+  "2": "come across as"
+ },
+ "L71": {
+  "0": "come over / come by / drop in / drop by",
+  "2": "came over / came by / dropped by / dropped in",
+  "1": "coming over / coming by"
+ },
+ "L72": {
+  "1": "survived / pulled through",
+  "2": "survived / pulled through"
+ },
+ "L73": {
+  "0": "amounted to / added up to",
+  "1": "amount to / add up to"
+ },
+ "L74": {
+  "0": "arise / crop up",
+  "1": "arise / crop up",
+  "2": "cropped up"
+ },
+ "L75": {
+  "0": "rose through the ranks",
+  "1": "rose through the ranks",
+  "2": "rose through"
+ },
+ "L76": {
+  "0": "devise",
+  "2": "devise"
+ },
+ "L77": {
+  "0": "ran up against",
+  "1": "ran up against"
+ },
+ "L80": {
+  "1": "travels to work",
+  "2": "travel to work"
+ },
+ "L81": {
+  "0": "obliged",
+  "1": "obliges",
+  "2": "obliged"
+ },
+ "L82": {
+  "0": "captivating / gripping",
+  "1": "gripping / captivating"
+ },
+ "L83": {
+  "0": "convincing",
+  "1": "convincing"
+ },
+ "L84": {
+  "0": "vie with",
+  "1": "vie with",
+  "2": "vie with"
+ },
+ "L85": {
+  "0": "rival",
+  "1": "rivals"
+ },
+ "L86": {
+  "0": "contest"
+ },
+ "L87": {
+  "0": "competition",
+  "1": "competition"
+ },
+ "L88": {
+  "0": "challenging",
+  "1": "challenge",
+  "2": "challenge"
+ },
+ "L89": {
+  "0": "grumbled about",
+  "1": "grumble",
+  "2": "grumbled about"
+ },
+ "L90": {
+  "3": "grievance"
+ },
+ "L91": {
+  "0": "obey / abide by",
+  "2": "abide by / obey"
+ },
+ "L92": {
+  "2": "mixture"
+ },
+ "L93": {
+  "0": "hide",
+  "1": "hid",
+  "2": "hide",
+  "3": "hiding"
+ },
+ "L94": {
+  "0": "admitted / acknowledged",
+  "1": "admitted / acknowledged"
+ },
+ "L95": {
+  "0": "excuse / overlook",
+  "1": "excuse / overlook",
+  "2": "overlooking / excusing"
+ },
+ "L96": {
+  "0": "use up",
+  "1": "uses up",
+  "2": "use up"
+ },
+ "L97": {
+  "0": "cope with",
+  "1": "cope with",
+  "2": "cope with"
+ },
+ "L98": {
+  "0": "compete for",
+  "1": "competing for",
+  "2": "competing for"
+ },
+ "L99": {
+  "0": "challenger for / rival for",
+  "2": "rivals for / challengers for"
+ },
+ "L100": {
+  "0": "argued that",
+  "1": "argues that",
+  "2": "argue that"
+ },
+ "L101": {
+  "0": "claim / assertion",
+  "2": "claim / assertion"
+ },
+ "L102": {
+  "0": "disagreement",
+  "1": "disagreement"
+ },
+ "L103": {
+  "0": "controversial",
+  "1": "controversial",
+  "2": "controversial"
+ },
+ "L104": {
+  "0": "argumentative / quarrelsome",
+  "1": "quarrelsome"
+ },
+ "L105": {
+  "0": "devised",
+  "1": "devise",
+  "2": "devised"
+ },
+ "L106": {
+  "0": "device",
+  "1": "device",
+  "2": "device"
+ },
+ "L107": {
+  "0": "tricks",
+  "2": "trick / ploy"
+ },
+ "L108": {
+  "0": "forced / artificial",
+  "1": "forced / artificial",
+  "2": "forced / artificial"
+ },
+ "L109": {
+  "0": "carry / transport",
+  "1": "transported / carried",
+  "2": "transported / carried"
+ },
+ "L110": {
+  "0": "communicates / expresses",
+  "1": "express",
+  "2": "communicates / expresses / imparts"
+ },
+ "L111": {
+  "1": "found guilty of",
+  "2": "found guilty"
+ },
+ "L112": {
+  "0": "inmate",
+  "1": "inmates"
+ },
+ "L113": {
+  "1": "convict"
+ },
+ "L114": {
+  "1": "handle / contend with",
+  "2": "handle",
+  "3": "borne up"
+ },
+ "L115": {
+  "0": "trapped",
+  "2": "trapped"
+ },
+ "L116": {
+  "0": "monopolized the market / monopolised the market",
+  "1": "monopolized the market / monopolised the market",
+  "2": "monopolize the market / monopolise the market"
+ },
+ "L117": {
+  "0": "neutralize / neutralise",
+  "1": "neutralizes / neutralises"
+ },
+ "L118": {
+  "1": "stuffed"
+ },
+ "L119": {
+  "0": "swot for",
+  "1": "swotting for",
+  "2": "swotting"
+ },
+ "L120": {
+  "0": "cramming",
+  "2": "cramming"
+ },
+ "L121": {
+  "0": "longing for",
+  "1": "long for / yearn for",
+  "3": "long for / yearn for"
+ },
+ "L122": {
+  "1": "longing for / yearning for"
+ },
+ "L123": {
+  "0": "sneaked / snuck",
+  "1": "sneaked / snuck / slipped",
+  "2": "sneaked / snuck / slipped"
+ },
+ "L124": {
+  "0": "hamstrung",
+  "1": "hamstringing"
+ },
+ "L125": {
+  "1": "put down"
+ },
+ "L127": {
+  "0": "economize / economise",
+  "2": "economizing / economising"
+ },
+ "L128": {
+  "0": "rushed / raced",
+  "1": "rush",
+  "2": "rushed / raced"
+ },
+ "L129": {
+  "0": "intimidate",
+  "1": "intimidate",
+  "2": "intimidated"
+ },
+ "L130": {
+  "0": "stunning"
+ },
+ "L131": {
+  "1": "handled",
+  "2": "handles"
+ },
+ "L133": {
+  "0": "retailers",
+  "1": "Retailers",
+  "2": "retailers"
+ },
+ "L134": {
+  "0": "wholesaler",
+  "1": "wholesaler",
+  "2": "wholesaler"
+ }
+}
