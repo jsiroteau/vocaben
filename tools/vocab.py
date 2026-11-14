@@ -198,6 +198,8 @@ LINT_OK = {
     ('nature', 'to make a fuss (about/over sth) / a fuss', 'to carry on (about)'),
     ('symétrie', 'an invoice', 'a bill'), ('symétrie', 'a clout', 'a blow'), ('symétrie', 'a patron', 'a backer'),
     ('symétrie', 'a bust', 'a collapse'),  # cas particuliers du mot cible (14 novembre 2026)  # invoice = cas particulier de bill (facture commerciale) : renvoi à sens unique
+    ('symétrie', 'a bank clerk', 'a cashier'), ('symétrie', 'a bank teller', 'a cashier'),
+    ('symétrie', 'a patron', 'a customer'),  # cas particuliers (passe formes admises, lots 2-3, 14 novembre 2026)
     ('symétrie', 'largely', 'to a large extent'),  # la cible regroupe plusieurs expressions
     ('GB/US', 'zeal', 'fervour'), ('GB/US', 'to leap (leapt/leaped)', 'to spring'),
     ('symétrie', 'a rise', 'a raise (US)'),  # a raise porte a pay rise (GB)  # marque d'orthographe, pas de variété lexicale
