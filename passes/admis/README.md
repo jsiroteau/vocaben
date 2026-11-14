@@ -8,6 +8,7 @@ Objet : pour chaque exemple d'une ligne qui a des synonymes, lister dans la colo
 - Écrire la forme qui remplace exactement le mot à trouver : fléchie comme dans la phrase (buttressed → bolstered), avec la préposition si le mot à trouver l'inclut (reliance on → dependence on ; breeding ground for → hotbed of), majuscule si la phrase commence par le mot. Plusieurs formes séparées par « / ».
 - Pas de forme admise quand un complément s'intercale (gave him away : le mot à trouver « gave » ne peut pas être remplacé par betrayed) ni dans une expression figée (a safe bet, compulsory redundancies, the affluent society).
 - Relever à part les synonymes qui ne conviennent dans aucun exemple de leur ligne : faux synonymes ou synonymes partiels, à revoir avec Jennifer.
+- Effets de bord à traiter à chaque lot : un synonyme retiré peut laisser un See also sans lien avec aucun mot de sa fiche (ni synonyme, ni antonyme, ni vraie association). Pour chacun : le placer dans la fiche de son meilleur synonyme, lui donner sa fiche s'il a plusieurs sens utiles (comme to creep, sorti de to crawl), ou proposer à Jennifer de le retirer s'il ne mérite pas sa place (économie, Zipf). Un synonyme qui n'est qu'un cas particulier du mot (invoice pour bill) est retiré de la ligne générale mais peut rester à sens unique sur la ligne particulière (LINT_OK).
 - Outil : `B.setadm(r, k, 'a / b')` ; `setex` conserve les formes admises d'un exemple inchangé ; `check` refuse une forme vide ou identique au mot à trouver.
 
 ## État

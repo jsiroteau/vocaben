@@ -196,6 +196,7 @@ LINT_OK = {
     ('nature', 'to carry on (about)', 'to make a fuss (about/over)'), ('nature', 'to kick up a fuss', 'to make a fuss (about/over)'),
     ('nature', 'to make a fuss (about/over sth) / a fuss', 'to kick up a fuss'),
     ('nature', 'to make a fuss (about/over sth) / a fuss', 'to carry on (about)'),
+    ('symétrie', 'an invoice', 'a bill'),  # invoice = cas particulier de bill (facture commerciale) : renvoi à sens unique
     ('symétrie', 'largely', 'to a large extent'),  # la cible regroupe plusieurs expressions
     ('GB/US', 'zeal', 'fervour'), ('GB/US', 'to leap (leapt/leaped)', 'to spring'),
     ('symétrie', 'a rise', 'a raise (US)'),  # a raise porte a pay rise (GB)  # marque d'orthographe, pas de variété lexicale
