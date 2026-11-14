@@ -1,0 +1,537 @@
+{
+ "L0": {
+  "2": "at random"
+ },
+ "L1": {
+  "0": "randomly",
+  "1": "randomly",
+  "2": "randomly"
+ },
+ "L2": {
+  "0": "variety / array",
+  "1": "variety / array",
+  "2": "variety"
+ },
+ "L3": {
+  "0": "spate",
+  "1": "spate",
+  "2": "spate",
+  "3": "spate"
+ },
+ "L4": {
+  "0": "hasty",
+  "1": "hasty",
+  "2": "hasty"
+ },
+ "L5": {
+  "0": "reckless / foolhardy",
+  "1": "reckless / foolhardy",
+  "2": "reckless / foolhardy"
+ },
+ "L6": {
+  "0": "excellent / top-notch",
+  "1": "top-notch",
+  "2": "excellent / top-notch"
+ },
+ "L7": {
+  "3": "pace"
+ },
+ "L8": {
+  "0": "Anyway / In any case",
+  "1": "Anyway / In any case",
+  "2": "anyway / in any case"
+ },
+ "L9": {
+  "2": "unprocessed"
+ },
+ "L11": {
+  "0": "domain / field",
+  "1": "domain"
+ },
+ "L13": {
+  "0": "receipts",
+  "2": "receipts"
+ },
+ "L15": {
+  "3": "rashly"
+ },
+ "L16": {
+  "2": "negligent"
+ },
+ "L17": {
+  "0": "layoffs",
+  "1": "layoffs"
+ },
+ "L18": {
+  "0": "laid off",
+  "2": "laid off"
+ },
+ "L19": {
+  "0": "look on / look upon",
+  "1": "looks on / looks upon",
+  "2": "look on / look upon"
+ },
+ "L20": {
+  "0": "irrespective of",
+  "1": "irrespective of",
+  "2": "irrespective of"
+ },
+ "L21": {
+  "0": "regardless of",
+  "1": "regardless of",
+  "2": "regardless of"
+ },
+ "L22": {
+  "0": "pertinent",
+  "1": "pertinent"
+ },
+ "L23": {
+  "0": "Working from home",
+  "1": "working from home"
+ },
+ "L24": {
+  "0": "remote",
+  "1": "remote"
+ },
+ "L25": {
+  "0": "famed",
+  "1": "famed",
+  "2": "famed"
+ },
+ "L26": {
+  "0": "fame",
+  "1": "fame"
+ },
+ "L28": {
+  "0": "studying",
+  "1": "studied",
+  "2": "studying"
+ },
+ "L29": {
+  "0": "determined",
+  "1": "determined",
+  "2": "determined"
+ },
+ "L30": {
+  "0": "fidgety",
+  "3": "fidgety"
+ },
+ "L31": {
+  "0": "restless",
+  "1": "restless",
+  "2": "restless"
+ },
+ "L32": {
+  "0": "revival",
+  "1": "revival"
+ },
+ "L33": {
+  "0": "resurgence",
+  "1": "resurgence",
+  "2": "resurgence"
+ },
+ "L34": {
+  "1": "festivities",
+  "2": "festivities"
+ },
+ "L35": {
+  "0": "vengeance",
+  "1": "vengeance",
+  "3": "vengeance"
+ },
+ "L36": {
+  "0": "plagued by",
+  "1": "plagued by",
+  "2": "plagued by"
+ },
+ "L37": {
+  "1": "puzzle / enigma",
+  "2": "puzzles / enigmas"
+ },
+ "L38": {
+  "0": "play on words"
+ },
+ "L39": {
+  "0": "split",
+  "1": "falling-out"
+ },
+ "L40": {
+  "0": "strong / buoyant"
+ },
+ "L41": {
+  "0": "robust / strong",
+  "1": "robust / strong",
+  "2": "robust / strong"
+ },
+ "L42": {
+  "0": "rogue",
+  "1": "rogue",
+  "2": "rogue"
+ },
+ "L44": {
+  "0": "displace",
+  "1": "displaced"
+ },
+ "L45": {
+  "0": "eradicate",
+  "1": "eradicate",
+  "2": "eradicate"
+ },
+ "L46": {
+  "0": "uneven",
+  "2": "uneven"
+ },
+ "L47": {
+  "0": "Choppy / Stormy",
+  "1": "stormy",
+  "2": "stormy / choppy"
+ },
+ "L48": {
+  "1": "crude",
+  "2": "crude"
+ },
+ "L49": {
+  "1": "approximately / around / in the neighbourhood of / in the neighborhood of",
+  "2": "approximately"
+ },
+ "L50": {
+  "0": "rough"
+ },
+ "L51": {
+  "0": "Rough"
+ },
+ "L52": {
+  "1": "debris",
+  "2": "debris"
+ },
+ "L53": {
+  "0": "merciless",
+  "1": "merciless"
+ },
+ "L54": {
+  "0": "ruthless",
+  "1": "ruthless"
+ },
+ "L55": {
+  "0": "secure",
+  "3": "secure"
+ },
+ "L56": {
+  "0": "obtained",
+  "1": "landed",
+  "2": "obtained / landed"
+ },
+ "L57": {
+  "0": "safe"
+ },
+ "L58": {
+  "0": "Turnover"
+ },
+ "L59": {
+  "0": "salesperson / sales assistant",
+  "1": "salesperson / sales assistant",
+  "2": "salesperson"
+ },
+ "L60": {
+  "1": "specimens"
+ },
+ "L61": {
+  "0": "optimistic",
+  "1": "optimistic",
+  "2": "optimistic"
+ },
+ "L62": {
+  "0": "shrewd",
+  "1": "shrewd",
+  "2": "shrewd"
+ },
+ "L63": {
+  "0": "acumen / nous / shrewdness",
+  "1": "acumen / nous",
+  "2": "acumen / nous"
+ },
+ "L64": {
+  "0": "understand",
+  "1": "understand",
+  "2": "understand"
+ },
+ "L65": {
+  "0": "savvy",
+  "1": "savvy",
+  "2": "savvy"
+ },
+ "L66": {
+  "2": "extent"
+ },
+ "L67": {
+  "0": "scale down",
+  "1": "scaled down"
+ },
+ "L68": {
+  "0": "scale back",
+  "1": "scale back",
+  "3": "Scale back"
+ },
+ "L69": {
+  "0": "fall guy",
+  "2": "fall guy"
+ },
+ "L70": {
+  "0": "dearth / paucity",
+  "1": "dearth / paucity",
+  "2": "dearth / paucity",
+  "4": "dearth / paucity"
+ },
+ "L71": {
+  "0": "hardly / barely",
+  "1": "hardly / barely",
+  "2": "hardly / barely"
+ },
+ "L72": {
+  "0": "landscape"
+ },
+ "L73": {
+  "0": "plan",
+  "1": "plan",
+  "2": "plan"
+ },
+ "L74": {
+  "0": "plot"
+ },
+ "L75": {
+  "0": "plotted",
+  "1": "plotting",
+  "2": "plot / intrigue"
+ },
+ "L76": {
+  "2": "erudition / learning"
+ },
+ "L77": {
+  "0": "evened the score",
+  "1": "evened the score",
+  "2": "even the score with"
+ },
+ "L80": {
+  "0": "sanctimonious / holier-than-thou",
+  "1": "sanctimonious / holier-than-thou",
+  "2": "sanctimonious / holier-than-thou"
+ },
+ "L81": {
+  "0": "self-righteous / holier-than-thou",
+  "1": "self-righteous / holier-than-thou",
+  "2": "self-righteous / holier-than-thou"
+ },
+ "L82": {
+  "0": "self-righteous / sanctimonious",
+  "1": "self-righteous / sanctimonious",
+  "2": "self-righteous / sanctimonious"
+ },
+ "L83": {
+  "1": "older than"
+ },
+ "L84": {
+  "0": "elderly people",
+  "1": "elderly people",
+  "2": "elderly people"
+ },
+ "L85": {
+  "0": "reasonable / judicious / wise",
+  "1": "wise / reasonable",
+  "2": "level-headed"
+ },
+ "L87": {
+  "0": "shabby",
+  "1": "shabby"
+ },
+ "L88": {
+  "0": "superficial",
+  "1": "superficial",
+  "2": "superficial"
+ },
+ "L89": {
+  "0": "mess",
+  "1": "mess",
+  "2": "mess"
+ },
+ "L90": {
+  "0": "steep",
+  "1": "steep"
+ },
+ "L91": {
+  "0": "steeply"
+ },
+ "L93": {
+  "0": "sheltered",
+  "1": "sheltered from"
+ },
+ "L94": {
+  "0": "taking shelter from",
+  "1": "took shelter"
+ },
+ "L95": {
+  "0": "cheap"
+ },
+ "L96": {
+  "1": "coast"
+ },
+ "L97": {
+  "0": "buttress / brace",
+  "1": "buttress / brace",
+  "2": "buttressed / braced"
+ },
+ "L98": {
+  "0": "bolster / buttress",
+  "1": "bolster / buttress / strengthen",
+  "2": "bolster / buttress / strengthen"
+ },
+ "L99": {
+  "0": "canny / savvy / astute",
+  "1": "canny / savvy",
+  "2": "canny"
+ },
+ "L100": {
+  "0": "good at",
+  "1": "good at",
+  "2": "good at"
+ },
+ "L101": {
+  "0": "bias",
+  "1": "bias"
+ },
+ "L102": {
+  "0": "biased / one-sided",
+  "1": "biased / one-sided",
+  "2": "biased"
+ },
+ "L103": {
+  "0": "sympathies",
+  "1": "sympathies",
+  "2": "sympathies"
+ },
+ "L104": {
+  "0": "killed",
+  "1": "killed",
+  "2": "kills"
+ },
+ "L105": {
+  "0": "killer",
+  "1": "killer"
+ },
+ "L107": {
+  "0": "massacre",
+  "1": "massacre"
+ },
+ "L108": {
+  "1": "slim / slender / faint",
+  "3": "faintest",
+  "4": "slim / slender"
+ },
+ "L109": {
+  "0": "a little / somewhat",
+  "1": "a little / somewhat",
+  "2": "a little / somewhat"
+ },
+ "L110": {
+  "0": "slim / slender / thin",
+  "1": "slim / slender / thin",
+  "2": "slim / slender / thin"
+ },
+ "L111": {
+  "0": "insult / snub",
+  "1": "insult / snub",
+  "2": "insult / snub"
+ },
+ "L112": {
+  "0": "slim",
+  "1": "slight / slim"
+ },
+ "L113": {
+  "0": "thin",
+  "1": "slim / thin"
+ },
+ "L114": {
+  "2": "slighted"
+ },
+ "L115": {
+  "0": "slender / thin / slight",
+  "1": "slender / slight",
+  "2": "slender / thin"
+ },
+ "L116": {
+  "0": "slight / slender",
+  "1": "slight / slender",
+  "2": "slender"
+ },
+ "L117": {
+  "0": "lethargic",
+  "1": "lethargic"
+ },
+ "L118": {
+  "0": "hovel",
+  "1": "hovels"
+ },
+ "L119": {
+  "1": "shanty towns",
+  "2": "shanty towns",
+  "3": "shanty town"
+ },
+ "L120": {
+  "0": "roughing it",
+  "1": "roughed it",
+  "2": "roughing it"
+ },
+ "L121": {
+  "0": "slouched",
+  "1": "slouch",
+  "2": "slouching"
+ },
+ "L122": {
+  "0": "plummeted",
+  "1": "plummeted",
+  "2": "plummeted"
+ },
+ "L123": {
+  "0": "recession",
+  "2": "recession"
+ },
+ "L124": {
+  "0": "slumped",
+  "1": "slump",
+  "2": "slumped"
+ },
+ "L125": {
+  "0": "cunning",
+  "1": "cunning",
+  "2": "cunning"
+ },
+ "L126": {
+  "0": "on the quiet",
+  "1": "on the quiet",
+  "2": "on the quiet"
+ },
+ "L127": {
+  "0": "mischievous",
+  "1": "mischievous",
+  "2": "mischievous"
+ },
+ "L128": {
+  "0": "sly",
+  "1": "sly"
+ },
+ "L129": {
+  "0": "self-satisfied",
+  "1": "self-satisfied",
+  "2": "self-satisfied"
+ },
+ "L130": {
+  "0": "catch",
+  "2": "catch / hitch"
+ },
+ "L131": {
+  "1": "bugs"
+ },
+ "L132": {
+  "1": "snag",
+  "2": "snag"
+ }
+}

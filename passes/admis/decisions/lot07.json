@@ -1,0 +1,504 @@
+{
+ "L0": {
+  "0": "expired",
+  "1": "expired",
+  "2": "expired"
+ },
+ "L1": {
+  "0": "outdated",
+  "1": "outdated"
+ },
+ "L2": {
+  "0": "obsolete / out of date",
+  "1": "obsolete / out of date",
+  "2": "obsolete / out-of-date",
+  "3": "out-of-date",
+  "4": "obsolete / out-of-date"
+ },
+ "L3": {
+  "0": "Out-of-date",
+  "1": "out-of-date"
+ },
+ "L4": {
+  "0": "stubborn",
+  "1": "stubborn",
+  "2": "stubborn"
+ },
+ "L5": {
+  "0": "stubborn"
+ },
+ "L6": {
+  "0": "wilful",
+  "1": "wilful"
+ },
+ "L7": {
+  "0": "evident / plain",
+  "1": "evident / plain"
+ },
+ "L8": {
+  "0": "profession",
+  "1": "professions",
+  "2": "profession"
+ },
+ "L9": {
+  "0": "freelance",
+  "1": "freelance",
+  "2": "Freelance"
+ },
+ "L10": {
+  "1": "weird / peculiar / bizarre",
+  "2": "weird / peculiar / bizarre"
+ },
+ "L11": {
+  "1": "chances",
+  "2": "chances"
+ },
+ "L12": {
+  "0": "flippant"
+ },
+ "L13": {
+  "3": "spin-offs"
+ },
+ "L14": {
+  "1": "petroleum"
+ },
+ "L16": {
+  "0": "portent",
+  "1": "portent"
+ },
+ "L17": {
+  "0": "apprehension",
+  "1": "apprehension",
+  "2": "premonition"
+ },
+ "L19": {
+  "0": "on the verge of",
+  "1": "on the verge of",
+  "2": "on the verge of"
+ },
+ "L20": {
+  "0": "heavy",
+  "1": "burdensome",
+  "2": "heavy"
+ },
+ "L21": {
+  "2": "assault / attack"
+ },
+ "L22": {
+  "0": "burden",
+  "1": "burden",
+  "2": "burden"
+ },
+ "L25": {
+  "0": "opponent",
+  "1": "opponent"
+ },
+ "L26": {
+  "0": "advocates / supporters",
+  "1": "Advocates / Supporters",
+  "2": "advocate / supporter"
+ },
+ "L27": {
+  "0": "supposed",
+  "1": "supposed",
+  "2": "supposed / apparent"
+ },
+ "L28": {
+  "0": "pariahs",
+  "1": "pariah"
+ },
+ "L30": {
+  "0": "uproar",
+  "1": "uproar",
+  "2": "uproar"
+ },
+ "L32": {
+  "0": "sketched",
+  "1": "sketched",
+  "2": "sketch"
+ },
+ "L34": {
+  "0": "production",
+  "1": "production"
+ },
+ "L35": {
+  "0": "produce",
+  "1": "produces",
+  "2": "produce"
+ },
+ "L36": {
+  "0": "atrocity",
+  "1": "atrocity"
+ },
+ "L37": {
+  "0": "atrocious / monstrous",
+  "1": "atrocious / monstrous",
+  "2": "atrocious"
+ },
+ "L38": {
+  "0": "scandalous / shocking",
+  "1": "scandalous / shocking"
+ },
+ "L39": {
+  "0": "extravagant / eccentric",
+  "1": "extravagant / eccentric"
+ },
+ "L40": {
+  "0": "exorbitant",
+  "1": "exorbitant",
+  "2": "exorbitant"
+ },
+ "L41": {
+  "0": "from the beginning",
+  "1": "At the start",
+  "2": "at the start"
+ },
+ "L42": {
+  "1": "forthright / blunt",
+  "3": "Frank / Blunt / Forthright"
+ },
+ "L44": {
+  "0": "direct",
+  "1": "direct"
+ },
+ "L45": {
+  "0": "On the whole",
+  "1": "On the whole",
+  "2": "on the whole"
+ },
+ "L46": {
+  "0": "First and foremost"
+ },
+ "L47": {
+  "0": "abroad",
+  "1": "abroad",
+  "2": "abroad"
+ },
+ "L48": {
+  "0": "foreign",
+  "1": "Foreign"
+ },
+ "L49": {
+  "0": "extra hours",
+  "2": "extra hours"
+ },
+ "L50": {
+  "0": "rate",
+  "1": "rate / speed"
+ },
+ "L51": {
+  "0": "keep up with",
+  "1": "keep up with",
+  "2": "keep up with"
+ },
+ "L52": {
+  "1": "instrument panel"
+ },
+ "L53": {
+  "2": "board"
+ },
+ "L54": {
+  "0": "overriding",
+  "2": "overriding"
+ },
+ "L55": {
+  "0": "Customers",
+  "1": "customers",
+  "2": "customers"
+ },
+ "L56": {
+  "0": "benefactors",
+  "1": "benefactor",
+  "2": "backer / benefactor"
+ },
+ "L58": {
+  "0": "support / backing",
+  "1": "support / backing"
+ },
+ "L59": {
+  "1": "sponsorship"
+ },
+ "L60": {
+  "2": "model"
+ },
+ "L61": {
+  "0": "dearth of / scarcity of",
+  "1": "dearth of / scarcity of",
+  "2": "dearth of / scarcity of"
+ },
+ "L62": {
+  "1": "wages"
+ },
+ "L63": {
+  "0": "wage bill"
+ },
+ "L64": {
+  "0": "warhead"
+ },
+ "L65": {
+  "0": "payroll",
+  "1": "payroll",
+  "2": "payroll"
+ },
+ "L66": {
+  "0": "payload",
+  "2": "payload"
+ },
+ "L67": {
+  "3": "summits"
+ },
+ "L68": {
+  "0": "peak time / rush hour",
+  "1": "peak time / rush hour",
+  "2": "peak time"
+ },
+ "L70": {
+  "0": "maintenance",
+  "1": "maintenance"
+ },
+ "L71": {
+  "0": "fringe benefits",
+  "1": "fringe benefits",
+  "2": "fringe benefits"
+ },
+ "L72": {
+  "0": "cheered up"
+ },
+ "L73": {
+  "0": "pick up",
+  "1": "picked up",
+  "2": "pick up"
+ },
+ "L74": {
+  "0": "harmful / malign",
+  "1": "harmful / malign",
+  "2": "harmful"
+ },
+ "L75": {
+  "0": "relate to",
+  "1": "relate to"
+ },
+ "L76": {
+  "0": "relating to / concerning",
+  "1": "relating to / concerning",
+  "2": "relating to / concerning"
+ },
+ "L77": {
+  "0": "widespread / prevalent",
+  "1": "all-pervading",
+  "2": "widespread / prevalent",
+  "3": "widespread"
+ },
+ "L78": {
+  "0": "snare"
+ },
+ "L80": {
+  "0": "trap",
+  "1": "trap"
+ },
+ "L81": {
+  "0": "trap",
+  "1": "trapped"
+ },
+ "L82": {
+  "1": "trap",
+  "2": "trapped"
+ },
+ "L83": {
+  "2": "obvious / evident"
+ },
+ "L84": {
+  "1": "facility",
+  "2": "factory / facility"
+ },
+ "L85": {
+  "1": "amenities"
+ },
+ "L86": {
+  "0": "credible",
+  "1": "credible"
+ },
+ "L87": {
+  "2": "predicament"
+ },
+ "L88": {
+  "0": "trick",
+  "1": "trick / gambit",
+  "2": "gambit / trick"
+ },
+ "L89": {
+  "1": "ominous"
+ },
+ "L90": {
+  "0": "powerful",
+  "1": "powerful",
+  "2": "powerful"
+ },
+ "L91": {
+  "0": "impoverished / needy"
+ },
+ "L94": {
+  "0": "lacking in",
+  "1": "lacking in",
+  "2": "lacking in"
+ },
+ "L95": {
+  "0": "bad / weak",
+  "1": "bad at / weak at",
+  "2": "bad"
+ },
+ "L96": {
+  "0": "poor",
+  "1": "poorest",
+  "2": "poor"
+ },
+ "L97": {
+  "1": "hard up",
+  "2": "Hard-up"
+ },
+ "L98": {
+  "0": "poverty-stricken",
+  "1": "poverty-stricken",
+  "2": "poverty-stricken"
+ },
+ "L99": {
+  "0": "practical / realistic",
+  "1": "practical / realistic"
+ },
+ "L100": {
+  "2": "insecure"
+ },
+ "L102": {
+  "0": "assumption",
+  "1": "assumption",
+  "2": "assumption"
+ },
+ "L103": {
+  "0": "absurd / ridiculous",
+  "1": "ridiculous",
+  "2": "absurd / ridiculous",
+  "3": "absurd / ridiculous"
+ },
+ "L104": {
+  "0": "prior",
+  "1": "former",
+  "2": "prior",
+  "3": "prior"
+ },
+ "L105": {
+  "1": "formerly",
+  "2": "formerly"
+ },
+ "L106": {
+  "0": "takes pride in",
+  "1": "takes pride in",
+  "2": "takes pride in"
+ },
+ "L107": {
+  "0": "prides itself on",
+  "1": "pride themselves on"
+ },
+ "L108": {
+  "1": "lucrative",
+  "2": "worthwhile / lucrative"
+ },
+ "L109": {
+  "0": "benefit from",
+  "1": "benefited from",
+  "2": "benefit"
+ },
+ "L110": {
+  "0": "appropriate",
+  "1": "appropriate / correct"
+ },
+ "L111": {
+  "0": "prolonged / lengthy",
+  "1": "prolonged / lengthy",
+  "2": "prolonged / lengthy"
+ },
+ "L112": {
+  "0": "protracted / prolonged",
+  "1": "protracted / prolonged"
+ },
+ "L113": {
+  "0": "on condition that",
+  "1": "On condition that",
+  "2": "on condition that",
+  "3": "On condition that",
+  "4": "on condition that"
+ },
+ "L115": {
+  "0": "representative",
+  "1": "representatives"
+ },
+ "L117": {
+  "0": "influence",
+  "2": "influence / clout"
+ },
+ "L119": {
+  "0": "aim / objective / goal / object",
+  "1": "goal",
+  "2": "aim / objective / object / goal"
+ },
+ "L120": {
+  "0": "purposely",
+  "1": "purposely",
+  "2": "purposely"
+ },
+ "L121": {
+  "0": "cowardly",
+  "1": "cowardly",
+  "2": "cowardly",
+  "3": "cowardly"
+ },
+ "L122": {
+  "0": "morass",
+  "2": "morass"
+ },
+ "L123": {
+  "0": "quagmire"
+ },
+ "L124": {
+  "0": "picturesque"
+ },
+ "L125": {
+  "0": "old-fashioned"
+ },
+ "L126": {
+  "0": "misgivings",
+  "1": "misgivings",
+  "2": "misgivings"
+ },
+ "L127": {
+  "0": "dilemma",
+  "1": "dilemma",
+  "2": "dilemma"
+ },
+ "L128": {
+  "2": "district"
+ },
+ "L129": {
+  "1": "head office"
+ },
+ "L130": {
+  "0": "archetypal",
+  "1": "archetypal",
+  "2": "archetypal"
+ },
+ "L131": {
+  "0": "peculiarity / oddity"
+ },
+ "L132": {
+  "0": "unrealistic / idealistic"
+ },
+ "L133": {
+  "0": "rushed / dashed",
+  "1": "rushed / dashed",
+  "2": "rushed"
+ },
+ "L134": {
+  "0": "Unchecked",
+  "1": "Unchecked",
+  "2": "Unchecked"
+ }
+}

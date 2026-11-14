@@ -89,3 +89,36 @@ Corrigé d'office : a nomination retiré de an appointment « nomination » (fau
 - Lot 3 | fleeting | ephemeral, short-lived | fleeting = d'un instant (glimpse, moment).
 - Lot 3 | disabled | handicapped | même sens mais vieilli, souvent jugé offensant : non admis ; garder comme synonyme ?
 - Lot 3 | dough | brass | familier, régional (GB) ; non admis pour une raison de registre.
+
+## Lots 7 à 9 (14 novembre 2026)
+Corrigé d'office : a sketch retiré de an outline « silhouette, contour » (croquis, pas silhouette ; peu naturel aussi sur la ligne « plan », pas ajouté) ; butchery retiré de slaughter « abattage » (boucherie ou carnage) ; a proxy retiré de a representative et takings retiré de receipts (cas particuliers, gardés à sens unique sur a proxy et takings, LINT_OK).
+
+À voir avec Jennifer (synonymes qui ne conviennent dans aucun exemple de leur ligne) :
+- Lot 7 | ominous | dire | « désastreux, grave », pas « de mauvais augure ».
+- Lot 7 | on behalf of | in the name of | au nom d'une autorité ou d'une cause, pas « pour le compte de ».
+- Lot 7 | opaque | obscure | peu connu, abscons ; pas « non transparent » (verre, finances).
+- Lot 7 | an opponent (of) | an adversary | ne couvre ni l'opposant à une idée ni l'adversaire sportif.
+- Lot 7 | an outcome | the upshot | conséquence déjà connue, pas une issue incertaine (health outcomes).
+- Lot 7 | a patron (client) | a client | client de services professionnels, pas d'un bar ou d'un restaurant.
+- Lot 7 | to trap (coincer) | to ensnare / to snare / to corner | les exemples sont au sens « coincé » (sous un mur, dans une situation) ; piéger un animal ou acculer seulement.
+- Lot 7 | a predicament | a plight | détresse, sort pénible, pas situation délicate (l'inverse convient).
+- Lot 7 | previous | erstwhile | « d'autrefois », littéraire ; pas « précédent, préalable ».
+- Lot 7 | a proxy (procuration) | a power of attorney | procuration juridique générale, pas le vote par procuration.
+- Lot 7 | influential | powerful | puissant n'est pas influent.
+- Lot 7 | destitute / poor | penniless | destitute se dit des personnes (pas d'un quartier) ; poor plus faible que penniless.
+- Lot 7 | outspoken | forthright (ligne forthright) | outspoken = qui dit publiquement ce qu'il pense, pas simplement franc dans ses manières.
+- Lot 8 | unprocessed | raw | raw food = cru, pas non transformé.
+- Lot 8 | restless | fretful | anxieux, grognon, pas agité.
+- Lot 8 | rooted in | grounded in | fondé sur (justification), pas « qui trouve son origine dans ».
+- Lot 8 | to secure | to clinch | conclure un accord, décrocher une victoire ; pas des fonds, un sponsor, une place.
+- Lot 8 | shoddy | junk | nom (camelote), mal venu comme adjectif.
+- Lot 8 | slight (menu) | frail | fragile, de santé faible ; même remarque inversée qu'au lot 4 (frail / slight).
+- Lot 8 | slender (élancé) | slight | menu, frêle, pas élancé (tall and slight peu naturel).
+- Lot 8 | skilled at | apt (at) | « enclin à » ; apt at rare, vieilli.
+- Lot 9 | steep (raide) | sheer | à pic, vertical (falaise), pas une colline ou une rue raide.
+- Lot 9 | steep (hausse forte) | stiff | prix ou sanction, pas une hausse ou une baisse.
+- Lot 9 | a standard | a norm | norme sociale, moyenne ; « safety norms » est un calque.
+- Lot 9 | spiteful | malevolent | plus fort (vouloir le mal) et plus soutenu.
+- Lot 9 | the taxman | the tax collector | le percepteur (une personne), pas le fisc.
+- Lot 9 | tight-fisted | cheap | en épithète on comprend « bon marché » (convient sur la ligne stingy).
+- Lot 9 | alluring | tantalizing | nuance d'inaccessible ; jamais retenu sur la ligne alluring.

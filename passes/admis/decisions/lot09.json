@@ -1,0 +1,549 @@
+{
+ "L0": {
+  "0": "bark at",
+  "1": "barked at",
+  "2": "barks at"
+ },
+ "L1": {
+  "0": "snapshots",
+  "1": "snapshots",
+  "2": "snapshot"
+ },
+ "L2": {
+  "2": "snap"
+ },
+ "L3": {
+  "1": "snapped at",
+  "2": "snapping at"
+ },
+ "L4": {
+  "0": "stimulating",
+  "1": "stimulating",
+  "2": "stimulating"
+ },
+ "L5": {
+  "1": "mingle with"
+ },
+ "L6": {
+  "0": "healthy"
+ },
+ "L7": {
+  "1": "covers / encompasses"
+ },
+ "L8": {
+  "3": "period"
+ },
+ "L9": {
+  "0": "spotless / immaculate",
+  "1": "spotless / immaculate",
+  "2": "spotless / immaculate",
+  "3": "spotless / immaculate"
+ },
+ "L10": {
+  "0": "spick and span",
+  "2": "spick and span"
+ },
+ "L11": {
+  "0": "trigger",
+  "1": "triggered",
+  "2": "triggered"
+ },
+ "L12": {
+  "0": "in full flood",
+  "1": "in flood",
+  "2": "in flood"
+ },
+ "L13": {
+  "0": "rash of",
+  "1": "flurry of",
+  "2": "rash of / flurry of"
+ },
+ "L14": {
+  "0": "malice",
+  "1": "malice",
+  "2": "ill will"
+ },
+ "L15": {
+  "1": "malicious",
+  "2": "malicious"
+ },
+ "L16": {
+  "0": "Despite / Notwithstanding",
+  "1": "despite / notwithstanding",
+  "2": "despite"
+ },
+ "L17": {
+  "0": "spokesperson",
+  "1": "spokesperson",
+  "2": "spokesperson"
+ },
+ "L18": {
+  "0": "spokesman / spokeswoman",
+  "1": "spokesman / spokeswoman",
+  "2": "spokesman / spokeswoman"
+ },
+ "L19": {
+  "0": "spokesperson",
+  "1": "spokesperson",
+  "2": "spokesperson"
+ },
+ "L20": {
+  "0": "embraced",
+  "1": "embraced",
+  "2": "embraces"
+ },
+ "L21": {
+  "0": "unit",
+  "3": "unit"
+ },
+ "L22": {
+  "0": "wretched",
+  "1": "wretched"
+ },
+ "L23": {
+  "0": "lurched",
+  "1": "lurched"
+ },
+ "L24": {
+  "0": "astounded / stunned",
+  "1": "astounded / stunned",
+  "2": "astounded / stunned"
+ },
+ "L25": {
+  "0": "bet / gambled / wagered",
+  "1": "bet / wager",
+  "2": "bet / gambled / wagered"
+ },
+ "L26": {
+  "0": "holding in",
+  "1": "holding",
+  "2": "holding in"
+ },
+ "L28": {
+  "0": "betting",
+  "1": "bet",
+  "2": "bet / staked"
+ },
+ "L29": {
+  "0": "deadlock",
+  "1": "deadlock",
+  "3": "deadlock / gridlock"
+ },
+ "L30": {
+  "0": "position / stand",
+  "1": "position on / stand on",
+  "2": "position"
+ },
+ "L31": {
+  "2": "criteria",
+  "4": "yardstick"
+ },
+ "L32": {
+  "0": "normal / usual",
+  "1": "usual"
+ },
+ "L33": {
+  "1": "basic foods",
+  "2": "basic foods"
+ },
+ "L34": {
+  "0": "prestige",
+  "2": "prestige"
+ },
+ "L35": {
+  "0": "steadfast",
+  "1": "steadfast",
+  "2": "Steadfast"
+ },
+ "L36": {
+  "0": "staunch",
+  "1": "unwavering / staunch",
+  "2": "unwavering",
+  "3": "staunch"
+ },
+ "L37": {
+  "0": "shaky / wobbly"
+ },
+ "L39": {
+  "0": "sharp",
+  "2": "sharp"
+ },
+ "L40": {
+  "0": "Severe / Harsh",
+  "1": "severe / harsh"
+ },
+ "L41": {
+  "1": "rigid"
+ },
+ "L42": {
+  "0": "steep",
+  "1": "steep",
+  "2": "steep"
+ },
+ "L43": {
+  "0": "severe",
+  "1": "severe",
+  "2": "severe"
+ },
+ "L44": {
+  "0": "tough",
+  "1": "tough"
+ },
+ "L45": {
+  "0": "keen"
+ },
+ "L46": {
+  "1": "hostile",
+  "2": "hostile"
+ },
+ "L47": {
+  "0": "mean / tight-fisted / miserly / cheap",
+  "1": "mean / tight-fisted / cheap",
+  "2": "mean / tight-fisted"
+ },
+ "L48": {
+  "0": "meagre",
+  "1": "meagre",
+  "2": "meagre"
+ },
+ "L49": {
+  "0": "stingy / miserly",
+  "1": "stingy / miserly",
+  "2": "stingy / mean"
+ },
+ "L50": {
+  "0": "stingy / tight-fisted",
+  "1": "stingy / tight-fisted"
+ },
+ "L51": {
+  "0": "pressure",
+  "1": "pressure",
+  "2": "tension"
+ },
+ "L52": {
+  "0": "tense",
+  "1": "tense",
+  "2": "tense"
+ },
+ "L53": {
+  "0": "progress",
+  "1": "progress",
+  "2": "progress"
+ },
+ "L54": {
+  "0": "conflict",
+  "1": "conflict",
+  "2": "conflict",
+  "3": "conflict"
+ },
+ "L55": {
+  "0": "strict",
+  "1": "strict / rigorous"
+ },
+ "L56": {
+  "0": "obstinate",
+  "1": "obstinate"
+ },
+ "L57": {
+  "1": "obstinately"
+ },
+ "L58": {
+  "0": "obstinacy",
+  "1": "obstinacy"
+ },
+ "L59": {
+  "1": "Obstinate"
+ },
+ "L60": {
+  "0": "astonished / staggered",
+  "2": "astonished / staggered"
+ },
+ "L61": {
+  "0": "breathtaking / dazzling",
+  "1": "breathtaking"
+ },
+ "L62": {
+  "0": "gimmick"
+ },
+ "L63": {
+  "0": "stunt",
+  "2": "stunts"
+ },
+ "L64": {
+  "0": "muted"
+ },
+ "L65": {
+  "0": "subdued",
+  "1": "subdued"
+ },
+ "L66": {
+  "0": "summons",
+  "1": "summons"
+ },
+ "L67": {
+  "2": "sulky"
+ },
+ "L68": {
+  "0": "sullen",
+  "1": "sullen",
+  "2": "sullen"
+ },
+ "L69": {
+  "2": "environment",
+  "3": "environment"
+ },
+ "L70": {
+  "1": "neighbouring"
+ },
+ "L71": {
+  "0": "Far-reaching / Wide-ranging",
+  "1": "far-reaching / wide-ranging",
+  "2": "Far-reaching / Wide-ranging"
+ },
+ "L72": {
+  "0": "Quick / Prompt",
+  "1": "quick / prompt",
+  "2": "quick / prompt"
+ },
+ "L73": {
+  "1": "implicit",
+  "2": "implicit"
+ },
+ "L74": {
+  "1": "implicit / tacit"
+ },
+ "L75": {
+  "1": "acquisition / buyout",
+  "2": "acquisition / buyout"
+ },
+ "L76": {
+  "0": "seized power"
+ },
+ "L78": {
+  "0": "took power",
+  "1": "took power",
+  "2": "take power"
+ },
+ "L79": {
+  "0": "concrete",
+  "1": "concrete",
+  "2": "concrete",
+  "3": "palpable"
+ },
+ "L80": {
+  "0": "tempting",
+  "1": "tempting / alluring"
+ },
+ "L81": {
+  "0": "teasing",
+  "1": "teasing"
+ },
+ "L82": {
+  "0": "tempting",
+  "1": "tempting",
+  "2": "tempting"
+ },
+ "L83": {
+  "0": "equivalent to",
+  "1": "equivalent to",
+  "2": "equivalent to"
+ },
+ "L84": {
+  "0": "goal / objective"
+ },
+ "L85": {
+  "0": "aim at",
+  "1": "aims at"
+ },
+ "L86": {
+  "0": "job",
+  "1": "job",
+  "2": "job"
+ },
+ "L87": {
+  "1": "taxman"
+ },
+ "L88": {
+  "0": "tax authorities",
+  "2": "tax authorities"
+ },
+ "L89": {
+  "1": "taxman"
+ },
+ "L90": {
+  "0": "Tax fraud",
+  "1": "tax fraud",
+  "2": "Tax fraud"
+ },
+ "L91": {
+  "0": "dodging taxes",
+  "1": "dodge taxes / commit tax fraud",
+  "2": "dodging taxes"
+ },
+ "L92": {
+  "0": "demanding",
+  "1": "demanding",
+  "2": "demanding"
+ },
+ "L93": {
+  "0": "principle",
+  "1": "principle",
+  "2": "principles",
+  "3": "principle"
+ },
+ "L94": {
+  "0": "strained / fraught",
+  "1": "strained / fraught"
+ },
+ "L95": {
+  "0": "Provisional",
+  "1": "provisional",
+  "2": "provisional"
+ },
+ "L96": {
+  "0": "hesitant",
+  "2": "hesitant"
+ },
+ "L98": {
+  "0": "conditions",
+  "1": "conditions",
+  "2": "conditions"
+ },
+ "L99": {
+  "0": "In the short run",
+  "1": "In the short run",
+  "2": "in the short run"
+ },
+ "L100": {
+  "0": "In the medium run",
+  "1": "In the medium run"
+ },
+ "L101": {
+  "0": "In the long run",
+  "1": "In the long run",
+  "2": "in the long run"
+ },
+ "L102": {
+  "1": "As regards / With regard to"
+ },
+ "L103": {
+  "0": "accept",
+  "1": "accept",
+  "2": "accept"
+ },
+ "L104": {
+  "0": "give evidence",
+  "2": "give evidence",
+  "3": "bear witness to"
+ },
+ "L105": {
+  "0": "irritable / grumpy",
+  "2": "irritable / grumpy"
+ },
+ "L106": {
+  "0": "testy / irritable",
+  "2": "testy / irritable"
+ },
+ "L107": {
+  "0": "way of",
+  "2": "way of"
+ },
+ "L108": {
+  "0": "Of course / Certainly",
+  "1": "Of course / Certainly",
+  "2": "Of course / Certainly"
+ },
+ "L109": {
+  "0": "in no way",
+  "1": "in no way / not at all",
+  "2": "In no way"
+ },
+ "L110": {
+  "2": "mass media"
+ },
+ "L111": {
+  "0": "comprehensive",
+  "1": "in-depth / exhaustive",
+  "2": "comprehensive"
+ },
+ "L112": {
+  "0": "complete / total",
+  "1": "complete / total",
+  "2": "complete / total"
+ },
+ "L114": {
+  "0": "frugality",
+  "1": "Frugality",
+  "2": "frugality"
+ },
+ "L115": {
+  "0": "Frugal / Canny",
+  "1": "frugal / economical",
+  "2": "frugal"
+ },
+ "L116": {
+  "0": "savings banks",
+  "1": "savings banks"
+ },
+ "L118": {
+  "0": "delighted by",
+  "1": "delighted",
+  "2": "delighted with"
+ },
+ "L119": {
+  "0": "all over",
+  "1": "all over"
+ },
+ "L120": {
+  "0": "Disposable"
+ },
+ "L121": {
+  "0": "going with the flow",
+  "1": "go with the flow",
+  "2": "went with the flow"
+ },
+ "L125": {
+  "0": "repeatedly / again and again",
+  "1": "repeatedly / again and again",
+  "2": "again and again",
+  "3": "repeatedly / again and again",
+  "4": "Again and again"
+ },
+ "L126": {
+  "1": "jingle"
+ },
+ "L127": {
+  "1": "end"
+ },
+ "L128": {
+  "0": "tilted",
+  "2": "tilt"
+ },
+ "L129": {
+  "0": "toppled over / overturned",
+  "1": "topple over",
+  "2": "topple over / overturn"
+ },
+ "L130": {
+  "1": "overturned"
+ },
+ "L131": {
+  "0": "pieces of advice",
+  "1": "piece of advice",
+  "2": "pieces of advice"
+ },
+ "L132": {
+  "0": "alerted",
+  "1": "alerted",
+  "2": "alerted"
+ },
+ "L133": {
+  "0": "gratuity",
+  "1": "gratuities",
+  "2": "gratuities"
+ },
+ "L134": {
+  "0": "tips",
+  "2": "tip"
+ }
+}
