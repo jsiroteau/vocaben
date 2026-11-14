@@ -216,8 +216,15 @@ def _items(cell):
 
 
 def _marker(r):
+    """Marque de variété de la ligne ; aucune pour une ligne à variantes d'orthographe « x (GB) / y (US) »."""
+    if '(GB)' in (r[M] or '') and '(US)' in (r[M] or ''):
+        return None
     m = re.search(r'\((GB|US)\)', f'{r[M]} {r[T]}')
     return m.group(1) if m else None
+
+
+def _alts_both(m):
+    return '(GB)' in m and '(US)' in m
 
 
 def lint(B):
@@ -267,6 +274,13 @@ def lint(B):
             a, b = (re.sub(r'\s*\((GB|US)\)', '', v) for v in vs[:2])
             if difflib.SequenceMatcher(None, a, b).ratio() < 0.7:
                 w('GB/US', r, '', 'variantes GB et US sur une même ligne : une ligne par variante')
+        # 4 sexies. marque lexicale en fin de Traduction (le Mot ne porte que les variantes d'orthographe « x (GB) / y (US) »)
+        if re.search(r'\((GB|US)\)$', r[M] or '') and not _alts_both(r[M]):
+            w('GB/US', r, '', 'marque de variété dans le Mot : la placer en fin de Traduction')
+        # 4 septies. variante d'orthographe entre parenthèses (behavio(u)r) : écrire « x (GB) / y (US) » ou « x/y »
+        for col in (M, SYN, ANT):
+            if re.search(r'o\(u\)r|[a-z]\(l\)(?:ing|ment|ed)?\b|enrol\(l\)|fulfil\(l\)', r[col] or ''):
+                w('GB/US', r, '', f'variante d\'orthographe entre parenthèses : {r[col]}')
         # 4 quater. ligne marquée (GB)/(US) : la marque termine la traduction de chaque exemple
         mks = set(re.findall(r'\((GB|US)\)', f'{r[M]} {r[T]}'))
         if len(mks) == 1:
