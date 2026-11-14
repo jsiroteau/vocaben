@@ -2,7 +2,7 @@
 
 Usage (depuis la racine du dépôt) :
     python3 tools/passe_admis.py init                 découpe les lignes à synonymes en lots (une seule fois)
-    python3 tools/passe_admis.py next                 numéro du prochain lot à traiter
+    python3 tools/passe_admis.py next [k]             réserve les k prochains lots (« en cours ») et affiche leurs numéros
     python3 tools/passe_admis.py show <n>             affiche le lot n (lignes L0, L1… et exemples 0-4)
     python3 tools/passe_admis.py apply <n> <f.json>   applique les décisions du lot n et le marque fait
     python3 tools/passe_admis.py orphans              See also devenus sans lien avec leur fiche (hors liste de départ)
@@ -124,7 +124,12 @@ if __name__ == '__main__':
     if cmd == 'init':
         init(B)
     elif cmd == 'next':
-        print(next((k for k, v in load(ETAT, {}).items() if v != 'fait'), 'aucun'))
+        etat = load(ETAT, {})
+        todo = [k for k, v in etat.items() if v == 'à faire'][:int(sys.argv[2]) if len(sys.argv) > 2 else 1]
+        for k in todo:
+            etat[k] = 'en cours'
+        save_json(ETAT, etat)
+        print(' '.join(todo) or 'TERMINÉ')
     elif cmd == 'show':
         show(B, int(sys.argv[2]))
     elif cmd == 'apply':
