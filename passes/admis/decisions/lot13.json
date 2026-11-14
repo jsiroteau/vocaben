@@ -1,0 +1,528 @@
+{
+ "L0": {
+  "0": "rot",
+  "1": "rot",
+  "2": "rot",
+  "3": "rot"
+ },
+ "L1": {
+  "0": "misled",
+  "2": "misled"
+ },
+ "L2": {
+  "0": "deceit"
+ },
+ "L3": {
+  "0": "deception",
+  "1": "deception"
+ },
+ "L4": {
+  "0": "misleading",
+  "1": "misleading",
+  "2": "misleading"
+ },
+ "L5": {
+  "0": "denounced / condemned",
+  "1": "denounced / condemned",
+  "2": "denounced / condemned"
+ },
+ "L6": {
+  "0": "postponed / put off",
+  "1": "postponed / put off"
+ },
+ "L7": {
+  "2": "cheating"
+ },
+ "L8": {
+  "1": "merges"
+ },
+ "L9": {
+  "1": "held up"
+ },
+ "L10": {
+  "0": "hold-up"
+ },
+ "L11": {
+  "0": "deceived",
+  "1": "deceiving himself"
+ },
+ "L12": {
+  "0": "insisted on",
+  "1": "insisted on",
+  "2": "insisted that",
+  "3": "requires"
+ },
+ "L13": {
+  "1": "taxing / challenging",
+  "2": "exacting"
+ },
+ "L14": {
+  "0": "condemned / decried",
+  "1": "condemned / decried",
+  "2": "condemned / decried"
+ },
+ "L15": {
+  "0": "disclaimed",
+  "1": "disclaimed"
+ },
+ "L17": {
+  "0": "portrays",
+  "2": "portrays"
+ },
+ "L18": {
+  "0": "depicted",
+  "2": "depict"
+ },
+ "L19": {
+  "0": "run down",
+  "1": "exhausted",
+  "2": "drained / exhausted / used up"
+ },
+ "L20": {
+  "2": "lamented / bemoaned"
+ },
+ "L21": {
+  "0": "disapproved of",
+  "1": "disapproved of",
+  "2": "disapproved of"
+ },
+ "L22": {
+  "0": "belittle / disparage",
+  "1": "belittle / disparage",
+  "2": "belittle / disparage"
+ },
+ "L23": {
+  "0": "hardship"
+ },
+ "L26": {
+  "1": "worthy of",
+  "0": "worthy",
+  "2": "worthy"
+ },
+ "L28": {
+  "0": "scorned",
+  "1": "scorned / disdained / had contempt for"
+ },
+ "L29": {
+  "0": "contemptible",
+  "1": "contemptible",
+  "2": "contemptible"
+ },
+ "L31": {
+  "0": "despicable",
+  "1": "despicable",
+  "2": "despicable"
+ },
+ "L32": {
+  "0": "dissuade / discourage",
+  "1": "discouraging / dissuading",
+  "2": "discourage / dissuade"
+ },
+ "L33": {
+  "1": "come up with",
+  "2": "come up with"
+ },
+ "L34": {
+  "0": "dedicated herself to",
+  "1": "dedicated himself to",
+  "2": "dedicated themselves to"
+ },
+ "L35": {
+  "0": "dedicates",
+  "1": "dedicated",
+  "2": "dedicated"
+ },
+ "L36": {
+  "0": "dedication",
+  "1": "dedication",
+  "2": "dedication"
+ },
+ "L37": {
+  "0": "dedicated to",
+  "1": "dedicated"
+ },
+ "L38": {
+  "1": "pious"
+ },
+ "L39": {
+  "0": "passed away"
+ },
+ "L40": {
+  "0": "lethal",
+  "1": "fatal / lethal"
+ },
+ "L41": {
+  "0": "subsided / abated",
+  "1": "subsided",
+  "2": "subsided / abated"
+ },
+ "L43": {
+  "0": "deceased",
+  "2": "deceased"
+ },
+ "L44": {
+  "0": "throw away / throw out / dispose of / dump",
+  "1": "Throw away / Throw out",
+  "2": "thrown away / thrown out / disposed of"
+ },
+ "L45": {
+  "0": "reject / cast aside",
+  "1": "rejected / dismissed",
+  "2": "dismissed"
+ },
+ "L46": {
+  "0": "denied",
+  "1": "denied",
+  "2": "denied"
+ },
+ "L47": {
+  "0": "revealed",
+  "1": "reveal",
+  "2": "reveal"
+ },
+ "L48": {
+  "2": "revelations"
+ },
+ "L49": {
+  "0": "fired / sacked",
+  "1": "fired / sacked",
+  "2": "fired / sacked"
+ },
+ "L50": {
+  "1": "sacking / firing",
+  "2": "sacking / firing"
+ },
+ "L51": {
+  "0": "discard / brush off",
+  "3": "brushed off / shrugged off"
+ },
+ "L52": {
+  "0": "banish",
+  "2": "dissipated"
+ },
+ "L53": {
+  "1": "shown",
+  "2": "shows"
+ },
+ "L54": {
+  "0": "got rid of / threw out / threw away / dumped",
+  "1": "get rid of / discard",
+  "2": "get rid of"
+ },
+ "L55": {
+  "1": "throwaway"
+ },
+ "L56": {
+  "0": "sell off",
+  "1": "sell off",
+  "2": "sell off"
+ },
+ "L57": {
+  "0": "refuted",
+  "1": "refuted",
+  "2": "refute"
+ },
+ "L59": {
+  "0": "ignore / overlook",
+  "1": "ignored",
+  "2": "ignored / took no notice of"
+ },
+ "L60": {
+  "0": "twist"
+ },
+ "L61": {
+  "2": "bother"
+ },
+ "L62": {
+  "0": "troubled",
+  "1": "troubled",
+  "2": "troubled"
+ },
+ "L63": {
+  "0": "disquieting / worrisome / unsettling",
+  "1": "disquieting / worrisome / unsettling"
+ },
+ "L64": {
+  "0": "disturbing / worrisome / unsettling",
+  "1": "disturbing / worrisome",
+  "2": "disturbing / unsettling / worrisome"
+ },
+ "L65": {
+  "0": "split",
+  "1": "Split",
+  "2": "split"
+ },
+ "L66": {
+  "1": "gulf"
+ },
+ "L67": {
+  "1": "evade",
+  "2": "evaded"
+ },
+ "L68": {
+  "2": "shady"
+ },
+ "L69": {
+  "1": "drawn up",
+  "2": "drew up"
+ },
+ "L70": {
+  "0": "draughtsman",
+  "1": "draughtsman",
+  "2": "draughtsman"
+ },
+ "L71": {
+  "0": "conscripted",
+  "1": "called up / conscripted",
+  "2": "called up / conscripted"
+ },
+ "L73": {
+  "0": "hauled",
+  "1": "hauled",
+  "2": "hauled"
+ },
+ "L74": {
+  "0": "brake on",
+  "1": "brake on",
+  "2": "brake on"
+ },
+ "L75": {
+  "0": "attracted",
+  "1": "attracted",
+  "2": "attracts"
+ },
+ "L76": {
+  "0": "sketches"
+ },
+ "L77": {
+  "0": "drafted",
+  "1": "drafted",
+  "2": "drafted"
+ },
+ "L78": {
+  "0": "disadvantage",
+  "1": "disadvantage",
+  "2": "disadvantages"
+ },
+ "L79": {
+  "0": "trickling",
+  "1": "trickled",
+  "2": "trickling"
+ },
+ "L80": {
+  "0": "drooled",
+  "1": "drool",
+  "2": "drooled"
+ },
+ "L81": {
+  "0": "dribbled",
+  "1": "dribbled",
+  "2": "dribbled"
+ },
+ "L82": {
+  "0": "dribbled"
+ },
+ "L83": {
+  "0": "get the gist",
+  "1": "got the gist"
+ },
+ "L84": {
+  "0": "roamed"
+ },
+ "L85": {
+  "1": "main thrust"
+ },
+ "L86": {
+  "1": "exercise",
+  "2": "exercises"
+ },
+ "L87": {
+  "0": "pushes",
+  "1": "push",
+  "2": "pushed"
+ },
+ "L88": {
+  "0": "fallen",
+  "1": "fall",
+  "2": "fell"
+ },
+ "L89": {
+  "0": "fall / decline",
+  "1": "fall / decline",
+  "2": "fall / decline / falloff"
+ },
+ "L90": {
+  "1": "abandoned"
+ },
+ "L91": {
+  "0": "come by / come over / come round / visit",
+  "1": "came by / visited",
+  "2": "visited"
+ },
+ "L92": {
+  "0": "drop",
+  "1": "drop",
+  "2": "drop"
+ },
+ "L93": {
+  "0": "threw away / threw out / disposed of / discarded"
+ },
+ "L94": {
+  "0": "garbage dump",
+  "1": "garbage dump",
+  "2": "garbage dump"
+ },
+ "L95": {
+  "1": "resides",
+  "2": "reside"
+ },
+ "L96": {
+  "0": "declined / waned",
+  "1": "declining / tapering off",
+  "2": "declined",
+  "3": "declining"
+ },
+ "L98": {
+  "0": "alleviated / relieved",
+  "1": "alleviate / relieve",
+  "2": "relieved / alleviated"
+ },
+ "L100": {
+  "1": "waning",
+  "2": "waning"
+ },
+ "L101": {
+  "0": "had the advantage over",
+  "1": "have the advantage over"
+ },
+ "L102": {
+  "0": "at the forefront of",
+  "1": "at the forefront of",
+  "2": "at the forefront of"
+ },
+ "L103": {
+  "0": "nervous / jumpy",
+  "1": "nervous / jumpy",
+  "2": "nervous / jumpy"
+ },
+ "L104": {
+  "0": "at the cutting edge of"
+ },
+ "L105": {
+  "0": "revise",
+  "1": "correct",
+  "4": "revised"
+ },
+ "L106": {
+  "0": "revisions",
+  "1": "revision",
+  "2": "revisions"
+ },
+ "L107": {
+  "0": "editor-in-chief",
+  "1": "editor-in-chief",
+  "2": "editor-in-chief"
+ },
+ "L108": {
+  "0": "went by / slipped by",
+  "1": "went by / slipped by"
+ },
+ "L109": {
+  "0": "undertook",
+  "2": "undertook"
+ },
+ "L110": {
+  "0": "embroidered"
+ },
+ "L111": {
+  "0": "embellish",
+  "1": "embellished",
+  "2": "embellish"
+ },
+ "L112": {
+  "0": "misappropriated / siphoned off",
+  "1": "misappropriated from / siphoned off from",
+  "2": "misappropriating / siphoning off"
+ },
+ "L113": {
+  "0": "misappropriation",
+  "1": "Misappropriation",
+  "2": "misappropriation"
+ },
+ "L114": {
+  "0": "personifies / epitomizes",
+  "1": "personifies / epitomizes"
+ },
+ "L115": {
+  "0": "epitome",
+  "1": "epitome",
+  "2": "epitome"
+ },
+ "L116": {
+  "0": "encouraged",
+  "1": "encouraged",
+  "2": "Encouraged"
+ },
+ "L117": {
+  "0": "appeared / surfaced",
+  "1": "appeared from"
+ },
+ "L118": {
+  "0": "gives off",
+  "1": "give off"
+ },
+ "L119": {
+  "0": "stressed / underscored / highlighted",
+  "1": "stressed / underscored",
+  "2": "stress / underscore"
+ },
+ "L120": {
+  "0": "work",
+  "1": "work / jobs"
+ },
+ "L121": {
+  "0": "use",
+  "1": "uses",
+  "2": "uses"
+ },
+ "L122": {
+  "0": "hires",
+  "1": "enlist",
+  "2": "hire / take on"
+ },
+ "L123": {
+  "2": "imitate"
+ },
+ "L124": {
+  "0": "covers / spans",
+  "1": "include / cover / span",
+  "2": "includes"
+ },
+ "L125": {
+  "0": "comprehensive",
+  "1": "comprehensive"
+ },
+ "L126": {
+  "1": "impinge on / infringe on",
+  "3": "impinging on / infringing on"
+ },
+ "L127": {
+  "0": "infringement on",
+  "2": "infringement on"
+ },
+ "L128": {
+  "0": "strives",
+  "1": "strive / make an effort / try hard",
+  "2": "strive / make an effort",
+  "3": "striving / trying hard / making an effort"
+ },
+ "L130": {
+  "0": "subscribes to",
+  "1": "approve of / subscribe to"
+ },
+ "L131": {
+  "0": "backed / supported",
+  "1": "back / support",
+  "2": "backed / supported"
+ }
+}

@@ -1,0 +1,566 @@
+{
+ "L0": {
+  "0": "encourage / nurture",
+  "1": "encourage / nurture / cultivate",
+  "2": "encouraged"
+ },
+ "L1": {
+  "0": "set up",
+  "1": "set up",
+  "2": "set up"
+ },
+ "L2": {
+  "0": "basis",
+  "1": "basis",
+  "2": "basis"
+ },
+ "L3": {
+  "0": "sank",
+  "1": "sank",
+  "2": "sank"
+ },
+ "L4": {
+  "0": "fell through"
+ },
+ "L5": {
+  "0": "in the context of",
+  "1": "in the context of",
+  "2": "In the context of"
+ },
+ "L6": {
+  "1": "set up"
+ },
+ "L7": {
+  "0": "set-up",
+  "1": "set-up",
+  "2": "set-up"
+ },
+ "L8": {
+  "0": "seized up",
+  "1": "seized",
+  "2": "seized up"
+ },
+ "L9": {
+  "0": "froze",
+  "1": "froze"
+ },
+ "L10": {
+  "0": "worry about",
+  "1": "worry",
+  "2": "worried about",
+  "3": "worry about / worry over"
+ },
+ "L11": {
+  "0": "stoke",
+  "1": "stoking",
+  "2": "stoked",
+  "3": "stoke"
+ },
+ "L12": {
+  "0": "rewarding / satisfying",
+  "1": "rewarding / satisfying"
+ },
+ "L13": {
+  "0": "provide / supply",
+  "1": "supplied / provided",
+  "2": "provide / supply"
+ },
+ "L14": {
+  "0": "promote",
+  "1": "promote",
+  "2": "promote"
+ },
+ "L15": {
+  "0": "carry-on"
+ },
+ "L17": {
+  "0": "finicky / picky",
+  "1": "picky / finicky",
+  "2": "finicky",
+  "3": "picky / finicky"
+ },
+ "L18": {
+  "2": "fuss over"
+ },
+ "L19": {
+  "0": "picky / fussy",
+  "1": "fussy / picky",
+  "2": "fussy / picky"
+ },
+ "L21": {
+  "0": "Fussy / Finicky",
+  "1": "fussy",
+  "2": "fussy / finicky"
+ },
+ "L22": {
+  "0": "acquire",
+  "1": "obtained",
+  "2": "garnered / acquired",
+  "3": "acquired / obtained"
+ },
+ "L23": {
+  "0": "spurred",
+  "1": "energized",
+  "2": "spurred"
+ },
+ "L24": {
+  "0": "betting on",
+  "1": "betting on",
+  "2": "bet on",
+  "3": "bet on",
+  "4": "bet on"
+ },
+ "L25": {
+  "0": "risk",
+  "1": "risk"
+ },
+ "L26": {
+  "0": "stared in amazement",
+  "1": "staring in amazement at",
+  "2": "stared in amazement at"
+ },
+ "L27": {
+  "0": "gained",
+  "1": "gained / gathered",
+  "2": "gained",
+  "3": "gathered"
+ },
+ "L28": {
+  "0": "assess / evaluate",
+  "1": "assess / measure",
+  "2": "measured"
+ },
+ "L29": {
+  "1": "indicator"
+ },
+ "L30": {
+  "0": "gets around",
+  "1": "get around",
+  "2": "get around"
+ },
+ "L31": {
+  "0": "get around",
+  "1": "gets around",
+  "2": "got around"
+ },
+ "L32": {
+  "0": "got around",
+  "1": "got around",
+  "2": "got around"
+ },
+ "L33": {
+  "0": "get about",
+  "1": "get about"
+ },
+ "L34": {
+  "0": "get about",
+  "1": "get about",
+  "2": "got about",
+  "3": "get about"
+ },
+ "L35": {
+  "0": "got about",
+  "1": "got about",
+  "2": "got about"
+ },
+ "L36": {
+  "0": "get round / circumvent / bypass",
+  "1": "got round",
+  "2": "got round"
+ },
+ "L37": {
+  "0": "put",
+  "1": "put",
+  "2": "put"
+ },
+ "L38": {
+  "0": "get on",
+  "1": "gets on",
+  "2": "got on with"
+ },
+ "L39": {
+  "0": "progressing",
+  "1": "progressing",
+  "2": "progressing"
+ },
+ "L40": {
+  "0": "recovering from",
+  "1": "recover from",
+  "2": "recover from"
+ },
+ "L41": {
+  "0": "overcame",
+  "1": "overcome",
+  "2": "overcame",
+  "3": "overcome"
+ },
+ "L42": {
+  "0": "win over",
+  "1": "won over"
+ },
+ "L43": {
+  "0": "circumvent / bypass / get around",
+  "1": "circumvent / bypass / get around",
+  "2": "circumvent / bypass / get around"
+ },
+ "L45": {
+  "0": "donated",
+  "1": "donates",
+  "2": "donate"
+ },
+ "L46": {
+  "0": "betrayed himself",
+  "1": "betrayed herself",
+  "2": "betray yourself"
+ },
+ "L47": {
+  "0": "relented / caved in / caved / yielded",
+  "1": "yielded to / caved in to / caved to / succumbed to",
+  "2": "yield to / cave in to / cave to / succumb to"
+ },
+ "L48": {
+  "0": "handed out / distributed",
+  "1": "handed out / distributed",
+  "2": "handed out / distributed"
+ },
+ "L49": {
+  "1": "quit / stopped",
+  "2": "quit / stopped"
+ },
+ "L50": {
+  "0": "surrender",
+  "1": "relinquish / surrender"
+ },
+ "L51": {
+  "0": "surrendered to",
+  "1": "surrendered"
+ },
+ "L52": {
+  "0": "taken a look at",
+  "1": "took a look at",
+  "2": "took a look at"
+ },
+ "L53": {
+  "0": "look",
+  "2": "look"
+ },
+ "L54": {
+  "0": "glowered at",
+  "1": "glowered at",
+  "2": "glowered at"
+ },
+ "L55": {
+  "1": "scowl"
+ },
+ "L56": {
+  "0": "egregious / blatant",
+  "1": "egregious / blatant / flagrant",
+  "2": "flagrant / blatant / egregious"
+ },
+ "L57": {
+  "0": "glare",
+  "1": "glare"
+ },
+ "L58": {
+  "1": "gather",
+  "2": "gathered / collected",
+  "3": "gathered from"
+ },
+ "L59": {
+  "0": "caught sight of",
+  "1": "caught sight of",
+  "2": "caught sight of"
+ },
+ "L60": {
+  "1": "sparkled",
+  "2": "sparkled"
+ },
+ "L61": {
+  "0": "razzle-dazzle",
+  "1": "razzle-dazzle",
+  "2": "razzle-dazzle"
+ },
+ "L62": {
+  "0": "glittered"
+ },
+ "L63": {
+  "0": "glitz",
+  "1": "glitz",
+  "2": "glitz"
+ },
+ "L64": {
+  "0": "saturated",
+  "1": "saturated",
+  "2": "saturated"
+ },
+ "L65": {
+  "1": "oversupply of"
+ },
+ "L67": {
+  "0": "glutton"
+ },
+ "L69": {
+  "0": "slips by",
+  "1": "slipped by"
+ },
+ "L71": {
+  "0": "take up"
+ },
+ "L72": {
+  "0": "experiencing",
+  "1": "experienced",
+  "2": "experiencing"
+ },
+ "L73": {
+  "0": "is passed / is approved",
+  "2": "is approved"
+ },
+ "L74": {
+  "0": "exploded"
+ },
+ "L75": {
+  "1": "passed off"
+ },
+ "L76": {
+  "1": "got lost",
+  "2": "got lost"
+ },
+ "L77": {
+  "0": "askew",
+  "1": "askew",
+  "2": "askew"
+ },
+ "L79": {
+  "0": "went awry",
+  "1": "went awry"
+ },
+ "L80": {
+  "0": "awry",
+  "1": "awry"
+ },
+ "L82": {
+  "0": "gone under / gone bust",
+  "1": "went under / went bust",
+  "2": "go bust / go under"
+ },
+ "L83": {
+  "0": "provoked",
+  "1": "provoked",
+  "2": "provoke",
+  "4": "provoke"
+ },
+ "L84": {
+  "0": "seized / snatched",
+  "1": "seized",
+  "2": "snatch at"
+ },
+ "L85": {
+  "0": "seize",
+  "1": "seized",
+  "2": "seized"
+ },
+ "L86": {
+  "0": "ranked",
+  "1": "classified / ranked",
+  "2": "classified"
+ },
+ "L88": {
+  "0": "rank",
+  "2": "rank"
+ },
+ "L89": {
+  "0": "evaluated",
+  "2": "rate"
+ },
+ "L90": {
+  "1": "mark",
+  "2": "marks"
+ },
+ "L91": {
+  "0": "College graduates",
+  "1": "college graduates"
+ },
+ "L92": {
+  "0": "master's degree",
+  "1": "master's degree",
+  "2": "master's degree"
+ },
+ "L93": {
+  "0": "bachelor's degree",
+  "1": "bachelor's degree",
+  "2": "bachelor's degree"
+ },
+ "L94": {
+  "0": "master's degree",
+  "1": "master's degree",
+  "2": "master's degree"
+ },
+ "L95": {
+  "1": "doctorate",
+  "2": "doctorate"
+ },
+ "L96": {
+  "1": "awarded"
+ },
+ "L97": {
+  "1": "subsidies",
+  "2": "subsidy"
+ },
+ "L98": {
+  "0": "concede that / admit that",
+  "1": "concede that / admit that"
+ },
+ "L99": {
+  "0": "wrestled",
+  "1": "wrestled with"
+ },
+ "L100": {
+  "0": "wrestling with",
+  "1": "wrestling with",
+  "2": "wrestling with"
+ },
+ "L101": {
+  "0": "understand / comprehend / catch on to",
+  "1": "understand / comprehend / take in",
+  "2": "understand / comprehend / fathom"
+ },
+ "L102": {
+  "0": "understanding of",
+  "1": "understanding of",
+  "2": "understanding of"
+ },
+ "L103": {
+  "0": "mourn",
+  "1": "mourned / mourned for",
+  "2": "mourning / mourning for"
+ },
+ "L104": {
+  "0": "saddens / distresses",
+  "1": "saddened / distressed",
+  "2": "saddened / distressed"
+ },
+ "L105": {
+  "0": "serious",
+  "2": "severe / serious",
+  "3": "serious"
+ },
+ "L106": {
+  "0": "grasped / clutched",
+  "1": "clutched / grasped",
+  "2": "grasped"
+ },
+ "L107": {
+  "0": "compelling / enthralling / captivating",
+  "1": "compelling / enthralling"
+ },
+ "L108": {
+  "0": "pull yourself together",
+  "1": "pulled herself together",
+  "2": "Pull yourself together"
+ },
+ "L109": {
+  "0": "tackle / address",
+  "1": "tackle / address",
+  "2": "tackle / address"
+ },
+ "L110": {
+  "0": "gripped"
+ },
+ "L111": {
+  "0": "clung to",
+  "1": "clung to"
+ },
+ "L112": {
+  "0": "fumbled for",
+  "1": "fumbling for",
+  "2": "fumbled for",
+  "3": "fumbling"
+ },
+ "L113": {
+  "0": "groped for"
+ },
+ "L114": {
+  "0": "bungled",
+  "1": "bungled"
+ },
+ "L115": {
+  "0": "expanded",
+  "2": "increased"
+ },
+ "L116": {
+  "0": "expansion",
+  "1": "expansion",
+  "2": "expansion"
+ },
+ "L117": {
+  "0": "becoming",
+  "1": "become",
+  "2": "become"
+ },
+ "L118": {
+  "0": "begrudges",
+  "1": "begrudge",
+  "2": "begrudge"
+ },
+ "L119": {
+  "0": "reluctantly / unwillingly",
+  "1": "reluctantly",
+  "2": "reluctantly / unwillingly"
+ },
+ "L120": {
+  "0": "begrudged",
+  "1": "begrudge",
+  "2": "begrudged"
+ },
+ "L121": {
+  "0": "holds a grudge against",
+  "1": "hold a grudge against",
+  "2": "holds a grudge against"
+ },
+ "L122": {
+  "0": "complaining",
+  "1": "complaining",
+  "2": "complained",
+  "3": "complaining about"
+ },
+ "L123": {
+  "0": "complaints / moans",
+  "1": "complaints"
+ },
+ "L124": {
+  "0": "grumble",
+  "1": "grumble"
+ },
+ "L125": {
+  "0": "bargain over",
+  "1": "bargain",
+  "2": "bargained over"
+ },
+ "L126": {
+  "0": "acclaimed as",
+  "1": "acclaimed as"
+ },
+ "L127": {
+  "1": "banged"
+ },
+ "L128": {
+  "0": "hindered / impeded",
+  "1": "hindered / impeded",
+  "2": "hinder"
+ },
+ "L129": {
+  "0": "crippled / hobbled",
+  "1": "hobbled / crippled",
+  "2": "cripple / hobble"
+ },
+ "L130": {
+  "0": "passed down / passed on",
+  "1": "passed down / passed on",
+  "2": "pass on / pass down"
+ },
+ "L131": {
+  "0": "submit",
+  "1": "submit",
+  "2": "submitted"
+ }
+}

@@ -167,3 +167,54 @@ Corrigé d'office : a sketch retiré de an outline « silhouette, contour » (cr
 - to conceal / to withhold : « withhold » = retenir, ne pas divulguer/verser (information, paiement), pas cacher physiquement : partiel.
 - to convey / to pass on : « pass on » = transmettre (un message) à qn ; ne rend pas « exprimer » une idée/un sentiment : partiel.
 - a deal / a bargain : « bargain » = bonne affaire ; au sens d'accord (« strike a bargain ») vieilli/limité à des collocations figées : partiel.
+
+## Lot 13 (14 novembre 2026)
+- Corrigé d'office : to alleviate et to relieve retirés de to ease « assouplir (politique, règles) » (relèvent de l'autre sens, « atténuer, soulager », qui les garde).
+- to deceive sb / to delude sb : emploi restreint, surtout pronominal (delude oneself) ou « delude sb into ».
+- to delay / to set sth back : retarder un progrès, faire reculer ; pas reporter une décision.
+- to delay / to stall sth : bloquer, enrayer ; pas reporter.
+- to devise / to contrive : connotation de manigance ou d'artifice.
+- the deceased / the departed : euphémisme littéraire ou religieux, surtout collectif.
+- to discard / to junk : familier, mettre au rebut.
+- to discard / to scrap : mettre à la ferraille, abandonner un projet : partiel.
+- to disprove / to falsify : sens « réfuter » limité à l'épistémologie ; faux ami courant (falsifier).
+- to disapprove of / to deprecate : registre très soutenu.
+- to distort / to garble : rendre confus, brouiller (un message) : sens différent.
+- earnings (bénéfices d'une entreprise) / an income : revenu d'un particulier : partiel.
+- to emerge / to spring up : surgir, apparaître en nombre : partiel.
+- an endeavour / an attempt : tentative, pas effort soutenu ou entreprise : partiel.
+
+## Lot 14 (14 novembre 2026)
+- to enhance / to set sth off : mettre en valeur par contraste (esthétique) : partiel.
+- to develop / to evolve : évoluer, élaborer ; ne convient pas pour développer des compétences ou un produit.
+- to entail / to imply sth : sous-entendre, laisser supposer : sens différent.
+- to erode / to undermine sth : figuré seulement (saper).
+- to escalate / to intensify : ne rend ni « dégénérer en » ni la flambée des coûts : partiel.
+- to exhaust / to wear out : user un objet, épuiser une personne : sens différent.
+- to expand / to increase : quantités, pas une économie, un marché, une entreprise.
+- to expect / to anticipate : prévoir, pas « attendre qn/qch » : partiel.
+- to explode / to go off : bombe, alarme seulement ; to explode / to burst : éclater (ballon, pneu).
+- to extend / to prolong : faire durer ; pas un délai, des horaires, une route.
+- to fabricate / to trump sth up : emploi restreint (trumped-up charges).
+- to fade / to wear off : effet d'un médicament, d'une nouveauté : restreint.
+- a failure / a breakdown : panne, pas défaillance cardiaque ou de marché : partiel.
+- a fake / a sham : procédure, organisation ; pas une œuvre ni une personne.
+- to fall off / to lessen, to wane : peu naturels pour ventes, demande, fréquentation.
+- repercussions / the aftermath : période qui suit un événement : sens différent.
+- a shortfall / a deficit : sens budgétaire seulement : partiel.
+- to feed / to nourish : valeur nutritive, littéraire au figuré : restreint.
+- to flare up / to blaze : flamboyer (feu), pas s'emporter.
+- to focus on / to zero in on, to home in on : cibler précisément : restreint.
+
+## Lot 15 (14 novembre 2026)
+- Corrigé d'office : fussy et picky retirés de finicky « minutieux, délicat (tâche) » (s'appliquent aux personnes ; la ligne finicky « difficile, tatillon » les garde). Synonyme juste à envisager : fiddly.
+- the foundation(s) / the underpinning : surtout au pluriel (underpinnings).
+- to garner / to obtain : trop neutre pour acclaim, support, followers.
+- to give up sth / to waive sth : droit, frais, règle seulement.
+- a glare / a glower ; a scowl / a glower : nom rare.
+- a glutton / a gourmand : amateur de bonne chère, non péjoratif (pourtant gourmand → glutton admis dans les exemples de la ligne gourmand).
+- to nibble / to munch : mâcher bruyamment, pas grignoter.
+- to go by / to elapse : registre soutenu, peu naturel avec le temps qui passe.
+- to go through / to undergo : opération, changement, examen : restreint.
+- to go awry / to go askew : emploi figuré rare.
+- to grant / to bestow, to confer : honneurs, titres, diplômes ; soutenu.
