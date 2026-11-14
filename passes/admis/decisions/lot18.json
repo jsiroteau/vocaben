@@ -1,0 +1,532 @@
+{
+ "L0": {
+  "0": "makes",
+  "1": "made",
+  "2": "makes"
+ },
+ "L1": {
+  "0": "maker",
+  "1": "maker",
+  "2": "makers"
+ },
+ "L2": {
+  "0": "fabricated",
+  "1": "fabricating"
+ },
+ "L3": {
+  "1": "plant / facility"
+ },
+ "L4": {
+  "0": "spoiled / spoilt",
+  "1": "spoiled / spoilt",
+  "2": "spoiled / spoilt"
+ },
+ "L5": {
+  "1": "sidelined",
+  "2": "sidelined"
+ },
+ "L6": {
+  "0": "equal",
+  "1": "equal"
+ },
+ "L7": {
+  "0": "go with",
+  "1": "go with",
+  "2": "went with"
+ },
+ "L8": {
+  "1": "tally with"
+ },
+ "L10": {
+  "0": "subject",
+  "1": "subject / issue"
+ },
+ "L11": {
+  "2": "counts"
+ },
+ "L12": {
+  "2": "signifies"
+ },
+ "L13": {
+  "2": "significant"
+ },
+ "L14": {
+  "0": "intended to",
+  "1": "intended to",
+  "2": "intending to"
+ },
+ "L15": {
+  "0": "entails / involves",
+  "1": "entail / involve",
+  "2": "entail / involve"
+ },
+ "L16": {
+  "0": "interfere in",
+  "1": "interfere in",
+  "2": "interferes in"
+ },
+ "L17": {
+  "0": "interference in",
+  "1": "interference in"
+ },
+ "L20": {
+  "1": "amalgamated",
+  "2": "combined / amalgamated"
+ },
+ "L21": {
+  "0": "amalgamation",
+  "1": "amalgamation"
+ },
+ "L22": {
+  "0": "imitates",
+  "1": "imitate"
+ },
+ "L23": {
+  "0": "socialize with",
+  "1": "socialized with"
+ },
+ "L24": {
+  "0": "deceived",
+  "1": "deceived",
+  "2": "deceive"
+ },
+ "L25": {
+  "0": "deceptive",
+  "1": "deceptive",
+  "2": "deceptive"
+ },
+ "L26": {
+  "0": "alleviate / reduce",
+  "1": "alleviate / reduce",
+  "2": "reduce"
+ },
+ "L27": {
+  "0": "extenuating circumstances",
+  "1": "extenuating circumstances"
+ },
+ "L28": {
+  "0": "Combine / Blend",
+  "2": "blends / combines"
+ },
+ "L29": {
+  "0": "confuse",
+  "2": "confuse"
+ },
+ "L30": {
+  "0": "involved in",
+  "1": "involved in",
+  "2": "involved with"
+ },
+ "L31": {
+  "0": "rallied",
+  "2": "rallied"
+ },
+ "L33": {
+  "0": "have a second job",
+  "1": "have a second job"
+ },
+ "L34": {
+  "0": "pondering",
+  "1": "ponder",
+  "2": "pondered"
+ },
+ "L35": {
+  "0": "mulling over",
+  "1": "mulled over",
+  "2": "mull over"
+ },
+ "L36": {
+  "0": "summoned / summoned up",
+  "2": "gathered",
+  "3": "gather"
+ },
+ "L37": {
+  "0": "pestered",
+  "1": "pestering",
+  "3": "pestering"
+ },
+ "L38": {
+  "0": "persistent",
+  "1": "persistent",
+  "2": "persistent",
+  "3": "persistent"
+ },
+ "L39": {
+  "0": "hassling / badgering",
+  "1": "badgering / hassling",
+  "2": "badgered"
+ },
+ "L40": {
+  "0": "spotted",
+  "1": "spot"
+ },
+ "L41": {
+  "1": "attention"
+ },
+ "L42": {
+  "0": "sign",
+  "1": "sign"
+ },
+ "L43": {
+  "1": "notification",
+  "2": "notification"
+ },
+ "L44": {
+  "0": "observed",
+  "2": "observed"
+ },
+ "L45": {
+  "0": "fosters / encourages",
+  "1": "foster / cultivate / encourage",
+  "2": "foster / encourage / cultivate"
+ },
+ "L46": {
+  "0": "obscures",
+  "1": "obscure"
+ },
+ "L47": {
+  "0": "happened",
+  "1": "happen",
+  "2": "happened"
+ },
+ "L48": {
+  "2": "incidents / events"
+ },
+ "L49": {
+  "0": "reoccurs / happens again",
+  "1": "reoccur",
+  "2": "reoccurring"
+ },
+ "L50": {
+  "0": "recurring",
+  "1": "recurring / repeated",
+  "2": "recurring"
+ },
+ "L51": {
+  "0": "make up for / compensate for"
+ },
+ "L52": {
+  "2": "toppled"
+ },
+ "L53": {
+  "1": "surpasses",
+  "2": "surpass"
+ },
+ "L54": {
+  "0": "excelled himself",
+  "1": "excelled himself",
+  "2": "excelled herself"
+ },
+ "L55": {
+  "0": "prohibit / ban / forbid",
+  "1": "banned / prohibited",
+  "2": "banned / prohibited"
+ },
+ "L56": {
+  "2": "bandits"
+ },
+ "L57": {
+  "0": "outpaced",
+  "1": "outpaced",
+  "2": "outpaced",
+  "3": "overtook / outpaced"
+ },
+ "L58": {
+  "0": "got over"
+ },
+ "L59": {
+  "0": "overwhelmed by",
+  "1": "Overwhelmed with",
+  "2": "overwhelmed by"
+ },
+ "L60": {
+  "0": "revamp",
+  "1": "revamp",
+  "2": "revamp"
+ },
+ "L61": {
+  "1": "revamp"
+ },
+ "L62": {
+  "0": "looked out onto",
+  "1": "looks out onto",
+  "2": "looking out onto"
+ },
+ "L63": {
+  "0": "disregard",
+  "1": "missed"
+ },
+ "L64": {
+  "0": "excuse",
+  "1": "condone",
+  "2": "excuse"
+ },
+ "L65": {
+  "0": "omission",
+  "1": "omission",
+  "2": "omission"
+ },
+ "L66": {
+  "0": "supervision",
+  "1": "supervision",
+  "2": "supervision"
+ },
+ "L67": {
+  "0": "prevail over",
+  "1": "prevails over",
+  "2": "prevail over"
+ },
+ "L68": {
+  "0": "paramount",
+  "1": "paramount",
+  "2": "paramount",
+  "4": "paramount"
+ },
+ "L69": {
+  "1": "overruled"
+ },
+ "L70": {
+  "1": "eclipsed",
+  "2": "eclipsed"
+ },
+ "L71": {
+  "0": "outstripped / passed",
+  "1": "pass",
+  "2": "outstripped / passed"
+ },
+ "L72": {
+  "0": "toppled",
+  "1": "topple",
+  "2": "toppled"
+ },
+ "L73": {
+  "0": "tipped over"
+ },
+ "L74": {
+  "0": "tipped over",
+  "1": "tipped over"
+ },
+ "L75": {
+  "0": "Due to",
+  "1": "Due to",
+  "2": "due to"
+ },
+ "L77": {
+  "0": "admit",
+  "1": "admitted",
+  "2": "admit"
+ },
+ "L78": {
+  "1": "play up to / flatter",
+  "3": "playing up to / flattering"
+ },
+ "L79": {
+  "0": "leave",
+  "1": "leave"
+ },
+ "L80": {
+  "0": "let go of",
+  "2": "let go of"
+ },
+ "L81": {
+  "0": "talk down to",
+  "1": "talked down to",
+  "2": "talk down to"
+ },
+ "L82": {
+  "0": "frequenting",
+  "1": "frequented",
+  "2": "frequent"
+ },
+ "L83": {
+  "0": "clear / settle",
+  "1": "cleared",
+  "2": "clear / settle"
+ },
+ "L84": {
+  "2": "repay"
+ },
+ "L86": {
+  "0": "bribed / bought off",
+  "1": "bought off",
+  "2": "bribing / buying off"
+ },
+ "L87": {
+  "0": "bribes / kickbacks",
+  "1": "bribes / kickbacks"
+ },
+ "L88": {
+  "0": "is worthwhile",
+  "1": "be worthwhile / bear fruit",
+  "2": "bore fruit",
+  "4": "bears fruit / is worthwhile"
+ },
+ "L89": {
+  "1": "return / reward"
+ },
+ "L92": {
+  "0": "carry out",
+  "1": "carry out"
+ },
+ "L93": {
+  "0": "artist / entertainer",
+  "1": "entertainers",
+  "2": "artists"
+ },
+ "L94": {
+  "0": "pervaded",
+  "1": "pervaded",
+  "2": "pervades"
+ },
+ "L95": {
+  "0": "collect / fetch",
+  "1": "collect / fetch"
+ },
+ "L96": {
+  "0": "acquiring",
+  "1": "acquired",
+  "2": "acquired"
+ },
+ "L97": {
+  "0": "learned / learnt",
+  "1": "learned / learnt",
+  "2": "learned / learnt",
+  "3": "learn"
+ },
+ "L98": {
+  "0": "improve / perk up",
+  "1": "improves / perks up"
+ },
+ "L100": {
+  "0": "upswing",
+  "1": "upswing / economic recovery",
+  "2": "upswing / pick-up"
+ },
+ "L101": {
+  "0": "pinpoint / identify",
+  "1": "pinpoint / identify",
+  "2": "pinpoint / identify"
+ },
+ "L102": {
+  "1": "locate",
+  "2": "locate"
+ },
+ "L103": {
+  "0": "pin down / identify",
+  "1": "identify / pin down",
+  "2": "identify / pin down"
+ },
+ "L104": {
+  "0": "appease / pacify",
+  "1": "appease / pacify",
+  "2": "appease / pacify"
+ },
+ "L105": {
+  "2": "scourge"
+ },
+ "L106": {
+  "0": "tormented",
+  "1": "tormented"
+ },
+ "L107": {
+  "0": "beset by",
+  "1": "beset by",
+  "2": "beset by"
+ },
+ "L108": {
+  "0": "downplay",
+  "2": "downplay",
+  "3": "downplay",
+  "4": "downplay"
+ },
+ "L109": {
+  "0": "highlight",
+  "1": "highlights",
+  "2": "highlights",
+  "3": "highlight",
+  "4": "highlighting"
+ },
+ "L110": {
+  "0": "panders to",
+  "1": "panders to",
+  "2": "pander to"
+ },
+ "L111": {
+  "0": "begged for",
+  "1": "begged / implored",
+  "2": "begging for"
+ },
+ "L112": {
+  "2": "entreaty"
+ },
+ "L113": {
+  "0": "promised",
+  "1": "vowed / promised",
+  "2": "vowed / promised"
+ },
+ "L114": {
+  "0": "vow / commitment",
+  "1": "commitment",
+  "2": "commitment / undertaking / vow"
+ },
+ "L115": {
+  "2": "keep at / persevere at",
+  "3": "persevering"
+ },
+ "L116": {
+  "0": "plunged / slumped / tumbled",
+  "1": "plunged",
+  "2": "plunged / tumbled / slumped"
+ },
+ "L117": {
+  "0": "plummeted",
+  "1": "plummeted"
+ },
+ "L118": {
+  "0": "plummeted",
+  "1": "plummeted"
+ },
+ "L120": {
+  "0": "noted / observed",
+  "1": "noted / observed",
+  "2": "noting"
+ },
+ "L121": {
+  "1": "suggests / indicates",
+  "2": "suggest / indicate"
+ },
+ "L122": {
+  "0": "useless",
+  "1": "useless / futile",
+  "2": "useless"
+ },
+ "L123": {
+  "0": "put off / deferred",
+  "1": "put off / deferred",
+  "2": "put off / deferred"
+ },
+ "L124": {
+  "0": "lauded",
+  "1": "lauded",
+  "2": "lauded"
+ },
+ "L125": {
+  "0": "acclaim"
+ },
+ "L126": {
+  "1": "valued"
+ },
+ "L127": {
+  "0": "reassessment",
+  "1": "reassessment",
+  "2": "reassessment"
+ },
+ "L128": {
+  "0": "hastened / accelerated"
+ },
+ "L129": {
+  "0": "prevents",
+  "1": "prevents",
+  "2": "prevent"
+ }
+}

@@ -218,3 +218,65 @@ Corrigé d'office : a sketch retiré de an outline « silhouette, contour » (cr
 - to go through / to undergo : opération, changement, examen : restreint.
 - to go awry / to go askew : emploi figuré rare.
 - to grant / to bestow, to confer : honneurs, titres, diplômes ; soutenu.
+
+## Lot 16 (14 novembre 2026)
+- to deliver / to distribute : distribuer (répartir, diffuser), pas livrer à un destinataire
+- to bungle / to fumble : tâtonner, manier maladroitement (fumble the ball), pas gâcher un travail
+- harmful / noxious : nocif au sens de toxique (gaz, fumées), synonyme partiel
+- to heal / to cure : cure ne s'emploie ni pour une blessure ni intransitivement (wounds heal)
+- to cure / to heal : heal sb of a disease est archaïque ou biblique ; heal = cicatriser
+- harbinger / forerunner : précurseur, devancier (ce qui précède), pas signe annonciateur
+- a hint / an allusion : allusion = référence indirecte, pas indice ni indication (drop a hint, give no hint)
+- to hold back / to keep back : garder pour soi, retenir (information, somme), pas freiner
+- to cling to / to clutch at : essayer de saisir désespérément (clutch at straws), pas rester accroché
+- to improve / to better : surtout better one's lot, better a record ; peu naturel avec productivité, communication, accès
+- to improve / to look up : limité à things / prospects are looking up, emploi trop restreint
+- an improvement / an enhancement : valorisation, ajout d'une fonction, pas progrès (improvement in / on)
+- an injury / a wound : plaie (arme, coup), pas blessure d'accident ou de sport
+
+## Lot 17 (14 novembre 2026)
+- a knock-on effect / a spillover : synonyme partiel (débordement, retombée sur un autre domaine), ne s'emploie pas comme « effect on » ; il faudrait « spillover effect »
+- to last / to hold out : synonyme partiel, hold out = tenir, résister (provisions, personne), ne s'emploie pas pour une durée (réunion, effets, beau temps)
+- plentiful / lavish : faux synonyme ici, lavish = somptueux ou généreux, pas « disponible en abondance » (jobs, fish, energy)
+- leading / principal : synonyme partiel, principal = principal parmi des éléments, pas « de premier plan » (the principal car manufacturer, a principal figure : non naturel)
+- to lessen / to fall off : synonyme partiel, intransitif et limité au déclin (ventes, fréquentation) ; ne convient ni au transitif ni à « s'atténuer » (pluie)
+- limp / floppy : synonyme partiel, floppy = qui pend mollement (oreilles, chapeau), ne convient pas au sens « faible » (excuse, poignée de main) ni aux fleurs fanées
+- a lame duck / an outgoing official : périphrase partielle, perd l'idée d'élu privé de pouvoir réel
+- floppy / limp : synonyme partiel, limp = mou, sans tenue (fleurs, poignée de main), pas pour des oreilles pendantes ou un chapeau souple
+- to loathe / to abhor : synonyme partiel, répulsion morale et registre soutenu (abhor violence), ne convient pas à une aversion ordinaire (studying, queues, rivals)
+- hateful / obnoxious : synonyme partiel, obnoxious = insupportable, désagréable, ni « haineux » ni « odieux » au sens fort
+- a lobby / a hall : synonyme partiel, ambigu (salle, couloir) ; « hotel hall » / « theatre hall » ne désignent pas le hall d'entrée
+- a lobby / a vestibule : synonyme partiel, petite entrée (maison, église), rare, ne convient pas à un hall d'hôtel ou de théâtre
+- to long for sth / to crave sth : synonyme partiel, envie irrépressible souvent physique (nourriture, drogue, attention), pas l'aspiration ou la nostalgie
+- a longing / a craving : synonyme partiel, envie physique irrépressible, ne convient pas à « longing for change / to travel / to study »
+- to lure / to bait : faux synonyme, bait = garnir d'un appât (hameçon, piège) ou provoquer qn, pas attirer qn quelque part
+- to make out / to get by : synonyme partiel, get by = s'en sortir tout juste (avec peu de moyens), ne convient pas à « how are you making out / doing well »
+- make-up / cosmetics : synonyme partiel, cosmetics = produits de beauté en général (industrie), pas le maquillage porté (wear, wipe off, in make-up)
+- to make up for sth / to make good sth : synonyme partiel, make good = réparer un dommage, rembourser une perte, ne convient pas à « compenser » une qualité ou un défaut
+
+## Lot 18 (14 novembre 2026)
+- a manufacturer / an industrialist : désigne une personne (patron d'industrie), pas une entreprise fabricante
+- matter / substance : « une substance » (matière particulière), pas la matière en général
+- to mean / to stand for : réservé aux sigles et symboles (représenter)
+- to melt / to dissolve : dissoudre (dans un liquide), pas fondre
+- molten / melted : melted pour beurre, neige, chocolat ; molten pour métal, lave (haute température)
+- to merge / to fuse (with) : fusion physique ou d'idées, pas fusion d'entreprises ni de routes
+- to monitor / to keep an eye on : familier, sans le sens de surveillance technique ou réglementaire
+- to pester / to nag : nag = reprocher, rabâcher (entourage proche), sens plus étroit
+- to notice / to observe : observer (attentivement, soutenu), ne rend pas « remarquer »
+- a notice / an announcement : annonce (message, déclaration), pas un écriteau ou une affiche
+- to note / to point out : faire remarquer à autrui, pas constater ou noter
+- to occur / to take place : événement organisé, ne convient pas pour accidents, erreurs, explosions
+- to offset / to set off : vieilli et ambigu (déclencher, partir)
+- to oust / to supplant : supplanter, prendre la place de, pas évincer
+- to outdo / to exceed : dépasser une limite ou une quantité, pas surpasser qn
+- to override / to triumph (over) : triompher de, vaincre, pas primer sur
+- to overtake / to outpace : aller plus vite que, pas dépasser ou doubler
+- to own / to possess : soutenu, surtout qualités ou facultés, peu naturel pour des biens
+- to part from sb / to separate from sb : se séparer durablement (couple), pas quitter momentanément
+- to be plagued by / to be assailed by : surtout doutes, critiques, pas retards ou problèmes durables
+- to play down / to belittle : rabaisser, dénigrer, pas minimiser
+- to play up to / to flatter : flatter qn, ne se construit pas avec des peurs, une colère, un besoin
+- pointless / vain : soutenu, s'emploie surtout en « in vain » ou attributif littéraire
+- pointless / of no avail : expression figée soutenue, ne remplace pas pointless
+- Corrigé d’office : back pay retiré de la ligne arrears (cas particulier), gardé à sens unique sur back pay (LINT_OK).
