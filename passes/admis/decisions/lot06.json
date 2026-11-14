@@ -1,0 +1,512 @@
+{
+ "L0": {
+  "1": "dull"
+ },
+ "L1": {
+  "0": "milestone",
+  "1": "milestone"
+ },
+ "L2": {
+  "2": "scenery"
+ },
+ "L4": {
+  "0": "big / sizeable",
+  "1": "big / sizeable",
+  "2": "big / sizeable"
+ },
+ "L5": {
+  "0": "for the most part / to a large extent",
+  "1": "to a large extent",
+  "2": "to a large extent"
+ },
+ "L6": {
+  "0": "dormant",
+  "1": "dormant"
+ },
+ "L7": {
+  "1": "attorneys"
+ },
+ "L8": {
+  "0": "suit",
+  "1": "suit",
+  "2": "suit"
+ },
+ "L9": {
+  "3": "legislation"
+ },
+ "L10": {
+  "0": "laxness",
+  "1": "laxness"
+ },
+ "L11": {
+  "0": "relaxed",
+  "2": "relaxed"
+ },
+ "L12": {
+  "2": "strata"
+ },
+ "L13": {
+  "0": "man in the street",
+  "1": "man in the street"
+ },
+ "L14": {
+  "0": "talk",
+  "1": "talk",
+  "2": "talks"
+ },
+ "L17": {
+  "0": "bequest",
+  "1": "bequests"
+ },
+ "L18": {
+  "0": "legacy",
+  "1": "Legacies",
+  "2": "legacy"
+ },
+ "L20": {
+  "0": "deadly",
+  "1": "deadly / fatal",
+  "3": "deadly / fatal"
+ },
+ "L21": {
+  "0": "flat",
+  "1": "flat",
+  "2": "flat"
+ },
+ "L22": {
+  "0": "sensible",
+  "1": "sensible",
+  "2": "sensible / reasonable"
+ },
+ "L23": {
+  "0": "responsible",
+  "1": "responsible for",
+  "2": "responsible for"
+ },
+ "L24": {
+  "1": "apt to"
+ },
+ "L25": {
+  "0": "probability of",
+  "1": "probability of",
+  "2": "probability"
+ },
+ "L27": {
+  "0": "mainstay",
+  "1": "cornerstone",
+  "2": "pillar / cornerstone"
+ },
+ "L30": {
+  "0": "earn a living / make a living",
+  "1": "earn a living / make a living",
+  "2": "earned a living / made a living"
+ },
+ "L31": {
+  "2": "Towering"
+ },
+ "L32": {
+  "0": "attic",
+  "1": "attic",
+  "2": "attic"
+ },
+ "L33": {
+  "0": "noble",
+  "1": "noble"
+ },
+ "L35": {
+  "0": "loft",
+  "1": "loft",
+  "2": "lofts"
+ },
+ "L36": {
+  "0": "profitable",
+  "1": "profitable",
+  "2": "profitable"
+ },
+ "L37": {
+  "0": "chunk",
+  "1": "chunk",
+  "2": "mass / chunk"
+ },
+ "L38": {
+  "1": "one-off payment",
+  "2": "one-off payment"
+ },
+ "L39": {
+  "0": "principal",
+  "2": "principal"
+ },
+ "L40": {
+  "1": "conventional"
+ },
+ "L41": {
+  "0": "linchpin",
+  "1": "linchpin"
+ },
+ "L42": {
+  "0": "improvised",
+  "1": "improvised"
+ },
+ "L43": {
+  "0": "unease",
+  "1": "unease"
+ },
+ "L44": {
+  "0": "malaise"
+ },
+ "L45": {
+  "0": "malevolent"
+ },
+ "L46": {
+  "0": "spite",
+  "1": "spite",
+  "2": "spite / ill will"
+ },
+ "L47": {
+  "2": "saleable"
+ },
+ "L48": {
+  "0": "nonconformist",
+  "1": "nonconformist",
+  "2": "nonconformist",
+  "3": "nonconformists"
+ },
+ "L49": {
+  "0": "chaos",
+  "1": "chaos",
+  "2": "chaos / havoc"
+ },
+ "L50": {
+  "0": "paltry",
+  "1": "scanty",
+  "2": "paltry"
+ },
+ "L51": {
+  "0": "meagre",
+  "2": "meagre"
+ },
+ "L52": {
+  "0": "meagre",
+  "1": "meagre",
+  "2": "meagre"
+ },
+ "L53": {
+  "0": "average",
+  "1": "average"
+ },
+ "L54": {
+  "0": "nasty",
+  "1": "nasty",
+  "2": "nasty"
+ },
+ "L55": {
+  "0": "stingy / tight-fisted / cheap",
+  "1": "stingy / tight-fisted / cheap",
+  "2": "stingy / tight-fisted / cheap"
+ },
+ "L56": {
+  "0": "meanwhile",
+  "1": "Meanwhile",
+  "2": "Meanwhile"
+ },
+ "L57": {
+  "2": "In the meantime"
+ },
+ "L58": {
+  "0": "volatile / unpredictable",
+  "1": "volatile / unpredictable"
+ },
+ "L59": {
+  "0": "only / simply",
+  "1": "only / simply",
+  "2": "simply / only"
+ },
+ "L60": {
+  "0": "shambles",
+  "2": "shambles"
+ },
+ "L61": {
+  "1": "fouled up",
+  "2": "fouled up",
+  "3": "foul up"
+ },
+ "L62": {
+  "1": "fooling around",
+  "2": "fooling around"
+ },
+ "L63": {
+  "1": "landmark"
+ },
+ "L64": {
+  "0": "tiny",
+  "2": "tiny"
+ },
+ "L65": {
+  "2": "in minute detail"
+ },
+ "L66": {
+  "0": "Sundry"
+ },
+ "L67": {
+  "0": "misdeeds / peccadilloes",
+  "1": "misdeeds / peccadilloes",
+  "2": "peccadilloes / misdeeds"
+ },
+ "L68": {
+  "0": "degrade",
+  "1": "belittle",
+  "2": "degrading"
+ },
+ "L71": {
+  "0": "doubts / qualms",
+  "1": "doubts",
+  "2": "doubts / qualms",
+  "3": "doubts"
+ },
+ "L72": {
+  "0": "ill-advised / mistaken",
+  "2": "ill-advised",
+  "3": "mistaken"
+ },
+ "L73": {
+  "0": "misguided"
+ },
+ "L74": {
+  "0": "crowd",
+  "1": "Crowds / Hordes",
+  "2": "crowd"
+ },
+ "L75": {
+  "0": "besieged",
+  "1": "besieged",
+  "2": "besieged"
+ },
+ "L76": {
+  "0": "tycoon / magnate",
+  "1": "tycoons / magnates"
+ },
+ "L77": {
+  "0": "mogul / magnate",
+  "1": "moguls / magnates",
+  "2": "magnate / mogul"
+ },
+ "L78": {
+  "0": "historic",
+  "1": "historic"
+ },
+ "L79": {
+  "1": "impetus"
+ },
+ "L80": {
+  "0": "lesson",
+  "2": "lesson"
+ },
+ "L81": {
+  "0": "ethics",
+  "1": "ethics",
+  "3": "ethics"
+ },
+ "L82": {
+  "1": "principles"
+ },
+ "L84": {
+  "0": "home loan",
+  "1": "home loan",
+  "2": "home loan",
+  "3": "home loan"
+ },
+ "L85": {
+  "0": "growing / increasing",
+  "1": "growing / increasing",
+  "2": "Growing / Increasing"
+ },
+ "L86": {
+  "0": "ordinary",
+  "2": "ordinary"
+ },
+ "L87": {
+  "0": "a multitude of",
+  "1": "a multitude of"
+ },
+ "L88": {
+  "0": "countless",
+  "1": "countless"
+ },
+ "L89": {
+  "0": "low point",
+  "1": "low point",
+  "2": "low point"
+ },
+ "L90": {
+  "0": "bare"
+ },
+ "L91": {
+  "0": "small-minded",
+  "1": "small-minded",
+  "2": "small-minded"
+ },
+ "L92": {
+  "0": "emerging / budding",
+  "1": "emerging / budding"
+ },
+ "L93": {
+  "0": "indigenous people",
+  "1": "indigenous people"
+ },
+ "L94": {
+  "0": "innate / inborn",
+  "1": "innate / inborn",
+  "2": "Innate"
+ },
+ "L95": {
+  "0": "inborn",
+  "1": "inborn"
+ },
+ "L96": {
+  "0": "innate",
+  "1": "innate"
+ },
+ "L97": {
+  "0": "vague",
+  "1": "vague",
+  "2": "vague / hazy"
+ },
+ "L98": {
+  "1": "vague / nebulous",
+  "2": "vague"
+ },
+ "L99": {
+  "0": "insignificant",
+  "1": "insignificant",
+  "2": "insignificant / trivial"
+ },
+ "L100": {
+  "0": "negligible / insignificant",
+  "1": "insignificant",
+  "2": "negligible / insignificant"
+ },
+ "L101": {
+  "1": "district"
+ },
+ "L102": {
+  "0": "around / approximately / roughly",
+  "1": "around / approximately / roughly",
+  "2": "around / approximately / roughly"
+ },
+ "L103": {
+  "0": "agile",
+  "1": "agile"
+ },
+ "L104": {
+  "0": "guarded",
+  "1": "evasive / guarded",
+  "2": "evasive / guarded",
+  "3": "guarded"
+ },
+ "L105": {
+  "1": "noncommittal"
+ },
+ "L106": {
+  "0": "first-rate / excellent",
+  "1": "first-rate / excellent",
+  "2": "first-rate"
+ },
+ "L107": {
+  "1": "infamous"
+ },
+ "L108": {
+  "0": "notorious",
+  "2": "notorious"
+ },
+ "L109": {
+  "0": "Despite / In spite of",
+  "1": "Despite / In spite of",
+  "3": "Despite / In spite of"
+ },
+ "L110": {
+  "0": "nevertheless",
+  "1": "nevertheless"
+ },
+ "L111": {
+  "0": "Despite the fact that",
+  "1": "Despite the fact that"
+ },
+ "L112": {
+  "1": "innovative / original"
+ },
+ "L113": {
+  "0": "break new ground",
+  "1": "break new ground",
+  "2": "broken new ground"
+ },
+ "L114": {
+  "0": "novel"
+ },
+ "L115": {
+  "0": "harmful",
+  "1": "harmful"
+ },
+ "L116": {
+  "0": "subtlety / shade",
+  "2": "subtleties"
+ },
+ "L117": {
+  "0": "hassle / bother",
+  "2": "hassle / bother"
+ },
+ "L119": {
+  "0": "nuisance / bother",
+  "2": "nuisance"
+ },
+ "L121": {
+  "1": "swearwords / curses",
+  "2": "curses"
+ },
+ "L122": {
+  "0": "pledge"
+ },
+ "L123": {
+  "0": "pledged / swore",
+  "1": "swore",
+  "2": "pledged / sworn"
+ },
+ "L124": {
+  "0": "odious",
+  "2": "odious"
+ },
+ "L125": {
+  "0": "revolting"
+ },
+ "L126": {
+  "1": "disagreeable",
+  "2": "disagreeable"
+ },
+ "L127": {
+  "0": "foul / disgusting",
+  "1": "disgusting / foul",
+  "2": "disgusting"
+ },
+ "L128": {
+  "1": "outdated / outmoded",
+  "3": "outdated / outmoded"
+ },
+ "L129": {
+  "0": "antiquated / obsolete",
+  "1": "antiquated / obsolete",
+  "2": "obsolete / antiquated",
+  "3": "obsolete",
+  "4": "obsolete"
+ },
+ "L130": {
+  "0": "obsolete",
+  "1": "obsolete",
+  "2": "archaic",
+  "3": "archaic",
+  "4": "obsolete"
+ },
+ "L131": {
+  "0": "obsolete",
+  "1": "Obsolete",
+  "2": "obsolete"
+ }
+}

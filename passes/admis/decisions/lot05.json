@@ -1,0 +1,547 @@
+{
+ "L0": {
+  "0": "unfounded",
+  "1": "unfounded"
+ },
+ "L1": {
+  "0": "punishing",
+  "1": "punishing",
+  "2": "punishing"
+ },
+ "L2": {
+  "0": "gruelling / grueling",
+  "2": "gruelling / grueling"
+ },
+ "L3": {
+  "0": "grisly",
+  "1": "grisly",
+  "2": "grisly"
+ },
+ "L4": {
+  "0": "gruesome",
+  "1": "gruesome",
+  "2": "gruesome"
+ },
+ "L5": {
+  "0": "cunning",
+  "1": "cunning"
+ },
+ "L6": {
+  "1": "culprit"
+ },
+ "L8": {
+  "1": "unlucky"
+ },
+ "L9": {
+  "1": "Hapless"
+ },
+ "L11": {
+  "0": "distressing",
+  "2": "distressing"
+ },
+ "L12": {
+  "0": "Severe / Stern",
+  "1": "severe / stern",
+  "2": "severe"
+ },
+ "L13": {
+  "0": "severely",
+  "1": "severely",
+  "2": "severely"
+ },
+ "L14": {
+  "0": "pestering",
+  "1": "pestering",
+  "2": "pestering"
+ },
+ "L15": {
+  "0": "bother",
+  "1": "bother / nuisance",
+  "2": "bother"
+ },
+ "L16": {
+  "0": "refuge",
+  "1": "refuge",
+  "2": "refuge"
+ },
+ "L18": {
+  "0": "inflicted"
+ },
+ "L19": {
+  "0": "making progress",
+  "1": "making progress",
+  "2": "making inroads / making progress"
+ },
+ "L20": {
+  "0": "core of / crux of",
+  "2": "core of"
+ },
+ "L21": {
+  "0": "heart-rending",
+  "1": "heart-rending",
+  "2": "heart-rending"
+ },
+ "L22": {
+  "0": "heartbreaking",
+  "1": "heartbreaking",
+  "2": "heartbreaking"
+ },
+ "L23": {
+  "0": "heart / core",
+  "1": "heart / core",
+  "2": "heart / core"
+ },
+ "L24": {
+  "0": "busy",
+  "1": "busy",
+  "2": "busy"
+ },
+ "L25": {
+  "1": "atrocious"
+ },
+ "L27": {
+  "0": "powerless",
+  "2": "powerless"
+ },
+ "L28": {
+  "2": "useful"
+ },
+ "L29": {
+  "0": "powerful",
+  "1": "powerful"
+ },
+ "L30": {
+  "0": "nervous",
+  "1": "nervous",
+  "2": "nervous"
+ },
+ "L31": {
+  "0": "intellectuals",
+  "1": "intellectual"
+ },
+ "L32": {
+  "0": "prank",
+  "1": "prank"
+ },
+ "L33": {
+  "1": "hoax",
+  "2": "hoax"
+ },
+ "L34": {
+  "1": "empty"
+ },
+ "L35": {
+  "1": "sacred",
+  "2": "sacred",
+  "3": "sacred"
+ },
+ "L36": {
+  "0": "holy"
+ },
+ "L37": {
+  "0": "defiled",
+  "1": "defiling"
+ },
+ "L38": {
+  "0": "desecrated",
+  "1": "desecrated"
+ },
+ "L39": {
+  "0": "thugs",
+  "1": "thugs"
+ },
+ "L40": {
+  "0": "hoodlums",
+  "1": "hoodlum"
+ },
+ "L41": {
+  "0": "council housing / public housing",
+  "1": "public housing"
+ },
+ "L42": {
+  "0": "social housing",
+  "1": "social housing"
+ },
+ "L43": {
+  "0": "social housing",
+  "1": "social housing"
+ },
+ "L44": {
+  "0": "mankind",
+  "1": "mankind"
+ },
+ "L45": {
+  "0": "compassion",
+  "1": "compassion",
+  "2": "compassion"
+ },
+ "L46": {
+  "0": "Humanity",
+  "1": "humanity",
+  "2": "humanity"
+ },
+ "L47": {
+  "0": "chunk",
+  "1": "chunk"
+ },
+ "L48": {
+  "0": "imminent",
+  "1": "imminent",
+  "2": "imminent"
+ },
+ "L49": {
+  "0": "looming",
+  "1": "looming",
+  "2": "looming"
+ },
+ "L50": {
+  "0": "momentum to",
+  "2": "momentum",
+  "3": "momentum"
+ },
+ "L51": {
+  "2": "In line with",
+  "3": "in line with"
+ },
+ "L52": {
+  "1": "forthcoming"
+ },
+ "L53": {
+  "0": "vacuous",
+  "1": "vacuous",
+  "2": "vacuous"
+ },
+ "L55": {
+  "0": "deterrent"
+ },
+ "L56": {
+  "0": "fomented",
+  "1": "stirring up / fomenting",
+  "2": "stirred up / fomented"
+ },
+ "L57": {
+  "3": "earnings"
+ },
+ "L59": {
+  "0": "term",
+  "1": "term",
+  "2": "term"
+ },
+ "L60": {
+  "0": "essential / vital",
+  "1": "essential / vital",
+  "2": "essential"
+ },
+ "L61": {
+  "0": "industrial estate",
+  "1": "industrial estate",
+  "2": "industrial estate"
+ },
+ "L62": {
+  "0": "manufacturer",
+  "1": "manufacturers",
+  "2": "Manufacturers"
+ },
+ "L64": {
+  "0": "strike action",
+  "1": "strike action",
+  "2": "strike action"
+ },
+ "L66": {
+  "0": "cleverness / inventiveness",
+  "1": "cleverness",
+  "2": "inventiveness"
+ },
+ "L67": {
+  "0": "ingenuity",
+  "1": "ingenuity"
+ },
+ "L68": {
+  "1": "naive"
+ },
+ "L69": {
+  "0": "frankness",
+  "1": "frankness",
+  "2": "frankness"
+ },
+ "L70": {
+  "0": "entrenched",
+  "1": "entrenched",
+  "2": "entrenched"
+ },
+ "L71": {
+  "0": "harmless",
+  "1": "harmless"
+ },
+ "L72": {
+  "1": "bland",
+  "2": "bland"
+ },
+ "L73": {
+  "1": "innocuous"
+ },
+ "L74": {
+  "0": "excessive",
+  "1": "excessive",
+  "2": "excessive"
+ },
+ "L75": {
+  "0": "made headway in / made progress in",
+  "1": "progress in",
+  "2": "making headway on / making progress on"
+ },
+ "L76": {
+  "0": "mad",
+  "1": "mad"
+ },
+ "L77": {
+  "0": "madness",
+  "1": "madness",
+  "2": "madness"
+ },
+ "L78": {
+  "0": "mental health",
+  "1": "mental health"
+ },
+ "L79": {
+  "0": "madman",
+  "1": "madmen",
+  "2": "madman"
+ },
+ "L80": {
+  "0": "vision",
+  "1": "vision",
+  "2": "vision",
+  "3": "vision"
+ },
+ "L82": {
+  "0": "insoluble",
+  "1": "insoluble",
+  "2": "insoluble"
+ },
+ "L83": {
+  "0": "unruly",
+  "1": "unruly"
+ },
+ "L84": {
+  "0": "complex"
+ },
+ "L85": {
+  "0": "complexities",
+  "1": "complexities"
+ },
+ "L86": {
+  "0": "unfair",
+  "1": "unfair",
+  "2": "unfair"
+ },
+ "L87": {
+  "0": "matter",
+  "2": "problem"
+ },
+ "L88": {
+  "0": "edition",
+  "1": "edition"
+ },
+ "L89": {
+  "0": "article",
+  "1": "article",
+  "2": "article"
+ },
+ "L90": {
+  "0": "list / detail",
+  "1": "lists / details",
+  "2": "list / detail"
+ },
+ "L91": {
+  "0": "digs",
+  "1": "dig at",
+  "2": "digs"
+ },
+ "L92": {
+  "0": "tally with",
+  "1": "tally with"
+ },
+ "L93": {
+  "0": "tinkle",
+  "2": "tinkle"
+ },
+ "L94": {
+  "0": "unemployed",
+  "1": "unemployed",
+  "2": "unemployed"
+ },
+ "L95": {
+  "0": "unemployed",
+  "1": "unemployed",
+  "2": "Unemployed"
+ },
+ "L96": {
+  "1": "task"
+ },
+ "L97": {
+  "2": "employment",
+  "3": "employment"
+ },
+ "L98": {
+  "2": "shared"
+ },
+ "L99": {
+  "0": "wise / sensible",
+  "1": "wise / sensible",
+  "2": "wise / sensible"
+ },
+ "L100": {
+  "0": "giant",
+  "1": "giant"
+ },
+ "L101": {
+  "0": "rubbish",
+  "1": "rubbish",
+  "2": "rubbish",
+  "3": "rubbish"
+ },
+ "L102": {
+  "3": "shoddy / trashy"
+ },
+ "L103": {
+  "0": "discarded / threw away / threw out",
+  "1": "threw out / threw away / discarded",
+  "2": "discarded / thrown away / thrown out / scrapped"
+ },
+ "L104": {
+  "0": "scrapped / abandoned / jettisoned",
+  "1": "scrapped / abandoned / jettisoned",
+  "2": "scrap / abandon / jettison"
+ },
+ "L105": {
+  "0": "Drug addicts / Addicts",
+  "1": "addict"
+ },
+ "L106": {
+  "0": "mess"
+ },
+ "L107": {
+  "0": "eager / enthusiastic",
+  "1": "Eager / Enthusiastic"
+ },
+ "L108": {
+  "1": "fond of",
+  "2": "fond of"
+ },
+ "L109": {
+  "0": "eager to",
+  "1": "eager to",
+  "2": "eager to",
+  "3": "eager to"
+ },
+ "L110": {
+  "0": "stiff",
+  "1": "Stiff"
+ },
+ "L111": {
+  "2": "keen on"
+ },
+ "L112": {
+  "0": "crucial / vital",
+  "1": "pivotal / crucial / vital",
+  "2": "crucial / vital / pivotal"
+ },
+ "L113": {
+  "0": "tense / on edge",
+  "1": "tense / on edge",
+  "2": "tense / on edge"
+ },
+ "L114": {
+  "0": "understated / discreet",
+  "1": "understated / discreet",
+  "2": "discreet"
+ },
+ "L115": {
+  "0": "quiet",
+  "1": "quiet",
+  "2": "quiet"
+ },
+ "L116": {
+  "0": "cornerstone",
+  "1": "cornerstone"
+ },
+ "L117": {
+  "0": "pillar / keystone / linchpin",
+  "1": "keystone / linchpin",
+  "2": "keystone / linchpin"
+ },
+ "L118": {
+  "0": "recoil"
+ },
+ "L119": {
+  "0": "Bribes / Payoffs",
+  "1": "bribes / payoffs"
+ },
+ "L120": {
+  "1": "kickback"
+ },
+ "L121": {
+  "0": "drew back",
+  "1": "shrink back from / draw back from",
+  "2": "shrank back / drew back"
+ },
+ "L122": {
+  "0": "gift for",
+  "1": "gift for",
+  "3": "gift for"
+ },
+ "L123": {
+  "0": "reflex",
+  "1": "reflex",
+  "2": "reflex"
+ },
+ "L124": {
+  "0": "tied",
+  "1": "tied",
+  "2": "tied"
+ },
+ "L125": {
+  "0": "thorny",
+  "1": "thorny",
+  "2": "thorny"
+ },
+ "L126": {
+  "0": "expertise",
+  "1": "expertise",
+  "2": "expertise"
+ },
+ "L127": {
+  "4": "learning"
+ },
+ "L128": {
+  "0": "well-informed about",
+  "1": "well-informed about",
+  "2": "well-informed"
+ },
+ "L129": {
+  "0": "prestige",
+  "2": "prestige"
+ },
+ "L131": {
+  "1": "tag",
+  "2": "tag"
+ },
+ "L132": {
+  "0": "manpower"
+ },
+ "L133": {
+  "0": "workforce",
+  "1": "workforce",
+  "2": "workforce"
+ },
+ "L134": {
+  "0": "labour force / labor force",
+  "1": "labour force / labor force",
+  "2": "labour force / labor force"
+ },
+ "L135": {
+  "1": "labour / labor",
+  "2": "labour / labor"
+ }
+}
