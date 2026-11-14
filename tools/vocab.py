@@ -159,7 +159,7 @@ LINT_OK = {
     ('nature', 'a concern (for/about/over)', 'a worry'), ('nature', 'patronage', 'support'), ('nature', 'strain', 'pressure'),
     ('nature', 'a bet', 'a wager'), ('nature', 'a hinge', 'a pivot'), ('nature', 'to match', 'to equal'),
     ('nature', 'a prop', 'a support'), ('nature', '(a) pursuit', 'a search'), ('nature', 'rotten', 'corrupt'),
-    ('nature', 'to bill', 'to invoice'), ('nature', 'to stabilize (sth)', 'to steady'),
+    ('nature', 'to bill', 'to invoice'), ('nature', 'to stabilize', 'to steady'), ('nature', 'to stabilize sth', 'to steady sth'),
     ('nature', 'to carry on (about)', 'to make a fuss (about/over)'), ('nature', 'to kick up a fuss', 'to make a fuss (about/over)'),
     ('nature', 'to make a fuss (about/over sth) / a fuss', 'to kick up a fuss'),
     ('nature', 'to make a fuss (about/over sth) / a fuss', 'to carry on (about)'),
