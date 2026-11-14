@@ -138,6 +138,7 @@
   .feedback{padding:13px 16px;border-radius:12px;margin-bottom:14px;font-weight:600;font-size:0.9rem}
   .feedback.ok{background:rgba(46,204,113,0.12);color:var(--success);border:1px solid rgba(46,204,113,0.25)}
   .feedback.ko{background:rgba(231,76,60,0.1);color:var(--danger);border:1px solid rgba(231,76,60,0.25)}
+  .fb-admitted{margin-top:6px;font-weight:400;font-size:0.85rem;color:var(--text)}
   .see-fiche-btn{display:flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;width:100%;margin-bottom:10px;transition:all 0.2s}
   .see-fiche-btn:active{background:var(--accent2)}
   .dir-chooser{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
@@ -1006,6 +1007,7 @@ function motBlockHTML(m,idx,pfx){
         <input type="text" placeholder="English example" value="${esc(ex.ex)}" class="${pfx}-ex">
         <input type="text" placeholder="Target word" value="${esc(ex.mat)}" class="${pfx}-mat" style="margin-top:4px">
         <input type="text" placeholder="Translation" value="${esc(ex.tr)}" class="${pfx}-extr" style="margin-top:4px">
+        <input type="text" placeholder="Also accepted (a / b)" value="${esc(ex.adm||'')}" class="${pfx}-exadm" style="margin-top:4px">
       </div>
       <button class="btn-icon-del" onclick="this.closest('.exemple-edit-row').remove()">✕</button>
     </div>`).join('');
@@ -1039,6 +1041,7 @@ function addExRow(btn){
     <input type="text" placeholder="English example" class="${pfx}-ex">
     <input type="text" placeholder="Target word" class="${pfx}-mat" style="margin-top:4px">
     <input type="text" placeholder="Translation" class="${pfx}-extr" style="margin-top:4px">
+    <input type="text" placeholder="Also accepted (a / b)" class="${pfx}-exadm" style="margin-top:4px">
   </div>
   <button class="btn-icon-del" onclick="this.closest('.exemple-edit-row').remove()">✕</button>`;
   list.appendChild(div);
@@ -1050,7 +1053,10 @@ function readMotBlocks(pfx){
     const exemples=[...block.querySelectorAll(`.${pfx}-ex`)].map((inp,i)=>{
       const mat=block.querySelectorAll(`.${pfx}-mat:not(.${pfx}-mat-global)`)[i];
       const tr=block.querySelectorAll(`.${pfx}-extr`)[i];
-      return {ex:inp.value.trim(),mat:mat?mat.value.trim():'',tr:tr?tr.value.trim():''};
+      const adm=block.querySelectorAll(`.${pfx}-exadm`)[i];
+      const o={ex:inp.value.trim(),mat:mat?mat.value.trim():'',tr:tr?tr.value.trim():''};
+      if(adm&&adm.value.trim()) o.adm=adm.value.trim();
+      return o;
     }).filter(ex=>ex.ex);
     return {
       mot:block.querySelector(`.${pfx}-mot`)?.value.trim()||'',
@@ -1814,7 +1820,7 @@ function renderFill(e,forcedMot){
       <div class="fill-sentence">${sentence}</div>
     </div>
     <input class="open-inp" id="fill-inp" type="text" placeholder="Missing word…" autocomplete="off"
-      onkeydown="if(event.key==='Enter')checkFill()" data-correct="${esc(target)}">
+      onkeydown="if(event.key==='Enter')checkFill()" data-correct="${esc(target)}" data-adm="${esc(ex.adm||'')}">
     <button class="btn btn-primary btn-full" onclick="checkFill()">Check</button>
     <div id="tfb" style="margin-top:14px"></div>
     <div id="tnav" style="display:none">
@@ -1837,10 +1843,13 @@ function checkFill(){
   const ans=inp.value.trim();
   const correct=inp.dataset.correct;
   const ok=checkFillAnswer(ans,correct);
+  // Tournure admise (synonyme qui convient dans cette phrase) : comptée fausse, pour réviser le mot attendu
+  const admitted=!ok&&(inp.dataset.adm||'').split('/').map(f=>f.trim()).filter(Boolean).some(f=>checkFillAnswer(ans,f));
   testAnswered=true; inp.disabled=true;
   const blank=document.getElementById('blank');
   if(blank){blank.textContent=correct;blank.className='blank-spot '+(ok?'blank-ok':'blank-ko');}
-  recordResult(ok, ans); showFB(ok, correct, ans);
+  recordResult(ok, ans);
+  showFB(ok, correct, ans, admitted?`<div class="fb-admitted">“${esc(ans)}” also works here, but this card is about <strong>${esc(correct)}</strong>.</div>`:'');
 }
 
 // ── SYNONYMES / ANTONYMES ──
@@ -1942,13 +1951,13 @@ function recordResult(ok,userAnswerDisplay){
   saveState();
 }
 
-function showFB(ok, correct, userAns){
+function showFB(ok, correct, userAns, note){
   const exactMatch = normalizeAnswer(userAns||'') === normalizeAnswer(correct||'');
   document.getElementById('tfb').innerHTML = ok
     ? (exactMatch
         ? `<div class="feedback ok">✓ Correct!</div>`
         : `<div class="feedback ok">✓ Correct! <span style="font-size:0.85em;opacity:0.85">— Exact answer: <strong>${correct}</strong></span></div>`)
-    : `<div class="feedback ko">✗ Expected answer: <strong>${correct}</strong></div>
+    : `<div class="feedback ko">✗ Expected answer: <strong>${correct}</strong>${note||''}</div>
        <button class="btn btn-secondary btn-sm" style="margin-top:10px;width:100%" onclick="overrideToCorrect(this)">💡 I actually knew it!</button>`;
   document.getElementById('tfb').insertAdjacentHTML('beforeend',afterAnswerHTML(ok));
   document.getElementById('tnav').style.display='block';
@@ -2154,6 +2163,7 @@ function exportXlsx(){
         row[`Mot à trouver ${i+1}`] = ex.mat||'';
         row[`Traduction ${i+1}`]    = ex.tr||'';
       }
+      for(let i=0;i<5;i++) row[`Admis ${i+1}`] = ((m.exemples||[])[i]||{}).adm||'';
       // ── learning metadata ──
       row['__id']      = e.id;
       row['__source']  = e.source||'';
@@ -2241,9 +2251,11 @@ function parseVocabRows(rows){
     };
     for(let i=1;i<=5;i++){
       const ex=(r[`Exemple ${i}`]||'').trim();
-      if(ex) mot.exemples.push({
-        ex, mat:(r[`Mot à trouver ${i}`]||'').trim(), tr:(r[`Traduction ${i}`]||'').trim()
-      });
+      if(ex){
+        const o={ex, mat:(r[`Mot à trouver ${i}`]||'').trim(), tr:(r[`Traduction ${i}`]||'').trim()};
+        const adm=String(r[`Admis ${i}`]||'').trim(); if(adm) o.adm=adm;   // formes admises (texte à trous)
+        mot.exemples.push(o);
+      }
     }
     if(mot.mot) map[key].mots.push(mot);
     if(mot.mot&&hasSrs) map[key]._lines.push({mot:mot.mot, srs:String(r['__srs']||'').trim(), note:String(r['__note']||'').trim()});

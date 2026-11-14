@@ -24,7 +24,9 @@ FILE = 'vocab.xlsx'
 # Index des colonnes
 E, M, NAT, T, SYN, ANT, FA = range(7)
 FREQ, ZIPF, TYPE = 22, 23, 24
-NCOL = 25
+ADM = 25              # Admis 1-5 (colonnes 25 à 29) : formes admises dans le texte à trous, séparées par « / »
+NCOL = 30
+HEADER_ADM = [f'Admis {k}' for k in range(1, 6)]
 
 
 def zipf(word):
@@ -45,23 +47,47 @@ def getex(r):
     return [(r[7 + 3 * k], r[8 + 3 * k], r[9 + 3 * k]) for k in range(5) if r[7 + 3 * k]]
 
 
+def getadm(r):
+    """Formes admises de chaque exemple (liste parallèle à getex), chaînes vides si aucune."""
+    return [r[ADM + k] or '' for k in range(5) if r[7 + 3 * k]]
+
+
+def setadm(r, k, forms):
+    """forms : liste de formes (ou chaîne « a / b ») admises pour l'exemple k (0-4)."""
+    if isinstance(forms, (list, tuple)):
+        forms = ' / '.join(f for f in forms if f)
+    r[ADM + k] = forms or None
+
+
 def setex(r, ex):
+    """ex : triplets (exemple, mot à trouver, traduction), ou quadruplets avec les formes admises.
+    Sans 4e élément, un exemple inchangé (même phrase, même mot à trouver) garde ses formes admises."""
     assert len(ex) <= 5, 'cinq exemples au plus'
+    old = {(r[7 + 3 * k], r[8 + 3 * k]): r[ADM + k] for k in range(5) if r[7 + 3 * k]}
     for k in range(5):
-        r[7 + 3 * k] = r[8 + 3 * k] = r[9 + 3 * k] = None
-    for k, (a, b, c) in enumerate(ex):
+        r[7 + 3 * k] = r[8 + 3 * k] = r[9 + 3 * k] = r[ADM + k] = None
+    for k, x in enumerate(ex):
+        a, b, c = x[:3]
         r[7 + 3 * k], r[8 + 3 * k], r[9 + 3 * k] = a, b, c
+        r[ADM + k] = (' / '.join(x[3]) if isinstance(x[3], (list, tuple)) else x[3]) if len(x) > 3 else old.get((a, b))
+        r[ADM + k] = r[ADM + k] or None
 
 
 class Base:
     def __init__(self, path=FILE):
         self.path = path
         ws = openpyxl.load_workbook(path)['Vocab']
-        self.header = [c.value for c in ws[1]]
+        self.header = [c.value for c in ws[1]][:NCOL]
+        if len(self.header) < NCOL:
+            assert self.header[:ADM] and self.header[TYPE] == 'Type', 'colonnes inattendues'
+            self.header = self.header[:ADM] + HEADER_ADM
+        assert self.header[ADM:] == HEADER_ADM, 'colonnes Admis 1-5 attendues après Type'
         self.rows = [list(r)[:NCOL] + [None] * (NCOL - len(r)) for r in ws.iter_rows(min_row=2, values_only=True)]
 
     setex = staticmethod(setex)
     getex = staticmethod(getex)
+    getadm = staticmethod(getadm)
+    setadm = staticmethod(setadm)
 
     def fiche(self, entree):
         return [r for r in self.rows if r[E] == entree]
@@ -127,6 +153,13 @@ class Base:
             if k in seen:
                 issues.append(f'doublon : {k}')
             seen.add(k)
+            for k in range(5):
+                if r[ADM + k] and not r[7 + 3 * k]:
+                    issues.append(f'formes admises sans exemple : {r[M]} | Admis {k + 1}')
+                elif r[ADM + k]:
+                    forms = [f.strip() for f in str(r[ADM + k]).split('/')]
+                    if any(not f for f in forms) or any(f.lower() == (r[8 + 3 * k] or '').lower() for f in forms):
+                        issues.append(f'formes admises vides ou identiques au mot à trouver : {r[M]} | {r[ADM + k]}')
             ex = [x[0] for x in getex(r)]
             if len(ex) != len(set(ex)):
                 issues.append(f'exemple répété : {r[M]}')
@@ -331,8 +364,8 @@ def show(rows):
         flags = ' [See also]' if r[TYPE] else ''
         print(f'{r[E]} | {r[M]} ({r[NAT]}) = {r[T]} | syn: {r[SYN] or "-"} | ant: {r[ANT] or "-"}'
               f' | FA: {r[FA] or "-"} | F{r[FREQ]} Z{r[ZIPF]}{flags}')
-        for a, m, t in getex(r):
-            print(f'    {a} [{m}] → {t}')
+        for (a, m, t), adm in zip(getex(r), getadm(r)):
+            print(f'    {a} [{m}{" | admis : " + adm if adm else ""}] → {t}')
 
 
 if __name__ == '__main__':
