@@ -1,0 +1,3802 @@
+[
+ {
+  "entree": "addiction",
+  "mot": "to be hooked on",
+  "zipf_avant": 3.92,
+  "freq_avant": 3,
+  "zipf": 3.11,
+  "freq": 4
+ },
+ {
+  "entree": "bail",
+  "mot": "to bail out sb/sth",
+  "zipf_avant": 4.14,
+  "freq_avant": 3,
+  "zipf": 2.7,
+  "freq": 4
+ },
+ {
+  "entree": "bail",
+  "mot": "to bail out (of sth)",
+  "zipf_avant": 4.14,
+  "freq_avant": 3,
+  "zipf": 2.7,
+  "freq": 4
+ },
+ {
+  "entree": "bail",
+  "mot": "to bail out (of an aircraft)",
+  "zipf_avant": 4.14,
+  "freq_avant": 3,
+  "zipf": 2.7,
+  "freq": 4
+ },
+ {
+  "entree": "blast",
+  "mot": "to blast off",
+  "zipf_avant": 4.31,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "branch",
+  "mot": "to branch off",
+  "zipf_avant": 4.74,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "branch",
+  "mot": "to branch out (into)",
+  "zipf_avant": 4.75,
+  "freq_avant": 2,
+  "zipf": 2.67,
+  "freq": 4
+ },
+ {
+  "entree": "broad",
+  "mot": "to broaden out",
+  "zipf_avant": 3.66,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "carry off",
+  "mot": "to carry off",
+  "zipf_avant": 5.26,
+  "freq_avant": 1,
+  "zipf": 2.73,
+  "freq": 4
+ },
+ {
+  "entree": "carry off",
+  "mot": "to carry off sth",
+  "zipf_avant": 4.89,
+  "freq_avant": 1,
+  "zipf": 2.73,
+  "freq": 4
+ },
+ {
+  "entree": "carry off",
+  "mot": "to carry sth off",
+  "zipf_avant": 5.26,
+  "freq_avant": 1,
+  "zipf": 2.73,
+  "freq": 4
+ },
+ {
+  "entree": "clue",
+  "mot": "to clue sb in (on sth)",
+  "zipf_avant": 4.34,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "crackdown",
+  "mot": "to crack down on",
+  "zipf_avant": 4.4,
+  "freq_avant": 2,
+  "zipf": 3.13,
+  "freq": 4
+ },
+ {
+  "entree": "crop",
+  "mot": "to crop up",
+  "zipf_avant": 4.46,
+  "freq_avant": 2,
+  "zipf": 2.69,
+  "freq": 4
+ },
+ {
+  "entree": "dig",
+  "mot": "to dig up sth",
+  "zipf_avant": 4.22,
+  "freq_avant": 2,
+  "zipf": 3.33,
+  "freq": 4
+ },
+ {
+  "entree": "dismay",
+  "mot": "to be dismayed by",
+  "zipf_avant": 3.45,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "dole",
+  "mot": "to dole out",
+  "zipf_avant": 3.43,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "foul",
+  "mot": "to foul up",
+  "zipf_avant": 4.16,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "gloss",
+  "mot": "to gloss over",
+  "zipf_avant": 3.6,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "gloss",
+  "mot": "to skate over",
+  "zipf_avant": 3.74,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "hollow",
+  "mot": "to hollow out sth",
+  "zipf_avant": 4.01,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "keen",
+  "mot": "to be keen on",
+  "zipf_avant": 4.13,
+  "freq_avant": 3,
+  "zipf": 3.26,
+  "freq": 4
+ },
+ {
+  "entree": "key",
+  "mot": "to be keyed up",
+  "zipf_avant": 5.18,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "level",
+  "mot": "to level out/off",
+  "zipf_avant": 5.55,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "lump",
+  "mot": "to lump sb/sth together",
+  "zipf_avant": 3.88,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "mess",
+  "mot": "to mess (sth) up",
+  "zipf_avant": 4.74,
+  "freq_avant": 2,
+  "zipf": 3.69,
+  "freq": 3
+ },
+ {
+  "entree": "mess",
+  "mot": "to mess around/about",
+  "zipf_avant": 4.75,
+  "freq_avant": 2,
+  "zipf": 3.08,
+  "freq": 4
+ },
+ {
+  "entree": "narrow",
+  "mot": "to narrow down",
+  "zipf_avant": 4.47,
+  "freq_avant": 2,
+  "zipf": 3.15,
+  "freq": 4
+ },
+ {
+  "entree": "notch",
+  "mot": "to notch up sth",
+  "zipf_avant": 3.78,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "output",
+  "mot": "to put out",
+  "zipf_avant": 5.69,
+  "freq_avant": 1,
+  "zipf": 3.93,
+  "freq": 3
+ },
+ {
+  "entree": "perks",
+  "mot": "to perk up",
+  "zipf_avant": 3.78,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "perks",
+  "mot": "to perk up",
+  "zipf_avant": 3.78,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "pride",
+  "mot": "to pride oneself on",
+  "zipf_avant": 4.51,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "revelry",
+  "mot": "to revel in",
+  "zipf_avant": 3.11,
+  "freq_avant": 4,
+  "zipf": 2.94,
+  "freq": 4
+ },
+ {
+  "entree": "root",
+  "mot": "to root out",
+  "zipf_avant": 4.76,
+  "freq_avant": 2,
+  "zipf": 2.67,
+  "freq": 4
+ },
+ {
+  "entree": "scale",
+  "mot": "to scale back",
+  "zipf_avant": 4.83,
+  "freq_avant": 2,
+  "zipf": 2.53,
+  "freq": 4
+ },
+ {
+  "entree": "scale",
+  "mot": "to scale down",
+  "zipf_avant": 4.83,
+  "freq_avant": 2,
+  "zipf": 2.79,
+  "freq": 4
+ },
+ {
+  "entree": "scale",
+  "mot": "to scale up",
+  "zipf_avant": 4.83,
+  "freq_avant": 2,
+  "zipf": 3.0,
+  "freq": 4
+ },
+ {
+  "entree": "shore",
+  "mot": "to shore up",
+  "zipf_avant": 4.44,
+  "freq_avant": 2,
+  "zipf": 2.79,
+  "freq": 4
+ },
+ {
+  "entree": "shore",
+  "mot": "to shore up",
+  "zipf_avant": 4.44,
+  "freq_avant": 2,
+  "zipf": 2.79,
+  "freq": 4
+ },
+ {
+  "entree": "snag",
+  "mot": "to snag on sth",
+  "zipf_avant": 3.27,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "sound",
+  "mot": "to sound out",
+  "zipf_avant": 5.41,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "stake",
+  "mot": "to stake out sth",
+  "zipf_avant": 4.42,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "takeover",
+  "mot": "to take over (from)",
+  "zipf_avant": 6.25,
+  "freq_avant": 1,
+  "zipf": 4.41,
+  "freq": 2
+ },
+ {
+  "entree": "takeover",
+  "mot": "to take over sth",
+  "zipf_avant": 6.25,
+  "freq_avant": 1,
+  "zipf": 4.41,
+  "freq": 2
+ },
+ {
+  "entree": "tide",
+  "mot": "to tide sb over",
+  "zipf_avant": 4.15,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "tip",
+  "mot": "to tip over",
+  "zipf_avant": 4.91,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "tip",
+  "mot": "to tip sth over",
+  "zipf_avant": 4.91,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "tip",
+  "mot": "to tip sb off",
+  "zipf_avant": 4.9,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to add up to",
+  "mot": "to add up to",
+  "zipf_avant": 5.09,
+  "freq_avant": 1,
+  "zipf": 3.8,
+  "freq": 3
+ },
+ {
+  "entree": "to add up to",
+  "mot": "to add up to",
+  "zipf_avant": 5.09,
+  "freq_avant": 1,
+  "zipf": 3.8,
+  "freq": 3
+ },
+ {
+  "entree": "to avert",
+  "mot": "to stave off",
+  "zipf_avant": 3.04,
+  "freq_avant": 4,
+  "zipf": 2.76,
+  "freq": 4
+ },
+ {
+  "entree": "to back",
+  "mot": "to back sb up / to back up sth",
+  "zipf_avant": 5.91,
+  "freq_avant": 1,
+  "zipf": 4.31,
+  "freq": 2
+ },
+ {
+  "entree": "to back",
+  "mot": "to back up",
+  "zipf_avant": 5.91,
+  "freq_avant": 1,
+  "zipf": 4.31,
+  "freq": 2
+ },
+ {
+  "entree": "to back",
+  "mot": "to back down",
+  "zipf_avant": 5.69,
+  "freq_avant": 1,
+  "zipf": 3.65,
+  "freq": 3
+ },
+ {
+  "entree": "to back",
+  "mot": "to back out (of)",
+  "zipf_avant": 5.9,
+  "freq_avant": 1,
+  "zipf": 3.54,
+  "freq": 3
+ },
+ {
+  "entree": "to be bound",
+  "mot": "to be bound by sth (to do sth)",
+  "zipf_avant": 4.7,
+  "freq_avant": 2,
+  "zipf": 4.05,
+  "freq": 3
+ },
+ {
+  "entree": "to be bound",
+  "mot": "to be bound up in",
+  "zipf_avant": 4.7,
+  "freq_avant": 2,
+  "zipf": 2.81,
+  "freq": 4
+ },
+ {
+  "entree": "to be bound",
+  "mot": "to be bound up with",
+  "zipf_avant": 4.7,
+  "freq_avant": 2,
+  "zipf": 2.81,
+  "freq": 4
+ },
+ {
+  "entree": "to be engrossed in",
+  "mot": "to be engrossed in",
+  "zipf_avant": 3.09,
+  "freq_avant": 4,
+  "zipf": 2.63,
+  "freq": 4
+ },
+ {
+  "entree": "to be geared to",
+  "mot": "to gear up (for)",
+  "zipf_avant": 4.46,
+  "freq_avant": 2,
+  "zipf": 3.4,
+  "freq": 4
+ },
+ {
+  "entree": "to be put out",
+  "mot": "to be put out",
+  "zipf_avant": 5.69,
+  "freq_avant": 1,
+  "zipf": 3.93,
+  "freq": 3
+ },
+ {
+  "entree": "to be puzzled",
+  "mot": "to puzzle out",
+  "zipf_avant": 4.2,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to be run down",
+  "mot": "to be run down",
+  "zipf_avant": 5.34,
+  "freq_avant": 1,
+  "zipf": 3.65,
+  "freq": 3
+ },
+ {
+  "entree": "to be run down",
+  "mot": "to run sth down",
+  "zipf_avant": 5.49,
+  "freq_avant": 1,
+  "zipf": 3.65,
+  "freq": 3
+ },
+ {
+  "entree": "to bear",
+  "mot": "to bear up",
+  "zipf_avant": 5.34,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to bear",
+  "mot": "to bear sth out",
+  "zipf_avant": 4.71,
+  "freq_avant": 2,
+  "zipf": 3.2,
+  "freq": 4
+ },
+ {
+  "entree": "to blend",
+  "mot": "to blend in (with)",
+  "zipf_avant": 3.95,
+  "freq_avant": 3,
+  "zipf": 2.89,
+  "freq": 4
+ },
+ {
+  "entree": "to blow",
+  "mot": "to blow over",
+  "zipf_avant": 4.98,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to blow",
+  "mot": "to blow up",
+  "zipf_avant": 4.97,
+  "freq_avant": 1,
+  "zipf": 3.81,
+  "freq": 3
+ },
+ {
+  "entree": "to blow",
+  "mot": "to blow up (at sb)",
+  "zipf_avant": 4.97,
+  "freq_avant": 1,
+  "zipf": 3.81,
+  "freq": 3
+ },
+ {
+  "entree": "to bounce",
+  "mot": "to bounce back",
+  "zipf_avant": 4.27,
+  "freq_avant": 2,
+  "zipf": 3.18,
+  "freq": 4
+ },
+ {
+  "entree": "to break down",
+  "mot": "to break down (broke, broken)",
+  "zipf_avant": 5.53,
+  "freq_avant": 1,
+  "zipf": 4.18,
+  "freq": 2
+ },
+ {
+  "entree": "to break down",
+  "mot": "to break down",
+  "zipf_avant": 5.53,
+  "freq_avant": 1,
+  "zipf": 4.18,
+  "freq": 2
+ },
+ {
+  "entree": "to break down",
+  "mot": "to break sth down",
+  "zipf_avant": 5.18,
+  "freq_avant": 1,
+  "zipf": 4.18,
+  "freq": 2
+ },
+ {
+  "entree": "to break off",
+  "mot": "to break off",
+  "zipf_avant": 5.54,
+  "freq_avant": 1,
+  "zipf": 3.27,
+  "freq": 4
+ },
+ {
+  "entree": "to break off",
+  "mot": "to break off",
+  "zipf_avant": 5.54,
+  "freq_avant": 1,
+  "zipf": 3.27,
+  "freq": 4
+ },
+ {
+  "entree": "to break out",
+  "mot": "to break out",
+  "zipf_avant": 5.56,
+  "freq_avant": 1,
+  "zipf": 3.87,
+  "freq": 3
+ },
+ {
+  "entree": "to break through",
+  "mot": "to break through",
+  "zipf_avant": 5.58,
+  "freq_avant": 1,
+  "zipf": 3.36,
+  "freq": 4
+ },
+ {
+  "entree": "to break up",
+  "mot": "to break up (broke, broken)",
+  "zipf_avant": 5.57,
+  "freq_avant": 1,
+  "zipf": 3.96,
+  "freq": 3
+ },
+ {
+  "entree": "to break up",
+  "mot": "to break sth up",
+  "zipf_avant": 5.57,
+  "freq_avant": 1,
+  "zipf": 3.96,
+  "freq": 3
+ },
+ {
+  "entree": "to break up",
+  "mot": "to break up (with)",
+  "zipf_avant": 5.57,
+  "freq_avant": 1,
+  "zipf": 3.96,
+  "freq": 3
+ },
+ {
+  "entree": "to break up",
+  "mot": "to break up",
+  "zipf_avant": 5.57,
+  "freq_avant": 1,
+  "zipf": 3.96,
+  "freq": 3
+ },
+ {
+  "entree": "to break up",
+  "mot": "to break up",
+  "zipf_avant": 5.57,
+  "freq_avant": 1,
+  "zipf": 3.96,
+  "freq": 3
+ },
+ {
+  "entree": "to break up",
+  "mot": "to break sb up",
+  "zipf_avant": 5.57,
+  "freq_avant": 1,
+  "zipf": 3.96,
+  "freq": 3
+ },
+ {
+  "entree": "to bring about",
+  "mot": "to bring about (brought)",
+  "zipf_avant": 5.63,
+  "freq_avant": 1,
+  "zipf": 4.03,
+  "freq": 3
+ },
+ {
+  "entree": "to bring about",
+  "mot": "to bring sth on",
+  "zipf_avant": 5.63,
+  "freq_avant": 1,
+  "zipf": 3.48,
+  "freq": 4
+ },
+ {
+  "entree": "to bring off",
+  "mot": "to bring sth off / to bring off sth (brought)",
+  "zipf_avant": 5.56,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to bring out",
+  "mot": "to bring sth out",
+  "zipf_avant": 5.6,
+  "freq_avant": 1,
+  "zipf": 3.85,
+  "freq": 3
+ },
+ {
+  "entree": "to bring out",
+  "mot": "to bring sth out",
+  "zipf_avant": 5.6,
+  "freq_avant": 1,
+  "zipf": 3.85,
+  "freq": 3
+ },
+ {
+  "entree": "to bring round",
+  "mot": "to bring sb round",
+  "zipf_avant": 5.63,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to bring round",
+  "mot": "to bring sb round to",
+  "zipf_avant": 5.63,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to bring up",
+  "mot": "to bring sb up",
+  "zipf_avant": 5.6,
+  "freq_avant": 1,
+  "zipf": 4.14,
+  "freq": 3
+ },
+ {
+  "entree": "to bring up",
+  "mot": "to bring sth up",
+  "zipf_avant": 5.6,
+  "freq_avant": 1,
+  "zipf": 4.14,
+  "freq": 3
+ },
+ {
+  "entree": "to brush off",
+  "mot": "to brush sb/sth off",
+  "zipf_avant": 4.44,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to brush up",
+  "mot": "to brush up (on)",
+  "zipf_avant": 4.44,
+  "freq_avant": 2,
+  "zipf": 2.77,
+  "freq": 4
+ },
+ {
+  "entree": "to burn",
+  "mot": "to burn out",
+  "zipf_avant": 5.05,
+  "freq_avant": 1,
+  "zipf": 3.29,
+  "freq": 4
+ },
+ {
+  "entree": "to burn",
+  "mot": "to burn (oneself) out",
+  "zipf_avant": 4.53,
+  "freq_avant": 2,
+  "zipf": 3.29,
+  "freq": 4
+ },
+ {
+  "entree": "to burn",
+  "mot": "to burn down",
+  "zipf_avant": 5.04,
+  "freq_avant": 1,
+  "zipf": 2.99,
+  "freq": 4
+ },
+ {
+  "entree": "to burn",
+  "mot": "to burn through sth",
+  "zipf_avant": 4.53,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to burst",
+  "mot": "to burst out of/from",
+  "zipf_avant": 4.15,
+  "freq_avant": 3,
+  "zipf": 2.86,
+  "freq": 4
+ },
+ {
+  "entree": "to buy out",
+  "mot": "to buy sb/sth out (bought)",
+  "zipf_avant": 5.52,
+  "freq_avant": 1,
+  "zipf": 3.03,
+  "freq": 4
+ },
+ {
+  "entree": "to call off",
+  "mot": "to call sb/sth off",
+  "zipf_avant": 5.82,
+  "freq_avant": 1,
+  "zipf": 2.84,
+  "freq": 4
+ },
+ {
+  "entree": "to call off",
+  "mot": "to call off",
+  "zipf_avant": 5.82,
+  "freq_avant": 1,
+  "zipf": 2.84,
+  "freq": 4
+ },
+ {
+  "entree": "to call on",
+  "mot": "to call on sb (to do sth)",
+  "zipf_avant": 5.95,
+  "freq_avant": 1,
+  "zipf": 4.23,
+  "freq": 2
+ },
+ {
+  "entree": "to call on",
+  "mot": "to call on sb",
+  "zipf_avant": 5.95,
+  "freq_avant": 1,
+  "zipf": 4.23,
+  "freq": 2
+ },
+ {
+  "entree": "to cancel",
+  "mot": "to cancel out",
+  "zipf_avant": 4.18,
+  "freq_avant": 2,
+  "zipf": 2.57,
+  "freq": 4
+ },
+ {
+  "entree": "to cancel",
+  "mot": "to cancel sth out",
+  "zipf_avant": 4.18,
+  "freq_avant": 2,
+  "zipf": 2.57,
+  "freq": 4
+ },
+ {
+  "entree": "to carry on",
+  "mot": "to carry on (with)",
+  "zipf_avant": 5.29,
+  "freq_avant": 1,
+  "zipf": 4.11,
+  "freq": 3
+ },
+ {
+  "entree": "to carry on",
+  "mot": "to carry on (about)",
+  "zipf_avant": 5.29,
+  "freq_avant": 1,
+  "zipf": 4.11,
+  "freq": 3
+ },
+ {
+  "entree": "to carry out",
+  "mot": "to carry out",
+  "zipf_avant": 5.28,
+  "freq_avant": 1,
+  "zipf": 4.88,
+  "freq": 1
+ },
+ {
+  "entree": "to cash in on",
+  "mot": "to cash in on",
+  "zipf_avant": 4.93,
+  "freq_avant": 1,
+  "zipf": 3.63,
+  "freq": 3
+ },
+ {
+  "entree": "to cast",
+  "mot": "to cast sth off",
+  "zipf_avant": 4.79,
+  "freq_avant": 2,
+  "zipf": 2.72,
+  "freq": 4
+ },
+ {
+  "entree": "to cast",
+  "mot": "to cast off",
+  "zipf_avant": 4.88,
+  "freq_avant": 1,
+  "zipf": 2.72,
+  "freq": 4
+ },
+ {
+  "entree": "to cast",
+  "mot": "to cast sb/sth aside",
+  "zipf_avant": 4.58,
+  "freq_avant": 2,
+  "zipf": 2.52,
+  "freq": 4
+ },
+ {
+  "entree": "to catch on",
+  "mot": "to catch on sth (caught)",
+  "zipf_avant": 5.25,
+  "freq_avant": 1,
+  "zipf": 3.66,
+  "freq": 3
+ },
+ {
+  "entree": "to catch on",
+  "mot": "to catch on (to sth)",
+  "zipf_avant": 5.25,
+  "freq_avant": 1,
+  "zipf": 3.66,
+  "freq": 3
+ },
+ {
+  "entree": "to catch on",
+  "mot": "to catch on",
+  "zipf_avant": 5.25,
+  "freq_avant": 1,
+  "zipf": 3.66,
+  "freq": 3
+ },
+ {
+  "entree": "to catch up with",
+  "mot": "to catch up with sb/sth",
+  "zipf_avant": 5.24,
+  "freq_avant": 1,
+  "zipf": 4.18,
+  "freq": 2
+ },
+ {
+  "entree": "to catch up with",
+  "mot": "to catch up on sth",
+  "zipf_avant": 4.87,
+  "freq_avant": 1,
+  "zipf": 4.18,
+  "freq": 2
+ },
+ {
+  "entree": "to cave in",
+  "mot": "to cave in",
+  "zipf_avant": 4.35,
+  "freq_avant": 2,
+  "zipf": 2.78,
+  "freq": 4
+ },
+ {
+  "entree": "to clamp down on",
+  "mot": "to clamp down on",
+  "zipf_avant": 3.74,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to clear",
+  "mot": "to clear sth away",
+  "zipf_avant": 5.32,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to clear",
+  "mot": "to clear up (sth)",
+  "zipf_avant": 5.32,
+  "freq_avant": 1,
+  "zipf": 3.47,
+  "freq": 4
+ },
+ {
+  "entree": "to come across",
+  "mot": "to come across (came, come)",
+  "zipf_avant": 6.15,
+  "freq_avant": 1,
+  "zipf": 4.17,
+  "freq": 2
+ },
+ {
+  "entree": "to come across",
+  "mot": "to come across (as)",
+  "zipf_avant": 6.15,
+  "freq_avant": 1,
+  "zipf": 4.17,
+  "freq": 2
+ },
+ {
+  "entree": "to come by",
+  "mot": "to come by sth",
+  "zipf_avant": 6.15,
+  "freq_avant": 1,
+  "zipf": 3.69,
+  "freq": 3
+ },
+ {
+  "entree": "to come by",
+  "mot": "to come by",
+  "zipf_avant": 6.15,
+  "freq_avant": 1,
+  "zipf": 3.69,
+  "freq": 3
+ },
+ {
+  "entree": "to come in for",
+  "mot": "to come in for sth",
+  "zipf_avant": 6.15,
+  "freq_avant": 1,
+  "zipf": 4.73,
+  "freq": 2
+ },
+ {
+  "entree": "to come off",
+  "mot": "to come off",
+  "zipf_avant": 5.98,
+  "freq_avant": 1,
+  "zipf": 3.84,
+  "freq": 3
+ },
+ {
+  "entree": "to come off",
+  "mot": "to come off sth",
+  "zipf_avant": 5.98,
+  "freq_avant": 1,
+  "zipf": 3.84,
+  "freq": 3
+ },
+ {
+  "entree": "to come off",
+  "mot": "to come off sth",
+  "zipf_avant": 5.98,
+  "freq_avant": 1,
+  "zipf": 3.84,
+  "freq": 3
+ },
+ {
+  "entree": "to come off",
+  "mot": "to come off",
+  "zipf_avant": 5.98,
+  "freq_avant": 1,
+  "zipf": 3.84,
+  "freq": 3
+ },
+ {
+  "entree": "to come over",
+  "mot": "to come over",
+  "zipf_avant": 6.15,
+  "freq_avant": 1,
+  "zipf": 3.86,
+  "freq": 3
+ },
+ {
+  "entree": "to come over",
+  "mot": "to come over (as)",
+  "zipf_avant": 6.15,
+  "freq_avant": 1,
+  "zipf": 3.86,
+  "freq": 3
+ },
+ {
+  "entree": "to come round",
+  "mot": "to come round",
+  "zipf_avant": 6.15,
+  "freq_avant": 1,
+  "zipf": 2.51,
+  "freq": 4
+ },
+ {
+  "entree": "to come round",
+  "mot": "to come round (to sth)",
+  "zipf_avant": 6.15,
+  "freq_avant": 1,
+  "zipf": 2.51,
+  "freq": 4
+ },
+ {
+  "entree": "to come through",
+  "mot": "to come through (sth)",
+  "zipf_avant": 6.15,
+  "freq_avant": 1,
+  "zipf": 3.88,
+  "freq": 3
+ },
+ {
+  "entree": "to come up",
+  "mot": "to come up",
+  "zipf_avant": 6.08,
+  "freq_avant": 1,
+  "zipf": 4.73,
+  "freq": 2
+ },
+ {
+  "entree": "to come up",
+  "mot": "to come up with sth",
+  "zipf_avant": 6.08,
+  "freq_avant": 1,
+  "zipf": 4.73,
+  "freq": 2
+ },
+ {
+  "entree": "to come up",
+  "mot": "to come up against sth",
+  "zipf_avant": 6.08,
+  "freq_avant": 1,
+  "zipf": 4.73,
+  "freq": 2
+ },
+ {
+  "entree": "to creep",
+  "mot": "to creep up on sb",
+  "zipf_avant": 3.84,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to creep",
+  "mot": "to creep up",
+  "zipf_avant": 3.84,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to cross",
+  "mot": "to cross out sth / to cross sth out",
+  "zipf_avant": 5.17,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to cross",
+  "mot": "to cross sb/sth off (sth)",
+  "zipf_avant": 5.17,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to cut back",
+  "mot": "to cut back",
+  "zipf_avant": 5.33,
+  "freq_avant": 1,
+  "zipf": 3.44,
+  "freq": 4
+ },
+ {
+  "entree": "to cut back",
+  "mot": "to cut back on sth",
+  "zipf_avant": 5.33,
+  "freq_avant": 1,
+  "zipf": 3.44,
+  "freq": 4
+ },
+ {
+  "entree": "to cut back",
+  "mot": "to cut sth back",
+  "zipf_avant": 5.33,
+  "freq_avant": 1,
+  "zipf": 3.44,
+  "freq": 4
+ },
+ {
+  "entree": "to dabble in",
+  "mot": "to dabble in",
+  "zipf_avant": 3.18,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to die",
+  "mot": "to die out",
+  "zipf_avant": 5.07,
+  "freq_avant": 1,
+  "zipf": 2.99,
+  "freq": 4
+ },
+ {
+  "entree": "to die",
+  "mot": "to die down",
+  "zipf_avant": 5.07,
+  "freq_avant": 1,
+  "zipf": 2.63,
+  "freq": 4
+ },
+ {
+  "entree": "to drag",
+  "mot": "to drag in",
+  "zipf_avant": 4.29,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to drag",
+  "mot": "to drag on",
+  "zipf_avant": 4.29,
+  "freq_avant": 2,
+  "zipf": 3.08,
+  "freq": 4
+ },
+ {
+  "entree": "to draw",
+  "mot": "to draw on/upon",
+  "zipf_avant": 4.81,
+  "freq_avant": 2,
+  "zipf": 3.96,
+  "freq": 3
+ },
+ {
+  "entree": "to draw",
+  "mot": "to draw up",
+  "zipf_avant": 4.81,
+  "freq_avant": 2,
+  "zipf": 3.87,
+  "freq": 3
+ },
+ {
+  "entree": "to draw",
+  "mot": "to draw up",
+  "zipf_avant": 4.81,
+  "freq_avant": 2,
+  "zipf": 3.87,
+  "freq": 3
+ },
+ {
+  "entree": "to draw",
+  "mot": "to draw back",
+  "zipf_avant": 4.81,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to drive",
+  "mot": "to drive out",
+  "zipf_avant": 5.13,
+  "freq_avant": 1,
+  "zipf": 3.3,
+  "freq": 4
+ },
+ {
+  "entree": "to drop",
+  "mot": "to drop out (of)",
+  "zipf_avant": 4.99,
+  "freq_avant": 1,
+  "zipf": 3.69,
+  "freq": 3
+ },
+ {
+  "entree": "to drop",
+  "mot": "to drop in/by (on sb)",
+  "zipf_avant": 4.99,
+  "freq_avant": 1,
+  "zipf": 3.99,
+  "freq": 3
+ },
+ {
+  "entree": "to dwell on",
+  "mot": "to dwell on",
+  "zipf_avant": 3.57,
+  "freq_avant": 3,
+  "zipf": 3.21,
+  "freq": 4
+ },
+ {
+  "entree": "to edge",
+  "mot": "to edge forward",
+  "zipf_avant": 4.74,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to edge",
+  "mot": "to edge up/down",
+  "zipf_avant": 4.74,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to edge",
+  "mot": "to edge sb/sth out",
+  "zipf_avant": 4.74,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to edge",
+  "mot": "to edge sb out",
+  "zipf_avant": 4.74,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to enrol(l)",
+  "mot": "to sign up (for)",
+  "zipf_avant": 5.08,
+  "freq_avant": 1,
+  "zipf": 4.67,
+  "freq": 2
+ },
+ {
+  "entree": "to face",
+  "mot": "to face up to",
+  "zipf_avant": 5.45,
+  "freq_avant": 1,
+  "zipf": 3.25,
+  "freq": 4
+ },
+ {
+  "entree": "to fall",
+  "mot": "to fall down",
+  "zipf_avant": 5.13,
+  "freq_avant": 1,
+  "zipf": 3.59,
+  "freq": 3
+ },
+ {
+  "entree": "to fall apart",
+  "mot": "to fall apart",
+  "zipf_avant": 5.13,
+  "freq_avant": 1,
+  "zipf": 3.51,
+  "freq": 3
+ },
+ {
+  "entree": "to fall back on",
+  "mot": "to fall back on",
+  "zipf_avant": 5.13,
+  "freq_avant": 1,
+  "zipf": 3.54,
+  "freq": 3
+ },
+ {
+  "entree": "to fall back on",
+  "mot": "to fall back on",
+  "zipf_avant": 5.13,
+  "freq_avant": 1,
+  "zipf": 3.54,
+  "freq": 3
+ },
+ {
+  "entree": "to fall behind",
+  "mot": "to fall behind",
+  "zipf_avant": 5.13,
+  "freq_avant": 1,
+  "zipf": 3.09,
+  "freq": 4
+ },
+ {
+  "entree": "to fall behind",
+  "mot": "to fall behind (with/on)",
+  "zipf_avant": 5.13,
+  "freq_avant": 1,
+  "zipf": 3.09,
+  "freq": 4
+ },
+ {
+  "entree": "to fall off",
+  "mot": "to fall off",
+  "zipf_avant": 5.46,
+  "freq_avant": 1,
+  "zipf": 3.7,
+  "freq": 3
+ },
+ {
+  "entree": "to fall out",
+  "mot": "to fall out (with)",
+  "zipf_avant": 5.49,
+  "freq_avant": 1,
+  "zipf": 3.72,
+  "freq": 3
+ },
+ {
+  "entree": "to fall through",
+  "mot": "to fall through",
+  "zipf_avant": 5.5,
+  "freq_avant": 1,
+  "zipf": 3.08,
+  "freq": 4
+ },
+ {
+  "entree": "to feed",
+  "mot": "to feed on/off sth",
+  "zipf_avant": 4.67,
+  "freq_avant": 2,
+  "zipf": 3.59,
+  "freq": 3
+ },
+ {
+  "entree": "to feed",
+  "mot": "to feed through (to)",
+  "zipf_avant": 4.67,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to fend off",
+  "mot": "to fend sb/sth off",
+  "zipf_avant": 3.36,
+  "freq_avant": 4,
+  "zipf": 2.84,
+  "freq": 4
+ },
+ {
+  "entree": "to fend off",
+  "mot": "to fend sb/sth off",
+  "zipf_avant": 3.36,
+  "freq_avant": 4,
+  "zipf": 2.84,
+  "freq": 4
+ },
+ {
+  "entree": "to figure out",
+  "mot": "to figure out",
+  "zipf_avant": 5.29,
+  "freq_avant": 1,
+  "zipf": 4.46,
+  "freq": 2
+ },
+ {
+  "entree": "to figure out",
+  "mot": "to figure out",
+  "zipf_avant": 5.29,
+  "freq_avant": 1,
+  "zipf": 4.46,
+  "freq": 2
+ },
+ {
+  "entree": "to figure out",
+  "mot": "to figure on",
+  "zipf_avant": 5.3,
+  "freq_avant": 1,
+  "zipf": 3.29,
+  "freq": 4
+ },
+ {
+  "entree": "to fit",
+  "mot": "to fit in (with)",
+  "zipf_avant": 4.95,
+  "freq_avant": 1,
+  "zipf": 4.02,
+  "freq": 3
+ },
+ {
+  "entree": "to fix",
+  "mot": "to fix up",
+  "zipf_avant": 5.08,
+  "freq_avant": 1,
+  "zipf": 3.01,
+  "freq": 4
+ },
+ {
+  "entree": "to focus on",
+  "mot": "to focus sth on",
+  "zipf_avant": 5.25,
+  "freq_avant": 1,
+  "zipf": 5.14,
+  "freq": 1
+ },
+ {
+  "entree": "to fool",
+  "mot": "to fool around",
+  "zipf_avant": 4.52,
+  "freq_avant": 2,
+  "zipf": 2.7,
+  "freq": 4
+ },
+ {
+  "entree": "to fool",
+  "mot": "to fool about",
+  "zipf_avant": 4.52,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to forge",
+  "mot": "to forge ahead (with)",
+  "zipf_avant": 4.12,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to forge",
+  "mot": "to forge ahead",
+  "zipf_avant": 4.12,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to freeze",
+  "mot": "to seize up",
+  "zipf_avant": 3.8,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to gain",
+  "mot": "to gain on sb/sth",
+  "zipf_avant": 4.81,
+  "freq_avant": 2,
+  "zipf": 3.28,
+  "freq": 4
+ },
+ {
+  "entree": "to gamble",
+  "mot": "to gamble on",
+  "zipf_avant": 3.79,
+  "freq_avant": 3,
+  "zipf": 2.94,
+  "freq": 4
+ },
+ {
+  "entree": "to gamble",
+  "mot": "to gamble on doing sth",
+  "zipf_avant": 3.79,
+  "freq_avant": 3,
+  "zipf": 2.94,
+  "freq": 4
+ },
+ {
+  "entree": "to get about",
+  "mot": "to get about (got, got/gotten (US))",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 3.22,
+  "freq": 4
+ },
+ {
+  "entree": "to get about",
+  "mot": "to get about",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 3.22,
+  "freq": 4
+ },
+ {
+  "entree": "to get about",
+  "mot": "to get about",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 3.22,
+  "freq": 4
+ },
+ {
+  "entree": "to get about",
+  "mot": "to get around",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 3.93,
+  "freq": 3
+ },
+ {
+  "entree": "to get about",
+  "mot": "to get around",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 3.93,
+  "freq": 3
+ },
+ {
+  "entree": "to get about",
+  "mot": "to get around",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 3.93,
+  "freq": 3
+ },
+ {
+  "entree": "to get about",
+  "mot": "to get around (doing) sth",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 3.93,
+  "freq": 3
+ },
+ {
+  "entree": "to get across",
+  "mot": "to get sth across",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 2.82,
+  "freq": 4
+ },
+ {
+  "entree": "to get along",
+  "mot": "to get along with sb",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 3.68,
+  "freq": 3
+ },
+ {
+  "entree": "to get along",
+  "mot": "to get along",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 3.68,
+  "freq": 3
+ },
+ {
+  "entree": "to get away with",
+  "mot": "to get away with (doing) sth",
+  "zipf_avant": 5.99,
+  "freq_avant": 1,
+  "zipf": 4.02,
+  "freq": 3
+ },
+ {
+  "entree": "to get down to",
+  "mot": "to get down to (doing) sth",
+  "zipf_avant": 6.13,
+  "freq_avant": 1,
+  "zipf": 3.69,
+  "freq": 3
+ },
+ {
+  "entree": "to get out of",
+  "mot": "to get out of (doing) sth",
+  "zipf_avant": 6.34,
+  "freq_avant": 1,
+  "zipf": 4.46,
+  "freq": 2
+ },
+ {
+  "entree": "to get over",
+  "mot": "to get over sth",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 3.79,
+  "freq": 3
+ },
+ {
+  "entree": "to get over",
+  "mot": "to get over sth",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 3.79,
+  "freq": 3
+ },
+ {
+  "entree": "to get round",
+  "mot": "to get round sb",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 2.63,
+  "freq": 4
+ },
+ {
+  "entree": "to get round",
+  "mot": "to get round sth",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 2.63,
+  "freq": 4
+ },
+ {
+  "entree": "to get round",
+  "mot": "to get round to (doing) sth",
+  "zipf_avant": 6.52,
+  "freq_avant": 1,
+  "zipf": 2.63,
+  "freq": 4
+ },
+ {
+  "entree": "to give away",
+  "mot": "to give away (gave, given)",
+  "zipf_avant": 5.85,
+  "freq_avant": 1,
+  "zipf": 3.9,
+  "freq": 3
+ },
+ {
+  "entree": "to give away",
+  "mot": "to give sb/sth away",
+  "zipf_avant": 5.85,
+  "freq_avant": 1,
+  "zipf": 3.9,
+  "freq": 3
+ },
+ {
+  "entree": "to give away",
+  "mot": "to give oneself away",
+  "zipf_avant": 5.85,
+  "freq_avant": 1,
+  "zipf": 3.9,
+  "freq": 3
+ },
+ {
+  "entree": "to give in",
+  "mot": "to give in (to)",
+  "zipf_avant": 6.08,
+  "freq_avant": 1,
+  "zipf": 4.38,
+  "freq": 2
+ },
+ {
+  "entree": "to give out",
+  "mot": "to give out",
+  "zipf_avant": 6.02,
+  "freq_avant": 1,
+  "zipf": 3.82,
+  "freq": 3
+ },
+ {
+  "entree": "to give out",
+  "mot": "to give out",
+  "zipf_avant": 6.02,
+  "freq_avant": 1,
+  "zipf": 3.82,
+  "freq": 3
+ },
+ {
+  "entree": "to give up",
+  "mot": "to give up (doing sth)",
+  "zipf_avant": 6.03,
+  "freq_avant": 1,
+  "zipf": 4.49,
+  "freq": 2
+ },
+ {
+  "entree": "to give up",
+  "mot": "to give up sth",
+  "zipf_avant": 6.03,
+  "freq_avant": 1,
+  "zipf": 4.49,
+  "freq": 2
+ },
+ {
+  "entree": "to give up",
+  "mot": "to give oneself up (to)",
+  "zipf_avant": 6.03,
+  "freq_avant": 1,
+  "zipf": 4.49,
+  "freq": 2
+ },
+ {
+  "entree": "to glaze",
+  "mot": "to glaze over",
+  "zipf_avant": 3.73,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to go",
+  "mot": "to go by",
+  "zipf_avant": 6.41,
+  "freq_avant": 1,
+  "zipf": 4.04,
+  "freq": 3
+ },
+ {
+  "entree": "to go",
+  "mot": "to go by sth",
+  "zipf_avant": 6.03,
+  "freq_avant": 1,
+  "zipf": 4.04,
+  "freq": 3
+ },
+ {
+  "entree": "to go",
+  "mot": "to go in for",
+  "zipf_avant": 6.41,
+  "freq_avant": 1,
+  "zipf": 4.33,
+  "freq": 2
+ },
+ {
+  "entree": "to go",
+  "mot": "to go in for",
+  "zipf_avant": 6.41,
+  "freq_avant": 1,
+  "zipf": 4.33,
+  "freq": 2
+ },
+ {
+  "entree": "to go",
+  "mot": "to go through",
+  "zipf_avant": 6.41,
+  "freq_avant": 1,
+  "zipf": 4.64,
+  "freq": 2
+ },
+ {
+  "entree": "to go",
+  "mot": "to go through",
+  "zipf_avant": 6.41,
+  "freq_avant": 1,
+  "zipf": 4.64,
+  "freq": 2
+ },
+ {
+  "entree": "to go",
+  "mot": "to go through with sth",
+  "zipf_avant": 6.41,
+  "freq_avant": 1,
+  "zipf": 4.64,
+  "freq": 2
+ },
+ {
+  "entree": "to go",
+  "mot": "to go off",
+  "zipf_avant": 6.15,
+  "freq_avant": 1,
+  "zipf": 4.02,
+  "freq": 3
+ },
+ {
+  "entree": "to go",
+  "mot": "to go off",
+  "zipf_avant": 6.15,
+  "freq_avant": 1,
+  "zipf": 4.02,
+  "freq": 3
+ },
+ {
+  "entree": "to grow",
+  "mot": "to grow up",
+  "zipf_avant": 4.9,
+  "freq_avant": 1,
+  "zipf": 4.44,
+  "freq": 2
+ },
+ {
+  "entree": "to hammer",
+  "mot": "to hammer out sth",
+  "zipf_avant": 4.16,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to hand down",
+  "mot": "to hand down",
+  "zipf_avant": 5.41,
+  "freq_avant": 1,
+  "zipf": 3.6,
+  "freq": 3
+ },
+ {
+  "entree": "to hand down",
+  "mot": "to hand down",
+  "zipf_avant": 5.41,
+  "freq_avant": 1,
+  "zipf": 3.6,
+  "freq": 3
+ },
+ {
+  "entree": "to hand in",
+  "mot": "to hand in",
+  "zipf_avant": 5.41,
+  "freq_avant": 1,
+  "zipf": 4.06,
+  "freq": 3
+ },
+ {
+  "entree": "to hand over",
+  "mot": "to hand over",
+  "zipf_avant": 5.41,
+  "freq_avant": 1,
+  "zipf": 3.84,
+  "freq": 3
+ },
+ {
+  "entree": "to hang",
+  "mot": "to hang over sb/sth",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 3.08,
+  "freq": 4
+ },
+ {
+  "entree": "to hang around",
+  "mot": "to hang around",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 3.47,
+  "freq": 4
+ },
+ {
+  "entree": "to hang around",
+  "mot": "to hang out at",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 4.08,
+  "freq": 3
+ },
+ {
+  "entree": "to hang around",
+  "mot": "to hang out with",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 4.08,
+  "freq": 3
+ },
+ {
+  "entree": "to hang back",
+  "mot": "to hang back",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to hang on",
+  "mot": "to hang on",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 3.78,
+  "freq": 3
+ },
+ {
+  "entree": "to hang on",
+  "mot": "to hang on",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 3.78,
+  "freq": 3
+ },
+ {
+  "entree": "to hang on",
+  "mot": "to hang on to sth",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 3.78,
+  "freq": 3
+ },
+ {
+  "entree": "to hang on",
+  "mot": "to hang on",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 3.78,
+  "freq": 3
+ },
+ {
+  "entree": "to hang together",
+  "mot": "to hang together",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to hang together",
+  "mot": "to hang together",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to hang together",
+  "mot": "to add up",
+  "zipf_avant": 5.09,
+  "freq_avant": 1,
+  "zipf": 3.8,
+  "freq": 3
+ },
+ {
+  "entree": "to hang up",
+  "mot": "to hang up",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 3.76,
+  "freq": 3
+ },
+ {
+  "entree": "to hang up",
+  "mot": "to hang up",
+  "zipf_avant": 4.6,
+  "freq_avant": 2,
+  "zipf": 3.76,
+  "freq": 3
+ },
+ {
+  "entree": "to hark back",
+  "mot": "to hark back to",
+  "zipf_avant": 2.81,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to head",
+  "mot": "to head off",
+  "zipf_avant": 5.53,
+  "freq_avant": 1,
+  "zipf": 3.55,
+  "freq": 3
+ },
+ {
+  "entree": "to hedge",
+  "mot": "to hedge sb in",
+  "zipf_avant": 3.74,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to hedge",
+  "mot": "to hedge around with",
+  "zipf_avant": 3.74,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to hedge",
+  "mot": "to hedge about with",
+  "zipf_avant": 3.74,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to hinge on",
+  "mot": "to hinge on/upon",
+  "zipf_avant": 3.32,
+  "freq_avant": 4,
+  "zipf": 3.07,
+  "freq": 4
+ },
+ {
+  "entree": "to hold back",
+  "mot": "to hold sb/sth back",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 3.53,
+  "freq": 3
+ },
+ {
+  "entree": "to hold off",
+  "mot": "to hold sb/sth off",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 3.34,
+  "freq": 4
+ },
+ {
+  "entree": "to hold off",
+  "mot": "to hold off (on) (doing sth)",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 3.34,
+  "freq": 4
+ },
+ {
+  "entree": "to hold on",
+  "mot": "to hold on",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 4.38,
+  "freq": 2
+ },
+ {
+  "entree": "to hold on",
+  "mot": "to hold on to",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 4.38,
+  "freq": 2
+ },
+ {
+  "entree": "to hold on",
+  "mot": "to hold on to sth",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 4.38,
+  "freq": 2
+ },
+ {
+  "entree": "to hold out",
+  "mot": "to hold out",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 3.58,
+  "freq": 3
+ },
+ {
+  "entree": "to hold out",
+  "mot": "to hold out (against)",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 3.58,
+  "freq": 3
+ },
+ {
+  "entree": "to hold out",
+  "mot": "to hold out for sth",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 3.58,
+  "freq": 3
+ },
+ {
+  "entree": "to hold up",
+  "mot": "to hold sb/sth up",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 3.98,
+  "freq": 3
+ },
+ {
+  "entree": "to hold up",
+  "mot": "to hold up sth",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 3.98,
+  "freq": 3
+ },
+ {
+  "entree": "to hold up",
+  "mot": "to hold sth up",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 3.98,
+  "freq": 3
+ },
+ {
+  "entree": "to hold up",
+  "mot": "to hold up",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 3.98,
+  "freq": 3
+ },
+ {
+  "entree": "to hold up",
+  "mot": "to hold sb/sth up as",
+  "zipf_avant": 5.19,
+  "freq_avant": 1,
+  "zipf": 3.98,
+  "freq": 3
+ },
+ {
+  "entree": "to impose",
+  "mot": "to impose on sb",
+  "zipf_avant": 3.92,
+  "freq_avant": 3,
+  "zipf": 3.78,
+  "freq": 3
+ },
+ {
+  "entree": "to indulge",
+  "mot": "to indulge in sth",
+  "zipf_avant": 3.54,
+  "freq_avant": 3,
+  "zipf": 3.45,
+  "freq": 4
+ },
+ {
+  "entree": "to infringe on",
+  "mot": "to infringe on",
+  "zipf_avant": 2.99,
+  "freq_avant": 4,
+  "zipf": 2.81,
+  "freq": 4
+ },
+ {
+  "entree": "to involve",
+  "mot": "to involve sb in sth",
+  "zipf_avant": 5.29,
+  "freq_avant": 1,
+  "zipf": 4.95,
+  "freq": 1
+ },
+ {
+  "entree": "to join",
+  "mot": "to join up",
+  "zipf_avant": 5.28,
+  "freq_avant": 1,
+  "zipf": 3.12,
+  "freq": 4
+ },
+ {
+  "entree": "to keep on",
+  "mot": "to keep on doing sth",
+  "zipf_avant": 5.83,
+  "freq_avant": 1,
+  "zipf": 4.0,
+  "freq": 3
+ },
+ {
+  "entree": "to keep up",
+  "mot": "to keep sth up",
+  "zipf_avant": 5.77,
+  "freq_avant": 1,
+  "zipf": 4.27,
+  "freq": 2
+ },
+ {
+  "entree": "to keep up",
+  "mot": "to keep up",
+  "zipf_avant": 5.77,
+  "freq_avant": 1,
+  "zipf": 4.27,
+  "freq": 2
+ },
+ {
+  "entree": "to keep up",
+  "mot": "to keep up (with)",
+  "zipf_avant": 5.77,
+  "freq_avant": 1,
+  "zipf": 4.27,
+  "freq": 2
+ },
+ {
+  "entree": "to kick",
+  "mot": "to kick sb out",
+  "zipf_avant": 4.72,
+  "freq_avant": 2,
+  "zipf": 3.41,
+  "freq": 4
+ },
+ {
+  "entree": "to kick",
+  "mot": "to kick in",
+  "zipf_avant": 4.72,
+  "freq_avant": 2,
+  "zipf": 3.47,
+  "freq": 4
+ },
+ {
+  "entree": "to knock out",
+  "mot": "to knock sb/sth over",
+  "zipf_avant": 4.35,
+  "freq_avant": 2,
+  "zipf": 2.51,
+  "freq": 4
+ },
+ {
+  "entree": "to knock out",
+  "mot": "to knock sb out",
+  "zipf_avant": 4.71,
+  "freq_avant": 2,
+  "zipf": 3.33,
+  "freq": 4
+ },
+ {
+  "entree": "to knock out",
+  "mot": "to knock out sth",
+  "zipf_avant": 4.35,
+  "freq_avant": 2,
+  "zipf": 3.33,
+  "freq": 4
+ },
+ {
+  "entree": "to lash",
+  "mot": "to lash out (at sb)",
+  "zipf_avant": 3.86,
+  "freq_avant": 3,
+  "zipf": 2.53,
+  "freq": 4
+ },
+ {
+  "entree": "to lash",
+  "mot": "to lash out against",
+  "zipf_avant": 3.86,
+  "freq_avant": 3,
+  "zipf": 2.53,
+  "freq": 4
+ },
+ {
+  "entree": "to lay",
+  "mot": "to lay down",
+  "zipf_avant": 4.64,
+  "freq_avant": 2,
+  "zipf": 4.02,
+  "freq": 3
+ },
+ {
+  "entree": "to lay",
+  "mot": "to be laid up",
+  "zipf_avant": 4.99,
+  "freq_avant": 1,
+  "zipf": 2.6,
+  "freq": 4
+ },
+ {
+  "entree": "to lay off",
+  "mot": "to lay off",
+  "zipf_avant": 5.33,
+  "freq_avant": 1,
+  "zipf": 3.5,
+  "freq": 3
+ },
+ {
+  "entree": "to lay out",
+  "mot": "to lay out",
+  "zipf_avant": 4.64,
+  "freq_avant": 2,
+  "zipf": 3.98,
+  "freq": 3
+ },
+ {
+  "entree": "to lay out",
+  "mot": "to lay out sth",
+  "zipf_avant": 4.64,
+  "freq_avant": 2,
+  "zipf": 3.98,
+  "freq": 3
+ },
+ {
+  "entree": "to limp",
+  "mot": "to limp along",
+  "zipf_avant": 3.43,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to live down",
+  "mot": "to live down",
+  "zipf_avant": 5.76,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to live up to",
+  "mot": "to live up to",
+  "zipf_avant": 5.84,
+  "freq_avant": 1,
+  "zipf": 3.79,
+  "freq": 3
+ },
+ {
+  "entree": "to look down on",
+  "mot": "to look down on",
+  "zipf_avant": 5.95,
+  "freq_avant": 1,
+  "zipf": 3.81,
+  "freq": 3
+ },
+ {
+  "entree": "to look forward to",
+  "mot": "to look forward to",
+  "zipf_avant": 5.55,
+  "freq_avant": 1,
+  "zipf": 4.56,
+  "freq": 2
+ },
+ {
+  "entree": "to look on upon",
+  "mot": "to look on/upon sb/sth as",
+  "zipf_avant": 6.14,
+  "freq_avant": 1,
+  "zipf": 3.87,
+  "freq": 3
+ },
+ {
+  "entree": "to look on upon",
+  "mot": "to look on",
+  "zipf_avant": 5.81,
+  "freq_avant": 1,
+  "zipf": 3.87,
+  "freq": 3
+ },
+ {
+  "entree": "to look out for",
+  "mot": "to look out (for)",
+  "zipf_avant": 6.07,
+  "freq_avant": 1,
+  "zipf": 3.94,
+  "freq": 3
+ },
+ {
+  "entree": "to look out for",
+  "mot": "to look out for",
+  "zipf_avant": 6.07,
+  "freq_avant": 1,
+  "zipf": 3.94,
+  "freq": 3
+ },
+ {
+  "entree": "to look up",
+  "mot": "to look sb up",
+  "zipf_avant": 6.07,
+  "freq_avant": 1,
+  "zipf": 4.24,
+  "freq": 2
+ },
+ {
+  "entree": "to look up",
+  "mot": "to look sth up",
+  "zipf_avant": 6.07,
+  "freq_avant": 1,
+  "zipf": 4.24,
+  "freq": 2
+ },
+ {
+  "entree": "to look up",
+  "mot": "to look up",
+  "zipf_avant": 6.07,
+  "freq_avant": 1,
+  "zipf": 4.24,
+  "freq": 2
+ },
+ {
+  "entree": "to look up",
+  "mot": "to look up to",
+  "zipf_avant": 6.07,
+  "freq_avant": 1,
+  "zipf": 4.24,
+  "freq": 2
+ },
+ {
+  "entree": "to make out",
+  "mot": "to make out",
+  "zipf_avant": 6.3,
+  "freq_avant": 1,
+  "zipf": 3.89,
+  "freq": 3
+ },
+ {
+  "entree": "to make out",
+  "mot": "to make out",
+  "zipf_avant": 6.3,
+  "freq_avant": 1,
+  "zipf": 3.89,
+  "freq": 3
+ },
+ {
+  "entree": "to make out",
+  "mot": "to make out (that)",
+  "zipf_avant": 6.3,
+  "freq_avant": 1,
+  "zipf": 3.89,
+  "freq": 3
+ },
+ {
+  "entree": "to make up",
+  "mot": "to make up sth",
+  "zipf_avant": 6.08,
+  "freq_avant": 1,
+  "zipf": 4.69,
+  "freq": 2
+ },
+ {
+  "entree": "to make up",
+  "mot": "to make oneself up",
+  "zipf_avant": 6.3,
+  "freq_avant": 1,
+  "zipf": 4.69,
+  "freq": 2
+ },
+ {
+  "entree": "to make up",
+  "mot": "to make up",
+  "zipf_avant": 6.3,
+  "freq_avant": 1,
+  "zipf": 4.69,
+  "freq": 2
+ },
+ {
+  "entree": "to make up",
+  "mot": "to make up",
+  "zipf_avant": 6.3,
+  "freq_avant": 1,
+  "zipf": 4.69,
+  "freq": 2
+ },
+ {
+  "entree": "to make up",
+  "mot": "to make up for sth",
+  "zipf_avant": 6.3,
+  "freq_avant": 1,
+  "zipf": 4.69,
+  "freq": 2
+ },
+ {
+  "entree": "to meddle in",
+  "mot": "to meddle in",
+  "zipf_avant": 3.47,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to melt",
+  "mot": "to melt away",
+  "zipf_avant": 3.96,
+  "freq_avant": 3,
+  "zipf": 2.57,
+  "freq": 4
+ },
+ {
+  "entree": "to mix",
+  "mot": "to mix up",
+  "zipf_avant": 5.04,
+  "freq_avant": 1,
+  "zipf": 3.36,
+  "freq": 4
+ },
+ {
+  "entree": "to mix",
+  "mot": "to be mixed up in/with",
+  "zipf_avant": 5.04,
+  "freq_avant": 1,
+  "zipf": 3.36,
+  "freq": 4
+ },
+ {
+  "entree": "to mull over",
+  "mot": "to mull over",
+  "zipf_avant": 3.27,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to own",
+  "mot": "to own up to",
+  "zipf_avant": 5.74,
+  "freq_avant": 1,
+  "zipf": 2.54,
+  "freq": 4
+ },
+ {
+  "entree": "to pay off",
+  "mot": "to pay off sth",
+  "zipf_avant": 5.4,
+  "freq_avant": 1,
+  "zipf": 4.02,
+  "freq": 3
+ },
+ {
+  "entree": "to pay off",
+  "mot": "to pay sb back (sth) / to pay back sth",
+  "zipf_avant": 5.6,
+  "freq_avant": 1,
+  "zipf": 3.28,
+  "freq": 4
+ },
+ {
+  "entree": "to pay off",
+  "mot": "to pay sb off",
+  "zipf_avant": 5.4,
+  "freq_avant": 1,
+  "zipf": 4.02,
+  "freq": 3
+ },
+ {
+  "entree": "to pay off",
+  "mot": "to pay sb off",
+  "zipf_avant": 5.4,
+  "freq_avant": 1,
+  "zipf": 4.02,
+  "freq": 3
+ },
+ {
+  "entree": "to pay off",
+  "mot": "to pay off",
+  "zipf_avant": 5.4,
+  "freq_avant": 1,
+  "zipf": 4.02,
+  "freq": 3
+ },
+ {
+  "entree": "to pay off",
+  "mot": "to pay sb back (for sth)",
+  "zipf_avant": 5.6,
+  "freq_avant": 1,
+  "zipf": 3.28,
+  "freq": 4
+ },
+ {
+  "entree": "to pick up",
+  "mot": "to pick up sth",
+  "zipf_avant": 5.08,
+  "freq_avant": 1,
+  "zipf": 4.77,
+  "freq": 2
+ },
+ {
+  "entree": "to pick up",
+  "mot": "to pick up sb/sth",
+  "zipf_avant": 5.08,
+  "freq_avant": 1,
+  "zipf": 4.77,
+  "freq": 2
+ },
+ {
+  "entree": "to pick up",
+  "mot": "to pick up",
+  "zipf_avant": 5.08,
+  "freq_avant": 1,
+  "zipf": 4.77,
+  "freq": 2
+ },
+ {
+  "entree": "to pick up",
+  "mot": "to pick up sth",
+  "zipf_avant": 5.08,
+  "freq_avant": 1,
+  "zipf": 4.77,
+  "freq": 2
+ },
+ {
+  "entree": "to pick up",
+  "mot": "to pick up sth",
+  "zipf_avant": 5.08,
+  "freq_avant": 1,
+  "zipf": 4.77,
+  "freq": 2
+ },
+ {
+  "entree": "to pick up",
+  "mot": "to pick up sth",
+  "zipf_avant": 5.08,
+  "freq_avant": 1,
+  "zipf": 4.77,
+  "freq": 2
+ },
+ {
+  "entree": "to pick up",
+  "mot": "to pick up",
+  "zipf_avant": 5.08,
+  "freq_avant": 1,
+  "zipf": 4.77,
+  "freq": 2
+ },
+ {
+  "entree": "to pin down",
+  "mot": "to pin sb down",
+  "zipf_avant": 4.28,
+  "freq_avant": 2,
+  "zipf": 2.73,
+  "freq": 4
+ },
+ {
+  "entree": "to pin down",
+  "mot": "to pin sth down",
+  "zipf_avant": 4.28,
+  "freq_avant": 2,
+  "zipf": 2.73,
+  "freq": 4
+ },
+ {
+  "entree": "to pin down",
+  "mot": "to pin sb down (to/on sth)",
+  "zipf_avant": 4.28,
+  "freq_avant": 2,
+  "zipf": 2.73,
+  "freq": 4
+ },
+ {
+  "entree": "to plague",
+  "mot": "to be plagued by",
+  "zipf_avant": 3.89,
+  "freq_avant": 3,
+  "zipf": 3.07,
+  "freq": 4
+ },
+ {
+  "entree": "to play down",
+  "mot": "to play down",
+  "zipf_avant": 5.61,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to play down",
+  "mot": "to play up",
+  "zipf_avant": 5.61,
+  "freq_avant": 1,
+  "zipf": 2.63,
+  "freq": 4
+ },
+ {
+  "entree": "to play up to",
+  "mot": "to play up to",
+  "zipf_avant": 5.61,
+  "freq_avant": 1,
+  "zipf": 2.63,
+  "freq": 4
+ },
+ {
+  "entree": "to plug",
+  "mot": "to plug in",
+  "zipf_avant": 4.14,
+  "freq_avant": 3,
+  "zipf": 3.65,
+  "freq": 3
+ },
+ {
+  "entree": "to plug",
+  "mot": "to plug away (at)",
+  "zipf_avant": 4.14,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to point out",
+  "mot": "to point out",
+  "zipf_avant": 5.54,
+  "freq_avant": 1,
+  "zipf": 4.67,
+  "freq": 2
+ },
+ {
+  "entree": "to point out",
+  "mot": "to point out",
+  "zipf_avant": 5.54,
+  "freq_avant": 1,
+  "zipf": 4.67,
+  "freq": 2
+ },
+ {
+  "entree": "to prevail",
+  "mot": "to prevail on sb to do sth",
+  "zipf_avant": 3.55,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to prop up",
+  "mot": "to prop up",
+  "zipf_avant": 3.77,
+  "freq_avant": 3,
+  "zipf": 2.95,
+  "freq": 4
+ },
+ {
+  "entree": "to prop up",
+  "mot": "to prop up",
+  "zipf_avant": 3.77,
+  "freq_avant": 3,
+  "zipf": 2.95,
+  "freq": 4
+ },
+ {
+  "entree": "to pull oneself together",
+  "mot": "to pull oneself together",
+  "zipf_avant": 4.82,
+  "freq_avant": 2,
+  "zipf": 3.07,
+  "freq": 4
+ },
+ {
+  "entree": "to pull through",
+  "mot": "to pull through (sth)",
+  "zipf_avant": 4.82,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to push aside",
+  "mot": "to push aside",
+  "zipf_avant": 4.82,
+  "freq_avant": 2,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to push through",
+  "mot": "to push through",
+  "zipf_avant": 4.82,
+  "freq_avant": 2,
+  "zipf": 2.99,
+  "freq": 4
+ },
+ {
+  "entree": "to put across",
+  "mot": "to put across",
+  "zipf_avant": 5.66,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to put aside",
+  "mot": "to put aside",
+  "zipf_avant": 5.66,
+  "freq_avant": 1,
+  "zipf": 3.1,
+  "freq": 4
+ },
+ {
+  "entree": "to put aside",
+  "mot": "to put away",
+  "zipf_avant": 5.66,
+  "freq_avant": 1,
+  "zipf": 3.18,
+  "freq": 4
+ },
+ {
+  "entree": "to put aside",
+  "mot": "to tidy away",
+  "zipf_avant": 3.53,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to put down",
+  "mot": "to put sb down",
+  "zipf_avant": 5.66,
+  "freq_avant": 1,
+  "zipf": 3.62,
+  "freq": 3
+ },
+ {
+  "entree": "to put down",
+  "mot": "to put sth down",
+  "zipf_avant": 5.66,
+  "freq_avant": 1,
+  "zipf": 3.62,
+  "freq": 3
+ },
+ {
+  "entree": "to put down",
+  "mot": "to put sth down to",
+  "zipf_avant": 5.66,
+  "freq_avant": 1,
+  "zipf": 3.62,
+  "freq": 3
+ },
+ {
+  "entree": "to put forward",
+  "mot": "to put forward/forth",
+  "zipf_avant": 5.12,
+  "freq_avant": 1,
+  "zipf": 3.65,
+  "freq": 3
+ },
+ {
+  "entree": "to put off",
+  "mot": "to put off (doing) sth",
+  "zipf_avant": 5.66,
+  "freq_avant": 1,
+  "zipf": 3.5,
+  "freq": 3
+ },
+ {
+  "entree": "to put off",
+  "mot": "to put sb off (sth)",
+  "zipf_avant": 5.66,
+  "freq_avant": 1,
+  "zipf": 3.5,
+  "freq": 3
+ },
+ {
+  "entree": "to put off",
+  "mot": "to put sb off (doing sth)",
+  "zipf_avant": 5.66,
+  "freq_avant": 1,
+  "zipf": 3.5,
+  "freq": 3
+ },
+ {
+  "entree": "to put sb out",
+  "mot": "to put sb out",
+  "zipf_avant": 5.66,
+  "freq_avant": 1,
+  "zipf": 3.93,
+  "freq": 3
+ },
+ {
+  "entree": "to put up with",
+  "mot": "to put up with",
+  "zipf_avant": 5.69,
+  "freq_avant": 1,
+  "zipf": 4.16,
+  "freq": 2
+ },
+ {
+  "entree": "to queue up",
+  "mot": "to queue up for sth / to do sth",
+  "zipf_avant": 3.78,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to ratchet up",
+  "mot": "to ratchet up",
+  "zipf_avant": 3.27,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to rave",
+  "mot": "to rave about sth",
+  "zipf_avant": 3.52,
+  "freq_avant": 3,
+  "zipf": 2.89,
+  "freq": 4
+ },
+ {
+  "entree": "to reach",
+  "mot": "to reach out (to sb)",
+  "zipf_avant": 4.94,
+  "freq_avant": 1,
+  "zipf": 3.92,
+  "freq": 3
+ },
+ {
+  "entree": "to rein in",
+  "mot": "to rein in",
+  "zipf_avant": 3.37,
+  "freq_avant": 4,
+  "zipf": 2.75,
+  "freq": 4
+ },
+ {
+  "entree": "to rein in",
+  "mot": "to rein in",
+  "zipf_avant": 3.68,
+  "freq_avant": 3,
+  "zipf": 2.75,
+  "freq": 4
+ },
+ {
+  "entree": "to rely on",
+  "mot": "to count on",
+  "zipf_avant": 5.07,
+  "freq_avant": 1,
+  "zipf": 3.89,
+  "freq": 3
+ },
+ {
+  "entree": "to rise",
+  "mot": "to rise up (against)",
+  "zipf_avant": 4.81,
+  "freq_avant": 2,
+  "zipf": 3.48,
+  "freq": 4
+ },
+ {
+  "entree": "to round up",
+  "mot": "to round up sb/sth",
+  "zipf_avant": 5.21,
+  "freq_avant": 1,
+  "zipf": 3.46,
+  "freq": 4
+ },
+ {
+  "entree": "to round up",
+  "mot": "to round sth up/down",
+  "zipf_avant": 5.14,
+  "freq_avant": 1,
+  "zipf": 3.46,
+  "freq": 4
+ },
+ {
+  "entree": "to rule out",
+  "mot": "to rule out",
+  "zipf_avant": 5.37,
+  "freq_avant": 1,
+  "zipf": 3.83,
+  "freq": 3
+ },
+ {
+  "entree": "to run out of",
+  "mot": "to run out of",
+  "zipf_avant": 5.76,
+  "freq_avant": 1,
+  "zipf": 4.29,
+  "freq": 2
+ },
+ {
+  "entree": "to run out of",
+  "mot": "to run out",
+  "zipf_avant": 5.49,
+  "freq_avant": 1,
+  "zipf": 4.29,
+  "freq": 2
+ },
+ {
+  "entree": "to run up",
+  "mot": "to run up",
+  "zipf_avant": 5.76,
+  "freq_avant": 1,
+  "zipf": 3.63,
+  "freq": 3
+ },
+ {
+  "entree": "to run up",
+  "mot": "to run up against",
+  "zipf_avant": 5.76,
+  "freq_avant": 1,
+  "zipf": 3.63,
+  "freq": 3
+ },
+ {
+  "entree": "to scare",
+  "mot": "to scare sb away/off",
+  "zipf_avant": 4.07,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to scrimp",
+  "mot": "to skimp on",
+  "zipf_avant": 2.52,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to set back",
+  "mot": "to set sth back (set)",
+  "zipf_avant": 5.59,
+  "freq_avant": 1,
+  "zipf": 3.05,
+  "freq": 4
+ },
+ {
+  "entree": "to set back",
+  "mot": "to set sb back",
+  "zipf_avant": 5.59,
+  "freq_avant": 1,
+  "zipf": 3.05,
+  "freq": 4
+ },
+ {
+  "entree": "to set off",
+  "mot": "to set off",
+  "zipf_avant": 5.57,
+  "freq_avant": 1,
+  "zipf": 3.76,
+  "freq": 3
+ },
+ {
+  "entree": "to set off",
+  "mot": "to set off",
+  "zipf_avant": 5.57,
+  "freq_avant": 1,
+  "zipf": 3.76,
+  "freq": 3
+ },
+ {
+  "entree": "to set off",
+  "mot": "to set off",
+  "zipf_avant": 5.57,
+  "freq_avant": 1,
+  "zipf": 3.76,
+  "freq": 3
+ },
+ {
+  "entree": "to set off",
+  "mot": "to set off",
+  "zipf_avant": 5.57,
+  "freq_avant": 1,
+  "zipf": 3.76,
+  "freq": 3
+ },
+ {
+  "entree": "to set off",
+  "mot": "to set out to do sth",
+  "zipf_avant": 5.64,
+  "freq_avant": 1,
+  "zipf": 4.54,
+  "freq": 2
+ },
+ {
+  "entree": "to set off",
+  "mot": "to set out sth",
+  "zipf_avant": 5.59,
+  "freq_avant": 1,
+  "zipf": 4.54,
+  "freq": 2
+ },
+ {
+  "entree": "to set up",
+  "mot": "to set up",
+  "zipf_avant": 5.64,
+  "freq_avant": 1,
+  "zipf": 4.97,
+  "freq": 1
+ },
+ {
+  "entree": "to set up",
+  "mot": "to set up",
+  "zipf_avant": 5.64,
+  "freq_avant": 1,
+  "zipf": 4.97,
+  "freq": 1
+ },
+ {
+  "entree": "to set up",
+  "mot": "to set up",
+  "zipf_avant": 5.64,
+  "freq_avant": 1,
+  "zipf": 4.97,
+  "freq": 1
+ },
+ {
+  "entree": "to set up",
+  "mot": "to set up",
+  "zipf_avant": 5.64,
+  "freq_avant": 1,
+  "zipf": 4.97,
+  "freq": 1
+ },
+ {
+  "entree": "to set up",
+  "mot": "to set sb up",
+  "zipf_avant": 5.59,
+  "freq_avant": 1,
+  "zipf": 4.97,
+  "freq": 1
+ },
+ {
+  "entree": "to settle",
+  "mot": "to settle down",
+  "zipf_avant": 4.37,
+  "freq_avant": 2,
+  "zipf": 3.52,
+  "freq": 3
+ },
+ {
+  "entree": "to shake",
+  "mot": "to shake up",
+  "zipf_avant": 4.33,
+  "freq_avant": 2,
+  "zipf": 2.65,
+  "freq": 4
+ },
+ {
+  "entree": "to shape",
+  "mot": "to shape up",
+  "zipf_avant": 4.96,
+  "freq_avant": 1,
+  "zipf": 3.07,
+  "freq": 4
+ },
+ {
+  "entree": "to shrink",
+  "mot": "to shrink back",
+  "zipf_avant": 3.73,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to shrug off",
+  "mot": "to shrug off sth",
+  "zipf_avant": 3.75,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to shrug off",
+  "mot": "to shrug off sth",
+  "zipf_avant": 3.75,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to single out",
+  "mot": "to single out",
+  "zipf_avant": 5.42,
+  "freq_avant": 1,
+  "zipf": 3.36,
+  "freq": 4
+ },
+ {
+  "entree": "to slacken",
+  "mot": "to slack off",
+  "zipf_avant": 3.7,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to smooth out",
+  "mot": "to smooth out",
+  "zipf_avant": 4.4,
+  "freq_avant": 2,
+  "zipf": 2.68,
+  "freq": 4
+ },
+ {
+  "entree": "to smooth out",
+  "mot": "to smooth out",
+  "zipf_avant": 4.43,
+  "freq_avant": 2,
+  "zipf": 2.68,
+  "freq": 4
+ },
+ {
+  "entree": "to sneak",
+  "mot": "to sneak out",
+  "zipf_avant": 4.15,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to sort",
+  "mot": "to sort out",
+  "zipf_avant": 5.09,
+  "freq_avant": 1,
+  "zipf": 3.72,
+  "freq": 3
+ },
+ {
+  "entree": "to spill",
+  "mot": "to spill over (into)",
+  "zipf_avant": 4.22,
+  "freq_avant": 2,
+  "zipf": 2.58,
+  "freq": 4
+ },
+ {
+  "entree": "to spring",
+  "mot": "to spring up",
+  "zipf_avant": 5.01,
+  "freq_avant": 1,
+  "zipf": 3.36,
+  "freq": 4
+ },
+ {
+  "entree": "to spy",
+  "mot": "to spy on",
+  "zipf_avant": 4.45,
+  "freq_avant": 2,
+  "zipf": 3.32,
+  "freq": 4
+ },
+ {
+  "entree": "to squeeze",
+  "mot": "to squeeze sth in / to squeeze in sth",
+  "zipf_avant": 4.18,
+  "freq_avant": 2,
+  "zipf": 2.56,
+  "freq": 4
+ },
+ {
+  "entree": "to squeeze",
+  "mot": "to squeeze sth out of sb",
+  "zipf_avant": 4.18,
+  "freq_avant": 2,
+  "zipf": 2.56,
+  "freq": 4
+ },
+ {
+  "entree": "to stand by",
+  "mot": "to stand by (stood)",
+  "zipf_avant": 5.46,
+  "freq_avant": 1,
+  "zipf": 3.82,
+  "freq": 3
+ },
+ {
+  "entree": "to stand by",
+  "mot": "to stand by",
+  "zipf_avant": 5.46,
+  "freq_avant": 1,
+  "zipf": 3.82,
+  "freq": 3
+ },
+ {
+  "entree": "to stand by",
+  "mot": "to stand by sb/sth",
+  "zipf_avant": 5.46,
+  "freq_avant": 1,
+  "zipf": 3.82,
+  "freq": 3
+ },
+ {
+  "entree": "to stand by",
+  "mot": "to stand by sth",
+  "zipf_avant": 5.14,
+  "freq_avant": 1,
+  "zipf": 3.82,
+  "freq": 3
+ },
+ {
+  "entree": "to stand in for",
+  "mot": "to stand in (for sb/sth)",
+  "zipf_avant": 5.46,
+  "freq_avant": 1,
+  "zipf": 4.25,
+  "freq": 2
+ },
+ {
+  "entree": "to stand out",
+  "mot": "to stand out",
+  "zipf_avant": 5.44,
+  "freq_avant": 1,
+  "zipf": 3.98,
+  "freq": 3
+ },
+ {
+  "entree": "to stand up for",
+  "mot": "to stand up (to sth)",
+  "zipf_avant": 5.44,
+  "freq_avant": 1,
+  "zipf": 4.21,
+  "freq": 2
+ },
+ {
+  "entree": "to stand up for",
+  "mot": "to stand up to sb",
+  "zipf_avant": 5.14,
+  "freq_avant": 1,
+  "zipf": 4.21,
+  "freq": 2
+ },
+ {
+  "entree": "to stand up for",
+  "mot": "to stand up for",
+  "zipf_avant": 5.44,
+  "freq_avant": 1,
+  "zipf": 4.21,
+  "freq": 2
+ },
+ {
+  "entree": "to stand up for",
+  "mot": "to stand sb up",
+  "zipf_avant": 5.44,
+  "freq_avant": 1,
+  "zipf": 4.21,
+  "freq": 2
+ },
+ {
+  "entree": "to step up",
+  "mot": "to step up",
+  "zipf_avant": 5.31,
+  "freq_avant": 1,
+  "zipf": 3.91,
+  "freq": 3
+ },
+ {
+  "entree": "to step up",
+  "mot": "to step up",
+  "zipf_avant": 5.31,
+  "freq_avant": 1,
+  "zipf": 3.91,
+  "freq": 3
+ },
+ {
+  "entree": "to stir",
+  "mot": "to stir up",
+  "zipf_avant": 4.25,
+  "freq_avant": 2,
+  "zipf": 3.29,
+  "freq": 4
+ },
+ {
+  "entree": "to stumble",
+  "mot": "to stumble across/on/upon",
+  "zipf_avant": 4.02,
+  "freq_avant": 3,
+  "zipf": 3.11,
+  "freq": 4
+ },
+ {
+  "entree": "to stumble",
+  "mot": "to stumble over",
+  "zipf_avant": 4.02,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to swear",
+  "mot": "to be sworn in",
+  "zipf_avant": 4.69,
+  "freq_avant": 2,
+  "zipf": 3.13,
+  "freq": 4
+ },
+ {
+  "entree": "to take in",
+  "mot": "to take sb in",
+  "zipf_avant": 5.92,
+  "freq_avant": 1,
+  "zipf": 4.42,
+  "freq": 2
+ },
+ {
+  "entree": "to take in",
+  "mot": "to take sth in",
+  "zipf_avant": 5.92,
+  "freq_avant": 1,
+  "zipf": 4.42,
+  "freq": 2
+ },
+ {
+  "entree": "to take in",
+  "mot": "to take sb in",
+  "zipf_avant": 5.92,
+  "freq_avant": 1,
+  "zipf": 4.42,
+  "freq": 2
+ },
+ {
+  "entree": "to take on",
+  "mot": "to take on sth",
+  "zipf_avant": 5.92,
+  "freq_avant": 1,
+  "zipf": 4.55,
+  "freq": 2
+ },
+ {
+  "entree": "to take on",
+  "mot": "to take on sb/sth",
+  "zipf_avant": 5.92,
+  "freq_avant": 1,
+  "zipf": 4.55,
+  "freq": 2
+ },
+ {
+  "entree": "to take on",
+  "mot": "to take on sth",
+  "zipf_avant": 5.92,
+  "freq_avant": 1,
+  "zipf": 4.55,
+  "freq": 2
+ },
+ {
+  "entree": "to take on",
+  "mot": "to take sb on",
+  "zipf_avant": 6.25,
+  "freq_avant": 1,
+  "zipf": 4.55,
+  "freq": 2
+ },
+ {
+  "entree": "to taper off",
+  "mot": "to taper off",
+  "zipf_avant": 3.71,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to tease",
+  "mot": "to tease out sth / to tease sth out",
+  "zipf_avant": 3.59,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to thrust",
+  "mot": "to thrust sth (up)on sb",
+  "zipf_avant": 3.86,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to top",
+  "mot": "to top up sth",
+  "zipf_avant": 5.57,
+  "freq_avant": 1,
+  "zipf": 2.79,
+  "freq": 4
+ },
+ {
+  "entree": "to trade",
+  "mot": "to trade in sth",
+  "zipf_avant": 5.3,
+  "freq_avant": 1,
+  "zipf": 3.97,
+  "freq": 3
+ },
+ {
+  "entree": "to trade",
+  "mot": "to trade in sth for sth",
+  "zipf_avant": 5.3,
+  "freq_avant": 1,
+  "zipf": 3.97,
+  "freq": 3
+ },
+ {
+  "entree": "to trample",
+  "mot": "to trample on",
+  "zipf_avant": 2.83,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to trample",
+  "mot": "to tread on (trod, trodden)",
+  "zipf_avant": 3.52,
+  "freq_avant": 3,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to trump",
+  "mot": "to trump sth up",
+  "zipf_avant": 4.93,
+  "freq_avant": 1,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to turn down",
+  "mot": "to turn down",
+  "zipf_avant": 5.32,
+  "freq_avant": 1,
+  "zipf": 3.61,
+  "freq": 3
+ },
+ {
+  "entree": "to turn down",
+  "mot": "to turn down",
+  "zipf_avant": 5.57,
+  "freq_avant": 1,
+  "zipf": 3.61,
+  "freq": 3
+ },
+ {
+  "entree": "to turn out",
+  "mot": "to turn out",
+  "zipf_avant": 5.62,
+  "freq_avant": 1,
+  "zipf": 4.53,
+  "freq": 2
+ },
+ {
+  "entree": "to turn out",
+  "mot": "to turn out",
+  "zipf_avant": 5.62,
+  "freq_avant": 1,
+  "zipf": 4.53,
+  "freq": 2
+ },
+ {
+  "entree": "to turn out",
+  "mot": "to turn out",
+  "zipf_avant": 5.62,
+  "freq_avant": 1,
+  "zipf": 4.53,
+  "freq": 2
+ },
+ {
+  "entree": "to turn out",
+  "mot": "to turn sb out (of)",
+  "zipf_avant": 5.32,
+  "freq_avant": 1,
+  "zipf": 4.53,
+  "freq": 2
+ },
+ {
+  "entree": "to turn up",
+  "mot": "to turn up",
+  "zipf_avant": 5.62,
+  "freq_avant": 1,
+  "zipf": 3.94,
+  "freq": 3
+ },
+ {
+  "entree": "to turn up",
+  "mot": "to turn up",
+  "zipf_avant": 5.32,
+  "freq_avant": 1,
+  "zipf": 3.94,
+  "freq": 3
+ },
+ {
+  "entree": "to turn up",
+  "mot": "to turn up",
+  "zipf_avant": 5.32,
+  "freq_avant": 1,
+  "zipf": 3.94,
+  "freq": 3
+ },
+ {
+  "entree": "to usher in",
+  "mot": "to usher in sth",
+  "zipf_avant": 3.73,
+  "freq_avant": 3,
+  "zipf": 3.11,
+  "freq": 4
+ },
+ {
+  "entree": "to ward off",
+  "mot": "to ward off",
+  "zipf_avant": 4.44,
+  "freq_avant": 2,
+  "zipf": 2.99,
+  "freq": 4
+ },
+ {
+  "entree": "to wear off",
+  "mot": "to wear off",
+  "zipf_avant": 5.28,
+  "freq_avant": 1,
+  "zipf": 2.85,
+  "freq": 4
+ },
+ {
+  "entree": "to wear out",
+  "mot": "to wear out",
+  "zipf_avant": 5.3,
+  "freq_avant": 1,
+  "zipf": 3.41,
+  "freq": 4
+ },
+ {
+  "entree": "to wear out",
+  "mot": "to wear sb out",
+  "zipf_avant": 4.92,
+  "freq_avant": 1,
+  "zipf": 3.41,
+  "freq": 4
+ },
+ {
+  "entree": "to weigh",
+  "mot": "to weigh in (on)",
+  "zipf_avant": 3.99,
+  "freq_avant": 3,
+  "zipf": 3.5,
+  "freq": 3
+ },
+ {
+  "entree": "to whittle down",
+  "mot": "to whittle down",
+  "zipf_avant": 3.09,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to whittle down",
+  "mot": "to whittle away (at)",
+  "zipf_avant": 3.09,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to whittle down",
+  "mot": "to pare away",
+  "zipf_avant": 2.79,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to whittle down",
+  "mot": "to pare down",
+  "zipf_avant": 2.79,
+  "freq_avant": 4,
+  "zipf": 2.5,
+  "freq": 4
+ },
+ {
+  "entree": "to wind",
+  "mot": "to wind down sth",
+  "zipf_avant": 4.84,
+  "freq_avant": 2,
+  "zipf": 2.97,
+  "freq": 4
+ },
+ {
+  "entree": "to wind up",
+  "mot": "to wind up",
+  "zipf_avant": 5.03,
+  "freq_avant": 1,
+  "zipf": 3.86,
+  "freq": 3
+ },
+ {
+  "entree": "to wind up",
+  "mot": "to wind up sth",
+  "zipf_avant": 4.84,
+  "freq_avant": 2,
+  "zipf": 3.86,
+  "freq": 3
+ },
+ {
+  "entree": "to wipe out",
+  "mot": "to wipe out",
+  "zipf_avant": 4.36,
+  "freq_avant": 2,
+  "zipf": 3.61,
+  "freq": 3
+ },
+ {
+  "entree": "to wrap",
+  "mot": "to wrap up sth / to wrap sth up",
+  "zipf_avant": 4.2,
+  "freq_avant": 2,
+  "zipf": 3.66,
+  "freq": 3
+ },
+ {
+  "entree": "to wrap",
+  "mot": "to be wrapped up in",
+  "zipf_avant": 4.57,
+  "freq_avant": 2,
+  "zipf": 3.66,
+  "freq": 3
+ },
+ {
+  "entree": "to zero in on",
+  "mot": "to zero in on",
+  "zipf_avant": 4.65,
+  "freq_avant": 2,
+  "zipf": 3.23,
+  "freq": 4
+ },
+ {
+  "entree": "track",
+  "mot": "to track down sb/sth / to track sb/sth down",
+  "zipf_avant": 5.16,
+  "freq_avant": 1,
+  "zipf": 3.61,
+  "freq": 3
+ },
+ {
+  "entree": "walkout",
+  "mot": "to walk out",
+  "zipf_avant": 5.08,
+  "freq_avant": 1,
+  "zipf": 3.75,
+  "freq": 3
+ },
+ {
+  "entree": "walkout",
+  "mot": "to walk out (of)",
+  "zipf_avant": 5.08,
+  "freq_avant": 1,
+  "zipf": 3.75,
+  "freq": 3
+ },
+ {
+  "entree": "workable",
+  "mot": "to work (sth) out",
+  "zipf_avant": 6.09,
+  "freq_avant": 1,
+  "zipf": 4.43,
+  "freq": 2
+ },
+ {
+  "entree": "workable",
+  "mot": "to work out",
+  "zipf_avant": 6.09,
+  "freq_avant": 1,
+  "zipf": 4.43,
+  "freq": 2
+ },
+ {
+  "entree": "workable",
+  "mot": "to work (sth) out",
+  "zipf_avant": 6.09,
+  "freq_avant": 1,
+  "zipf": 4.43,
+  "freq": 2
+ },
+ {
+  "entree": "workable",
+  "mot": "to work out",
+  "zipf_avant": 5.96,
+  "freq_avant": 1,
+  "zipf": 4.43,
+  "freq": 2
+ }
+]

@@ -419,6 +419,10 @@
       <input type="number" id="set-rev" min="5" max="300" value="40">
     </div>
     <div class="settings-row">
+      <label>New phrasal verbs / day (max)</label>
+      <input type="number" id="set-pv" min="1" max="30" value="4">
+    </div>
+    <div class="settings-row">
       <label>Questions / test</label>
       <input type="number" id="set-qpp" min="5" max="50" value="10">
     </div>
@@ -483,7 +487,7 @@ const VOCAB_DATA = [];
 // ══════════════════════════════════
 let vocab = [];
 let us = {};
-let cfg = { newPerDay: 5, revPerDay: 40, qPerTest: 10, freqFilter: [1,2,3,4], ttsEnabled: true, learnAssoc: true, autoUpdate: true, srsVer: 1 };
+let cfg = { newPerDay: 5, revPerDay: 40, qPerTest: 10, pvPerDay: 4, freqFilter: [1,2,3,4], ttsEnabled: true, learnAssoc: true, autoUpdate: true, srsVer: 1 };
 let currentSessionId = null;
 let lastRecord = null;
 let qCtx = null;
@@ -626,9 +630,76 @@ function buildPlan(){
   us.newPaused = srsDueList().length > cfg.revPerDay;
   if(!us.newPaused) pickNew();
 }
+// Verbes à particule : on limite l'interférence entre formes proches (break up / break down / break off).
+// Base d'une ligne = verbe du verbe à particule (to break sth down → break), null sinon.
+const PV_PARTS=new Set('up down out off in on over away back around round about through along across by forward forth aside apart together ahead behind upon'.split(' '));
+const PV_OBJ=new Set(['sb','sth','sb/sth','sth/sb','oneself',"one's","sb's",'it']);
+function pvParse(m){
+  const w=((m&&m.mot)||'').replace(/\([^()]*\)/g,' ').trim().split(/\s+/);
+  if(w[0]!=='to') return null;
+  let i=1;
+  if(w[i]==='be'&&w.length>3) i++;                       // to be laid up
+  const v=w[i]; if(!v||v==='be'||v==='have') return null;
+  let j=i+1; if(PV_OBJ.has(w[j])) j++;
+  const p=(w[j]||'').split('/');
+  return p[0]&&p.every(x=>PV_PARTS.has(x)) ? {b:v.toLowerCase(), p:w[j]} : null;
+}
+// Seules comptent les bases qui forment au moins deux verbes à particule différents dans la base
+// (look up, look after, look into…) : to rely on, sans voisin, n'est pas concerné.
+let pvRiskCache=null;
+function pvRisky(){
+  if(pvRiskCache&&pvRiskCache.v===vocab) return pvRiskCache.set;
+  const forms={};
+  vocab.forEach(e=>e.mots.forEach(m=>{ const x=pvParse(m); if(x) (forms[x.b]=forms[x.b]||new Set()).add(x.p); }));
+  const set=new Set(Object.keys(forms).filter(b=>forms[b].size>1));
+  pvRiskCache={v:vocab,set};
+  return set;
+}
+function pvBase(m){
+  const x=pvParse(m);
+  return x&&pvRisky().has(x.b) ? x.b : null;
+}
+// Bases encore fraîches : verbe à particule d'une fiche apprise, ligne pas encore réussie deux fois en révision
+function freshPvBases(){
+  const out=new Set();
+  vocab.forEach(e=>{
+    if(!us.learned.has(e.id)) return;
+    learnableMots(e).forEach(m=>{
+      const b=pvBase(m); if(!b) return;
+      const s=us.srs&&us.srs[lineKey(e,m)];
+      if(!s||s.reps<2) out.add(b);
+    });
+  });
+  return out;
+}
+// Nouvelles fiches du jour : au plus cfg.pvPerDay verbes à particule (la première fiche passe toujours),
+// jamais deux bases identiques le même jour, ni une base dont un verbe à particule récent n'est pas consolidé.
 function pickNew(){
-  const notLearned = vocab.filter(e=>!us.learned.has(e.id)&&matchesFreqFilter(e));
-  us.todayNew = shuffle(notLearned).slice(0,cfg.newPerDay).map(e=>e.id);
+  const notLearned = shuffle(vocab.filter(e=>!us.learned.has(e.id)&&matchesFreqFilter(e)));
+  const cap=cfg.pvPerDay||4, used=freshPvBases(), picked=[];
+  let pv=0;
+  for(const e of notLearned){
+    if(picked.length>=cfg.newPerDay) break;
+    const bases=learnableMots(e).map(pvBase).filter(Boolean);
+    if(bases.length){
+      if(bases.some(b=>used.has(b))) continue;
+      if(pv>0&&pv+bases.length>cap) continue;
+      bases.forEach(b=>used.add(b)); pv+=bases.length;
+    }
+    picked.push(e.id);
+  }
+  us.todayNew = picked;
+}
+// File de questions : deux verbes à particule de même base ne se suivent pas
+function spreadPv(keys){
+  const rest=[...keys], out=[]; let prev=null;
+  while(rest.length){
+    let i=rest.findIndex(k=>{ const x=keyLine(k), b=x&&pvBase(x.m); return !b||b!==prev; });
+    if(i<0) i=0;
+    const k=rest.splice(i,1)[0], x=keyLine(k);
+    prev=x?pvBase(x.m):null; out.push(k);
+  }
+  return out;
 }
 function resumeNew(){
   if(!us.newPaused||srsPending()) return false;
@@ -644,6 +715,7 @@ function openSettings(){
   document.getElementById('set-new').value = cfg.newPerDay;
   document.getElementById('set-rev').value = cfg.revPerDay;
   document.getElementById('set-qpp').value = cfg.qPerTest;
+  document.getElementById('set-pv').value = cfg.pvPerDay||4;
   document.getElementById('set-tts').checked = cfg.ttsEnabled!==false;
   document.getElementById('set-assoc').checked = cfg.learnAssoc!==false;
   document.getElementById('set-autoupd').checked = cfg.autoUpdate!==false;
@@ -655,11 +727,12 @@ function openSettings(){
   openOverlay('settings-modal');
 }
 function saveSettings(){
-  const prevNew=cfg.newPerDay, prevRev=cfg.revPerDay, prevAssoc=cfg.learnAssoc!==false;
+  const prevPv=cfg.pvPerDay, prevNew=cfg.newPerDay, prevRev=cfg.revPerDay, prevAssoc=cfg.learnAssoc!==false;
   const prevFreq=JSON.stringify((cfg.freqFilter||[1,2,3,4]).slice().sort());
   cfg.newPerDay = Math.max(1, parseInt(document.getElementById('set-new').value)||5);
   cfg.revPerDay = Math.max(5, parseInt(document.getElementById('set-rev').value)||40);
   cfg.qPerTest  = Math.max(5, parseInt(document.getElementById('set-qpp').value)||10);
+  cfg.pvPerDay  = Math.max(1, parseInt(document.getElementById('set-pv').value)||4);
   cfg.ttsEnabled = document.getElementById('set-tts').checked;
   cfg.learnAssoc = document.getElementById('set-assoc').checked;
   const wasAuto=cfg.autoUpdate!==false;
@@ -668,7 +741,7 @@ function saveSettings(){
   if(!ff.length) ff=[1,2,3,4];
   cfg.freqFilter=ff.sort();
   localStorage.setItem('ve_cfg', JSON.stringify(cfg));
-  const schedulingChanged = prevNew!==cfg.newPerDay || prevRev!==cfg.revPerDay || JSON.stringify(cfg.freqFilter)!==prevFreq || prevAssoc!==cfg.learnAssoc;
+  const schedulingChanged = prevNew!==cfg.newPerDay || prevPv!==cfg.pvPerDay || prevRev!==cfg.revPerDay || JSON.stringify(cfg.freqFilter)!==prevFreq || prevAssoc!==cfg.learnAssoc;
   if(schedulingChanged){ buildPlan(); srsBuildDay(true); }
   saveState();
   closeOverlay('settings-modal'); renderHome();
@@ -1272,7 +1345,7 @@ function buildDayRev(){
       if(!known.has(k)){ known.add(k); add.push(k); }
     });
   });
-  d.queue=[...d.queue,...shuffle(add)];
+  d.queue=spreadPv([...d.queue,...shuffle(add)]);
   saveState();
   return dayRevPending();
 }
@@ -1360,7 +1433,7 @@ function srsBuildDay(force){
   if(d&&d.date===today()&&!force) return;
   const done=d&&d.date===today()?d.done:[];
   const due=srsDueList().filter(k=>!done.includes(k));
-  us.revDay={date:today(), queue:due.slice(0,Math.max(0,cfg.revPerDay-done.length)), done, fails:d&&d.date===today()?d.fails:{}};
+  us.revDay={date:today(), queue:spreadPv(due.slice(0,Math.max(0,cfg.revPerDay-done.length))), done, fails:d&&d.date===today()?d.fails:{}};
   saveState();
 }
 function srsPending(){
