@@ -389,3 +389,10 @@ Corrigé d'office : a sketch retiré de an outline « silhouette, contour » (cr
 - to numb / to dull : « to dull » = émousser, atténuer (une douleur, les sens) ; ne se dit pas d'anesthésier une zone ni d'engourdir le visage.
 - dazed / numb (with) : « numb » = engourdi, insensible (par l'émotion) ; « dazed » = étourdi, sonné, désorienté après un choc.
 - a youth / young people (ligne youth) : la ligne mêle « un jeune » et « la jeunesse, les jeunes » ; scission éventuelle à trancher.
+
+## Décisions de Jennifer (15 novembre 2026)
+- tight / taut : taut retiré des synonymes de tight (taut garde tight à sens unique). Principe : les sens propres ne sont là que pour faciliter l'apprentissage du sens abstrait ; on ne développe leurs synonymes que si cela enrichit le champ lexical visé (The Economist, Substack, et aussi romans, séries, films).
+- youth scindé : « la jeunesse (période de la vie) » / « les jeunes, la jeunesse (collectivement) ».
+- a make créé (See also de brand), retiré des synonymes de a brand.
+- disabled / handicapped : gardé, avec la connotation « (vieilli, souvent jugé offensant) ».
+- Synonyme juste mais de registre marqué : si Jennifer le connaît sans doute déjà, il reste en bleu pâle pour information ; sinon, ligne dédiée s'il la mérite selon ses critères (ses exemples font assimiler le registre), ou suppression.

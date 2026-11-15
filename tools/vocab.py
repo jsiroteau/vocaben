@@ -196,6 +196,7 @@ LINT_OK = {
     ('nature', 'to carry on (about)', 'to make a fuss (about/over)'), ('nature', 'to kick up a fuss', 'to make a fuss (about/over)'),
     ('nature', 'to make a fuss (about/over sth) / a fuss', 'to kick up a fuss'),
     ('nature', 'to make a fuss (about/over sth) / a fuss', 'to carry on (about)'),
+    ('symétrie', 'a make', 'a brand'), ('symétrie', 'taut', 'tight'),  # cas particuliers (15 novembre 2026)
     ('symétrie', 'an invoice', 'a bill'), ('symétrie', 'a clout', 'a blow'), ('symétrie', 'a patron', 'a backer'),
     ('symétrie', 'a bust', 'a collapse'),  # cas particuliers du mot cible (14 novembre 2026)  # invoice = cas particulier de bill (facture commerciale) : renvoi à sens unique
     ('symétrie', 'a bank clerk', 'a cashier'), ('symétrie', 'a bank teller', 'a cashier'),
