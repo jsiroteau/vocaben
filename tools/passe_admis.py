@@ -5,6 +5,8 @@ Usage (depuis la racine du dépôt) :
     python3 tools/passe_admis.py next [k]             réserve les k prochains lots (« en cours ») et affiche leurs numéros
     python3 tools/passe_admis.py show <n>             affiche le lot n (lignes L0, L1… et exemples 0-4)
     python3 tools/passe_admis.py apply <n> <f.json>   applique les décisions du lot n et le marque fait
+    python3 tools/passe_admis.py init2 | next2 | show2 <n> | add <n> <f.json>
+                                                      seconde passe (registre) : voir passes/admis/registre.md
     python3 tools/passe_admis.py orphans              See also devenus sans lien avec leur fiche (hors liste de départ)
 
 Décisions (f.json) : {"L3": {"0": "bolstered / shored up", "2": "bolstered"}, ...}
@@ -118,10 +120,95 @@ def apply(B, n, path):
         print('See also devenus orphelins :', *new, sep='\n  ')
 
 
+# --- Seconde passe (registre, 15 novembre 2026) : on ne fait qu'ajouter des formes admises ---
+LOTS2, ETAT2 = f'{DIR}/lots2.json', f'{DIR}/etat2.json'
+
+
+def init2(B):
+    assert not os.path.exists(LOTS2), 'lots déjà découpés'
+    lots, cur, n = {}, [], 0
+    for e in dict.fromkeys(r[E] for r in B.rows):
+        f = []
+        for r in B.fiche(e):
+            k = len(_items(r[SYN]))
+            # lignes où un exemple au moins n'admet pas tous les synonymes
+            if k and B.getex(r) and any(len([x for x in a.split('/') if x.strip()]) < k for a in B.getadm(r)):
+                f.append(r)
+        cur += [key(r) for r in f]
+        n += sum(len(B.getex(r)) for r in f)
+        if n >= 600:
+            lots[str(len(lots) + 1)] = cur
+            cur, n = [], 0
+    if cur:
+        lots[str(len(lots) + 1)] = cur
+    save_json(LOTS2, lots)
+    save_json(ETAT2, {k: {'etat': 'à faire'} for k in lots})
+    print(f'{len(lots)} lots, {sum(map(len, lots.values()))} lignes')
+
+
+def next2(k):
+    import time
+    etat, now = load(ETAT2, {}), time.time()
+    if any(v['etat'] == 'en cours' and now - v.get('debut', 0) < 5400 for v in etat.values()):
+        return print('EN COURS')
+    todo = [t for t, v in etat.items() if v['etat'] != 'fait'][:k]
+    for t in todo:
+        etat[t] = {'etat': 'en cours', 'debut': now}
+    save_json(ETAT2, etat)
+    print(' '.join(todo) or 'TERMINÉ')
+
+
+def rows2(B, n):
+    idx = {key(r): r for r in B.rows}
+    return [(k, idx.get(k)) for k in load(LOTS2, {})[str(n)]]
+
+
+def show2(B, n):
+    for i, (k, r) in enumerate(rows2(B, n)):
+        if r is None:
+            continue
+        print(f'L{i} | {r[M]} = {r[T]} | syn: {r[SYN]}')
+        for j, ((a, m, t), adm) in enumerate(zip(B.getex(r), B.getadm(r))):
+            print(f'   {j}. {a} [{m}]' + (f' (déjà admis : {adm})' if adm else ''))
+
+
+def add(B, n, path):
+    dec, added = json.load(open(path)), 0
+    for i, (k, r) in enumerate(rows2(B, n)):
+        d = dec.get(f'L{i}', {})
+        if r is None:
+            assert not d, f'L{i} introuvable : {k}'
+            continue
+        exs, adm = B.getex(r), B.getadm(r)
+        assert all(int(j) < len(exs) for j in d), f'L{i} : exemple inexistant'
+        for j, f in d.items():
+            j = int(j)
+            old = [x.strip() for x in adm[j].split('/') if x.strip()]
+            new = [x.strip() for x in f.split('/') if x.strip()]
+            new = [x for x in new if x.lower() not in [o.lower() for o in old] and x.lower() != exs[j][1].lower()]
+            if new:
+                B.setadm(r, j, old + new)
+                added += len(new)
+    B.save()
+    etat = load(ETAT2, {})
+    etat[str(n)] = {'etat': 'fait'}
+    save_json(ETAT2, etat)
+    print(f'lot {n} : {added} formes admises ajoutées')
+
+
 if __name__ == '__main__':
     cmd = sys.argv[1]
+    if cmd == 'next2':
+        next2(int(sys.argv[2]) if len(sys.argv) > 2 else 1)
+        sys.exit()
     B = Base()
-    if cmd == 'init':
+    if cmd == 'init2':
+        init2(B)
+    elif cmd == 'show2':
+        show2(B, int(sys.argv[2]))
+    elif cmd == 'add':
+        add(B, int(sys.argv[2]), sys.argv[3])
+    elif cmd == 'init':
         init(B)
     elif cmd == 'next':
         etat = load(ETAT, {})
