@@ -1,0 +1,534 @@
+{
+ "L0": {
+  "0": "triumphed",
+  "1": "triumphed",
+  "2": "triumphed over",
+  "3": "triumphed over"
+ },
+ "L1": {
+  "0": "persuaded",
+  "1": "persuaded",
+  "2": "persuaded"
+ },
+ "L2": {
+  "1": "equivocated"
+ },
+ "L3": {
+  "1": "investigating",
+  "2": "investigated"
+ },
+ "L4": {
+  "0": "investigation / inquiry",
+  "1": "investigation / inquiry",
+  "2": "investigation / inquiry"
+ },
+ "L5": {
+  "0": "integrity / honesty",
+  "1": "integrity / honesty",
+  "2": "integrity / honesty"
+ },
+ "L6": {
+  "0": "hesitated",
+  "1": "hesitating",
+  "2": "hesitated"
+ },
+ "L7": {
+  "0": "poked",
+  "1": "poked"
+ },
+ "L8": {
+  "1": "prodded"
+ },
+ "L9": {
+  "2": "turned out"
+ },
+ "L10": {
+  "0": "output"
+ },
+ "L11": {
+  "0": "multiplied",
+  "1": "multiply",
+  "2": "multiplied"
+ },
+ "L12": {
+  "0": "spurred",
+  "1": "spurred",
+  "2": "spurred"
+ },
+ "L13": {
+  "0": "punctual",
+  "1": "punctual",
+  "2": "punctual"
+ },
+ "L14": {
+  "0": "quick / swift",
+  "1": "swift / quick"
+ },
+ "L15": {
+  "0": "support",
+  "1": "supports",
+  "2": "support"
+ },
+ "L16": {
+  "0": "supplied",
+  "2": "supply / furnish"
+ },
+ "L17": {
+  "0": "support",
+  "1": "support",
+  "2": "support"
+ },
+ "L18": {
+  "1": "stipulates",
+  "2": "stipulates"
+ },
+ "L19": {
+  "0": "clauses / stipulations",
+  "1": "clause",
+  "2": "clause"
+ },
+ "L20": {
+  "0": "tentative"
+ },
+ "L21": {
+  "0": "issued"
+ },
+ "L22": {
+  "0": "getting a grip on herself",
+  "1": "Get a grip on yourself",
+  "2": "got a grip on herself"
+ },
+ "L23": {
+  "0": "survived / recovered / came through",
+  "1": "survive / come through",
+  "2": "came through / survived"
+ },
+ "L24": {
+  "0": "bought",
+  "1": "buy",
+  "2": "bought"
+ },
+ "L25": {
+  "1": "went after"
+ },
+ "L26": {
+  "0": "search",
+  "3": "search"
+ },
+ "L27": {
+  "0": "activities",
+  "1": "activities",
+  "3": "activities"
+ },
+ "L30": {
+  "0": "brushed aside",
+  "1": "brushed aside",
+  "2": "brushed aside"
+ },
+ "L31": {
+  "0": "pressing for / campaigning for",
+  "1": "pressing for / campaigning for",
+  "2": "pressing for / campaigning for"
+ },
+ "L32": {
+  "0": "force through",
+  "2": "force through"
+ },
+ "L33": {
+  "2": "get across / communicate"
+ },
+ "L34": {
+  "0": "set aside / save",
+  "1": "set aside / saved",
+  "2": "set aside"
+ },
+ "L35": {
+  "0": "tidy away"
+ },
+ "L36": {
+  "0": "Put away",
+  "1": "put away",
+  "2": "put away"
+ },
+ "L37": {
+  "2": "belittling yourself"
+ },
+ "L38": {
+  "0": "jibe / dig",
+  "1": "digs / jibes",
+  "2": "jibe / dig"
+ },
+ "L39": {
+  "0": "quelled / crushed",
+  "1": "quelled / crushed"
+ },
+ "L40": {
+  "0": "attributed to",
+  "1": "attributed to"
+ },
+ "L41": {
+  "0": "floated",
+  "1": "proposed",
+  "2": "proposed"
+ },
+ "L42": {
+  "0": "implemented / put into practice",
+  "1": "implemented / put into practice"
+ },
+ "L43": {
+  "0": "came into effect",
+  "1": "come into effect",
+  "2": "comes into effect"
+ },
+ "L44": {
+  "1": "postponed / deferred"
+ },
+ "L47": {
+  "0": "stand / stand for",
+  "1": "bear",
+  "2": "bear",
+  "3": "bear",
+  "4": "stands"
+ },
+ "L48": {
+  "0": "put down / crush",
+  "1": "put down / crush",
+  "2": "put down / crush"
+ },
+ "L49": {
+  "0": "allay",
+  "1": "allay",
+  "2": "allay"
+ },
+ "L50": {
+  "0": "questioned / challenged",
+  "1": "questioned / challenged / called into question",
+  "2": "questioned / challenged"
+ },
+ "L51": {
+  "0": "questions",
+  "1": "questions",
+  "2": "question"
+ },
+ "L52": {
+  "0": "lined up",
+  "1": "line up",
+  "2": "lined up"
+ },
+ "L53": {
+  "0": "line",
+  "1": "line",
+  "2": "line"
+ },
+ "L54": {
+  "0": "splitting hairs over",
+  "1": "split hairs over",
+  "2": "split hairs"
+ },
+ "L55": {
+  "0": "quibbled",
+  "1": "quibble",
+  "2": "quibbling"
+ },
+ "L56": {
+  "0": "Stop",
+  "1": "stopped / gave up",
+  "2": "stop / give up"
+ },
+ "L57": {
+  "0": "resigned / stepped down",
+  "1": "resign / step down"
+ },
+ "L58": {
+  "0": "interrogated"
+ },
+ "L59": {
+  "0": "questioning",
+  "1": "questioning"
+ },
+ "L60": {
+  "1": "put up",
+  "2": "put up"
+ },
+ "L61": {
+  "0": "pay rise",
+  "1": "pay rise",
+  "2": "pay rise"
+ },
+ "L62": {
+  "0": "brought up",
+  "1": "brought up"
+ },
+ "L63": {
+  "0": "brought up",
+  "1": "brought up",
+  "2": "bring up"
+ },
+ "L66": {
+  "0": "stepped up / intensified",
+  "2": "stepping up / intensifying"
+ },
+ "L67": {
+  "0": "glowing reviews",
+  "1": "glowing reviews",
+  "2": "glowing reviews"
+ },
+ "L68": {
+  "0": "rave reviews",
+  "1": "rave reviews"
+ },
+ "L69": {
+  "0": "attained"
+ },
+ "L70": {
+  "1": "sweeping / wide-ranging",
+  "2": "sweeping / wide-ranging"
+ },
+ "L71": {
+  "0": "rejected",
+  "1": "rejected",
+  "2": "rejected"
+ },
+ "L72": {
+  "0": "censured",
+  "1": "censured",
+  "2": "censured"
+ },
+ "L74": {
+  "0": "considers"
+ },
+ "L75": {
+  "0": "registered"
+ },
+ "L76": {
+  "1": "albums",
+  "2": "album"
+ },
+ "L77": {
+  "0": "recover",
+  "1": "recover",
+  "2": "recover"
+ },
+ "L78": {
+  "0": "upturn / economic upturn",
+  "1": "upturn / economic upturn"
+ },
+ "L79": {
+  "2": "recouped"
+ },
+ "L80": {
+  "1": "exchanged"
+ },
+ "L81": {
+  "0": "saving grace",
+  "1": "saving grace"
+ },
+ "L82": {
+  "0": "rectify / remedy",
+  "1": "remedy / rectify",
+  "2": "remedy"
+ },
+ "L83": {
+  "0": "seek compensation",
+  "1": "seek compensation",
+  "2": "seeking compensation"
+ },
+ "L84": {
+  "2": "abstained from"
+ },
+ "L85": {
+  "2": "moderation"
+ },
+ "L86": {
+  "2": "reimbursed"
+ },
+ "L87": {
+  "0": "curb / restrain / put the brakes on",
+  "1": "curb / put the brakes on",
+  "2": "curb / restrain"
+ },
+ "L88": {
+  "2": "restored"
+ },
+ "L89": {
+  "0": "aroused",
+  "1": "aroused",
+  "2": "aroused"
+ },
+ "L90": {
+  "0": "revived",
+  "1": "revived",
+  "2": "revived",
+  "3": "revived"
+ },
+ "L91": {
+  "0": "freed",
+  "2": "freed"
+ },
+ "L92": {
+  "1": "demoted"
+ },
+ "L94": {
+  "0": "give in / yield",
+  "1": "gave in / yielded",
+  "2": "gave in / yielded"
+ },
+ "L95": {
+  "0": "unrelenting",
+  "1": "unrelenting / unremitting",
+  "2": "unrelenting / unremitting"
+ },
+ "L96": {
+  "0": "relentless / unremitting",
+  "1": "relentless / unremitting",
+  "2": "relentless / unremitting"
+ },
+ "L97": {
+  "0": "alleviate / ease",
+  "1": "ease / alleviate",
+  "2": "ease / alleviate"
+ },
+ "L98": {
+  "1": "Aid",
+  "2": "aid / assistance"
+ },
+ "L99": {
+  "0": "give up / surrender",
+  "1": "waived / gave up",
+  "2": "gave up / surrendered",
+  "3": "gave up / surrendered",
+  "4": "gave up / waived"
+ },
+ "L101": {
+  "0": "count on"
+ },
+ "L102": {
+  "0": "trustworthy / dependable",
+  "1": "trustworthy",
+  "2": "dependable",
+  "3": "trustworthy"
+ },
+ "L103": {
+  "0": "rely on",
+  "1": "rely on",
+  "2": "rely on"
+ },
+ "L104": {
+  "0": "reliable",
+  "1": "reliable",
+  "2": "reliable"
+ },
+ "L105": {
+  "1": "stayed",
+  "2": "stay"
+ },
+ "L106": {
+  "0": "rest",
+  "1": "rest",
+  "2": "rest"
+ },
+ "L107": {
+  "0": "vestiges",
+  "1": "Vestiges"
+ },
+ "L108": {
+  "0": "go back on",
+  "1": "went back on",
+  "2": "went back on"
+ },
+ "L109": {
+  "0": "defector"
+ },
+ "L111": {
+  "0": "rescind / revoke",
+  "2": "rescinded / revoked"
+ },
+ "L112": {
+  "0": "fended off / held off",
+  "2": "fended off / held off"
+ },
+ "L113": {
+  "0": "repulsive",
+  "1": "repulsive",
+  "2": "repulsive"
+ },
+ "L114": {
+  "0": "water-resistant",
+  "1": "water-resistant",
+  "2": "water-resistant"
+ },
+ "L115": {
+  "0": "restock"
+ },
+ "L116": {
+  "0": "replenish",
+  "1": "replenishing"
+ },
+ "L117": {
+  "0": "replenish"
+ },
+ "L118": {
+  "0": "disowned",
+  "1": "rejected",
+  "2": "disowned"
+ },
+ "L119": {
+  "0": "repudiated",
+  "1": "repudiated",
+  "2": "repudiate"
+ },
+ "L120": {
+  "1": "asked for"
+ },
+ "L121": {
+  "0": "demands / calls for",
+  "2": "calls for"
+ },
+ "L122": {
+  "1": "saved",
+  "2": "save"
+ },
+ "L123": {
+  "0": "bitter",
+  "1": "bitter at / bitter about",
+  "2": "bitter about"
+ },
+ "L124": {
+  "0": "step down / quit",
+  "1": "stepped down / quit",
+  "2": "stepped down"
+ },
+ "L125": {
+  "0": "accepted",
+  "1": "accepted",
+  "2": "accepted"
+ },
+ "L126": {
+  "0": "reconciled to",
+  "1": "reconciled to",
+  "2": "reconciled to"
+ },
+ "L127": {
+  "0": "struck a chord with",
+  "1": "struck a chord with"
+ },
+ "L128": {
+  "0": "resonated",
+  "1": "resonates",
+  "2": "resonate"
+ },
+ "L130": {
+  "0": "restart",
+  "1": "restarted"
+ },
+ "L131": {
+  "0": "restart",
+  "1": "restart",
+  "2": "restart"
+ },
+ "L132": {
+  "0": "CV",
+  "1": "CV",
+  "2": "CV"
+ }
+}

@@ -1,0 +1,514 @@
+{
+ "L0": {
+  "0": "defame",
+  "1": "defaming",
+  "2": "defaming"
+ },
+ "L1": {
+  "2": "sue for defamation"
+ },
+ "L2": {
+  "0": "defamatory",
+  "1": "defamatory",
+  "2": "defamatory"
+ },
+ "L5": {
+  "0": "suffocate",
+  "2": "stifle"
+ },
+ "L6": {
+  "0": "smuggled goods",
+  "1": "smuggled goods"
+ },
+ "L7": {
+  "0": "grabbed / seized",
+  "1": "grabbed",
+  "3": "seized"
+ },
+ "L8": {
+  "0": "kidnapped / abducted",
+  "1": "kidnapped / abducted",
+  "2": "kidnapped / abducted",
+  "3": "kidnapped / abducted"
+ },
+ "L9": {
+  "0": "kidnapped",
+  "1": "kidnapped",
+  "2": "kidnapped / snatched"
+ },
+ "L10": {
+  "0": "crept / slipped",
+  "2": "crept / slipped"
+ },
+ "L11": {
+  "0": "took a peek / stole a glance",
+  "1": "took a peek / stole a glance",
+  "2": "took a peek / stole a glance"
+ },
+ "L12": {
+  "0": "slipped out",
+  "1": "slipped out",
+  "2": "slip out"
+ },
+ "L13": {
+  "0": "skyrocketed",
+  "1": "skyrocketed",
+  "2": "skyrocketed"
+ },
+ "L14": {
+  "0": "soared",
+  "1": "soared",
+  "2": "soar"
+ },
+ "L15": {
+  "1": "calm",
+  "3": "assuage / calm"
+ },
+ "L16": {
+  "0": "settled"
+ },
+ "L19": {
+  "0": "fronted"
+ },
+ "L20": {
+  "0": "overflowed"
+ },
+ "L22": {
+  "0": "spilled over"
+ },
+ "L23": {
+  "1": "Slivers"
+ },
+ "L24": {
+  "0": "split / fragmented",
+  "1": "split / fragmented",
+  "2": "splitting / fragmenting"
+ },
+ "L25": {
+  "1": "splinter"
+ },
+ "L26": {
+  "0": "divided / splintered",
+  "1": "divided"
+ },
+ "L27": {
+  "0": "rift",
+  "1": "rift"
+ },
+ "L28": {
+  "0": "share",
+  "1": "share"
+ },
+ "L29": {
+  "0": "spent lavishly on",
+  "1": "spent lavishly on",
+  "2": "spending lavishly"
+ },
+ "L30": {
+  "0": "marred",
+  "2": "marred"
+ },
+ "L31": {
+  "2": "patronage"
+ },
+ "L32": {
+  "1": "stain / mark"
+ },
+ "L33": {
+  "0": "place",
+  "2": "place"
+ },
+ "L34": {
+  "0": "notice",
+  "1": "noticed"
+ },
+ "L35": {
+  "0": "random check",
+  "1": "random checks",
+  "2": "random check"
+ },
+ "L36": {
+  "0": "marks"
+ },
+ "L37": {
+  "0": "leapt / jumped",
+  "1": "leapt / jumped"
+ },
+ "L38": {
+  "0": "stems from",
+  "1": "stem from",
+  "2": "stemmed from"
+ },
+ "L39": {
+  "0": "emerged",
+  "1": "appeared",
+  "2": "emerge"
+ },
+ "L40": {
+  "1": "sprang"
+ },
+ "L41": {
+  "0": "boost",
+  "1": "Galvanized",
+  "2": "boosted"
+ },
+ "L42": {
+  "0": "stimulus to / incentive to",
+  "1": "incentive / stimulus",
+  "2": "stimulus to / incentive to"
+ },
+ "L44": {
+  "0": "agent",
+  "2": "agent"
+ },
+ "L45": {
+  "0": "espionage",
+  "2": "espionage"
+ },
+ "L46": {
+  "0": "caught sight of",
+  "1": "caught sight of"
+ },
+ "L47": {
+  "0": "wasted",
+  "1": "waste",
+  "2": "wasted",
+  "3": "waste",
+  "4": "waste"
+ },
+ "L48": {
+  "0": "tally with",
+  "1": "tally with",
+  "2": "tally with"
+ },
+ "L49": {
+  "0": "settled",
+  "1": "settle"
+ },
+ "L50": {
+  "0": "fair deal",
+  "1": "fair deal",
+  "2": "fair deal"
+ },
+ "L51": {
+  "0": "square with / jibe with / match",
+  "1": "square with / jibe with / match",
+  "2": "square with / jibe with / match"
+ },
+ "L52": {
+  "0": "crushed",
+  "1": "crushed",
+  "2": "crushed"
+ },
+ "L53": {
+  "1": "pressed"
+ },
+ "L55": {
+  "0": "boyfriend / girlfriend",
+  "1": "girlfriend"
+ },
+ "L56": {
+  "0": "knifed",
+  "1": "knifed"
+ },
+ "L57": {
+  "0": "had a go at",
+  "1": "have a go at"
+ },
+ "L58": {
+  "0": "sharp pain",
+  "1": "sharp pain",
+  "2": "sharp pain"
+ },
+ "L59": {
+  "1": "steady"
+ },
+ "L60": {
+  "0": "steady",
+  "1": "steady"
+ },
+ "L61": {
+  "1": "languished",
+  "2": "stalled"
+ },
+ "L62": {
+  "1": "stagnated"
+ },
+ "L63": {
+  "0": "delayed",
+  "1": "delay",
+  "2": "delayed"
+ },
+ "L64": {
+  "0": "playing for time",
+  "1": "playing for time",
+  "2": "playing for time"
+ },
+ "L65": {
+  "0": "pre-empt / head off",
+  "1": "pre-empt / head off",
+  "2": "pre-empt / head off"
+ },
+ "L66": {
+  "0": "forestall",
+  "1": "forestalled"
+ },
+ "L67": {
+  "1": "look on",
+  "2": "looked on"
+ },
+ "L68": {
+  "0": "be ready"
+ },
+ "L69": {
+  "0": "stick by",
+  "1": "stuck by"
+ },
+ "L70": {
+  "0": "bear / put up with",
+  "1": "bear / put up with",
+  "2": "bear / put up with"
+ },
+ "L71": {
+  "0": "put up with",
+  "1": "put up with",
+  "2": "put up with"
+ },
+ "L72": {
+  "0": "champions",
+  "1": "champion"
+ },
+ "L73": {
+  "0": "replaces"
+ },
+ "L74": {
+  "0": "substitute / replacement",
+  "2": "substitute"
+ },
+ "L75": {
+  "2": "stick out"
+ },
+ "L76": {
+  "0": "exceptional",
+  "1": "exceptional",
+  "2": "exceptional",
+  "3": "exceptional",
+  "4": "exceptional"
+ },
+ "L77": {
+  "0": "unresolved",
+  "1": "unresolved"
+ },
+ "L78": {
+  "1": "unpaid",
+  "2": "unpaid"
+ },
+ "L79": {
+  "0": "hold up",
+  "1": "hold up to",
+  "2": "hold up to",
+  "3": "hold up"
+ },
+ "L80": {
+  "0": "defend",
+  "1": "defend",
+  "2": "defends"
+ },
+ "L81": {
+  "0": "surprised",
+  "3": "surprised"
+ },
+ "L82": {
+  "1": "going hungry"
+ },
+ "L83": {
+  "0": "hunger"
+ },
+ "L84": {
+  "0": "deprived of",
+  "1": "deprived of",
+  "2": "deprived of",
+  "3": "deprived of"
+ },
+ "L85": {
+  "0": "declared / affirmed",
+  "1": "declared"
+ },
+ "L87": {
+  "0": "springs from / flows from",
+  "1": "spring from",
+  "2": "sprang from"
+ },
+ "L88": {
+  "0": "check",
+  "1": "check"
+ },
+ "L89": {
+  "1": "intensify",
+  "2": "intensified"
+ },
+ "L90": {
+  "0": "volunteered",
+  "2": "volunteered"
+ },
+ "L91": {
+  "0": "Measures",
+  "1": "measures",
+  "2": "measures"
+ },
+ "L92": {
+  "0": "smother"
+ },
+ "L93": {
+  "0": "smothered"
+ },
+ "L94": {
+  "2": "fomenting"
+ },
+ "L95": {
+  "0": "commotion"
+ },
+ "L96": {
+  "1": "stir"
+ },
+ "L97": {
+  "0": "fuelled / fueled",
+  "1": "fuelled / fueled",
+  "3": "fuelled / fueled"
+ },
+ "L98": {
+  "0": "shop"
+ },
+ "L99": {
+  "0": "depot",
+  "2": "depot",
+  "3": "storehouse"
+ },
+ "L100": {
+  "0": "rationalize",
+  "1": "simplify / rationalize",
+  "2": "rationalize / simplify"
+ },
+ "L101": {
+  "0": "emphasized / underscored / highlighted",
+  "1": "emphasized / underscored / highlighted",
+  "2": "emphasizes / underscores / highlights"
+ },
+ "L102": {
+  "0": "stressed",
+  "1": "stressed",
+  "2": "stressed"
+ },
+ "L103": {
+  "0": "fraught"
+ },
+ "L104": {
+  "0": "hit",
+  "2": "hit"
+ },
+ "L105": {
+  "1": "afflicted by",
+  "2": "afflicted by"
+ },
+ "L107": {
+  "0": "struck a bargain with",
+  "1": "struck a bargain"
+ },
+ "L108": {
+  "0": "went on strike",
+  "1": "going on strike",
+  "2": "go on strike"
+ },
+ "L109": {
+  "1": "walkout",
+  "3": "walkouts"
+ },
+ "L110": {
+  "0": "endeavours to / endeavors to / tries hard to",
+  "1": "endeavour to / endeavor to / try hard to / make an effort to",
+  "2": "endeavours to / endeavors to"
+ },
+ "L111": {
+  "1": "fight for / battle for",
+  "2": "fight to / battle to",
+  "4": "fight against / battle against"
+ },
+ "L112": {
+  "0": "ailing",
+  "2": "ailing"
+ },
+ "L114": {
+  "1": "belongings",
+  "2": "belongings"
+ },
+ "L115": {
+  "1": "crammed",
+  "2": "crammed"
+ },
+ "L116": {
+  "0": "crammed with / packed with",
+  "1": "crammed with / packed with",
+  "2": "crammed with / packed with"
+ },
+ "L117": {
+  "0": "gorged on / binged on",
+  "1": "gorged on / binged on",
+  "2": "gorge on / binge on"
+ },
+ "L119": {
+  "0": "tripped",
+  "1": "tripped"
+ },
+ "L120": {
+  "0": "come across",
+  "1": "came across",
+  "2": "came across"
+ },
+ "L121": {
+  "0": "impeded",
+  "1": "impeded",
+  "2": "impeded"
+ },
+ "L122": {
+  "0": "endorse",
+  "1": "endorse",
+  "2": "endorse"
+ },
+ "L123": {
+  "0": "fund",
+  "1": "funds"
+ },
+ "L124": {
+  "0": "grant"
+ },
+ "L125": {
+  "0": "undermine",
+  "1": "undermine"
+ },
+ "L126": {
+  "1": "gave in to / yielded to"
+ },
+ "L127": {
+  "0": "appropriate",
+  "1": "appropriate",
+  "2": "appropriate"
+ },
+ "L128": {
+  "0": "lawsuit",
+  "1": "lawsuit",
+  "2": "lawsuit"
+ },
+ "L129": {
+  "0": "filed suit against / sued",
+  "1": "filed suit against / sued",
+  "2": "filing suit against / suing"
+ },
+ "L130": {
+  "0": "subpoena",
+  "1": "subpoena"
+ },
+ "L131": {
+  "1": "mustered up",
+  "2": "muster"
+ }
+}

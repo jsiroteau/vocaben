@@ -280,3 +280,66 @@ Corrigé d'office : a sketch retiré de an outline « silhouette, contour » (cr
 - pointless / vain : soutenu, s'emploie surtout en « in vain » ou attributif littéraire
 - pointless / of no avail : expression figée soutenue, ne remplace pas pointless
 - Corrigé d’office : back pay retiré de la ligne arrears (cas particulier), gardé à sens unique sur back pay (LINT_OK).
+
+## Lot 19 (15 novembre 2026)
+- to prevail / to override : synonyme partiel (« primer sur, passer outre à » : safety overrides cost), ne rend pas « l'emporter, triompher » ni la construction intransitive
+- to produce / to yield : synonyme partiel (rendement de cultures, d'un investissement), ne convient ni pour le miel, ni pour le vin, ni pour les voitures
+- to produce / to put out : synonyme partiel (publier, diffuser : put out a record, a statement), pas « produire » en général
+- to take legal action / to prosecute : synonyme partiel (poursuites pénales engagées par le ministère public), une entreprise n'engage pas de « prosecution » contre un rival
+- to put sb down / to deprecate sb : sens premier « désapprouver » ; le sens « dénigrer, rabaisser » existe (dictionnaires) mais rare et soutenu hors de self-deprecating, peu naturel pour rabaisser qn
+- to rank sth / to grade sth : synonyme partiel (noter, évaluer par niveaux) et non « classer » par rang
+- a rank / a grade : synonyme partiel (échelon administratif ou salarial, note) ; on ne dit pas « the grade of colonel » ni « rise through the grades »
+- a rebuke / a chiding : registre littéraire et sens de légère gronderie ; ne rend ni le désaveu public (rebuke to) ni la réprimande officielle
+- a rebuke / a telling-off : registre familier (gronderie d'enfant) ; ne convient pas au désaveu politique ni à une réprimande diplomatique
+- restraint / self-control : synonyme partiel (maîtrise de soi individuelle) ; ne rend ni « without restraint » ni la retenue de la police ni « wage restraint »
+- to release / to liberate : synonyme partiel (libérer un pays, un peuple ; émanciper), peu naturel pour des otages, un animal ou un détenu
+- to demote / to relegate : synonyme partiel (reléguer à une place inférieure, toujours avec « to ») ; ne rend pas la rétrogradation d'un ministre ou d'un officier
+- to relish / to savour : synonyme partiel (savourer un plaisir présent), ne rend pas « se réjouir de / n'avoir guère envie de » (anticipation)
+- to rely on / to fall back on : synonyme partiel (se rabattre sur, recours de secours), pas « compter sur, dépendre de »
+- a defector / a renegade : synonyme partiel et péjoratif (renégat), ne convient pas au transfuge neutre (défecteurs nord-coréens, révélations d'un transfuge)
+- to repeal / to annul : synonyme partiel (annuler un mariage, un contrat, une élection), on n'« annul » pas une loi
+- to replenish / to refill : synonyme partiel (remplir à nouveau un récipient, un verre), peu naturel pour des stocks, des réserves de change ou une base
+- provisional / temporary : synonyme partiel (« temporaire », de durée limitée) ; ne rend pas « provisoire » au sens de « en attente de confirmation » (provisional agreement, provisional results)
+- to put off / to hold off (on) : synonyme partiel (attendre avant d'agir, différer une décision) ; ne se dit pas d'une réunion reportée à une date, peu naturel dans les exemples
+
+## Lot 20 (15 novembre 2026)
+- a reward / a payoff : gain, retour sur investissement, voire pot-de-vin ; sens partiel
+- to rot / to fester : s'envenimer, suppurer (plaie, conflit) ; pas « pourrir » au sens propre
+- rowdy / disorderly : désordonné, troublant l'ordre public (registre juridique) ; ne remplace rowdy dans aucun exemple
+- disorderly / rowdy : seulement pour des personnes chahuteuses ; pas « désordonné » (sortie, évacuation)
+- disorderly / unruly : indiscipliné (personnes) ; pas « désordonné » (sortie, évacuation)
+- to rush / to dash : mouvement physique rapide et bref ; ne convient ni à la foule ni à l'empressement figuré
+- to save (mettre de côté) / to economize : faire des économies, réduire les dépenses ; pas « mettre de côté » pour qn ou épargner un montant
+- to scrimp and save / to economize : faire des économies, plus faible que « économiser sou par sou » ; ne remplace l'expression dans aucun exemple
+- a setback / a reverse : sens soutenu et rare (revers militaire), ne passe dans aucun exemple
+- to set up (installer) / to install : installer un équipement ; ne convient pas pour implanter un bureau ou un camp
+- a settlement (colonie) / a colony : colonie au sens de territoire ou de communauté ; settlement = implantation, établissement humain
+- to settle (résoudre) / to square : régler (des comptes), concilier ; pas « résoudre » une affaire ou un différend
+- a settlement (accord) / an agreement : terme général, settlement (règlement d'un conflit, transaction) en est un cas particulier ; ne passe dans aucun exemple
+- to settle for / to make do with : se débrouiller avec (faute de mieux, contrainte) ; settle for = accepter un pis-aller par choix
+- to shake sth / to jolt sth : secouer brusquement, cahoter ; pas secouer des branches, la tête, un bocal
+- shares / equities : actions en tant que classe d'actifs ; ne remplace pas shares (titres achetés dans une société)
+- a shed / a hut : hutte, cabane habitable ; shed = remise, abri de jardin
+- a hut / a shed : remise, abri à outils ; pas une hutte ni un refuge de montagne
+- single / sole : unique, exclusif ; ne remplace pas single emphatique (every single, not a single)
+- to slacken / to flag : faiblir (énergie, intérêt) ; ne remplace slacken (activité, croissance, pluie) dans aucun exemple
+- Corrigé d’office : a prize retiré de la ligne a reward (cas particulier : prix d’un concours ; aucune ligne a prize).
+- Corrigé d’office : to salvage retiré de la ligne to save « sauver » (cas particulier : récupérer, sauver de la perte), gardé à sens unique sur to salvage (LINT_OK).
+
+## Lot 21 (15 novembre 2026)
+- to slash sth / to axe sth : axe = supprimer (poste, projet, service), pas « réduire drastiquement » ; « axed fares / output » change le sens
+- to smack / to clout : clout = frapper fort (poing, coup sur la tête), pas une claque ni une fessée
+- spare / extra : supplémentaire, en plus, pas « de rechange » (spare wheel, spare parts)
+- a spillover / a knock-on effect : répercussion en chaîne, conséquence indirecte, pas contagion/propagation
+- to split / to fragment : se morceler en nombreux éléments ; inadapté à une scission en deux ou trois
+- to spur / to prompt : provoquer, pousser à (une action), pas « stimuler » (investissement, croissance)
+- to stand / to stand for : stand for ne s'emploie qu'au négatif pour un comportement (won't stand for this), pas pour « supporter » un bruit, une température
+- to stand for / to stand : stand « supporter » surtout avec can't (can't stand), peu naturel avec won't / will not stand for
+- to stand for (défendre, prôner) / to defend : défendre = protéger contre une attaque, pas « prôner, représenter » une idée
+- a statement / a declaration : déclaration solennelle (of independence, of war), pas un communiqué de presse
+- to stem from / to issue from : registre littéraire ou vieilli ; ne convient dans aucun exemple
+- to step up / to ratchet up : augmenter par crans (pression, tensions), peu naturel pour production, entraînement, patrouilles
+- to stir up / to incite : incite sb to do sth / incite violence ; ne se dit pas de colère ou de tensions « attisées »
+- striking / vivid : vif, éclatant (couleurs, souvenir, description), pas « frappant »
+- struggling / failing : défaillant, au bord de la faillite, plus fort que « en difficulté »
+- suitable / fitting : de circonstance, approprié à un moment (a fitting tribute), pas « adapté à » un usage ou un public
