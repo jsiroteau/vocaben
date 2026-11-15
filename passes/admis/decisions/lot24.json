@@ -1,0 +1,270 @@
+{
+ "L1": {
+  "0": "fanciful",
+  "1": "fanciful",
+  "2": "fanciful"
+ },
+ "L2": {
+  "0": "capricious",
+  "1": "capricious"
+ },
+ "L3": {
+  "1": "whirlwind"
+ },
+ "L4": {
+  "0": "evil",
+  "1": "evil",
+  "2": "evil"
+ },
+ "L5": {
+  "0": "evil",
+  "1": "evil"
+ },
+ "L6": {
+  "1": "awesome"
+ },
+ "L7": {
+  "0": "common / prevalent / pervasive",
+  "1": "common / prevalent",
+  "2": "common / prevalent",
+  "3": "common / prevalent / pervasive"
+ },
+ "L8": {
+  "2": "fauna"
+ },
+ "L9": {
+  "0": "wilds",
+  "1": "wilds"
+ },
+ "L10": {
+  "0": "crazy",
+  "1": "crazy"
+ },
+ "L11": {
+  "0": "deliberate"
+ },
+ "L12": {
+  "0": "deliberately",
+  "1": "deliberately",
+  "2": "deliberately",
+  "3": "deliberately"
+ },
+ "L13": {
+  "0": "headstrong",
+  "1": "headstrong",
+  "2": "headstrong"
+ },
+ "L14": {
+  "0": "obstinately",
+  "1": "obstinately",
+  "2": "obstinately"
+ },
+ "L16": {
+  "1": "will"
+ },
+ "L17": {
+  "0": "wish / longing",
+  "2": "wish"
+ },
+ "L18": {
+  "0": "bonanza",
+  "1": "bonanza / godsend",
+  "2": "bonanza / godsend"
+ },
+ "L19": {
+  "0": "windfall",
+  "1": "windfall"
+ },
+ "L20": {
+  "0": "humour",
+  "1": "humour",
+  "2": "humour"
+ },
+ "L21": {
+  "0": "quips",
+  "1": "quips",
+  "2": "quip"
+ },
+ "L22": {
+  "0": "humorous",
+  "2": "most humorous"
+ },
+ "L24": {
+  "0": "unknowingly / inadvertently",
+  "1": "unknowingly / inadvertently",
+  "2": "unknowingly / inadvertently"
+ },
+ "L25": {
+  "0": "witticism",
+  "1": "witticism",
+  "2": "witticism"
+ },
+ "L26": {
+  "1": "sorcerers"
+ },
+ "L27": {
+  "0": "genius with / whizz with",
+  "1": "geniuses / whizzes",
+  "2": "genius at / whizz at"
+ },
+ "L28": {
+  "0": "wizard / genius",
+  "1": "wizard / genius",
+  "2": "wizard / genius"
+ },
+ "L29": {
+  "2": "misfortunes"
+ },
+ "L30": {
+  "0": "feasible / viable",
+  "1": "viable",
+  "2": "feasible / viable"
+ },
+ "L31": {
+  "0": "calculated",
+  "1": "calculate"
+ },
+ "L32": {
+  "0": "exercise",
+  "1": "exercises",
+  "2": "exercising"
+ },
+ "L33": {
+  "1": "figure out",
+  "2": "figure out"
+ },
+ "L34": {
+  "0": "craftsmanship",
+  "1": "craftsmanship",
+  "3": "craftsmanship"
+ },
+ "L35": {
+  "0": "freelancers",
+  "1": "Freelancers",
+  "2": "freelancer"
+ },
+ "L36": {
+  "0": "handicrafts",
+  "1": "handicrafts"
+ },
+ "L37": {
+  "0": "artisans",
+  "1": "artisans",
+  "2": "artisan"
+ },
+ "L38": {
+  "0": "workmanship",
+  "2": "workmanship"
+ },
+ "L39": {
+  "1": "value"
+ },
+ "L40": {
+  "1": "valueless"
+ },
+ "L41": {
+  "0": "profitable",
+  "1": "profitable"
+ },
+ "L42": {
+  "0": "deserving of",
+  "2": "deserving of"
+ },
+ "L43": {
+  "0": "commendable / laudable",
+  "1": "commendable / laudable",
+  "2": "commendable / laudable"
+ },
+ "L44": {
+  "0": "praiseworthy / laudable",
+  "1": "praiseworthy / laudable",
+  "2": "praiseworthy / laudable"
+ },
+ "L45": {
+  "1": "aspiring"
+ },
+ "L46": {
+  "0": "potential",
+  "1": "potential",
+  "2": "Potential"
+ },
+ "L47": {
+  "0": "squalid",
+  "1": "squalid"
+ },
+ "L48": {
+  "0": "miserable",
+  "1": "miserable",
+  "2": "miserable"
+ },
+ "L49": {
+  "0": "benchmark / standard",
+  "1": "benchmark / standard",
+  "2": "standard"
+ },
+ "L50": {
+  "0": "youngster",
+  "1": "youngsters",
+  "2": "youngster"
+ },
+ "L52": {
+  "0": "kids",
+  "1": "kid",
+  "2": "kids"
+ },
+ "L54": {
+  "0": "fervour"
+ },
+ "L55": {
+  "0": "fanatics",
+  "1": "fanatic"
+ },
+ "L56": {
+  "0": "fervent",
+  "2": "fervent"
+ },
+ "L57": {
+  "2": "gusto"
+ },
+ "L58": {
+  "0": "zest",
+  "1": "zest",
+  "2": "zest"
+ },
+ "L59": {
+  "0": "con artist / swindler",
+  "1": "con artist / swindler",
+  "2": "con artist / swindler"
+ },
+ "L60": {
+  "0": "scam",
+  "1": "scam"
+ },
+ "L61": {
+  "0": "conning",
+  "1": "swindled"
+ },
+ "L64": {
+  "3": "stunned / dazed"
+ },
+ "L65": {
+  "0": "stunned",
+  "1": "stunned",
+  "2": "stunned"
+ },
+ "L66": {
+  "0": "weird / bizarre",
+  "1": "odd / weird / bizarre",
+  "2": "weird"
+ },
+ "L67": {
+  "0": "specific to / unique to",
+  "1": "specific to / unique to",
+  "2": "specific to / unique to"
+ },
+ "L68": {
+  "0": "quirk / oddity",
+  "1": "quirks",
+  "2": "quirks / oddities"
+ }
+}

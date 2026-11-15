@@ -343,3 +343,49 @@ Corrigé d'office : a sketch retiré de an outline « silhouette, contour » (cr
 - striking / vivid : vif, éclatant (couleurs, souvenir, description), pas « frappant »
 - struggling / failing : défaillant, au bord de la faillite, plus fort que « en difficulté »
 - suitable / fitting : de circonstance, approprié à un moment (a fitting tribute), pas « adapté à » un usage ou un public
+
+## Lot 22 (15 novembre 2026)
+- to sway / to swing : swing = osciller autour d'un point fixe, pivoter (pendule, porte) ; ne rend pas le balancement du corps, d'un arbre ou d'un bateau
+- a swearword / an oath : oath = surtout « serment » ; « juron » est vieilli ou littéraire
+- to swell sth / to inflate sth : inflate = gonfler artificiellement, exagérer ; ne dit pas une hausse réelle des effectifs ou d'un excédent
+- to swing / to sway : sway = se balancer doucement sur place ; ne rend ni l'oscillation du pendule ni le pivotement d'une porte
+- to tamper with / to rig : rig = truquer un résultat (élection, match, machine) ; ne se dit pas de chiffres ou d'un document falsifiés
+- tight / taut : taut = tendu (corde, peau) seulement ; ne rend ni « serré » (nœud, groupe) ni le sens économique (marché, course serrée) ; tight couvre « tendu » dans sa traduction : à trancher (scission de tight « serré » / « tendu » ou retrait de taut).
+- to train / to coach : coach = entraîner, encadrer individuellement (sport, examen) ; plus étroit que former des étudiants, des infirmières ou du personnel
+- to trim / to crop : crop = couper court (cheveux), recadrer (photo) ; ne rend pas « couper un peu, rafraîchir »
+- trimmings / garnish : garnish = décoration du plat (persil, citron) ; ne désigne pas les accompagnements traditionnels d'un repas
+- confidence / trust : trust = confiance envers qn ou qch ; ne rend ni l'assurance, ni la confiance en soi, ni l'indicateur économique (consumer confidence)
+- turnout / attendance : attendance = fréquentation, présence (cours, réunion) ; ne désigne pas la participation électorale ; sens « affluence » seulement, partiel
+- to undermine / to subvert : subvert = renverser, pervertir délibérément un ordre établi ; plus fort et plus étroit que saper
+- an undertaking / a venture : venture = entreprise risquée, surtout commerciale ; ne rend pas « une sacrée tâche »
+- an entrepreneur / a businessman : businessman = homme d'affaires en général, pas forcément créateur d'entreprise, et masculin ; seul businesswoman passe (ex. 2)
+- Corrigé d’office : to knock over retiré de la ligne to upset « bouleverser, perturber » (faux synonyme ; la ligne to upset sth « renverser qch » le garde).
+
+## Lot 23 (15 novembre 2026)
+- to usher in / to signal : « signal » = être le signe de, indiquer ; ne veut pas dire inaugurer, faire entrer dans une ère
+- utter / thorough : « thorough » = minutieux, approfondi ; « total » seulement en anglais britannique familier avec quelques noms (a thorough nuisance)
+- a rival / a challenger : « challenger » = celui qui défie un tenant du titre ou un leader ; ne rend pas le rival en général
+- recycling / reprocessing : « reprocessing » = retraitement industriel (notamment nucléaire), pas le recyclage courant des déchets
+- to weaken / to flag : « flag » = faiblir par fatigue (énergie, intérêt, personne) ; ne se dit ni d'une tempête ni d'une monnaie
+- the wear and tear / deterioration : « deterioration » = dégradation en général ; l'usure due à l'usage n'en est qu'un cas, ne se substitue pas (stand, normal wear and tear)
+- to widen / to broaden : « broaden » = élargir surtout au figuré (horizons, attrait) ; se dit mal d'un écart ou d'un déficit qui se creuse
+- to withhold / to deny : « deny » = nier, ou refuser qch à qn (deny sb sth) ; ne rend pas « ne pas accorder » (consentement, approbation, soutien)
+- a yield / a return : « return » = gain sur placement ; ne se dit pas d'une récolte, et le taux d'une obligation est « yield »
+- a tool / an implement : « implement » = outil concret, surtout agricole ou de jardinage ; pas d'emploi figuré (instrument politique)
+- tracks / traces : « traces » = vestiges, marques infimes ; ne désigne pas les traces laissées par un animal ou des pneus
+- a trick / a contrivance : « contrivance » = dispositif ingénieux, artifice, invention forcée ; ne rend ni un tour joué à qn ni une astuce
+- underlying / underpinning : « underpinning » = surtout nom (fondement) ; adjectif rare, ne rend pas « sous-jacent » (causes, inflation)
+- unruly / intractable : « intractable » = insoluble (problème) ou obstiné ; ne se dit guère d'une foule ou d'une classe turbulente
+- warmongering (n.) / hawkishness : « hawkishness » = ligne dure, y compris en politique monétaire ; n'a pas la charge péjorative de « warmongering »
+
+## Lot 24 (15 novembre 2026)
+- whim / a fancy : « a fancy » = goût, envie, attirance (take a fancy to) ; ne vaut « caprice » que dans « a passing fancy », synonyme partiel.
+- widespread / all-pervading : « all-pervading » = omniprésent, qui imprègne tout ; bien plus fort que « répandu » (une maladie, une opinion ne sont pas « all-pervading ») ; synonyme partiel (pervasive est admis).
+- will / willpower : « willpower » = force de volonté, maîtrise de soi ; ne couvre pas la volonté-intention (political will, against his will), synonyme partiel.
+- wit / presence of mind : « presence of mind » = sang-froid, réaction rapide face à l'imprévu ; « wit(s) » des exemples = bon sens, jugeote, intelligence.
+- youngster / a youth : « a youth » = adolescent (surtout garçon, souvent péjoratif dans la presse) ; ne se dit pas d'un enfant ni d'une fillette (she was just a youngster), synonyme partiel.
+- youthful / young : « young » = jeune en âge ; « youthful » = qui a l'allure ou les qualités de la jeunesse, même chez une personne âgée.
+- to numb / to deaden : « to deaden » = atténuer, amortir (une douleur, un son) ; prend la sensation pour objet, pas la partie du corps ni la personne.
+- to numb / to dull : « to dull » = émousser, atténuer (une douleur, les sens) ; ne se dit pas d'anesthésier une zone ni d'engourdir le visage.
+- dazed / numb (with) : « numb » = engourdi, insensible (par l'émotion) ; « dazed » = étourdi, sonné, désorienté après un choc.
+- a youth / young people (ligne youth) : la ligne mêle « un jeune » et « la jeunesse, les jeunes » ; scission éventuelle à trancher.

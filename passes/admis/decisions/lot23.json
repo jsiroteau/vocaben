@@ -1,0 +1,526 @@
+{
+ "L0": {
+  "0": "showed / escorted",
+  "1": "escorted",
+  "2": "showed / escorted"
+ },
+ "L1": {
+  "0": "herald",
+  "1": "herald",
+  "3": "heralded"
+ },
+ "L3": {
+  "0": "completely",
+  "1": "completely",
+  "2": "completely",
+  "3": "completely"
+ },
+ "L4": {
+  "0": "leaving",
+  "1": "leave",
+  "2": "leave"
+ },
+ "L5": {
+  "1": "unoccupied / empty",
+  "2": "unoccupied / empty"
+ },
+ "L6": {
+  "0": "disappeared",
+  "1": "disappeared",
+  "2": "disappeared"
+ },
+ "L7": {
+  "0": "compete with",
+  "1": "competing with",
+  "2": "compete with"
+ },
+ "L8": {
+  "0": "competitor",
+  "1": "competitor",
+  "2": "competitors / contenders"
+ },
+ "L9": {
+  "0": "denigrated / maligned",
+  "1": "denigrated / maligned",
+  "2": "denigrate / malign"
+ },
+ "L10": {
+  "0": "cleared / exonerated",
+  "1": "clear / exonerate"
+ },
+ "L11": {
+  "0": "justified"
+ },
+ "L12": {
+  "2": "guarantee"
+ },
+ "L13": {
+  "0": "relinquished / gave up",
+  "1": "relinquished / gave up"
+ },
+ "L15": {
+  "1": "dwindle / fall off / decline",
+  "2": "dwindled / ebbed / faded / declined",
+  "3": "dwindling / ebbing / fading / declining"
+ },
+ "L16": {
+  "0": "stave off",
+  "1": "stave off",
+  "2": "stave off"
+ },
+ "L17": {
+  "0": "cautioned"
+ },
+ "L18": {
+  "0": "justified",
+  "1": "justify",
+  "2": "justified"
+ },
+ "L19": {
+  "0": "justification",
+  "1": "justification",
+  "2": "justification"
+ },
+ "L20": {
+  "0": "unjustified",
+  "1": "unjustified",
+  "2": "unjustified"
+ },
+ "L21": {
+  "2": "promised"
+ },
+ "L22": {
+  "0": "guarantee",
+  "1": "guarantee",
+  "2": "guarantee",
+  "3": "guarantee"
+ },
+ "L23": {
+  "0": "squander",
+  "1": "squandered",
+  "2": "squandered"
+ },
+ "L24": {
+  "0": "extravagant",
+  "1": "uneconomical",
+  "2": "extravagant"
+ },
+ "L25": {
+  "1": "rubbish"
+ },
+ "L27": {
+  "1": "falter",
+  "2": "faltered",
+  "3": "faltered"
+ },
+ "L28": {
+  "0": "hesitated between",
+  "1": "hesitated between",
+  "2": "hesitating between"
+ },
+ "L29": {
+  "0": "unshakeable / steadfast",
+  "1": "unshakeable / steadfast",
+  "2": "unshakeable / steadfast"
+ },
+ "L31": {
+  "2": "weak point"
+ },
+ "L32": {
+  "0": "weakness",
+  "1": "weakness",
+  "2": "weakness"
+ },
+ "L34": {
+  "0": "fade",
+  "1": "faded",
+  "2": "fades"
+ },
+ "L36": {
+  "0": "worn / shabby",
+  "1": "worn / shabby"
+ },
+ "L37": {
+  "0": "trump"
+ },
+ "L38": {
+  "0": "reduced / pared down / trimmed",
+  "1": "reduced / pared down / trimmed",
+  "2": "reduced / pared down / trimmed"
+ },
+ "L39": {
+  "0": "eroded",
+  "1": "eroded",
+  "2": "eroded"
+ },
+ "L40": {
+  "0": "whittled down / trimmed / reduced",
+  "1": "whittled down / trimmed",
+  "2": "whittled down / trimmed / reduced"
+ },
+ "L42": {
+  "0": "broaden"
+ },
+ "L43": {
+  "0": "breadth",
+  "1": "breadth"
+ },
+ "L44": {
+  "0": "width"
+ },
+ "L45": {
+  "0": "cumbersome",
+  "1": "cumbersome",
+  "2": "cumbersome"
+ },
+ "L46": {
+  "0": "meandered",
+  "1": "meanders",
+  "2": "meanders"
+ },
+ "L47": {
+  "0": "ended",
+  "1": "ended up",
+  "2": "end up"
+ },
+ "L48": {
+  "0": "pulled out of",
+  "1": "pulled out of / backed out of",
+  "2": "pull out / back out"
+ },
+ "L49": {
+  "0": "pullout"
+ },
+ "L50": {
+  "0": "withdrawal",
+  "1": "withdrawal",
+  "2": "withdrawal"
+ },
+ "L51": {
+  "0": "faded",
+  "1": "wilted",
+  "2": "fading"
+ },
+ "L52": {
+  "0": "withered",
+  "1": "withered"
+ },
+ "L54": {
+  "0": "concealed"
+ },
+ "L55": {
+  "0": "resist",
+  "2": "resist"
+ },
+ "L56": {
+  "0": "testify to",
+  "1": "testify"
+ },
+ "L57": {
+  "0": "testify against",
+  "1": "testify against",
+  "2": "testify against"
+ },
+ "L58": {
+  "0": "committing perjury",
+  "1": "committing perjury"
+ },
+ "L59": {
+  "1": "bearing false witness"
+ },
+ "L60": {
+  "0": "miracle",
+  "1": "miracle"
+ },
+ "L61": {
+  "0": "miracle cure",
+  "1": "miracle cure",
+  "2": "miracle cure"
+ },
+ "L62": {
+  "0": "courting",
+  "1": "courting",
+  "2": "courted"
+ },
+ "L63": {
+  "0": "fret about / be concerned about",
+  "1": "fret",
+  "2": "concerned about"
+ },
+ "L64": {
+  "0": "disquieting / unsettling / disturbing",
+  "1": "disquieting / disturbing",
+  "2": "disquieting / unsettling / disturbing"
+ },
+ "L65": {
+  "0": "getting worse",
+  "1": "got worse",
+  "2": "get worse"
+ },
+ "L66": {
+  "0": "exacerbate / compound / aggravate",
+  "1": "exacerbated / compounded / aggravated",
+  "2": "exacerbate / compound / aggravate"
+ },
+ "L67": {
+  "0": "idolize",
+  "2": "idolize"
+ },
+ "L68": {
+  "0": "arguing over",
+  "1": "arguing over",
+  "2": "argued"
+ },
+ "L69": {
+  "0": "engrossed in / absorbed in",
+  "1": "engrossed in / absorbed in / bound up in",
+  "2": "engrossed in / absorbed in"
+ },
+ "L70": {
+  "0": "destroyed",
+  "1": "ruin / destroy",
+  "2": "ruined / destroyed",
+  "3": "ruined / destroyed",
+  "4": "ruined / destroyed"
+ },
+ "L71": {
+  "0": "grappled",
+  "1": "grappled",
+  "2": "grappled with"
+ },
+ "L72": {
+  "0": "grappling with",
+  "1": "grappling with",
+  "2": "grappling with"
+ },
+ "L73": {
+  "0": "longing to",
+  "1": "longing for / craving",
+  "2": "long for / crave"
+ },
+ "L74": {
+  "0": "longing for",
+  "1": "longing for / craving for"
+ },
+ "L75": {
+  "0": "give in to / cave in to / succumb to",
+  "1": "give in / cave / cave in / relent",
+  "3": "succumb to / give in to"
+ },
+ "L76": {
+  "0": "cede / surrender",
+  "1": "ceded / surrendered",
+  "2": "cede / surrender"
+ },
+ "L77": {
+  "0": "produce",
+  "1": "produces",
+  "2": "produces",
+  "3": "produced"
+ },
+ "L80": {
+  "0": "focused on / homed in on / concentrated on",
+  "1": "focused on / homed in on / concentrated on",
+  "2": "focuses on / homes in on / concentrates on"
+ },
+ "L82": {
+  "2": "stiff",
+  "4": "stiff"
+ },
+ "L83": {
+  "0": "footprints",
+  "2": "footprints"
+ },
+ "L84": {
+  "0": "trail",
+  "1": "trailing"
+ },
+ "L85": {
+  "0": "song",
+  "1": "song",
+  "2": "songs"
+ },
+ "L86": {
+  "0": "tracks",
+  "1": "tracks"
+ },
+ "L87": {
+  "0": "garbage",
+  "1": "garbage",
+  "2": "garbage"
+ },
+ "L88": {
+  "0": "nonsense",
+  "2": "nonsense"
+ },
+ "L89": {
+  "0": "tendency"
+ },
+ "L90": {
+  "0": "fashionable / hip",
+  "1": "fashionable / hip"
+ },
+ "L91": {
+  "0": "test"
+ },
+ "L92": {
+  "0": "fooled",
+  "1": "fooled into",
+  "2": "fooled"
+ },
+ "L93": {
+  "2": "ploy"
+ },
+ "L94": {
+  "0": "complicated",
+  "1": "complicated",
+  "2": "complicated"
+ },
+ "L95": {
+  "0": "unrest"
+ },
+ "L96": {
+  "0": "turmoil",
+  "1": "turmoil"
+ },
+ "L97": {
+  "0": "sales"
+ },
+ "L99": {
+  "0": "underpin"
+ },
+ "L100": {
+  "0": "disorderly"
+ },
+ "L101": {
+  "0": "well-informed about",
+  "1": "well-informed about",
+  "2": "well-informed about"
+ },
+ "L102": {
+  "0": "above board",
+  "1": "be above board"
+ },
+ "L103": {
+  "0": "outcry",
+  "1": "outcry"
+ },
+ "L104": {
+  "1": "uproar"
+ },
+ "L105": {
+  "0": "outcome of",
+  "1": "outcome of",
+  "2": "outcome"
+ },
+ "L106": {
+  "2": "empty",
+  "3": "empty",
+  "4": "empty / inane"
+ },
+ "L107": {
+  "0": "hoover",
+  "1": "hoover"
+ },
+ "L108": {
+  "0": "hoovered",
+  "1": "hoover",
+  "2": "hoover"
+ },
+ "L109": {
+  "0": "vacuum cleaner",
+  "1": "vacuum cleaner",
+  "2": "vacuum cleaner"
+ },
+ "L110": {
+  "0": "sound",
+  "2": "sound"
+ },
+ "L111": {
+  "0": "appraise",
+  "1": "appraised",
+  "2": "appraised"
+ },
+ "L112": {
+  "1": "prizes",
+  "2": "prize"
+ },
+ "L113": {
+  "2": "worth"
+ },
+ "L114": {
+  "1": "forefront of",
+  "2": "forefront of"
+ },
+ "L115": {
+  "0": "special interests",
+  "1": "special interests"
+ },
+ "L116": {
+  "2": "striking",
+  "3": "striking"
+ },
+ "L118": {
+  "1": "conducting",
+  "2": "conducting"
+ },
+ "L119": {
+  "0": "strike",
+  "1": "strike"
+ },
+ "L120": {
+  "0": "gratuitous",
+  "1": "gratuitous"
+ },
+ "L121": {
+  "0": "hawk",
+  "1": "hawk",
+  "2": "hawks"
+ },
+ "L123": {
+  "0": "hawkish",
+  "1": "hawkish"
+ },
+ "L124": {
+  "2": "Warmongers"
+ },
+ "L125": {
+  "1": "Warmongering"
+ },
+ "L126": {
+  "0": "suspicious of",
+  "1": "suspicious of",
+  "3": "cautious about",
+  "4": "suspicious of"
+ },
+ "L127": {
+  "1": "Imprudent"
+ },
+ "L128": {
+  "0": "guard dog",
+  "1": "guard dog"
+ },
+ "L129": {
+  "0": "regulator",
+  "2": "regulator"
+ },
+ "L130": {
+  "0": "turning point",
+  "2": "turning point"
+ },
+ "L131": {
+  "0": "oddest / most bizarre / most peculiar",
+  "1": "bizarre / peculiar",
+  "2": "bizarre / odd / peculiar"
+ },
+ "L132": {
+  "0": "well-being",
+  "1": "well-being",
+  "2": "well-being"
+ },
+ "L133": {
+  "0": "government benefits",
+  "1": "government benefits",
+  "2": "government benefits"
+ }
+}

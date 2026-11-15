@@ -1,0 +1,509 @@
+{
+ "L0": {
+  "0": "replaces",
+  "1": "replaces",
+  "2": "replaced",
+  "3": "replaced"
+ },
+ "L1": {
+  "0": "replaced",
+  "1": "replace",
+  "2": "replaced / ousted"
+ },
+ "L2": {
+  "0": "provide",
+  "1": "provides",
+  "2": "provided"
+ },
+ "L3": {
+  "1": "providers",
+  "2": "provider"
+ },
+ "L4": {
+  "0": "hold up",
+  "1": "hold up",
+  "2": "held up"
+ },
+ "L5": {
+  "0": "backs / endorses",
+  "1": "back / endorse",
+  "2": "backed / endorsed"
+ },
+ "L6": {
+  "0": "provide for",
+  "1": "provide for",
+  "2": "provided for"
+ },
+ "L7": {
+  "0": "proponent",
+  "1": "Proponents"
+ },
+ "L8": {
+  "0": "presumed",
+  "2": "presume"
+ },
+ "L9": {
+  "0": "exceeded",
+  "1": "exceeded",
+  "2": "outdid"
+ },
+ "L11": {
+  "0": "influence",
+  "1": "influenced",
+  "2": "influence / swing",
+  "3": "influenced",
+  "4": "influenced"
+ },
+ "L13": {
+  "0": "curse"
+ },
+ "L14": {
+  "2": "expanded",
+  "3": "expanded"
+ },
+ "L16": {
+  "0": "conned / cheated",
+  "1": "conned / cheated / defrauded",
+  "2": "conned / cheated"
+ },
+ "L18": {
+  "0": "sway / influence",
+  "3": "swayed"
+ },
+ "L19": {
+  "0": "upturn",
+  "1": "upturn",
+  "2": "upturn"
+ },
+ "L20": {
+  "0": "floating voters",
+  "1": "floating voters",
+  "2": "floating voter"
+ },
+ "L21": {
+  "0": "swing voters",
+  "1": "swing voters",
+  "2": "swing voter"
+ },
+ "L22": {
+  "0": "changed",
+  "1": "changed",
+  "2": "change"
+ },
+ "L23": {
+  "0": "swapped / traded",
+  "1": "swapping",
+  "2": "swap / trade"
+ },
+ "L24": {
+  "1": "changed to",
+  "2": "moved to / changed to"
+ },
+ "L25": {
+  "0": "trade",
+  "1": "switched / traded"
+ },
+ "L26": {
+  "0": "addressing / coming to grips with",
+  "1": "address / take on / come to grips with",
+  "2": "address"
+ },
+ "L27": {
+  "0": "grasp / understand / comprehend",
+  "1": "grasp / comprehend",
+  "2": "grasp / understand / comprehend"
+ },
+ "L28": {
+  "0": "fooled / hoodwinked / duped",
+  "1": "fooled / hoodwinked / duped",
+  "2": "fooled / hoodwinked / duped"
+ },
+ "L29": {
+  "0": "assume",
+  "1": "assumed",
+  "2": "assume"
+ },
+ "L30": {
+  "0": "tackle",
+  "2": "tackling"
+ },
+ "L31": {
+  "0": "hiring / recruiting",
+  "1": "hiring / recruiting",
+  "2": "hire / recruit"
+ },
+ "L32": {
+  "2": "meddle with"
+ },
+ "L33": {
+  "0": "doctored",
+  "1": "doctoring"
+ },
+ "L34": {
+  "0": "exploit",
+  "1": "exploit",
+  "4": "exploited"
+ },
+ "L35": {
+  "0": "bugged / wiretapped",
+  "1": "wiretapped",
+  "2": "bugged / wiretapped"
+ },
+ "L36": {
+  "0": "dwindles / declines",
+  "1": "dwindles / declines",
+  "3": "dwindle / decline"
+ },
+ "L37": {
+  "0": "tainted / sullied",
+  "1": "tainted / sullied"
+ },
+ "L38": {
+  "0": "tarnished / sullied",
+  "1": "tarnished"
+ },
+ "L39": {
+  "0": "Contaminated",
+  "1": "contaminated"
+ },
+ "L40": {
+  "0": "tarnish / taint",
+  "1": "tarnished / tainted",
+  "2": "tarnishes / taints"
+ },
+ "L41": {
+  "1": "menace"
+ },
+ "L42": {
+  "0": "menace"
+ },
+ "L43": {
+  "0": "flourished / prospered",
+  "2": "flourish / prosper"
+ },
+ "L44": {
+  "0": "flourishing / booming",
+  "1": "flourishing / booming",
+  "2": "flourishing / booming"
+ },
+ "L45": {
+  "0": "strangle",
+  "1": "strangling",
+  "2": "strangling"
+ },
+ "L46": {
+  "0": "shoved / pushed",
+  "1": "shoved / pushed",
+  "2": "shoved / pushed"
+ },
+ "L47": {
+  "0": "push",
+  "2": "push"
+ },
+ "L48": {
+  "0": "gist of",
+  "1": "gist of",
+  "2": "gist of"
+ },
+ "L49": {
+  "0": "pushed",
+  "1": "pushed / thrust",
+  "2": "pushed"
+ },
+ "L50": {
+  "1": "foiled",
+  "2": "foiled"
+ },
+ "L51": {
+  "0": "strengthened",
+  "1": "toughened / strengthened"
+ },
+ "L53": {
+  "0": "tight"
+ },
+ "L54": {
+  "0": "fiddled with",
+  "1": "fiddling with"
+ },
+ "L55": {
+  "0": "exceeded",
+  "1": "exceeded"
+ },
+ "L56": {
+  "0": "tipped over"
+ },
+ "L57": {
+  "1": "knocked over",
+  "2": "knocked over / tipped over"
+ },
+ "L58": {
+  "0": "overthrow / oust",
+  "2": "overthrown / ousted"
+ },
+ "L59": {
+  "0": "hyped as / trumpeted as",
+  "2": "trumpets"
+ },
+ "L60": {
+  "0": "doing business",
+  "1": "do business",
+  "2": "done business"
+ },
+ "L61": {
+  "0": "deals in",
+  "1": "deals in",
+  "2": "dealt in",
+  "3": "deals in"
+ },
+ "L62": {
+  "0": "swapped / switched",
+  "1": "swapped",
+  "2": "swapped"
+ },
+ "L64": {
+  "0": "training course",
+  "1": "training course",
+  "2": "training course"
+ },
+ "L65": {
+  "1": "interns"
+ },
+ "L66": {
+  "0": "vocational education",
+  "1": "Vocational education / Job training",
+  "2": "vocational education / job training",
+  "3": "job training"
+ },
+ "L67": {
+  "1": "work placement"
+ },
+ "L68": {
+  "1": "trodden on"
+ },
+ "L69": {
+  "0": "trudged",
+  "1": "trudged",
+  "2": "trudged"
+ },
+ "L70": {
+  "0": "vagrants / bums"
+ },
+ "L71": {
+  "0": "tramp / vagrant",
+  "1": "tramp / vagrant",
+  "2": "tramp"
+ },
+ "L72": {
+  "0": "Tramps / Bums"
+ },
+ "L73": {
+  "2": "trample on / trample"
+ },
+ "L74": {
+  "0": "tramped",
+  "2": "tramped"
+ },
+ "L75": {
+  "1": "Prune"
+ },
+ "L76": {
+  "0": "reduce / pare down / whittle down",
+  "1": "reduced",
+  "2": "reduced"
+ },
+ "L77": {
+  "0": "shape",
+  "1": "shape"
+ },
+ "L78": {
+  "0": "decorated",
+  "1": "decorated",
+  "2": "decorated"
+ },
+ "L81": {
+  "1": "trimmed",
+  "2": "trimming"
+ },
+ "L82": {
+  "1": "extras"
+ },
+ "L83": {
+  "0": "beat",
+  "1": "outweighed",
+  "2": "outweighs"
+ },
+ "L84": {
+  "0": "fabricated",
+  "1": "fabricated",
+  "2": "fabricated"
+ },
+ "L85": {
+  "0": "touted / hyped",
+  "3": "touted / hyped"
+ },
+ "L86": {
+  "0": "have confidence in"
+ },
+ "L87": {
+  "0": "entrusted with",
+  "2": "entrusted with"
+ },
+ "L88": {
+  "2": "confidence"
+ },
+ "L89": {
+  "0": "reliable",
+  "1": "reliable",
+  "2": "reliable"
+ },
+ "L90": {
+  "0": "believes",
+  "1": "believe",
+  "2": "Believe"
+ },
+ "L91": {
+  "0": "board of trustees",
+  "1": "board of trustees"
+ },
+ "L93": {
+  "0": "refused",
+  "1": "refuse",
+  "2": "refused"
+ },
+ "L94": {
+  "0": "became",
+  "1": "became"
+ },
+ "L95": {
+  "0": "produces",
+  "1": "produce",
+  "2": "produce"
+ },
+ "L96": {
+  "0": "proved",
+  "1": "proved"
+ },
+ "L97": {
+  "0": "showed up",
+  "1": "showed up",
+  "2": "showed up"
+ },
+ "L99": {
+  "1": "evicted from"
+ },
+ "L100": {
+  "0": "show up",
+  "1": "showed up",
+  "2": "showed up",
+  "3": "showed up"
+ },
+ "L101": {
+  "0": "adjusted / fine-tuned",
+  "1": "fine-tune",
+  "2": "adjusted"
+ },
+ "L102": {
+  "0": "distorts",
+  "1": "distorted"
+ },
+ "L103": {
+  "0": "experienced / gone through",
+  "1": "experiencing / going through"
+ },
+ "L104": {
+  "0": "eroded",
+  "2": "erodes / saps"
+ },
+ "L105": {
+  "0": "underlay"
+ },
+ "L106": {
+  "0": "foundations of / basis of",
+  "1": "basis / foundation"
+ },
+ "L107": {
+  "0": "underlying",
+  "1": "underlying",
+  "2": "underlying"
+ },
+ "L108": {
+  "0": "emphasizes / stresses / highlights",
+  "1": "highlight / emphasize",
+  "2": "highlighted / emphasized"
+ },
+ "L109": {
+  "0": "embarked on",
+  "1": "embarked on"
+ },
+ "L111": {
+  "1": "pledge / commitment",
+  "2": "commitments"
+ },
+ "L112": {
+  "0": "funeral director",
+  "1": "funeral director"
+ },
+ "L113": {
+  "2": "businesswoman"
+ },
+ "L114": {
+  "0": "insure",
+  "2": "insure"
+ },
+ "L115": {
+  "0": "financed / funded",
+  "1": "financed / funded",
+  "2": "financed / funded"
+ },
+ "L116": {
+  "0": "triggered"
+ },
+ "L117": {
+  "1": "untangle / unpick"
+ },
+ "L118": {
+  "0": "revealed",
+  "2": "revealed"
+ },
+ "L119": {
+  "3": "informed"
+ },
+ "L120": {
+  "1": "upset"
+ },
+ "L121": {
+  "0": "promote",
+  "1": "promoted",
+  "2": "promoted"
+ },
+ "L122": {
+  "0": "enforce",
+  "2": "maintain"
+ },
+ "L123": {
+  "1": "confirmed",
+  "2": "confirmed"
+ },
+ "L124": {
+  "1": "knocked over"
+ },
+ "L125": {
+  "0": "upended",
+  "1": "upended"
+ },
+ "L126": {
+  "0": "annoyed",
+  "1": "distressed",
+  "2": "annoy"
+ },
+ "L127": {
+  "0": "distressed over",
+  "1": "distressed about",
+  "2": "distressed about",
+  "3": "distressed"
+ },
+ "L128": {
+  "1": "distressing",
+  "2": "distressing"
+ }
+}
