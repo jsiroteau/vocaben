@@ -814,11 +814,12 @@ function renderHome(){
   const ls=document.getElementById('learn-subtitle');
   if(pend){ const p=dayRevProgress(); ls.textContent=`Fill in the blank — ${p.done}/${p.total} done`; }
   else if(us.newPaused) ls.textContent="Finish today's reviews first";
-  else if(us.dayRev&&us.dayRev.date===today()&&us.dayRev.done.length) ls.textContent=`✓ Today's words reviewed${newCount?` · ${newCount} new left`:''}`;
-  else ls.textContent=newCount?`${newCount} new entr${newCount>1?'ies':'y'}`:'✓ No new entries left today';
+  else if(newCount) ls.textContent=`${newCount} new entr${newCount>1?'ies':'y'}`;
+  else if(todaySeen().length){ const mi=dayMissed(); ls.textContent=`✓ Today's words reviewed · tap to view them again${mi?` · ${mi} to retry`:''}`; }
+  else ls.textContent='✓ No new entries left today';
   const left=srsPending(), rd=us.revDay, ss=document.getElementById('srs-subtitle');
   if(left) ss.textContent=`${left} word${left>1?'s':''} due${rd.done.length?` · ${rd.done.length} done`:''}`;
-  else ss.textContent=rd.done.length?`✓ Done for today (${rd.done.length})`:'Nothing due today';
+  else { const mi=missList('srs').length; ss.textContent=rd.done.length?`✓ Done for today (${rd.done.length})${mi?` · ${mi} to retry`:''}`:'Nothing due today'; }
   document.querySelectorAll('.exo-card').forEach(c=>c.classList.toggle('locked',pend));
   const reviewCard=document.getElementById('review-today-card');
   if(ts.length){
@@ -1223,8 +1224,13 @@ function saveNew(){
 // ══════════════════════════════════
 //  LEARN SESSION
 // ══════════════════════════════════
+// Toutes les fiches du jour apprises : on peut les revoir (sans effet sur les scores)
+let learnReplay=false;
+function todaySeen(){ return us.todayNew.filter(id=>us.learned.has(id)).map(byId).filter(Boolean); }
 function openLearn(){
-  const entries=us.todayNew.filter(id=>!us.learned.has(id)).map(byId).filter(Boolean);
+  let entries=us.todayNew.filter(id=>!us.learned.has(id)).map(byId).filter(Boolean);
+  learnReplay=!entries.length;
+  if(learnReplay) entries=todaySeen();
   if(!entries.length){toast(us.newPaused?"Finish today's reviews first":'No new entries left today');return;}
   sq=entries; si=0; sc=0;
   openOverlay('learn-overlay');
@@ -1264,9 +1270,11 @@ function renderLearnCard(){
         ${us.toFix.has(e.id)?'🔧 Error flagged (click to remove)':'🔧 Flag an error'}
       </button>
     </div>
-    <div class="ans-btns" style="margin-top:8px;padding-bottom:24px">
-      <button class="ans-btn ko" onclick="nextLearn(false)">😕 Need more practice</button>
-      <button class="ans-btn ok" onclick="tryNextLearn(true)">✓ Got it!</button>
+    <div class="ans-btns" style="margin-top:8px;padding-bottom:24px">${learnReplay
+      ?`<button class="ans-btn ko" ${si?'':'disabled style="opacity:0.4"'} onclick="si--;renderLearnCard()">← Previous</button>
+      <button class="ans-btn ok" onclick="si++;renderLearnCard()">Next →</button>`
+      :`<button class="ans-btn ko" onclick="nextLearn(false)">😕 Need more practice</button>
+      <button class="ans-btn ok" onclick="tryNextLearn(true)">✓ Got it!</button>`}
     </div>`;
   // Scroll to top
   document.getElementById('learn-overlay').scrollTop=0;
@@ -1284,6 +1292,20 @@ function nextLearn(knew){
 }
 
 function showLearnSummary(){
+  if(learnReplay){
+    const miss=dayMissed();
+    document.getElementById('learn-prog').style.width='100%';
+    document.getElementById('learn-cnt').textContent='✓';
+    document.getElementById('learn-content').innerHTML=`
+    <div class="summary">
+      <div class="summary-emoji">📚</div>
+      <div class="summary-lbl">${sq.length} entr${sq.length>1?'ies':'y'} viewed</div>
+      ${miss?`<button class="btn btn-primary" onclick="closeOverlay('learn-overlay');startQueueExtra('dayrev')">Practise missed words (${miss}) →</button>
+      <button class="btn btn-secondary" style="margin-top:8px" onclick="closeOverlay('learn-overlay');renderHome()">Back to home</button>`
+      :`<button class="btn btn-primary" onclick="closeOverlay('learn-overlay');renderHome()">Back to home</button>`}
+    </div>`;
+    return;
+  }
   const pct=Math.round(sc/sq.length*100);
   const pend=buildDayRev();
   document.getElementById('learn-prog').style.width='100%';
@@ -1349,32 +1371,67 @@ function buildDayRev(){
   saveState();
   return dayRevPending();
 }
+function missList(kind){
+  const d=kind==='dayrev'?us.dayRev:us.revDay;
+  if(!d||d.date!==today()) return [];
+  d.miss=(d.miss||[]).filter(k=>kind==='dayrev'?dayRevMot(k):keyLine(k));
+  return d.miss;
+}
+function dayMissed(){ return dayRevPending()?0:missList('dayrev').length; }
+function startQueueExtra(kind){
+  const keys=shuffle(missList(kind));
+  if(!keys.length){ renderHome(); return; }
+  if(kind==='dayrev') dayRevItems=spreadPv(keys); else srsItems=spreadPv(keys);
+  sq=(kind==='dayrev'?dayRevItems:srsItems).map(k=>keyLine(k).e);
+  si=0; sc=0; sType=kind; sDir='en2fr'; testAnswered=false; qExtra=true;
+  currentSessionId='sess_'+Date.now();
+  document.getElementById('test-title').textContent=EXO_LABELS[kind]+' · keep going';
+  openOverlay('test-overlay');
+  renderTestQ();
+}
 function openLearnOrReview(){ if(dayRevPending()) startDayReview(); else openLearn(); }
 function lockedToast(){ toast("First review today's words (Learning card)"); }
 function startDayReview(){
   if(!dayRevPending()){ renderHome(); return; }
   dayRevItems=[...us.dayRev.queue];
   sq=dayRevItems.map(k=>dayRevMot(k).e);
-  si=0; sc=0; sType='dayrev'; sDir='en2fr'; testAnswered=false;
+  si=0; sc=0; sType='dayrev'; sDir='en2fr'; testAnswered=false; qExtra=false;
   currentSessionId='sess_'+Date.now();
   document.getElementById('test-title').textContent=EXO_LABELS.dayrev;
   openOverlay('test-overlay');
   renderTestQ();
 }
-// File d'une séance (révision du jour ou répétition espacée) : erreur → la ligne revient une fois en fin de file
-let qRequeued=false;
+// File d'une séance (révision du jour ou répétition espacée) : erreur → la ligne revient une fois en fin de file ;
+// seconde erreur → la ligne ne bloque plus, mais va dans d.miss. Séance facultative « Keep going » (qExtra) :
+// les lignes de d.miss reviennent en fin de file jusqu'à ce qu'elles soient toutes réussies ; le déblocage n'en dépend pas.
+let qRequeued=false, qMissed=false, qExtra=false;
 function queueAnswered(d,items,ok){
-  const key=items[si]; qRequeued=false;
+  const key=items[si]; qRequeued=false; qMissed=false;
   if(!d||!key) return;
+  if(qExtra){
+    if(ok) d.miss=(d.miss||[]).filter(k=>k!==key);
+    else { items.push(key); sq.push(sq[si]); qRequeued=true; }
+    return;
+  }
   const i=d.queue.indexOf(key); if(i>=0) d.queue.splice(i,1);
   if(!ok&&!d.fails[key]){
     d.fails[key]=1; d.queue.push(key);
     items.push(key); sq.push(sq[si]); qRequeued=true;
-  } else if(!d.done.includes(key)) d.done.push(key);
+  } else {
+    if(!d.done.includes(key)) d.done.push(key);
+    if(!ok){ d.miss=d.miss||[]; if(!d.miss.includes(key)){ d.miss.push(key); qMissed=true; } }
+  }
 }
 function queueOverride(d,items){
   const key=items[si];
-  if(!d||!key||!qRequeued) return;
+  if(!d||!key) return;
+  if(qMissed){ qMissed=false; d.miss=d.miss.filter(k=>k!==key); return; }
+  if(!qRequeued) return;
+  if(qExtra){
+    qRequeued=false; d.miss=(d.miss||[]).filter(k=>k!==key);
+    const li=items.lastIndexOf(key); if(li>si){ items.splice(li,1); sq.splice(li,1); }
+    return;
+  }
   qRequeued=false; delete d.fails[key];
   const qi=d.queue.lastIndexOf(key); if(qi>=0) d.queue.splice(qi,1);
   const li=items.lastIndexOf(key); if(li>si){ items.splice(li,1); sq.splice(li,1); }
@@ -1433,7 +1490,7 @@ function srsBuildDay(force){
   if(d&&d.date===today()&&!force) return;
   const done=d&&d.date===today()?d.done:[];
   const due=srsDueList().filter(k=>!done.includes(k));
-  us.revDay={date:today(), queue:spreadPv(due.slice(0,Math.max(0,cfg.revPerDay-done.length))), done, fails:d&&d.date===today()?d.fails:{}};
+  us.revDay={date:today(), queue:spreadPv(due.slice(0,Math.max(0,cfg.revPerDay-done.length))), done, fails:d&&d.date===today()?d.fails:{}, miss:d&&d.date===today()?(d.miss||[]):[]};
   saveState();
 }
 function srsPending(){
@@ -1443,10 +1500,13 @@ function srsPending(){
   return new Set(d.queue).size;
 }
 function startSrsReview(){
-  if(!srsPending()){ toast(us.revDay.done.length?'✓ Reviews done for today':'Nothing due today'); return; }
+  if(!srsPending()){
+    if(missList('srs').length){ startQueueExtra('srs'); return; }
+    toast(us.revDay.done.length?'✓ Reviews done for today':'Nothing due today'); return;
+  }
   srsItems=[...us.revDay.queue];
   sq=srsItems.map(k=>keyLine(k).e);
-  si=0; sc=0; sType='srs'; sDir='en2fr'; testAnswered=false;
+  si=0; sc=0; sType='srs'; sDir='en2fr'; testAnswered=false; qExtra=false;
   currentSessionId='sess_'+Date.now();
   document.getElementById('test-title').textContent=EXO_LABELS.srs;
   openOverlay('test-overlay');
@@ -1564,7 +1624,7 @@ function startTest(type,dir){
     else entries=shuffle(vocab).slice(0,cfg.qPerTest);
   }
   sq=shuffle(entries).slice(0,cfg.qPerTest);
-  si=0; sc=0; sType=type; sDir=dir; testAnswered=false;
+  si=0; sc=0; sType=type; sDir=dir; testAnswered=false; qExtra=false;
   currentSessionId='sess_'+Date.now();
   document.getElementById('test-title').textContent=EXO_LABELS[type]||type;
   openOverlay('test-overlay');
@@ -2018,7 +2078,7 @@ function recordResult(ok,userAnswerDisplay){
   const keys=(qCtx&&qCtx.keys)||[], keyOk=(qCtx&&qCtx.keyOk)||null, full=sType==='srs'||sType==='dayrev';
   srsPrev=keys.map(k=>[k,us.srs[k]?{...us.srs[k]}:null]);
   keys.forEach((k,i)=>{ const o=keyOk?keyOk[i]:ok; if(full||!o) srsUpdate(k,o); });
-  if(sType==='srs') srsLog(ok);
+  if(sType==='srs'&&!qExtra) srsLog(ok);
   if(sType==='dayrev') queueAnswered(us.dayRev,dayRevItems,ok);
   if(sType==='srs'){ queueAnswered(us.revDay,srsItems,ok); if(!us.revDay.queue.length) markActive(); }
   saveState();
@@ -2056,7 +2116,7 @@ function overrideToCorrect(btn){
     if(sType==='srs'||sType==='dayrev') srsPrev.forEach(([k])=>srsUpdate(k,true));
     srsPrev=null;
   }
-  if(sType==='srs'){ const l=us.srsLog[today()]; if(l) l[0]++; }
+  if(sType==='srs'&&!qExtra){ const l=us.srsLog[today()]; if(l) l[0]++; }
   if(sType==='dayrev') queueOverride(us.dayRev,dayRevItems);
   if(sType==='srs'){ queueOverride(us.revDay,srsItems); if(!us.revDay.queue.length) markActive(); }
   saveState();
@@ -2073,13 +2133,17 @@ function showTestSummary(){
   document.getElementById('test-cnt').textContent='✓';
   us.sessions.push({id:currentSessionId,date:today(),type:sType,correct:sc,total:sq.length});
   saveState(); renderHome();
-  if(sType==='dayrev'&&!dayRevPending()) setTimeout(()=>toast('✓ All exercises unlocked'),300);
+  if(sType==='dayrev'&&!qExtra&&!dayRevPending()) setTimeout(()=>toast('✓ All exercises unlocked'),300);
+  const kind=sType==='dayrev'||sType==='srs'?sType:null;
+  const miss=kind&&!(kind==='dayrev'&&dayRevPending())?missList(kind).length:0;
   document.getElementById('test-content').innerHTML=`
     <div class="summary">
       <div class="summary-emoji">${pct>=80?'🏆':pct>=50?'👍':'💪'}</div>
       <div class="summary-score">${sc}/${sq.length}</div>
       <div class="summary-lbl">${pct}% success rate</div>
-      <button class="btn btn-primary" onclick="closeOverlay('test-overlay');renderHome()">Back to home</button>
+      ${miss?`<button class="btn btn-primary" onclick="startQueueExtra('${kind}')">Keep going until all correct (${miss}) →</button>
+      <button class="btn btn-secondary" style="margin-top:8px" onclick="closeOverlay('test-overlay');renderHome()">Back to home</button>`
+      :`<button class="btn btn-primary" onclick="closeOverlay('test-overlay');renderHome()">Back to home</button>`}
     </div>`;
 }
 

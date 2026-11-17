@@ -1,4 +1,4 @@
-const CACHE = 'vocaben-v20';
+const CACHE = 'vocaben-v21';
 const APP_SHELL = './index.html';
 const ASSETS = [
   './',

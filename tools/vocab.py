@@ -184,6 +184,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 17 novembre 2026 : to topple (régime) cas particulier de to collapse
+    ('symétrie', 'to topple', 'to collapse'),
     # revus le 6 novembre 2026 : synonyme partiel admis à sens unique
     ('symétrie', 'to assert oneself', 'to stand up for oneself'), ('symétrie', 'bait', 'a lure'),
     ('symétrie', 'to quell sth', 'to crush sth'), ('symétrie', 'to bear witness against sb', 'to testify (against sb)'),
