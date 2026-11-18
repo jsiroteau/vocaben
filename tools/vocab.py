@@ -184,6 +184,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 18 novembre 2026 : to be anxious to (désir teinté d'inquiétude) cas particulier de to be eager to
+    ('symétrie', 'to be anxious to do sth', 'to be eager to do sth'),
     # 17 novembre 2026 : to topple (régime) cas particulier de to collapse
     ('symétrie', 'to topple', 'to collapse'),
     # revus le 6 novembre 2026 : synonyme partiel admis à sens unique
