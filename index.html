@@ -244,6 +244,11 @@
     <div class="info"><h3>Reviews</h3><p id="srs-subtitle">—</p></div>
     <div class="arrow">›</div>
   </div>
+  <div class="action-card" id="r2-card" onclick="startRound2()" style="display:none">
+    <div class="icon" style="background:rgba(160,120,255,0.15)">🌙</div>
+    <div class="info"><h3>Second round</h3><p id="r2-subtitle">—</p></div>
+    <div class="arrow">›</div>
+  </div>
   <div class="action-card" id="learn-card" onclick="openLearnOrReview()">
     <div class="icon" id="learn-icon" style="background:rgba(233,69,96,0.15)">📚</div>
     <div class="info"><h3 id="learn-title">Learning</h3><p id="learn-subtitle">—</p></div>
@@ -821,6 +826,14 @@ function renderHome(){
   if(left) ss.textContent=`${left} word${left>1?'s':''} due${rd.done.length?` · ${rd.done.length} done`:''}`;
   else { const mi=missList('srs').length; ss.textContent=rd.done.length?`✓ Done for today (${rd.done.length})${mi?` · ${mi} to retry`:''}`:'Nothing due today'; }
   document.querySelectorAll('.exo-card').forEach(c=>c.classList.toggle('locked',pend));
+  const r2=r2State(), r2c=document.getElementById('r2-card');
+  r2c.style.display=r2?'flex':'none';
+  if(r2){
+    document.getElementById('r2-subtitle').textContent=r2.complete?"✓ All of today's words right — well done!"
+      :!r2.open?`Opens at ${new Date(r2.openAt).toTimeString().slice(0,5)} · today's ${r2.total} words, until all correct`
+      :`${r2.left.length} word${r2.left.length>1?'s':''} to go · until all correct`;
+    r2c.classList.toggle('locked',!r2.open&&!r2.complete);
+  }
   const reviewCard=document.getElementById('review-today-card');
   if(ts.length){
     reviewCard.style.display='flex';
@@ -1391,6 +1404,49 @@ function startQueueExtra(kind){
 }
 function openLearnOrReview(){ if(dayRevPending()) startDayReview(); else openLearn(); }
 function lockedToast(){ toast("First review today's words (Learning card)"); }
+// ── Second tour des mots du jour ──
+// Facultatif, ouvert R2_DELAY_H heures après la révision des mots du jour (un rappel espacé ancre mieux
+// qu'une répétition immédiate). Toutes les lignes des fiches du jour, en traduction FR → EN ; une ligne
+// ratée revient en fin de file jusqu'à ce que toutes soient justes. Tests libres : seuls les échecs
+// modifient le calendrier. État dans us.dayRev : doneAt, r2done (lignes réussies), r2complete.
+const R2_DELAY_H=3;
+let r2Items=[];
+function r2Keys(){ const ks=[]; todaySeen().forEach(e=>learnableMots(e).forEach(m=>ks.push(lineKey(e,m)))); return ks; }
+function r2State(){
+  const d=us.dayRev;
+  if(!d||d.date!==today()||dayRevPending()||!todaySeen().length) return null;
+  if(!d.doneAt){ d.doneAt=Date.now(); saveState(); }
+  const openAt=d.doneAt+R2_DELAY_H*3600e3, done=new Set(d.r2done||[]);
+  const left=r2Keys().filter(k=>!done.has(k));
+  return {openAt, open:Date.now()>=openAt, left, total:r2Keys().length, complete:!!d.r2complete};
+}
+function startRound2(){
+  const st=r2State(); if(!st) return;
+  if(st.complete){ toast('✓ Second round done — well done!'); return; }
+  if(!st.open){ toast('Second round opens at '+new Date(st.openAt).toTimeString().slice(0,5)+' — spacing helps memory'); return; }
+  r2Items=spreadPv(shuffle(st.left));
+  sq=r2Items.map(k=>keyLine(k).e);
+  si=0; sc=0; sType='round2'; sDir='fr2en'; testAnswered=false; qExtra=false;
+  currentSessionId='sess_'+Date.now();
+  document.getElementById('test-title').textContent=EXO_LABELS.round2;
+  openOverlay('test-overlay');
+  renderTestQ();
+}
+function r2Answered(ok){
+  const d=us.dayRev, key=r2Items[si]; qRequeued=false;
+  if(!d||!key) return;
+  if(ok){ d.r2done=d.r2done||[]; if(!d.r2done.includes(key)) d.r2done.push(key); }
+  else { r2Items.push(key); sq.push(sq[si]); qRequeued=true; }
+  const done=new Set(d.r2done||[]);
+  if(r2Keys().every(k=>done.has(k))){ d.r2complete=true; markActive(); }
+}
+function r2Override(){
+  if(!qRequeued) return;
+  qRequeued=false;
+  const key=r2Items[si], li=r2Items.lastIndexOf(key);
+  if(li>si){ r2Items.splice(li,1); sq.splice(li,1); }
+  r2Answered(true);
+}
 function startDayReview(){
   if(!dayRevPending()){ renderHome(); return; }
   dayRevItems=[...us.dayRev.queue];
@@ -1421,6 +1477,7 @@ function queueAnswered(d,items,ok){
     if(!d.done.includes(key)) d.done.push(key);
     if(!ok){ d.miss=d.miss||[]; if(!d.miss.includes(key)){ d.miss.push(key); qMissed=true; } }
   }
+  if(d===us.dayRev&&!d.queue.length&&!d.doneAt) d.doneAt=Date.now();
 }
 function queueOverride(d,items){
   const key=items[si];
@@ -1602,7 +1659,7 @@ function saveNote(el,r){
 // ══════════════════════════════════
 //  TEST SESSION
 // ══════════════════════════════════
-const EXO_LABELS={dayrev:"🗓 Today's words",srs:'🔁 Reviews',qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms',ant:'↔️ Antonyms'};
+const EXO_LABELS={dayrev:"🗓 Today's words",round2:'🌙 Second round',srs:'🔁 Reviews',qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms',ant:'↔️ Antonyms'};
 const REL_EXOS={
   syn:{field:'synonymes',label:'Synonyms',placeholder:'A synonym…'},
   ant:{field:'antonymes',label:'Antonyms',placeholder:'An antonym…'}
@@ -1611,20 +1668,56 @@ function openDirModal(type){ if(dayRevPending()){ lockedToast(); return; } pendi
 function closeDirModal(){ closeOverlay('dir-modal'); }
 function startTestFromModal(dir){ closeDirModal(); startTest(pendingTestType,dir); }
 
+// Exercices libres : tirage pondéré de lignes (pas de fiches) parmi les fiches apprises.
+// Exclues : lignes déjà interrogées aujourd'hui (révisions, mots du jour, second tour, exercices libres)
+// et lignes des fiches du jour. Poids : maximal à mi-chemin de la prochaine révision (rappel exigeant),
+// ×(1 + 0,5 par oubli), ×0,3 pour une ligne très solide (intervalle ≥ 60 j).
+function seenTodayKeys(){
+  const t=today(), out=new Set();
+  (us.todayResults||[]).forEach(r=>{ if(r.date===t) (r.keys||[]).forEach(k=>out.add(k)); });
+  [us.dayRev,us.revDay].forEach(d=>{ if(d&&d.date===t) [...(d.queue||[]),...(d.done||[])].forEach(k=>out.add(k)); });
+  Object.entries(us.srs||{}).forEach(([k,st])=>{ if(st&&st.last===t) out.add(k); });
+  return out;
+}
+function lineWeight(key){
+  const st=us.srs&&us.srs[key];
+  if(!st||!st.last||!st.iv) return 1;
+  const r=daysBetween(st.last,today())/st.iv;
+  let w=r>=1?1:0.25+Math.exp(-Math.pow(r-0.5,2)/(2*0.25*0.25));
+  w*=1+0.5*(st.lapses||0);
+  if(st.iv>=60) w*=0.3;
+  return w;
+}
+function weightedPick(items,n){
+  return items.map(x=>({x,k:Math.pow(Math.random(),1/Math.max(1e-6,x.w))}))
+    .sort((a,b)=>b.k-a.k).slice(0,n).map(o=>o.x);
+}
+// Deux lignes d'une même fiche (ou deux verbes à particule de même base) ne se suivent pas
+function spreadLines(items){
+  const rest=[...items], out=[];
+  while(rest.length){
+    const prev=out[out.length-1];
+    let i=prev?rest.findIndex(x=>x.e.id!==prev.e.id&&(!pvBase(x.m)||pvBase(x.m)!==pvBase(prev.m))):0;
+    if(i<0) i=0;
+    out.push(rest.splice(i,1)[0]);
+  }
+  return out;
+}
+let sMots=[];
 function startTest(type,dir){
   if(dayRevPending()){ lockedToast(); return; }
-  // Fiches apprises seulement : une fiche du jour non ouverte dans Learning n'est pas interrogée
-  const pool=[...new Set([...us.todayNew.filter(id=>us.learned.has(id)),...shuffle([...us.learned]).slice(0,20)])];
-  let entries=pool.map(id=>byId(id)).filter(Boolean);
-  const hasFill=e=>learnableMots(e).some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex));
-  const hasRel=e=>learnableMots(e).some(m=>m[REL_EXOS[type].field]&&m[REL_EXOS[type].field].trim());
-  const fits=e=>type==='fill'?hasFill(e):REL_EXOS[type]?hasRel(e):true;
-  entries=entries.filter(fits);
-  if(!entries.length){
-    const learnedFit=vocab.filter(e=>us.learned.has(e.id)&&fits(e));
-    entries=shuffle(learnedFit.length?learnedFit:vocab.filter(fits)).slice(0,cfg.qPerTest);
-  }
-  sq=shuffle(entries).slice(0,cfg.qPerTest);
+  const fits=m=>type==='fill'?(m.exemples||[]).some(ex=>ex.mat&&ex.ex)
+    :REL_EXOS[type]?!!(m[REL_EXOS[type].field]&&m[REL_EXOS[type].field].trim()):true;
+  const fresh=new Set(us.todayNew), seen=seenTodayKeys(), all=[];
+  vocab.forEach(e=>{
+    if(!us.learned.has(e.id)) return;
+    learnableMots(e).forEach(m=>{ if(fits(m)){ const k=lineKey(e,m); all.push({e,m,k,w:lineWeight(k),old:!fresh.has(e.id)&&!seen.has(k)}); } });
+  });
+  let cands=all.filter(x=>x.old);
+  if(cands.length<cfg.qPerTest) cands=[...cands,...weightedPick(all.filter(x=>!x.old),cfg.qPerTest-cands.length)];
+  if(!cands.length) vocab.forEach(e=>learnableMots(e).forEach(m=>{ if(fits(m)) cands.push({e,m,k:lineKey(e,m),w:1}); }));
+  const picked=spreadLines(weightedPick(cands,cfg.qPerTest));
+  sq=picked.map(x=>x.e); sMots=picked.map(x=>x.m);
   si=0; sc=0; sType=type; sDir=dir; testAnswered=false; qExtra=false;
   currentSessionId='sess_'+Date.now();
   document.getElementById('test-title').textContent=EXO_LABELS[type]||type;
@@ -1641,18 +1734,19 @@ function renderTestQ(){
   const e=sq[si];
   const type=sType;
   const dir=sDir==='mix'?(Math.random()<0.5?'en2fr':'fr2en'):sDir;
-  if(type==='qcm') renderQCM(e,dir);
-  else if(type==='open') renderOpen(e,dir);
-  else if(REL_EXOS[type]) renderRel(e,type);
+  if(type==='qcm') renderQCM(e,dir,sMots[si]);
+  else if(type==='open') renderOpen(e,dir,sMots[si],true);
+  else if(REL_EXOS[type]) renderRel(e,type,sMots[si]);
   else if(type==='dayrev') renderFill(e,(dayRevMot(dayRevItems[si])||{}).m);
   else if(type==='srs') renderSrsQ(e,keyLine(srsItems[si]).m);
-  else renderFill(e);
+  else if(type==='round2') renderOpen(e,'fr2en',(keyLine(r2Items[si])||{}).m);
+  else renderFill(e,sMots[si]);
 }
 
 // ── QCM ──
-function renderQCM(e,dir){
+function renderQCM(e,dir,forcedMot){
   const lm=learnableMots(e);
-  const mot=lm[Math.floor(Math.random()*lm.length)];
+  const mot=forcedMot||lm[Math.floor(Math.random()*lm.length)];
   let qText,correct,qLabel;
   if(dir==='en2fr'){qText=mot.mot;correct=mot.traduction;qLabel='🇬🇧 → 🇫🇷 What does this mean:';}
   else{qText=mot.traduction;correct=mot.mot;qLabel='🇫🇷 → 🇬🇧 How do you say:';}
@@ -1709,11 +1803,12 @@ function checkQCM(el,chosen,correct){
 }
 
 // ── OPEN ──
-function renderOpen(e,dir,forcedMot){
+// exOk : la ligne imposée peut être interrogée par la traduction d'un de ses exemples (exercices libres)
+function renderOpen(e,dir,forcedMot,exOk){
   const lm=learnableMots(e);
   const translatedExs=[];
-  lm.forEach(m=>{ (m.exemples||[]).forEach(ex=>{ if(ex.ex&&ex.tr) translatedExs.push({ex,mot:m}); }); });
-  const useExample=!forcedMot&&translatedExs.length>0&&Math.random()<0.5;
+  (forcedMot?[forcedMot]:lm).forEach(m=>{ (m.exemples||[]).forEach(ex=>{ if(ex.ex&&ex.tr) translatedExs.push({ex,mot:m}); }); });
+  const useExample=(!forcedMot||exOk)&&translatedExs.length>0&&Math.random()<0.5;
 
   // Cas multi-mots en2fr sans exemple :
   // Grouper les lignes par mot anglais identique, tirer un groupe au sort.
@@ -2069,6 +2164,7 @@ function recordResult(ok,userAnswerDisplay){
     type: (qCtx&&qCtx.type)||sType, dir: (qCtx&&qCtx.dir)||sDir,
     label: (qCtx&&qCtx.label)||'', question: (qCtx&&qCtx.question)||'',
     correct: (qCtx&&qCtx.correct)||'', userAnswer: userAnswerDisplay||'',
+    keys: (qCtx&&qCtx.keys)||[],
     ok, overridden:false
   };
   us.todayResults = us.todayResults.filter(r=>r.date===today());
@@ -2081,6 +2177,7 @@ function recordResult(ok,userAnswerDisplay){
   keys.forEach((k,i)=>{ const o=keyOk?keyOk[i]:ok; if(full||!o) srsUpdate(k,o); });
   if(sType==='srs'&&!qExtra) srsLog(ok);
   if(sType==='dayrev') queueAnswered(us.dayRev,dayRevItems,ok);
+  if(sType==='round2') r2Answered(ok);
   if(sType==='srs'){ queueAnswered(us.revDay,srsItems,ok); if(!us.revDay.queue.length) markActive(); }
   saveState();
 }
@@ -2119,6 +2216,7 @@ function overrideToCorrect(btn){
   }
   if(sType==='srs'&&!qExtra){ const l=us.srsLog[today()]; if(l) l[0]++; }
   if(sType==='dayrev') queueOverride(us.dayRev,dayRevItems);
+  if(sType==='round2') r2Override();
   if(sType==='srs'){ queueOverride(us.revDay,srsItems); if(!us.revDay.queue.length) markActive(); }
   saveState();
   // Update feedback display
@@ -2137,6 +2235,17 @@ function showTestSummary(){
   if(sType==='dayrev'&&!qExtra&&!dayRevPending()) setTimeout(()=>toast('✓ All exercises unlocked'),300);
   const kind=sType==='dayrev'||sType==='srs'?sType:null;
   const miss=kind&&!(kind==='dayrev'&&dayRevPending())?missList(kind).length:0;
+  if(sType==='round2'&&us.dayRev&&us.dayRev.r2complete){
+    const n=r2Keys().length;
+    document.getElementById('test-content').innerHTML=`
+    <div class="summary">
+      <div class="summary-emoji">🎉</div>
+      <div class="summary-score">${n}/${n}</div>
+      <div class="summary-lbl">Well done! Every word of the day is right.<br>See you tomorrow for the first review.</div>
+      <button class="btn btn-primary" onclick="closeOverlay('test-overlay');renderHome()">Back to home</button>
+    </div>`;
+    return;
+  }
   document.getElementById('test-content').innerHTML=`
     <div class="summary">
       <div class="summary-emoji">${pct>=80?'🏆':pct>=50?'👍':'💪'}</div>
