@@ -184,6 +184,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 19 novembre 2026 : verbes sans « to » en tête
+    ('nature', 'not to have a clue', 'verb'), ('nature', 'the tide turns / to turn the tide', 'verb'),
     # 18 novembre 2026 : to be anxious to (désir teinté d'inquiétude) cas particulier de to be eager to
     ('symétrie', 'to be anxious to do sth', 'to be eager to do sth'),
     # 17 novembre 2026 : to topple (régime) cas particulier de to collapse
@@ -290,6 +292,19 @@ def lint(B):
     def w(cat, r, cible, msg):
         if (cat, r[M], cible) not in LINT_OK:
             warn.append((cat, f'{r[E]} | {r[M]} → {cible} : {msg}'))
+
+    # Nature : le QCM tire ses distracteurs parmi les lignes de même nature
+    NATS = {'verb', 'noun', 'adjective', 'adverb', 'preposition', 'conjunction', 'interjection', 'phrase'}
+    for r in B.rows:
+        m = str(r[M] or '')
+        if r[NAT] not in NATS:
+            w('nature', r, r[NAT], 'nature inconnue')
+        elif m.startswith('to ') and r[NAT] not in ('verb', 'adverb', 'adjective'):
+            w('nature', r, r[NAT], 'Mot en « to … » : nature verb attendue')
+        elif r[NAT] == 'verb' and not m.startswith(('to ', "can't ")):
+            w('nature', r, r[NAT], 'verbe sans « to »')
+        elif r[NAT] == 'phrase' and not (m[:1].isupper() or m.startswith(('it ', 'no '))):
+            w('nature', r, r[NAT], 'phrase réservée aux phrases entières : verb, noun, adjective, adverb ou preposition')
 
     irr = None
     for r in B.rows:
