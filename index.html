@@ -1613,15 +1613,16 @@ function startTestFromModal(dir){ closeDirModal(); startTest(pendingTestType,dir
 
 function startTest(type,dir){
   if(dayRevPending()){ lockedToast(); return; }
-  const pool=[...new Set([...us.todayNew,...shuffle([...us.learned]).slice(0,20)])];
+  // Fiches apprises seulement : une fiche du jour non ouverte dans Learning n'est pas interrogée
+  const pool=[...new Set([...us.todayNew.filter(id=>us.learned.has(id)),...shuffle([...us.learned]).slice(0,20)])];
   let entries=pool.map(id=>byId(id)).filter(Boolean);
-  if(type==='fill') entries=entries.filter(e=>learnableMots(e).some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex)));
+  const hasFill=e=>learnableMots(e).some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex));
   const hasRel=e=>learnableMots(e).some(m=>m[REL_EXOS[type].field]&&m[REL_EXOS[type].field].trim());
-  if(REL_EXOS[type]) entries=entries.filter(hasRel);
+  const fits=e=>type==='fill'?hasFill(e):REL_EXOS[type]?hasRel(e):true;
+  entries=entries.filter(fits);
   if(!entries.length){
-    if(type==='fill') entries=shuffle(vocab.filter(e=>learnableMots(e).some(m=>(m.exemples||[]).some(ex=>ex.mat&&ex.ex)))).slice(0,cfg.qPerTest);
-    else if(REL_EXOS[type]) entries=shuffle(vocab.filter(hasRel)).slice(0,cfg.qPerTest);
-    else entries=shuffle(vocab).slice(0,cfg.qPerTest);
+    const learnedFit=vocab.filter(e=>us.learned.has(e.id)&&fits(e));
+    entries=shuffle(learnedFit.length?learnedFit:vocab.filter(fits)).slice(0,cfg.qPerTest);
   }
   sq=shuffle(entries).slice(0,cfg.qPerTest);
   si=0; sc=0; sType=type; sDir=dir; testAnswered=false; qExtra=false;
