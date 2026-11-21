@@ -205,3 +205,18 @@
   all-encompassing, a shortcoming, an impairment, demeanour, an outrage / a furore « scandale ») ; D 0 ;
   E 1 (overhead adverbe : exemple adjectival « overhead lockers » remplacé) ; F 0.
 - Clés de lots.json mises à jour pour les Traductions modifiées (lots 15 et 16). Rien à trancher.
+
+## Lot 17 (21 novembre 2026, a peak → fit for purpose, 100 lignes)
+- 16 lignes avec mots confus (lot riche en familles déjà très liées, où presque tous les candidats conviennent dans un
+  exemple) : pièges du français politics pour a policy, to wage pour to pursue a policy « mener », guile pour a ploy
+  « ruse », a payoff pour a profit « bénéfice », to avail oneself of pour to profit (from), a hoard pour a proviso
+  « réserve », an item pour a purpose « objet », apt pour proper « approprié », steep pour potent « fort »,
+  to fall into pour to pertain to « relever de », penniless pour poverty-stricken ; voisins : a set-up / a pitfall
+  pour a pitfall / a trap, to set sb up pour to trap, premises / a premise croisés.
+- Contrôles (9 corrections) : A1 0 ; A2 0 ; A3 2 (pull « l'influence, le piston » démêlé de connections « des
+  relations (personnes qu'on connaît) », qui s'échangeaient dans les trois exemples ; poverty-stricken « très
+  pauvre, misérable » démêlé de deprived « défavorisé ») ; B 5 formes admises (impoverished → poor, poverty-stricken
+  → destitute, penniless → poor (2 exemples), precarious → unstable, a proxy « mandataire » → agents ; a proxy
+  « indicateur » → an indicator impossible à admettre (article a/an dans les trois exemples), laissé) ; C 1 (apt) ;
+  D 0 ; E 0 ; F 0.
+- Rien à trancher.
