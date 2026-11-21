@@ -152,3 +152,21 @@
   to go in for (to be keen on) et the workforce (labour) impossibles à admettre (to be, article), laissés ;
   C 0 ; D 0 ; E 1 ; F 1 (junk adjectif : mot à trouver réduit à junk dans junk mail, junk food, junk science).
 - Soumis (a_trancher.md) : scission de to loosen sth (« desserrer » / « assouplir », avec to relax sth, to ease).
+
+## Lot 14 (21 novembre 2026, lenient → a mishap, 100 lignes)
+- 22 lignes avec mots confus, surtout des pièges du français : a bargain et a deal pour a market et a marketplace
+  « marché », a niche pour a loophole « niche fiscale », a crop pour literacy « culture », relevant pour literate
+  « compétent », a stockpile pour misgivings « réserves », an outrage pour a felony « crime », clout et a disability
+  pour a liability « poids, handicap », a standard et a layer pour a level, to frame sth pour to level sth at,
+  laxity pour leniency, hollow pour paltry, mayhem pour a mess, to downgrade pour to demean oneself, equally et
+  by the same token pour likewise ; autres sens : stingy, tight-fisted pour mean « méchant », meagre pour mean
+  « radin », a chunk pour a lump « grosseur », a mainstay / a linchpin croisés (étai, clavette).
+- Contrôles (30 corrections) : A1 4 groupes complétés avec formes admises (miserly relié à mean et cheap « radin »,
+  cheap à tight-fisted ; unwise / ill-advised / misguided ; to fool about (GB) / to mess around/about ;
+  to stabilize / to level out/off) ; A3 5 gloses (unease, mercurial, scanty, a mishap, to bungle sth) ;
+  B 8 (formes admises : lest → for fear that, towering → lofty, a mainstay → pillar ; exemples ajoutés pour
+  likewise → similarly, literate → well-read, a livelihood → a living, miscellaneous → assorted, a serious offence →
+  an indictable offence ; to stoop (to) pour to demean oneself impossible à admettre (by doing / to doing), laissé) ;
+  C 8 gloses (a standard « un niveau (de qualité, de vie) », a level, a liability, likewise, a market, mayhem,
+  paltry, a felony) ; D 0 ; E 0 ; F 0.
+- Rien à trancher.
