@@ -724,3 +724,20 @@
 - Remarque : to squeeze intransitif « se serrer, s'entasser » (Eight of us squeezed into a car) n'a pas de ligne ; to stall
   « s'enliser » et to be/get bogged down (in) restent non reliés (constructions qui ne s'échangent pas). 3 clés de lots.json
   remises à jour. Rien à trancher.
+
+## Lot 49 (21 novembre 2026, to strike → a faucet, 106 lignes)
+- 26 lignes avec mots confus : pièges du français business pour stuff « affaires », to quote pour to summon « citer »,
+  a trial pour a suit « procès », to embezzle sth pour to subvert « détourner », to join pour to subscribe to « adhérer »,
+  to cede sth pour to succumb « céder », relief pour a subsidy « aide », to back et to endorse sb pour to support sb,
+  to pay back sth pour to surrender sth « rendre », to topple sth pour to swing sb/sth « faire basculer »,
+  a resumption et a trade-in pour an upswing « reprise », to redeem pour to switch « échanger », to garner pour to take sb in
+  « recueillir », to liken to pour to take sth in « assimiler », to dabble in pour to tamper with « toucher à », to impair
+  « altérer » ; paronymes stricken / striking, a suit / a sequel, to come over / to stumble across.
+- Contrôles (19 corrections) : A1 2 (to take on sth « revêtir » ↔ to assume sth, a tap (GB) ↔ a faucet (US), formes admises) ;
+  A2 3 (to subscribe to → to share sth, to swing sb/sth → to tip sth, to tamper with « falsifier » → to falsify, LINT_OK) ;
+  A3 6 gloses (striking / stark, struggling « (qui peine à s'en sortir) » face à beleaguered, a struggle / an ordeal,
+  to stuff / to thrust, a stumbling block / a hindrance, to suit « arranger (qn) » face à to fit) ; B 3 (to conjecture admis
+  dans les trois exemples de to surmise, exemple ajouté à to be sworn in pour to take an oath, to grift retiré de to swindle sb
+  et gardé à sens unique) ; C 5 gloses (business, stuff, a suit « (au civil) » / a trial, a contest, stricken, to embezzle) ;
+  D 0 ; E 0 ; F 0.
+- 14 clés de lots.json remises à jour. Rien à trancher.
