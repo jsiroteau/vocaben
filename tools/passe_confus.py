@@ -34,6 +34,9 @@ def resolve(rows, k):
             return r
     e, m = k.split('|')[:2]
     o = [r for r in rows if r[E] == e and r[M] == m]
+    if len(o) > 1:  # plusieurs lignes : celle dont la Traduction commence comme la clé (glose ajoutée depuis)
+        t = k.split('|', 2)[2]
+        o = [r for r in o if (r[T] or '').startswith(t)] or o
     assert len(o) == 1, f'clé introuvable : {k}'
     return o[0]
 

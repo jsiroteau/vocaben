@@ -603,3 +603,22 @@
   B 0 ; C 2 (to strive for « (en s'en donnant les moyens) » face à to long for, to bind « (par une obligation, un
   sentiment commun) » face à to link) ; D 0 ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 41 (21 novembre 2026, to malign → overcome (by/with), 100 lignes)
+- 20 lignes avec mots confus : pièges du français spiteful pour malign « malveillant », to fit pour to match « aller bien
+  avec », a time lag pour a mismatch « décalage », to blend in (with) et to fuse (with) pour to melt « fondre »,
+  to meddle in pour to mingle with « se mêler », to contrive sth pour to mix « combiner », to quiz pour to ponder
+  « s'interroger », sensitive pour noticeable « sensible », a disclaimer pour a notice « avertissement », to grade pour
+  to note « noter », to incite pour to nudge « inciter », to breed sth pour to nurture « élever », to crop pour
+  to nurture « cultiver », to jumble pour to obfuscate « embrouiller », to come off pour to occur « avoir lieu »,
+  to evict sb (from) pour to oust « évincer », to pre-empt pour to outstrip « devancer » ; paronymes unmanned /
+  undermanned ; autres sens : to make out pour to manage « gérer », to tally with pour to match « être assorti à ».
+- Contrôles (16 corrections) : A1 2 (to match (sth) ↔ to square with, to manage « se débrouiller » ↔ to cope (with),
+  formes admises des deux côtés) ; A2 4 (a meltdown → a collapse, to melt away → to dwindle, a notice « un avertissement
+  (écrit, officiel) » → a warning, to tarnish sth « (réputation, image) » → to mar, LINT_OK) ; A3 5 gloses (malign face
+  à malicious, to mingle with face à to hang out with, to ponder face à to wonder, a query face à a matter) ; B 1
+  (to outlast retiré des synonymes de to outlive, où il ne convient dans aucun exemple, renvoi inverse gardé à sens
+  unique et glosé) ; C 0 ; D 0 ; E 0 ; F 0.
+- Outil : passe_confus.py retrouve une clé dont la Traduction a reçu une glose quand l'Entrée et le Mot ont plusieurs
+  lignes (lot 41 bloqué sur a notice) ; il reste à corriger à la main la clé de to trim (lot 50).
+- Rien à trancher.
