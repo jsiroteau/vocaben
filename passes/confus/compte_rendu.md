@@ -820,5 +820,5 @@
   to sort out, to devise face à to work out sth, lucrative face à worthwhile, worthy « bien intentionné » face à praiseworthy,
   would-be face à budding, zealous face à staunch, fraud face à grift et a scam) ; C 2 (wanton « gratuit » face à wilful
   « délibéré », a bargain « achat à bon prix » face à a windfall) ; B 0 ; D 0 ; E 0 ; F 0. Écartés car déjà distingués :
-  stubborn / wilful « entêté », a salary, probation, to turn out / to work out, stately / dignified.
+  stubborn / wilful « entêté », to turn out / to work out, stately / dignified, worthy / worthwhile « qui vaut la peine ».
 - 9 clés de lots.json remises à jour. Rien à trancher.
