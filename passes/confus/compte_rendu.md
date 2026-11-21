@@ -250,3 +250,18 @@
   to sensitize → to raise awareness (of) impossibles à admettre (article, construction), laissés) ; C 7 gloses
   (rough « agité (mer, temps) », a device « (technique) », scope, the fringe, sensitive, a scab, a crust) ; D 0 ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 20 (21 novembre 2026, a series → spotless, 101 lignes)
+- 24 lignes avec mots confus : pièges du français to ward off pour to shelter sb/sth « protéger », to entrench sth pour
+  to shore up « consolider », a pattern pour a slant « tendance », glum pour sluggish « morose », a breakdown pour
+  a slump « effondrement », a fit pour a slump « crise », a thrust pour a surge « poussée », insidious pour sly
+  « sournois », a gap pour a space / space « espace », to hedge sth (against sth) pour to span « couvrir »,
+  a lapse of time pour a span « laps de temps » ; paronymes slaughter / manslaughter / a slayer, a snapshot pour
+  a snap « bruit sec » ; autres sens : scruffy et worn-out pour shabby « mesquin », to brace pour to shore up
+  « soutenir », a bias pour a slant « inclinaison », to plummet pour to slump / to slouch « s'affaler ».
+- Contrôles (13 corrections) : A1 2 groupes avec formes admises des deux côtés (to slump « chuter » / to tumble /
+  to plunge ; slim « faible » / faint « le moindre ») ; A2 1 (to offshore → to relocate (sth), LINT_OK) ; A3 6
+  (sharp « incisif » face à insightful, to slight sb « faire un affront » face à to belittle, to shun « (durablement) »
+  face à to snub, smug face à complacent, sobering face à thought-provoking, unsound face à flimsy) ; B 0 ; C 4 gloses
+  (a fit, a thrust, a span « durée », to entrench sth) ; D 0 ; E 0 ; F 0.
+- Rien à trancher.
