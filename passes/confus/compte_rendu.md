@@ -691,3 +691,18 @@
   a settlement « règlement » face à a rule, to set sth back face à to stall sth) ; D 0 ; E 0 ; F 0.
 - Remarque : to share sth « avoir qch en commun » a pour synonyme to have sth in common, qui ne peut remplacer le mot à
   trouver dans aucun exemple (complément intercalé) ; laissé tel quel. Rien à trancher.
+
+## Lot 47 (21 novembre 2026, to shun → on the spur of the moment, 102 lignes)
+- 36 lignes avec mots confus : pièges du français cowardly pour slack « lâche », hollow pour slack « creux », bland pour
+  smooth « lisse », to bestow pour to spare « accorder », to deposit sth pour to sponsor « déposer », to shed (shed) pour
+  to spill « répandre », to swamp pour to spill over et to overflow « déborder », a sheen pour a splinter et a sliver
+  « éclat », to overshadow pour to sneak out « (s')éclipser », to blaze pour to soar et to skyrocket « flamber », a lapse
+  pour a spread « écart », a lash pour a spur « coup de fouet », to rot pour to spoil sb « pourrir (gâter) », to flaunt
+  pour to spread « étaler » ; paronymes a stain / a strain, a split / a splinter ; voisins to throttle, to hijack, to lurk.
+- Contrôles (16 corrections) : A1 2 (slack « négligent » ↔ lax, to slacken « ralentir » ↔ to ease (off), formes admises
+  des deux côtés) ; A2 2 (spare « libre » → free, to stagger « échelonner » → to spread, LINT_OK) ; A3 0 ; B 1
+  (impulsively admis dans on the spur of the moment) ; C 8 gloses (smooth « lisse (surface, peau) », to throttle, to slack
+  off, to soar, a splinter, a slump, to spoil « gâcher (une soirée…) », to waver) ; D 0 ; E 1 (soumis) ; F 2 (mot à
+  trouver « on the spur of the moment » complet dans les deux exemples).
+- Outil : clés de lots.json remises à jour pour toutes les Traductions glosées depuis l'initialisation (204 clés).
+- Soumis : scission de spare « sobre, dépouillé / sec (physique) » (a_trancher.md).
