@@ -970,5 +970,6 @@
 - Lignes avec mots confus : 1 344 sur 5 601 ; les autres reçoivent des distracteurs tirés au hasard dans l'appli.
 - Synonymes ajoutés (contrôle A1, total des comptes rendus) : 124, avec leurs formes admises des deux côtés ;
   75 renvois à sens unique du particulier vers le général (A2, LINT_OK), et de nombreuses gloses (A3, C).
-- Cas à trancher : 21 dans passes/confus/a_trancher.md (surtout des scissions de ligne, quelques créations).
+- Cas à trancher : 19 (21 lignes, dont 2 doublons : sane, a fake), tous approuvés par Jennifer et appliqués le
+  21 novembre 2026 : 17 scissions, 2 lignes créées (an appeal (for), garbage « des bêtises »).
 - Lint à 0 avertissement à la fin de chaque lot.

@@ -186,6 +186,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 21 novembre 2026 (cas tranchés de la passe mots confus) : sane « sensé » plus étroit que sensible
+    ('symétrie', 'sane', 'sensible'),
     # 21 novembre 2026 (passe mots confus, revue lot 11) : cas particulier renvoyant au mot général
     ('symétrie', 'deprivation', 'hardship'),
     # 21 novembre 2026 (passe mots confus, revue lot 10) : cas particuliers renvoyant au mot général
