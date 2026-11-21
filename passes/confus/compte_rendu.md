@@ -706,3 +706,21 @@
   trouver « on the spur of the moment » complet dans les deux exemples).
 - Outil : clés de lots.json remises à jour pour toutes les Traductions glosées depuis l'initialisation (204 clés).
 - Soumis : scission de spare « sobre, dépouillé / sec (physique) » (a_trancher.md).
+
+## Lot 48 (21 novembre 2026, to spy on → a stretch, 102 lignes)
+- 27 lignes avec mots confus : pièges du français to be commensurate with pour to square with et to tally with
+  « correspondre à », to overwhelm pour to squash « écraser », to clutch (at) pour to squash (up) « serrer », strain pour
+  a squeeze « pression », to snatch pour to squeeze sth out of sb « arracher », to prop up pour to stall « caler »,
+  to trample (on) pour to stall « piétiner », to warn et to foresee pour to forestall / to pre-empt « prévenir »,
+  to hold sth (at) pour to stand by sth « maintenir », to account for sth pour to stand for « représenter », a location
+  pour a stand « position », to supersede pour to stand in « remplacer », shiny pour outstanding « brillant », the bustle
+  pour a stir « effervescence », a caveat pour a store « réserve », to loom pour to streamline « profiler », an extent pour
+  a stretch « étendue » ; paronymes to rise / to step up, a statement / an understatement, to stir / to stoke.
+- Contrôles (7 corrections) : A1 1 (to spy « apercevoir » ↔ to glimpse, formes admises des deux côtés) ; A2 0 ; A3 1
+  (to advocate « (une mesure, une politique) » face à to stand for « prôner (idées, valeurs) ») ; B 0 ; C 3 gloses
+  (a store « une réserve, un stock » face à a caveat, to pre-empt face à to warn, shiny « (surface) » face à outstanding) ;
+  D 1 (exemple de stock illustré) ; E 0 ; F 1 (exemple « bookstore » de a store « magasin » remplacé : le mot à trouver
+  n'était pas le Mot).
+- Remarque : to squeeze intransitif « se serrer, s'entasser » (Eight of us squeezed into a car) n'a pas de ligne ; to stall
+  « s'enliser » et to be/get bogged down (in) restent non reliés (constructions qui ne s'échangent pas). 3 clés de lots.json
+  remises à jour. Rien à trancher.
