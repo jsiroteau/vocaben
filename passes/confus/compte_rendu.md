@@ -825,7 +825,7 @@
 
 ## Lot 1 (revue) (21 novembre 2026, acclaim → in disarray, 102 lignes)
 - Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
-- Contrôles (10 corrections) : A1 2 (to acclaim (as) ↔ to laud ; altogether « somme toute » ↔ overall), formes admises
+- Contrôles (8 corrections) : A1 2 (to acclaim (as) ↔ to laud ; altogether « somme toute » ↔ overall), formes admises
   des deux côtés ; A2 1 (a buyout → an acquisition, LINT_OK, glose « par ses dirigeants ou par un fonds ») ; A3 4 gloses
   (appeasement « capitulation (par des concessions à un adversaire) » face à surrender, thriving « (économie, activité,
   ville) » face à affluent, a target « objectif (souvent chiffré) » face à an aim, to make out (that) « prétendre (à tort) »
