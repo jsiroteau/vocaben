@@ -234,3 +234,19 @@
   a comeback admis dans un exemple de a revival, exemple ajouté à a resurgence) ; C 6 gloses (a quarter « trimestre
   (exercice comptable) », resolve, a craze, (a) pursuit, unwary, to file « classer ») ; D 0 ; E 0 ; F 0.
 - Clés de lots.json remises à jour (Traductions modifiées, dont a landmark du lot 13). Rien à trancher.
+
+## Lot 19 (21 novembre 2026, robust → to sensitize (to), 102 lignes)
+- 20 lignes avec mots confus : pièges du français a tour et a trick pour a round « tour » (et a round pour a tour),
+  unequal pour rough « inégal », fidgety pour rough « agité », in bulk pour roughly « en gros », to afford (sb) sth pour
+  to secure sth « procurer », safety pour security « sécurité », a crust / a scab croisés « croûte », a device et a diet
+  pour a scheme « dispositif, régime », to puzzle pour to scheme « intriguer », surroundings pour scope « cadre »,
+  the fringe pour scope (for) « marge », noticeable et sensible pour sensitive, sensitive pour sensible ; voisins :
+  to root out pour to uproot, coarse pour rough « approximatif », a landscape pour scenery « décors (théâtre) ».
+- Contrôles (17 corrections) : A1 3 groupes avec formes admises des deux côtés (savvy « avisé » / astute / canny
+  « avisé », avec un exemple sans article pour astute ; nous / acumen ; a scourge / the bane of) ; A2 0 ; A3 1
+  (sanguine « (confiant, peu inquiet) » face à upbeat) ; B 5 formes admises ou exemples (robust → sturdy ;
+  a plague dans les exemples de a scourge et de the bane of ; close examination, qui ne convenait dans aucun exemple
+  de scrutiny : exemple « do not stand up to scrutiny » ajouté ; rough « approximatif » → approximate et
+  to sensitize → to raise awareness (of) impossibles à admettre (article, construction), laissés) ; C 7 gloses
+  (rough « agité (mer, temps) », a device « (technique) », scope, the fringe, sensitive, a scab, a crust) ; D 0 ; E 0 ; F 0.
+- Rien à trancher.
