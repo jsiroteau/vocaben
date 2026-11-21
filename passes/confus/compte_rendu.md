@@ -433,3 +433,18 @@
   to put forward face à to come up with) ; B 0 ; C 2 (to undergo, a sentence) ; D 8 (Traduction de to come up et
   traductions d'exemples de to come up, a commuter, compelling ×2, compliant, a convict, to cope, to cripple) ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 30 (21 novembre 2026, to cut back → the departed, 107 lignes)
+- 32 lignes avec mots confus : pièges du français to narrow down pour to cut back « restreindre », to fall back on pour
+  to cut sth back « rabattre », a splinter pour dazzle « éclat », a market pour a deal « marché », to assess et to value
+  pour to deem « estimer », a challenge pour defiance « défi », a request et an application pour demand « demande »,
+  to forgo pour to deny sb sth « priver », to file pour to deposit « déposer », a warehouse pour a deposit « dépôt »,
+  to coin pour to devise « inventer », to embody sth pour to devote sth to « consacrer », to warrant pour to deserve,
+  to sentence et to convict pour to decry, to deplore, to denounce « condamner » ; paronymes defer / deter, deny / defy,
+  deplete / deplore, portray / betray, dead / deadly, die out / die down, cutback / drawback, fuse / defuse.
+- Contrôles (16 corrections) : A1 2 (to despise ↔ to look down on ; deprivation « dénuement » ↔ poverty) ; A2 1
+  (to cut sth back → to prune sth, LINT_OK) ; A3 4 gloses (to daunt face à to deter, to make for limité à « se diriger
+  vers » face à to make a dash for, defiant face à unbending, a demand face à a requirement) ; B 0 ; C 2 (a warehouse,
+  demand (for)) ; D 7 traductions d'exemples (a cutback ×2, to dash, dazzle, to deny sb sth, deserving, to make for) ;
+  E 0 ; F 0.
+- Rien à trancher.

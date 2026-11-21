@@ -186,6 +186,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 21 novembre 2026 (passe mots confus, lot 30) : cas particulier renvoyant au mot général
+    ('symétrie', 'to cut sth back', 'to prune sth'),
     # 21 novembre 2026 (passe mots confus, lot 29) : cas particuliers renvoyant au mot général
     ('symétrie', 'a contender (for)', 'a candidate'), ('symétrie', 'a cross-section', 'a sample'),
     # 21 novembre 2026 (passe mots confus, lot 28) : cas particuliers renvoyant au mot général
