@@ -557,3 +557,20 @@
   nuire à (une réputation) » face à to harm) ; B 2 (formes admises hang together / hold together à to add up, put right
   à to remedy) ; C 1 (shrewd « (en affaires, dans ses jugements) » face à handy) ; D 0 ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 38 (21 novembre 2026, to hoard → implicated in, 102 lignes)
+- 37 lignes avec mots confus : pièges du français to run up pour to hoard « accumuler », to check pour to hold « contenir »,
+  involvement (in) et a holding (in) « participation », to mount sth pour to hold sth « organiser », to stand by sth et
+  to uphold pour to hold sth (at) « maintenir », outstanding pour on hold « en suspens », to wear well « résister »,
+  to require « exiger », a downturn pour a hold-up « ralentissement », to tamper with pour to impair « altérer », to file
+  pour to impart « transmettre », to assume pour to imply et to involve « supposer », to impeach / an impeachment pour
+  to indict / an indictment, to request pour to inquire « demander », relevant pour involved « concerné » ; paronymes
+  a hoard / a hoarding, an implement / implementation ; autres sens : to cripple et to limp entre les deux to hobble,
+  to entail pour to imply (that), to support sth et to delay sth entre les sens de to hold up, implicated in pour involved in.
+- Contrôles (17 corrections) : A1 3 (to impinge on ↔ to infringe on, même groupe que to encroach (on) ; to indulge sb ↔
+  to spoil sb ; to inquire into ↔ to probe, formes admises des deux côtés) ; A2 0 ; A3 8 gloses (a hoard « (amassée,
+  souvent cachée) » face à a store, a poster et a notice, to stymie « (un projet, des efforts) » face à to hobble,
+  to endanger face à to threaten, to indulge in « (par complaisance) » face à to engage in, to interfere with face à
+  to hamper, to lend sth to sth face à to impart) ; B 1 (formes admises condemnation of à an indictment (of)) ; C 0 ;
+  D 0 ; E 0 ; F 0.
+- Rien à trancher.
