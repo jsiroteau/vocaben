@@ -186,6 +186,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 21 novembre 2026 (passe mots confus, lot 13) : a price tag (étiquette de prix) cas particulier de a label
+    ('symétrie', 'a price tag', 'a label'),
     # 21 novembre 2026 (passe mots confus, lot 12) : a turnover (chiffre d'affaires d'une entreprise) cas particulier de revenue
     ('symétrie', 'a turnover', 'revenue'),
     # 19 novembre 2026 : verbes sans « to » en tête

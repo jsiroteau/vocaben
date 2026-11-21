@@ -1,0 +1,149 @@
+{
+"joint|a joint|une articulation": [],
+"joint|joint|commun, mixte": [],
+"joint|jointly|conjointement, en commun": [],
+"joint|a joint venture|une coentreprise, une société commune": [],
+"juggernaut|a juggernaut|un mastodonte, un rouleau compresseur": [],
+"juggernaut|a juggernaut|un poids lourd (GB)": [],
+"junk|junk|le bric-à-brac, la camelote, le bazar": [],
+"junk|a junk bond|une obligation à haut rendement, une obl": [],
+"junk|junk|de mauvaise qualité, indésirable": [],
+"junk|to junk sth|jeter, mettre au rebut, bazarder (famili": [],
+"junk|to junk sth|abandonner, jeter aux orties (projet, id": [],
+"junk|a junkie|un toxicomane, un accro (familier)": [],
+"junk|clutter|le fouillis, le fatras": [
+"a shambles"
+],
+"keen|keen|passionné, enthousiaste, assidu": [],
+"keen|to be keen on|aimer (beaucoup), être fan de, se passio": [],
+"keen|to be keen to do sth|tenir à faire qch, avoir envie de faire ": [],
+"keen|keen|vif, aigu (sens, intérêt)": [],
+"keen|keenly|vivement, avec attention": [
+"briskly"
+],
+"keen|keen|acharné, rude (concurrence)": [
+"eager"
+],
+"keen|to be fond of|aimer bien, avoir de l'affection pour": [],
+"key|a key|une clé": [],
+"key|key|clé, essentiel, déterminant": [],
+"key|to be in key|être dans le ton, chanter/jouer juste": [],
+"key|to key sth to|adapter qch à, aligner qch sur": [],
+"key|to be keyed up|être tendu, surexcité": [],
+"key|low-key|discret, sobre": [
+"retiring"
+],
+"key|low-key|tranquille, sans faste": [],
+"key|low-key|un peu, à moitié (familier)": [],
+"keystone|the keystone|la clé de voûte": [],
+"keystone|the cornerstone|la première pierre (d'un bâtiment)": [
+"the keystone"
+],
+"keystone|the cornerstone|la pierre angulaire": [],
+"kickback|a kickback|un recul (arme), un rebond (outil)": [
+"a bribe",
+"perspective",
+"a pick(-)up"
+],
+"kickback|a kickback|un pot-de-vin, une rétrocommission": [
+"a recoil"
+],
+"kickback|a recoil|un recul (arme)": [
+"perspective",
+"a bribe"
+],
+"kickback|to recoil (from)|avoir un mouvement de recul (devant), re": [],
+"kingpin|a kingpin|un caïd, un chef, une figure centrale": [],
+"kingpin|a mastermind|un cerveau (d'une opération)": [],
+"knack|a knack (for/of)|un don, un chic, le coup (de main)": [
+"a blow"
+],
+"knee-jerk|a jerk|une secousse, un coup sec": [],
+"knee-jerk|to jerk sth|tirer qch d'un coup sec, retirer qch bru": [],
+"knee-jerk|knee-jerk|irréfléchi, instinctif, réflexe": [],
+"knee-jerk|a jerk|un crétin, un abruti (familier)": [],
+"knot|a knot|un nœud": [
+"the crux (of)"
+],
+"knot|to knot|se nouer": [],
+"knot|to knot sth|nouer qch": [
+"to forge sth"
+],
+"knot|knotty|épineux (problème, question)": [],
+"know-how|know-how|le savoir-faire": [],
+"knowledge|knowledge (of)|la connaissance (de), le savoir": [],
+"knowledge|to the best of my knowledge / to my knowledge|à ma connaissance, pour autant que je sa": [],
+"knowledge|knowledgeable (about)|bien informé (sur), calé (en)": [],
+"kudos|kudos|le prestige, les éloges": [],
+"label|to label|étiqueter": [],
+"label|a label|une étiquette": [],
+"label|to label sb/sth (as) sth|qualifier qn/qch de qch, cataloguer qn/q": [],
+"label|a (record) label|une maison de disques": [],
+"label|a price tag|une étiquette (prix)": [],
+"label|a price tag|un coût": [],
+"labo(u)r|labour (GB) / labor (US)|la main-d'œuvre, le travail (facteur de ": [
+"work"
+],
+"labo(u)r|organised labour (GB) / organized labor (US)|les syndicats, le mouvement syndical": [],
+"labo(u)r|the labour force (GB) / the labor force (US)|la population active, la force de travai": [],
+"labo(u)r|a labour shortage (GB) / a labor shortage (US)|une pénurie de main-d'œuvre": [],
+"labo(u)r|labour-saving (GB) / labor-saving (US)|qui économise du travail, qui allège les": [],
+"labo(u)r|manpower|la main-d'œuvre, les effectifs": [
+"enrolment (GB) / enrollment (US)"
+],
+"labo(u)r|the workforce|la population active, la main-d'œuvre, l": [],
+"lacklustre|lacklustre/lackluster|terne, médiocre": [],
+"landmark|a landmark|un monument emblématique, un point de re": [
+"a milestone"
+],
+"landmark|a landmark|un tournant": [],
+"landscape|a landscape|un paysage": [],
+"landscape|a seascape|une marine": [],
+"landslide|a landslide|un glissement de terrain": [
+"an overwhelming victory"
+],
+"landslide|a landslide|une victoire écrasante": [
+"a rout"
+],
+"landslide|a rout|une déroute, une débâcle": [],
+"largely|large|grand": [],
+"largely|largely|en grande partie, principalement": [],
+"largely|at large|dans son ensemble, en général": [],
+"latent|latent|latent": [],
+"law|law|le droit": [],
+"law|the rule of law|l'État de droit": [],
+"law|a lawyer|un avocat": [],
+"law|a lawsuit|un procès, une action en justice": [
+"a trial"
+],
+"law|the law / a law|la loi, la législation": [],
+"law|a lawmaker|un législateur, un parlementaire": [],
+"law|lawful|légal, légitime": [],
+"law|unlawful|illégal, illicite, abusif (licenciement)": [],
+"law|law-abiding|respectueux des lois": [],
+"law|a barrister|un avocat plaidant (GB)": [],
+"law|a solicitor|un avocat-conseil (GB)": [],
+"lax|lax|laxiste, négligent": [],
+"lax|laxity|le laxisme, le relâchement": [],
+"lax|to loosen|se relâcher, se desserrer": [],
+"lax|to loosen sth|desserrer qch, assouplir qch, relâcher q": [],
+"layer|a layer|une couche, un échelon": [
+"a rank"
+],
+"layman|a layman|un profane, l'homme de la rue": [],
+"layman|lay|profane, non spécialiste, non profession": [],
+"lecture|to lecture (on sth)|faire cours (sur qch), donner une confér": [],
+"lecture|a lecture|une conférence, un cours (magistral)": [],
+"lecture|a lecturer|un enseignant-chercheur, un maître de co": [],
+"lecture|to lecture sb (about sth)|sermonner qn (sur qch), faire la leçon à": [],
+"lecture|a speech|un discours": [],
+"legacy|a legacy|un héritage": [
+"a bequest"
+],
+"legacy|a legacy|un legs (testament)": [],
+"legacy|legacy|historique, hérité du passé, ancien (sys": [
+"landmark",
+"momentous"
+],
+"legacy|a bequest|un legs": []
+}

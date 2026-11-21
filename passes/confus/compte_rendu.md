@@ -136,3 +136,19 @@
   E 2 et F 0.
 - Soumis (a_trancher.md) : scission de sane (« sain d'esprit » / « sensé ») et de a trade (secteur / les
   professionnels), le premier sens à relier à an industry.
+
+## Lot 13 (21 novembre 2026, a joint → a bequest, 103 lignes)
+- 20 lignes avec mots confus, surtout des pièges du français : perspective pour a kickback et a recoil « recul »,
+  a pick(-)up pour a kickback « rebond », a blow pour a knack « coup », the crux (of) pour a knot « nœud »,
+  to forge sth pour to knot sth « nouer », work pour labour « travail », enrolment pour manpower « effectifs »,
+  a rank pour a layer « échelon », retiring pour low-key « discret », briskly pour keenly « vivement », a shambles
+  pour clutter, landmark et momentous pour legacy « historique », a trial pour a lawsuit « procès » ; autres sens :
+  a bribe / a recoil croisés, the keystone pour the cornerstone « première pierre », a rout pour a landslide.
+- Contrôles (22 corrections) : A1 6 liens (groupe the keystone / the cornerstone / a linchpin / a mainstay / a pillar
+  complété : 4 lignes ; to label sb/sth (as) sth / to brand sb/sth (as) sth), formes admises des deux côtés ;
+  A2 1 (a price tag « étiquette » → a label à sens unique, LINT_OK) ; A3 9 gloses (a jerk, knee-jerk, tricky,
+  know-how, kudos, a landmark « une étape marquante, un tournant », lax, to lecture sb, keen) ; B 2 exemples ajoutés
+  pour admettre un synonyme bloqué par l'article (a landslide → an overwhelming victory, a speech → an address) ;
+  to go in for (to be keen on) et the workforce (labour) impossibles à admettre (to be, article), laissés ;
+  C 0 ; D 0 ; E 1 ; F 1 (junk adjectif : mot à trouver réduit à junk dans junk mail, junk food, junk science).
+- Soumis (a_trancher.md) : scission de to loosen sth (« desserrer » / « assouplir », avec to relax sth, to ease).
