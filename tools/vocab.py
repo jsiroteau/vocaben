@@ -186,6 +186,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 21 novembre 2026 (passe mots confus, lot 52) : la locution ne remplace yield que dans une construction
+    ('symétrie', 'to bear interest', 'to yield'),
     # 21 novembre 2026 (passe mots confus, lot 51) : cas particuliers renvoyant au mot général
     ('symétrie', 'an undertaking', 'a task'), ('symétrie', 'a warrant', 'a basis'),
     # 21 novembre 2026 (passe mots confus, lot 50) : cas particuliers renvoyant au mot général

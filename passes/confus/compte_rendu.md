@@ -775,3 +775,19 @@
   face à trash) ; B 4 exemples ajoutés (utter pour complete / total, to warn pour to alert, waste pour refuse, to wear sb out
   pour to exhaust / to drain) ; C 2 gloses (to upend, to upset) ; D 0 ; E 0 ; F 0.
 - 13 clés de lots.json remises à jour. Rien à trancher.
+
+## Lot 52 (21 novembre 2026, to widen → a (rubbish) bin, 103 lignes)
+- 28 lignes avec mots confus : pièges du français to dig pour to widen « se creuser », to boost pour to wind up a watch
+  « remonter », overwhelming pour withering « accablant », to bounce sth pour to withhold « refuser », to hang pour to withhold
+  « suspendre », to belie « cacher », to attend pour to witness « assister à », to give evidence pour to bear witness to
+  « témoigner », to request pour to wonder « (se) demander », creepy pour worrisome « inquiétant », to shuffle pour to wrestle
+  « battre », to vacuum pour to yearn « aspirer », to bear fruit pour to yield « rapporter », a balance sheet, a track record et
+  a toll « bilan », to join pour to track down « retrouver », a lead et a channel pour a track « piste, voie », a chunk pour
+  a track « morceau », a make pour a trademark « marque » ; paronymes wrangling / a wrangler ; autres sens de to yield
+  (to bear interest, to relent, to succumb, to give in, to give away).
+- Contrôles (16 corrections) : A1 5 (to widen ↔ to broaden ; paires GB/US reliées avec formes admises des deux côtés : a trade
+  union / a labor union, trade unionism / labor unionism, trainers / sneakers, a dustbin / a trash can) ; A2 0 ; A3 6 gloses
+  (breadth face à an extent, to wield « exercer » face à to hold, wreckage face à rubble, to track down face à to locate,
+  a trade « secteur » face à an industry) ; B 2 (marvels admis dans un exemple de a wonder, to bear interest retiré des
+  synonymes de to yield « rapporter », gardé à sens unique, LINT_OK) ; C 0 ; D 0 ; E 0 ; F 0.
+- 4 clés de lots.json remises à jour. Soumis : nouvelle ligne garbage « des bêtises » (a_trancher.md).
