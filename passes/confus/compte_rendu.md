@@ -47,3 +47,15 @@
   glose « (par un hôtel, un organisateur) ».
 - Fiches class, coal, copper, brass, computer : peu de distracteurs sûrs (les voisins donnent des phrases naturelles).
 - Rien à trancher.
+
+## Lot 6 (21 novembre 2026, a creed → wrongdoing, 100 lignes)
+- 20 lignes avec mots confus, surtout des pièges du français : a fit pour a crisis « crise », literacy pour a crop
+  « culture », to nurture pour to crop « cultiver », industrious pour cumbersome « laborieux », aware (of) pour common
+  « courant », a constituency pour custom « clientèle », a time lag pour a time limit « délai », a ruling pour a halt
+  « arrêt », to withhold pour to halt sth « suspendre », a foul pour wrongdoing « faute », to redress pour to mend ;
+  paronymes a custom / customs croisés ; autres sens : crunchy pour crisp « vif » et « concis », dishonest pour crooked
+  « tordu », currently pour presently « bientôt ».
+- Correction : off-the-peg (GB) / off-the-rack (US) reliés comme synonymes, formes admises ajoutées des deux côtés.
+- Écartés car naturels avec un autre sens : a janitor pour a custodian « gardien », a breather pour a halt,
+  awesome pour daunting, a drought pour a dearth.
+- Rien à trancher.
