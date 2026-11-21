@@ -104,3 +104,17 @@
 - Écartés car naturels avec un autre sens : a chunk et a play pour a game « partie », a loophole pour a niche,
   frank et blunt pour genuine « sincère », a board pour a chart « tableau », a hold-up pour gridlock, knee-jerk.
 - Aucune correction de la base nécessaire. Rien à trancher.
+
+## Lot 11 (21 novembre 2026, grounds → mankind, 105 lignes)
+- 23 lignes avec mots confus, surtout des pièges du français : a realm pour grounds « domaine », stern pour
+  punishing « sévère », a brand et a make pour a hallmark « marque », stringent et exacting pour harsh « rigoureux »,
+  disarray pour havoc « chaos », a culprit / the head (of) croisés (« responsable »), a knot pour the crux « nœud »,
+  obnoxious pour heinous « odieux », sharply pour highly « fortement », choppy pour high-strung « agité », vacuous
+  pour hollow « creux », lay pour secular « laïque », a breeding ground pour a household « foyer », mankind pour
+  humanity « compassion » ; paronymes humane pour human, helpful pour helpless, heartened / heartbreaking,
+  an inheritance pour an heir, the heartland pour the heart of ; a headwind pour a tailwind.
+- Écartés car naturels avec un autre sens : the core pour a heart (core muscles), helpless pour helpful,
+  a trademark pour a hallmark, a lobby pour a household, a tailwind pour a headwind (« faces strong tailwinds »).
+- Vu sans corriger : the human race pourrait rejoindre humanity et mankind, mais ses mots à trouver (sans the)
+  n'admettraient aucune forme ; laissé en l'état. Rien à trancher.
+- Consignes : enchaînement sans pause ni question, 4 lots au plus par exécution, relance à l'arrêt.

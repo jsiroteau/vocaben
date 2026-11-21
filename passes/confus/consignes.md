@@ -18,7 +18,9 @@ perfectionner la base (elle signale encore chaque jour des corrections). Règles
 6. `python3 tools/vocab.py lint` (0 avertissement, ou LINT_OK justifié), `python3 tools/passe_confus.py done <n>`,
    compte rendu du lot ajouté à passes/confus/compte_rendu.md (5 à 10 lignes : nombre de lignes avec mots confus,
    corrections faites, cas soumis), commit « Passe mots confus : lot NN » sur main, push.
-7. S'il reste du temps et du contexte, enchaîner un second lot (retour à 1). Jamais plus de 2 lots par exécution.
+7. Enchaîner les lots sans s'arrêter tant qu'il reste largement du temps et du contexte (retour à 1), sans rien
+   demander à Jennifer (21 novembre 2026 : elle ne voit pas quand l'exécution s'arrête) ; jamais plus de 4 lots par
+   exécution. À l'arrêt, relancer aussitôt la tâche planifiée pour que l'exécution suivante prenne le relais.
 
 ## Mot confus
 - Mot d'une autre ligne de la base, écrit exactement comme son Mot, même nature.
