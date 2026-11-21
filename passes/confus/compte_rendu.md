@@ -477,3 +477,19 @@
   (exemples remplacés : to elapse « deadline has elapsed » → délai de 30 jours, all-encompassing « the failure was
   all-encompassing », peu naturel) ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 33 (21 novembre 2026, to expect → in fits and starts, 101 lignes)
+- 30 lignes avec mots confus : pièges du français to deposit sth et to sponsor pour to file « déposer », to award pour
+  to extend sth « accorder », to hazard pour to face « risquer », to agree to (do) sth pour to face « accepter »,
+  to faint pour to fade « s'évanouir », to schedule pour to figure on « prévoir », to hand down pour to file
+  « transmettre », a record pour a folder « dossier », to lay off et to make redundant pour to fire « licencier »,
+  faulty pour failing « défaillant », deserving (of) pour fitting « digne », peculiar to pour fit for « propre à » ;
+  paronymes shortfall / shortcoming, falloff / fallout, falling-out / fallout, fallback / drawback, fall off / out /
+  through, figure out / figure on, feed through / feed on.
+- Contrôles (16 corrections) : A1 2 (to fit in (with) ↔ to blend in (with) ; to figure on ↔ to bargain for/on) ;
+  A2 5 (to fiddle « truquer » → to falsify ; a failing et a shortcoming → a weakness, a flaw ; LINT_OK) ; A3 6 gloses
+  (to wrangle « batailler (sur des détails) » face à to feud « (durablement, avec animosité) », to come to terms with
+  « (peu à peu) » face à to face, to wilt « (en s'affaissant) » face à to fade, to fall apart face à to collapse,
+  to fit « convenir » face à to suit) ; B 0 ; C 3 (a shortfall face à a shortcoming, fitting face à deserving,
+  fit for face à peculiar to) ; D 1 (traduction d'exemple de to wrangle) ; E 2 soumis ; F 0.
+- À trancher : scissions de to explode (« exploser » / « monter en flèche ») et de a fake (« un faux » / « un imposteur »).
