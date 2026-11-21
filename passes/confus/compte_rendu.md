@@ -540,3 +540,20 @@
   jusque-là identiques) ; B 2 (exemple ajouté à to grant pour to bestow, forme admise category à a grade) ; C 0 ;
   D 2 (awry « de travers, qui cloche » et traduction de « something was awry ») ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 37 (21 novembre 2026, to handle → a rental, 103 lignes)
+- 28 lignes avec mots confus : pièges du français shrewd pour handy « habile », to subdue pour to get a handle on
+  « maîtriser », to withhold pour to hang « suspendre », to attend pour to hang out at / with « fréquenter », to wear well
+  pour to hang on « résister », to beware of pour to hang on to « garder », to clutch at pour to hang up « raccrocher »,
+  to infringe on pour to harm « porter atteinte à », a disservice pour harm « tort », chance ↔ a hazard « hasard »,
+  to face pour to hazard « risquer », to warn pour to head off « prévenir », to edit pour to remedy « corriger »,
+  to encompass pour to hedge sth « couvrir », a trailblazer pour a harbinger « précurseur », to embezzle sth pour
+  to hijack « détourner », to recover sth pour to hijack « récupérer », to laud pour to hire sth / to rent sth « louer » ;
+  paronymes a hijack / a hijacker ; autres sens : convenient pour handy, to add up pour to hang together « se serrer les
+  coudes », a rise pour a hike « randonnée », to rent sth pour to hire sb.
+- Contrôles (9 corrections) : A1 0 ; A2 0 ; A3 5 gloses (hazardous « (pour la santé, la sécurité) » face à risky,
+  to commandeer « (par la force ou en vertu d'une autorité) » face à to grab, a hint « (donnée à demi-mot) » face à
+  a clue, to harness « (une force, une énergie, une technologie) » face à to tap et to leverage, to damage « (un objet),
+  nuire à (une réputation) » face à to harm) ; B 2 (formes admises hang together / hold together à to add up, put right
+  à to remedy) ; C 1 (shrewd « (en affaires, dans ses jugements) » face à handy) ; D 0 ; E 0 ; F 0.
+- Rien à trancher.
