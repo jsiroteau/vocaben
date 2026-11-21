@@ -857,7 +857,7 @@
 
 ## Lot 4 (revue) (21 novembre 2026, brash → a cashier, 106 lignes)
 - Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
-- Contrôles (9 corrections) : A1 1 (to breach « franchir, percer » ↔ to break through), formes admises des deux côtés ;
+- Contrôles (8 corrections) : A1 1 (to breach « franchir, percer » ↔ to break through), formes admises des deux côtés ;
   A2 2 (canny « prudent » → cautious, glose « (par expérience, par flair) » ; a chore → a task ; LINT_OK) ; A3 3 gloses
   (a load « (poids transporté, quantité de travail) » face à a burden, cocky « (avec arrogance) » face à complacent,
   canny « économe (avec son argent) » face à economical) ; D 2 (broadly speaking « grosso modo » ajouté, an onlooker
