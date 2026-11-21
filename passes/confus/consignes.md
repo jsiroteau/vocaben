@@ -36,15 +36,34 @@ perfectionner la base (elle signale encore chaque jour des corrections). Règles
 - Viser les distracteurs difficiles : l'exercice doit obliger à choisir entre des mots proches. Un mot sans rapport
   ne sert à rien (le hasard en fournit déjà).
 
-## Corrections faites d'office (signalées dans le compte rendu)
-- Un candidat qui convient dans au moins un exemple et qui est un vrai équivalent dans le sens de la ligne :
-  l'ajouter aux Synonymes des deux lignes (symétrie, construction et marques selon les conventions), puis ses formes
-  admises dans chaque exemple où il convient (`B.setadm`), des deux côtés. Exemples du pilote : mischievous / malicious
-  (« malveillant »), careless / reckless (si reckless convient dans tous les sens de la ligne), a thug / a rowdy.
-  Un quasi-synonyme à nuance (convient dans un exemple mais pas dans le sens général) : marquer la différence par une
-  glose dans la Traduction si les deux Traductions se recouvrent au point de les faire passer pour synonymes.
-- Défauts couverts par les conventions repérés au passage : exemple fautif ou peu naturel, traduction inexacte ou
-  calquée, mot à trouver mal délimité, glose manquante, synonyme faux ou partiel.
+## Perfectionnement de la base : contrôles obligatoires sur chaque ligne (21 novembre 2026)
+Jennifer tient autant à cet objectif qu'aux mots confus. Les lots 2 à 11 n'ont presque rien corrigé : chaque contrôle
+ci-dessous doit être fait réellement, ligne par ligne, et ses résultats comptés dans le compte rendu.
+
+A. Tout candidat écarté parce qu'il « convient dans un exemple » reçoit une décision explicite, jamais un simple rejet :
+   1. vrai équivalent dans le sens de la ligne → ajout aux Synonymes des deux lignes (symétrie, construction et
+      marques selon les conventions), formes admises dans chaque exemple où il convient (`B.setadm`), des deux côtés ;
+   2. cas particulier ou sens plus large → renvoi à sens unique du particulier vers le général (LINT_OK) et glose
+      du particulier qui montre sa restriction ;
+   3. quasi-synonyme à nuance → les deux Traductions doivent laisser voir la différence (glose) ; sinon, en ajouter une.
+   Même chose pour les fiches où « les voisins s'échangent dans les phrases » (lot 3 : bishop, block, gloomy, dreary) :
+   ce sont presque toujours des synonymes manquants.
+B. Synonymes existants : chacun doit convenir dans au moins un exemple de sa ligne (forme admise présente). Sinon :
+   synonyme faux ou partiel (retrait, ou sens unique + glose), ou exemple à ajouter qui l'illustre.
+C. Pièges du français retenus comme mots confus : si les deux Traductions se ressemblent (legacy « historique » /
+   landmark « historique »), ajouter la glose qui les distingue, sur l'une ou les deux lignes.
+D. Traduction et exemples : chaque équivalent de la Traduction illustré par un exemple, chaque traduction d'exemple
+   reprenant un équivalent quand c'est naturel ; pas de calque ni de contresens ; anglais naturel, niveau The Economist.
+E. Un sens par ligne : exemple qui relève d'un autre sens (le déplacer), ou ligne qui mêle deux sens à traductions
+   différentes (scission → a_trancher.md).
+F. Mot à trouver bien délimité, Mot noté selon les conventions (sb/sth, prépositions, « to be … »), Nature correcte.
+
+Compte rendu de chaque lot : nombre de corrections par contrôle (A1, A2, A3, B, C, D, E, F), avec 2 ou 3 exemples.
+
+## Lots à revoir (état « à revoir »)
+Lots déjà passés avant ces contrôles : `next` les donne une fois tous les lots « à faire » terminés. Les mots confus y
+sont déjà en place (affichés par `lot`) : appliquer seulement les contrôles A à F (et compléter un mot confus manquant
+s'il y en a un évident), puis `done`, compte rendu « Lot NN (revue) », commit « Passe mots confus : revue lot NN ».
 
 ## À soumettre à Jennifer (passes/confus/a_trancher.md, sans appliquer)
 Scission de ligne, nouvelle ligne ou fiche, retrait de ligne, arbitrage entre objectifs. Une ligne par cas :

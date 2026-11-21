@@ -229,16 +229,17 @@ def _nxt():
     now = dt.datetime.now(dt.timezone.utc)
     for k, v in et.items():
         if v.startswith('en cours'):
-            t = dt.datetime.fromisoformat(v.split(' ', 2)[2])
+            t = dt.datetime.fromisoformat(v.split(' ')[-1])
             if now - t < dt.timedelta(hours=3):
                 print(f'OCCUPÉ : lot {k} en cours depuis {t:%H:%M} UTC'); return None
-            et[k] = 'à faire'
-    todo = [k for k, v in et.items() if v == 'à faire']
+            et[k] = 'à revoir' if ' revue ' in v else 'à faire'
+    todo = [k for k, v in et.items() if v == 'à faire'] or [k for k, v in et.items() if v == 'à revoir']
     if not todo:
         print('TERMINÉ : tous les lots sont faits'); return None
-    et[todo[0]] = f'en cours {now.isoformat()}'
+    revue = et[todo[0]] == 'à revoir'
+    et[todo[0]] = f'en cours {"revue " if revue else ""}{now.isoformat()}'
     json.dump(et, open(D + 'etat.json', 'w'), indent=0)
-    print(f'LOT {todo[0]} réservé ({len(todo) - 1} restants ensuite)')
+    print(f'LOT {todo[0]} réservé' + (' — REVUE : contrôles A à F seulement' if revue else '') + f' ({len(todo) - 1} restants ensuite)')
     return todo[0]
 
 
