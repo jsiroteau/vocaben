@@ -509,3 +509,19 @@
   « (des détails) » face à to fret) ; B 0 ; C 1 (to supervise « (une équipe, une activité) » face à to frame) ; D 0 ;
   E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 35 (21 novembre 2026, to fuss → to lead sb astray, 100 lignes)
+- 25 lignes avec mots confus : pièges du français earnings pour gains « bénéfices », to incur pour to garner « s'attirer »
+  et pour to go through « subir », to grade pour to gauge « évaluer », to shift pour to get about / to get around
+  « se déplacer », to flow pour to get about « circuler », to put forward/forth pour to get along « avancer », to waive
+  pour to give up sth « renoncer à », to breach pour to get over « franchir », to renege (on) pour to give out
+  « manquer », appeal pour glamour « charme », to wander pour to go astray « s'égarer », thorough pour finicky
+  « minutieux » ; paronymes glut / glutton, gape / gasp, glow / glare ; autres sens : to garner pour to gain « prendre ».
+- Contrôles (16 corrections) : A1 1 (to lead sb astray « induire en erreur » ↔ to mislead, exemple ajouté à to mislead) ;
+  A2 1 (finicky « délicat (tâche) » → tricky, LINT_OK) ; A3 4 gloses (to gain on « rattraper peu à peu » face à
+  to catch up with, to gamble « (aux jeux de hasard) » face à to bet, to garble « (involontairement) » face à
+  to scramble, to make headway « (malgré les difficultés) » face à to get along) ; B 2 (exemple ajouté à to fuss over sb
+  pour to pamper, forme admise is keen on à to go in for) ; C 5 (to garner, to grade « (une copie, une obligation) »,
+  to get about « (nouvelle, rumeur) », to munch « (avec appétit) », to go astray « (courrier, bagages, fonds) ») ;
+  D 0 ; E 1 soumis ; F 0.
+- À trancher : scission de to give sb/sth away (« trahir qn » / « révéler qch »).
