@@ -2078,7 +2078,18 @@ function checkFill(){
   const blank=document.getElementById('blank');
   if(blank){blank.textContent=correct;blank.className='blank-spot '+(ok?'blank-ok':'blank-ko');}
   recordResult(ok, ans);
-  showFB(ok, correct, ans, admitted?`<div class="fb-admitted">“${esc(ans)}” also works here, but this card is about <strong>${esc(correct)}</strong>.</div>`:'');
+  // Variante de la même expression (élément facultatif omis ou ajouté : oneself, that, up…) ou synonyme
+  const variant=admitted&&fillIsVariant(ans,correct);
+  const msg=variant?`“${esc(ans)}” is also correct here, but this example uses <strong>${esc(correct)}</strong>.`
+                   :`“${esc(ans)}” also works here, but this card is about <strong>${esc(correct)}</strong>.`;
+  showFB(ok, correct, ans, admitted?`<div class="fb-admitted">${msg}</div>`:'');
+}
+// Vrai si l'une des deux réponses s'obtient en retirant des mots de l'autre (même expression)
+function fillIsVariant(a,b){
+  let x=fillNorm(a).split(' ').filter(Boolean), y=fillNorm(b).split(' ').filter(Boolean);
+  if(x.length>y.length) [x,y]=[y,x];
+  let i=0; for(const w of y){ if(i<x.length&&(x[i]===w||(w.length>4&&lev(x[i],w)<=1))) i++; }
+  return i===x.length&&x.length<y.length;
 }
 
 // ── SYNONYMES / ANTONYMES ──
