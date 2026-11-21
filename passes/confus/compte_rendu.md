@@ -589,3 +589,17 @@
   « (brusquement) » face à to rattle) ; B 1 (forme admise enduring à lasting) ; C 1 (a time lag « (entre une cause et
   son effet) » face à a time limit) ; D 0 ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 40 (21 novembre 2026, to lead → to make up one's mind, 103 lignes)
+- 19 lignes avec mots confus : pièges du français to wage pour to lead « mener », a track pour a lead « piste »,
+  extensive pour leading « important », to flee pour to leak « fuir », to yield pour to lend sth to sth « donner »,
+  a liability pour leverage « poids », to bind pour to link « lier », to charge sb with pour to load « charger »,
+  a household pour a lobby « foyer », a stance pour a location « position », to strive for pour to long for « aspirer à »,
+  to attend pour to look on « assister », to soar pour to loom « planer », to precipitate pour to lunge « se précipiter »,
+  to incur pour to lure « s'attirer », to refund pour to make good on « rembourser », to single out pour to make out
+  « distinguer », to portray pour to make up sth « représenter », to coin pour to make up « inventer ».
+- Contrôles (6 corrections) : A1 1 (loathsome « dégoûtant » ↔ revolting, formes admises des deux côtés) ; A2 1
+  (to make up sth → to represent, formes admises, LINT_OK) ; A3 1 (to lurk « (caché, en attente) » face à to prowl) ;
+  B 0 ; C 2 (to strive for « (en s'en donnant les moyens) » face à to long for, to bind « (par une obligation, un
+  sentiment commun) » face à to link) ; D 0 ; E 0 ; F 0.
+- Rien à trancher.
