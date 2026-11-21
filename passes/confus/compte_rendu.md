@@ -865,3 +865,12 @@
   brazen / brash, to flout / to breach, a breather / a break, buoyant / brisk, guarded / cautious, offhand / casual,
   a share / a chunk (of), a salesman / a clerk (US).
 - Clés de lots.json remises à jour. Rien à trancher.
+
+## Lot 5 (revue) (21 novembre 2026, the upper class → a fad, 100 lignes)
+- Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
+- Contrôles (2 corrections) : A1 1 (compunction ↔ qualms, formes admises des deux côtés) ; A2 1 (compensation (US) → pay,
+  LINT_OK, glose « (globale, avantages compris) ») ; A3 0 ; B 0 ; C 0 ; D 0 ; E 0 ; F 0. Écartés car déjà glosés :
+  a hint / a clue, to counteract / to compensate (for), to sound out et to canvass / to poll sb, to stifle / to crack
+  down on, unease / a concern. Laissés en l'état : to be concerned with ↔ to deal with sth (équivalents, mais la
+  construction empêche d'admettre l'un dans les exemples de l'autre) ; a clout → a blow (renvoi cité par les conventions).
+- Clés de lots.json remises à jour. Rien à trancher.

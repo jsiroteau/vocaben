@@ -186,6 +186,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 21 novembre 2026 (passe mots confus, revue lot 5) : cas particulier renvoyant au mot général
+    ('symétrie', 'compensation', 'pay'),
     # 21 novembre 2026 (passe mots confus, revue lot 4) : cas particuliers renvoyant au mot général
     ('symétrie', 'canny', 'cautious'), ('symétrie', 'a chore', 'a task'),
     # 21 novembre 2026 (passe mots confus, revue lot 3) : cas particuliers renvoyant au mot général
