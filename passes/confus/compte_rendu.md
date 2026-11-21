@@ -832,3 +832,14 @@
   face à to allege) ; B 1 (hermetic admis dans un exemple de airtight) ; C 0 ; D 0 ; E 0 ; F 0. Écartés car déjà glosés :
   liable / accountable, unease / anxiety, beleaguered et distressed / ailing, outright / altogether, critical / acute.
 - 4 clés de lots.json remises à jour. Rien à trancher.
+
+## Lot 2 (revue) (21 novembre 2026, an assembly line → bewildered, 100 lignes)
+- Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
+- Contrôles (8 corrections) : A1 2 (awful ↔ ghastly ; confounded ↔ bewildered), formes admises des deux côtés ; A2 0 ;
+  A3 4 gloses (judicious « (choix, usage, décision) » face à astute, a background « un milieu (d'origine) » face à
+  a milieu, to beam « rayonner (d'un large sourire) » face à to glow, mourning « (période, signes extérieurs) » face à
+  bereavement) ; B 1 (underpinning admis dans un exemple de a basis) ; D 1 (confounded : « Dépassées » → « Déroutées ») ;
+  C 0 ; E 0 ; F 0. Écartés car déjà glosés : appalling / awful, tricky / awkward, self-conscious / awkward, a track
+  record / a background, an uproar et a furore / a backlash, ailing et struggling / beleaguered. Laissé en l'état :
+  to raise awareness (of) ↔ to sensitize (to), vrais équivalents que la construction empêche d'admettre.
+- Clés de lots.json remises à jour. Rien à trancher.
