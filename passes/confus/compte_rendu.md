@@ -874,3 +874,15 @@
   down on, unease / a concern. Laissés en l'état : to be concerned with ↔ to deal with sth (équivalents, mais la
   construction empêche d'admettre l'un dans les exemples de l'autre) ; a clout → a blow (renvoi cité par les conventions).
 - Clés de lots.json remises à jour. Rien à trancher.
+
+## Lot 6 (revue) (21 novembre 2026, a creed → wrongdoing, 100 lignes)
+- Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
+- Contrôles (8 corrections) : A1 1 (daft ↔ foolish, formes admises des deux côtés) ; A2 2 (askew → crooked, glose
+  « (mal posé, mal aligné) » ; a fraudster → a crook, glose « (fraude financière, en ligne) » ; LINT_OK, crooked / crook
+  admis dans leurs exemples) ; A3 2 gloses (to crunch sth « croquer (bruyamment) » face à to munch, standard « (conforme
+  à l'usage, à la norme) » face à common) ; B 2 (belief admis dans un exemple de a creed ; a deadlock : exemple ajouté
+  « Years of political deadlock… » qui illustre gridlock et stalemate) ; D 1 (traduction de l'exemple ajouté avec
+  « impasse ») ; C 0 ; E 0 ; F 0. Écartés car déjà glosés : a pal / a crony, a patron / a customer, canny et shrewd /
+  cunning, to gain ground / to gain currency, a drought et a shortfall / a dearth. Laissé en l'état : to harm ↔ to damage
+  (chacun ne convient que dans une partie des exemples de l'autre).
+- Clés de lots.json remises à jour. Rien à trancher.
