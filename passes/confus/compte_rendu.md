@@ -70,3 +70,14 @@
 - Écartés car naturels avec un autre sens : a conceit pour a device « procédé », a breather, a lapse pour a disparity,
   bothersome pour dull « ennuyeux » (doute).
 - Aucune correction de la base nécessaire. Rien à trancher.
+
+## Lot 8 (21 novembre 2026, effective → a liking, 109 lignes)
+- 17 lignes avec mots confus, surtout des pièges du français : prevailing pour effective (from) « en vigueur »,
+  legacy pour erstwhile « ancien », ownership pour an estate « propriété », a framework et a ruler pour an executive
+  « cadre, dirigeant », to deposit sth pour to give evidence « déposer », to mount sth pour to engineer « organiser »,
+  to get out of (doing) sth pour to elude « échapper à », shallow et slim pour faint « léger, faible », eager pour
+  impassioned « passionné » ; paronymes the elderly / the elder / elders croisés, an engineer / engineering,
+  an estate pour real estate ; ingrained et deep-rooted pour entrenched « retranché ».
+- Écartés car naturels avec un autre sens : efficient / effective et efficiency / effectiveness, output pour
+  efficiency, gross et outrageous pour egregious, the eldest pour the elder (usage courant), to bear witness.
+- Aucune correction de la base nécessaire. Rien à trancher.
