@@ -1,0 +1,165 @@
+{
+"mob|a mob|une foule (souvent hostile), une cohue": [],
+"mob|to mob|assaillir, prendre d'assaut": [],
+"mob|the mob|la mafia, la pègre (US)": [],
+"mogul|a mogul|un magnat": [],
+"mogul|a tycoon|un magnat": [],
+"momentous|momentous|capital, historique (événement, décision": [
+"legacy",
+"paramount"
+],
+"momentous|of great moment|de grande importance": [],
+"momentum|momentum|l'élan, la dynamique": [],
+"momentum|to gather/gain momentum|prendre de l'ampleur, gagner du terrain": [],
+"morals|a moral|une morale (pour une histoire), une mora": [
+"morale",
+"morality"
+],
+"morals|morality|la morale, la moralité": [
+"morale",
+"a moral"
+],
+"morals|morals|les mœurs, les principes (moraux)": [
+"morale"
+],
+"morals|moral hazard|l'aléa moral": [],
+"morals|moral|moral": [],
+"morals|morale|le moral": [
+"morals",
+"a moral"
+],
+"mortgage|a mortgage|un prêt immobilier, un emprunt hypothéca": [
+"collateral"
+],
+"mortgage|to mortgage|hypothéquer": [],
+"motorway|a motorway|une autoroute (GB)": [],
+"mounting|mounting|croissant": [],
+"mounting|to mount|monter, s'accumuler (pression, pertes, t": [],
+"mounting|to mount sth|lancer, organiser (une campagne, une off": [
+"to fix up",
+"to hold sth"
+],
+"mundane|mundane|banal, terre-à-terre": [],
+"myriad|a myriad of|une myriade de, une multitude de": [],
+"myriad|myriad|innombrables, multiples": [],
+"nadir|the nadir|le point le plus bas": [],
+"naked|naked|nu": [],
+"naked|naked|pur, flagrant, non dissimulé (ambition, ": [
+"glaring"
+],
+"naked|a nude|un nu (peinture)": [],
+"narrow|narrow|étroit, restreint, faible, court (majori": [],
+"narrow|to narrow|se réduire, se resserrer (écart, déficit": [],
+"narrow|to narrow down|restreindre, réduire (un choix, une list": [
+"to curtail"
+],
+"narrow|narrow-minded|étroit d'esprit": [],
+"narrow|to have a narrow escape (from)|l'échapper belle, échapper de justesse (": [],
+"narrow|narrowly|de justesse, de peu": [],
+"nascent|nascent|naissant": [],
+"native|a native of|un natif de, originaire de": [],
+"native|a native|un autochtone, un indigène": [],
+"native|native|natal, maternel (langue)": [
+"innate"
+],
+"native|native|inné": [],
+"native|innate|inné": [
+"inane"
+],
+"native|inborn|inné": [],
+"nebulous|nebulous|flou, vague, nébuleux": [],
+"nebulous|hazy|brumeux, flou, vague": [
+"hasty"
+],
+"negligible|negligible|négligeable, insignifiant": [],
+"negligible|trivial|insignifiant, sans importance": [],
+"neighbo(u)rhood|a neighbourhood (GB) / a neighborhood (US)|un quartier, un voisinage": [],
+"neighbo(u)rhood|in the neighbourhood of (GB) / in the neighborhood of (US)|aux alentours de, environ": [],
+"neighbo(u)rhood|the vicinity (of)|les alentours, les environs (de)": [],
+"network|a network|un réseau": [],
+"network|a network|une chaîne (de télévision)": [],
+"nimble|nimble|agile, vif (esprit, entreprise)": [],
+"noncommittal|noncommittal|évasif, qui ne s'engage pas": [],
+"noncommittal|guarded|prudent, réservé": [
+"retiring"
+],
+"notch|a notch|un cran, une encoche": [],
+"notch|to notch up sth|remporter, enregistrer (une victoire, un": [],
+"notch|top-notch|de premier ordre, de première qualité, h": [],
+"notorious|notorious|tristement célèbre, notoire (en mauvaise": [],
+"notorious|infamous|tristement célèbre": [],
+"notwithstanding|notwithstanding|malgré, nonobstant, mis à part": [],
+"notwithstanding|notwithstanding|néanmoins, malgré tout": [],
+"notwithstanding|notwithstanding that|malgré le fait que": [],
+"novel|a novel|un roman": [
+"a novelty"
+],
+"novel|novel|nouveau, original, novateur": [],
+"novel|a novelty|une nouveauté, (l'attrait de) la nouveau": [
+"a novel"
+],
+"novel|innovative|novateur, innovant (chose), innovateur (": [],
+"novel|a short story|une nouvelle": [],
+"novel|to innovate|innover": [],
+"noxious|noxious|nocif (gaz, fumées, idées)": [],
+"nuance|a nuance|une nuance, une subtilité": [],
+"nuance|a shade|une nuance (de sens, d'opinion, de senti": [],
+"nuisance|a nuisance|une plaie (familier), une gêne, un désag": [
+"hardship"
+],
+"nuisance|an annoyance|une contrariété, un agacement, une gêne": [],
+"nuisance|nonsense|des bêtises, des absurdités": [],
+"oath|an oath|un serment": [
+"a swearword"
+],
+"oath|an oath|un juron": [
+"a vow"
+],
+"oath|a vow|un vœu, un serment": [
+"a swearword"
+],
+"oath|to vow (to do sth)|jurer, promettre solennellement (de fair": [],
+"obnoxious|obnoxious|odieux, détestable (personne)": [],
+"obnoxious|revolting|répugnant, dégoûtant": [],
+"obnoxious|unpleasant|désagréable": [
+"displeased"
+],
+"obsolete|obsolete|obsolète (remplacé par quelque chose de ": [
+"expired"
+],
+"obsolete|outmoded|dépassé (idées, méthodes, pratiques)": [
+"expired"
+],
+"obsolete|archaic|archaïque (survivance d'une époque révol": [],
+"obsolete|antiquated|vétuste, vieillot, d'un autre âge (vieux": [],
+"out of date|out of date|plus à jour, dépassé (information, donné": [
+"expired"
+],
+"out of date|outdated|dépassé (qui n'est plus au goût du jour ": [],
+"out of date|dated|daté, qui a vieilli (qui porte la marque": [
+"expired"
+],
+"out of date|expired|périmé, arrivé à expiration": [
+"dated"
+],
+"obstinate|obstinate|obstiné, entêté, têtu (personne, attitud": [],
+"obstinate|obstinate|tenace, persistant (résistance, problème": [],
+"obstinate|headstrong|entêté, têtu, impétueux": [],
+"obvious|obvious|évident": [],
+"occupation|the trades|les métiers manuels, l'artisanat": [],
+"occupation|self-employed|à son compte, indépendant": [],
+"odd|odd|impair (chiffres)": [],
+"odd|odd|environ, et quelques (après un nombre)": [],
+"odd|odd|étrange, bizarre": [],
+"odd|the odd|un… de temps en temps, quelques… çà et l": [],
+"odd|the odds|les chances, la probabilité": [
+"the stakes"
+],
+"odd|at odds (with)|en désaccord (avec), en contradiction (a": [
+"at stake"
+],
+"odd|against (all) the odds|contre toute attente, envers et contre t": [],
+"odd|even|pair (chiffres)": [
+"level"
+]
+}

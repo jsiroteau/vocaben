@@ -170,3 +170,20 @@
   C 8 gloses (a standard « un niveau (de qualité, de vie) », a level, a liability, likewise, a market, mayhem,
   paltry, a felony) ; D 0 ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 15 (21 novembre 2026, a mob → even, 102 lignes)
+- 28 lignes avec mots confus : paronymes et familles (morale / morals / morality / a moral croisés, a novel /
+  a novelty, hazy → hasty, innate → inane), pièges du français (legacy et paramount pour momentous « historique,
+  capital », collateral pour a mortgage, to fix up et to hold sth pour to mount sth « organiser », glaring pour naked
+  « flagrant », retiring pour guarded « réservé », hardship pour a nuisance « gêne », expired pour obsolete,
+  outmoded, out of date et dated « périmé »), autres sens (innate pour native « natal », a swearword / a vow pour
+  les deux sens de an oath, level pour even « pair »), the stakes / at stake pour the odds / at odds.
+- Contrôles (20 corrections) : A1 0 ; A2 4 renvois à sens unique avec formes admises, LINT_OK (naked → blatant,
+  guarded → cautious, to narrow down → to whittle down, to notch up sth → to record) ; A3 4 gloses (a network
+  « réseau national de diffusion » face à a channel, to gather momentum face à to gain ground, landmark / momentous) ;
+  B 5 (exemples ajoutés pour morale → spirits, an oath → a vow, the odds → the probability ; formes admises
+  nonsense → trash, obstinate « tenace » → stubborn ; a vow → an oath impossible à admettre (article), laissé) ;
+  C 1 (retiring « (de caractère) ») ; D 1 (a nuance : exemple peu idiomatique remplacé) ; E 1 (the vicinity :
+  exemple au sens « environ » remplacé) ; F 1 (odd « environ » : mot à trouver réduit à odd dans hundred-odd,
+  twenty-odd) ; guarded glosé « (dans ses propos) ».
+- Rien à trancher.
