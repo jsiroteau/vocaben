@@ -118,3 +118,21 @@
 - Vu sans corriger : the human race pourrait rejoindre humanity et mankind, mais ses mots à trouver (sans the)
   n'admettraient aucune forme ; laissé en l'état. Rien à trancher.
 - Consignes : enchaînement sans pause ni question, 4 lots au plus par exécution, relance à l'arrêt.
+
+## Lot 12 (21 novembre 2026, humane → a work, 101 lignes)
+- 28 lignes avec mots confus, surtout des pièges du français : confidence pour insurance, to ensure et to warrant
+  pour to insure, a broadcast pour an issue « émission », a purpose / a job / a rundown pour an item « objet, poste,
+  point », work pour a job, the onus pour a job « responsabilité », a bystander pour a viewer, to entice et to nudge
+  pour to incite, vacant pour idle, compliant (with) pour in keeping with ; paronymes ingenious / ingenuous,
+  a sight / an insight, invidious pour insidious, inane pour insane, intricate pour intractable, human pour humane.
+- Contrôles (31 corrections) : A1 4 (synonymes ajoutés des deux côtés avec formes admises : (deeply) embedded relié
+  au groupe ingrained, entrenched, deep-rooted ; to jibe with / to square with ; a hurdle / a stumbling block ;
+  revenue / receipts) ; A2 1 (a turnover → revenue à sens unique, LINT_OK, glose « (d'une entreprise) ») ;
+  A3 12 gloses (a hurdle « (à franchir) », spare, to incite sb, industrious, ingenious, bland, insane, insidious,
+  insightful, an intricacy, to take issue with, manufacturing réduit à « l'industrie manufacturière ») ;
+  B 3 (an incentive : exemple ajouté pour a spur, stimulus admis ; a jibe : put-downs admis ; show business pour
+  the entertainment industry impossible à admettre à cause de l'article, laissé) ; C 7 gloses (insurance, a purpose,
+  a bystander, vacant, compliant, the onus, human) ; D 1 (impending « qui menace » : traduction de l'exemple 3) ;
+  E 2 et F 0.
+- Soumis (a_trancher.md) : scission de sane (« sain d'esprit » / « sensé ») et de a trade (secteur / les
+  professionnels), le premier sens à relier à an industry.

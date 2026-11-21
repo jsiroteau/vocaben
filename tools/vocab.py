@@ -186,6 +186,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 21 novembre 2026 (passe mots confus, lot 12) : a turnover (chiffre d'affaires d'une entreprise) cas particulier de revenue
+    ('symétrie', 'a turnover', 'revenue'),
     # 19 novembre 2026 : verbes sans « to » en tête
     ('nature', 'not to have a clue', 'verb'), ('nature', 'the tide turns / to turn the tide', 'verb'),
     # 18 novembre 2026 : to be anxious to (désir teinté d'inquiétude) cas particulier de to be eager to

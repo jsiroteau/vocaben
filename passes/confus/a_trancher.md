@@ -1,2 +1,4 @@
 # Passe mots confus — cas à trancher par Jennifer
 
+- Lot 12, fiche insane, ligne sane « sain d'esprit, sensé » : scinder en « sain d'esprit » (Psychiatrists judged him sane) et « sensé, raisonnable » (no sane investor, a sane energy policy, avec sensible en synonyme) ; la ligne mêle deux sens traduits différemment, comme insane déjà scindé.
+- Lot 12, fiche trade, ligne a trade « un secteur (d'activité), les professionnels (the trade) » : scinder en « un secteur (d'activité) » (catering trade, book trade, same trade), à relier en synonyme à an industry « un secteur », et « les professionnels (the trade) » (work in the trade, supplies to the trade) ; an industry convient dans les trois exemples du premier sens.
