@@ -886,3 +886,15 @@
   cunning, to gain ground / to gain currency, a drought et a shortfall / a dearth. Laissé en l'état : to harm ↔ to damage
   (chacun ne convient que dans une partie des exemples de l'autre).
 - Clés de lots.json remises à jour. Rien à trancher.
+
+## Lot 7 (revue) (21 novembre 2026, a demise → the economics (of sth), 104 lignes)
+- Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
+- Contrôles (11 corrections) : A1 2 (to dole out ↔ to give out « distribuer » ; a driving force (behind) ↔ a driver (of)),
+  formes admises des deux côtés ; A2 2 (to dim « faiblir » → to dwindle ; to dig into sth → to draw on/upon ; LINT_OK,
+  gloses déjà restrictives) ; A3 6 gloses (to have designs on « (avec l'intention de s'en emparer) » face à to covet,
+  sweeping « (par son ampleur) » face à drastic, a discrepancy « (entre des chiffres, des versions censés concorder) »
+  face à a disparity, dormant « (pour un temps) » face à idle, doubtful « (issue, avenir, participation) » face à
+  dubious, discretion « (réserve, tact) » face à caution) ; B 1 (to look forward to admis dans deux exemples de
+  to be eager for sth) ; C 0 ; D 0 ; E 0 ; F 0. Écartés car déjà glosés : dismal / dire, a chore / drudgery,
+  a dearth / a drought, upset / peeved, anxious / eager to, canny / economical, run-down / derelict.
+- Clés de lots.json remises à jour. Rien à trancher.
