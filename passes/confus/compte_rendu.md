@@ -807,3 +807,18 @@
   « régularité qui se répète » face à a trend) ; B 0 ; D 0 ; E 0 ; F 0. Écartés car quasi-synonymes déjà glosés : probation /
   a trial, a salary / a wage, to try sb / to bring sb to trial, an upheaval / turmoil, a backlash / an uproar.
 - 5 clés de lots.json remises à jour. Rien à trancher.
+
+## Lot 54 (21 novembre 2026, wilful → a peculiarity, 90 lignes)
+- 26 lignes avec mots confus : pièges du français engineering pour a wizard et a whiz(z) « génie », a bargain pour a bonanza
+  « aubaine », to come up with et to come by pour to work out « trouver », to tread on pour to work out « marcher », deserving
+  pour dignified « digne », portentous pour stately « solennel », a guiding light pour a yardstick « référence », to stun pour
+  to numb ; ancien synonyme partiel headstrong pour wilful « délibéré », a benchmark pour a yardstick « règle » ; paronymes
+  worthy / worthwhile, zeal / a zealot, gusto / a gust, a yard / a yardstick ; même fiche : a wit / a witticism / a quip,
+  workmanship / crafts / a craftsman, worth / net worth, numb / dazed / mind-numbing, zest / gusto / zeal.
+- Contrôles (17 corrections) : A1 3 (wilfully « obstinément » ↔ stubbornly ; woeful ↔ dismal « lamentable » ; a grifter ↔
+  a crook), formes admises des deux côtés ; A2 0 ; A3 8 gloses (a bonanza face à a godsend, to work out « résoudre » face à
+  to sort out, to devise face à to work out sth, lucrative face à worthwhile, worthy « bien intentionné » face à praiseworthy,
+  would-be face à budding, zealous face à staunch, fraud face à grift et a scam) ; C 2 (wanton « gratuit » face à wilful
+  « délibéré », a bargain « achat à bon prix » face à a windfall) ; B 0 ; D 0 ; E 0 ; F 0. Écartés car déjà distingués :
+  stubborn / wilful « entêté », a salary, probation, to turn out / to work out, stately / dignified.
+- 9 clés de lots.json remises à jour. Rien à trancher.
