@@ -677,3 +677,17 @@
   de to save « mettre de côté ») ; C 2 gloses (savings « (l'argent mis de côté) » face à thrift, to vie for « se disputer
   (qch) » face à to row) ; D 0 ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 46 (21 novembre 2026, to scare sb → to shrug off sth, 102 lignes)
+- 15 lignes avec mots confus : pièges du français remote pour scattered « isolé », to foresee pour to schedule « prévoir »,
+  the remainder pour a scrap « reste », to shed (shed) pour to screen « diffuser », to audit pour to screen « contrôler »,
+  to stall sth pour to set sth back « retarder », to display pour to set out sth « exposer », to peg pour to set « fixer »,
+  a pitfall pour a set-up « piège », a rule pour a settlement « règlement », to forfeit pour to shed « perdre », to tip over
+  pour to shift « basculer », to sweep pour to shrug off « balayer » ; paronymes scary / scarce, to search / to research.
+- Contrôles (12 corrections) : A1 2 (to scramble « se ruer » ↔ to rush, unshakeable ↔ steadfast, formes admises des deux
+  côtés) ; A2 0 ; A3 3 gloses (to scare sb away/off « (en effrayant) » face à to deter, to be afraid to « (par crainte) »
+  face à to be reluctant to, to seek to do sth « viser à » face à to strive et to endeavour) ; B 1 (to despise et
+  to have contempt for admis dans to scorn) ; C 4 gloses (to schedule face à to foresee, a set-up face à a pitfall,
+  a settlement « règlement » face à a rule, to set sth back face à to stall sth) ; D 0 ; E 0 ; F 0.
+- Remarque : to share sth « avoir qch en commun » a pour synonyme to have sth in common, qui ne peut remplacer le mot à
+  trouver dans aucun exemple (complément intercalé) ; laissé tel quel. Rien à trancher.
