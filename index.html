@@ -199,6 +199,24 @@
   .freq-4{color:#e94560;border-color:rgba(233,69,96,0.4)}
   .freq-chip{padding:6px 12px;border-radius:50px;font-size:0.78rem;font-weight:600;border:1px solid var(--border);background:var(--bg);color:var(--muted);cursor:pointer;user-select:none}
   .freq-chip.selected{background:var(--gold);border-color:var(--gold);color:#111}
+  /* Mode lecture */
+  .rd-text{font-size:1.02rem;line-height:1.75;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:16px;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+  .rd-w{cursor:pointer;border-radius:3px;padding:0 1px}
+  .rd-known{border-bottom:2px solid rgba(46,204,113,0.55)}
+  .rd-hard{border-bottom:2px solid var(--gold);background:rgba(245,166,35,0.12)}
+  .rd-new{border-bottom:2px dotted #64b4ff;background:rgba(100,180,255,0.12)}
+  .rd-cand{background:rgba(233,69,96,0.18);border-radius:3px}
+  .rd-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:0.8rem;color:var(--muted);margin:0 0 12px}
+  .rd-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+  #rd-input{width:100%;min-height:45vh;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:var(--r);padding:14px;font-family:inherit;font-size:0.95rem;line-height:1.5;resize:vertical}
+  .rd-sheet-h{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:12px;text-align:center}
+  .rd-sheet-e{border-top:1px solid var(--border);padding:10px 0}
+  .rd-sheet-l{margin-bottom:6px;line-height:1.4}
+  .rd-sheet-l .mot-fr{color:var(--muted);margin-left:4px}
+  .rd-cand-row{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;border-bottom:1px solid var(--border);padding:10px 0}
+  .rd-cand-s{font-size:0.82rem;color:var(--muted);margin-top:3px}
+  .rd-x{background:none;border:none;color:var(--muted);font-size:1rem;cursor:pointer;padding:4px}
+  .rd-hint{color:var(--muted);text-align:center;font-size:0.9rem}
   .speakable{cursor:pointer;border-bottom:1px dotted var(--muted);padding-right:2px}
   .speakable::after{content:'🔊';font-size:0.7em;margin-left:5px;opacity:0.7}
   .speakable:active{opacity:0.6}
@@ -264,6 +282,11 @@
     <div class="info"><h3>Fill in the blank</h3><p>Find the word in a sentence</p></div>
     <div class="arrow">›</div>
   </div>
+  <div class="action-card exo-card" onclick="startTest('disc','en2fr')">
+    <div class="icon" style="background:rgba(233,69,96,0.12)">🧭</div>
+    <div class="info"><h3>Right word</h3><p>Choose between close words in context</p></div>
+    <div class="arrow">›</div>
+  </div>
   <div class="action-card exo-card" onclick="openDirModal('open')">
     <div class="icon" style="background:rgba(245,166,35,0.15)">✍️</div>
     <div class="info"><h3>Open translation</h3><p>Write the translation from memory</p></div>
@@ -278,6 +301,25 @@
     <div class="icon" style="background:rgba(155,89,182,0.18)">↔️</div>
     <div class="info"><h3>Antonyms</h3><p>Find the opposites of the word</p></div>
     <div class="arrow">›</div>
+  </div>
+</div>
+
+<div id="read" class="screen">
+  <div id="rd-edit">
+    <textarea id="rd-input" placeholder="Paste an article, a chapter or subtitles…"></textarea>
+    <div class="btn-row">
+      <button class="btn btn-primary btn-full" onclick="rdRender()">Read</button>
+      <button class="btn btn-secondary" onclick="rdPaste()">📋 Paste</button>
+    </div>
+  </div>
+  <div id="rd-view" style="display:none">
+    <div class="rd-bar">
+      <button class="btn btn-secondary btn-sm" onclick="rdEdit()">✎ Edit</button>
+      <button class="btn btn-secondary btn-sm" onclick="rdClear()">New text</button>
+      <button class="btn btn-secondary btn-sm" id="rd-cand-btn" onclick="rdOpenCands()">☆ To add (0)</button>
+    </div>
+    <div class="rd-legend" id="rd-legend"></div>
+    <div class="rd-text" id="rd-text"></div>
   </div>
 </div>
 
@@ -322,6 +364,10 @@
   <button class="nav-btn active" data-screen="home" onclick="showScreen('home')">
     <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
     Home
+  </button>
+  <button class="nav-btn" data-screen="read" onclick="showScreen('read');rdOpen()">
+    <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>
+    Read
   </button>
   <button class="nav-btn" data-screen="search" onclick="showScreen('search');renderList()">
     <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -397,6 +443,19 @@
     <h2 id="review-title">📋 Today's results</h2>
   </div>
   <div class="overlay-body" id="review-body"></div>
+</div>
+
+<!-- READING: mini-fiche et mots à ajouter -->
+<div id="rd-sheet" class="modal-bg" onclick="if(event.target===this) closeOverlay('rd-sheet')">
+  <div class="modal-box"><div id="rd-sheet-body"></div>
+    <button class="btn btn-ghost btn-full" style="margin-top:10px" onclick="closeOverlay('rd-sheet')">Close</button></div>
+</div>
+<div id="rd-cands" class="overlay">
+  <div class="overlay-header">
+    <button class="back-btn" onclick="closeOverlay('rd-cands')">‹</button>
+    <h2>☆ Words to add</h2>
+  </div>
+  <div class="overlay-body" id="rd-cands-body"></div>
 </div>
 
 <!-- DIR MODAL -->
@@ -1108,6 +1167,7 @@ function motBlockHTML(m,idx,pfx){
     <label>Synonyms</label><input type="text" value="${esc(m.synonymes||'')}" class="${pfx}-syn">
     <label>Antonyms</label><input type="text" value="${esc(m.antonymes||'')}" class="${pfx}-ant">
     <label>False friend</label><input type="text" value="${esc(m.fauxAmi||'')}" class="${pfx}-fa">
+    <label>Confusable words</label><input type="text" value="${esc(m.confus||'')}" class="${pfx}-conf" placeholder="Close words that are wrong in every example">
     <label style="display:flex;align-items:center;gap:8px"><input type="checkbox" class="${pfx}-assoc" style="width:18px;height:18px"${m.type==='association'?' checked':''}> See also (not in the word family)</label>
     <label>Target word (fill in the blank)</label><input type="text" value="${esc(m.motATrouver||'')}" class="${pfx}-mat-global">
     <label>Frequency class (1-4)</label><input type="number" min="1" max="4" value="${esc(m.freq||'')}" class="${pfx}-freq">
@@ -1152,6 +1212,7 @@ function readMotBlocks(pfx){
       synonymes:block.querySelector(`.${pfx}-syn`)?.value.trim()||'',
       antonymes:block.querySelector(`.${pfx}-ant`)?.value.trim()||'',
       fauxAmi:block.querySelector(`.${pfx}-fa`)?.value.trim()||'',
+      confus:block.querySelector(`.${pfx}-conf`)?.value.trim()||'',
       type:block.querySelector(`.${pfx}-assoc`)?.checked?'association':'',
       motATrouver:block.querySelector(`.${pfx}-mat-global`)?.value.trim()||'',
       freq:block.querySelector(`.${pfx}-freq`)?.value.trim()||'',
@@ -1659,7 +1720,7 @@ function saveNote(el,r){
 // ══════════════════════════════════
 //  TEST SESSION
 // ══════════════════════════════════
-const EXO_LABELS={dayrev:"🗓 Today's words",round2:'🌙 Second round',srs:'🔁 Reviews',qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',syn:'🔗 Synonyms',ant:'↔️ Antonyms'};
+const EXO_LABELS={dayrev:"🗓 Today's words",round2:'🌙 Second round',srs:'🔁 Reviews',qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',disc:'🎯 Right word',syn:'🔗 Synonyms',ant:'↔️ Antonyms'};
 const REL_EXOS={
   syn:{field:'synonymes',label:'Synonyms',placeholder:'A synonym…'},
   ant:{field:'antonymes',label:'Antonyms',placeholder:'An antonym…'}
@@ -1706,12 +1767,12 @@ function spreadLines(items){
 let sMots=[];
 function startTest(type,dir){
   if(dayRevPending()){ lockedToast(); return; }
-  const fits=m=>type==='fill'?(m.exemples||[]).some(ex=>ex.mat&&ex.ex)
+  const fits=m=>(type==='fill'||type==='disc')?(m.exemples||[]).some(ex=>ex.mat&&ex.ex)
     :REL_EXOS[type]?!!(m[REL_EXOS[type].field]&&m[REL_EXOS[type].field].trim()):true;
   const fresh=new Set(us.todayNew), seen=seenTodayKeys(), all=[];
   vocab.forEach(e=>{
     if(!us.learned.has(e.id)) return;
-    learnableMots(e).forEach(m=>{ if(fits(m)){ const k=lineKey(e,m); all.push({e,m,k,w:lineWeight(k),old:!fresh.has(e.id)&&!seen.has(k)}); } });
+    learnableMots(e).forEach(m=>{ if(fits(m)){ const k=lineKey(e,m); all.push({e,m,k,w:lineWeight(k)*(type==='disc'&&m.confus?3:1),old:!fresh.has(e.id)&&!seen.has(k)}); } });
   });
   let cands=all.filter(x=>x.old);
   if(cands.length<cfg.qPerTest) cands=[...cands,...weightedPick(all.filter(x=>!x.old),cfg.qPerTest-cands.length)];
@@ -1737,6 +1798,7 @@ function renderTestQ(){
   if(type==='qcm') renderQCM(e,dir,sMots[si]);
   else if(type==='open') renderOpen(e,dir,sMots[si],true);
   else if(REL_EXOS[type]) renderRel(e,type,sMots[si]);
+  else if(type==='disc') renderDisc(e,sMots[si]);
   else if(type==='dayrev') renderFill(e,(dayRevMot(dayRevItems[si])||{}).m);
   else if(type==='srs') renderSrsQ(e,keyLine(srsItems[si]).m);
   else if(type==='round2') renderOpen(e,'fr2en',(keyLine(r2Items[si])||{}).m);
@@ -1792,6 +1854,61 @@ function renderQCM(e,dir,forcedMot){
       <button class="see-fiche-btn" onclick="openDetailFromSession('${e.id}')">📖 See entry</button>
       <button class="btn btn-primary btn-full" onclick="nextTest()">Next →</button>
     </div>`;
+}
+
+// ── RIGHT WORD (QCM de discrimination) ──
+// Phrase à trous sans la traduction ; choix entre le Mot de la ligne et ses mots confus (proches mais faux
+// dans tous ses exemples), complétés au hasard par des Mots de même nature hors synonymes.
+function discOptions(e,m){
+  const syn=new Set([...linkKeys(m.synonymes||''),...linkKeys(m.mot)]);
+  const out=splitList(m.confus||'').filter(c=>c!==m.mot).slice(0,3);
+  const nat=(m.natures||[])[0];
+  // un Mot au plus par fiche, pour ne pas proposer trois lignes d'une même famille
+  const pool=shuffle(vocab.filter(x=>x.id!==e.id)).map(x=>shuffle(x.mots.filter(y=>!nat||(y.natures||[]).includes(nat)))[0]).filter(Boolean);
+  for(const y of pool){
+    if(out.length>=3) break;
+    if(!y.mot||out.includes(y.mot)||[...linkKeys(y.mot)].some(k=>syn.has(k))) continue;
+    out.push(y.mot);
+  }
+  return shuffle([m.mot,...out]);
+}
+function renderDisc(e,forcedMot){
+  const m=forcedMot, exs=(m.exemples||[]).filter(ex=>ex.mat&&ex.ex);
+  if(!exs.length){ nextTest(); return; }
+  const ex=exs[Math.floor(Math.random()*exs.length)];
+  const re=new RegExp(ex.mat.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i');
+  const sentence=ex.ex.replace(re,'<span class="blank-spot" id="blank">___</span>');
+  qCtx={type:'disc',dir:'en2fr',entryId:e.id,entree:e.entree,question:ex.ex,correct:m.mot,label:'Right word',keys:[lineKey(e,m)]};
+  discCur={m,ex};
+  const opts=discOptions(e,m);
+  document.getElementById('test-content').innerHTML=`
+    <div class="quiz-card">
+      <div class="quiz-type">🎯 Which word fits?</div>
+      <div class="fill-sentence">${sentence}</div>
+    </div>
+    <div class="qcm-opts">
+      ${opts.map((o,i)=>`<button class="qcm-opt" data-i="${i}" onclick="checkDisc(this)">${esc(o)}</button>`).join('')}
+    </div>
+    <div id="tfb"></div>
+    <div id="tnav" style="display:none">
+      <button class="see-fiche-btn" onclick="openDetailFromSession('${e.id}')">📖 See entry</button>
+      <button class="btn btn-primary btn-full" onclick="nextTest()">Next →</button>
+    </div>`;
+  discOpts=opts;
+}
+let discCur=null, discOpts=[];
+function checkDisc(el){
+  if(testAnswered) return; testAnswered=true;
+  const chosen=discOpts[Number(el.dataset.i)], {m,ex}=discCur, ok=chosen===m.mot;
+  document.querySelectorAll('.qcm-opt').forEach(o=>{ o.disabled=true; if(discOpts[Number(o.dataset.i)]===m.mot) o.classList.add('correct-opt'); });
+  if(!ok) el.classList.add('wrong-opt');
+  const blank=document.getElementById('blank');
+  if(blank){ blank.textContent=ex.mat; blank.className='blank-spot '+(ok?'blank-ok':'blank-ko'); }
+  recordResult(ok, chosen);
+  // Retour centré sur la bonne réponse : le mot attendu, sa traduction, la traduction de la phrase
+  const note=`<div class="fb-admitted"><strong>${esc(m.mot)}</strong> — ${esc(m.traduction)}${ex.tr?`<br><span style="opacity:0.8">${esc(ex.tr)}</span>`:''}</div>`;
+  showFB(ok, m.mot, chosen, note);
+  if(ok) document.getElementById('tfb').firstElementChild.insertAdjacentHTML('beforeend',note);
 }
 
 function checkQCM(el,chosen,correct){
@@ -2422,6 +2539,7 @@ function exportXlsx(){
         row[`Traduction ${i+1}`]    = ex.tr||'';
       }
       for(let i=0;i<5;i++) row[`Admis ${i+1}`] = ((m.exemples||[])[i]||{}).adm||'';
+      row['Confus'] = m.confus||'';
       // ── learning metadata ──
       row['__id']      = e.id;
       row['__source']  = e.source||'';
@@ -2505,6 +2623,7 @@ function parseVocabRows(rows){
       freq:(r['Fréq (1-4)']!==undefined&&r['Fréq (1-4)']!==''?String(r['Fréq (1-4)']).trim():''),
       zipf:(r['Zipf']!==undefined&&r['Zipf']!==''?String(r['Zipf']).trim():''),
       type:String(r['Type']||'').trim().toLowerCase()==='association'?'association':'',
+      confus:String(r['Confus']||'').trim(),
       motATrouver:'', exemples:[]
     };
     for(let i=1;i<=5;i++){
@@ -2883,6 +3002,268 @@ function startMic(lang, targetId, mode){
 }
 
 // ══════════════════════════════════
+//  READING MODE
+// ══════════════════════════════════
+// Texte collé → mots de la base surlignés selon leur état ; tap → mini-fiche ; appui long → candidat à ajouter.
+const RD_GAP_MAX=4;
+const RD_PLACE=new Set(['sb','sth','sb/sth','sth/sb','someone','something','doing','oneself',"one's",'sb\'s','etc']);
+const RD_SKIP_ZIPF=5.6;
+const RD_BEFORE_V=new Set('to i you he she we they will would can could should must may might do does did don\'t didn\'t won\'t can\'t'.split(' '));
+const RD_BEFORE_N=new Set('a an the this that these those my your his her its our their'.split(' '));
+const RD_PREP=new Set('about above across after against along among around at away back before behind between beyond by down for from in into of off on onto out over through to towards under up upon with within without that'.split(' '));     // mots isolés très courants (will, account…) : pas surlignés
+let rdIrreg={}, rdCands=[];
+function rdLemmas(w,comp){
+  const out=new Set([w]), add=x=>{ if(x.length>=3) out.add(x); };
+  if(rdIrreg[w]) rdIrreg[w].forEach(x=>out.add(x));
+  if(/['’]s$/.test(w)) add(w.slice(0,-2));
+  if(/ies$/.test(w)) add(w.slice(0,-3)+'y');
+  if(/(s|x|z|ch|sh|o)es$/.test(w)) add(w.slice(0,-2));
+  if(/[^s]s$/.test(w)) add(w.slice(0,-1));
+  if(/ied$/.test(w)) add(w.slice(0,-3)+'y');
+  if(/ed$/.test(w)){ add(w.slice(0,-2)); add(w.slice(0,-1)); if(/([b-df-hj-np-tv-z])\1ed$/.test(w)) add(w.slice(0,-3)); }
+  if(/ing$/.test(w)){ const s=w.slice(0,-3); add(s); add(s+'e'); if(/([b-df-hj-np-tv-z])\1$/.test(s)) add(s.slice(0,-1)); if(/y$/.test(s)) add(s.slice(0,-1)+'ie'); }
+  if(comp){
+    if(/ier$/.test(w)) add(w.slice(0,-3)+'y'); if(/iest$/.test(w)) add(w.slice(0,-4)+'y');
+    [['er',2],['est',3]].forEach(([suf,n])=>{ if(w.endsWith(suf)){ const s=w.slice(0,-n); add(s); add(s+'e'); if(/([b-df-hj-np-tv-z])\1$/.test(s)) add(s.slice(0,-1)); } });
+  }
+  return out;
+}
+// Mot → motifs : liste de jetons {alts:[…]} ou 'G' (complément sb/sth… : 0 à 4 mots)
+function rdPatterns(mot,isVerb,irregOut){
+  let s=normQuotes(mot).toLowerCase().replace(/\((gb|us)\)/g,' ').replace(/[!?.…]/g,' ').replace(/\s+/g,' ').trim();
+  const res=[];
+  splitDepth0(s,(x,i)=>x[i]==='/'&&x[i-1]===' '&&x[i+1]===' ').map(a=>a.trim()).filter(Boolean).forEach(alt=>{
+    let a=alt.replace(/^to be /,'').replace(/^to /,'').replace(/^(a|an|the) /,'');
+    // formes irrégulières : (bore, borne) (burned/burnt)
+    if(isVerb) a=a.replace(/\(([^()]*[,\/][^()]*)\)/g,(x,c)=>{ const w=c.split(/[,\/]/).map(t=>t.trim()); if(w.some(t=>!/^[a-z'-]+$/.test(t)||RD_PREP.has(t)||RD_PLACE.has(t))) return x; c.split(/[,\/]/).map(t=>t.trim()).filter(t=>/^[a-z'-]+$/.test(t)).forEach(t=>irregOut.push(t)); return ' '; });
+    a=a.replace(/\(-\)/g,'§');
+    // parenthèses facultatives : avec et sans (2 groupes au plus)
+    let vars=[a];
+    for(let k=0;k<2;k++) vars=vars.flatMap(v=>{ const mm=v.match(/\(([^()]*)\)/); if(!mm) return [v]; const wo=v.replace(mm[0],' '); return /,| \/ /.test(mm[1])?[wo]:[v.replace(mm[0],' '+mm[1]+' '),wo]; });
+    vars=vars.flatMap(v=>v.includes('§')?[v.replace(/§/g,'-'),v.replace(/§/g,' ')]:[v]);
+    vars.forEach(v=>{
+      const raw=v.replace(/[()]/g,' ').split(/\s+/).filter(Boolean);
+      let toks=[];
+      raw.forEach((t,i)=>{
+        if(RD_PLACE.has(t)||(t==='to'&&raw[i+1]==='do')||(t==='do'&&raw[i-1]==='to')||t==='do'&&raw[i+1]==='sth') toks.push('G');
+        else toks.push({alts:t.split('/').filter(Boolean)});
+      });
+      toks=toks.filter((t,i)=>!(t==='G'&&toks[i-1]==='G'));
+      while(toks[0]==='G') toks.shift();
+      while(toks[toks.length-1]==='G') toks.pop();
+      if(toks.length) res.push(toks);
+    });
+  });
+  return res;
+}
+function rdBuildIndex(){
+  const idx=new Map(), seen=new Map();
+  rdIrreg={};
+  const addIrr=(form,base)=>{ if(form&&base&&form!==base){ (rdIrreg[form]=rdIrreg[form]||new Set()).add(base); } };
+  vocab.forEach(e=>e.mots.forEach(m=>{
+    if(!m.mot) return;
+    const isVerb=/^to /.test(m.mot), irr=[];
+    const pats=rdPatterns(m.mot,isVerb,irr);
+    if(!pats.length) return;
+    const first=pats[0][0].alts[0];
+    irr.forEach(f=>addIrr(f,first));
+    // formes irrégulières vues dans les mots à trouver (trod on → tread)
+    if(isVerb) (m.exemples||[]).forEach(ex=>{
+      const t=normQuotes(ex.mat||'').toLowerCase().split(/\s+/)[0];
+      if(t&&t[0]===first[0]&&!rdLemmas(t,false).has(first)) addIrr(t,first);
+    });
+    const ref={id:e.id,mot:m.mot,key:lineKey(e,m)};
+    const comp=!isVerb&&(m.nature||'').includes('adj');
+    const pos=isVerb?'v':/^(a|an|the) /.test(m.mot)?'n':'';
+    pats.forEach(p=>{
+      const content=p.filter(t=>t!=='G').length;
+      if(content===1&&Number(m.zipf)>=RD_SKIP_ZIPF) return;
+      const sig=pos+JSON.stringify(p);
+      if(seen.has(sig)){ const o=seen.get(sig); if(!o.refs.some(r=>r.key===ref.key)) o.refs.push(ref); o.comp=o.comp||comp; return; }
+      const o={p,content,refs:[ref],comp,pos};
+      seen.set(sig,o);
+      p[0].alts.forEach(a=>{ if(!idx.has(a)) idx.set(a,[]); idx.get(a).push(o); });
+    });
+  }));
+  return idx;
+}
+// Découpe du texte : mots avec positions ; brk = une ponctuation forte précède le mot
+function rdTokens(text){
+  const toks=[], re=/[A-Za-z][A-Za-z'’-]*[A-Za-z]|[A-Za-z]/g; let mm, last=0;
+  while((mm=re.exec(text))){
+    const between=text.slice(last,mm.index);
+    toks.push({w:mm[0], lw:normQuotes(mm[0]).toLowerCase(), s:mm.index, e:mm.index+mm[0].length, brk:/[.!?;:—–()\n"“”]/.test(between)});
+    last=mm.index+mm[0].length;
+  }
+  return toks;
+}
+function rdMatchAt(toks,i,o){
+  const lem=k=>toks[k]._l||(toks[k]._l=rdLemmas(toks[k].lw,false));
+  const lemC=k=>toks[k]._c||(toks[k]._c=rdLemmas(toks[k].lw,true));
+  const ok=(pt,k)=>{ const L=(o.comp&&o.content===1)?lemC(k):lem(k); return pt.alts.some(a=>L.has(a)); };
+  const go=(pi,k,acc)=>{
+    if(pi===o.p.length) return acc;
+    const pt=o.p[pi];
+    if(pt==='G'){
+      for(let g=0;g<=RD_GAP_MAX;g++){ const kk=k+g; if(kk>=toks.length) break; if(toks.slice(k,kk+1).some(t=>t.brk)) break; const r=go(pi+1,kk,acc); if(r) return r; }
+      return null;
+    }
+    if(k>=toks.length||(pi>0&&toks[k].brk)||!ok(pt,k)) return null;
+    return go(pi+1,k+1,[...acc,k]);
+  };
+  // un nom après « to » ou un pronom, un verbe après un article : autre emploi du mot
+  const prev=i>0&&!toks[i].brk?toks[i-1].lw:'';
+  if(o.pos==='n'&&RD_BEFORE_V.has(prev)) return null;
+  if(o.pos==='v'&&RD_BEFORE_N.has(prev)) return null;
+  return go(0,i,[]);
+}
+function rdAnalyse(text,idx){
+  const toks=rdTokens(text), found=[];
+  toks.forEach((t,i)=>{
+    const keys=new Set([...rdLemmas(t.lw,false),...rdLemmas(t.lw,true)]);
+    const cands=new Set(); keys.forEach(k=>(idx.get(k)||[]).forEach(o=>cands.add(o)));
+    cands.forEach(o=>{ const r=rdMatchAt(toks,i,o); if(r) found.push({ix:r,o}); });
+  });
+  found.sort((a,b)=>b.o.content-a.o.content||(a.ix[a.ix.length-1]-a.ix[0])-(b.ix[b.ix.length-1]-b.ix[0])||a.ix[0]-b.ix[0]);
+  const taken=new Map(), groups=[];
+  found.forEach(f=>{
+    const sig=f.ix.join(',');
+    const same=groups.find(g=>g.sig===sig);
+    if(same){ f.o.refs.forEach(r=>{ if(!same.refs.some(x=>x.key===r.key)) same.refs.push(r); }); return; }
+    if(f.ix.some(k=>taken.has(k))) return;
+    const g={sig,ix:f.ix,refs:[...f.o.refs]};
+    f.ix.forEach(k=>taken.set(k,groups.length)); groups.push(g);
+  });
+  return {toks,groups,taken};
+}
+let rdData=null, rdPressT=null, rdPressed=false;
+function rdLoadCands(){ try{ rdCands=JSON.parse(localStorage.getItem('ve_cands')||'[]'); }catch(_){ rdCands=[]; } }
+function rdSaveCands(){ localStorage.setItem('ve_cands',JSON.stringify(rdCands)); rdCandCount(); }
+function rdCandCount(){ const b=document.getElementById('rd-cand-btn'); if(b) b.textContent=`☆ To add (${rdCands.length})`; }
+function rdOpen(){
+  rdLoadCands(); rdCandCount();
+  const txt=localStorage.getItem('ve_read')||'';
+  document.getElementById('rd-input').value=txt;
+  if(txt.trim()) rdRender(); else rdEdit();
+}
+function rdEdit(){
+  document.getElementById('rd-edit').style.display='block';
+  document.getElementById('rd-view').style.display='none';
+}
+async function rdPaste(){
+  try{ const t=await navigator.clipboard.readText(); if(t){ document.getElementById('rd-input').value=t; rdRender(); } }
+  catch(_){ toast('Paste with a long press in the box'); }
+}
+function rdClear(){ document.getElementById('rd-input').value=''; localStorage.removeItem('ve_read'); rdEdit(); }
+// État d'une ligne : apprise, difficile (fiche marquée Hard ou au moins 2 oublis), pas encore apprise
+function rdState(refs){
+  let st='new';
+  refs.forEach(r=>{
+    if(!us.learned.has(r.id)) return;
+    const s=us.srs[r.key];
+    const hard=us.hard.has(r.id)||(s&&s.lapses>=2);
+    if(hard) st='hard'; else if(st==='new') st='known';
+  });
+  return st;
+}
+function rdRender(){
+  const text=document.getElementById('rd-input').value;
+  localStorage.setItem('ve_read',text);
+  if(!text.trim()){ rdEdit(); return; }
+  rdData=rdAnalyse(text,rdBuildIndex());
+  const {toks,groups,taken}=rdData, cands=new Set(rdCands.map(c=>c.w.toLowerCase()));
+  const cnt={known:0,hard:0,new:0};
+  groups.forEach(g=>{ g.st=rdState(g.refs); cnt[g.st]++; });
+  let html='', pos=0;
+  toks.forEach((t,k)=>{
+    html+=esc(text.slice(pos,t.s)).replace(/\n/g,'<br>');
+    const gi=taken.get(k);
+    const cls=gi!==undefined?`rd-w rd-${groups[gi].st}`:cands.has(t.lw.replace(/'s$/,''))?'rd-u rd-cand':'rd-u';
+    html+=`<span class="${cls}" data-k="${k}"${gi!==undefined?` data-g="${gi}"`:''}>${esc(t.w)}</span>`;
+    pos=t.e;
+  });
+  html+=esc(text.slice(pos)).replace(/\n/g,'<br>');
+  document.getElementById('rd-text').innerHTML=html;
+  document.getElementById('rd-legend').innerHTML=
+    `<span class="rd-w rd-known">${cnt.known} learned</span> <span class="rd-w rd-hard">${cnt.hard} hard</span> <span class="rd-w rd-new">${cnt.new} not learned yet</span>`;
+  document.getElementById('rd-edit').style.display='none';
+  document.getElementById('rd-view').style.display='block';
+}
+// Phrase qui contient le mot k (pour la liste des mots à ajouter)
+function rdSentence(k){
+  const text=document.getElementById('rd-input').value, t=rdData.toks[k];
+  let a=t.s, b=t.e;
+  while(a>0&&!/[.!?\n]/.test(text[a-1])) a--;
+  while(b<text.length&&!/[.!?\n]/.test(text[b])) b++;
+  return text.slice(a,Math.min(text.length,b+1)).trim();
+}
+function rdToggleCand(k){
+  const t=rdData.toks[k], w=t.w.replace(/['’]s$/,''), lw=w.toLowerCase();
+  const i=rdCands.findIndex(c=>c.w.toLowerCase()===lw);
+  if(i>=0){ rdCands.splice(i,1); toast(`“${w}” removed from the list`); }
+  else { rdCands.push({w,s:rdSentence(k),d:today()}); toast(`“${w}” added to the list`); }
+  rdSaveCands(); rdMarkCands();
+}
+function rdMarkCands(){
+  if(!rdData) return;
+  const set=new Set(rdCands.map(c=>c.w.toLowerCase()));
+  document.querySelectorAll('#rd-text .rd-u').forEach(el=>el.classList.toggle('rd-cand',set.has(rdData.toks[el.dataset.k].lw.replace(/'s$/,''))));
+}
+function rdShowSheet(gi){
+  const g=rdData.groups[gi];
+  const head=g.ix.map(k=>rdData.toks[k].w).join(' … ');
+  let html=`<div class="rd-sheet-h">${esc(head)}</div>`;
+  const ids=[...new Set(g.refs.map(r=>r.id))];
+  ids.forEach(id=>{
+    const e=byId(id); if(!e) return;
+    const lines=g.refs.filter(r=>r.id===id).map(r=>keyLine(r.key)).filter(Boolean);
+    html+=`<div class="rd-sheet-e">`;
+    lines.forEach(({m})=>{ html+=`<div class="rd-sheet-l"><b>${esc(m.mot)}</b> <span class="mot-fr">${esc(m.traduction)}</span></div>`; });
+    html+=`<button class="btn btn-secondary btn-sm" onclick="rdOpenCard('${esc(id)}')">${esc(e.entree)} ›</button></div>`;
+  });
+  document.getElementById('rd-sheet-body').innerHTML=html;
+  openOverlay('rd-sheet');
+}
+function rdOpenCard(id){ closeOverlay('rd-sheet'); openDetail(id); }
+// Tap : mini-fiche ; appui long sur un mot hors base : liste des mots à ajouter
+function rdPointerDown(ev){
+  const el=ev.target.closest('.rd-u'); rdPressed=false;
+  clearTimeout(rdPressT);
+  if(!el) return;
+  rdPressT=setTimeout(()=>{ rdPressed=true; if(navigator.vibrate) navigator.vibrate(30); rdToggleCand(Number(el.dataset.k)); },550);
+}
+function rdPointerUp(){ clearTimeout(rdPressT); }
+function rdClick(ev){
+  if(rdPressed){ rdPressed=false; return; }
+  const el=ev.target.closest('.rd-w[data-g]'); if(el) rdShowSheet(Number(el.dataset.g));
+}
+function rdCandsBody(){
+  document.getElementById('rd-cands-body').innerHTML=rdCands.length
+    ? rdCands.map((c,i)=>`<div class="rd-cand-row"><div><b>${esc(c.w)}</b><div class="rd-cand-s">${esc(c.s)}</div></div><button class="rd-x" onclick="rdRemoveCand(${i})">✕</button></div>`).join('')
+      +`<div class="btn-row"><button class="btn btn-primary btn-full" onclick="rdShareCands()">Share list</button><button class="btn btn-secondary" onclick="rdClearCands()">Clear</button></div>`
+    : `<p class="rd-hint">Long-press a word that is not in your library to add it here.</p>`;
+}
+function rdOpenCands(){ rdLoadCands(); rdCandsBody(); openOverlay('rd-cands'); }
+function rdRemoveCand(i){ rdCands.splice(i,1); rdSaveCands(); rdCandsBody(); rdMarkCands(); }
+function rdClearCands(){ rdCands=[]; rdSaveCands(); rdCandsBody(); rdMarkCands(); }
+async function rdShareCands(){
+  const txt='Words to add to VocabEN:\n\n'+rdCands.map(c=>`• ${c.w} — ${c.s}`).join('\n');
+  try{
+    if(navigator.share){ await navigator.share({text:txt}); return; }
+    await navigator.clipboard.writeText(txt); toast('List copied');
+  }catch(_){}
+}
+function rdInitEvents(){
+  const el=document.getElementById('rd-text');
+  el.addEventListener('pointerdown',rdPointerDown);
+  ['pointerup','pointercancel','pointerleave'].forEach(t=>el.addEventListener(t,rdPointerUp));
+  el.addEventListener('pointermove',ev=>{ if(Math.abs(ev.movementX)+Math.abs(ev.movementY)>4) clearTimeout(rdPressT); });
+  el.addEventListener('click',rdClick);
+  el.addEventListener('contextmenu',ev=>ev.preventDefault());
+  window.addEventListener('scroll',()=>clearTimeout(rdPressT),{passive:true});
+}
+
+// ══════════════════════════════════
 //  PWA — register service worker
 // ══════════════════════════════════
 if('serviceWorker' in navigator){
@@ -2894,6 +3275,7 @@ if('serviceWorker' in navigator){
 // ══════════════════════════════════
 loadState();
 renderHome();
+rdInitEvents();
 syncPublished();
 </script>
 </body>

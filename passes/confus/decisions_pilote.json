@@ -1,0 +1,196 @@
+{
+"area|an area|une région, une zone": [],
+"bill|a bill|un projet de loi": [],
+"brand|a brand|une marque": [
+"a make",
+"a trademark",
+"a hallmark"
+],
+"bulwark|a safeguard|une garantie, un garde-fou": [
+"a warranty",
+"a pledge"
+],
+"cautious|caution|la prudence, la circonspection": [],
+"critic|critical of|critique (envers, à l'égard de), sévère ": [
+"harsh",
+"stern"
+],
+"dim|to take a dim view of sth|voir qch d'un mauvais œil, désapprouver ": [],
+"hefty|hefty|costaud, imposant": [],
+"hoodlum|a thug|un voyou, une brute, un nervi": [],
+"idle|idle|en l'air, gratuit (menace, spéculation)": [
+"free"
+],
+"judicious|judicious|judicieux, avisé": [],
+"landmark|landmark|historique, décisif (décision, accord)": [
+"legacy"
+],
+"lofty|lofty|hautain": [],
+"lump|a lump|un morceau, une masse": [],
+"market|the stock market|la Bourse, le marché boursier": [],
+"obnoxious|obnoxious|infect (odeur)": [
+"hateful"
+],
+"occupation|an occupation|un métier, une profession": [],
+"out of date|out of date|périmé, expiré (document, produit)": [
+"dated"
+],
+"outspoken|frank|franc": [],
+"plant|a plant|une plante": [],
+"realm|a realm|un domaine": [
+"an estate",
+"grounds"
+],
+"rebate|a rebate|un remboursement, un rabais, une remise": [],
+"reckless|careless|négligent, inattentif, peu soigneux": [],
+"restless|restless|agité, impatient, mécontent": [
+"choppy"
+],
+"sharp|sharp|fort, net, marqué (hausse, baisse, contr": [
+"potent"
+],
+"slight|slender|mince, svelte": [],
+"sly|mischievous|malveillant, qui vise à nuire": [],
+"sly|sly|espiègle, malicieux": [],
+"snap|to snap sth|casser qch net": [],
+"stake|a stake (in)|une participation (dans)": [
+"involvement (in)",
+"turnout"
+],
+"stake|a stake|un pieu, un piquet": [],
+"tip|to tip (sb)|donner un pourboire (à qn)": [],
+"to appeal to|to appeal to|plaire à, séduire, attirer": [],
+"to award|an award|un prix, une récompense": [],
+"to blend|a blend|un mélange": [],
+"to call on|to call on sb|rendre visite à qn": [],
+"to cancel|to cancel sb|ostraciser qn, boycotter qn (« cancel cu": [
+"to call off"
+],
+"to cave in|to cave in|s'effondrer, s'affaisser": [
+"to break down"
+],
+"to come by|to come by sth|obtenir, se procurer, trouver (qch de ra": [
+"to come over",
+"to come up with sth"
+],
+"to commit|to commit sth (to sth)|engager, consacrer (des fonds, des troup": [
+"to spare",
+"to embody sth (in sth)"
+],
+"to compete with|a contest|une lutte, une compétition, un concours": [],
+"to counteract|to counteract|neutraliser, contrebalancer, contrer": [
+"to disable"
+],
+"to dabble in|to dabble in|s'essayer à, toucher à (en amateur)": [],
+"to deal with|to deal with sb|traiter avec qn, avoir affaire à qn": [],
+"to decimate|to decimate|décimer, ravager": [],
+"to deposit|a deposit|des arrhes, un acompte, une caution": [
+"bail",
+"an endorsement"
+],
+"to deprecate|to deprecate|déclarer obsolète, abandonner progressiv": [],
+"to draw|to draw back|reculer, faire un mouvement en arrière": [],
+"to drift|to drift|dériver, aller à la dérive, glisser": [],
+"to edge|edgy|provocateur, audacieux, avant-gardiste": [
+"jumpy"
+],
+"to evict from|to expel from|expulser de (un pays, une école, un part": [
+"to evict sb (from)"
+],
+"to fail|a failure|une défaillance, une panne": [
+"a lapse"
+],
+"to fake|to fake|falsifier, truquer": [],
+"to falter|to falter|faiblir, s'essouffler, fléchir (économie": [],
+"to fiddle|to fiddle|truquer, trafiquer (comptes, chiffres)": [],
+"to flare up|to flare (up)|s'emporter, s'échauffer (esprits)": [],
+"to galvanize|to galvanize|galvaniser, mobiliser": [],
+"to glaze|to glaze over|devenir vitreux (regard), décrocher (d'e": [],
+"to glitter|to sparkle|étinceler, pétiller": [],
+"to glut|a glutton|un glouton": [
+"a glut (of sth)"
+],
+"to gnaw|to nibble|grignoter, mordiller": [],
+"to grip|to grip|saisir, serrer, tenir fermement": [],
+"to handle|handy|pratique, commode, utile (objet)": [],
+"to hang on|to hang on|attendre": [
+"to hold out (against)"
+],
+"to hasten|to hasten|hâter, précipiter, accélérer": [
+"to dash"
+],
+"to incur|to incur|subir, engager, encourir, s'attirer (des": [
+"to undergo (underwent, undergone)"
+],
+"to jeopardize|to jeopardize|compromettre, mettre en danger": [],
+"to lay off|a layoff|un licenciement, une suppression d'emplo": [],
+"to lurch|to lurch (from/to)|basculer brusquement (vers), passer brut": [],
+"to match|to match|égaler, s'aligner sur": [
+"to tally with"
+],
+"to mean|to mean (meant)|vouloir dire": [],
+"to meddle in|to meddle in|se mêler de, s'immiscer dans": [
+"to mingle with"
+],
+"to mislead|to mislead (misled)|induire en erreur": [],
+"to outgrow|to outgrow sth|se défaire de qch (avec le temps), perdr": [],
+"to overturn|to overturn|annuler, infirmer (un jugement, une déci": [],
+"to patronize|to patronize|fréquenter, être client de (un commerce)": [
+"to attend"
+],
+"to praise|to praise|faire l'éloge de, saluer, féliciter": [
+"to appraise"
+],
+"to procrastinate|to dither|tergiverser, hésiter": [],
+"to produce|to produce|produire": [],
+"to query|to query|mettre en doute, contester": [],
+"to release|to release|libérer, relâcher": [
+"to unleash",
+"to vacate"
+],
+"to require|a requirement|une exigence, une condition (requise)": [
+"a proviso"
+],
+"to rivet|to rivet|captiver, fasciner": [],
+"to rule|a rule|une règle, un règlement": [
+"a yardstick",
+"a settlement"
+],
+"to scrap|to scrap sth|abandonner, supprimer (un projet, une ta": [
+"to shed"
+],
+"to scrimp|to skimp on|lésiner sur, rogner sur": [],
+"to set off|to set off|compenser": [
+"to trigger (off)",
+"to set out sth"
+],
+"to soar|to soar|planer, s'élever (oiseau, avion)": [],
+"to startle|to startle|surprendre, étonner, faire sursauter": [],
+"to stuff|stuff|des choses, des trucs": [
+"belongings"
+],
+"to support|a supporter|un supporter (d'une équipe)": [
+"a proponent (of)",
+"an advocate (of)"
+],
+"to support|to support sth|soutenir (un toit, un poids)": [
+"to endorse sb"
+],
+"to trim|to trim|garnir, décorer": [
+"to prune"
+],
+"to twist|to twist|déformer (des faits, des propos)": [],
+"to upset|to upset sth|renverser qch": [],
+"to waive|to waive|renoncer à (un droit, une objection)": [],
+"to whittle down|to pare away|élaguer, retrancher (le superflu)": [],
+"to wrestle|wrestling|la lutte": [
+"a struggle (to do sth / for sth / against sth)"
+],
+"wanton|wanton|gratuit, délibéré": [
+"free",
+"idle"
+],
+"will|a will|un testament": [
+"willpower"
+]
+}

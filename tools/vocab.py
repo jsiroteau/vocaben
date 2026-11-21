@@ -25,7 +25,8 @@ FILE = 'vocab.xlsx'
 E, M, NAT, T, SYN, ANT, FA = range(7)
 FREQ, ZIPF, TYPE = 22, 23, 24
 ADM = 25              # Admis 1-5 (colonnes 25 à 29) : formes admises dans le texte à trous, séparées par « / »
-NCOL = 30
+CONF = 30             # Confus : mots proches mais faux dans tous les exemples (distracteurs du QCM de discrimination)
+NCOL = 31
 HEADER_ADM = [f'Admis {k}' for k in range(1, 6)]
 
 
@@ -80,8 +81,9 @@ class Base:
         self.header = [c.value for c in ws[1]][:NCOL]
         if len(self.header) < NCOL:
             assert self.header[:ADM] and self.header[TYPE] == 'Type', 'colonnes inattendues'
-            self.header = self.header[:ADM] + HEADER_ADM
-        assert self.header[ADM:] == HEADER_ADM, 'colonnes Admis 1-5 attendues après Type'
+            self.header = self.header[:ADM] + HEADER_ADM + ['Confus']
+        assert self.header[ADM:CONF] == HEADER_ADM, 'colonnes Admis 1-5 attendues après Type'
+        assert self.header[CONF] == 'Confus', 'colonne Confus attendue après Admis 5'
         self.rows = [list(r)[:NCOL] + [None] * (NCOL - len(r)) for r in ws.iter_rows(min_row=2, values_only=True)]
 
     setex = staticmethod(setex)
