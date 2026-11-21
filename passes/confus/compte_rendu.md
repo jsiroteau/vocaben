@@ -379,12 +379,12 @@
   comme », to unravel et to vacate pour to cast off, to reshuffle pour to recast « remanier » ; paronymes broach /
   breach, bring off / bring on / bring up, brush off / brush up, bust / bust-up, burn down / burn through ; autres
   sens : a glitch (a bug), to wiretap, to bolster, cheerful, robust, to brace, to shed (cast a shadow).
-- Contrôles (47 corrections) : A1 10 groupes avec formes admises des deux côtés (to buoy up « soutenir » ↔
+- Contrôles (47 corrections) : A1 9 groupes avec formes admises des deux côtés (to buoy up « soutenir » ↔
   to bolster ; to cast sb/sth as ↔ to portray et to depict ; to cast sth off ↔ to shake sth ; to cash in on ↔
   to profit (from) ; to carry on (about) ↔ to kick up a fuss ; to call for ↔ to demand sth ; to bring sth out
   « sortir » ↔ to release ; to bring sth out « mettre en évidence » ↔ to underscore ; to bring about ↔ to lead to) ;
   A2 4 (to bribe sb → to corrupt sb, to breed sth → to give rise to, bustling → lively, LINT_OK, gloses ; to broker
-  → to negotiate, bleu clair) ; A3 17 gloses (breeding / an upbringing, to bring off face à to carry out,
+  → to negotiate, bleu clair) ; A3 18 gloses (breeding / an upbringing, to bring off face à to carry out,
   to perpetuate, a broadcaster, to hassle, buoyant « dynamique » et « plein d'entrain » sans « florissant » ni
   « enjoué », to burn through « engloutir » face à to squander, a burst face à a surge, to bustle with face à
   to overflow, the bustle face à the rush, a bust face à a slump et a meltdown, a falling-out face à a bust-up,
