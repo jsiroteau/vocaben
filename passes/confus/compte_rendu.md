@@ -59,3 +59,14 @@
 - Écartés car naturels avec un autre sens : a janitor pour a custodian « gardien », a breather pour a halt,
   awesome pour daunting, a drought pour a dearth.
 - Rien à trancher.
+
+## Lot 7 (21 novembre 2026, a demise → the economics (of sth), 104 lignes)
+- 18 lignes avec mots confus, surtout des pièges du français : a regime / a diet croisés (« régime »), a scheme pour
+  a device « dispositif », a liability pour a disability « handicap », to run up pour to dig « creuser », to counteract
+  pour to disable « neutraliser », a hold-up pour a downswing « ralentissement », a jerk pour a tremor « secousse » ;
+  paronymes economic / economical et an economy / economics croisés, latent pour dormant ; autres sens : blunt,
+  lacklustre et dreary pour les sens « terne », « émoussé », « sourd » de dull, dreadful pour dire « urgent »,
+  brass pour dough « pâte ».
+- Écartés car naturels avec un autre sens : a conceit pour a device « procédé », a breather, a lapse pour a disparity,
+  bothersome pour dull « ennuyeux » (doute).
+- Aucune correction de la base nécessaire. Rien à trancher.
