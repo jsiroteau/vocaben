@@ -635,3 +635,17 @@
   a pick(-)up face à a revival, to play up « (pour en tirer parti) » face à to emphasize, a plea face à an appeal) ;
   B 0 ; C 0 ; D 0 ; E 0 ; F 0.
 - 1 cas soumis : ligne an appeal (for) « un appel (à l'aide, aux dons) » à créer, synonyme de a plea.
+
+## Lot 43 (21 novembre 2026, to prevail → a ratchet effect, 101 lignes)
+- 18 lignes avec mots confus : pièges du français to sound out et to poll sb pour to probe « sonder », workmanship pour
+  production « fabrication », to incite et to entice pour to prompt « inciter », to stall pour to prop up « caler », a bid
+  pour provision « offre », to foresee pour to provide for « prévoir », a layout pour a provision « disposition », an editor
+  pour a publisher « éditeur », to bribe sb pour to purchase « acheter », to prosecute pour to pursue « poursuivre »,
+  to claim sth pour to push for « réclamer », to ponder pour to quiz, to summon pour to quote « citer », to file pour
+  to rank sth « classer », a row pour a rank « rang », to infringe pour to rape « violer » ; paronymes a probe / probity.
+- Contrôles (15 corrections) : A1 3 (to prompt ↔ to spur « stimuler », to put sb off (sth) ↔ to repel sb, to prop up
+  « étayer » ↔ to shore up, formes admises des deux côtés) ; A2 2 (produce → goods, to go into effect « (loi, règle) » →
+  to kick in, LINT_OK) ; A3 4 gloses (to prevaricate et to dither, to prevail face à to hold sway, to push aside face à
+  to put aside) ; B 0 ; C 6 gloses (to sound out, to entice, a bid, to provide for/that, to rank sth, a row) ; D 0 ; E 1
+  (soumis) ; F 0.
+- 1 cas soumis : scission de to pursue (« poursuivre un but » / « pourchasser »).

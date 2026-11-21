@@ -186,6 +186,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 21 novembre 2026 (passe mots confus, lot 43) : cas particuliers renvoyant au mot général
+    ('symétrie', 'produce', 'goods'), ('symétrie', 'to go into effect', 'to kick in'),
     # 21 novembre 2026 (passe mots confus, lot 41) : cas particuliers renvoyant au mot général
     ('symétrie', 'a meltdown', 'a collapse'), ('symétrie', 'to melt away', 'to dwindle'), ('symétrie', 'a notice', 'a warning'),
     ('symétrie', 'to tarnish sth', 'to mar'), ('symétrie', 'to outlast', 'to outlive'),
