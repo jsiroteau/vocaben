@@ -822,3 +822,13 @@
   « délibéré », a bargain « achat à bon prix » face à a windfall) ; B 0 ; D 0 ; E 0 ; F 0. Écartés car déjà distingués :
   stubborn / wilful « entêté », to turn out / to work out, stately / dignified, worthy / worthwhile « qui vaut la peine ».
 - 9 clés de lots.json remises à jour. Rien à trancher.
+
+## Lot 1 (revue) (21 novembre 2026, acclaim → in disarray, 102 lignes)
+- Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
+- Contrôles (10 corrections) : A1 2 (to acclaim (as) ↔ to laud ; altogether « somme toute » ↔ overall), formes admises
+  des deux côtés ; A2 1 (a buyout → an acquisition, LINT_OK, glose « par ses dirigeants ou par un fonds ») ; A3 4 gloses
+  (appeasement « capitulation (par des concessions à un adversaire) » face à surrender, thriving « (économie, activité,
+  ville) » face à affluent, a target « objectif (souvent chiffré) » face à an aim, to make out (that) « prétendre (à tort) »
+  face à to allege) ; B 1 (hermetic admis dans un exemple de airtight) ; C 0 ; D 0 ; E 0 ; F 0. Écartés car déjà glosés :
+  liable / accountable, unease / anxiety, beleaguered et distressed / ailing, outright / altogether, critical / acute.
+- 4 clés de lots.json remises à jour. Rien à trancher.
