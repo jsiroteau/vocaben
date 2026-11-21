@@ -196,8 +196,34 @@ def init(size=100):
     print(len(lots), 'lots,', sum(map(len, lots)), 'lignes')
 
 
-def nxt():
-    """Réserve le prochain lot. Refuse si un lot est en cours depuis moins de 3 heures (une exécution à la fois)."""
+def _git(*a):
+    import subprocess
+    return subprocess.run(['git', *a], capture_output=True, text=True)
+
+
+def nxt(tries=3):
+    """Réserve le prochain lot et publie aussitôt la réservation (commit + push de etat.json), pour que deux
+    exécutions ne prennent jamais le même lot. Refuse si un lot est en cours depuis moins de 3 heures."""
+    _git('pull', '-q', '--rebase', 'origin', 'main')
+    reserved = _nxt()
+    if not reserved:
+        return
+    _git('add', D + 'etat.json')
+    _git('-c', 'user.name=Claude', '-c', 'user.email=noreply@anthropic.com', 'commit', '-q', '-m',
+         f'Passe mots confus : réservation lot {reserved}')
+    if _git('push', '-q', 'origin', 'HEAD:main').returncode == 0:
+        print(f'réservation du lot {reserved} publiée')
+        return
+    # quelqu'un a poussé entre-temps : annuler la réservation locale, se remettre à jour, recommencer
+    _git('reset', '-q', '--hard', 'HEAD~1')
+    _git('pull', '-q', '--rebase', 'origin', 'main')
+    if tries > 1:
+        nxt(tries - 1)
+    else:
+        print('OCCUPÉ : réservation impossible à publier, réessayer plus tard')
+
+
+def _nxt():
     import datetime as dt
     et = json.load(open(D + 'etat.json'))
     now = dt.datetime.now(dt.timezone.utc)
@@ -205,14 +231,15 @@ def nxt():
         if v.startswith('en cours'):
             t = dt.datetime.fromisoformat(v.split(' ', 2)[2])
             if now - t < dt.timedelta(hours=3):
-                print(f'OCCUPÉ : lot {k} en cours depuis {t:%H:%M} UTC'); return
+                print(f'OCCUPÉ : lot {k} en cours depuis {t:%H:%M} UTC'); return None
             et[k] = 'à faire'
     todo = [k for k, v in et.items() if v == 'à faire']
     if not todo:
-        print('TERMINÉ : tous les lots sont faits'); return
+        print('TERMINÉ : tous les lots sont faits'); return None
     et[todo[0]] = f'en cours {now.isoformat()}'
     json.dump(et, open(D + 'etat.json', 'w'), indent=0)
     print(f'LOT {todo[0]} réservé ({len(todo) - 1} restants ensuite)')
+    return todo[0]
 
 
 def done(n):
