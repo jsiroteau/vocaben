@@ -186,6 +186,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 21 novembre 2026 (passe mots confus, lot 45) : cas particulier renvoyant au mot général
+    ('symétrie', 'to retire from sth', 'to withdraw (from)'),
     # 21 novembre 2026 (passe mots confus, lot 44) : cas particuliers renvoyant au mot général
     ('symétrie', 'to bail out sb/sth', 'to rescue'), ('symétrie', 'to relinquish sth', 'to quit sth'),
     # 21 novembre 2026 (passe mots confus, lot 43) : cas particuliers renvoyant au mot général

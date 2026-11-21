@@ -656,11 +656,24 @@
   to make good on pour to refund « rembourser », a subsidy pour relief « aide », to hinge on/upon pour to rely on
   « dépendre de », to dwell pour to remain « demeurer », novel pour renewed « nouveau », a claim pour a request
   « demande » ; paronymes to repeal / to repel, the remainder / the remains / a remnant ; to recoup sth pour to recover.
-- Contrôles (22 corrections) : A1 7 (to rebuke ↔ to chastise, to reckon with ↔ to contend with, to release « publier »
+- Contrôles (21 corrections) : A1 7 (to rebuke ↔ to chastise, to reckon with ↔ to contend with, to release « publier »
   ↔ to publish et to issue, to relieve ↔ to soothe, repellent ↔ revolting, renewal « renouveau » ↔ a revival, formes
   admises des deux côtés) ; A2 2 (to bail out sb/sth → to rescue, to relinquish sth « quitter » → to quit sth, LINT_OK) ;
-  A3 7 gloses (to rebuke face à to chide/to scold, to rave about face à to laud, to reckon face à to assess, a record
+  A3 8 gloses (to rebuke face à to chide/to scold, to rave about face à to laud, to reckon face à to assess, a record
   face à a file, to spark face à to kindle, trustworthy face à dependable, to reshuffle face à to shake up, a rescue face
   à relief) ; B 0 ; C 3 gloses (to record « consigner », to dwell « (littéraire) », renewed « (qui reprend) ») ; D 1
   (exemple de to record « noter ») ; E 0 ; F 0.
 - Outil : 7 clés de lots.json remises à jour après des gloses (lots 24, 27, 29, 35, 44) ; rien à trancher.
+
+## Lot 45 (21 novembre 2026, to resonate → a nest egg, 104 lignes)
+- 12 lignes avec mots confus : pièges du français to take over et to assume sth pour to resume « reprendre », a trade-in
+  pour a resumption « reprise », to vie for pour to row « se disputer », a rank pour a row « rang », a halt pour a ruling
+  « arrêt », to hoard pour to run up « accumuler », to push aside pour to save « mettre de côté », thrift pour savings
+  « épargne » ; paronymes to rise / to raise / to arise, to reward / to award, to rule (on) / to overrule.
+- Contrôles (12 corrections) : A1 2 (the rush « agitation » ↔ the bustle, rot « déclin » ↔ decay, formes admises des deux
+  côtés) ; A2 1 (to retire from sth → to withdraw (from), LINT_OK) ; A3 3 gloses (an award face à a reward, a rowdy face à
+  a thug, to salvage face à to rescue et to recover) ; B 2 (to fall back on admis dans to resort to et l'inverse, exemple
+  « She saves a fifth of her salary » pour illustrer to put aside / to set aside, qui ne convenaient dans aucun exemple
+  de to save « mettre de côté ») ; C 2 gloses (savings « (l'argent mis de côté) » face à thrift, to vie for « se disputer
+  (qch) » face à to row) ; D 0 ; E 0 ; F 0.
+- Rien à trancher.
