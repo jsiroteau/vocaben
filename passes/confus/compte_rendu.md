@@ -417,3 +417,19 @@
   limitée à ce que montrent les exemples ; traductions d'exemples de to claim responsibility, to come across,
   to circumvent) ; E 0 (1 soumis) ; F 0.
 - À trancher : scission de to come across (as) et to come over (as) « être compris » / « donner l'impression d'être ».
+
+## Lot 29 (21 novembre 2026, to come up → crushing, 100 lignes)
+- 32 lignes avec mots confus : pièges du français to undergo pour to cross sth « traverser », sorrow et a conviction
+  pour a sentence « peine », a coin pour a component « pièce », a hang-up pour a compound « complexe », to belie pour
+  to conceal « dissimuler », to censure pour to convict « condamner », burdensome pour crushing « écrasant » ;
+  paronymes compelling / compulsory, comply / compete, compliant / complacent, creeping / creepy, crumbling / crippling,
+  crush / crumble, cram / crave, contender / contention, contention / contentious, come up with / come up against ;
+  autres sens : to impart et to hand down pour to convey « transporter », « transmettre », gripping, to cut corners /
+  to turn the corner.
+- Contrôles (21 corrections) : A1 4 (to come up against ↔ to run into « se heurter à » ; to contend for ↔ to vie for,
+  avec to compete for ; a contrivance « artifice » ↔ a device « procédé » ; controversy ajouté à contention) ; A2 2
+  (a contender → a candidate, a cross-section → a sample, LINT_OK) ; A3 5 gloses (a commuter face à a suburbanite,
+  to condone face à to endorse, contentious sans « sensible » face à sensitive, to hold that face à to contend that,
+  to put forward face à to come up with) ; B 0 ; C 2 (to undergo, a sentence) ; D 8 (Traduction de to come up et
+  traductions d'exemples de to come up, a commuter, compelling ×2, compliant, a convict, to cope, to cripple) ; E 0 ; F 0.
+- Rien à trancher.
