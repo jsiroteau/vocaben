@@ -8,6 +8,7 @@ de la ligne : l'appli peut alors le proposer quel que soit l'exemple tiré.
     python3 tools/passe_confus.py pilote [n]         choisit n lignes (100) → passes/confus/pilote.json
     python3 tools/passe_confus.py show <fichier> [début] [nb]   affiche lignes, exemples et candidats
     python3 tools/passe_confus.py apply <decisions.json>        écrit la colonne Confus (contrôle des Mots)
+    python3 tools/passe_confus.py init | next | done <n> | lot <n> [début] [nb]   passe complète par lots
 """
 import json
 import re
@@ -24,6 +25,17 @@ STOP = {'un', 'une', 'le', 'la', 'les', "l'", 'des', 'du', 'de', "d'", 'se', "s'
 
 def key(r):
     return f'{r[E]}|{r[M]}|{(r[T] or "")[:40]}'
+
+
+def resolve(rows, k):
+    """Ligne d'une clé ; si la Traduction a changé depuis, Entrée + Mot (unique)."""
+    for r in rows:
+        if key(r) == k:
+            return r
+    e, m = k.split('|')[:2]
+    o = [r for r in rows if r[E] == e and r[M] == m]
+    assert len(o) == 1, f'clé introuvable : {k}'
+    return o[0]
 
 
 def equivalents(tr):
@@ -151,17 +163,81 @@ def show(path, start=0, nb=10):
 def apply(path):
     B = Base()
     dec = json.load(open(path))
-    rows = {key(r): r for r in B.rows}
     mots = {r[M] for r in B.rows}
     n = 0
     for k, lst in dec.items():
-        r = rows[k]
+        r = resolve(B.rows, k)
         bad = [c for c in lst if c not in mots or c == r[M]]
         assert not bad, f'{k} : Mots inconnus {bad}'
         r[CONF] = ', '.join(lst) or None
         n += bool(lst)
     B.save()
     print(n, 'lignes avec mots confus')
+
+
+PRIO = ('traduction', 'sens unique', 'délié', 'chaîne', 'même fiche')
+
+
+def init(size=100):
+    """Lots d'environ `size` lignes, fiches entières, dans l'ordre du fichier ; lignes du pilote exclues."""
+    B = Base()
+    done = set(json.load(open(D + 'decisions_pilote.json')))
+    lots, cur, last = [], [], None
+    for r in B.rows:
+        if r[E] != last and len(cur) >= size:
+            lots.append(cur); cur = []
+        last = r[E]
+        if key(r) not in done:
+            cur.append(key(r))
+    if cur:
+        lots.append(cur)
+    json.dump(lots, open(D + 'lots.json', 'w'), ensure_ascii=False, indent=0)
+    json.dump({str(i + 1): 'à faire' for i in range(len(lots))}, open(D + 'etat.json', 'w'), indent=0)
+    print(len(lots), 'lots,', sum(map(len, lots)), 'lignes')
+
+
+def nxt():
+    """Réserve le prochain lot. Refuse si un lot est en cours depuis moins de 3 heures (une exécution à la fois)."""
+    import datetime as dt
+    et = json.load(open(D + 'etat.json'))
+    now = dt.datetime.now(dt.timezone.utc)
+    for k, v in et.items():
+        if v.startswith('en cours'):
+            t = dt.datetime.fromisoformat(v.split(' ', 2)[2])
+            if now - t < dt.timedelta(hours=3):
+                print(f'OCCUPÉ : lot {k} en cours depuis {t:%H:%M} UTC'); return
+            et[k] = 'à faire'
+    todo = [k for k, v in et.items() if v == 'à faire']
+    if not todo:
+        print('TERMINÉ : tous les lots sont faits'); return
+    et[todo[0]] = f'en cours {now.isoformat()}'
+    json.dump(et, open(D + 'etat.json', 'w'), indent=0)
+    print(f'LOT {todo[0]} réservé ({len(todo) - 1} restants ensuite)')
+
+
+def done(n):
+    et = json.load(open(D + 'etat.json'))
+    et[str(n)] = 'fait'
+    json.dump(et, open(D + 'etat.json', 'w'), indent=0)
+    print(sum(v == 'fait' for v in et.values()), '/', len(et), 'lots faits')
+
+
+def lot(n, start=0, nb=200):
+    """Affiche un lot : lignes, synonymes, exemples (formes admises) et candidats triés par source."""
+    B = Base()
+    cand = json.load(open(D + 'candidats.json'))
+    keys = json.load(open(D + 'lots.json'))[int(n) - 1][start:start + nb]
+    bymot = defaultdict(list)
+    for r in B.rows:
+        bymot[r[M]].append(r)
+    for i, k in enumerate(keys, start):
+        r = resolve(B.rows, k)
+        print(f'\n#{i} [{r[E]}] {r[M]} ({r[NAT]}) = {r[T]}   syn: {r[SYN] or "-"}' + (f'   confus: {r[CONF]}' if r[CONF] else ''))
+        for (a, m, t), adm in zip(getex(r), getadm(r)):
+            print(f'   · {a}   [{m}]' + (f' {{{adm}}}' if adm else ''))
+        cs = sorted(cand.get(k, {}).items(), key=lambda x: next((j for j, p in enumerate(PRIO) if x[1].startswith(p)), 9))
+        for c, s in cs[:8]:
+            print(f'   ? {c} = {" / ".join(x[T] for x in bymot[c])[:70]}   ({s[:22]})')
 
 
 if __name__ == '__main__':
@@ -172,5 +248,13 @@ if __name__ == '__main__':
         pilote(int(sys.argv[2]) if len(sys.argv) > 2 else 100)
     elif cmd == 'show':
         show(sys.argv[2], *(int(x) for x in sys.argv[3:5]))
+    elif cmd == 'init':
+        init()
+    elif cmd == 'next':
+        nxt()
+    elif cmd == 'done':
+        done(sys.argv[2])
+    elif cmd == 'lot':
+        lot(sys.argv[2], *(int(x) for x in sys.argv[3:5]))
     elif cmd == 'apply':
         apply(sys.argv[2])

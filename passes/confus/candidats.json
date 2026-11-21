@@ -253,9 +253,9 @@
 },
 "dismal|dismal|lamentable, désastreux, piètre (résultat": {
 "bleak": "sens unique",
-"dire": "traduction « désastreux »",
 "woeful": "traduction « lamentable »",
 "wretched": "traduction « lamentable »",
+"dire": "traduction « désastreux »",
 "awful": "chaîne via dreadful"
 },
 "grim|grim|sinistre (lieu)": {
@@ -338,10 +338,10 @@
 },
 "cumbersome|cumbersome|lourd, laborieux, compliqué (procédure, ": {
 "bulky": "sens unique",
-"industrious": "traduction « laborieux »",
 "fancy": "traduction « compliqué »",
 "convoluted": "traduction « compliqué »",
-"tricky": "traduction « compliqué »"
+"tricky": "traduction « compliqué »",
+"industrious": "traduction « laborieux »"
 },
 "concern|a concern (for/about/over)|une préoccupation, une inquiétude": {
 "a business": "sens unique",
@@ -390,8 +390,8 @@
 },
 "drive|drive|le dynamisme, l'énergie, la déterminatio": {
 "a campaign": "sens unique",
-"impetus (for, to)": "traduction « dynamisme »",
 "resolve": "traduction « détermination »",
+"impetus (for, to)": "traduction « dynamisme »",
 "a drive": "même fiche",
 "a driving force (behind)": "même fiche",
 "a driver (of)": "même fiche",
@@ -721,7 +721,7 @@
 },
 "enthralling|passionate (about)|passionné (de, par), ardent (personne, s": {
 "impassioned": "sens unique",
-"eager": "traduction « passionné »",
+"eager": "traduction « ardent »",
 "keen": "traduction « passionné »",
 "enthralling": "même fiche",
 "passionate": "même fiche",
@@ -962,8 +962,8 @@
 "a hunk": "sens unique",
 "a lump": "sens unique",
 "the bulk of": "délié",
-"a game": "traduction « partie »",
 "a share (of)": "traduction « part »",
+"a game": "traduction « partie »",
 "a chunk": "même fiche"
 },
 "forthcoming|forthcoming|fourni, accordé, débloqué (aide, fonds, ": {
@@ -1427,9 +1427,9 @@
 "to snare": "sens unique",
 "to ensnare": "sens unique",
 "to corner sb": "sens unique",
+"to pin sb down (to/on sth)": "traduction « coincer »",
 "to set sb up": "traduction « piéger »",
-"to trick sb (into doing sth)": "traduction « piéger »",
-"to pin sb down (to/on sth)": "traduction « coincer »"
+"to trick sb (into doing sth)": "traduction « piéger »"
 },
 "critic|critical|crucial, essentiel, déterminant": {
 "pivotal": "sens unique",
@@ -1630,15 +1630,15 @@
 },
 "slump|to slump|chuter, s'effondrer, dégringoler": {
 "to slouch": "sens unique",
+"to tumble": "traduction « dégringoler »",
+"to plunge": "traduction « dégringoler »",
+"to drop": "traduction « chuter »",
+"to fall": "traduction « chuter »",
 "to break down": "traduction « effondrer »",
 "to cave in": "traduction « effondrer »",
 "to collapse": "traduction « effondrer »",
 "to crumble": "traduction « effondrer »",
-"to fall apart": "traduction « effondrer »",
-"to drop": "traduction « chuter »",
-"to fall": "traduction « chuter »",
-"to tumble": "traduction « chuter »",
-"to plunge": "traduction « chuter »"
+"to fall apart": "traduction « effondrer »"
 },
 "sly|mischievous|malveillant, qui vise à nuire": {
 "sly": "sens unique",
@@ -1707,11 +1707,11 @@
 },
 "harsh|harsh|rude, rigoureux (climat, conditions)": {
 "stern": "sens unique",
+"keen": "traduction « rude »",
+"stiff": "traduction « rude »",
 "stringent": "traduction « rigoureux »",
 "exacting": "traduction « rigoureux »",
-"tight": "traduction « rigoureux »",
-"keen": "traduction « rude »",
-"stiff": "traduction « rude »"
+"tight": "traduction « rigoureux »"
 },
 "steep|steep|fort, marqué (hausse, prix)": {
 "stiff": "sens unique",
@@ -1873,8 +1873,8 @@
 "to loathe|loathsome|dégoûtant, répugnant": {
 "abhorrent (to)": "sens unique",
 "hateful": "sens unique",
-"gross": "traduction « répugnant »",
-"revolting": "traduction « répugnant »",
+"gross": "traduction « dégoûtant »",
+"revolting": "traduction « dégoûtant »",
 "repellent": "traduction « répugnant »"
 },
 "to bear|to bear sth|supporter, assumer (des coûts, un risque": {
@@ -2308,9 +2308,9 @@
 "to succumb (to)": "sens unique",
 "to yield (to)": "même fiche",
 "to yield": "même fiche",
+"to give oneself up (to)": "chaîne via to surrender (to)",
 "to give up (doing sth)": "chaîne via to surrender (to)",
 "to give up sth": "chaîne via to surrender (to)",
-"to give oneself up (to)": "chaîne via to surrender (to)",
 "to hand over sb/sth": "chaîne via to surrender sth",
 "to relinquish sth": "chaîne via to surrender sth"
 },
@@ -2497,12 +2497,12 @@
 },
 "to break into|to break into|se mettre à, éclater en": {
 "to burgle": "sens unique",
-"to get down to (doing) sth": "traduction « mettre »",
-"to lay (laid)": "traduction « mettre »",
 "to break out": "traduction « éclater »",
 "to burst (burst)": "traduction « éclater »",
 "to flare (up)": "traduction « éclater »",
-"to come to a head": "traduction « éclater »"
+"to come to a head": "traduction « éclater »",
+"to get down to (doing) sth": "traduction « mettre »",
+"to lay (laid)": "traduction « mettre »"
 },
 "to break off|to break off|se détacher, (se) casser net": {
 "to sever": "sens unique",
@@ -2537,9 +2537,9 @@
 "kickback|a kickback|un recul (arme), un rebond (outil)": {
 "a bribe": "sens unique",
 "a payoff": "sens unique",
-"perspective": "traduction « recul »",
 "a bounce": "traduction « rebond »",
-"a pick(-)up": "traduction « rebond »"
+"a pick(-)up": "traduction « rebond »",
+"perspective": "traduction « recul »"
 },
 "graft|a graft|une greffe (peau, plante)": {
 "bribery": "sens unique",
@@ -2562,9 +2562,9 @@
 "to raise|to raise|lever, soulever, hisser": {
 "to bring sb up": "sens unique",
 "to bring sth up": "sens unique",
-"to heave": "traduction « hisser »",
 "to rise (rose, risen)": "traduction « lever »",
 "to waive": "traduction « lever »",
+"to heave": "traduction « hisser »",
 "to raise sth": "même fiche",
 "to raise sb": "même fiche"
 },
@@ -2700,8 +2700,8 @@
 },
 "to appeal to|to appeal to|plaire à, séduire, attirer": {
 "to call on sb (to do sth)": "sens unique",
+"to entice": "traduction « séduire »",
 "to draw": "traduction « attirer »",
-"to entice": "traduction « attirer »",
 "to garner": "traduction « attirer »",
 "to incur": "traduction « attirer »",
 "to lure": "traduction « attirer »",
@@ -2817,7 +2817,7 @@
 "to chide|to admonish sb (against sth)|mettre qn en garde, avertir qn (avec sol": {
 "to chide sb (for sth)": "sens unique",
 "to warn": "délié",
-"to caution (sb) (against sth)": "traduction « mettre garde »",
+"to caution (sb) (against sth)": "traduction « avertir »",
 "to tip sb off": "traduction « avertir »",
 "to admonish sb (for doing sth)": "même fiche",
 "to admonish sb to do sth": "même fiche",
@@ -3014,8 +3014,8 @@
 "to handle|to handle|manier, manipuler": {
 "to cope (with)": "sens unique",
 "to deal with sth (dealt, dealt)": "sens unique",
-"to wield": "traduction « manier »",
 "to tamper with": "traduction « manipuler »",
+"to wield": "traduction « manier »",
 "to mishandle": "même fiche",
 "to get a handle on sth": "même fiche",
 "to bungle sth": "même fiche"
@@ -3169,8 +3169,8 @@
 "to hold up|to hold up|tenir bon, résister (économie, argument,": {
 "to delay sth": "sens unique",
 "to support sth": "sens unique",
-"to hang on": "traduction « tenir bon »",
-"to hold out (against)": "traduction « tenir bon »",
+"to hang on": "traduction « résister »",
+"to hold out (against)": "traduction « résister »",
 "to wear well": "traduction « résister »",
 "to withstand (withstood)": "traduction « résister »",
 "to hold sb/sth up": "même fiche",
@@ -3180,9 +3180,9 @@
 },
 "to deceive|to deceive sb|tromper qn, duper qn": {
 "to delude sb/oneself": "sens unique",
-"to fool sb": "traduction « duper »",
+"to fool sb": "traduction « tromper »",
+"to take sb in": "traduction « tromper »",
 "to hoodwink sb (into doing sth)": "traduction « duper »",
-"to take sb in": "traduction « duper »",
 "to trick sb (into doing sth)": "traduction « duper »"
 },
 "to depict|to portray|incarner, représenter (un rôle)": {
@@ -3890,7 +3890,7 @@
 "to award|to award sth (to sb) / to award sb sth|décerner, attribuer, accorder (un prix, ": {
 "to grant": "sens unique",
 "to put sth down to": "traduction « attribuer »",
-"to bestow": "traduction « accorder »",
+"to bestow": "traduction « décerner »",
 "to extend sth (to sb)": "traduction « accorder »",
 "to spare": "traduction « accorder »"
 },
@@ -3919,9 +3919,9 @@
 "to take in|to take sb in|duper qn, tromper qn, rouler qn": {
 "to grasp sth": "sens unique",
 "to cheat sb (out of sth)": "traduction « rouler »",
-"to deceive sb": "traduction « duper »",
-"to trick sb (into doing sth)": "traduction « duper »",
+"to deceive sb": "traduction « tromper »",
 "to delude sb/oneself": "traduction « tromper »",
+"to trick sb (into doing sth)": "traduction « duper »",
 "to take sth in": "même fiche"
 },
 "to grasp|to grasp sth|saisir, comprendre (une idée, un problèm": {
@@ -3958,8 +3958,8 @@
 },
 "to handle|to bungle sth|gâcher qch, bâcler qch, rater qch": {
 "to fumble sth": "sens unique",
-"to mess (sth) up": "traduction « rater »",
 "to cut corners": "traduction « bâcler »",
+"to mess (sth) up": "traduction « rater »",
 "to handle": "même fiche",
 "to get a handle on sth": "même fiche",
 "to foul up": "chaîne via to botch"
@@ -4076,7 +4076,7 @@
 "to hang on|to hang on|tenir bon, résister": {
 "to hinge on/upon": "sens unique",
 "to hold on": "sens unique",
-"to hold up": "traduction « tenir bon »",
+"to hold up": "traduction « résister »",
 "to stand up (to sth)": "traduction « résister »",
 "to wear well": "traduction « résister »",
 "to withstand (withstood)": "traduction « résister »",
@@ -4541,17 +4541,17 @@
 "an overhaul": "sens unique",
 "a makeover": "sens unique"
 },
-"to prevail|to prevail (over sb/sth)|l'emporter (sur qn/qch), triompher (de q": {
-"to override (overrode, overridden)": "sens unique",
-"to overcome (overcame, overcome)": "traduction « triompher »",
-"to prevail": "même fiche",
-"to prevail on sb to do sth": "même fiche"
-},
 "to prevail|to prevail|régner, prédominer": {
 "to override (overrode, overridden)": "sens unique",
 "to rule": "traduction « régner »",
 "to hold sway (over)": "traduction « régner »",
 "to prevail (over sb/sth)": "même fiche",
+"to prevail on sb to do sth": "même fiche"
+},
+"to prevail|to prevail (over sb/sth)|l'emporter (sur qn/qch), triompher (de q": {
+"to override (overrode, overridden)": "sens unique",
+"to overcome (overcame, overcome)": "traduction « triompher »",
+"to prevail": "même fiche",
 "to prevail on sb to do sth": "même fiche"
 },
 "to clear|to clear sth|autoriser, approuver (une fusion, un méd": {
@@ -4893,8 +4893,8 @@
 "to run into|to run into|rencontrer par hasard": {
 "to run up against": "sens unique",
 "to stumble across/on/upon": "chaîne via to come across (came, come)",
-"to come over": "chaîne via to come across (as)",
-"to come over (as)": "chaîne via to come across (as)"
+"to come over (as)": "chaîne via to come across (as)",
+"to come over": "chaîne via to come across (as)"
 },
 "to rush|the rush|l'agitation, le rythme effréné": {
 "a scramble": "sens unique",
@@ -4920,9 +4920,9 @@
 "to delay|to delay sth|retarder qch, reporter qch, différer qch": {
 "to set sth back (set)": "sens unique",
 "to stall sth": "sens unique",
-"to defer sth": "traduction « reporter »",
-"to postpone sth": "traduction « reporter »",
+"to defer sth": "traduction « différer »",
 "to hold off (on) (doing sth)": "traduction « différer »",
+"to postpone sth": "traduction « reporter »",
 "to support sth": "chaîne via to hold sth up",
 "to support sb/sth": "chaîne via to hold sth up",
 "to support sb": "chaîne via to hold sth up",
@@ -5014,13 +5014,13 @@
 },
 "lax|to loosen|se relâcher, se desserrer": {
 "to slacken sth": "sens unique",
-"to loosen sth": "traduction « relâcher »",
+"to loosen sth": "traduction « desserrer »",
 "to release": "traduction « relâcher »",
 "to slack off": "traduction « relâcher »"
 },
 "lax|to loosen sth|desserrer qch, assouplir qch, relâcher q": {
 "to slacken sth": "sens unique",
-"to loosen": "traduction « relâcher »",
+"to loosen": "traduction « desserrer »",
 "to release": "traduction « relâcher »",
 "to slack off": "traduction « relâcher »",
 "to ease": "traduction « assouplir »"
@@ -5112,7 +5112,7 @@
 },
 "patronage|patronage|le clientélisme, le favoritisme (nominat": {
 "sponsorship": "sens unique",
-"cronyism": "traduction « favoritisme »"
+"cronyism": "traduction « clientélisme »"
 },
 "to spot|a spot|un endroit, un emplacement": {
 "a stain": "sens unique",
@@ -5248,16 +5248,16 @@
 "walkout|a walkout|un départ collectif (en signe de protest": {
 "a strike": "sens unique"
 },
-"to cram|to cram (for)|bachoter (pour)": {
-"to stuff (into)": "sens unique",
-"to cram into sth": "même fiche",
-"to cram sth into": "même fiche"
-},
 "to cram|to cram into sth|s'entasser dans qch": {
 "to stuff (into)": "sens unique",
 "to cram sth into": "traduction « entasser dans »",
 "to cram (for)": "même fiche",
 "to swot (up)": "même fiche"
+},
+"to cram|to cram (for)|bachoter (pour)": {
+"to stuff (into)": "sens unique",
+"to cram into sth": "même fiche",
+"to cram sth into": "même fiche"
 },
 "to stuff|stuff|des choses, des trucs": {
 "belongings": "sens unique"
@@ -5285,7 +5285,7 @@
 },
 "to oust|to oust|évincer, chasser (du pouvoir, d'un poste": {
 "to supplant": "sens unique",
-"to drive out": "traduction « chasser »",
+"to drive out": "traduction « évincer »",
 "to tip over": "chaîne via to topple (over)",
 "to tip sth over": "chaîne via to topple (over)",
 "to knock sb/sth over": "chaîne via to topple sth",
@@ -5624,7 +5624,7 @@
 },
 "to conceal|to conceal|cacher, dissimuler": {
 "to withhold": "sens unique",
-"to belie": "traduction « cacher »"
+"to belie": "traduction « dissimuler »"
 },
 "testimony|to testify (to)|témoigner (de), attester, déclarer (sous": {
 "to bear witness against sb": "sens unique",
@@ -5830,9 +5830,9 @@
 },
 "crunch|to munch|mâchonner, grignoter": {
 "to nibble": "délié",
+"to chew": "traduction « mâchonner »",
 "to make inroads into/on": "traduction « grignoter »",
 "to whittle away (at)": "traduction « grignoter »",
-"to chew": "traduction « mâchonner »",
 "to crunch sth": "même fiche",
 "to crunch": "même fiche",
 "to crunch the numbers": "même fiche"
@@ -5864,22 +5864,22 @@
 },
 "crop|to crop|cultiver, exploiter (une terre)": {
 "to trim": "délié",
+"to grow sth": "traduction « cultiver »",
+"to nurture": "traduction « cultiver »",
 "to cash in on": "traduction « exploiter »",
 "to harness": "traduction « exploiter »",
 "to leverage": "traduction « exploiter »",
 "to tap (into)": "traduction « exploiter »",
-"to grow sth": "traduction « cultiver »",
-"to nurture": "traduction « cultiver »",
 "to crop up": "même fiche"
 },
 "crop|to crop|couper (court), rogner, recadrer (une ph": {
 "to trim": "délié",
-"to curtail": "traduction « rogner »",
-"to skimp on": "traduction « rogner »",
-"to whittle away (at)": "traduction « rogner »",
 "to sever": "traduction « couper »",
 "to break up": "traduction « couper »",
 "to pare": "traduction « couper »",
+"to curtail": "traduction « rogner »",
+"to skimp on": "traduction « rogner »",
+"to whittle away (at)": "traduction « rogner »",
 "to crop up": "même fiche"
 },
 "heir|an inheritance|un héritage, une succession": {
@@ -6285,11 +6285,11 @@
 },
 "apt|apt|approprié, pertinent, juste": {
 "accurate": "traduction « juste »",
-"proper": "traduction « approprié »",
-"suitable": "traduction « approprié »",
 "relevant (to)": "traduction « pertinent »",
 "relevant": "traduction « pertinent »",
 "sharp": "traduction « pertinent »",
+"proper": "traduction « approprié »",
+"suitable": "traduction « approprié »",
 "apt (at)": "même fiche"
 },
 "acquisition|an acquisition|une acquisition, un rachat (d'entreprise": {
@@ -6299,14 +6299,14 @@
 "an acquisition": "traduction « rachat »"
 },
 "actually|actually|en fait, en réalité": {
-"effectively": "traduction « réalité »"
-},
-"effective|effectively|en réalité, de fait, dans les faits": {
-"actually": "traduction « réalité »"
+"effectively": "traduction « fait »"
 },
 "effective|effective|effectif, de fait (taux, contrôle)": {
 "savvy": "traduction « fait »",
 "effective (from)": "même fiche"
+},
+"effective|effectively|en réalité, de fait, dans les faits": {
+"actually": "traduction « fait »"
 },
 "acumen|acumen|la perspicacité, le flair, le sens (des ": {
 "insight (into)": "traduction « perspicacité »",
@@ -6327,11 +6327,21 @@
 },
 "acute|acute|grave, criant, aigu (crise, pénurie, pro": {
 "keen": "traduction « aigu »",
+"blatant": "traduction « criant »",
+"glaring": "traduction « criant »",
 "critical": "traduction « grave »",
 "gross": "traduction « grave »",
-"grievous": "traduction « grave »",
-"blatant": "traduction « criant »",
-"glaring": "traduction « criant »"
+"grievous": "traduction « grave »"
+},
+"blatant|blatant|flagrant, criant": {
+"acute": "traduction « criant »",
+"gross": "traduction « flagrant »",
+"naked": "traduction « flagrant »"
+},
+"to glare|glaring|flagrant, criant": {
+"acute": "traduction « criant »",
+"gross": "traduction « flagrant »",
+"naked": "traduction « flagrant »"
 },
 "gross|gross|flagrant, grave, grossier (erreur, négli": {
 "acute": "traduction « grave »",
@@ -6352,16 +6362,6 @@
 "critical": "traduction « grave »",
 "gross": "traduction « grave »",
 "aggrieved": "même fiche"
-},
-"blatant|blatant|flagrant, criant": {
-"acute": "traduction « criant »",
-"gross": "traduction « flagrant »",
-"naked": "traduction « flagrant »"
-},
-"to glare|glaring|flagrant, criant": {
-"acute": "traduction « criant »",
-"gross": "traduction « flagrant »",
-"naked": "traduction « flagrant »"
 },
 "acute|acutely|vivement, parfaitement (conscient)": {
 "briskly": "traduction « vivement »",
@@ -6403,22 +6403,22 @@
 "distressed": "traduction « difficulté »"
 },
 "ailing|to ail sth|affecter, miner, ronger (économie, insti": {
-"to gnaw (at)": "traduction « ronger »",
-"to impinge on": "traduction « affecter »",
 "to sap": "traduction « miner »",
 "to undermine": "traduction « miner »",
+"to impinge on": "traduction « affecter »",
+"to gnaw (at)": "traduction « ronger »",
 "to ail": "même fiche"
-},
-"to gnaw|to gnaw (at)|ronger, tenailler": {
-"to ail sth": "traduction « ronger »",
-"to nibble": "même fiche",
-"to chew": "même fiche"
 },
 "to sap|to sap|saper, miner, épuiser": {
 "to ail sth": "traduction « miner »",
 "to erode sth": "traduction « saper »",
 "to subvert": "traduction « saper »",
 "to erode": "chaîne via to undermine"
+},
+"to gnaw|to gnaw (at)|ronger, tenailler": {
+"to ail sth": "traduction « ronger »",
+"to nibble": "même fiche",
+"to chew": "même fiche"
 },
 "target|to target|cibler, viser": {
 "to strive for sth": "traduction « viser »",
@@ -6532,11 +6532,11 @@
 "alien to": "traduction « étranger »"
 },
 "allege|to allege|alléguer, prétendre, affirmer (sans preu": {
-"to make out (that)": "traduction « prétendre »",
 "to assert (that)": "traduction « affirmer »",
 "to assert sth": "traduction « affirmer »",
 "to assert oneself": "traduction « affirmer »",
 "to state": "traduction « affirmer »",
+"to make out (that)": "traduction « prétendre »",
 "to make out": "chaîne via to claim that"
 },
 "to assert|to assert (that)|affirmer, soutenir (que)": {
@@ -6589,21 +6589,24 @@
 "alleged": "traduction « prétendu »"
 },
 "altogether|altogether|complètement, totalement, entièrement, p": {
-"utterly": "traduction « complètement »",
-"outright": "traduction « purement et simplement »"
-},
-"to utter|utterly|complètement, absolument": {
-"altogether": "traduction « complètement »"
+"outright": "traduction « purement et simplement »",
+"utterly": "traduction « complètement »"
 },
 "outright|outright|carrément, d'emblée, purement et simplem": {
 "altogether": "traduction « purement et simplement »",
 "darn": "traduction « carrément »",
 "downright": "traduction « carrément »"
 },
+"to utter|utterly|complètement, absolument": {
+"altogether": "traduction « complètement »"
+},
 "altogether|altogether|somme toute, dans l'ensemble, en fin de ": {
+"eventually": "traduction « fin compte »",
 "broadly": "traduction « dans ensemble »",
-"overall": "traduction « dans ensemble »",
-"eventually": "traduction « fin compte »"
+"overall": "traduction « dans ensemble »"
+},
+"eventually|eventually|finalement, en fin de compte, à terme": {
+"altogether": "traduction « fin compte »"
 },
 "broad|broadly|globalement, dans l'ensemble": {
 "altogether": "traduction « dans ensemble »",
@@ -6614,9 +6617,6 @@
 "altogether": "traduction « dans ensemble »",
 "broadly": "traduction « dans ensemble »",
 "above all": "même fiche"
-},
-"eventually|eventually|finalement, en fin de compte, à terme": {
-"altogether": "traduction « fin compte »"
 },
 "overall|overall|global, d'ensemble, total": {
 "thorough": "traduction « total »",
@@ -6640,12 +6640,12 @@
 "canny|uncanny|troublant, étrange, étonnant": {
 "amazing": "traduction « étonnant »",
 "astonishing": "traduction « étonnant »",
-"odd": "traduction « étrange »",
-"weird": "traduction « étrange »",
-"peculiar": "traduction « étrange »",
 "disturbing": "traduction « troublant »",
 "disquieting": "traduction « troublant »",
 "unsettling": "traduction « troublant »",
+"odd": "traduction « étrange »",
+"weird": "traduction « étrange »",
+"peculiar": "traduction « étrange »",
 "canny": "même fiche"
 },
 "to astonish|astonishing|étonnant, stupéfiant": {
@@ -6717,12 +6717,12 @@
 "a device": "traduction « appareil »"
 },
 "appointment|to appoint sb (to)|nommer, désigner qn (à un poste)": {
-"to nominate": "traduction « désigner »",
+"to nominate": "traduction « nommer »",
 "to single out": "traduction « désigner »",
 "to tap sb (for/as sth)": "traduction « désigner »"
 },
 "appointment|to nominate|proposer (un candidat), désigner, nommer": {
-"to appoint sb (to)": "traduction « désigner »",
+"to appoint sb (to)": "traduction « nommer »",
 "to single out": "traduction « désigner »",
 "to tap sb (for/as sth)": "traduction « désigner »",
 "to come up with sth": "traduction « proposer »",
@@ -6756,6 +6756,18 @@
 "to make headway": "traduction « avancer »",
 "to get along": "traduction « avancer »"
 },
+"relevant|relevant (to)|pertinent (pour), en rapport (avec), ada": {
+"apt": "traduction « pertinent »",
+"relevant": "traduction « pertinent »",
+"sharp": "traduction « pertinent »",
+"geared to": "traduction « adapté »",
+"suitable": "traduction « adapté »"
+},
+"relevant|relevant|pertinent, d'actualité": {
+"apt": "traduction « pertinent »",
+"relevant (to)": "traduction « pertinent »",
+"sharp": "traduction « pertinent »"
+},
 "proper|proper|approprié, adéquat": {
 "apt": "traduction « approprié »",
 "fitting": "traduction « approprié »",
@@ -6769,18 +6781,6 @@
 "dignified": "traduction « digne »",
 "fit for": "même fiche",
 "skilled at": "chaîne via apt (at)"
-},
-"relevant|relevant (to)|pertinent (pour), en rapport (avec), ada": {
-"apt": "traduction « pertinent »",
-"relevant": "traduction « pertinent »",
-"sharp": "traduction « pertinent »",
-"geared to": "traduction « adapté »",
-"suitable": "traduction « adapté »"
-},
-"relevant|relevant|pertinent, d'actualité": {
-"apt": "traduction « pertinent »",
-"relevant (to)": "traduction « pertinent »",
-"sharp": "traduction « pertinent »"
 },
 "cunning|cunning|rusé, astucieux, habile (avec une idée d": {
 "apt (at)": "traduction « habile »",
@@ -6872,14 +6872,14 @@
 "a shambles": "traduction « pagaille »"
 },
 "assembly line|to assemble|se rassembler, se réunir (personnes)": {
-"to muster (up)": "traduction « rassembler »",
-"to summon (up)": "traduction « rassembler »",
+"to muster (up)": "traduction « réunir »",
 "to raise": "traduction « réunir »",
+"to summon (up)": "traduction « rassembler »",
 "to assemble sth": "même fiche",
 "to automate": "même fiche"
 },
 "to muster up|to muster (up)|rassembler, réunir (courage, forces, sou": {
-"to assemble": "traduction « rassembler »",
+"to assemble": "traduction « réunir »",
 "to raise": "traduction « réunir »",
 "to pass muster": "même fiche"
 },
@@ -7257,31 +7257,22 @@
 "an arrest warrant / a warrant for sb's arrest": "même fiche"
 },
 "basic|on a regular / daily basis|régulièrement, quotidiennement": {
-"daily": "traduction « quotidiennement »",
 "steadily": "traduction « régulièrement »",
+"daily": "traduction « quotidiennement »",
 "basically": "même fiche"
-},
-"daily|daily|chaque jour, tous les jours, quotidienne": {
-"on a regular / daily basis": "traduction « quotidiennement »"
 },
 "steady|steadily|régulièrement, de façon constante": {
 "on a regular / daily basis": "traduction « régulièrement »"
 },
+"daily|daily|chaque jour, tous les jours, quotidienne": {
+"on a regular / daily basis": "traduction « quotidiennement »"
+},
 "beacon|a beacon (of)|un phare, un modèle, une lueur (d'espoir": {
-"a glimmer of": "traduction « lueur »",
-"a gleam": "traduction « lueur »",
 "a lighthouse": "traduction « phare »",
 "a pattern": "traduction « modèle »",
-"a beacon": "même fiche"
-},
-"glimmer|a glimmer of|une lueur de, une once de": {
-"a beacon (of)": "traduction « lueur »",
+"a glimmer of": "traduction « lueur »",
 "a gleam": "traduction « lueur »",
-"a glimmer": "même fiche"
-},
-"glimmer|a gleam|une lueur, un reflet": {
-"a beacon (of)": "traduction « lueur »",
-"a glimmer of": "traduction « lueur »"
+"a beacon": "même fiche"
 },
 "beacon|a lighthouse|un phare": {
 "a beacon (of)": "traduction « phare »",
@@ -7298,6 +7289,15 @@
 "pattern|a pattern|un modèle, un patron (couture)": {
 "a beacon (of)": "traduction « modèle »",
 "a guiding light": "traduction « modèle »"
+},
+"glimmer|a glimmer of|une lueur de, une once de": {
+"a beacon (of)": "traduction « lueur »",
+"a gleam": "traduction « lueur »",
+"a glimmer": "même fiche"
+},
+"glimmer|a gleam|une lueur, un reflet": {
+"a beacon (of)": "traduction « lueur »",
+"a glimmer of": "traduction « lueur »"
 },
 "benchmark|a benchmark|une référence, un point de repère, un ét": {
 "a guiding light": "traduction « référence »",
@@ -7486,10 +7486,6 @@
 "overcast": "même fiche",
 "bleak": "chaîne via gloomy"
 },
-"dire|dire|désastreux, catastrophique": {
-"dismal": "traduction « désastreux »",
-"awful": "chaîne via dreadful"
-},
 "woe|woeful|lamentable, déplorable": {
 "dismal": "traduction « lamentable »",
 "dreadful": "traduction « lamentable »",
@@ -7499,6 +7495,10 @@
 "dismal": "traduction « lamentable »",
 "dreadful": "traduction « lamentable »",
 "woeful": "traduction « lamentable »"
+},
+"dire|dire|désastreux, catastrophique": {
+"dismal": "traduction « désastreux »",
+"awful": "chaîne via dreadful"
 },
 "sullen|sullen|sombre, maussade, renfrogné, boudeur": {
 "gloomy": "traduction « maussade »"
@@ -7552,9 +7552,14 @@
 "numb (with)": "chaîne via to dull"
 },
 "blizzard|a blizzard of|une avalanche de, un déluge de, une plui": {
+"a hail of": "traduction « pluie »",
 "a flurry of": "traduction « avalanche »",
-"a hail of": "traduction « avalanche »",
 "a blizzard": "même fiche"
+},
+"to hail|a hail of|une pluie de, une avalanche de": {
+"a blizzard of": "traduction « pluie »",
+"a flurry of": "traduction « avalanche »",
+"hail": "même fiche"
 },
 "flurry|a flurry of|une vague soudaine de, une avalanche de,": {
 "a blizzard of": "traduction « avalanche »",
@@ -7563,11 +7568,6 @@
 "a stir": "traduction « effervescence »",
 "a flurry": "même fiche",
 "a gust": "même fiche"
-},
-"to hail|a hail of|une pluie de, une avalanche de": {
-"a blizzard of": "traduction « avalanche »",
-"a flurry of": "traduction « avalanche »",
-"hail": "même fiche"
 },
 "block|a block|un bloc": {
 "a chunk": "traduction « bloc »",
@@ -7696,6 +7696,13 @@
 "a round": "traduction « tour »",
 "a trick": "traduction « tour »"
 },
+"blunt|bluntly|sans détour, sans ménagement, franchemen": {
+"plainly": "traduction « sans détour »",
+"downright": "traduction « franchement »"
+},
+"plain|plainly|manifestement, clairement, sans détour": {
+"bluntly": "traduction « sans détour »"
+},
 "genuine|genuine|sincère, réel, franc": {
 "blunt": "traduction « franc »",
 "outspoken": "traduction « franc »",
@@ -7711,13 +7718,6 @@
 "blunt": "traduction « franc »",
 "genuine": "traduction « franc »",
 "forthright": "traduction « franc »"
-},
-"blunt|bluntly|sans détour, sans ménagement, franchemen": {
-"plainly": "traduction « sans détour »",
-"downright": "traduction « franchement »"
-},
-"plain|plainly|manifestement, clairement, sans détour": {
-"bluntly": "traduction « sans détour »"
 },
 "outright|downright|carrément, franchement": {
 "bluntly": "traduction « franchement »",
@@ -7863,17 +7863,17 @@
 "to label": "même fiche"
 },
 "brash|brash|culotté, effronté, tapageur": {
-"brazen": "traduction « effronté »",
-"cheeky": "traduction « effronté »"
+"cheeky": "traduction « culotté »",
+"brazen": "traduction « effronté »"
+},
+"cheek|cheeky|culotté, effronté, insolent (sur un ton ": {
+"brash": "traduction « culotté »",
+"brazen": "traduction « effronté »"
 },
 "brash|brazen|effronté, éhonté": {
 "brash": "traduction « effronté »",
 "cheeky": "traduction « effronté »",
 "cocky": "même fiche"
-},
-"cheek|cheeky|culotté, effronté, insolent (sur un ton ": {
-"brash": "traduction « effronté »",
-"brazen": "traduction « effronté »"
 },
 "brash|cocky|trop sûr de soi, crâneur": {
 "complacent": "traduction « trop sûr soi »",
@@ -7953,10 +7953,10 @@
 },
 "takeover|to take over (from)|prendre la relève (de), succéder (à), re": {
 "to step into the breach": "traduction « prendre relève »",
+"to supersede": "traduction « succéder »",
 "to pick up": "traduction « reprendre »",
 "to pull oneself together": "traduction « reprendre »",
 "to resume (sth)": "traduction « reprendre »",
-"to supersede": "traduction « succéder »",
 "to take over sth": "même fiche",
 "to take power": "même fiche",
 "to seize power": "même fiche"
@@ -8127,25 +8127,15 @@
 "laden with": "traduction « accablé »",
 "striking": "même fiche"
 },
-"concern|a concern|une entreprise, une affaire": {
-"sb's concern": "traduction « affaire »",
-"an endeavour (GB) / an endeavor (US)": "traduction « entreprise »",
-"an undertaking": "traduction « entreprise »",
-"a venture": "traduction « entreprise »",
-"a concern (for/about/over)": "même fiche"
-},
 "business|a business|une entreprise, une société, un commerce": {
-"a corporation": "traduction « société »",
 "trade": "traduction « commerce »",
+"a corporation": "traduction « société »",
 "an endeavour (GB) / an endeavor (US)": "traduction « entreprise »",
 "an undertaking": "traduction « entreprise »",
 "a venture": "traduction « entreprise »",
 "business": "même fiche",
 "sb's business": "même fiche",
 "a business school": "même fiche"
-},
-"corporation|a corporation|une société (de capitaux), une grande en": {
-"a business": "traduction « société »"
 },
 "trade|trade|le commerce": {
 "a business": "traduction « commerce »",
@@ -8159,6 +8149,16 @@
 "the Department of Commerce": "même fiche",
 "a labor union": "même fiche",
 "labor unionism": "même fiche"
+},
+"concern|a concern|une entreprise, une affaire": {
+"sb's concern": "traduction « affaire »",
+"an endeavour (GB) / an endeavor (US)": "traduction « entreprise »",
+"an undertaking": "traduction « entreprise »",
+"a venture": "traduction « entreprise »",
+"a concern (for/about/over)": "même fiche"
+},
+"corporation|a corporation|une société (de capitaux), une grande en": {
+"a business": "traduction « société »"
 },
 "venture|a venture|une entreprise (risquée), une initiative": {
 "a business": "traduction « entreprise »",
@@ -8239,16 +8239,31 @@
 "guarded": "traduction « prudent »"
 },
 "canny|eerie|étrange, inquiétant, sinistre, troublant": {
-"odd": "traduction « étrange »",
-"weird": "traduction « étrange »",
-"peculiar": "traduction « étrange »",
 "disturbing": "traduction « troublant »",
 "disquieting": "traduction « troublant »",
 "unsettling": "traduction « troublant »",
+"odd": "traduction « étrange »",
+"weird": "traduction « étrange »",
+"peculiar": "traduction « étrange »",
+"grim": "traduction « sinistre »",
 "creepy": "traduction « inquiétant »",
 "worrisome": "traduction « inquiétant »",
-"grim": "traduction « sinistre »",
 "canny": "même fiche"
+},
+"to disturb|disturbing|inquiétant, troublant": {
+"uncanny": "traduction « troublant »",
+"eerie": "traduction « troublant »",
+"creepy": "traduction « inquiétant »"
+},
+"to disturb|disquieting|inquiétant, troublant": {
+"uncanny": "traduction « troublant »",
+"eerie": "traduction « troublant »",
+"creepy": "traduction « inquiétant »"
+},
+"to settle|unsettling|inquiétant, troublant, perturbant": {
+"uncanny": "traduction « troublant »",
+"eerie": "traduction « troublant »",
+"creepy": "traduction « inquiétant »"
 },
 "odd|odd|étrange, bizarre": {
 "uncanny": "traduction « étrange »",
@@ -8266,21 +8281,6 @@
 "eerie": "traduction « étrange »",
 "puzzling": "traduction « curieux »",
 "peculiar to": "même fiche"
-},
-"to disturb|disturbing|inquiétant, troublant": {
-"uncanny": "traduction « troublant »",
-"eerie": "traduction « troublant »",
-"creepy": "traduction « inquiétant »"
-},
-"to disturb|disquieting|inquiétant, troublant": {
-"uncanny": "traduction « troublant »",
-"eerie": "traduction « troublant »",
-"creepy": "traduction « inquiétant »"
-},
-"to settle|unsettling|inquiétant, troublant, perturbant": {
-"uncanny": "traduction « troublant »",
-"eerie": "traduction « troublant »",
-"creepy": "traduction « inquiétant »"
 },
 "to creep|creepy|qui donne la chair de poule, inquiétant,": {
 "eerie": "traduction « inquiétant »",
@@ -8345,10 +8345,10 @@
 "to carry sth off": "traduction « réussir »",
 "to bring sth off / to bring off sth (brought)": "traduction « réussir »",
 "to make good": "traduction « réussir »",
-"to occur": "traduction « avoir lieu »",
 "to come to sth": "traduction « aboutir »",
 "to go through": "traduction « aboutir »",
 "to lead to sth": "traduction « aboutir »",
+"to occur": "traduction « avoir lieu »",
 "to come off sth": "même fiche"
 },
 "to make good on|to make good|réussir": {
@@ -8390,8 +8390,8 @@
 "stealth": "traduction « discrétion »"
 },
 "cautious|to caution (sb) (against sth)|mettre (qn) en garde (contre qch), avert": {
-"to admonish sb (against sth)": "traduction « mettre garde »",
 "to tip sb off": "traduction « avertir »",
+"to admonish sb (against sth)": "traduction « avertir »",
 "to take precautions": "même fiche"
 },
 "tip|to tip sb off|prévenir qn, avertir qn (discrètement)": {
@@ -8537,16 +8537,11 @@
 "meagre/meager": "chaîne via stingy"
 },
 "chore|a chore|une corvée, une tâche (ménagère)": {
+"drudgery": "traduction « corvée »",
+"a grind": "traduction « corvée »",
 "a job": "traduction « tâche »",
 "a task": "traduction « tâche »",
-"an undertaking": "traduction « tâche »",
-"drudgery": "traduction « corvée »",
-"a grind": "traduction « corvée »"
-},
-"task force|a task|une tâche": {
-"a chore": "traduction « tâche »",
-"an undertaking": "traduction « tâche »",
-"a task force": "même fiche"
+"an undertaking": "traduction « tâche »"
 },
 "drudgery|drudgery|un travail pénible et ingrat, une corvée": {
 "a chore": "traduction « corvée »"
@@ -8555,6 +8550,11 @@
 "a chore": "traduction « corvée »",
 "toil": "même fiche"
 },
+"task force|a task|une tâche": {
+"a chore": "traduction « tâche »",
+"an undertaking": "traduction « tâche »",
+"a task force": "même fiche"
+},
 "track|a track|un morceau": {
 "a chunk": "traduction « morceau »",
 "a lump": "traduction « morceau »",
@@ -8562,11 +8562,6 @@
 "a track record": "même fiche",
 "footprints": "même fiche",
 "a footprint": "même fiche"
-},
-"game|a game|un match, une partie": {
-"a chunk (of)": "traduction « partie »",
-"a game-changer": "même fiche",
-"a play": "même fiche"
 },
 "on behalf of|on behalf of|de la part de, au nom de": {
 "bar": "traduction « part »"
@@ -8581,6 +8576,11 @@
 "a shareholder": "même fiche",
 "a stockholder": "même fiche",
 "equities": "même fiche"
+},
+"game|a game|un match, une partie": {
+"a chunk (of)": "traduction « partie »",
+"a game-changer": "même fiche",
+"a play": "même fiche"
 },
 "clerk|a clerk|un employé (de bureau), un commis": {
 "an employee": "traduction « employé »",
@@ -8666,17 +8666,17 @@
 "a staple (of)": "même fiche"
 },
 "commodities|a commodity|un bien, une denrée (rare, précieuse)": {
-"a foodstuff": "traduction « denrée »",
 "welfare": "traduction « bien »",
+"a foodstuff": "traduction « denrée »",
 "commodities": "même fiche",
 "foodstuffs": "même fiche"
-},
-"to feed|a foodstuff|un produit alimentaire, une denrée, un a": {
-"a commodity": "traduction « denrée »"
 },
 "welfare|welfare|le bien-être, le bien": {
 "a commodity": "traduction « bien »",
 "the welfare state": "même fiche"
+},
+"to feed|a foodstuff|un produit alimentaire, une denrée, un a": {
+"a commodity": "traduction « denrée »"
 },
 "compensation|compensation|la rémunération (US)": {
 "pay": "traduction « rémunération »",
@@ -8729,8 +8729,12 @@
 "promiscuous": "même fiche"
 },
 "compunction|compunction|des scrupules, des remords": {
-"qualms": "traduction « scrupules »",
-"remorse": "traduction « remords »"
+"remorse": "traduction « remords »",
+"qualms": "traduction « scrupules »"
+},
+"compunction|remorse|le remords": {
+"compunction": "traduction « remords »",
+"scruples": "même fiche"
 },
 "compunction|scruples|les scrupules": {
 "qualms": "traduction « scrupules »",
@@ -8739,10 +8743,6 @@
 "qualms|qualms|des scrupules, des réticences, des états": {
 "compunction": "traduction « scrupules »",
 "scruples": "traduction « scrupules »"
-},
-"compunction|remorse|le remords": {
-"compunction": "traduction « remords »",
-"scruples": "même fiche"
 },
 "conceit|conceit|la suffisance, la vanité": {
 "futility": "traduction « vanité »",
@@ -8753,8 +8753,8 @@
 "inanity": "traduction « inanité »"
 },
 "conceit|a conceit|une idée (de départ), un procédé (littér": {
-"a device": "traduction « procédé »",
 "an insight (into)": "traduction « idée »",
+"a device": "traduction « procédé »",
 "conceit": "même fiche"
 },
 "insight|an insight (into)|un éclairage (sur), une idée": {
@@ -9030,7 +9030,7 @@
 "crony capitalism": "même fiche"
 },
 "cronyism|cronyism|le copinage, le favoritisme, le clientél": {
-"patronage": "traduction « favoritisme »",
+"patronage": "traduction « clientélisme »",
 "a crony": "même fiche",
 "crony capitalism": "même fiche",
 "a pal": "même fiche"
@@ -9075,6 +9075,13 @@
 "a crop": "traduction « culture »",
 "a grasp of": "traduction « maîtrise »"
 },
+"to nurture|to nurture|cultiver, favoriser, nourrir (un talent,": {
+"to crop": "traduction « cultiver »",
+"to grow sth": "traduction « cultiver »",
+"to feed (fed)": "traduction « nourrir »",
+"to feed on/off sth": "traduction « nourrir »",
+"to make for": "traduction « favoriser »"
+},
 "to harness|to harness|exploiter, mettre à profit": {
 "to crop": "traduction « exploiter »",
 "to cash in on": "traduction « exploiter »",
@@ -9088,12 +9095,34 @@
 "to tap (into)": "traduction « exploiter »",
 "to profit by/from": "traduction « tirer parti »"
 },
-"to nurture|to nurture|cultiver, favoriser, nourrir (un talent,": {
-"to crop": "traduction « cultiver »",
-"to grow sth": "traduction « cultiver »",
-"to feed (fed)": "traduction « nourrir »",
-"to feed on/off sth": "traduction « nourrir »",
-"to make for": "traduction « favoriser »"
+"to break off|to sever|rompre, couper, sectionner": {
+"to crop": "traduction « couper »",
+"to break up": "traduction « couper »",
+"to trim": "traduction « couper »",
+"to pare": "traduction « couper »",
+"to break up (with)": "traduction « rompre »"
+},
+"to break up|to break up|couper, être entrecoupé (communication)": {
+"to crop": "traduction « couper »",
+"to sever": "traduction « couper »",
+"to trim": "traduction « couper »",
+"to pare": "traduction « couper »",
+"to break up (broke, broken)": "même fiche",
+"to break sth up": "même fiche",
+"to break up (with)": "même fiche",
+"to break sb up": "même fiche"
+},
+"to whittle down|to pare|éplucher (un fruit), couper (les ongles)": {
+"to crop": "traduction « couper »",
+"to sever": "traduction « couper »",
+"to break up": "traduction « couper »",
+"to trim": "traduction « couper »",
+"to scrutinize": "traduction « éplucher »",
+"to whittle": "même fiche",
+"to whittle down": "même fiche",
+"to whittle away (at)": "même fiche",
+"to pare away": "même fiche",
+"to pare down": "même fiche"
 },
 "to check|to curtail|réduire, restreindre, rogner (dépenses, ": {
 "to crop": "traduction « rogner »",
@@ -9123,35 +9152,6 @@
 "to whittle": "même fiche",
 "to whittle down": "même fiche",
 "to pare": "même fiche",
-"to pare away": "même fiche",
-"to pare down": "même fiche"
-},
-"to break off|to sever|rompre, couper, sectionner": {
-"to crop": "traduction « couper »",
-"to break up": "traduction « couper »",
-"to trim": "traduction « couper »",
-"to pare": "traduction « couper »",
-"to break up (with)": "traduction « rompre »"
-},
-"to break up|to break up|couper, être entrecoupé (communication)": {
-"to crop": "traduction « couper »",
-"to sever": "traduction « couper »",
-"to trim": "traduction « couper »",
-"to pare": "traduction « couper »",
-"to break up (broke, broken)": "même fiche",
-"to break sth up": "même fiche",
-"to break up (with)": "même fiche",
-"to break sb up": "même fiche"
-},
-"to whittle down|to pare|éplucher (un fruit), couper (les ongles)": {
-"to crop": "traduction « couper »",
-"to sever": "traduction « couper »",
-"to break up": "traduction « couper »",
-"to trim": "traduction « couper »",
-"to scrutinize": "traduction « éplucher »",
-"to whittle": "même fiche",
-"to whittle down": "même fiche",
-"to whittle away (at)": "même fiche",
 "to pare away": "même fiche",
 "to pare down": "même fiche"
 },
@@ -9209,10 +9209,6 @@
 "to gnaw (at)": "même fiche",
 "to nibble": "même fiche"
 },
-"industry|industrious|travailleur, assidu, laborieux": {
-"cumbersome": "traduction « laborieux »",
-"keen": "traduction « assidu »"
-},
 "to involve|convoluted|alambiqué, compliqué, tarabiscoté": {
 "cumbersome": "traduction « compliqué »",
 "fancy": "traduction « compliqué »",
@@ -9221,10 +9217,14 @@
 "implicated in": "même fiche",
 "intricate": "chaîne via involved"
 },
+"industry|industrious|travailleur, assidu, laborieux": {
+"cumbersome": "traduction « laborieux »",
+"keen": "traduction « assidu »"
+},
 "cunning|cunning|la ruse, l'astuce, l'habileté": {
-"cleverness": "traduction « habileté »",
 "a tip": "traduction « astuce »",
 "a trick": "traduction « astuce »",
+"cleverness": "traduction « habileté »",
 "a ploy": "traduction « ruse »"
 },
 "ingenious|cleverness|l'intelligence, l'habileté, l'ingéniosit": {
@@ -9280,14 +9280,17 @@
 "a janitor": "même fiche"
 },
 "customer|off-the-peg|de confection, prêt-à-porter (GB)": {
-"off-the-rack": "traduction « confection »"
+"off-the-rack": "traduction « prêt-à-porter »"
 },
 "customer|off-the-rack|de confection, prêt-à-porter (US)": {
-"off-the-peg": "traduction « confection »"
+"off-the-peg": "traduction « prêt-à-porter »"
 },
 "daft|daft|idiot, bête (familier, GB)": {
-"foolish": "traduction « bête »",
-"inane": "traduction « idiot »"
+"inane": "traduction « idiot »",
+"foolish": "traduction « bête »"
+},
+"inane|inane|inepte, idiot, débile": {
+"daft": "traduction « idiot »"
 },
 "to fool|foolish|imprudent, insensé, bête": {
 "daft": "traduction « bête »",
@@ -9298,9 +9301,6 @@
 "unwary": "traduction « imprudent »",
 "foolproof": "même fiche",
 "foolhardy": "même fiche"
-},
-"inane|inane|inepte, idiot, débile": {
-"daft": "traduction « idiot »"
 },
 "damage|to damage|endommager, abîmer, nuire à": {
 "to harm": "traduction « nuire »",
@@ -9395,9 +9395,9 @@
 "to staunch sth": "traduction « arrêter »",
 "to come off sth": "traduction « arrêter »",
 "to give up (doing sth)": "traduction « arrêter »",
+"to abort sth": "traduction « interrompre »",
 "to hang (hung)": "traduction « suspendre »",
-"to withhold": "traduction « suspendre »",
-"to abort sth": "traduction « interrompre »"
+"to withhold": "traduction « suspendre »"
 },
 "staunch|to staunch sth|arrêter, enrayer (une hémorragie, une fu": {
 "to halt": "traduction « arrêter »",
@@ -9414,19 +9414,26 @@
 "to give up (doing sth)": "traduction « arrêter »",
 "to come off": "même fiche"
 },
+"to abort|to abort sth|interrompre, abandonner (mission, projet": {
+"to halt sth": "traduction « interrompre »",
+"to abort": "même fiche"
+},
 "to hang|to hang (hung)|suspendre, accrocher (chose)": {
 "to halt sth": "traduction « suspendre »",
 "to withhold": "traduction « suspendre »",
 "to hang": "même fiche",
 "to hang over sb/sth": "même fiche"
 },
-"to abort|to abort sth|interrompre, abandonner (mission, projet": {
-"to halt sth": "traduction « interrompre »",
-"to abort": "même fiche"
-},
 "dearth|a dearth|une pénurie, un manque": {
+"a drought": "traduction « pénurie »",
 "poverty": "traduction « manque »",
-"a shortfall": "traduction « manque »",
+"a shortfall": "traduction « manque »"
+},
+"drought|a drought|une disette, une pénurie (figuré)": {
+"a dearth": "traduction « pénurie »",
+"a scarcity": "traduction « pénurie »"
+},
+"scarce|a scarcity|une pénurie, une rareté": {
 "a drought": "traduction « pénurie »"
 },
 "paucity|a paucity of|un manque, une insuffisance de": {
@@ -9450,13 +9457,6 @@
 "poverty": "traduction « manque »",
 "a shortcoming": "traduction « insuffisance »",
 "an impairment": "traduction « insuffisance »"
-},
-"drought|a drought|une disette, une pénurie (figuré)": {
-"a dearth": "traduction « pénurie »",
-"a scarcity": "traduction « pénurie »"
-},
-"scarce|a scarcity|une pénurie, une rareté": {
-"a drought": "traduction « pénurie »"
 },
 "deed|wrongdoing|des agissements répréhensibles, une faut": {
 "fault": "traduction « faute »",
@@ -9485,17 +9485,11 @@
 "antiquated": "traduction « vétuste »"
 },
 "derelict|a derelict|un clochard, un sans-abri": {
-"a tramp": "traduction « clochard »",
-"a bum": "traduction « clochard »",
 "the homeless": "traduction « sans-abri »",
 "a vagrant": "traduction « sans-abri »",
+"a tramp": "traduction « clochard »",
+"a bum": "traduction « clochard »",
 "dereliction of duty": "même fiche"
-},
-"to trample|a tramp|un clochard, un vagabond (vieilli, péjor": {
-"a derelict": "traduction « clochard »"
-},
-"to trample|a bum|un clochard (US, péjoratif)": {
-"a derelict": "traduction « clochard »"
 },
 "derelict|the homeless|les sans-abri": {
 "a derelict": "traduction « sans-abri »",
@@ -9505,6 +9499,12 @@
 "to trample|a vagrant|un vagabond, un sans-abri (souvent jurid": {
 "a derelict": "traduction « sans-abri »",
 "the homeless": "traduction « sans-abri »"
+},
+"to trample|a tramp|un clochard, un vagabond (vieilli, péjor": {
+"a derelict": "traduction « clochard »"
+},
+"to trample|a bum|un clochard (US, péjoratif)": {
+"a derelict": "traduction « clochard »"
 },
 "designs|to have designs on sb/sth|avoir des visées sur qn/qch, convoiter q": {
 "to covet": "traduction « convoiter »"
@@ -9628,16 +9628,12 @@
 "to weigh (on)": "traduction « peser »"
 },
 "dim|to take a dim view of sth|voir qch d'un mauvais œil, désapprouver ": {
-"to resent": "traduction « voir mauvais œil »",
 "to deprecate": "traduction « désapprouver »",
 "to disapprove of": "traduction « désapprouver »",
+"to resent": "traduction « voir mauvais œil »",
 "to dim (sth)": "même fiche",
 "to dim": "même fiche",
 "to dim sth": "même fiche"
-},
-"to resent|to resent|en vouloir à (qn de qch), mal accepter, ": {
-"to take a dim view of sth": "traduction « voir mauvais œil »",
-"to bear a grudge against sb": "traduction « vouloir »"
 },
 "to disprove|to disapprove of|désapprouver": {
 "to take a dim view of sth": "traduction « désapprouver »",
@@ -9647,30 +9643,20 @@
 "to put sb down": "chaîne via to deprecate",
 "to put sth down": "chaîne via to deprecate"
 },
+"to resent|to resent|en vouloir à (qn de qch), mal accepter, ": {
+"to take a dim view of sth": "traduction « voir mauvais œil »",
+"to bear a grudge against sb": "traduction « vouloir »"
+},
 "disabled|a disability|un handicap, une invalidité": {
 "a liability": "traduction « handicap »",
 "the disabled": "même fiche"
 },
 "disabled|to disable|mettre hors service, neutraliser, désact": {
-"to knock out sth": "traduction « mettre hors service »",
-"to retire sth": "traduction « mettre hors service »",
 "to cancel out": "traduction « neutraliser »",
 "to cancel sth out": "traduction « neutraliser »",
-"to counteract": "traduction « neutraliser »"
-},
-"to knock out|to knock out sth|mettre qch hors service, détruire qch": {
-"to disable": "traduction « mettre hors service »",
-"to retire sth": "traduction « mettre hors service »",
-"to wreck": "traduction « détruire »",
-"to knock sb/sth over": "même fiche",
-"to knock sb out": "même fiche",
-"to be a knockout": "même fiche"
-},
-"to retire|to retire sth|mettre qch hors service, retirer qch du ": {
-"to disable": "traduction « mettre hors service »",
+"to counteract": "traduction « neutraliser »",
 "to knock out sth": "traduction « mettre hors service »",
-"to retire": "même fiche",
-"to retire from sth": "même fiche"
+"to retire sth": "traduction « mettre hors service »"
 },
 "to cancel|to cancel out|se neutraliser, se compenser": {
 "to disable": "traduction « neutraliser »",
@@ -9685,6 +9671,20 @@
 "to counteract": "traduction « neutraliser »",
 "to cancel": "même fiche",
 "to cancel sb": "même fiche"
+},
+"to knock out|to knock out sth|mettre qch hors service, détruire qch": {
+"to disable": "traduction « mettre hors service »",
+"to retire sth": "traduction « mettre hors service »",
+"to wreck": "traduction « détruire »",
+"to knock sb/sth over": "même fiche",
+"to knock sb out": "même fiche",
+"to be a knockout": "même fiche"
+},
+"to retire|to retire sth|mettre qch hors service, retirer qch du ": {
+"to disable": "traduction « mettre hors service »",
+"to knock out sth": "traduction « mettre hors service »",
+"to retire": "même fiche",
+"to retire from sth": "même fiche"
 },
 "stealth|stealth|la discrétion, la furtivité": {
 "discretion": "traduction « discrétion »"
@@ -9844,12 +9844,12 @@
 "sweeping|sweeping|radical, massif": {
 "drastic": "traduction « radical »"
 },
+"resolute|resolve|la détermination": {
+"drive": "traduction « détermination »"
+},
 "impetus|impetus (for, to)|une impulsion, un élan, du dynamisme (po": {
 "drive": "traduction « dynamisme »",
 "a thrust": "traduction « élan »"
-},
-"resolute|resolve|la détermination": {
-"drive": "traduction « détermination »"
 },
 "drive|a driving force (behind)|une force motrice, le moteur (de)": {
 "a driver (of)": "traduction « moteur »",
@@ -9888,20 +9888,11 @@
 "doubtful": "même fiche"
 },
 "eager to|eager|passionné, ardent, avide": {
-"passionate (about)": "traduction « passionné »",
-"impassioned": "traduction « passionné »",
-"greedy (for)": "traduction « avide »",
+"passionate (about)": "traduction « ardent »",
 "fervent": "traduction « ardent »",
+"greedy (for)": "traduction « avide »",
+"impassioned": "traduction « passionné »",
 "stiff": "chaîne via keen"
-},
-"enthralling|impassioned|enflammé, vibrant, passionné (discours, ": {
-"eager": "traduction « passionné »",
-"keen": "traduction « passionné »",
-"enthralling": "même fiche",
-"fervent": "chaîne via passionate (about)"
-},
-"greed|greedy (for)|avide (de), cupide": {
-"eager": "traduction « avide »"
 },
 "fervent|fervent|fervent, ardent": {
 "eager": "traduction « ardent »",
@@ -9909,10 +9900,19 @@
 "devout": "traduction « fervent »",
 "impassioned": "chaîne via passionate"
 },
+"greed|greedy (for)|avide (de), cupide": {
+"eager": "traduction « avide »"
+},
+"enthralling|impassioned|enflammé, vibrant, passionné (discours, ": {
+"eager": "traduction « passionné »",
+"keen": "traduction « passionné »",
+"enthralling": "même fiche",
+"fervent": "chaîne via passionate (about)"
+},
 "earmarked for|earmarked for|réservé à, affecté à": {
+"upset (about/over)": "traduction « affecté »",
 "guarded": "traduction « réservé »",
-"retiring": "traduction « réservé »",
-"upset (about/over)": "traduction « affecté »"
+"retiring": "traduction « réservé »"
 },
 "to retire|retiring|réservé, discret": {
 "earmarked for": "traduction « réservé »",
@@ -10488,14 +10488,14 @@
 "to work out sth": "chaîne via to figure out"
 },
 "fledgling|fledgling|naissant, jeune, débutant": {
-"youthful": "traduction « jeune »",
-"nascent": "traduction « naissant »"
-},
-"youth|youthful|jeune, juvénile": {
-"fledgling": "traduction « jeune »"
+"nascent": "traduction « naissant »",
+"youthful": "traduction « jeune »"
 },
 "nascent|nascent|naissant": {
 "fledgling": "traduction « naissant »"
+},
+"youth|youthful|jeune, juvénile": {
+"fledgling": "traduction « jeune »"
 },
 "fledgling|budding|en herbe, naissant": {
 "would-be": "traduction « herbe »"
@@ -10528,8 +10528,8 @@
 "to bustle|the bustle|l'agitation, l'effervescence, le remue-m": {
 "a flurry of": "traduction « effervescence »",
 "a stir": "traduction « effervescence »",
-"a commotion": "traduction « remue-ménage »",
 "the rush": "traduction « agitation »",
+"a commotion": "traduction « agitation »",
 "turmoil": "traduction « agitation »",
 "unrest": "traduction « agitation »"
 },
@@ -10629,18 +10629,12 @@
 "repellent": "traduction « répugnant »"
 },
 "foul|to botch|bâcler, rater": {
+"to cut corners": "traduction « bâcler »",
 "to mess (sth) up": "traduction « rater »",
 "to fumble sth": "traduction « rater »",
-"to cut corners": "traduction « bâcler »",
 "to foul": "même fiche",
 "to fall foul of": "même fiche",
 "to mishandle": "chaîne via to bungle sth"
-},
-"mess|to mess (sth) up|gâcher, rater, bousiller (familier)": {
-"to botch": "traduction « rater »",
-"to fumble sth": "traduction « rater »",
-"to bungle sth": "traduction « rater »",
-"to mess around/about": "même fiche"
 },
 "to corner|to cut corners|rogner sur les coûts, prendre des raccou": {
 "to botch": "traduction « bâcler »",
@@ -10648,6 +10642,12 @@
 "to corner sb": "même fiche",
 "to corner the market": "même fiche",
 "to turn the corner": "même fiche"
+},
+"mess|to mess (sth) up|gâcher, rater, bousiller (familier)": {
+"to botch": "traduction « rater »",
+"to fumble sth": "traduction « rater »",
+"to bungle sth": "traduction « rater »",
+"to mess around/about": "même fiche"
 },
 "frail|frailty|la fragilité, la faiblesse (morale)": {
 "a failing": "traduction « faiblesse »",
@@ -10849,13 +10849,8 @@
 "to subsidize": "chaîne via to fund"
 },
 "fund|a fund|une caisse, un fonds": {
-"funds": "traduction « fonds »",
 "a check(-)out": "traduction « caisse »",
-"a mutual fund": "même fiche",
-"a fund-raising dinner": "même fiche"
-},
-"fund|funds|des fonds, des capitaux, des ressources": {
-"a fund": "traduction « fonds »",
+"funds": "traduction « fonds »",
 "a mutual fund": "même fiche",
 "a fund-raising dinner": "même fiche"
 },
@@ -10866,6 +10861,11 @@
 "a checking account": "même fiche",
 "a cash register": "même fiche"
 },
+"fund|funds|des fonds, des capitaux, des ressources": {
+"a fund": "traduction « fonds »",
+"a mutual fund": "même fiche",
+"a fund-raising dinner": "même fiche"
+},
 "funnel|to funnel (into/to)|acheminer, canaliser (des fonds, des arm": {
 "to convey": "traduction « acheminer »"
 },
@@ -10874,11 +10874,11 @@
 "trash": "traduction « inepties »"
 },
 "gag|a gag order|une interdiction de communiquer, une ord": {
-"a gagging order": "traduction « ordonnance non-publication »",
+"a gagging order": "traduction « interdiction communiquer »",
 "a gag": "même fiche"
 },
 "gag|a gagging order|une interdiction de communiquer, une ord": {
-"a gag order": "traduction « ordonnance non-publication »",
+"a gag order": "traduction « interdiction communiquer »",
 "a gag": "même fiche"
 },
 "gambit|a gambit|une manœuvre, un stratagème": {
@@ -11136,9 +11136,9 @@
 "to bribe sb": "chaîne via to pay sb off"
 },
 "gross|gross|dégoûtant, répugnant (familier)": {
-"revolting": "traduction « répugnant »",
+"revolting": "traduction « dégoûtant »",
+"loathsome": "traduction « dégoûtant »",
 "abhorrent (to)": "traduction « répugnant »",
-"loathsome": "traduction « répugnant »",
 "repellent": "traduction « répugnant »",
 "crass": "même fiche",
 "coarse": "même fiche",
@@ -11147,9 +11147,9 @@
 "thoughtless": "même fiche"
 },
 "obnoxious|revolting|répugnant, dégoûtant": {
-"gross": "traduction « répugnant »",
+"gross": "traduction « dégoûtant »",
+"loathsome": "traduction « dégoûtant »",
 "abhorrent (to)": "traduction « répugnant »",
-"loathsome": "traduction « répugnant »",
 "repellent": "traduction « répugnant »",
 "unpleasant": "même fiche",
 "filthy": "chaîne via foul"
@@ -11270,22 +11270,22 @@
 "picky": "traduction « exigeant »"
 },
 "head|to make headway|progresser, avancer": {
-"to get along": "traduction « progresser »",
-"to improve": "traduction « progresser »",
 "to float": "traduction « avancer »",
-"to put forward/forth": "traduction « avancer »"
-},
-"to get along|to get along|avancer, progresser, s'en sortir": {
-"to make headway": "traduction « progresser »",
-"to improve": "traduction « progresser »",
-"to float": "traduction « avancer »",
+"to get along": "traduction « avancer »",
 "to put forward/forth": "traduction « avancer »",
-"to get along with sb": "même fiche"
+"to improve": "traduction « progresser »"
 },
 "to float|to float|lancer, avancer (une idée, une propositi": {
 "to make headway": "traduction « avancer »",
 "to get along": "traduction « avancer »",
 "to float sth": "même fiche"
+},
+"to get along|to get along|avancer, progresser, s'en sortir": {
+"to make headway": "traduction « avancer »",
+"to float": "traduction « avancer »",
+"to put forward/forth": "traduction « avancer »",
+"to improve": "traduction « progresser »",
+"to get along with sb": "même fiche"
 },
 "hearing|hearing|l'ouïe, l'audition": {
 "a hearing": "traduction « audition »"
@@ -11318,7 +11318,7 @@
 "worthwhile": "traduction « utile »"
 },
 "high|high|élevé, haut": {
-"lofty": "traduction « élevé »",
+"lofty": "traduction « haut »",
 "stiff": "traduction « élevé »",
 "high-grade": "même fiche",
 "high-powered": "même fiche",
@@ -11326,7 +11326,7 @@
 "highbrow": "même fiche"
 },
 "lofty|lofty|haut, élevé": {
-"high": "traduction « élevé »",
+"high": "traduction « haut »",
 "stiff": "traduction « élevé »"
 },
 "high|highly|très, hautement, fortement": {
@@ -11518,18 +11518,18 @@
 "a hindrance": "traduction « obstacle »"
 },
 "impervious to|impervious to|insensible à, imperméable à": {
-"numb": "traduction « insensible »",
-"water-repellent": "traduction « imperméable »"
+"water-repellent": "traduction « imperméable »",
+"numb": "traduction « insensible »"
+},
+"to repel|water-repellent|imperméable, déperlant": {
+"impervious to": "traduction « imperméable »",
+"repellent": "même fiche"
 },
 "numb|numb|engourdi, insensible (physique)": {
 "impervious to": "traduction « insensible »",
 "numb (with)": "même fiche",
 "mind-numbing": "même fiche",
 "dazed": "même fiche"
-},
-"to repel|water-repellent|imperméable, déperlant": {
-"impervious to": "traduction « imperméable »",
-"repellent": "même fiche"
 },
 "momentum|momentum|l'élan, la dynamique": {
 "a thrust": "traduction « élan »"
@@ -11572,7 +11572,7 @@
 "to incite": "traduction « inciter »",
 "to nudge": "traduction « inciter »",
 "to prompt": "traduction « inciter »",
-"to appeal to": "traduction « attirer »",
+"to appeal to": "traduction « séduire »",
 "to draw": "traduction « attirer »",
 "to garner": "traduction « attirer »",
 "to incur": "traduction « attirer »"
@@ -11880,17 +11880,6 @@
 "low-key": "traduction « discret »",
 "retiring": "traduction « discret »"
 },
-"kickback|a recoil|un recul (arme)": {
-"perspective": "traduction « recul »",
-"a bribe": "chaîne via a kickback",
-"a payoff": "chaîne via a kickback"
-},
-"outlook|perspective|le recul, le sens des proportions": {
-"a kickback": "traduction « recul »",
-"a recoil": "traduction « recul »",
-"the outlook": "même fiche",
-"an outlook (on)": "même fiche"
-},
 "to bounce|a bounce|un rebond": {
 "a kickback": "traduction « rebond »",
 "a pick(-)up": "traduction « rebond »",
@@ -11904,6 +11893,17 @@
 "an upswing": "traduction « reprise »",
 "a trade-in": "traduction « reprise »",
 "an economic recovery": "chaîne via an upturn"
+},
+"kickback|a recoil|un recul (arme)": {
+"perspective": "traduction « recul »",
+"a bribe": "chaîne via a kickback",
+"a payoff": "chaîne via a kickback"
+},
+"outlook|perspective|le recul, le sens des proportions": {
+"a kickback": "traduction « recul »",
+"a recoil": "traduction « recul »",
+"the outlook": "même fiche",
+"an outlook (on)": "même fiche"
 },
 "kickback|to recoil (from)|avoir un mouvement de recul (devant), re": {
 "to back up": "traduction « reculer »"
@@ -12297,12 +12297,8 @@
 "outrage (at, over)": "même fiche"
 },
 "misgivings|misgivings|des doutes, des réserves, de l'appréhens": {
-"(a) foreboding": "traduction « appréhension »",
-"a stockpile": "traduction « réserves »"
-},
-"ominous|(a) foreboding|un (mauvais) pressentiment, l'appréhensi": {
-"misgivings": "traduction « appréhension »",
-"an omen": "même fiche"
+"a stockpile": "traduction « réserves »",
+"(a) foreboding": "traduction « appréhension »"
 },
 "to hoard|a stockpile|un stock, des réserves (stratégiques)": {
 "misgivings": "traduction « réserves »",
@@ -12311,6 +12307,10 @@
 "a stash": "même fiche",
 "a billboard": "même fiche",
 "a poster": "même fiche"
+},
+"ominous|(a) foreboding|un (mauvais) pressentiment, l'appréhensi": {
+"misgivings": "traduction « appréhension »",
+"an omen": "même fiche"
 },
 "to advise|ill-advised|malavisé, peu judicieux, imprudent": {
 "unwise": "traduction « malavisé »",
@@ -12347,13 +12347,13 @@
 "momentous": "traduction « capital »"
 },
 "morals|a moral|une morale (pour une histoire), une mora": {
-"morality": "traduction « morale »",
+"morality": "traduction « moralité »",
 "morals": "même fiche",
 "moral hazard": "même fiche",
 "morale": "même fiche"
 },
 "morals|morality|la morale, la moralité": {
-"a moral": "traduction « morale »",
+"a moral": "traduction « moralité »",
 "morals": "même fiche",
 "moral hazard": "même fiche",
 "morale": "même fiche"
@@ -12481,21 +12481,21 @@
 "dated": "chaîne via old-fashioned"
 },
 "obstinate|obstinate|obstiné, entêté, têtu (personne, attitud": {
-"headstrong": "traduction « entêté »",
-"wilful": "traduction « entêté »"
+"headstrong": "traduction « têtu »",
+"wilful": "traduction « têtu »"
 },
 "obstinate|headstrong|entêté, têtu, impétueux": {
-"obstinate": "traduction « entêté »",
-"stubborn": "traduction « entêté »",
+"obstinate": "traduction « têtu »",
+"stubborn": "traduction « têtu »",
 "rash": "traduction « impétueux »"
 },
 "stubborn|stubborn|têtu, entêté, obstiné (personne)": {
-"headstrong": "traduction « entêté »",
-"wilful": "traduction « entêté »"
+"headstrong": "traduction « têtu »",
+"wilful": "traduction « têtu »"
 },
 "wilful|wilful|entêté, têtu, qui n'en fait qu'à sa tête": {
-"obstinate": "traduction « entêté »",
-"stubborn": "traduction « entêté »"
+"obstinate": "traduction « têtu »",
+"stubborn": "traduction « têtu »"
 },
 "obstinate|obstinate|tenace, persistant (résistance, problème": {
 "nagging": "traduction « tenace »",
@@ -12713,6 +12713,13 @@
 "a snare": "traduction « piège »",
 "a mind-set": "même fiche"
 },
+"to corner|to corner sb|acculer qn, coincer qn, mettre qn au pie": {
+"to pin sb down (to/on sth)": "traduction « coincer »",
+"to corner the market": "même fiche",
+"to cut corners": "même fiche",
+"to turn the corner": "même fiche",
+"to snare": "chaîne via a trap"
+},
 "pitfall|to snare|prendre au collet, piéger, décrocher (un": {
 "to ensnare": "traduction « piéger »",
 "to set sb up": "traduction « piéger »",
@@ -12736,13 +12743,6 @@
 "to hoodwink sb (into doing sth)": "traduction « duper »",
 "to take sb in": "traduction « duper »",
 "to take sth in": "chaîne via to fool sb"
-},
-"to corner|to corner sb|acculer qn, coincer qn, mettre qn au pie": {
-"to pin sb down (to/on sth)": "traduction « coincer »",
-"to corner the market": "même fiche",
-"to cut corners": "même fiche",
-"to turn the corner": "même fiche",
-"to snare": "chaîne via a trap"
 },
 "to glaze|to glaze over|devenir vitreux (regard), décrocher (d'e": {
 "to snare": "traduction « décrocher »",
@@ -12785,9 +12785,9 @@
 "to pursue a policy": "traduction « mener »",
 "to lead (led)": "traduction « mener »",
 "to wage": "traduction « mener »",
-"to deliver": "traduction « effectuer »",
 "to enact": "traduction « mettre œuvre »",
-"to put into effect": "traduction « mettre œuvre »"
+"to put into effect": "traduction « mettre œuvre »",
+"to deliver": "traduction « effectuer »"
 },
 "to lead|to lead (led)|mener, diriger, conduire": {
 "to pursue a policy": "traduction « mener »",
@@ -13124,17 +13124,21 @@
 "resurgence|a revival|un renouveau, une reprise, un regain": {
 "a boost": "traduction « regain »",
 "a flare-up": "traduction « regain »",
+"renewal": "traduction « renouveau »",
 "a pick(-)up": "traduction « reprise »",
 "an upturn": "traduction « reprise »",
 "a resumption": "traduction « reprise »",
 "an upswing": "traduction « reprise »",
-"a trade-in": "traduction « reprise »",
-"renewal": "traduction « renouveau »"
+"a trade-in": "traduction « reprise »"
 },
 "to boost|a boost|un regain (de confiance, de moral)": {
 "a resurgence": "traduction « regain »",
 "a revival": "traduction « regain »",
 "a flare-up": "traduction « regain »"
+},
+"to renew|renewal|le renouveau": {
+"a revival": "traduction « renouveau »",
+"a renewal": "même fiche"
 },
 "to pick up|an upturn|une reprise, une amélioration": {
 "a revival": "traduction « reprise »",
@@ -13173,10 +13177,6 @@
 "an upswing": "traduction « reprise »",
 "a trade-off (between)": "même fiche"
 },
-"to renew|renewal|le renouveau": {
-"a revival": "traduction « renouveau »",
-"a renewal": "même fiche"
-},
 "revelry|to revel in|se délecter de, se complaire dans": {
 "to relish (doing) sth": "traduction « délecter »"
 },
@@ -13193,8 +13193,8 @@
 "bedridden": "même fiche"
 },
 "rift|a rift|une fracture, une rupture, une brouille": {
-"a bust-up": "traduction « brouille »",
 "a divide": "traduction « fracture »",
+"a bust-up": "traduction « brouille »",
 "a splinter": "chaîne via to split (split)",
 "a share (of)": "chaîne via to split sth"
 },
@@ -13439,14 +13439,9 @@
 "to disapprove of": "chaîne via to deprecate"
 },
 "slight|to snub|snober, ignorer (avec mépris), bouder (u": {
-"to ignore": "traduction « ignorer »",
 "to shun": "traduction « bouder »",
+"to ignore": "traduction « ignorer »",
 "to faint": "chaîne via slight"
-},
-"to ignore|to ignore|ignorer (qn), ne tenir aucun compte de, ": {
-"to snub": "traduction « ignorer »",
-"to override": "traduction « passer outre »",
-"to overlook": "chaîne via to disregard"
 },
 "to shun|to shun|fuir, éviter, bouder, tenir à l'écart": {
 "to snub": "traduction « bouder »",
@@ -13455,29 +13450,28 @@
 "to flee (fled)": "traduction « fuir »",
 "to leak": "traduction « fuir »"
 },
-"to cave in|to cave in|s'effondrer, s'affaisser": {
-"to slump": "traduction « effondrer »",
-"to break down": "traduction « effondrer »",
-"to crumble": "traduction « effondrer »",
-"to fall apart": "traduction « effondrer »",
-"to cave (in) (to)": "même fiche"
+"to ignore|to ignore|ignorer (qn), ne tenir aucun compte de, ": {
+"to snub": "traduction « ignorer »",
+"to override": "traduction « passer outre »",
+"to overlook": "chaîne via to disregard"
 },
-"to crumble|to crumble|s'effriter, tomber en ruine, s'effondrer": {
-"to slump": "traduction « effondrer »",
-"to break down": "traduction « effondrer »",
-"to cave in": "traduction « effondrer »",
-"to collapse": "traduction « effondrer »",
-"to fall apart": "traduction « effondrer »",
-"to erode": "traduction « effriter »",
-"to decay": "traduction « tomber ruine »",
-"to crumble sth": "même fiche"
+"to plummet|to tumble|chuter, dégringoler, tomber": {
+"to slump": "traduction « dégringoler »",
+"to plunge": "traduction « dégringoler »",
+"to drop": "traduction « chuter »",
+"to fall": "traduction « chuter »",
+"to fall (fell, fallen)": "traduction « tomber »",
+"to stumble across/on/upon": "traduction « tomber »",
+"to topple (over)": "traduction « tomber »",
+"to topple": "traduction « tomber »"
 },
-"to fall apart|to fall apart|se désagréger, s'effondrer, tomber en mo": {
-"to slump": "traduction « effondrer »",
-"to break down": "traduction « effondrer »",
-"to cave in": "traduction « effondrer »",
-"to collapse": "traduction « effondrer »",
-"to crumble": "traduction « effondrer »"
+"to plunge|to plunge|chuter, dégringoler": {
+"to slump": "traduction « dégringoler »",
+"to tumble": "traduction « dégringoler »",
+"to drop": "traduction « chuter »",
+"to fall": "traduction « chuter »",
+"to plunge (sb/sth) into sth": "même fiche",
+"to take the plunge": "même fiche"
 },
 "to drop|to drop|baisser, chuter": {
 "to slump": "traduction « chuter »",
@@ -13502,23 +13496,29 @@
 "to fall": "traduction « chuter »",
 "to slouch": "chaîne via to slump"
 },
-"to plummet|to tumble|chuter, dégringoler, tomber": {
-"to slump": "traduction « chuter »",
-"to drop": "traduction « chuter »",
-"to fall": "traduction « chuter »",
-"to plunge": "traduction « chuter »",
-"to fall (fell, fallen)": "traduction « tomber »",
-"to stumble across/on/upon": "traduction « tomber »",
-"to topple (over)": "traduction « tomber »",
-"to topple": "traduction « tomber »"
+"to cave in|to cave in|s'effondrer, s'affaisser": {
+"to slump": "traduction « effondrer »",
+"to break down": "traduction « effondrer »",
+"to crumble": "traduction « effondrer »",
+"to fall apart": "traduction « effondrer »",
+"to cave (in) (to)": "même fiche"
 },
-"to plunge|to plunge|chuter, dégringoler": {
-"to slump": "traduction « chuter »",
-"to drop": "traduction « chuter »",
-"to fall": "traduction « chuter »",
-"to tumble": "traduction « chuter »",
-"to plunge (sb/sth) into sth": "même fiche",
-"to take the plunge": "même fiche"
+"to crumble|to crumble|s'effriter, tomber en ruine, s'effondrer": {
+"to slump": "traduction « effondrer »",
+"to break down": "traduction « effondrer »",
+"to cave in": "traduction « effondrer »",
+"to collapse": "traduction « effondrer »",
+"to fall apart": "traduction « effondrer »",
+"to erode": "traduction « effriter »",
+"to decay": "traduction « tomber ruine »",
+"to crumble sth": "même fiche"
+},
+"to fall apart|to fall apart|se désagréger, s'effondrer, tomber en mo": {
+"to slump": "traduction « effondrer »",
+"to break down": "traduction « effondrer »",
+"to cave in": "traduction « effondrer »",
+"to collapse": "traduction « effondrer »",
+"to crumble": "traduction « effondrer »"
 },
 "slump|a slump|une chute, un effondrement": {
 "a breakdown": "traduction « effondrement »",
@@ -13618,13 +13618,23 @@
 "to bear interest": "même fiche"
 },
 "span|to span|s'étendre sur, couvrir, enjamber": {
-"to hedge sth (against sth)": "traduction « couvrir »",
-"to lavish sth (on sb) / to lavish sb with sth": "traduction « couvrir »",
-"to underwrite (underwrote, underwritten)": "traduction « couvrir »",
 "to expand": "traduction « étendre »",
 "to expand sth": "traduction « étendre »",
 "to extend": "traduction « étendre »",
-"to spill over (into)": "traduction « étendre »"
+"to spill over (into)": "traduction « étendre »",
+"to hedge sth (against sth)": "traduction « couvrir »",
+"to lavish sth (on sb) / to lavish sb with sth": "traduction « couvrir »",
+"to underwrite (underwrote, underwritten)": "traduction « couvrir »"
+},
+"to spill|to spill over (into)|déborder, se répandre, s'étendre (à)": {
+"to span": "traduction « étendre »",
+"to expand": "traduction « étendre »",
+"to expand sth": "traduction « étendre »",
+"to extend": "traduction « étendre »",
+"to overwhelm": "traduction « déborder »",
+"to swamp": "traduction « déborder »",
+"to bustle with": "traduction « déborder »",
+"to spill (spilled/spilt)": "même fiche"
 },
 "to encompass|to encompass|englober, couvrir, comprendre": {
 "to hedge sth (against sth)": "traduction « couvrir »",
@@ -13650,16 +13660,6 @@
 "to hedge sth (against sth)": "traduction « couvrir »",
 "to underwrite (underwrote, underwritten)": "traduction « couvrir »",
 "to plug": "traduction « combler »"
-},
-"to spill|to spill over (into)|déborder, se répandre, s'étendre (à)": {
-"to span": "traduction « étendre »",
-"to expand": "traduction « étendre »",
-"to expand sth": "traduction « étendre »",
-"to extend": "traduction « étendre »",
-"to overwhelm": "traduction « déborder »",
-"to swamp": "traduction « déborder »",
-"to bustle with": "traduction « déborder »",
-"to spill (spilled/spilt)": "même fiche"
 },
 "span|a span|une durée, un laps de temps": {
 "a lapse of time": "traduction « laps temps »"
@@ -13786,15 +13786,6 @@
 "to pare down": "chaîne via to trim",
 "to whittle down": "chaîne via to trim"
 },
-"stake|to wager|parier, miser": {
-"to gamble on": "traduction « miser »",
-"to stake out sth": "même fiche"
-},
-"to gamble|to gamble on|miser sur": {
-"to wager": "traduction « miser »",
-"to gamble": "même fiche",
-"to gamble on doing sth": "même fiche"
-},
 "stake|to stake (on)|miser, jouer (sur)": {
 "to gamble": "traduction « jouer »",
 "to pander to": "traduction « jouer »",
@@ -13815,6 +13806,15 @@
 "to play up to|to play up to|jouer sur, flatter": {
 "to stake (on)": "traduction « jouer »",
 "to gamble": "traduction « jouer »"
+},
+"stake|to wager|parier, miser": {
+"to gamble on": "traduction « miser »",
+"to stake out sth": "même fiche"
+},
+"to gamble|to gamble on|miser sur": {
+"to wager": "traduction « miser »",
+"to gamble": "même fiche",
+"to gamble on doing sth": "même fiche"
 },
 "stake|a stake (in)|une participation (dans)": {
 "involvement (in)": "traduction « participation »",
@@ -13941,28 +13941,24 @@
 "risk-averse": "même fiche"
 },
 "strain|strain|la tension, la pression, l'effort": {
+"a squeeze": "traduction « pression »",
 "an endeavour (GB) / an endeavor (US)": "traduction « effort »",
 "exertion": "traduction « effort »",
-"a squeeze": "traduction « pression »",
 "a strain": "même fiche"
-},
-"to exert|exertion|l'effort": {
-"strain": "traduction « effort »",
-"an endeavour (GB) / an endeavor (US)": "traduction « effort »"
 },
 "to squeeze|a squeeze|une pression, une étreinte": {
 "strain": "traduction « pression »",
 "a squeeze (on)": "même fiche"
 },
+"to exert|exertion|l'effort": {
+"strain": "traduction « effort »",
+"an endeavour (GB) / an endeavor (US)": "traduction « effort »"
+},
 "strain|to strain sth|mettre à rude épreuve, peser sur (financ": {
-"to stretch": "traduction « mettre rude épreuve »",
 "to impinge on": "traduction « peser »",
 "to overshadow": "traduction « peser »",
-"to weigh (on)": "traduction « peser »"
-},
-"to stretch|to stretch|mettre à rude épreuve, grever (budget, r": {
-"to strain sth": "traduction « mettre rude épreuve »",
-"to stretch sth": "même fiche"
+"to weigh (on)": "traduction « peser »",
+"to stretch": "traduction « mettre rude épreuve »"
 },
 "to weigh|to weigh (on)|peser": {
 "to strain sth": "traduction « peser »",
@@ -13971,6 +13967,10 @@
 "to weigh in (on)": "même fiche",
 "to outweigh": "même fiche"
 },
+"to stretch|to stretch|mettre à rude épreuve, grever (budget, r": {
+"to strain sth": "traduction « mettre rude épreuve »",
+"to stretch sth": "même fiche"
+},
 "stubborn|stubbornly|obstinément": {
 "wilfully": "traduction « obstinément »"
 },
@@ -13978,27 +13978,11 @@
 "stubbornly": "traduction « obstinément »"
 },
 "subdued|to subdue|soumettre, maîtriser, mater": {
-"to get a handle on sth": "traduction « maîtriser »",
-"to rein in": "traduction « maîtriser »",
 "to bend": "traduction « soumettre »",
 "to bend to": "traduction « soumettre »",
-"to put sth down": "traduction « mater »"
-},
-"to handle|to get a handle on sth|cerner qch, maîtriser qch, comprendre qc": {
-"to subdue": "traduction « maîtriser »",
-"to rein in": "traduction « maîtriser »",
-"to figure out": "traduction « cerner »",
-"to pin sth down": "traduction « cerner »",
-"to pinpoint": "traduction « cerner »",
-"to handle": "même fiche",
-"to mishandle": "même fiche",
-"to bungle sth": "même fiche"
-},
-"to rein in|to rein in|freiner, juguler, maîtriser": {
-"to subdue": "traduction « maîtriser »",
 "to get a handle on sth": "traduction « maîtriser »",
-"to give sb free rein": "même fiche",
-"to check": "chaîne via to curb"
+"to rein in": "traduction « maîtriser »",
+"to put sth down": "traduction « mater »"
 },
 "to bend|to bend|faire plier, soumettre": {
 "to subdue": "traduction « soumettre »",
@@ -14015,6 +13999,22 @@
 "to bend (down)": "même fiche",
 "to bend the rules": "même fiche",
 "to bend over backwards": "même fiche"
+},
+"to handle|to get a handle on sth|cerner qch, maîtriser qch, comprendre qc": {
+"to subdue": "traduction « maîtriser »",
+"to rein in": "traduction « maîtriser »",
+"to figure out": "traduction « cerner »",
+"to pin sth down": "traduction « cerner »",
+"to pinpoint": "traduction « cerner »",
+"to handle": "même fiche",
+"to mishandle": "même fiche",
+"to bungle sth": "même fiche"
+},
+"to rein in|to rein in|freiner, juguler, maîtriser": {
+"to subdue": "traduction « maîtriser »",
+"to get a handle on sth": "traduction « maîtriser »",
+"to give sb free rein": "même fiche",
+"to check": "chaîne via to curb"
 },
 "suburb(s)|a suburbanite|un banlieusard": {
 "a commuter": "traduction « banlieusard »",
@@ -14056,6 +14056,10 @@
 "to discard": "chaîne via to dismiss sb/sth",
 "to discard sth": "chaîne via to dismiss sb/sth"
 },
+"to supersede|to supersede|remplacer, succéder à": {
+"to take over (from)": "traduction « succéder »",
+"to stand in (for sb/sth)": "traduction « remplacer »"
+},
 "to pull oneself together|to pull oneself together|se ressaisir, se reprendre": {
 "to take over (from)": "traduction « reprendre »",
 "to pick up": "traduction « reprendre »",
@@ -14065,10 +14069,6 @@
 "to take over (from)": "traduction « reprendre »",
 "to pick up": "traduction « reprendre »",
 "to pull oneself together": "traduction « reprendre »"
-},
-"to supersede|to supersede|remplacer, succéder à": {
-"to take over (from)": "traduction « succéder »",
-"to stand in (for sb/sth)": "traduction « remplacer »"
 },
 "takeover|to take over sth|racheter, prendre le contrôle de (une en": {
 "to buy sb/sth out (bought)": "traduction « racheter »",
@@ -14189,16 +14189,12 @@
 "ownership": "même fiche"
 },
 "term|to come to terms with|accepter, se faire à, se résigner à": {
-"to resign oneself to sth": "traduction « résigner »",
 "to grab": "traduction « faire »",
 "to wage": "traduction « faire »",
 "to agree to (do) sth": "traduction « accepter »",
 "to face": "traduction « accepter »",
-"to face up to": "traduction « accepter »"
-},
-"to resign|to resign oneself to sth|se résigner à (qch)": {
-"to come to terms with": "traduction « résigner »",
-"to resign": "même fiche"
+"to face up to": "traduction « accepter »",
+"to resign oneself to sth": "traduction « résigner »"
 },
 "to agree|to agree to (do) sth|accepter (de faire) qch, consentir à qch": {
 "to come to terms with": "traduction « accepter »",
@@ -14216,6 +14212,10 @@
 "to clash (with sb) (on/over sth)": "traduction « affronter »",
 "to take on sb/sth": "traduction « affronter »"
 },
+"to resign|to resign oneself to sth|se résigner à (qch)": {
+"to come to terms with": "traduction « résigner »",
+"to resign": "même fiche"
+},
 "testimony|a testimony|un témoignage, une déposition": {
 "a token (of)": "traduction « témoignage »"
 },
@@ -14227,8 +14227,8 @@
 "edgy": "traduction « irritable »"
 },
 "thorough|thorough|minutieux, approfondi, exhaustif": {
-"finicky": "traduction « minutieux »",
-"all-encompassing": "traduction « exhaustif »"
+"all-encompassing": "traduction « exhaustif »",
+"finicky": "traduction « minutieux »"
 },
 "to exhaust|exhaustive|exhaustif": {
 "all-encompassing": "traduction « exhaustif »",
@@ -14249,11 +14249,15 @@
 "thrilling": "traduction « palpitant »"
 },
 "tip|the tip|le bout, la pointe": {
-"a scrap": "traduction « bout »",
 "a hint of": "traduction « pointe »",
+"a scrap": "traduction « bout »",
 "a tipping point": "même fiche",
 "a tip": "même fiche",
 "a tip-off": "même fiche"
+},
+"to hint|a hint of|une pointe de, un soupçon de": {
+"the tip": "traduction « pointe »",
+"a hint": "même fiche"
 },
 "to scrap|a scrap|un bout, un reste, (not a scrap of) pas ": {
 "the tip": "traduction « bout »",
@@ -14261,18 +14265,31 @@
 "a remnant": "traduction « reste »",
 "scrap (metal)": "même fiche"
 },
-"to hint|a hint of|une pointe de, un soupçon de": {
-"the tip": "traduction « pointe »",
-"a hint": "même fiche"
-},
 "tip|to tip sth|incliner qch, faire pencher qch, faire b": {
+"to swing sb/sth": "traduction « faire pencher »",
 "to tip sth over": "traduction « faire basculer »",
-"to swing sb/sth": "traduction « faire basculer »",
 "to topple sth": "traduction « faire basculer »",
 "to tip over": "même fiche",
 "to tip sb off": "même fiche",
 "to be tipped (for sth / to do sth)": "même fiche",
 "to tip (sb)": "même fiche"
+},
+"tip|to tilt sth|incliner qch, faire pencher qch, faire b": {
+"to swing sb/sth": "traduction « faire pencher »",
+"to tip sth over": "traduction « faire basculer »",
+"to topple sth": "traduction « faire basculer »",
+"to tip over": "même fiche",
+"to tip sb off": "même fiche",
+"to be tipped (for sth / to do sth)": "même fiche"
+},
+"to swing|to swing sb/sth|faire basculer, faire pencher (un vote, ": {
+"to tip sth": "traduction « faire pencher »",
+"to tilt sth": "traduction « faire pencher »",
+"to tip sth over": "traduction « faire basculer »",
+"to topple sth": "traduction « faire basculer »",
+"to swing (swung, swung)": "même fiche",
+"to swing sth": "même fiche",
+"to swing (for sth)": "même fiche"
 },
 "tip|to tip sth over|renverser qch, faire basculer qch": {
 "to tip sth": "traduction « faire basculer »",
@@ -14288,23 +14305,6 @@
 "to upset sth": "chaîne via to knock sb/sth over",
 "to upset": "chaîne via to knock sb/sth over",
 "to upset sb": "chaîne via to knock sb/sth over"
-},
-"tip|to tilt sth|incliner qch, faire pencher qch, faire b": {
-"to tip sth over": "traduction « faire basculer »",
-"to swing sb/sth": "traduction « faire basculer »",
-"to topple sth": "traduction « faire basculer »",
-"to tip over": "même fiche",
-"to tip sb off": "même fiche",
-"to be tipped (for sth / to do sth)": "même fiche"
-},
-"to swing|to swing sb/sth|faire basculer, faire pencher (un vote, ": {
-"to tip sth": "traduction « faire basculer »",
-"to tip sth over": "traduction « faire basculer »",
-"to tilt sth": "traduction « faire basculer »",
-"to topple sth": "traduction « faire basculer »",
-"to swing (swung, swung)": "même fiche",
-"to swing sth": "même fiche",
-"to swing (for sth)": "même fiche"
 },
 "to shift|to shift|évoluer, se déplacer, basculer (opinion,": {
 "to tip over": "traduction « basculer »",
@@ -14394,21 +14394,21 @@
 "to look up": "même fiche"
 },
 "to achieve|to achieve|atteindre, réaliser, obtenir (un objecti": {
-"to fulfil (GB) / to fulfill (US)": "traduction « réaliser »",
 "to fetch": "traduction « atteindre »",
-"to reach": "traduction « atteindre »"
-},
-"to fulfil(l)|to fulfil (GB) / to fulfill (US)|remplir, satisfaire à (conditions), teni": {
-"to achieve": "traduction « réaliser »",
-"to indulge sth": "traduction « satisfaire »"
+"to reach": "traduction « atteindre »",
+"to fulfil (GB) / to fulfill (US)": "traduction « réaliser »"
 },
 "to attain|to attain|atteindre, parvenir à, accéder à": {
 "to fetch": "traduction « atteindre »",
 "to hammer out sth": "traduction « parvenir »"
 },
+"to fulfil(l)|to fulfil (GB) / to fulfill (US)|remplir, satisfaire à (conditions), teni": {
+"to achieve": "traduction « réaliser »",
+"to indulge sth": "traduction « satisfaire »"
+},
 "to acknowledge|to acknowledge sth / to acknowledge that|reconnaître, admettre (qch, que)": {
-"to own up to": "traduction « reconnaître »",
 "to grant (that)": "traduction « admettre »",
+"to own up to": "traduction « reconnaître »",
 "to acknowledge (receipt of) sth": "même fiche",
 "to grant": "chaîne via to concede"
 },
@@ -14707,11 +14707,20 @@
 "to founder": "même fiche"
 },
 "to arise|to arise (from) (arose, arisen)|survenir, se poser, se présenter, naître": {
+"to spring from": "traduction « naître »",
+"to spring up": "traduction « naître »",
 "to land": "traduction « poser »",
 "to lay (laid)": "traduction « poser »",
-"to settle down": "traduction « poser »",
-"to spring from": "traduction « naître »",
-"to spring up": "traduction « naître »"
+"to settle down": "traduction « poser »"
+},
+"to spring|to spring from|découler de, naître de, provenir de": {
+"to arise (from) (arose, arisen)": "traduction « naître »",
+"to spring up": "traduction « naître »",
+"to flow from": "traduction « découler »",
+"to issue from": "traduction « découler »",
+"to spring (sprang/sprung (US), sprung)": "même fiche",
+"to leap (leapt/leaped)": "même fiche",
+"to issue (forth) from": "chaîne via to stem from"
 },
 "to come up|to come up|se poser, être soulevé, se présenter": {
 "to land": "traduction « poser »",
@@ -14735,15 +14744,6 @@
 "to settle": "même fiche",
 "to settle for": "même fiche",
 "to bill": "même fiche"
-},
-"to spring|to spring from|découler de, naître de, provenir de": {
-"to arise (from) (arose, arisen)": "traduction « naître »",
-"to spring up": "traduction « naître »",
-"to flow from": "traduction « provenir »",
-"to issue from": "traduction « découler »",
-"to spring (sprang/sprung (US), sprung)": "même fiche",
-"to leap (leapt/leaped)": "même fiche",
-"to issue (forth) from": "chaîne via to stem from"
 },
 "to arouse|to dampen|refroidir, tempérer (enthousiasme, ardeu": {
 "to mitigate": "traduction « tempérer »"
@@ -14796,11 +14796,21 @@
 "an attempt (at sth / to do sth)": "traduction « essai »"
 },
 "to attend|to attend|assister à, participer à (une réunion, u": {
+"to engage in sth": "traduction « participer »",
 "to look on": "traduction « assister »",
 "to witness": "traduction « assister »",
-"to engage in sth": "traduction « participer »",
 "to attend to": "même fiche",
 "to witness an event": "même fiche"
+},
+"to engage|to engage in sth|se livrer à qch, pratiquer qch, particip": {
+"to attend": "traduction « participer »",
+"to hand over sb/sth": "traduction « livrer »",
+"to deliver": "traduction « livrer »",
+"to indulge in sth": "traduction « livrer »",
+"to engage sb": "même fiche",
+"to engage (with)": "même fiche",
+"to be engaged in doing sth": "même fiche",
+"to get engaged": "même fiche"
 },
 "to look on upon|to look on|regarder sans intervenir, assister (impu": {
 "to attend": "traduction « assister »",
@@ -14815,16 +14825,6 @@
 "to bear witness against sb": "même fiche",
 "to bear false witness": "même fiche",
 "to commit perjury": "même fiche"
-},
-"to engage|to engage in sth|se livrer à qch, pratiquer qch, particip": {
-"to attend": "traduction « participer »",
-"to hand over sb/sth": "traduction « livrer »",
-"to deliver": "traduction « livrer »",
-"to indulge in sth": "traduction « livrer »",
-"to engage sb": "même fiche",
-"to engage (with)": "même fiche",
-"to be engaged in doing sth": "même fiche",
-"to get engaged": "même fiche"
 },
 "to attend|to attend|fréquenter, aller à, être scolarisé à (u": {
 "to fit sb (fitted/fit)": "traduction « aller »",
@@ -14981,7 +14981,7 @@
 "to put sth down": "même fiche"
 },
 "to bestow|to bestow|accorder, conférer, décerner": {
-"to award sth (to sb) / to award sb sth": "traduction « accorder »",
+"to award sth (to sb) / to award sb sth": "traduction « décerner »",
 "to extend sth (to sb)": "traduction « accorder »",
 "to spare": "traduction « accorder »",
 "to impart sth (to sb/sth)": "traduction « conférer »",
@@ -15071,12 +15071,22 @@
 "to entice": "chaîne via to lure"
 },
 "to balk|to balk/baulk at|reculer devant, rechigner à, refuser (un": {
+"to grudge sth / to grudge doing sth": "traduction « rechigner »",
+"to shrink from": "traduction « reculer devant »",
 "to bounce sth": "traduction « refuser »",
 "to deny sb sth": "traduction « refuser »",
 "to turn down": "traduction « refuser »",
-"to withhold (withheld)": "traduction « refuser »",
-"to shrink from": "traduction « reculer devant »",
-"to grudge sth / to grudge doing sth": "traduction « rechigner »"
+"to withhold (withheld)": "traduction « refuser »"
+},
+"to grudge|to grudge sth / to grudge doing sth|rechigner à (donner, faire qch), donner ": {
+"to balk/baulk at": "traduction « rechigner »",
+"to grudge sb sth": "même fiche",
+"to bear a grudge against sb": "même fiche"
+},
+"to shrink|to shrink from|reculer devant, se dérober devant (une t": {
+"to balk/baulk at": "traduction « reculer devant »",
+"to shrink (shrank/shrunk, shrunk)": "même fiche",
+"to shrink back": "même fiche"
 },
 "to bounce|to bounce sth|refuser qch, rejeter qch (un chèque sans": {
 "to balk/baulk at": "traduction « refuser »",
@@ -15099,16 +15109,6 @@
 "to disclaim": "traduction « décliner »",
 "to ebb": "traduction « décliner »",
 "to wane": "traduction « décliner »"
-},
-"to shrink|to shrink from|reculer devant, se dérober devant (une t": {
-"to balk/baulk at": "traduction « reculer devant »",
-"to shrink (shrank/shrunk, shrunk)": "même fiche",
-"to shrink back": "même fiche"
-},
-"to grudge|to grudge sth / to grudge doing sth|rechigner à (donner, faire qch), donner ": {
-"to balk/baulk at": "traduction « rechigner »",
-"to grudge sb sth": "même fiche",
-"to bear a grudge against sb": "même fiche"
 },
 "to ban|to ban sth / to ban sb from (doing) sth|interdire, proscrire": {
 "to preclude": "traduction « interdire »"
@@ -15400,10 +15400,13 @@
 "overwhelming": "traduction « accablant »"
 },
 "to be overwhelmed by|to overwhelm|déborder, saturer (des services, un syst": {
+"to glut": "traduction « saturer »",
 "to bustle with": "traduction « déborder »",
 "to spill over (into)": "traduction « déborder »",
-"to overflow": "traduction « déborder »",
-"to glut": "traduction « saturer »"
+"to overflow": "traduction « déborder »"
+},
+"to glut|to glut|saturer (un marché)": {
+"to overwhelm": "traduction « saturer »"
 },
 "to be overwhelmed by|to swamp|submerger, inonder, déborder": {
 "to bustle with": "traduction « déborder »",
@@ -15422,9 +15425,6 @@
 "to swamp": "traduction « déborder »",
 "to bustle with": "traduction « déborder »",
 "to spill (spilled/spilt)": "même fiche"
-},
-"to glut|to glut|saturer (un marché)": {
-"to overwhelm": "traduction « saturer »"
 },
 "to be puzzled|puzzling|mystérieux, curieux, déroutant": {
 "weird": "traduction « curieux »",
@@ -15555,14 +15555,14 @@
 "to top up sth": "même fiche"
 },
 "to belie|to belie|masquer, cacher, dissimuler": {
-"to conceal": "traduction « cacher »",
+"to conceal": "traduction « dissimuler »",
 "to withhold": "traduction « cacher »"
 },
 "to belie|to belie|démentir, contredire": {
 "to deny sth": "traduction « démentir »"
 },
 "to bend|to bend (bent, bent)|se courber, se tordre, ployer, tourner (": {
-"to bend": "traduction « courber »",
+"to bend": "traduction « tordre »",
 "to twist": "traduction « tordre »",
 "to run (on)": "traduction « tourner »",
 "to bend (down)": "même fiche",
@@ -15571,7 +15571,7 @@
 "to bend over backwards": "même fiche"
 },
 "to bend|to bend|plier, courber, tordre": {
-"to bend (bent, bent)": "traduction « courber »",
+"to bend (bent, bent)": "traduction « tordre »",
 "to twist": "traduction « tordre »",
 "to comply with": "traduction « plier »",
 "to bend (down)": "même fiche",
@@ -15650,8 +15650,8 @@
 "to give sb/sth away": "traduction « révéler »",
 "to turn out": "traduction « révéler »",
 "to unveil": "traduction « révéler »",
-"to underscore": "traduction « mettre évidence »",
-"to tease out sth / to tease sth out": "traduction « faire ressortir »"
+"to tease out sth / to tease sth out": "traduction « faire ressortir »",
+"to underscore": "traduction « mettre évidence »"
 },
 "to disclose|to disclose|révéler, divulguer": {
 "to betray": "traduction « révéler »",
@@ -15695,26 +15695,11 @@
 "a bond": "traduction « lien »"
 },
 "to blaze|to blaze|brûler, flamber, flamboyer": {
-"to burn (sth) (burned/burnt)": "traduction « brûler »",
-"to burn through sth": "traduction « brûler »",
 "to escalate": "traduction « flamber »",
 "to soar": "traduction « flamber »",
-"to blaze a trail": "même fiche"
-},
-"to burn|to burn (sth) (burned/burnt)|brûler": {
-"to blaze": "traduction « brûler »",
-"to burn through sth": "traduction « brûler »",
-"to burn out": "même fiche",
-"to burn (oneself) out": "même fiche",
-"to burn down": "même fiche"
-},
-"to burn|to burn through sth|brûler, dilapider (de l'argent, des liqu": {
-"to blaze": "traduction « brûler »",
 "to burn (sth) (burned/burnt)": "traduction « brûler »",
-"to squander": "traduction « dilapider »",
-"to burn out": "même fiche",
-"to burn (oneself) out": "même fiche",
-"to burn down": "même fiche"
+"to burn through sth": "traduction « brûler »",
+"to blaze a trail": "même fiche"
 },
 "to escalate|to escalate|s'intensifier, s'aggraver, dégénérer, fl": {
 "to blaze": "traduction « flamber »",
@@ -15731,6 +15716,21 @@
 "to blaze": "traduction « flamber »",
 "to escalate": "traduction « flamber »",
 "to explode": "traduction « monter flèche »"
+},
+"to burn|to burn (sth) (burned/burnt)|brûler": {
+"to blaze": "traduction « brûler »",
+"to burn through sth": "traduction « brûler »",
+"to burn out": "même fiche",
+"to burn (oneself) out": "même fiche",
+"to burn down": "même fiche"
+},
+"to burn|to burn through sth|brûler, dilapider (de l'argent, des liqu": {
+"to blaze": "traduction « brûler »",
+"to burn (sth) (burned/burnt)": "traduction « brûler »",
+"to squander": "traduction « dilapider »",
+"to burn out": "même fiche",
+"to burn (oneself) out": "même fiche",
+"to burn down": "même fiche"
 },
 "to blaze|a blaze|un accès, une bouffée (de colère, de ran": {
 "a fit": "traduction « accès »",
@@ -15941,8 +15941,8 @@
 "to bust (busted/bust)": "traduction « casser »",
 "to rule": "même fiche",
 "to rule (on)": "même fiche",
-"to prevail (over sb/sth)": "chaîne via to override (overrode, overridden)",
-"to prevail": "chaîne via to override (overrode, overridden)"
+"to prevail": "chaîne via to override (overrode, overridden)",
+"to prevail (over sb/sth)": "chaîne via to override (overrode, overridden)"
 },
 "to break down|to break sth down|décomposer, ventiler (des chiffres, un p": {
 "to decay": "traduction « décomposer »",
@@ -15966,10 +15966,6 @@
 "to bounce back": "chaîne via to recover (from)",
 "to get over sth": "chaîne via to recover (from)"
 },
-"to get down to|to get down to (doing) sth|se mettre (enfin) à (faire) qch": {
-"to break into": "traduction « mettre »",
-"to lay (laid)": "traduction « mettre »"
-},
 "to burst|to burst into|éclater en (larmes, rire), prendre (feu)": {
 "to break out": "traduction « éclater »",
 "to burst (burst)": "traduction « éclater »",
@@ -15988,6 +15984,10 @@
 "to head": "même fiche",
 "to head for": "même fiche",
 "to head off": "même fiche"
+},
+"to get down to|to get down to (doing) sth|se mettre (enfin) à (faire) qch": {
+"to break into": "traduction « mettre »",
+"to lay (laid)": "traduction « mettre »"
 },
 "to come off|to come off|se détacher, se retirer, s'enlever": {
 "to break off": "traduction « détacher »",
@@ -16082,21 +16082,21 @@
 "an upbringing": "traduction « éducation »"
 },
 "to breed|to breed sth|engendrer, entretenir qch (un phénomène ": {
-"to give rise to": "traduction « engendrer »",
-"to make for": "traduction « engendrer »",
 "to keep up": "traduction « entretenir »",
 "to perpetuate": "traduction « entretenir »",
+"to give rise to": "traduction « engendrer »",
+"to make for": "traduction « engendrer »",
 "to breed sth (bred)": "même fiche",
 "to breed": "même fiche"
+},
+"to perpetuate|to perpetuate|perpétuer, entretenir": {
+"to breed sth": "traduction « entretenir »",
+"to keep up": "traduction « entretenir »"
 },
 "to give rise to|to give rise to|donner lieu à, provoquer, engendrer": {
 "to breed sth": "traduction « engendrer »",
 "to make for": "traduction « engendrer »",
 "to bring sth on": "chaîne via to bring about (brought)"
-},
-"to perpetuate|to perpetuate|perpétuer, entretenir": {
-"to breed sth": "traduction « entretenir »",
-"to keep up": "traduction « entretenir »"
 },
 "to bribe|to bribe sb|soudoyer qn, acheter qn": {
 "to purchase": "traduction « acheter »",
@@ -16137,15 +16137,15 @@
 "to be of voting age": "même fiche",
 "to be a minor": "même fiche"
 },
-"to underscore|to underscore|souligner, mettre en évidence": {
-"to bring sth out": "traduction « mettre évidence »",
-"to point out": "traduction « souligner »"
-},
 "to tease|to tease out sth / to tease sth out|isoler, faire ressortir, démêler (un eff": {
 "to bring sth out": "traduction « faire ressortir »",
 "to unravel sth": "traduction « démêler »",
 "to tease sb (about sth)": "même fiche",
 "to tease sth": "même fiche"
+},
+"to underscore|to underscore|souligner, mettre en évidence": {
+"to bring sth out": "traduction « mettre évidence »",
+"to point out": "traduction « souligner »"
 },
 "to bring out|to bring sth out|sortir, lancer, publier (un produit, un ": {
 "to issue": "traduction « publier »",
@@ -16212,7 +16212,7 @@
 "to go bust": "même fiche"
 },
 "to stir|a commotion|un tumulte, une agitation, un remue-ména": {
-"the bustle": "traduction « remue-ménage »",
+"the bustle": "traduction « agitation »",
 "the rush": "traduction « agitation »",
 "turmoil": "traduction « agitation »",
 "unrest": "traduction « agitation »",
@@ -16224,13 +16224,9 @@
 "a commotion": "traduction « agitation »"
 },
 "to call for|to call for|réclamer, exiger, nécessiter": {
-"to entail (doing) sth": "traduction « nécessiter »",
 "to claim sth": "traduction « réclamer »",
 "to demand sth / to demand that": "traduction « réclamer »",
 "to push for": "traduction « réclamer »",
-"to hold out for sth": "traduction « exiger »"
-},
-"to require|to require|nécessiter, exiger": {
 "to entail (doing) sth": "traduction « nécessiter »",
 "to hold out for sth": "traduction « exiger »"
 },
@@ -16240,6 +16236,10 @@
 "to demand sth / to demand that": "traduction « réclamer »",
 "to drive (drove, driven)": "chaîne via a campaign",
 "to drive": "chaîne via a campaign"
+},
+"to require|to require|nécessiter, exiger": {
+"to entail (doing) sth": "traduction « nécessiter »",
+"to hold out for sth": "traduction « exiger »"
 },
 "to hold out|to hold out for sth|tenir bon pour obtenir qch, exiger qch (": {
 "to call for": "traduction « exiger »",
@@ -16285,11 +16285,6 @@
 "to get a kick out of sth": "même fiche",
 "to carry on (with)": "chaîne via to make a fuss (about/over sth)"
 },
-"to deliver|to deliver|porter (coup), effectuer (passe)": {
-"to carry out": "traduction « effectuer »",
-"to deliver (on)": "même fiche",
-"to deliver sth": "même fiche"
-},
 "to implement|to implement|mettre en œuvre, appliquer": {
 "to enact": "traduction « mettre œuvre »",
 "to enforce": "traduction « appliquer »",
@@ -16301,6 +16296,11 @@
 "to enact": "traduction « mettre œuvre »",
 "to enforce": "traduction « appliquer »",
 "to go into effect": "même fiche"
+},
+"to deliver|to deliver|porter (coup), effectuer (passe)": {
+"to carry out": "traduction « effectuer »",
+"to deliver (on)": "même fiche",
+"to deliver sth": "même fiche"
 },
 "to cast|to cast doubt on|jeter le doute sur, mettre en doute": {
 "to query": "traduction « mettre doute »",
@@ -16402,7 +16402,7 @@
 "to have/give an edge over/on sb": "même fiche"
 },
 "to cast|to recast (recast)|refondre, remanier, transformer": {
-"to overhaul": "traduction « refondre »",
+"to overhaul": "traduction « remanier »",
 "to reshuffle": "traduction « remanier »",
 "to revamp": "traduction « remanier »",
 "to shake up": "traduction « remanier »",
@@ -16417,7 +16417,7 @@
 "to cast sb/sth aside": "même fiche"
 },
 "to overhaul|to overhaul|refondre, remanier (un système, une orga": {
-"to recast (recast)": "traduction « refondre »",
+"to recast (recast)": "traduction « remanier »",
 "to reshuffle": "traduction « remanier »",
 "to shake up": "traduction « remanier »",
 "to haul": "même fiche"
@@ -16463,16 +16463,16 @@
 "to shove": "même fiche"
 },
 "to catch up with|to catch up with sb/sth|rattraper qn/qch, rattraper son retard (": {
-"to gain on sb/sth": "traduction « rattraper qn/qch »",
-"to catch up on sth": "traduction « rattraper son retard »"
+"to catch up on sth": "traduction « rattraper son retard »",
+"to gain on sb/sth": "traduction « rattraper qn/qch »"
+},
+"to catch up with|to catch up on sth|rattraper son retard (dans qch), se reme": {
+"to catch up with sb/sth": "traduction « rattraper son retard »"
 },
 "to gain|to gain on sb/sth|rattraper qn/qch, gagner du terrain sur ": {
 "to catch up with sb/sth": "traduction « rattraper qn/qch »",
 "to gain": "même fiche",
 "to gain ground/time": "même fiche"
-},
-"to catch up with|to catch up on sth|rattraper son retard (dans qch), se reme": {
-"to catch up with sb/sth": "traduction « rattraper son retard »"
 },
 "to challenge|a challenge|un défi": {
 "defiance": "traduction « défi »",
@@ -16716,11 +16716,11 @@
 "a compound": "même fiche"
 },
 "to coin|to coin|forger (un mot), inventer (une expressio": {
+"to forge": "traduction « forger »",
+"to forge sth": "traduction « forger »",
 "to devise": "traduction « inventer »",
 "to fabricate sth": "traduction « inventer »",
-"to make up": "traduction « inventer »",
-"to forge": "traduction « forger »",
-"to forge sth": "traduction « forger »"
+"to make up": "traduction « inventer »"
 },
 "to fall through|to fall through|tomber à l'eau, capoter": {
 "to collapse": "traduction « capoter »"
@@ -16824,11 +16824,8 @@
 "a moan": "traduction « plainte »"
 },
 "to compound|to compound sth|aggraver qch, accentuer qch": {
-"to sharpen": "traduction « accentuer »",
-"to escalate": "traduction « aggraver »"
-},
-"to hone|to sharpen|aiguiser, affûter, accentuer": {
-"to compound sth": "traduction « accentuer »"
+"to escalate": "traduction « aggraver »",
+"to sharpen": "traduction « accentuer »"
 },
 "to exacerbate|to exacerbate sth|aggraver, exacerber (une crise, une tens": {
 "to escalate": "traduction « aggraver »"
@@ -16836,6 +16833,9 @@
 "to worsen|to worsen sth|aggraver qch": {
 "to escalate": "traduction « aggraver »",
 "to worsen": "traduction « aggraver »"
+},
+"to hone|to sharpen|aiguiser, affûter, accentuer": {
+"to compound sth": "traduction « accentuer »"
 },
 "to condone|to condone|cautionner, excuser, fermer les yeux sur": {
 "to endorse": "traduction « cautionner »",
@@ -17045,8 +17045,13 @@
 "to rot|rot|le déclin": {
 "decay": "traduction « déclin »"
 },
+"to delude|to delude sb/oneself|tromper qn, abuser qn, se faire des illu": {
+"to fool sb": "traduction « tromper »",
+"to take sb in": "traduction « tromper »",
+"to mislead (misled)": "chaîne via to deceive sb"
+},
 "to fool|to fool sb|tromper qn, duper qn": {
-"to deceive sb": "traduction « duper »",
+"to deceive sb": "traduction « tromper »",
 "to delude sb/oneself": "traduction « tromper »",
 "to fool around": "même fiche",
 "to fool about": "même fiche",
@@ -17059,13 +17064,8 @@
 "to grasp": "chaîne via to take sth in",
 "to grasp sth": "chaîne via to take sth in"
 },
-"to delude|to delude sb/oneself|tromper qn, abuser qn, se faire des illu": {
-"to fool sb": "traduction « tromper »",
-"to take sb in": "traduction « tromper »",
-"to mislead (misled)": "chaîne via to deceive sb"
-},
 "to defer|to defer sth|reporter qch, différer qch, ajourner qch": {
-"to delay sth": "traduction « reporter »",
+"to delay sth": "traduction « différer »",
 "to hold off (on) (doing sth)": "traduction « différer »",
 "to defer to sb/sth": "même fiche",
 "to deter sb (from doing sth)": "chaîne via to put sb off (doing sth)"
@@ -17370,7 +17370,7 @@
 "to stir up": "traduction « attiser »"
 },
 "to drive|to drive out|chasser, évincer": {
-"to oust": "traduction « chasser »",
+"to oust": "traduction « évincer »",
 "to supplant": "traduction « évincer »",
 "to drive (drove, driven)": "même fiche",
 "to drive sb to do sth": "même fiche",
@@ -17521,17 +17521,8 @@
 "to single out": "traduction « distinguer »"
 },
 "to emphasize|to emphasize|souligner, insister sur": {
-"to play up": "traduction « insister »",
-"to point out": "traduction « souligner »"
-},
-"to play down|to play up|mettre en avant, insister sur": {
-"to emphasize": "traduction « insister »",
-"to stress": "traduction « insister »"
-},
-"to stress|to stress|souligner, insister sur": {
-"to play up": "traduction « insister »",
 "to point out": "traduction « souligner »",
-"to be under stress": "même fiche"
+"to play up": "traduction « insister »"
 },
 "to point out|to point out|faire remarquer, signaler, souligner": {
 "to emphasize": "traduction « souligner »",
@@ -17539,6 +17530,15 @@
 "to underscore": "traduction « souligner »",
 "to flag (up) sth": "traduction « signaler »",
 "to point to": "même fiche"
+},
+"to stress|to stress|souligner, insister sur": {
+"to point out": "traduction « souligner »",
+"to play up": "traduction « insister »",
+"to be under stress": "même fiche"
+},
+"to play down|to play up|mettre en avant, insister sur": {
+"to emphasize": "traduction « insister »",
+"to stress": "traduction « insister »"
 },
 "to employ|to employ sb|employer qn, engager qn": {
 "to employ sth": "traduction « employer »",
@@ -17606,9 +17606,9 @@
 "to engage in sth": "traduction « livrer »",
 "to deliver": "traduction « livrer »",
 "to indulge in sth": "traduction « livrer »",
+"to give oneself up (to)": "chaîne via to surrender (to)",
 "to give up (doing sth)": "chaîne via to surrender (to)",
 "to give up sth": "chaîne via to surrender (to)",
-"to give oneself up (to)": "chaîne via to surrender (to)",
 "to relinquish sth": "chaîne via to surrender sth",
 "to cede sth": "chaîne via to surrender sth",
 "to yield (to)": "chaîne via to surrender sth",
@@ -17740,8 +17740,8 @@
 "to stumble": "même fiche",
 "to stumble over": "même fiche",
 "to run into": "chaîne via to come across (came, come)",
-"to come over": "chaîne via to come across (as)",
-"to come over (as)": "chaîne via to come across (as)"
+"to come over (as)": "chaîne via to come across (as)",
+"to come over": "chaîne via to come across (as)"
 },
 "to share|to share sth|partager qch, répartir qch": {
 "to fall into": "traduction « répartir »",
@@ -17911,8 +17911,8 @@
 "to get round sth": "chaîne via to get around (doing) sth"
 },
 "to flow|to flow from|découler de, provenir de": {
-"to spring from": "traduction « provenir »",
 "to issue from": "traduction « découler »",
+"to spring from": "traduction « découler »",
 "to flow": "même fiche",
 "to issue (forth) from": "chaîne via to stem from"
 },
@@ -18099,18 +18099,18 @@
 "to glance at": "traduction « jeter coup œil »"
 },
 "to glimpse|to glimpse|entrevoir, apercevoir": {
+"to spy": "traduction « entrevoir »",
+"to notice": "traduction « apercevoir »"
+},
+"to spy|to spy|apercevoir, entrevoir": {
+"to glimpse": "traduction « entrevoir »",
 "to notice": "traduction « apercevoir »",
-"to spy": "traduction « apercevoir »"
+"to spy on": "même fiche"
 },
 "to notice|to notice|s'apercevoir de, remarquer": {
 "to glimpse": "traduction « apercevoir »",
 "to spy": "traduction « apercevoir »",
 "to note": "même fiche"
-},
-"to spy|to spy|apercevoir, entrevoir": {
-"to glimpse": "traduction « apercevoir »",
-"to notice": "traduction « apercevoir »",
-"to spy on": "même fiche"
 },
 "to go|to go in for|aimer, s'adonner à, être porté sur": {
 "to indulge in sth": "traduction « adonner »",
@@ -18149,12 +18149,18 @@
 "to thrust sth (up)on sb": "même fiche"
 },
 "to grab|to grab (at)|saisir, s'emparer de, s'agripper (à)": {
-"to clutch (at)": "traduction « agripper »",
 "to grab": "traduction « emparer »",
 "to grip": "traduction « emparer »",
 "to commandeer": "traduction « emparer »",
+"to clutch (at)": "traduction « agripper »",
 "to kidnap": "chaîne via to snatch",
 "to abduct": "chaîne via to snatch"
+},
+"to hijack|to commandeer|réquisitionner, s'emparer de": {
+"to grab (at)": "traduction « emparer »",
+"to grab": "traduction « emparer »",
+"to grip": "traduction « emparer »",
+"to hijack": "même fiche"
 },
 "to grip|to clutch (at)|serrer, agripper, saisir": {
 "to grab (at)": "traduction « agripper »",
@@ -18165,12 +18171,6 @@
 "to clutch at": "même fiche",
 "to grasp": "chaîne via to grip",
 "to grasp sth": "chaîne via to grip"
-},
-"to hijack|to commandeer|réquisitionner, s'emparer de": {
-"to grab (at)": "traduction « emparer »",
-"to grab": "traduction « emparer »",
-"to grip": "traduction « emparer »",
-"to hijack": "même fiche"
 },
 "to grab|a grab|une mainmise, un accaparement, un coup d": {
 "a grip (on)": "traduction « mainmise »"
@@ -18343,7 +18343,7 @@
 "to make out (that)": "chaîne via to manage"
 },
 "to hold out|to hold out (against)|tenir bon, résister": {
-"to hold up": "traduction « tenir bon »",
+"to hold up": "traduction « résister »",
 "to stand up (to sth)": "traduction « résister »",
 "to wear well": "traduction « résister »",
 "to withstand (withstood)": "traduction « résister »",
@@ -18450,14 +18450,14 @@
 "to set (great) store by sth": "même fiche"
 },
 "to hoard|a hoarding|un panneau publicitaire, un panneau d'af": {
-"a billboard": "traduction « panneau affichage »",
+"a billboard": "traduction « panneau publicitaire »",
 "a hoard": "même fiche",
 "a stash": "même fiche",
 "a poster": "même fiche",
 "a stockpile": "même fiche"
 },
 "to hoard|a billboard|un panneau publicitaire, un panneau d'af": {
-"a hoarding": "traduction « panneau affichage »",
+"a hoarding": "traduction « panneau publicitaire »",
 "a hoard": "même fiche",
 "a stash": "même fiche",
 "a poster": "même fiche",
@@ -18567,15 +18567,10 @@
 "to instigate": "traduction « être origine »"
 },
 "to interfere|to interfere (in)|s'immiscer (dans), se mêler (de), interv": {
-"to weigh in (on)": "traduction « intervenir »",
 "to involve sb in sth": "traduction « mêler »",
 "to mingle with": "traduction « mêler »",
+"to weigh in (on)": "traduction « intervenir »",
 "to interfere with": "même fiche"
-},
-"to weigh|to weigh in (on)|intervenir (dans un débat), donner son a": {
-"to interfere (in)": "traduction « intervenir »",
-"to weigh (on)": "même fiche",
-"to outweigh": "même fiche"
 },
 "to involve|to involve sb in sth|impliquer qn dans qch, mêler qn à qch, e": {
 "to interfere (in)": "traduction « mêler »",
@@ -18587,6 +18582,11 @@
 "to meddle in|to meddle in|se mêler de, s'immiscer dans": {
 "to involve sb in sth": "traduction « mêler »",
 "to mingle with": "traduction « mêler »"
+},
+"to weigh|to weigh in (on)|intervenir (dans un débat), donner son a": {
+"to interfere (in)": "traduction « intervenir »",
+"to weigh (on)": "même fiche",
+"to outweigh": "même fiche"
 },
 "to locate|to locate|localiser, repérer, retrouver": {
 "to join": "traduction « retrouver »",
@@ -18760,13 +18760,13 @@
 "to lurk": "traduction « rôder »"
 },
 "to mar|to mar|gâcher, entacher, ternir": {
-"to tarnish sth": "traduction « entacher »",
-"to taint": "traduction « entacher »",
 "to tarnish": "traduction « ternir »",
-"to sully": "traduction « ternir »"
+"to tarnish sth": "traduction « ternir »",
+"to sully": "traduction « ternir »",
+"to taint": "traduction « entacher »"
 },
 "to tarnish|to tarnish sth|ternir qch, entacher qch": {
-"to mar": "traduction « entacher »",
+"to mar": "traduction « ternir »",
 "to tarnish": "traduction « ternir »"
 },
 "to tarnish|to taint|entacher": {
@@ -18907,15 +18907,15 @@
 "to quote|to quote|citer": {
 "to summon": "traduction « citer »"
 },
-"upheaval|to heave|soulever (avec effort), hisser, lancer (": {
-"to raise": "traduction « hisser »",
-"to heave a sigh (of relief)": "même fiche"
-},
 "to rise|to rise (rose, risen)|se lever": {
 "to raise": "traduction « lever »",
 "to waive": "traduction « lever »",
 "to rise": "même fiche",
 "to rise up (against)": "même fiche"
+},
+"upheaval|to heave|soulever (avec effort), hisser, lancer (": {
+"to raise": "traduction « hisser »",
+"to heave a sigh (of relief)": "même fiche"
 },
 "to reinstate|to reinstate|réintégrer, rétablir": {
 "to recover (from)": "traduction « rétablir »"
@@ -25295,14 +25295,14 @@
 "to distress sb": "chaîne via to grieve sb"
 },
 "binge|to binge (on)|s'empiffrer, se gaver (de), faire des ex": {
-"to cram (for)": "chaîne via to stuff (into)",
 "to cram into sth": "chaîne via to stuff (into)",
-"to cram sth into": "chaîne via to stuff (into)"
+"to cram sth into": "chaîne via to stuff (into)",
+"to cram (for)": "chaîne via to stuff (into)"
 },
 "binge|to gorge (on)|se gaver (de), s'empiffrer (de)": {
-"to cram (for)": "chaîne via to stuff (into)",
 "to cram into sth": "chaîne via to stuff (into)",
-"to cram sth into": "chaîne via to stuff (into)"
+"to cram sth into": "chaîne via to stuff (into)",
+"to cram (for)": "chaîne via to stuff (into)"
 },
 "binge|a drinking spree|une beuverie, une virée arrosée": {
 "stuff": "chaîne via to binge (on)"
@@ -25377,8 +25377,8 @@
 "an undertaking": "chaîne via a pledge"
 },
 "oath|to vow (to do sth)|jurer, promettre solennellement (de fair": {
-"to commit sth (to sth)": "chaîne via to pledge sth / to pledge to do sth",
-"to commit oneself to (doing) sth": "chaîne via to pledge sth / to pledge to do sth"
+"to commit oneself to (doing) sth": "chaîne via to pledge sth / to pledge to do sth",
+"to commit sth (to sth)": "chaîne via to pledge sth / to pledge to do sth"
 },
 "pusillanimous|pusillanimous|pusillanime, timoré, pleutre": {
 "spineless": "chaîne via cowardly"
@@ -25446,9 +25446,9 @@
 "robust": "chaîne via buoyant"
 },
 "to cede|to cede sth|céder qch (un territoire, le contrôle, d": {
+"to give oneself up (to)": "chaîne via to surrender (to)",
 "to give up (doing sth)": "chaîne via to surrender (to)",
 "to give up sth": "chaîne via to surrender (to)",
-"to give oneself up (to)": "chaîne via to surrender (to)",
 "to hand over sb/sth": "chaîne via to surrender sth",
 "to relinquish sth": "chaîne via to surrender sth",
 "to give in (to)": "chaîne via to yield (to)",

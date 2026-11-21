@@ -1863,11 +1863,16 @@ function discOptions(e,m){
   const syn=new Set([...linkKeys(m.synonymes||''),...linkKeys(m.mot)]);
   const out=splitList(m.confus||'').filter(c=>c!==m.mot).slice(0,3);
   const nat=(m.natures||[])[0];
+  // Compléments tirés au hasard, mais de même allure : même nature, même classe de fréquence, même nombre de mots,
+  // verbe à particule pour un verbe à particule (les critères se relâchent faute de candidats)
+  const shape=x=>[(x.mot||'').replace(/\([^)]*\)/g,'').trim().split(/\s+/).length,!!pvParse(x)];
+  const [nw,pv]=shape(m);
+  const tests=[y=>String(y.freq)===String(m.freq)&&shape(y)[0]===nw&&shape(y)[1]===pv, y=>shape(y)[1]===pv&&Math.abs(shape(y)[0]-nw)<=1, ()=>true];
   // un Mot au plus par fiche, pour ne pas proposer trois lignes d'une même famille
   const pool=shuffle(vocab.filter(x=>x.id!==e.id)).map(x=>shuffle(x.mots.filter(y=>!nat||(y.natures||[]).includes(nat)))[0]).filter(Boolean);
-  for(const y of pool){
+  for(const t of tests) for(const y of pool){
     if(out.length>=3) break;
-    if(!y.mot||out.includes(y.mot)||[...linkKeys(y.mot)].some(k=>syn.has(k))) continue;
+    if(!y.mot||out.includes(y.mot)||y.mot===m.mot||!t(y)||[...linkKeys(y.mot)].some(k=>syn.has(k))) continue;
     out.push(y.mot);
   }
   return shuffle([m.mot,...out]);
