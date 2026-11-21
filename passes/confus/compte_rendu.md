@@ -311,3 +311,21 @@
   to abide by, to assert (that) face à to argue (that), alluring face à appealing) ; B 0 ; C 2 gloses (to forestall,
   to look up to) ; D 0 ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 24 (21 novembre 2026, to assuage → giddy « grisé », 101 lignes)
+- 22 lignes avec mots confus : pièges du français to warn pour to avert « prévenir » (et faux ami avertir),
+  to patronize pour to attend « fréquenter », oversight pour an audit « contrôle », to repel et to rebuff pour
+  to stave off « repousser », to put sth down to pour to award « attribuer », to recoil pour to back up « reculer »,
+  to lure pour to bait sth « appâter », to withhold pour to balk at « refuser », to outlaw pour to bar sb from
+  « interdire », to trade in sth pour to bargain « négocier », a market pour a bargain « marché », to schedule pour
+  to bargain for « prévoir », a windfall pour a bargain « aubaine », to struggle pour to distress « peiner »,
+  a plight pour distress « détresse », to involve pour to assume « supposer », to fetch pour to attain ; paronymes
+  award / reward, taunt / flaunt, appalling / appalled, giddy / dizzying ; autres sens : to back down, upset.
+- Contrôles (21 corrections) : A1 3 groupes avec formes admises des deux côtés (a bar to sth ↔ a hindrance ;
+  to badger sb ↔ to hassle, groupe de to pester mis en cohérence ; bar ↔ save « sauf ») ; A2 0 ; A3 9 gloses
+  (to surmise face à to assume, to startle face à to astonish, breathtaking face à astonishing, to attend to face à
+  to deal with, to balk at face à to shrink from, a bargain face à an agreement, to bargain for/on face à
+  to figure on, to bash face à to lambaste, appalling face à awful/dreadful) ; B 1 (an aversion admis dans
+  « took an instant dislike to ») ; C 2 gloses (to back up « (véhicule) » / to back down « (au figuré) ») ; D 0 ;
+  E 0 ; F 0.
+- Rien à trancher.
