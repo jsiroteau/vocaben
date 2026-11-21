@@ -910,3 +910,18 @@
   admis) ; E 1 (rife (with) : scission soumise) ; C 0 ; D 0 ; F 0. Écartés car déjà glosés : gross / egregious,
   efficient / effective, to contrive / to engineer, keen / passionate, legacy / erstwhile, grounds / an estate.
 - Clés de lots.json remises à jour. Soumis : scission de rife (with).
+
+## Lot 9 (revue) (21 novembre 2026, to fare → fringe benefits, 101 lignes)
+- Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
+- Contrôles (14 corrections) : A1 1 (fraught ↔ strained, formes admises des deux côtés) ; A2 3 (a failing → a fault ;
+  a footing « l'équilibre, l'appui (des pieds sur le sol) » → a balance ; frailty « la fragilité (physique), la faiblesse
+  (morale) » → a weakness ; LINT_OK) ; A3 5 gloses ou traductions (staunch « résolu, indéfectible, fidèle » sans
+  « fervent », face à fervent ; heinous « (crime, d'une extrême gravité) » face à foul ; rotten « (fruit, bois, société) »
+  face à foul « pourri (temps) » ; a feeding frenzy « (des médias, des investisseurs) » face à a scramble ; crazed
+  « (pris de folie) » face à wild) ; B 3 (feasible : exemple ajouté qui illustre workable et viable ; to dirty et
+  peripheral, absents de la base et sans exemple où ils conviennent, retirés des synonymes de to foul et de fringe) ;
+  D 1 (traduction de l'exemple ajouté avec « réalisable ») ; E 2 (a weakness, a fake : scissions soumises) ; C 0 ; F 0.
+  Écartés car déjà glosés : quaint / old-fashioned, a plight / fate, would-be / budding, casual / flippant, a blizzard of
+  et a stir / a flurry of, towering / foremost, a trailblazer / a forerunner, token / formal, vacant et spare / free,
+  complimentary / free. Laissé en l'état : in the offing ↔ forthcoming (la construction empêche d'admettre).
+- Clés de lots.json remises à jour. Soumis : scissions de a weakness et de a fake.
