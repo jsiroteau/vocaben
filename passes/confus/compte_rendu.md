@@ -898,3 +898,15 @@
   to be eager for sth) ; C 0 ; D 0 ; E 0 ; F 0. Écartés car déjà glosés : dismal / dire, a chore / drudgery,
   a dearth / a drought, upset / peeved, anxious / eager to, canny / economical, run-down / derelict.
 - Clés de lots.json remises à jour. Rien à trancher.
+
+## Lot 8 (revue) (21 novembre 2026, effective → a liking, 109 lignes)
+- Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
+- Contrôles (9 corrections) : A1 1 (to enthrall ↔ to rivet « captiver », formes admises des deux côtés) ; A2 2
+  (re-engineering → an overhaul, LINT_OK, admis dans deux exemples ; dim « faible, vague » : glose « (lumière, souvenir,
+  perspectives) » sur ce renvoi à sens unique vers faint) ; A3 2 (to engineer « concevoir, construire » face à to design ;
+  agonizing « atroce (douleur), déchirant (choix), angoissant (attente) » face à heartbreaking) ; B 3 (admonish admis dans
+  un exemple de to urge sb to do sth ; a caprice, absent de la base et qui ne convenait dans aucun exemple, retiré des
+  synonymes de a fancy ; fame : exemple ajouté « The film brought the young director international fame », renown
+  admis) ; E 1 (rife (with) : scission soumise) ; C 0 ; D 0 ; F 0. Écartés car déjà glosés : gross / egregious,
+  efficient / effective, to contrive / to engineer, keen / passionate, legacy / erstwhile, grounds / an estate.
+- Clés de lots.json remises à jour. Soumis : scission de rife (with).
