@@ -9,3 +9,12 @@
   to come to (symétrie rétablie) ; à sens unique (LINT_OK) : to account for sth « représenter » → to represent,
   acutely → keenly. Formes admises ajoutées en conséquence.
 - Rien à trancher.
+
+## Lot 2 (21 novembre 2026, assembly line → bewildered, 100 lignes)
+- 14 lignes avec mots confus (ex. woefully pour awfully, clumsy pour awkward « peu commode », baffling / baffled
+  croisés, to muffle et to puzzle pour les deux sens de to baffle, a lighthouse pour a beacon (piège « phare »),
+  a landmark pour a benchmark, a toll pour a balance sheet (piège « bilan »), bail / a bailout croisés).
+- Beaucoup de candidats écartés parce qu'ils conviennent dans un exemple (footing pour « lost his balance », a track
+  record, outmoded, struggling) ou donnent une phrase naturelle de sens différent (ominous, the median, wary of).
+- Synonyme ajouté : an assembly line → a production line (bleu clair), avec ses formes admises.
+- Rien à trancher.
