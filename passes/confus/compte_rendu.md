@@ -295,3 +295,19 @@
   a prop « (physique) ») ; D 0 ; E 0 ; F 0. tax evasion / tax avoidance non croisés : chacun donne une phrase
   naturelle de sens différent dans un exemple de l'autre.
 - Rien à trancher.
+
+## Lot 23 (21 novembre 2026, a thrill → an assessment, 101 lignes)
+- 29 lignes avec mots confus : pièges du français a board et a tip-off pour a tip « conseil », to avert et to forestall
+  pour to tip sb off « prévenir », to overthrow pour to tip sth over « renverser », to warn et a warning pour
+  to advertise / an advertisement (faux amis avertir, avertissement), notice pour advice « avis », to flounder pour
+  to debate « se débattre », to fetch pour to achieve « atteindre », to look up to et to live up to pour to abide by
+  « respecter », to hoard pour to accrue, to cash in on pour to accrue to, to mitigate pour to dampen « tempérer »,
+  a hint of et a scrap pour the tip ; paronymes thrill / thriller, thrilling / thrilled, to abide / to abhor,
+  to arise / to arouse, to subside / to subsidize, to advise / to devise ; autres sens : disposable, a spate of.
+- Contrôles (17 corrections) : A1 2 (to achieve ↔ to reach, groupe de to attain mis en cohérence ; to die down ajouté
+  à to abate « faiblir, retomber »), formes admises des deux côtés ; A2 0 ; A3 11 gloses (gripping face à thrilling,
+  overjoyed face à thrilled, ill-advised face à rash/reckless, to accrue sth face à to run up, to allay face à
+  to dispel, to value face à to assess, abhorrent face à repellent, a deal face à an agreement, to keep to face à
+  to abide by, to assert (that) face à to argue (that), alluring face à appealing) ; B 0 ; C 2 gloses (to forestall,
+  to look up to) ; D 0 ; E 0 ; F 0.
+- Rien à trancher.
