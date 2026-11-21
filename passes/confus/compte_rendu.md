@@ -757,3 +757,21 @@
   dans un exemple de to trigger (off), exemple ajouté à frills pour trimmings) ; C 5 gloses (to foul, to sully, to shake up,
   to thwart, to trust « croire (qn, ses paroles) ») ; D 0 ; E 0 ; F 0.
 - 12 clés de lots.json remises à jour. Rien à trancher.
+
+## Lot 51 (21 novembre 2026, to underpin → to pare down, 104 lignes)
+- 36 lignes avec mots confus : pièges du français involvement pour an undertaking « engagement », an undertaker pour an
+  entrepreneur, to ensure et to insure sth pour to underwrite / to warrant « assurer », to vouch for « garantir », to rampage
+  pour to unleash « déchaîner », to distress sb pour to upend / to upset « bouleverser », earmarked for pour upset
+  « affecté », to hand down pour to utter « prononcer », overall pour utter « total », to part from sb pour to vacate
+  « quitter », to fire pour to veer « virer », a rubbish dump pour a waiver « décharge », to disclaim pour to wane
+  « décliner », to shelter pour to ward off « se protéger », to avert et to forestall pour to warn « prévenir », a downfall
+  pour a waste of « perte », to dispel et to wipe out pour to wear off, to deplete sth et out of print « épuiser, épuisé »,
+  clout et a liability pour a weight « poids », to munch « grignoter », to scrutinize pour to pare « éplucher » ; paronymes
+  a vacancy / a vacation, a warrant / a warranty, a rival / a rivalry, an undertaking / an undertaker.
+- Contrôles (21 corrections) : A1 1 (unwavering ↔ staunch, formes admises des deux côtés) ; A2 2 (an undertaking
+  « entreprise » → a task, a warrant « fondement » → a basis, LINT_OK, gloses du particulier) ; A3 10 gloses (to underwrite
+  « financer » face à to sponsor, to uphold face à to stand up for, utterly face à altogether, to puzzle out / to unravel sth,
+  to vilify face à to disparage, to waive face à to scrap, to warrant face à to deserve, groundless face à unwarranted, waste
+  face à trash) ; B 4 exemples ajoutés (utter pour complete / total, to warn pour to alert, waste pour refuse, to wear sb out
+  pour to exhaust / to drain) ; C 2 gloses (to upend, to upset) ; D 0 ; E 0 ; F 0.
+- 13 clés de lots.json remises à jour. Rien à trancher.
