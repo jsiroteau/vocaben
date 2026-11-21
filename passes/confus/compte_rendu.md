@@ -364,3 +364,32 @@
   figuré) » face à a lash, a breather face à a halt) ; D 1 (traduction d'exemple de a bloodletting) ; E 1 soumis ;
   F 0.
 - À trancher : scission de a blow « coup dur » / « coup (physique) ».
+
+## Lot 27 (21 novembre 2026, to breed sth → to chastise, 101 lignes)
+- 57 lignes avec mots confus : pièges du français to recur pour to breed « se reproduire », nurture pour breeding
+  « éducation », to keep up pour to breed sth « entretenir », a household pour a breeding ground « foyer », to drill pour
+  to bring about « entraîner », to turn out pour to bring sth out « révéler », to emit pour to broadcast « émettre »,
+  an issue pour a broadcast « émission », to bargain pour to broker « négocier », to sweep pour to brush off « balayer »,
+  to stand by pour to buoy up « soutenir », to break out et to flare (up) pour to burst « éclater », a thrust pour
+  a burst « poussée », to overrule pour to bust et to cancel, to swamp pour to bustle with « déborder », a stir pour
+  the bustle, to entrench pour to buttress « consolider », to redeem pour to buy out « racheter », to claim et
+  to entail pour to call for, to hark back to pour to call off « rappeler », to hail pour to call on « appeler »,
+  to disable pour to cancel out « neutraliser », to prosecute et to pursue pour to carry on « poursuivre », to wage
+  pour to carry out « mener », to crop pour to cash in on « exploiter », to herald as pour to cast as « présenter
+  comme », to unravel et to vacate pour to cast off, to reshuffle pour to recast « remanier » ; paronymes broach /
+  breach, bring off / bring on / bring up, brush off / brush up, bust / bust-up, burn down / burn through ; autres
+  sens : a glitch (a bug), to wiretap, to bolster, cheerful, robust, to brace, to shed (cast a shadow).
+- Contrôles (47 corrections) : A1 10 groupes avec formes admises des deux côtés (to buoy up « soutenir » ↔
+  to bolster ; to cast sb/sth as ↔ to portray et to depict ; to cast sth off ↔ to shake sth ; to cash in on ↔
+  to profit (from) ; to carry on (about) ↔ to kick up a fuss ; to call for ↔ to demand sth ; to bring sth out
+  « sortir » ↔ to release ; to bring sth out « mettre en évidence » ↔ to underscore ; to bring about ↔ to lead to) ;
+  A2 4 (to bribe sb → to corrupt sb, to breed sth → to give rise to, bustling → lively, LINT_OK, gloses ; to broker
+  → to negotiate, bleu clair) ; A3 17 gloses (breeding / an upbringing, to bring off face à to carry out,
+  to perpetuate, a broadcaster, to hassle, buoyant « dynamique » et « plein d'entrain » sans « florissant » ni
+  « enjoué », to burn through « engloutir » face à to squander, a burst face à a surge, to bustle with face à
+  to overflow, the bustle face à the rush, a bust face à a slump et a meltdown, a falling-out face à a bust-up,
+  to push for sans « réclamer », to draw on, to edge sb/sth out, to counteract) ; B 1 (exemple ajouté pour
+  to buoy up sous to keep afloat) ; C 9 gloses (to breed / to recur, to broadcast / to emit, to herald as,
+  to reshuffle, to redeem, to pursue, to break out) ; D 5 traductions d'exemples (to bring about, to bring on,
+  to burst in, to canvass, to push for) ; E 1 (exemple figuré de to bury déplacé vers « enfouir ») ; F 0.
+- Rien à trancher.
