@@ -186,6 +186,9 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 21 novembre 2026 (passe mots confus, lot 31) : cas particuliers renvoyant au mot général
+    ('symétrie', 'to make redundant', 'to dismiss'), ('symétrie', 'to lay off', 'to dismiss'), ('symétrie', 'a layoff', 'a dismissal'),
+    ('symétrie', 'hard-driving', 'demanding'), ('symétrie', 'to ease', 'to loosen sth'), ('symétrie', 'to elicit', 'to draw'),
     # 21 novembre 2026 (passe mots confus, lot 30) : cas particulier renvoyant au mot général
     ('symétrie', 'to cut sth back', 'to prune sth'),
     # 21 novembre 2026 (passe mots confus, lot 29) : cas particuliers renvoyant au mot général

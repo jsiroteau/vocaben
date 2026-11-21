@@ -448,3 +448,18 @@
   demand (for)) ; D 7 traductions d'exemples (a cutback ×2, to dash, dazzle, to deny sb sth, deserving, to make for) ;
   E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 31 (21 novembre 2026, to discard → the ebb and flow, 100 lignes)
+- 24 lignes avec mots confus : pièges du français to design pour to draw « dessiner », to bring about pour to drill
+  « entraîner », a waiver pour a rubbish dump « décharge », available pour disposable (« disponible »), to share sth pour
+  to divide, to breach pour to drill « percer », to betray pour to disclose « révéler », to overrule pour to dismiss a
+  charge « rejeter », a layoff pour a dismissal ; paronymes disclose / disclaim, disclosure / disclaimer, display /
+  deploy, wander / wonder, drift / rift, drawback / cutback, dodge / avert ; autres sens : to drool et to trickle
+  (deux sens de to dribble), to draw up pour to draw on, to relieve et to alleviate pour to ease « assouplir ».
+- Contrôles (18 corrections) : A1 1 (dodgy ↔ dubious « louche ») ; A2 6 (to lay off, to make redundant → to dismiss ;
+  a layoff → a dismissal ; to elicit → to draw ; hard-driving → demanding ; to ease « assouplir » → to loosen sth,
+  to relax sth ; LINT_OK) ; A3 7 gloses (to quell sans « dissiper » face à to dispel, a disclaimer face à a warning,
+  to drag in face à to bring sth up, a dweller face à an inhabitant, to disturb face à to put sb out, to drive
+  « tirer, être le moteur de » face à to fuel et to boost) ; B 1 (exemple ajouté à the draft pour conscription) ;
+  C 2 (a layoff « (économique) », to design) ; D 2 traductions d'exemples (to drag in, to drive) ; E 0 ; F 0.
+- Rien de nouveau à trancher (scission de to loosen sth déjà soumise au lot 13).
