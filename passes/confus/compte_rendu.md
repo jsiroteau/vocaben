@@ -525,3 +525,18 @@
   to get about « (nouvelle, rumeur) », to munch « (avec appétit) », to go astray « (courrier, bagages, fonds) ») ;
   D 0 ; E 1 soumis ; F 0.
 - À trancher : scission de to give sb/sth away (« trahir qn » / « révéler qch »).
+
+## Lot 36 (21 novembre 2026, awry → to deliver « aider à mettre au monde », 100 lignes)
+- 23 lignes avec mots confus : pièges du français to commandeer pour to grab et to grip « s'emparer de », to withhold
+  pour to grab « retenir (l'attention) », to file pour to grade sth « classer », a layer pour a grade « échelon »,
+  to note pour to grade « noter », to spare pour to grant « accorder », to hold up sth pour to grapple with
+  « s'attaquer à », literacy pour a grasp of « maîtrise », to hang up pour to clutch at « se raccrocher à »,
+  to mishandle pour to hammer « malmener », to utter pour to hand down et to deliver « prononcer », a rebate pour
+  a handover « remise », to issue sth (to sb) pour to deliver « délivrer, livrer » ; paronymes hamper / tamper with,
+  grievous / aggrieved, grip / grab ; autres sens : to grip « saisir » pour to grasp sth « comprendre », to mourn pour
+  to grieve sb.
+- Contrôles (7 corrections) : A1 0 ; A2 1 (to hand down « rendre (un jugement) » → to deliver, formes admises dans les
+  trois exemples, LINT_OK) ; A3 1 (to goad sb « (en le provoquant) » et to prod sb « (en le pressant) », traductions
+  jusque-là identiques) ; B 2 (exemple ajouté à to grant pour to bestow, forme admise category à a grade) ; C 0 ;
+  D 2 (awry « de travers, qui cloche » et traduction de « something was awry ») ; E 0 ; F 0.
+- Rien à trancher.
