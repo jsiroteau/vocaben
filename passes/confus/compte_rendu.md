@@ -281,3 +281,17 @@
   « ferme (texture) ») ; D 0 ; E 0 ; F 0 (to stretch « mettre à rude épreuve » noté sans sth : non modifié, pas de
   renommage de ligne dans cette passe).
 - Rien à trancher.
+
+## Lot 22 (21 novembre 2026, to stun → to thrift, 101 lignes)
+- 18 lignes avec mots confus (lot riche en familles déjà reliées : fisc, termes, banlieue) : pièges du français
+  to bend pour to subdue « soumettre », scope pour surroundings « cadre », to shrug off sth pour to sweep « balayer »,
+  to supersede pour to take over « succéder », to redeem pour to take over sth « racheter », an acquisition et a buyout
+  pour a takeover « prise de pouvoir », picky pour taxing « exigeant », provisional pour tentative « hésitant »,
+  a token (of) pour a testimony, a device pour a means of, a prop pour a medium « support », finicky pour thorough
+  « minutieux », overall pour thorough « total » ; paronyme to stun pour to stunt ; autres sens : to lurch, tenure,
+  in-depth, utter.
+- Contrôles (7 corrections) : A1 1 (muted ajouté à subdued « tamisé », formes admises) ; A2 0 ; A3 0 ; B 3 formes
+  admises (tacit → unspoken dans deux exemples, a term (of office) → tenure) ; C 3 gloses (to supersede, picky,
+  a prop « (physique) ») ; D 0 ; E 0 ; F 0. tax evasion / tax avoidance non croisés : chacun donne une phrase
+  naturelle de sens différent dans un exemple de l'autre.
+- Rien à trancher.
