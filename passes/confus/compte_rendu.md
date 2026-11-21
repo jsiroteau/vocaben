@@ -846,11 +846,22 @@
 
 ## Lot 3 (revue) (21 novembre 2026, a bias → a make, 104 lignes)
 - Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
-- Contrôles (6 corrections) : A1 0 ; A2 1 (a (spending) binge → a frenzy, LINT_OK, admis dans les 4 exemples) ; A3 2 gloses
+- Contrôles (5 corrections) : A1 0 ; A2 1 (a (spending) binge → a frenzy, LINT_OK, admis dans les 4 exemples) ; A3 2 gloses
   (to blast sth « (pont, roche, à l'explosif) » face à to blow up, a hail of « (balles, coups, questions) » face à
   a blizzard of) ; B 1 (a faint retiré des synonymes de a blackout « perte de connaissance », où il ne convenait dans
   aucun exemple ; renvoi a faint → a blackout gardé à sens unique, LINT_OK) ; D 1 (a bigot : « un fanatique » retiré,
   non illustré et confondu avec a zealot) ; C 0 ; E 0 ; F 0. Écartés car déjà glosés : to stymie / to block, a flurry of /
   a blizzard of, plainly / bluntly, a range / a bracket, buoyant / booming, malaise / gloom. Grappe bleak / gloomy /
   dismal / dreary revue : rien à changer depuis le lot 3.
+- Clés de lots.json remises à jour. Rien à trancher.
+
+## Lot 4 (revue) (21 novembre 2026, brash → a cashier, 106 lignes)
+- Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
+- Contrôles (9 corrections) : A1 1 (to breach « franchir, percer » ↔ to break through), formes admises des deux côtés ;
+  A2 2 (canny « prudent » → cautious, glose « (par expérience, par flair) » ; a chore → a task ; LINT_OK) ; A3 3 gloses
+  (a load « (poids transporté, quantité de travail) » face à a burden, cocky « (avec arrogance) » face à complacent,
+  canny « économe (avec son argent) » face à economical) ; D 2 (broadly speaking « grosso modo » ajouté, an onlooker
+  « un observateur » ajouté, équivalents employés dans les exemples) ; B 0 ; C 0 ; E 0 ; F 0. Écartés car déjà glosés :
+  brazen / brash, to flout / to breach, a breather / a break, buoyant / brisk, guarded / cautious, offhand / casual,
+  a share / a chunk (of), a salesman / a clerk (US).
 - Clés de lots.json remises à jour. Rien à trancher.
