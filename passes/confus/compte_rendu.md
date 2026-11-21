@@ -329,3 +329,21 @@
   « took an instant dislike to ») ; C 2 gloses (to back up « (véhicule) » / to back down « (au figuré) ») ; D 0 ;
   E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 25 (21 novembre 2026, to be doomed → a bond « obligation », 101 lignes)
+- 24 lignes avec mots confus : pièges du français a waste of sth pour doom « perte », burdensome et withering pour
+  overwhelming « écrasant, accablant », to upend pour to overwhelm « bouleverser », to glut pour to overwhelm et
+  to swamp « saturer, déborder », overcome pour snowed under « submergé », to scheme pour to puzzle « intriguer »,
+  a provision pour willingness « disposition », to withstand pour to bear « supporter », to abide pour to bear sth,
+  to gross pour to bear fruit « rapporter », to withhold pour to belie « cacher », to deny sth pour to belie
+  « démentir », to unveil pour to betray « révéler » ; paronymes overturn / overwhelm, puzzled / puzzling,
+  relentlessly / reluctantly, run-up / rundown, belie / belittle, endorsement / endowment, portray / betray,
+  bet / bid, forbid / bid.
+- Contrôles (25 corrections) : A1 2 (to bear up ↔ to hold up « tenir bon » ; a rundown ↔ a round-up (of)), formes
+  admises des deux côtés ; A2 2 (to belie « masquer » → to conceal, to endow sth → to fund, LINT_OK, gloses) ; A3 9
+  gloses (doom, stage-fright, gear, puzzling, to run sth down, ongoing, to bestow, to betray « révéler », a bond
+  « lien ») ; B 3 (attempt to admis pour a bid ; exemples ajoutés pour nerves à the jitters et in progress à
+  ongoing) ; C 2 gloses (to puzzle face à to scheme, to belie « démentir » face à to deny) ; D 4 (traductions
+  d'exemples de the jitters, stage-fright, a rundown ; Traduction de to be engrossed in) ; E 0 ; F 1 (« être » dans
+  la Traduction de to be willing to do sth).
+- À trancher : scission de to beat « vaincre » / « dépasser (des prévisions) ».
