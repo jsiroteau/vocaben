@@ -94,3 +94,13 @@
 - Écartés car naturels avec un autre sens : token pour formal « de pure forme », idle pour free « gratuit »,
   foul play / foul language, to breach et to flout pour to fall foul of, a balance pour a footing « équilibre ».
 - Rien à trancher.
+
+## Lot 10 (21 novembre 2026, to fund → thoughtless, 108 lignes)
+- 18 lignes avec mots confus, surtout des pièges du français : a check(-)out pour a fund « caisse », conceit pour
+  futility « vanité », a play pour a game « jeu », a lapse pour a gap et a discrepancy « écart », the gist pour gas et
+  petrol « essence », a veneer pour a gloss « brillant » (« vernis »), a splinter et a sliver pour a gloss et a sheen
+  « éclat », to sneak et to drift pour to gloss over et to skate over « glisser », a hang-up pour gridlock « blocage »,
+  a sentence pour sorrow « peine », raw et unprocessed pour gross « brut » ; grief / a grievance croisés (faux-ami).
+- Écartés car naturels avec un autre sens : a chunk et a play pour a game « partie », a loophole pour a niche,
+  frank et blunt pour genuine « sincère », a board pour a chart « tableau », a hold-up pour gridlock, knee-jerk.
+- Aucune correction de la base nécessaire. Rien à trancher.
