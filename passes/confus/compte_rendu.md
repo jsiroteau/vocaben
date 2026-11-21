@@ -393,3 +393,27 @@
   to reshuffle, to redeem, to pursue, to break out) ; D 5 traductions d'exemples (to bring about, to bring on,
   to burst in, to canvass, to push for) ; E 1 (exemple figuré de to bury déplacé vers « enfouir ») ; F 0.
 - Rien à trancher.
+
+## Lot 28 (21 novembre 2026, to catch on sth → when it comes to sth, 101 lignes)
+- 48 lignes avec mots confus : pièges du français to impose pour to catch on « s'imposer », to extend pour to cater to
+  « adresser », defiance pour a challenge « défi », picky pour challenging « difficile, exigeant », a track pour
+  a channel « voie », to load pour to charge sb with « charger », the onus et liability pour charge « responsabilité »,
+  to tip sb off pour to admonish « avertir », to emit pour to clear « dégager », to settle down et to put away pour
+  to clear up « ranger », to refund pour to clear « rembourser », to glaze over et to pick up pour to clinch
+  « décrocher », a component pour a coin « pièce », to dry pour to come in for « essuyer », to go adrift pour
+  to come off « se détacher », to halt pour to come off sth « arrêter », to make good pour to come off « réussir »,
+  to hail from pour to come over « venir », to crop et to narrow down pour to curtail ; paronymes catch up with /
+  catch up on / catch on, check-up / checkout, curb / curtail, claim / acclaim / claimant, come across / come by /
+  come round, get around / get about ; autres sens : to contest, to vet, to approve, to vindicate, a demand.
+- Contrôles (34 corrections) : A1 5 groupes avec formes admises des deux côtés (to catch on sth ↔ to snag on sth ;
+  to cave (in) ↔ to relent ; to cede sth ↔ to relinquish sth ; to check « freiner » ↔ to rein in ; to charge sb with
+  « charger » ↔ to entrust sb with sth) ; A2 2 (a challenger → a competitor, a claimant → an applicant, LINT_OK,
+  glose) ; A3 18 gloses (to catch on face à to take in, to be aimed at face à to cater to, challenging / taxing /
+  exacting, an appeal, custody, to top up face à to charge, to cheat sb face à to take sb in, to trim et to skimp on
+  face à to curtail, to circumvent sans « déjouer » face à to foil et to outwit, to contend that face à to claim that,
+  to demand sans « revendiquer » face à to claim, to clear away face à to put away, to clinch face à to land et
+  to wrap up, to crumble et to fall through face à to collapse) ; B 1 (exemple ajouté pour to obstruct sous
+  to clog up) ; C 4 gloses (to make good, to refund, to settle down, to put away) ; D 4 (Traduction de to go adrift
+  limitée à ce que montrent les exemples ; traductions d'exemples de to claim responsibility, to come across,
+  to circumvent) ; E 0 (1 soumis) ; F 0.
+- À trancher : scission de to come across (as) et to come over (as) « être compris » / « donner l'impression d'être ».
