@@ -964,3 +964,11 @@
   to challenge, a conceit / an insight, deluded / ingenuous, an onlooker / a viewer. Laissé en l'état : the entertainment
   industry ↔ show business (l'article hors du mot à trouver empêche d'admettre).
 - Clés de lots.json remises à jour. Soumis : scissions de sane, sanity et a job.
+
+## Bilan (21 novembre 2026)
+- Passe terminée : pilote (100 lignes) et 54 lots, dont les lots 1 à 12 repris en revue avec les contrôles A à F.
+- Lignes avec mots confus : 1 344 sur 5 601 ; les autres reçoivent des distracteurs tirés au hasard dans l'appli.
+- Synonymes ajoutés (contrôle A1, total des comptes rendus) : 124, avec leurs formes admises des deux côtés ;
+  75 renvois à sens unique du particulier vers le général (A2, LINT_OK), et de nombreuses gloses (A3, C).
+- Cas à trancher : 21 dans passes/confus/a_trancher.md (surtout des scissions de ligne, quelques créations).
+- Lint à 0 avertissement à la fin de chaque lot.
