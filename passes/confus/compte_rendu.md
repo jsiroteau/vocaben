@@ -265,3 +265,19 @@
   face à to snub, smug face à complacent, sobering face à thought-provoking, unsound face à flimsy) ; B 0 ; C 4 gloses
   (a fit, a thrust, a span « durée », to entrench sth) ; D 0 ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 21 (21 novembre 2026, a spark → stubborn « tenace », 100 lignes)
+- 28 lignes avec mots confus : pièges du français wickedness pour spite « méchanceté », to enact pour to espouse sth
+  « adopter », to flaunt pour to stagger « étaler », to prune pour to stake out sth « tailler », value pour a stake (in)
+  « intérêt », a hold-up et a hang-up pour a stalemate « blocage », a location pour a stance (on) « position »,
+  a guiding light pour a standard « référence », a statute pour status « statut social » (et status pour a statute),
+  to give up pour to staunch sth « arrêter », above board pour steady « régulier », retiring pour stealthy « discret »,
+  stiff et steep croisés « raide », potent et steep pour « fort », lofty pour stiff « élevé », resolute pour stiff
+  « ferme », noticeable pour sore « sensible », a squeeze pour strain « pression », nagging pour stubborn « tenace » ;
+  autres sens : to stun / to lurch croisés sur les deux sens de to stagger, gridlock, a stand, eager, shoddy.
+- Contrôles (12 corrections) : A1 3 groupes avec formes admises des deux côtés (to staunch sth / to stem sth ;
+  to strain sth / to stretch « mettre à rude épreuve » ; miserly « dérisoire » / paltry / meagre) ; A2 0 ; A3 1
+  (to stagger « échelonner » face à to spread) ; B 0 ; C 5 gloses (spite, a location, a hang-up, nagging, stiff
+  « ferme (texture) ») ; D 0 ; E 0 ; F 0 (to stretch « mettre à rude épreuve » noté sans sth : non modifié, pas de
+  renommage de ligne dans cette passe).
+- Rien à trancher.
