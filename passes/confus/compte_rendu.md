@@ -925,3 +925,17 @@
   et a stir / a flurry of, towering / foremost, a trailblazer / a forerunner, token / formal, vacant et spare / free,
   complimentary / free. Laissé en l'état : in the offing ↔ forthcoming (la construction empêche d'admettre).
 - Clés de lots.json remises à jour. Soumis : scissions de a weakness et de a fake.
+
+## Lot 10 (revue) (21 novembre 2026, to fund → thoughtless, 108 lignes)
+- Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
+- Contrôles (15 corrections) : A1 3 (ghastly ↔ dreadful ; gross « dégoûtant » ↔ revolting ; grim « sinistre (lieu) » ↔
+  bleak « morne (lieu) », formes admises des deux côtés) ; A2 2 (a gulf → a gap, glose « (écart profond entre des
+  personnes, des positions) » ; glossy → shiny, glossy retiré des synonymes de shiny où il ne convenait dans aucun
+  exemple ; LINT_OK) ; A3 3 gloses (crass « (sans tact ni finesse) » face à coarse, genuine « franc (sans feinte) » face
+  à frank, grief « le deuil (peine ressentie) » face à bereavement) ; B 2 (exemples ajoutés : a niche « Budget airlines
+  filled a niche… », a gap in the market admis ; a veneer « Beneath the veneer of prosperity… », a gloss admis) ;
+  C 3 (futility « (caractère vain, inutile) » face à conceit « la vanité » ; gas et petrol « l'essence (carburant) » face
+  à the gist) ; E 2 (shiny : exemple figuré « shiny infrastructure projects » remplacé par un exemple concret ; a chart
+  « un tableau » : « The chart shows how sales have changed » déplacé vers a chart « un graphique », graph admis) ; D 0 ;
+  F 0. Laissé en l'état : to give sb grief (le mot à trouver « gives » empêche d'admettre to give sb trouble).
+- Clés de lots.json remises à jour. Soumis : scission de a niche.
