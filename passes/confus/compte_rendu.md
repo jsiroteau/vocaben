@@ -649,3 +649,18 @@
   to put aside) ; B 0 ; C 6 gloses (to sound out, to entice, a bid, to provide for/that, to rank sth, a row) ; D 0 ; E 1
   (soumis) ; F 0.
 - 1 cas soumis : scission de to pursue (« poursuivre un but » / « pourchasser »).
+
+## Lot 44 (21 novembre 2026, to rave → resigned to, 102 lignes)
+- 15 lignes avec mots confus : pièges du français to fetch et to amount to pour to reach « atteindre, arriver à »,
+  to grade pour to record « noter », to mend pour to redress « réparer », to withhold pour to refrain from « retenir »,
+  to make good on pour to refund « rembourser », a subsidy pour relief « aide », to hinge on/upon pour to rely on
+  « dépendre de », to dwell pour to remain « demeurer », novel pour renewed « nouveau », a claim pour a request
+  « demande » ; paronymes to repeal / to repel, the remainder / the remains / a remnant ; to recoup sth pour to recover.
+- Contrôles (22 corrections) : A1 7 (to rebuke ↔ to chastise, to reckon with ↔ to contend with, to release « publier »
+  ↔ to publish et to issue, to relieve ↔ to soothe, repellent ↔ revolting, renewal « renouveau » ↔ a revival, formes
+  admises des deux côtés) ; A2 2 (to bail out sb/sth → to rescue, to relinquish sth « quitter » → to quit sth, LINT_OK) ;
+  A3 7 gloses (to rebuke face à to chide/to scold, to rave about face à to laud, to reckon face à to assess, a record
+  face à a file, to spark face à to kindle, trustworthy face à dependable, to reshuffle face à to shake up, a rescue face
+  à relief) ; B 0 ; C 3 gloses (to record « consigner », to dwell « (littéraire) », renewed « (qui reprend) ») ; D 1
+  (exemple de to record « noter ») ; E 0 ; F 0.
+- Outil : 7 clés de lots.json remises à jour après des gloses (lots 24, 27, 29, 35, 44) ; rien à trancher.
