@@ -574,3 +574,18 @@
   to hamper, to lend sth to sth face à to impart) ; B 1 (formes admises condemnation of à an indictment (of)) ; C 0 ;
   D 0 ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 39 (21 novembre 2026, to irk → to lay out sth, 100 lignes)
+- 23 lignes avec mots confus : pièges du français to cross sb et to spite sb pour to irk « contrarier », to emit pour
+  to issue « émettre », to waive et to forgo pour to jettison « renoncer à », to merge pour to join « rejoindre »,
+  to fall into pour to join « entrer dans », a tremor pour a jolt « secousse », to look up to pour to keep to
+  « respecter », to linger pour to keep at « persister », to uphold pour to keep sth up « maintenir », to perpetuate
+  pour to keep up « entretenir », to retire sth pour to knock out sth « mettre hors service », a time limit pour a time
+  lag et a lapse of time « délai », ownership pour land « propriété », a discrepancy pour a lapse « écart », a spur pour
+  a lash « coup de fouet », to rent sth pour to laud « louer », to encompass pour to lavish « couvrir », to peg pour
+  to lay down « fixer » ; autres sens : to publish pour to issue sth (to sb), to stem from pour to issue (forth) from,
+  soil pour land « terre (ferme) », plentiful pour lavish « généreux ».
+- Contrôles (4 corrections) : A1 1 (to irk ↔ to bug sb, synonymes de to annoy, formes admises) ; A2 0 ; A3 1 (to jolt
+  « (brusquement) » face à to rattle) ; B 1 (forme admise enduring à lasting) ; C 1 (a time lag « (entre une cause et
+  son effet) » face à a time limit) ; D 0 ; E 0 ; F 0.
+- Rien à trancher.
