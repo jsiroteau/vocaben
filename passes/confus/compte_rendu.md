@@ -785,8 +785,8 @@
   a toll « bilan », to join pour to track down « retrouver », a lead et a channel pour a track « piste, voie », a chunk pour
   a track « morceau », a make pour a trademark « marque » ; paronymes wrangling / a wrangler ; autres sens de to yield
   (to bear interest, to relent, to succumb, to give in, to give away).
-- Contrôles (16 corrections) : A1 5 (to widen ↔ to broaden ; paires GB/US reliées avec formes admises des deux côtés : a trade
-  union / a labor union, trade unionism / labor unionism, trainers / sneakers, a dustbin / a trash can) ; A2 0 ; A3 6 gloses
+- Contrôles (15 corrections) : A1 5 (to widen ↔ to broaden ; paires GB/US reliées avec formes admises des deux côtés : a trade
+  union / a labor union, trade unionism / labor unionism, trainers / sneakers, a dustbin / a trash can) ; A2 0 ; A3 5 gloses
   (breadth face à an extent, to wield « exercer » face à to hold, wreckage face à rubble, to track down face à to locate,
   a trade « secteur » face à an industry) ; B 2 (marvels admis dans un exemple de a wonder, to bear interest retiré des
   synonymes de to yield « rapporter », gardé à sens unique, LINT_OK) ; C 0 ; D 0 ; E 0 ; F 0.
