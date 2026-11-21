@@ -791,3 +791,19 @@
   a trade « secteur » face à an industry) ; B 2 (marvels admis dans un exemple de a wonder, to bear interest retiré des
   synonymes de to yield « rapporter », gardé à sens unique, LINT_OK) ; C 0 ; D 0 ; E 0 ; F 0.
 - 4 clés de lots.json remises à jour. Soumis : nouvelle ligne garbage « des bêtises » (a_trancher.md).
+
+## Lot 53 (21 novembre 2026, a trend → a wildcat strike, 104 lignes)
+- 29 lignes avec mots confus : pièges du français a pattern et a fad pour a trend « tendance », an attempt pour a trial « essai »,
+  to deem pour to try sb « juger » et to value « estimer », a tour et a round pour a trick « tour », the bustle et the rush pour
+  turmoil et unrest « agitation », to instigate pour to underlie « être à l'origine de », to be commensurate with pour to be up to
+  « être à la hauteur de », a vacancy pour a vacuum « vide », to yearn for et to strive for pour to vacuum « aspirer », worthwhile
+  pour valid « valable », a stake pour value « intérêt », to face pour to venture sth « risquer », out of print pour weary
+  « épuisé », a commodity pour welfare « bien » ; paronymes war / warfare / welfare, a whim / a whirl, to wage / to wager,
+  wildlife / the wilderness, up on / up to ; même fiche : to bring sb to trial / to stand trial / to try sb, a venture / venture capital.
+- Contrôles (16 corrections) : A1 5 (to trick sb ↔ to hoodwink sb et to take sb in ; tricky ↔ knotty, thorny ajouté ; to venture
+  sth ↔ to hazard ; wanton « licencieux » ↔ promiscuous « aux mœurs légères » ; tedious ↔ dreary « fastidieux (travail) »),
+  formes admises des deux côtés ; A2 1 (the dole → welfare, LINT_OK) ; A3 4 gloses (boisterous face à unruly, disorderly
+  « désordonné, chaotique » face à haphazard, fickle face à whimsical, jingoistic face à warmongering) ; C 1 (a pattern
+  « régularité qui se répète » face à a trend) ; B 0 ; D 0 ; E 0 ; F 0. Écartés car quasi-synonymes déjà glosés : probation /
+  a trial, a salary / a wage, to try sb / to bring sb to trial, an upheaval / turmoil, a backlash / an uproar.
+- 5 clés de lots.json remises à jour. Rien à trancher.
