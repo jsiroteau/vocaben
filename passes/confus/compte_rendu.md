@@ -81,3 +81,16 @@
 - Écartés car naturels avec un autre sens : efficient / effective et efficiency / effectiveness, output pour
   efficiency, gross et outrageous pour egregious, the eldest pour the elder (usage courant), to bear witness.
 - Aucune correction de la base nécessaire. Rien à trancher.
+
+## Lot 9 (21 novembre 2026, to fare → fringe benefits, 101 lignes)
+- 20 lignes avec mots confus, surtout des pièges du français : a fare pour a fee « tarif, frais », a craze pour
+  fashion « mode », wrongdoing et a foul pour fault « faute » (et fault pour a foul), misguided pour faulty « erroné »,
+  to entail (doing) sth pour to feature sth « comporter », to rank (among) pour to feature (in) « figurer »,
+  a stir pour a flurry of « effervescence », an outlet pour a foothold « prise », buoyant pour formal « soutenu »,
+  legacy pour former « ancien », to unleash et to vacate pour to free « libérer », wanton pour free « gratuit » et
+  frantic « effréné », scope (for) pour the fringe « marge », a (spending) binge pour a frenzy ; paronyme a foothold
+  pour a footing « assise ».
+- Correction : fledgling et nascent reliés comme synonymes (groupe budding, emerging), formes admises ajoutées.
+- Écartés car naturels avec un autre sens : token pour formal « de pure forme », idle pour free « gratuit »,
+  foul play / foul language, to breach et to flout pour to fall foul of, a balance pour a footing « équilibre ».
+- Rien à trancher.
