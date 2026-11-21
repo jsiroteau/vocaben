@@ -741,3 +741,19 @@
   et gardé à sens unique) ; C 5 gloses (business, stuff, a suit « (au civil) » / a trial, a contest, stricken, to embezzle) ;
   D 0 ; E 0 ; F 0.
 - 14 clés de lots.json remises à jour. Rien à trancher.
+
+## Lot 50 (21 novembre 2026, to taper → to undermine, 100 lignes)
+- 29 lignes avec mots confus : pièges du français to taint et to sully pour to tarnish « se ternir », to foul pour to sully
+  « souiller », to loom pour to threaten « menacer », to catch on pour to thrust sth upon sb « (s')imposer », to shake up pour
+  to shove « bousculer », to cross sb et to irk pour to thwart « contrarier », to narrow pour to tighten sth « resserrer »,
+  to boast et to brag pour to tout / to trumpet « vanter », to stall pour to trample / to tread on « piétiner », to pare pour
+  to trim « couper », to reckon pour to trust « croire », to disclaim pour to turn down « décliner », to disclose pour to turn
+  out « (se) révéler », a stake et a holding pour turnout « participation », to reach et to rise pour to turn up « arriver »,
+  « monter », to ail sth pour to undermine « miner » ; paronymes a trade-in / a trade-off ; autre sens to tarnish sth pour
+  to taint « contaminer », to tip over pour to topple « s'écrouler ».
+- Contrôles (20 corrections) : A1 0 ; A2 3 (to taint « entacher » → to mar, at full throttle → at full blast, to thrust sth
+  upon sb → to impose sth, LINT_OK, gloses du particulier) ; A3 5 gloses (stringent face à tight « strict », taut « concis »
+  face à crisp, a derelict face à a tramp, to step up face à to turn up, a trump card face à an asset) ; B 2 (unleashed admis
+  dans un exemple de to trigger (off), exemple ajouté à frills pour trimmings) ; C 5 gloses (to foul, to sully, to shake up,
+  to thwart, to trust « croire (qn, ses paroles) ») ; D 0 ; E 0 ; F 0.
+- 12 clés de lots.json remises à jour. Rien à trancher.
