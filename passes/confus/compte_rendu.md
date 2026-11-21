@@ -953,3 +953,14 @@
   « a hollow victory ». Laissé en l'état : the human race ↔ humanity, mankind (l'article hors du mot à trouver empêche
   d'admettre) ; ghastly / gruesome, stiff / hefty, legacy / an inheritance (déjà glosés).
 - Clés de lots.json remises à jour. Soumis : scission de helpful.
+
+## Lot 12 (revue) (21 novembre 2026, humane → a work, 101 lignes)
+- Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
+- Contrôles (6 corrections ou cas) : A3 3 gloses (to be incumbent on/upon sb « (devoir, obligation) » face à to fall to sb ;
+  to incite « provoquer délibérément » face à to prompt, qui convenait dans « incited a riot » ; revenue « (d'une
+  entreprise, de l'État) » face à sales et a turnover) ; E 3 (sane, sanity, a job « une tâche, une responsabilité » :
+  scissions soumises, les synonymes sensible, mental health, a task ne valant que pour un des deux sens) ; A1 0 ; A2 0 ;
+  B 0 ; C 0 ; D 0 ; F 0. Écartés car déjà glosés : incumbency / tenure, manufacturing / industry, to take issue with /
+  to challenge, a conceit / an insight, deluded / ingenuous, an onlooker / a viewer. Laissé en l'état : the entertainment
+  industry ↔ show business (l'article hors du mot à trouver empêche d'admettre).
+- Clés de lots.json remises à jour. Soumis : scissions de sane, sanity et a job.
