@@ -493,3 +493,19 @@
   to fit « convenir » face à to suit) ; B 0 ; C 3 (a shortfall face à a shortcoming, fitting face à deserving,
   fit for face à peculiar to) ; D 1 (traduction d'exemple de to wrangle) ; E 2 soumis ; F 0.
 - À trancher : scissions de to explode (« exploser » / « monter en flèche ») et de a fake (« un faux » / « un imposteur »).
+
+## Lot 34 (21 novembre 2026, to fix → to further, 100 lignes)
+- 26 lignes avec mots confus : pièges du français to redress pour to fix « réparer », to leak pour to flee « fuir »,
+  to founder pour to flow « couler », to circumvent sth et to outwit sb pour to foil « déjouer », a boost pour a flare-up
+  « regain », to shuffle pour to flutter « battre », to shed pour to forfeit « perdre », to coin et to knot sth pour
+  to forge « forger, nouer », to embolden pour to foster « encourager », to supervise ↔ to frame « encadrer »,
+  an executive et surroundings pour a framework « cadre », to block sth pour to freeze et to seize up « se bloquer »,
+  to peg pour to freeze « geler (prix) » ; paronymes flaunt / flout, unwise / unwary, found / founder ; autres sens :
+  to mend pour to fix « fixer », to falter pour to flag (up) sth, to fall through pour to founder « couler ».
+- Contrôles (12 corrections) : A1 3 (to flow from, to spring from et to issue from (soutenu) reliés entre eux, comme
+  avec to stem from) ; A2 2 (a foundation « fondation » → a trust ; to forgo → to give up sth ; LINT_OK) ; A3 6 gloses
+  (to flout « (ouvertement) » face à to infringe, to foment « (délibérément) » face à to fuel et to stoke, to fool sb
+  « (par une ruse) » et to deceive sb « (en mentant) », to freeze « se figer (sur place) » face à to stiffen, to fuss
+  « (des détails) » face à to fret) ; B 0 ; C 1 (to supervise « (une équipe, une activité) » face à to frame) ; D 0 ;
+  E 0 ; F 0.
+- Rien à trancher.

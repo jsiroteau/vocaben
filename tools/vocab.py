@@ -186,6 +186,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 21 novembre 2026 (passe mots confus, lot 34) : cas particuliers renvoyant au mot général
+    ('symétrie', 'a foundation', 'a trust'), ('symétrie', 'to forgo (forwent, forgone)', 'to give up sth'),
     # 21 novembre 2026 (passe mots confus, lot 33) : cas particuliers renvoyant au mot général
     ('symétrie', 'to fiddle', 'to falsify'), ('symétrie', 'a failing', 'a weakness'), ('symétrie', 'a failing', 'a flaw'),
     ('symétrie', 'a shortcoming', 'a weakness'), ('symétrie', 'a shortcoming', 'a flaw'),
