@@ -35,3 +35,15 @@
 - Écartés car naturels avec un autre sens : to censure pour « censors films », a criticism pour « Critics of the
   reform », a sexist pour le sens « chauvin ».
 - Aucune correction de la base nécessaire. Rien à trancher.
+
+## Lot 5 (21 novembre 2026, the upper class → a fad, 100 lignes)
+- 21 lignes avec mots confus, dont des pièges du français : futility pour conceit « vanité », a cutback pour
+  a concession « réduction », binding pour compulsory, custom pour a constituency « clientèle », a snag / a glitch pour
+  sb's concern « problème », the crux (of) / the heartland pour the core « cœur », a fuse pour lead « plomb », coal pour
+  charcoal « fusain » ; paronymes croisés a column / a columnist, a coward / cowardice, a constituent pour a constituency ;
+  autres sens : free pour complimentary « élogieux », wanton et laudatory pour complimentary « gratuit », leverage pour
+  a clout « claque », a liability pour clout « poids ».
+- Correction : complimentary « gratuit » → free (cas particulier, à sens unique, LINT_OK), formes admises ajoutées,
+  glose « (par un hôtel, un organisateur) ».
+- Fiches class, coal, copper, brass, computer : peu de distracteurs sûrs (les voisins donnent des phrases naturelles).
+- Rien à trancher.
