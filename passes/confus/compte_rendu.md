@@ -220,3 +220,17 @@
   « indicateur » → an indicator impossible à admettre (article a/an dans les trois exemples), laissé) ; C 1 (apt) ;
   D 0 ; E 0 ; F 0.
 - Rien à trancher.
+
+## Lot 18 (21 novembre 2026, pusillanimous → a rift, 100 lignes)
+- 26 lignes avec mots confus : pièges du français a term pour a quarter « trimestre », a craze pour a quirk « manie »,
+  to file et to sort (out) pour to rate « classer », the box office pour receipts « recettes », (a) pursuit pour
+  research, drive pour resolve « détermination », choppy pour fidgety « agité », a boost pour a resurgence « regain »,
+  a trade-in pour a revival « reprise », a flaw et a loophole pour a rift « faille », unwary pour reckless « imprudent » ;
+  paronymes a quart / a quarter, a rate / a rating, a receipt / a recipe (for) / takings, regarding pour regardless of.
+- Contrôles (16 corrections) : A1 3 groupes avec formes admises des deux côtés (pusillanimous / spineless ;
+  faraway « lointain » / far-flung ; to revel in / to relish (doing) sth) ; A2 0 ; A3 4 gloses (fanciful face à
+  quixotic, scruples « (principes moraux) » face à qualms, rampant « (sans frein) » face à widespread, a divide face
+  à a rift) ; B 3 (rash, foolhardy déplacés de reckless « imprudent » vers reckless « téméraire », où ils conviennent ;
+  a comeback admis dans un exemple de a revival, exemple ajouté à a resurgence) ; C 6 gloses (a quarter « trimestre
+  (exercice comptable) », resolve, a craze, (a) pursuit, unwary, to file « classer ») ; D 0 ; E 0 ; F 0.
+- Clés de lots.json remises à jour (Traductions modifiées, dont a landmark du lot 13). Rien à trancher.
