@@ -18,3 +18,11 @@
   record, outmoded, struggling) ou donnent une phrase naturelle de sens différent (ominous, the median, wary of).
 - Synonyme ajouté : an assembly line → a production line (bleu clair), avec ses formes admises.
 - Rien à trancher.
+
+## Lot 3 (21 novembre 2026, bias → a make, 104 lignes)
+- 16 lignes avec mots confus (ex. a tip pour a board « conseil », receipts et revenue pour the box office (piège
+  « recettes »), rule pour a branch (of government) (« pouvoir »), outcast pour out of bounds (« exclu »), a breath
+  pour a blast (« souffle »), edgy pour bold ; on board / above board / across the board croisés ; autres sens :
+  dull pour blunt « franc », outspoken pour blunt « émoussé », a power failure pour a blackout « black-out »).
+- Fiches bishop, block, gloomy, dreary : aucun distracteur sûr, les voisins s'échangent dans les phrases.
+- Aucune correction de la base nécessaire. Rien à trancher.
