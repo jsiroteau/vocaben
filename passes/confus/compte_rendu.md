@@ -187,3 +187,21 @@
   exemple au sens « environ » remplacé) ; F 1 (odd « environ » : mot à trouver réduit à odd dans hundred-odd,
   twenty-odd) ; guarded glosé « (dans ses propos) ».
 - Rien à trancher.
+
+## Lot 16 (21 novembre 2026, offhand → a salary, 110 lignes)
+- 33 lignes avec mots confus, surtout des pièges du français : petrol pour oil « pétrole », perspective pour the
+  outlook, design pour an outlook (on) « conception », a recoil pour perspective « recul », a scheme pour an outline
+  « plan », a patron pour a pattern « patron », a slant pour a pattern « tendance », demeanour pour a pace « allure »,
+  a foothold pour an outlet « prise », a medium pour a media outlet, a billboard pour a panel, binding pour onerous
+  « contraignant », accountability pour the onus, an industry pour an offshoot « branche », out of bounds pour
+  outcast (from), downright / bluntly / outright croisés, all-encompassing et utter pour overall « total » ;
+  paronymes : onerous / ominous, a proponent (of) pour an opponent, tantamount to et momentous pour paramount.
+- Contrôles (32 corrections) : A1 3 groupes avec formes admises des deux côtés (a critic « détracteur » /
+  an opponent (of) ; an outcry / a furore ; forthright / frank / blunt) ; A2 1 (a spouse → a partner, LINT_OK,
+  glose « (marié ou pacsé) ») ; A3 4 (cronyism / patronage « clientélisme » démêlés, a salary glosé face à pay) ;
+  B 6 (formes admises : ominous → portentous, the onus → the responsibility, the outlook → prospects,
+  outspoken → direct ; patronage « clientèle » : customers, jamais substituable, remplacé par clientele, admis) ;
+  C 12 gloses (binding, out of bounds, a medium / a media outlet, an outline, downright / outright,
+  all-encompassing, a shortcoming, an impairment, demeanour, an outrage / a furore « scandale ») ; D 0 ;
+  E 1 (overhead adverbe : exemple adjectival « overhead lockers » remplacé) ; F 0.
+- Clés de lots.json mises à jour pour les Traductions modifiées (lots 15 et 16). Rien à trancher.
