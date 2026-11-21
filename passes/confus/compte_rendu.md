@@ -26,3 +26,12 @@
   dull pour blunt « franc », outspoken pour blunt « émoussé », a power failure pour a blackout « black-out »).
 - Fiches bishop, block, gloomy, dreary : aucun distracteur sûr, les voisins s'échangent dans les phrases.
 - Aucune correction de la base nécessaire. Rien à trancher.
+
+## Lot 4 (21 novembre 2026, brash → a cashier, 106 lignes)
+- 13 lignes avec mots confus, surtout des pièges du français : to rape pour to breach « violer », acutely pour briskly
+  « vivement », basically pour in bulk « en gros », crushing pour burdensome « écrasant », belongings pour business
+  « les affaires », a store pour a caveat « réserve », a viewer pour a bystander « spectateur » ; paronymes
+  a critic / a criticism croisés, to censor pour to censure ; autres sens de cheap (stingy, shoddy).
+- Écartés car naturels avec un autre sens : to censure pour « censors films », a criticism pour « Critics of the
+  reform », a sexist pour le sens « chauvin ».
+- Aucune correction de la base nécessaire. Rien à trancher.
