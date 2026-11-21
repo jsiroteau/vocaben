@@ -615,10 +615,23 @@
   undermanned ; autres sens : to make out pour to manage « gérer », to tally with pour to match « être assorti à ».
 - Contrôles (16 corrections) : A1 2 (to match (sth) ↔ to square with, to manage « se débrouiller » ↔ to cope (with),
   formes admises des deux côtés) ; A2 4 (a meltdown → a collapse, to melt away → to dwindle, a notice « un avertissement
-  (écrit, officiel) » → a warning, to tarnish sth « (réputation, image) » → to mar, LINT_OK) ; A3 5 gloses (malign face
-  à malicious, to mingle with face à to hang out with, to ponder face à to wonder, a query face à a matter) ; B 1
+  (écrit, officiel) » → a warning, to tarnish sth « (réputation, image) » → to mar, LINT_OK) ; A3 6 gloses (malign et
+  malicious, to mingle with et to hang out with, to ponder face à to wonder, a query face à a matter) ; B 1
   (to outlast retiré des synonymes de to outlive, où il ne convient dans aucun exemple, renvoi inverse gardé à sens
   unique et glosé) ; C 0 ; D 0 ; E 0 ; F 0.
 - Outil : passe_confus.py retrouve une clé dont la Traduction a reçu une glose quand l'Entrée et le Mot ont plusieurs
-  lignes (lot 41 bloqué sur a notice) ; il reste à corriger à la main la clé de to trim (lot 50).
+  lignes (lot 41 bloqué sur a notice) ; clé de to trim corrigée dans lots.json (lot 50).
 - Rien à trancher.
+
+## Lot 42 (21 novembre 2026, to haul → under pressure, 100 lignes)
+- 12 lignes avec mots confus : pièges du français to sneak out pour to overshadow « éclipser », to break up (with) pour
+  to part with « se séparer de », back pay pour arrears « arriérés », to land sth pour to pick up « décrocher », a trade-in
+  pour a pick(-)up et an upturn « reprise », a warranty pour a pledge « gage, garantie », to lavish sth (on sb) pour
+  to plug « combler » ; paronymes to haul / to overhaul, to owe / to own, to play up / to play up to.
+- Contrôles (11 corrections) : A1 4 (to override « primer sur » ↔ to outweigh, to upend « retourner » ↔ to overturn sth,
+  to postpone sth ↔ to delay sth, to appraise ↔ to assess, formes admises des deux côtés) ; A2 0 ; A3 7 gloses
+  (to overlook « (souvent par inattention) » face à to ignore, to override « (… en vertu d'une autorité supérieure) » face
+  à to overturn, to peddle « (… péjoratif) » face à to spread, to pin sth down « (avec précision) » face à to figure out,
+  a pick(-)up face à a revival, to play up « (pour en tirer parti) » face à to emphasize, a plea face à an appeal) ;
+  B 0 ; C 0 ; D 0 ; E 0 ; F 0.
+- 1 cas soumis : ligne an appeal (for) « un appel (à l'aide, aux dons) » à créer, synonyme de a plea.
