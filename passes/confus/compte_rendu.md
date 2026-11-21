@@ -843,3 +843,14 @@
   record / a background, an uproar et a furore / a backlash, ailing et struggling / beleaguered. Laissé en l'état :
   to raise awareness (of) ↔ to sensitize (to), vrais équivalents que la construction empêche d'admettre.
 - Clés de lots.json remises à jour. Rien à trancher.
+
+## Lot 3 (revue) (21 novembre 2026, a bias → a make, 104 lignes)
+- Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
+- Contrôles (6 corrections) : A1 0 ; A2 1 (a (spending) binge → a frenzy, LINT_OK, admis dans les 4 exemples) ; A3 2 gloses
+  (to blast sth « (pont, roche, à l'explosif) » face à to blow up, a hail of « (balles, coups, questions) » face à
+  a blizzard of) ; B 1 (a faint retiré des synonymes de a blackout « perte de connaissance », où il ne convenait dans
+  aucun exemple ; renvoi a faint → a blackout gardé à sens unique, LINT_OK) ; D 1 (a bigot : « un fanatique » retiré,
+  non illustré et confondu avec a zealot) ; C 0 ; E 0 ; F 0. Écartés car déjà glosés : to stymie / to block, a flurry of /
+  a blizzard of, plainly / bluntly, a range / a bracket, buoyant / booming, malaise / gloom. Grappe bleak / gloomy /
+  dismal / dreary revue : rien à changer depuis le lot 3.
+- Clés de lots.json remises à jour. Rien à trancher.
