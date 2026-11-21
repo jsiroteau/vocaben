@@ -939,3 +939,17 @@
   « un tableau » : « The chart shows how sales have changed » déplacé vers a chart « un graphique », graph admis) ; D 0 ;
   F 0. Laissé en l'état : to give sb grief (le mot à trouver « gives » empêche d'admettre to give sb trouble).
 - Clés de lots.json remises à jour. Soumis : scission de a niche.
+
+## Lot 11 (revue) (21 novembre 2026, grounds → mankind, 105 lignes)
+- Mots confus déjà en place, aucun ajouté (pas de distracteur évident manquant).
+- Contrôles (13 corrections) : A3 4 gloses (gruelling « (au point d'épuiser) » face à taxing, high-strung « (de
+  tempérament) » face à jumpy, high-powered « (personne, poste de haut niveau) » face à influential, a hoax « (fausse
+  nouvelle, fausse alerte) » face à deception) ; B 2 (deprivation, cas particulier, retiré des synonymes de hardship où il
+  ne convenait dans aucun exemple, renvoi inverse gardé à sens unique, LINT_OK ; havoc : exemple ajouté « The rail strike
+  caused havoc… », chaos et mayhem admis) ; C 3 (punishing « sévère (taux, conditions) » face à stern ; a culprit « (d'un
+  méfait, d'un problème) » face à the head (of) ; secular « (non religieux) » face à lay) ; D 1 (high-grade : glose
+  « (actif financier) » contredite par les exemples, devenue « (produit, actif financier) ») ; E 1 (helpful : scission
+  soumise) ; F 1 (highbrow : exemple où le mot était employé comme nom remplacé) ; A1 0 ; A2 0 ; empty admis dans
+  « a hollow victory ». Laissé en l'état : the human race ↔ humanity, mankind (l'article hors du mot à trouver empêche
+  d'admettre) ; ghastly / gruesome, stiff / hefty, legacy / an inheritance (déjà glosés).
+- Clés de lots.json remises à jour. Soumis : scission de helpful.
