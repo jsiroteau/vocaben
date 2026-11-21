@@ -186,6 +186,9 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 21 novembre 2026 (passe mots confus, lot 26) : cas particuliers renvoyant au mot général
+    ('symétrie', 'a blaze', 'a fit'), ('symétrie', 'to break down', 'to collapse'), ('symétrie', 'a breakdown', 'a collapse'),
+    ('symétrie', 'a boost', 'a rise'),
     # 21 novembre 2026 (passe mots confus, lot 25) : to belie (masquer) et to endow sth (doter) cas particuliers de to conceal et to fund
     ('symétrie', 'to belie', 'to conceal'), ('symétrie', 'to endow sth', 'to fund'),
     # 21 novembre 2026 (passe mots confus, lot 20) : to offshore (délocaliser à l'étranger) cas particulier de to relocate

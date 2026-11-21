@@ -347,3 +347,20 @@
   d'exemples de the jitters, stage-fright, a rundown ; Traduction de to be engrossed in) ; E 0 ; F 1 (« être » dans
   la Traduction de to be willing to do sth).
 - À trancher : scission de to beat « vaincre » / « dépasser (des prévisions) ».
+
+## Lot 26 (21 novembre 2026, to blackmail sb → breathless « fébrile », 100 lignes)
+- 24 lignes avec mots confus : pièges du français a harbinger pour a trailblazer « précurseur », to dwindle pour
+  to blend in « fondre », to go off et to burst pour to blow up « exploser », a lash pour a boost « coup de fouet »,
+  to spur pour to boost « remonter (le moral) », a resurgence pour a boost « regain », to fathom pour to bore
+  « percer », to dismiss pour to bounce sth « rejeter », to entrench pour to brace « consolider », to crop pour
+  to sever « couper », to state pour to break out « se déclarer », a blowout pour a break-up « éclatement »,
+  a halt pour a breather « pause » ; paronymes bleed / breed, brake / break, breakthrough / breakdown,
+  breath / breadth, break down / break off, break up / break off ; autres sens : bloodshed, to drill, to brag,
+  to burgle.
+- Contrôles (13 corrections) : A1 1 (to blow over ↔ to die down, formes admises des deux côtés) ; A2 4 (a blaze
+  « accès » → a fit, to break down « échouer » → to collapse, a breakdown « rupture » → a collapse, a boost « hausse »
+  → a rise avec glose, LINT_OK) ; A3 3 gloses (trailblazing, a trailblazer face à a forerunner, to be blessed with
+  face à to endow sb with) ; B 1 (increase admis pour a boost in sales) ; C 2 gloses (a boost « coup de fouet (au
+  figuré) » face à a lash, a breather face à a halt) ; D 1 (traduction d'exemple de a bloodletting) ; E 1 soumis ;
+  F 0.
+- À trancher : scission de a blow « coup dur » / « coup (physique) ».
