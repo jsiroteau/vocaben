@@ -123,6 +123,9 @@
   .qcm-opts{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
   .qcm-opt{padding:14px 18px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:0.9rem;cursor:pointer;transition:all 0.2s;text-align:left;font-family:'DM Sans',sans-serif}
   .qcm-opt.correct-opt{border-color:var(--success);background:rgba(46,204,113,0.12);color:var(--success)}
+  .qcm-opt.opt-link{display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .qcm-opt .opt-book{font-size:0.85em;opacity:0.75;flex-shrink:0}
+  .opt-tip{font-size:0.75rem;color:var(--muted);text-align:center;margin-top:8px}
   .qcm-opt.wrong-opt{border-color:var(--danger);background:rgba(231,76,60,0.1);color:var(--danger)}
   .open-inp{width:100%;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:1rem;outline:none;margin-bottom:14px}
   .open-inp:focus{border-color:var(--accent)}
@@ -138,6 +141,14 @@
   .feedback{padding:13px 16px;border-radius:12px;margin-bottom:14px;font-weight:600;font-size:0.9rem}
   .feedback.ok{background:rgba(46,204,113,0.12);color:var(--success);border:1px solid rgba(46,204,113,0.25)}
   .feedback.ko{background:rgba(231,76,60,0.1);color:var(--danger);border:1px solid rgba(231,76,60,0.25)}
+  .dict-pattern{font-family:monospace;font-size:1.25rem;letter-spacing:0.12em;text-align:center;margin:10px 0 14px;color:var(--gold)}
+  .dict-ctrl{display:flex;gap:10px;justify-content:center;margin-bottom:12px}
+  .dict-ctrl .btn{flex:1}
+  .dict-rate{display:flex;align-items:center;gap:10px;font-size:0.8rem;color:var(--muted);margin-bottom:8px}
+  .dict-rate input{flex:1}
+  .dict-meta{font-size:0.8rem;color:var(--muted);text-align:center}
+  .dict-hint-btn{background:none;border:none;color:var(--accent);font:inherit;cursor:pointer;padding:0}
+  .dict-tr{font-size:0.85rem;color:var(--muted);font-style:italic}
   .fb-admitted{margin-top:6px;font-weight:400;font-size:0.85rem;color:var(--text)}
   .see-fiche-btn{display:flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;cursor:pointer;width:100%;margin-bottom:10px;transition:all 0.2s}
   .see-fiche-btn:active{background:var(--accent2)}
@@ -280,6 +291,11 @@
   <div class="action-card exo-card" onclick="startTest('fill','en2fr')">
     <div class="icon" style="background:rgba(46,204,113,0.15)">📝</div>
     <div class="info"><h3>Fill in the blank</h3><p>Find the word in a sentence</p></div>
+    <div class="arrow">›</div>
+  </div>
+  <div class="action-card exo-card" onclick="startTest('dict','en2fr')">
+    <div class="icon" style="background:rgba(26,188,156,0.15)">🎧</div>
+    <div class="info"><h3>Dictation</h3><p>Hear a sentence, type the missing word</p></div>
     <div class="arrow">›</div>
   </div>
   <div class="action-card exo-card" onclick="startTest('disc','en2fr')">
@@ -495,6 +511,13 @@
       <input type="checkbox" id="set-tts" style="width:20px;height:20px">
     </div>
     <div class="settings-row">
+      <label>🗣 Default accent<br><span style="font-size:0.75em;opacity:0.7">Lines marked (GB) or (US) use their own</span></label>
+      <span style="display:flex;gap:6px;align-items:center">
+        <select id="set-accent" class="open-inp" style="width:auto;margin:0;padding:6px 8px"><option value="US">🇺🇸 US</option><option value="GB">🇬🇧 GB</option></select>
+        <button class="btn btn-secondary btn-sm" type="button" onclick="testVoice()">▶ Test</button>
+      </span>
+    </div>
+    <div class="settings-row">
       <label>🧭 Learn “See also” words</label>
       <input type="checkbox" id="set-assoc" style="width:20px;height:20px">
     </div>
@@ -551,7 +574,7 @@ const VOCAB_DATA = [];
 // ══════════════════════════════════
 let vocab = [];
 let us = {};
-let cfg = { newPerDay: 5, revPerDay: 40, qPerTest: 10, pvPerDay: 4, freqFilter: [1,2,3,4], ttsEnabled: true, learnAssoc: true, autoUpdate: true, srsVer: 1 };
+let cfg = { newPerDay: 5, revPerDay: 40, qPerTest: 10, pvPerDay: 4, freqFilter: [1,2,3,4], ttsEnabled: true, ttsAccent: 'US', ttsRate: 0.9, learnAssoc: true, autoUpdate: true, srsVer: 1 };
 let currentSessionId = null;
 let lastRecord = null;
 let qCtx = null;
@@ -781,6 +804,7 @@ function openSettings(){
   document.getElementById('set-qpp').value = cfg.qPerTest;
   document.getElementById('set-pv').value = cfg.pvPerDay||4;
   document.getElementById('set-tts').checked = cfg.ttsEnabled!==false;
+  document.getElementById('set-accent').value = cfg.ttsAccent==='GB'?'GB':'US';
   document.getElementById('set-assoc').checked = cfg.learnAssoc!==false;
   document.getElementById('set-autoupd').checked = cfg.autoUpdate!==false;
   renderPubBox();
@@ -798,6 +822,7 @@ function saveSettings(){
   cfg.qPerTest  = Math.max(5, parseInt(document.getElementById('set-qpp').value)||10);
   cfg.pvPerDay  = Math.max(1, parseInt(document.getElementById('set-pv').value)||4);
   cfg.ttsEnabled = document.getElementById('set-tts').checked;
+  cfg.ttsAccent = document.getElementById('set-accent').value;
   cfg.learnAssoc = document.getElementById('set-assoc').checked;
   const wasAuto=cfg.autoUpdate!==false;
   cfg.autoUpdate = document.getElementById('set-autoupd').checked;
@@ -1013,7 +1038,7 @@ function openDetailFromSession(id){ openDetail(id); }
 function buildMotViewBlock(e,m,mi,context,expanded){
   const uid=`${context}-${e.id}-${mi}`;
   const tts=cfg.ttsEnabled!==false;
-  const spk=t=>tts?` speakable" onclick="speak(${esc(JSON.stringify(t))})"`:'"';
+  const spk=(t,ex)=>tts?` speakable" onclick="speak(${esc(JSON.stringify(t))},{accent:${esc(JSON.stringify(lineAccent(m,ex)))}})"`:'"';
   let html=`<div class="mot-block">
     <div class="mot-header">
       <span class="mot-en${spk(m.mot)}>${m.mot}</span>
@@ -1029,7 +1054,7 @@ function buildMotViewBlock(e,m,mi,context,expanded){
   const allEx=(m.exemples||[]).filter(ex=>ex.ex);
   const exemples=expanded?allEx:allEx.slice(0,1);
   exemples.forEach(ex=>{
-    html+=`<div class="exemple-block"><div class="ex-en${spk(ex.ex)}>${ex.ex}</div>`;
+    html+=`<div class="exemple-block"><div class="ex-en${spk(ex.ex,ex)}>${ex.ex}</div>`;
     if(ex.tr) html+=`<div class="ex-fr">${ex.tr}</div>`;
     html+=`</div>`;
   });
@@ -1720,7 +1745,7 @@ function saveNote(el,r){
 // ══════════════════════════════════
 //  TEST SESSION
 // ══════════════════════════════════
-const EXO_LABELS={dayrev:"🗓 Today's words",round2:'🌙 Second round',srs:'🔁 Reviews',qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',disc:'🎯 Right word',syn:'🔗 Synonyms',ant:'↔️ Antonyms'};
+const EXO_LABELS={dayrev:"🗓 Today's words",round2:'🌙 Second round',srs:'🔁 Reviews',qcm:'🎯 Multiple choice',open:'✍️ Translation',fill:'📝 Fill in the blank',dict:'🎧 Dictation',disc:'🎯 Right word',syn:'🔗 Synonyms',ant:'↔️ Antonyms'};
 const REL_EXOS={
   syn:{field:'synonymes',label:'Synonyms',placeholder:'A synonym…'},
   ant:{field:'antonymes',label:'Antonyms',placeholder:'An antonym…'}
@@ -1767,7 +1792,7 @@ function spreadLines(items){
 let sMots=[];
 function startTest(type,dir){
   if(dayRevPending()){ lockedToast(); return; }
-  const fits=m=>(type==='fill'||type==='disc')?(m.exemples||[]).some(ex=>ex.mat&&ex.ex)
+  const fits=m=>(type==='fill'||type==='disc'||type==='dict')?(m.exemples||[]).some(ex=>ex.mat&&ex.ex)
     :REL_EXOS[type]?!!(m[REL_EXOS[type].field]&&m[REL_EXOS[type].field].trim()):true;
   const fresh=new Set(us.todayNew), seen=seenTodayKeys(), all=[];
   vocab.forEach(e=>{
@@ -1799,6 +1824,7 @@ function renderTestQ(){
   else if(type==='open') renderOpen(e,dir,sMots[si],true);
   else if(REL_EXOS[type]) renderRel(e,type,sMots[si]);
   else if(type==='disc') renderDisc(e,sMots[si]);
+  else if(type==='dict') renderDict(e,sMots[si]);
   else if(type==='dayrev') renderFill(e,(dayRevMot(dayRevItems[si])||{}).m);
   else if(type==='srs') renderSrsQ(e,keyLine(srsItems[si]).m);
   else if(type==='round2') renderOpen(e,'fr2en',(keyLine(r2Items[si])||{}).m);
@@ -1828,18 +1854,17 @@ function renderQCM(e,dir,forcedMot){
     : [];
   const distPool=sameNaturePool.length>=5?sameNaturePool:pool;
 
-  const distractors=distPool.slice(0,40)
-    .map(x=>{const m2=pickMotByNature(x);return dir==='en2fr'?m2.traduction:m2.mot;})
-    .filter(d=>d&&d!==correct)
-    .slice(0,3);
-
+  // Chaque option garde la fiche d'où elle vient : après la réponse, un toucher sur une option ouvre sa fiche
+  const optOf=x=>{const m2=pickMotByNature(x);return {t:dir==='en2fr'?m2.traduction:m2.mot,id:x.id};};
+  const distractors=[];
+  distPool.slice(0,40).map(optOf).forEach(d=>{ if(distractors.length<3&&d.t&&d.t!==correct&&!distractors.some(x=>x.t===d.t)) distractors.push(d); });
   while(distractors.length<3){
-    const d=pool.map(x=>{const m2=pickMotByNature(x);return dir==='en2fr'?m2.traduction:m2.mot;})
-      .find(d=>d&&d!==correct&&!distractors.includes(d));
+    const d=pool.map(optOf).find(d=>d.t&&d.t!==correct&&!distractors.some(x=>x.t===d.t));
     if(d) distractors.push(d); else break;
   }
 
-  const opts=shuffle([correct,...distractors]);
+  const optObjs=shuffle([{t:correct,id:e.id},...distractors]);
+  const opts=optObjs.map(o=>o.t);
   const safeCorrect=correct.replace(/'/g,"\\'");
   document.getElementById('test-content').innerHTML=`
     <div class="quiz-card">
@@ -1847,7 +1872,7 @@ function renderQCM(e,dir,forcedMot){
       <div class="quiz-q">${qText}</div>
     </div>
     <div class="qcm-opts">
-      ${opts.map(o=>`<button class="qcm-opt" onclick="checkQCM(this,'${o.replace(/'/g,"\\'")}','${safeCorrect}')">${o}</button>`).join('')}
+      ${optObjs.map(o=>`<button class="qcm-opt" data-id="${esc(String(o.id))}" onclick="checkQCM(this,'${o.t.replace(/'/g,"\\'")}','${safeCorrect}')">${o.t}</button>`).join('')}
     </div>
     <div id="tfb"></div>
     <div id="tnav" style="display:none">
@@ -1892,7 +1917,7 @@ function renderDisc(e,forcedMot){
       <div class="fill-sentence">${sentence}</div>
     </div>
     <div class="qcm-opts">
-      ${opts.map((o,i)=>`<button class="qcm-opt" data-i="${i}" onclick="checkDisc(this)">${esc(o)}</button>`).join('')}
+      ${opts.map((o,i)=>`<button class="qcm-opt" data-i="${i}" data-id="${esc(String(o===m.mot?e.id:(discEntryOf(o)||'')))}" onclick="checkDisc(this)">${esc(o)}</button>`).join('')}
     </div>
     <div id="tfb"></div>
     <div id="tnav" style="display:none">
@@ -1914,6 +1939,22 @@ function checkDisc(el){
   const note=`<div class="fb-admitted"><strong>${esc(m.mot)}</strong> — ${esc(m.traduction)}${ex.tr?`<br><span style="opacity:0.8">${esc(ex.tr)}</span>`:''}</div>`;
   showFB(ok, m.mot, chosen, note);
   if(ok) document.getElementById('tfb').firstElementChild.insertAdjacentHTML('beforeend',note);
+  qcmLinkOptions();
+}
+// Fiche d'un mot proposé (mot confus ou complément tiré au hasard) ; absent de la base → pas de renvoi
+function discEntryOf(w){ const idx=getLinkIndex(); return linkKeys(w).map(k=>idx[k]).find(Boolean)||null; }
+// Après la réponse : les options qui ont une fiche deviennent des renvois (📖), la fiche s'ouvre par-dessus l'exercice
+function qcmLinkOptions(){
+  let n=0;
+  document.querySelectorAll('.qcm-opt').forEach(o=>{
+    const id=o.dataset.id;
+    if(!id||!byId(id)) return;
+    n++;
+    o.disabled=false; o.classList.add('opt-link');
+    o.insertAdjacentHTML('beforeend','<span class="opt-book">📖</span>');
+    o.onclick=()=>openDetailFromSession(id);
+  });
+  if(n>1) document.getElementById('tfb').insertAdjacentHTML('beforeend','<div class="opt-tip">Tap an option to open its entry</div>');
 }
 
 function checkQCM(el,chosen,correct){
@@ -1922,6 +1963,7 @@ function checkQCM(el,chosen,correct){
   const ok=chosen===correct;
   if(!ok) el.classList.add('wrong-opt');
   recordResult(ok, chosen); showFB(ok, correct, chosen);
+  qcmLinkOptions();
 }
 
 // ── OPEN ──
@@ -2199,6 +2241,7 @@ function checkFill(){
   testAnswered=true; inp.disabled=true;
   const blank=document.getElementById('blank');
   if(blank){blank.textContent=correct;blank.className='blank-spot '+(ok?'blank-ok':'blank-ko');}
+  const reveal=document.getElementById('dict-reveal'); if(reveal) reveal.style.display='block';
   recordResult(ok, ans);
   // Variante de la même expression (élément facultatif omis ou ajouté : oneself, that, up…) ou synonyme
   const variant=admitted&&fillIsVariant(ans,correct);
@@ -2212,6 +2255,64 @@ function fillIsVariant(a,b){
   if(x.length>y.length) [x,y]=[y,x];
   let i=0; for(const w of y){ if(i<x.length&&(x[i]===w||(w.length>4&&lev(x[i],w)<=1))) i++; }
   return i===x.length&&x.length<y.length;
+}
+
+// ── DICTÉE ──
+// La synthèse vocale lit un exemple entier ; la phrase reste cachée et l'on tape le mot à trouver tel qu'il est
+// prononcé (forme fléchie). Repère affiché : initiale et nombre de lettres de chaque mot ; sens sur demande.
+// Voix GB ou US selon la marque de la ligne (celle de l'exemple pour les variantes d'orthographe), sinon
+// l'accent par défaut des réglages. Débit réglable, mémorisé ; 🐢 relit une fois plus lentement.
+// Correction et formes admises : celles du texte à trous (checkFill).
+let dictCur=null;
+function dictPattern(t){ return esc(String(t).replace(/[A-Za-z\u00C0-\u024F]+/g,w=>w[0]+'_'.repeat(w.length-1))); }
+function renderDict(e,forcedMot){
+  const m=forcedMot, exs=(m&&m.exemples||[]).filter(ex=>ex.mat&&ex.ex);
+  if(!exs.length){ nextTest(); return; }
+  const ex=exs[Math.floor(Math.random()*exs.length)];
+  const re=new RegExp(ex.mat.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i');
+  const sentence=ex.ex.replace(re,'<span class="blank-spot" id="blank">___</span>');
+  const accent=lineAccent(m,ex)||(cfg.ttsAccent==='GB'?'GB':'US');
+  dictCur={text:ex.ex,accent};
+  qCtx={type:'dict',dir:'en2fr',entryId:e.id,entree:e.entree,question:ex.ex,correct:ex.mat,label:'Dictation — '+m.traduction,keys:[lineKey(e,m)]};
+  const rate=cfg.ttsRate||0.9;
+  document.getElementById('test-content').innerHTML=`
+    <div class="quiz-card">
+      <div class="quiz-type">🎧 Listen and type the missing word</div>
+      <div class="dict-pattern">${dictPattern(ex.mat)}</div>
+      <div class="dict-ctrl">
+        <button class="btn btn-primary" onclick="dictPlay()">▶ Play</button>
+        <button class="btn btn-secondary" onclick="dictPlay(0.6)">🐢 Slower</button>
+      </div>
+      <div class="dict-rate"><span>Speed</span>
+        <input type="range" id="dict-rate" min="0.5" max="1.2" step="0.05" value="${rate}" oninput="dictSetRate(this.value)">
+        <span id="dict-rate-val">${Number(rate).toFixed(2)}×</span></div>
+      <div class="dict-meta">${accent==='GB'?'🇬🇧 British':'🇺🇸 American'} voice
+        · <button class="dict-hint-btn" onclick="this.outerHTML='<b>'+${esc(JSON.stringify(esc(m.traduction)))}+'</b>'">💡 Show meaning</button></div>
+      <div id="dict-reveal" style="display:none">
+        <div class="fill-sentence" style="margin:12px 0 6px">${sentence}</div>
+        ${ex.tr?`<div class="dict-tr">${esc(ex.tr)}</div>`:''}
+      </div>
+    </div>
+    <input class="open-inp" id="fill-inp" type="text" placeholder="Word you heard…" autocomplete="off" autocapitalize="off" spellcheck="false"
+      onkeydown="if(event.key==='Enter')checkFill()" data-correct="${esc(ex.mat)}" data-adm="${esc(ex.adm||'')}">
+    <button class="btn btn-primary btn-full" onclick="checkFill()">Check</button>
+    <div id="tfb" style="margin-top:14px"></div>
+    <div id="tnav" style="display:none">
+      <button class="see-fiche-btn" onclick="openDetailFromSession('${e.id}')">📖 See entry</button>
+      <button class="btn btn-primary btn-full" onclick="nextTest()">Next →</button>
+    </div>`;
+  // Lecture immédiate : on arrive ici par un toucher (carte d'accueil ou « Next »), ce qui autorise la synthèse sur iOS
+  dictPlay();
+}
+function dictPlay(rate){
+  if(!dictCur) return;
+  speak(dictCur.text,{accent:dictCur.accent,rate:rate||cfg.ttsRate||0.9,force:true});
+  const inp=document.getElementById('fill-inp'); if(inp&&!inp.disabled) inp.focus({preventScroll:true});
+}
+function dictSetRate(v){
+  cfg.ttsRate=Math.round(Number(v)*100)/100;
+  const l=document.getElementById('dict-rate-val'); if(l) l.textContent=cfg.ttsRate.toFixed(2)+'×';
+  localStorage.setItem('ve_cfg', JSON.stringify(cfg));
 }
 
 // ── SYNONYMES / ANTONYMES ──
@@ -2931,13 +3032,68 @@ function toast(msg){
 // ══════════════════════════════════
 //  TEXT-TO-SPEECH (tap-to-hear)
 // ══════════════════════════════════
-function speak(text){
-  if(!cfg.ttsEnabled || !text) return;
-  if(!('speechSynthesis' in window)){ toast('⚠ Speech synthesis not supported'); return; }
-  window.speechSynthesis.cancel();
-  const utt=new SpeechSynthesisUtterance(text);
-  utt.lang='en-US';
-  window.speechSynthesis.speak(utt);
+// Robustesse (Chrome Android, Safari iOS) : voix chargées de façon asynchrone et choisies explicitement,
+// référence conservée sur l'énoncé (sinon le ramasse-miettes peut le couper), resume() contre le blocage
+// en pause après passage en arrière-plan, et nouvelle tentative si rien ne démarre (énoncé ignoré après cancel()).
+// o : {accent:'GB'|'US', rate, force (dictée : même si le tap-to-hear est désactivé)}
+let ttsVoices=[], ttsUtt=null, ttsWatch=null;
+function ttsLoadVoices(){ try{ ttsVoices=window.speechSynthesis.getVoices()||[]; }catch(_){ ttsVoices=[]; } }
+if('speechSynthesis' in window){
+  ttsLoadVoices();
+  try{ window.speechSynthesis.addEventListener('voiceschanged',ttsLoadVoices); }catch(_){ window.speechSynthesis.onvoiceschanged=ttsLoadVoices; }
+}
+function ttsLang(accent){ return (accent||cfg.ttsAccent||'US')==='GB'?'en-GB':'en-US'; }
+function ttsVoice(lang){
+  if(!ttsVoices.length) ttsLoadVoices();
+  const norm=s=>(s||'').toLowerCase().replace('_','-');
+  const same=ttsVoices.filter(v=>norm(v.lang)===lang.toLowerCase());
+  return same.find(v=>v.localService)||same[0]||null;
+}
+// Texte lisible : sans balises, marques (GB)/(US), « sb »/« sth » développés, variantes « a / b » lues l'une après l'autre
+function ttsText(t){
+  return String(t||'').replace(/<[^>]*>/g,'').replace(/\((GB|US)\)/g,'')
+    .replace(/\bsb's\b/g,"somebody's").replace(/\bsb\b/g,'somebody').replace(/\bsth\b/g,'something')
+    .replace(/\s\/\s/g,', ').replace(/[()]/g,'').replace(/\s+/g,' ').replace(/\s+,/g,',').trim();
+}
+function speak(text,o){
+  o=o||{};
+  if((!o.force&&cfg.ttsEnabled===false) || !text) return;
+  if(!('speechSynthesis' in window)||typeof SpeechSynthesisUtterance==='undefined'){ toast('⚠ Speech synthesis not supported'); return; }
+  const ss=window.speechSynthesis, txt=ttsText(text), lang=ttsLang(o.accent);
+  if(!txt) return;
+  const go=retry=>{
+    const u=new SpeechSynthesisUtterance(txt);
+    u.lang=lang;
+    const v=ttsVoice(lang); if(v) u.voice=v;
+    u.rate=o.rate||1;
+    let started=false;
+    u.onstart=()=>{ started=true; };
+    u.onerror=ev=>{ if(ttsUtt===u&&ev&&!['interrupted','canceled'].includes(ev.error)) toast('⚠ Speech error: '+ev.error); };
+    ttsUtt=u;
+    try{ ss.cancel(); }catch(_){}
+    try{ ss.resume(); }catch(_){}
+    ss.speak(u);
+    clearTimeout(ttsWatch);
+    ttsWatch=setTimeout(()=>{
+      if(started||ss.speaking||ttsUtt!==u) return;
+      if(!retry){ go(true); return; }
+      toast(ttsVoices.length?'⚠ No sound — check the volume (and the silent switch on iPhone)'
+                            :'⚠ No English voice found — install one in the phone’s text-to-speech settings');
+    },1500);
+  };
+  go(false);
+}
+// Marque de variété d'une ligne : celle de l'exemple (variantes d'orthographe), sinon celle de la Traduction
+function lineAccent(m,ex){
+  const mk=s=>{ const r=/\((GB|US)\)\s*\.?\s*$/.exec(s||''); return r?r[1]:null; };
+  return (ex&&mk(ex.tr))||mk(m&&m.traduction)||null;
+}
+function testVoice(){
+  const acc=document.getElementById('set-accent').value;
+  ttsLoadVoices();
+  const n=ttsVoices.filter(v=>v.lang.toLowerCase().replace('_','-')===ttsLang(acc).toLowerCase()).length;
+  speak('This is how the examples will sound.',{accent:acc,force:true,rate:cfg.ttsRate||1});
+  toast(n?`${n} ${acc==='GB'?'British':'American'} voice${n>1?'s':''} available`:'No voice listed for this accent yet — the default voice is used');
 }
 
 // ══════════════════════════════════
