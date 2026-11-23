@@ -186,6 +186,8 @@ class Base:
 # ── Avertissements (lint) : défauts probables, à revoir à la main ──────────
 # Chaque cas revu et jugé correct va dans LINT_OK (catégorie, Mot, cible) pour ne plus être signalé.
 LINT_OK = {
+    # 23 novembre 2026 : éconduire qn, cas particulier renvoyant au mot général (to rebuff vaut aussi pour une offre)
+    ('symétrie', 'to brush sb off', 'to rebuff sb'),
     # 21 novembre 2026 (cas tranchés de la passe mots confus) : sane « sensé » plus étroit que sensible
     ('symétrie', 'sane', 'sensible'),
     # 21 novembre 2026 (passe mots confus, revue lot 11) : cas particulier renvoyant au mot général
