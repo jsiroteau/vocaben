@@ -188,6 +188,7 @@ class Base:
 LINT_OK = {
     # 27 novembre 2026 : to prevent, mot général ; les cas particuliers y renvoient à sens unique
     ('symétrie', 'to avert', 'to prevent'), ('symétrie', 'to head off', 'to prevent'), ('symétrie', 'to preclude', 'to prevent'),
+    ('symétrie', 'to forestall', 'to prevent'), ('symétrie', 'to stave off', 'to prevent'), ('symétrie', 'to ward off', 'to prevent'),
     ('symétrie', 'to bar sb from (doing) sth', 'to prevent sb from doing sth'),
     # 23 novembre 2026 : éconduire qn, cas particulier renvoyant au mot général (to rebuff vaut aussi pour une offre)
     ('symétrie', 'to brush sb off', 'to rebuff sb'),
